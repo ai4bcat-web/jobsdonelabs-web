@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "TqTd4qljEfGvLpfrm9reY"
+uri = "file://artifacts/landing-page/public/vsl-thumb.png"
+type = "image"
+title = "VSL video thumbnail"
+
+[[generated]]
+id = "8HLkv_A0x8Kqc_b5HqJW-"
+uri = "file://artifacts/landing-page/public/testimonial-1.png"
+type = "image"
+title = "Headshot of executive"
+
+[[generated]]
+id = "fHBVEOWNF5qFThWmEXupo"
+uri = "file://artifacts/landing-page/public/testimonial-2.png"
+type = "image"
+title = "Headshot of founder"
+
+[[generated]]
+id = "R3VmGQ5cli7BPcgEStSj-"
+uri = "file://artifacts/landing-page/public/testimonial-3.png"
+type = "image"
+title = "Headshot of owner"
