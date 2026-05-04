@@ -14,20 +14,12 @@ const CALENDLY = "https://calendly.com/ryne-bandolik";
 
 function JobsDoneLogo() {
   return (
-    <div className="flex items-center gap-2">
-      <FlaskConical className="w-5 h-5 flex-shrink-0" style={{ color: ACCENT }} />
-      <div className="flex flex-col leading-none">
-        <div className="flex items-baseline">
-          <span className="font-bold text-[17px] tracking-tight" style={{ color: TEXT }}>JOBS</span>
-          <span className="font-bold text-[17px] tracking-tight" style={{ color: ACCENT }}>DONE</span>
-        </div>
-        <div className="flex items-center gap-1 mt-0.5">
-          <span className="flex-1 h-px" style={{ background: `${ACCENT}30` }} />
-          <span className="text-[9px] font-medium tracking-[0.16em] uppercase" style={{ color: `${TEXT}35` }}>Labs</span>
-          <span className="flex-1 h-px" style={{ background: `${ACCENT}30` }} />
-        </div>
-      </div>
-    </div>
+    <img
+      src={`${import.meta.env.BASE_URL}logo.png`}
+      alt="JobsDone Labs"
+      className="h-9 w-auto object-contain"
+      style={{ maxWidth: 180 }}
+    />
   );
 }
 
