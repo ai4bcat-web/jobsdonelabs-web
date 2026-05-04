@@ -4,34 +4,38 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   Star,
   FlaskConical,
   CheckCircle2,
   Shield,
-  Search,
-  Rocket,
-  MessageSquare,
-  BarChart3,
-  Target,
-  Calendar,
-  Mail,
+  Play,
   Linkedin,
-  Zap,
+  Youtube,
+  Twitter,
 } from "lucide-react";
 
-/* ── Logo (light-mode version) ── */
-function JobsDoneLogo({ dark = false }: { dark?: boolean }) {
+/* ─────────────────────────────────────────────── */
+/*  Logo                                           */
+/* ─────────────────────────────────────────────── */
+function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
+  const s = {
+    sm: { icon: "w-5 h-5", text: "text-sm", labs: "text-[9px]", gap: "gap-1.5" },
+    md: { icon: "w-7 h-7", text: "text-lg", labs: "text-[10px]", gap: "gap-2" },
+    lg: { icon: "w-9 h-9", text: "text-2xl", labs: "text-xs", gap: "gap-2.5" },
+  }[size];
   return (
-    <div className="flex items-center gap-2">
-      <FlaskConical className="w-7 h-7 text-[#1F62FF] flex-shrink-0" />
+    <div className={`flex items-center ${s.gap}`}>
+      <FlaskConical className={`${s.icon} text-[#1F62FF] flex-shrink-0`} />
       <div className="flex flex-col leading-none">
         <div className="flex items-baseline">
-          <span className={`font-black text-lg tracking-tight ${dark ? "text-white" : "text-slate-900"}`}>JOBS</span>
-          <span className="font-black text-lg text-[#1F62FF] tracking-tight">DONE</span>
+          <span className={`font-black ${s.text} text-white tracking-tight`}>JOBS</span>
+          <span className={`font-black ${s.text} text-[#1F62FF] tracking-tight`}>DONE</span>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 mt-0.5">
           <span className="flex-1 h-px bg-[#1F62FF]/40" />
-          <span className={`text-[9px] font-semibold tracking-[0.2em] uppercase ${dark ? "text-white/50" : "text-slate-400"}`}>Labs</span>
+          <span className={`${s.labs} font-semibold text-white/40 tracking-[0.18em] uppercase`}>Labs</span>
           <span className="flex-1 h-px bg-[#1F62FF]/40" />
         </div>
       </div>
@@ -39,182 +43,159 @@ function JobsDoneLogo({ dark = false }: { dark?: boolean }) {
   );
 }
 
-/* ── Workflow card (hero right) ── */
-function WorkflowCard() {
+/* ─────────────────────────────────────────────── */
+/*  Video Player placeholder                       */
+/* ─────────────────────────────────────────────── */
+function VideoPlayer({ label }: { label?: string }) {
+  const [playing, setPlaying] = useState(false);
   return (
-    <div className="bg-white rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.10)] border border-slate-100 p-5 w-full">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-          <span className="w-1.5 h-1.5 rounded-full bg-slate-400 inline-block" />
-          Live Outreach System
-        </div>
-        <span className="flex items-center gap-1 text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
-          Active
-        </span>
+    <div className="w-full">
+      <div
+        className="relative w-full aspect-video rounded-2xl overflow-hidden cursor-pointer ring-1 ring-white/10 shadow-[0_0_60px_rgba(31,98,255,0.25)]"
+        style={{ background: "linear-gradient(135deg,#0a1628 0%,#0f1f3d 100%)" }}
+        onClick={() => !playing && setPlaying(true)}
+      >
+        {playing ? (
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        ) : (
+          <>
+            {/* subtle grid pattern */}
+            <div className="absolute inset-0 opacity-10" style={{
+              backgroundImage: "linear-gradient(rgba(31,98,255,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(31,98,255,0.3) 1px,transparent 1px)",
+              backgroundSize: "40px 40px"
+            }} />
+            {/* glow center */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="group flex items-center justify-center w-20 h-20 rounded-full bg-[#1F62FF] shadow-[0_0_40px_rgba(31,98,255,0.6)] hover:scale-110 transition-transform duration-200">
+                <Play className="w-8 h-8 text-white ml-1" fill="white" />
+              </div>
+            </div>
+            {/* label */}
+            <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+              <p className="text-white/70 text-xs">▶ Placeholder — swap in your real video</p>
+            </div>
+          </>
+        )}
       </div>
-
-      {/* Step 1 */}
-      <div className="bg-slate-50 rounded-xl p-3.5 flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-            <Target className="w-4 h-4 text-[#1F62FF]" />
-          </div>
-          <div>
-            <p className="font-semibold text-slate-800 text-sm leading-none mb-0.5">Lead List Built</p>
-            <p className="text-slate-400 text-xs">5,000+ contacts verified</p>
-          </div>
-        </div>
-        <span className="text-xs font-medium text-[#1F62FF] bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 whitespace-nowrap">Triggered</span>
-      </div>
-
-      {/* Connector */}
-      <div className="flex justify-center my-1.5">
-        <div className="w-px h-5 border-l-2 border-dashed border-slate-200" />
-      </div>
-
-      {/* Step 2 */}
-      <div className="bg-slate-50 rounded-xl p-3.5 flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-            <Mail className="w-4 h-4 text-[#1F62FF]" />
-          </div>
-          <div>
-            <p className="font-semibold text-slate-800 text-sm leading-none mb-0.5">Campaign Launched</p>
-            <p className="text-slate-400 text-xs">10,000 emails deployed</p>
-          </div>
-        </div>
-        <span className="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200 whitespace-nowrap">→ Processing</span>
-      </div>
-
-      {/* Connector */}
-      <div className="flex justify-center my-1.5">
-        <div className="w-px h-5 border-l-2 border-dashed border-slate-200" />
-      </div>
-
-      {/* Step 3 — two parallel */}
-      <div className="grid grid-cols-2 gap-2">
-        <div className="bg-slate-50 rounded-xl p-3 flex items-start gap-2">
-          <div className="w-7 h-7 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-            <MessageSquare className="w-3.5 h-3.5 text-[#1F62FF]" />
-          </div>
-          <div>
-            <p className="font-semibold text-slate-800 text-xs leading-none mb-0.5">Reply Received</p>
-            <p className="text-slate-400 text-[11px]">Lead responds</p>
-          </div>
-        </div>
-        <div className="bg-slate-50 rounded-xl p-3 flex items-start gap-2">
-          <div className="w-7 h-7 bg-amber-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-            <Calendar className="w-3.5 h-3.5 text-amber-500" />
-          </div>
-          <div>
-            <p className="font-semibold text-slate-800 text-xs leading-none mb-0.5">Call Booked</p>
-            <p className="text-slate-400 text-[11px]">Cal. notified</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Connector */}
-      <div className="flex justify-center my-1.5">
-        <div className="w-px h-5 border-l-2 border-dashed border-slate-200" />
-      </div>
-
-      {/* Step 4 */}
-      <div className="bg-slate-50 rounded-xl p-3.5 flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center flex-shrink-0">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-          </div>
-          <div>
-            <p className="font-semibold text-slate-800 text-sm leading-none mb-0.5">Qualified Call Confirmed</p>
-            <p className="text-slate-400 text-xs">Added to your calendar</p>
-          </div>
-        </div>
-        <span className="text-xs font-medium text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">Complete</span>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-slate-100">
-        <div className="text-center">
-          <p className="text-xl font-black text-[#1F62FF]">10+</p>
-          <p className="text-xs text-slate-400">Calls/month</p>
-        </div>
-        <div className="text-center">
-          <p className="text-xl font-black text-[#1F62FF]">0</p>
-          <p className="text-xs text-slate-400">Manual steps</p>
-        </div>
-        <div className="text-center">
-          <p className="text-xl font-black text-[#1F62FF]">60d</p>
-          <p className="text-xs text-slate-400">Guaranteed</p>
-        </div>
-      </div>
+      {label && <p className="text-center text-white/40 text-sm mt-3">{label}</p>}
     </div>
   );
 }
 
-/* ── Data ── */
-const faqs = [
-  { q: "Why should I trust you to deliver these results?", a: "We've booked thousands of qualified sales calls for B2B service providers across coaching, consulting, and agency niches. Every client gets a dedicated campaign manager, weekly reporting, and our ironclad guarantee — if we don't hit your target, we keep working for free." },
-  { q: "How do I know this will work for my specific business?", a: "During your free strategy call, we'll audit your current lead generation, map your ICP, and build a custom campaign blueprint. If we don't think we can get you results, we'll tell you upfront — we only take on clients we're confident we can help." },
-  { q: "What if I'm not tech-savvy?", a: "You don't need to be. We handle 100% of the technical setup — domains, email inboxes, LinkedIn automation, lead lists, copy, and response management. All you do is show up to the booked calls." },
-  { q: "How long does it take to see results?", a: "Most clients see their first qualified calls booked within 30 days. We guarantee 10 calls in 60 days. Setup takes 1–2 weeks, campaigns launch in week 3, and calls typically start rolling in shortly after." },
-  { q: "What counts as a 'qualified call'?", a: "A qualified call is a booked meeting with a prospect who matches your ideal client profile — right industry, right size, right pain point, and has expressed genuine interest in your service. Cold tire-kickers don't count." },
-  { q: "Can I cancel anytime?", a: "Yes. There are no long-term lock-ins. We work on a month-to-month basis after an initial setup period. If you're not happy, you can cancel with 30 days' notice." },
-  { q: "Do you work with businesses in my industry?", a: "We work best with B2B service providers — coaches, consultants, agencies, and professional services with a high average client value ($3k+ per engagement). If you're B2C or have a very broad target market, we may not be the right fit." },
-  { q: "What's the catch?", a: "There isn't one. We take on a limited number of clients each month to maintain quality. If we can't get you results, we don't get paid beyond setup. Our success is directly tied to yours." },
-];
+/* ─────────────────────────────────────────────── */
+/*  Data                                           */
+/* ─────────────────────────────────────────────── */
+const trustLogos = ["Apollo.io","HubSpot","Make.com","Airtable","Slack","ClickUp","Zapier","ActiveCampaign"];
 
-const caseStudies = [
-  { name: "James R.", title: "B2B SaaS Consultant", before: "Booking 2–3 calls/month through referrals only", after: "Now booking 10–12 calls/month consistently", revenue: "$220,000 in new revenue in 6 months", roi: "14.2x ROI" },
-  { name: "Priya M.", title: "Executive Coach", before: "Relying on LinkedIn DMs manually — inconsistent", after: "6–8 qualified discovery calls booked every week", revenue: "$95,000 added to pipeline in 90 days", roi: "9.8x ROI" },
-  { name: "Tom K.", title: "Agency Owner", before: "Spending 15 hrs/week on cold outreach personally", after: "Fully automated — zero time spent on prospecting", revenue: "$180,000 in new contracts signed in 4 months", roi: "11.6x ROI" },
+const industries = [
+  {
+    icon: "📢",
+    title: "Marketing Agencies",
+    desc: "Automate client onboarding, CRM management, lead nurture, and sales call transcriptions — so your team delivers faster without growing headcount.",
+    tags: ["Onboarding in minutes","Zero manual CRM entry","Faster client delivery"],
+  },
+  {
+    icon: "🏠",
+    title: "Home Service Businesses",
+    desc: "From lead capture to follow-up to scheduling — stop losing jobs to missed calls and slow responses. Your automated ops system works while your crews are in the field.",
+    tags: ["Instant lead response","Automated follow-ups","Job tracking & reports"],
+  },
+  {
+    icon: "💼",
+    title: "Finance & Professional Services",
+    desc: "Streamline client intake, compliance documentation, appointment nurture, and reporting. Show measurable ROI to clients while running a leaner back office.",
+    tags: ["Client intake automated","No-show reduction","Reporting automated"],
+  },
 ];
 
 const services = [
   {
-    icon: Mail,
-    title: "Cold Email Infrastructure",
-    desc: "We build and manage your entire cold email system — 5–10 domains, 10–20 warmed inboxes, verified lead lists, and compelling copy — all done for you.",
-    points: ["5,000+ verified contacts per campaign", "10,000+ emails deployed per month", "Full domain & inbox management"],
+    num: "01",
+    title: "CRM Infrastructure",
+    desc: "A solid CRM is the backbone of every scalable business. We build it right — so every lead is automatically structured, tagged, and scored without anyone lifting a finger.",
+    tags: ["Auto lead scoring","Consistent naming conventions","Pipeline automation"],
   },
   {
-    icon: Linkedin,
-    title: "LinkedIn Outreach",
-    desc: "We deploy targeted LinkedIn connection campaigns using your profile or a dedicated SDR account, reaching decision-makers with personalized sequences.",
-    points: ["500 connection requests per month", "Multi-step message sequences", "ICP-matched prospect targeting"],
+    num: "02",
+    title: "Lead Capture",
+    desc: "Every inquiry from every channel flows automatically into your CRM. No more manual copy-paste, no more lost leads from slow response times.",
+    tags: ["Omni-channel capture","Instant qualification","Zero data entry errors"],
   },
   {
-    icon: Calendar,
-    title: "Response Management",
-    desc: "We monitor all replies 24/7, qualify every lead against your ICP, handle objections, and book only the best-fit prospects directly into your calendar.",
-    points: ["24/7 inbox monitoring & reply handling", "ICP qualification before booking", "Calls land directly in your calendar"],
+    num: "03",
+    title: "Lead Nurture",
+    desc: "Prospects who don't book immediately get systematically engaged with personalized touchpoints — dramatically reducing no-shows and building trust before the call.",
+    tags: ["Reduced no-shows","Personalized sequences","Better-qualified leads"],
+  },
+  {
+    num: "04",
+    title: "Transcript Analysis",
+    desc: "Every sales call is automatically recorded, transcribed, and analyzed. Get strategic insights, action items, and performance data without reviewing a single recording yourself.",
+    tags: ["Auto transcription","AI insights","Sales performance data"],
+  },
+  {
+    num: "05",
+    title: "Client Onboarding",
+    desc: "From signed contract to full access — automated. Resources created, comms sent, permissions set. Your clients hit the ground running the moment ink dries.",
+    tags: ["Instant resource creation","Consistent experience","Zero missed steps"],
   },
 ];
 
 const steps = [
-  { num: "01", icon: Search, title: "Strategy & Setup", sub: "Week 1–2", desc: "We audit your ICP, build your domain infrastructure, warm inboxes, and compile a targeted list of 5,000+ verified prospects." },
-  { num: "02", icon: Rocket, title: "Campaign Launch", sub: "Week 3–4", desc: "We write all copy and launch cold email and LinkedIn campaigns simultaneously — 10,000+ emails and 500 connection requests per month." },
-  { num: "03", icon: MessageSquare, title: "Response Management", sub: "Ongoing", desc: "We handle every reply 24/7, qualify leads, handle objections, and book calls directly into your calendar." },
-  { num: "04", icon: BarChart3, title: "Optimize & Scale", sub: "Month 2+", desc: "We A/B test messaging, refresh lead lists, monitor deliverability, and send you weekly performance reports." },
+  { num: "1", title: "Free Audit Call", sub: "Day 1", desc: "We map your business, find the biggest bottlenecks eating your time, and build a custom automation roadmap." },
+  { num: "2", title: "Onboarding & Setup", sub: "Week 1", desc: "Your dedicated automation engineer learns your systems, tools, and workflows. We're in your Slack within 48 hours." },
+  { num: "3", title: "Weekly Builds", sub: "Ongoing", desc: "Each week we ship new automations based on your priorities. Weekly strategy calls keep everything aligned." },
+  { num: "4", title: "24/7 Maintenance", sub: "Always On", desc: "We monitor, fix, and optimize every system we build. Under 24-hour response to any issue, guaranteed." },
 ];
 
-const trustLogos = ["Apollo.io", "Instantly", "Lemlist", "HubSpot", "LinkedIn", "Clay", "Smartlead", "Salesforce"];
+const testimonials = [
+  { name: "Evan Seech", company: "Sell More Online", role: "7-Fig Ads & Funnels", quote: "An onshore automations team is light years above anything offshore." },
+  { name: "Dylan Hendrickson", company: "STAXX", role: "7-Fig Fractional CFO", quote: "Solved in a couple weeks what I couldn't solve for over a year." },
+  { name: "Philip Moldovanu", company: "Social Scout", role: "7-Fig Email Marketing", quote: "You click one button and everything's just ready to go." },
+  { name: "Connor Rodgers", company: "Social Scout", role: "Operations Lead", quote: "We needed a partner to build the systems and keep up — that's what we got." },
+  { name: "Meelad Zarrabi", company: "Fluid Creatives", role: "Creative Director", quote: "You took all the revisions and executed them perfectly." },
+  { name: "Samu Kovács", company: "KS Media", role: "Founder", quote: "Your audit call was just different." },
+  { name: "Jeppe Schrøder", company: "Markeity", role: "CEO", quote: "The clarity and structure they brought was something we'd been trying for months." },
+  { name: "Matthew Lucero", company: "Anevo Marketing", role: "Owner", quote: "They identified things I didn't even understand and built them out proactively." },
+  { name: "Dan James", company: "THAKOS", role: "Founder", quote: "My PM's life is 400 trillion times easier. We've saved so many hours." },
+  { name: "Ro Bhardwaj", company: "Life's A Pitch", role: "CEO", quote: "Not just a builder — an automation strategist." },
+];
 
-const avatarColors = ["bg-blue-500", "bg-emerald-500", "bg-violet-500", "bg-amber-500"];
-const avatarInitials = ["ES", "DH", "MZ", "RK"];
+const reviews = [
+  { stars: 5, quote: "An ops hire costs $60–80K+ and takes months to ramp. JobsDone Labs gave us a full team from day one, working 24/7. Best investment we've ever made.", name: "Evan S.", company: "Sell More Online" },
+  { stars: 5, quote: "I spent over a year trying to solve our CRM chaos. They fixed it in two weeks flat. I genuinely don't know how I ran the business before.", name: "Dylan H.", company: "STAXX" },
+  { stars: 5, quote: "Our client onboarding used to take 3 days of back-and-forth. Now it's one click and everything's ready. The client experience has completely changed.", name: "Philip M.", company: "Social Scout" },
+  { stars: 5, quote: "My PM says her life is 400 trillion times easier — and that's only a slight exaggeration. Hours saved every single week.", name: "Dan J.", company: "THAKOS" },
+  { stars: 5, quote: "They're not just automation builders — they're strategists. They spotted opportunities I hadn't even thought of and built them out proactively.", name: "Matthew L.", company: "Anevo Marketing" },
+];
 
-/* ── FAQ Item ── */
+const faqs = [
+  { q: "How is this different from hiring a full-time ops person?", a: "An ops hire costs $60–80K+/year, takes months to ramp, and can only work on one thing at a time. We bring a full team — strategy, automation, implementation — from day one. You get an entire ops department at a fraction of the cost, working 24/7." },
+  { q: "What industries do you specialize in?", a: "Marketing agencies (ads, email, SEO, PPC, social, video), home service businesses (HVAC, roofing, plumbing, landscaping, cleaning), and finance & professional service firms." },
+  { q: "What does the monthly fee include?", a: "Ongoing automation management, new workflow builds each week, system optimization, priority Slack support (under 24-hr response), weekly strategy calls, and a monthly systems report." },
+  { q: "Is there a long-term contract?", a: "No. Month-to-month only. You own everything we build. If you ever leave, the automations stay with you." },
+  { q: "What if I already have some automations running?", a: "We work with what you have. We map your existing systems, identify gaps, and build on top of what's already working. We optimize — we don't rip and replace." },
+  { q: "What tools do you work with?", a: "We primarily build on Make.com, Airtable, and Slack — but we integrate with virtually any CRM, calendar, payment processor, or project management tool." },
+];
+
+/* ─────────────────────────────────────────────── */
+/*  FAQ Item                                       */
+/* ─────────────────────────────────────────────── */
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-slate-200 last:border-0">
+    <div className="border-b border-white/10 last:border-0">
       <button
         className="w-full flex items-center justify-between py-5 text-left gap-4 group"
-        onClick={() => setOpen((o) => !o)}
-        data-testid={`faq-toggle-${q.slice(0, 20).replace(/\s/g, "-")}`}
+        onClick={() => setOpen(o => !o)}
       >
-        <span className="text-slate-800 font-semibold text-base leading-snug group-hover:text-[#1F62FF] transition-colors">{q}</span>
-        <ChevronDown className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-[#1F62FF]" : ""}`} />
+        <span className="text-white font-semibold text-base leading-snug group-hover:text-[#1F62FF] transition-colors">{q}</span>
+        <ChevronDown className={`w-5 h-5 text-white/40 flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-[#1F62FF]" : ""}`} />
       </button>
       <AnimatePresence initial={false}>
         {open && (
@@ -222,10 +203,10 @@ function FaqItem({ q, a }: { q: string; a: string }) {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.26, ease: "easeInOut" }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-slate-500 leading-relaxed text-sm">{a}</p>
+            <p className="pb-5 text-white/50 leading-relaxed text-sm">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -233,46 +214,96 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-/* ── Page ── */
-export default function Home() {
-  const scrollTo = (id: string) =>
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+/* ─────────────────────────────────────────────── */
+/*  Reviews Carousel                               */
+/* ─────────────────────────────────────────────── */
+function ReviewsCarousel() {
+  const [idx, setIdx] = useState(0);
+  const prev = () => setIdx(i => (i - 1 + reviews.length) % reviews.length);
+  const next = () => setIdx(i => (i + 1) % reviews.length);
+  const r = reviews[idx];
+  return (
+    <div className="relative max-w-2xl mx-auto">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -30 }}
+          transition={{ duration: 0.3 }}
+          className="bg-[#0C1525] border border-[#182844] rounded-2xl p-8 text-center"
+        >
+          <div className="flex justify-center gap-1 mb-5">
+            {[1,2,3,4,5].map(s => <Star key={s} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
+          </div>
+          <p className="text-white/80 text-lg leading-relaxed mb-6 italic">"{r.quote}"</p>
+          <p className="font-bold text-white">{r.name}</p>
+          <p className="text-white/40 text-sm">{r.company}</p>
+        </motion.div>
+      </AnimatePresence>
+      <div className="flex justify-center gap-3 mt-6">
+        <button onClick={prev} className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#1F62FF] hover:text-[#1F62FF] text-white/40 transition-colors">
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        {reviews.map((_, i) => (
+          <button key={i} onClick={() => setIdx(i)} className={`w-2.5 h-2.5 rounded-full transition-all ${i === idx ? "bg-[#1F62FF] w-6" : "bg-white/20"}`} />
+        ))}
+        <button onClick={next} className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#1F62FF] hover:text-[#1F62FF] text-white/40 transition-colors">
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+    </div>
+  );
+}
 
-  const navLinks = [
-    { label: "Services", id: "services" },
-    { label: "Results", id: "results" },
-    { label: "How It Works", id: "how-it-works" },
-    { label: "FAQ", id: "faq" },
-  ];
+/* ─────────────────────────────────────────────── */
+/*  Section wrapper (fade-in on scroll)            */
+/* ─────────────────────────────────────────────── */
+function Fade({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 22 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.55, delay }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-3">{children}</p>;
+}
+
+function SectionHeading({ children }: { children: React.ReactNode }) {
+  return <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight">{children}</h2>;
+}
+
+const CALENDLY = "https://calendly.com/ryne-bandolik";
+
+/* ─────────────────────────────────────────────── */
+/*  Page                                           */
+/* ─────────────────────────────────────────────── */
+export default function Home() {
+  const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <div className="min-h-screen font-sans overflow-x-hidden" style={{ background: "linear-gradient(160deg, #eef6ff 0%, #ffffff 40%, #f0f8ff 100%)" }}>
+    <div className="min-h-screen font-sans overflow-x-hidden text-white" style={{ background: "#070D18" }}>
 
       {/* ── NAV ── */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+      <header className="sticky top-0 z-50 border-b border-white/[0.06]" style={{ background: "rgba(7,13,24,0.92)", backdropFilter: "blur(14px)" }}>
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" data-testid="link-logo">
-            <JobsDoneLogo />
-          </Link>
-
+          <Link href="/" data-testid="link-logo"><JobsDoneLogo /></Link>
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollTo(link.id)}
-                className="text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors"
-              >
-                {link.label}
-              </button>
+            {[["Services","services"],["Industries","industries"],["Results","results"],["FAQ","faq"]].map(([label,id]) => (
+              <button key={id} onClick={() => scrollTo(id)} className="text-white/60 hover:text-white text-sm font-medium transition-colors">{label}</button>
             ))}
           </nav>
-
-          <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
-            <button
-              className="bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-5 h-9 rounded-lg transition-all flex items-center gap-1.5"
-              data-testid="button-book-call-nav"
-            >
-              Book a Call <ArrowRight className="w-3.5 h-3.5" />
+          <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+            <button className="bg-[#1F62FF] hover:bg-[#1a54e0] text-white text-sm font-semibold px-5 h-9 rounded-lg transition-all shadow-[0_0_20px_rgba(31,98,255,0.35)]" data-testid="button-nav-cta">
+              Book a Call
             </button>
           </a>
         </div>
@@ -281,369 +312,310 @@ export default function Home() {
       <main>
 
         {/* ── HERO ── */}
-        <section className="max-w-6xl mx-auto px-6 pt-16 pb-24">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-
-            {/* Left column */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex-1 min-w-0"
-            >
-              {/* Badge pills */}
-              <div className="flex flex-wrap gap-2 mb-7">
-                <span className="border border-slate-300 text-slate-600 text-xs font-medium px-3.5 py-1.5 rounded-full">For B2B Service Businesses</span>
-                <span className="border border-slate-300 text-slate-600 text-xs font-medium px-3.5 py-1.5 rounded-full">60-Day Guarantee</span>
-              </div>
-
-              {/* Headline */}
-              <h1 className="text-5xl md:text-6xl font-black text-slate-900 leading-[1.0] tracking-tight mb-6">
-                Stop Chasing<br />
-                Leads. Let<br />
-                <span className="text-[#1F62FF]">Outreach</span><br />
-                Run For You.
-              </h1>
-
-              {/* Body */}
-              <p className="text-slate-500 text-lg leading-relaxed mb-8 max-w-md">
-                JobsDone Labs deploys done-for-you cold email &amp; LinkedIn outreach that books 10+ qualified sales calls in 60 days — giving you back the time to actually close.
-              </p>
-
-              {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-3 mb-8">
-                <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
-                  <button
-                    className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-base px-7 h-12 rounded-lg transition-all flex items-center gap-2"
-                    data-testid="button-book-call-hero"
-                  >
-                    Book a Free Strategy Call <ArrowRight className="w-4 h-4" />
-                  </button>
-                </a>
-                <button
-                  onClick={() => scrollTo("results")}
-                  className="border border-slate-300 text-slate-600 hover:border-slate-400 hover:text-slate-800 text-base font-medium px-7 h-12 rounded-lg transition-all"
-                  data-testid="button-see-offer"
-                >
-                  See Client Results
+        <section className="max-w-4xl mx-auto px-6 pt-20 pb-8 text-center">
+          <Fade>
+            <div className="inline-flex items-center gap-2 text-white/50 text-xs font-medium mb-8 border border-white/10 rounded-full px-4 py-1.5">
+              <span>For Agencies &amp; Service Businesses</span>
+              <span className="w-1 h-1 rounded-full bg-white/30 inline-block" />
+              <span>90-Day Guarantee</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.0] mb-6">
+              Stop Running Your Business.<br />
+              Let <span className="text-[#1F62FF]">Automation</span> Run It For You.
+            </h1>
+            <p className="text-white/50 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-8">
+              We build custom AI systems that cut 60–80% of manual work for marketing agencies, home service businesses, and finance firms — giving you back the time to actually grow.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 mb-10">
+              <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                <button className="bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-bold text-base px-8 h-12 rounded-lg transition-all flex items-center gap-2 shadow-[0_0_30px_rgba(31,98,255,0.4)]" data-testid="button-hero-primary">
+                  Book a Free Audit Call <ArrowRight className="w-4 h-4" />
                 </button>
+              </a>
+              <button onClick={() => scrollTo("results")} className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white text-base font-medium px-8 h-12 rounded-lg transition-all" data-testid="button-hero-results">
+                See Client Results
+              </button>
+            </div>
+          </Fade>
+
+          {/* Video */}
+          <Fade delay={0.12}>
+            <VideoPlayer label="Watch: How we save agencies $30K+ in 90 days (3 min)" />
+          </Fade>
+
+          {/* Stars + social proof */}
+          <Fade delay={0.18}>
+            <div className="mt-6 flex flex-col items-center gap-2">
+              <div className="flex gap-1">
+                {[1,2,3,4,5].map(s => <Star key={s} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
               </div>
-
-              {/* Social proof */}
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {avatarInitials.map((init, i) => (
-                    <div key={i} className={`w-9 h-9 rounded-full ${avatarColors[i]} border-2 border-white flex items-center justify-center text-white text-xs font-bold flex-shrink-0`}>
-                      {init}
-                    </div>
-                  ))}
-                </div>
-                <p className="text-slate-500 text-sm">
-                  <strong className="text-slate-800">500+ businesses</strong> served. Avg. 10+ calls booked in 60 days.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Right column — workflow card */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.15 }}
-              className="flex-1 min-w-0 w-full lg:max-w-[480px]"
-            >
-              <WorkflowCard />
-            </motion.div>
-
-          </div>
+              <p className="text-white/40 text-sm">50+ businesses automated · Avg. $30K+ saved in 90 days</p>
+            </div>
+          </Fade>
         </section>
 
-        {/* ── TRUST LOGOS ── */}
-        <section className="border-y border-slate-100 bg-white/70 py-7 overflow-hidden">
-          <p className="text-center text-slate-400 text-xs uppercase tracking-widest font-semibold mb-5">Trusted by teams using</p>
+        {/* ── LOGO STRIP ── */}
+        <section className="border-y border-white/[0.06] py-8 overflow-hidden" style={{ background: "rgba(255,255,255,0.02)" }}>
+          <p className="text-center text-white/30 text-xs uppercase tracking-widest font-semibold mb-6">Trusted by 7-figure agency founders &amp; business owners</p>
           <div className="relative">
-            <div className="flex animate-[marquee_28s_linear_infinite] gap-14 w-max">
-              {[...trustLogos, ...trustLogos].map((logo, i) => (
-                <span key={i} className="text-slate-300 font-bold text-sm tracking-wide whitespace-nowrap hover:text-slate-500 transition-colors cursor-default">
-                  {logo}
-                </span>
+            <div className="flex animate-[marquee_28s_linear_infinite] gap-16 w-max">
+              {[...trustLogos,...trustLogos].map((l,i) => (
+                <span key={i} className="text-white/20 font-bold text-sm tracking-wide whitespace-nowrap">{l}</span>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── SERVICES ── */}
-        <section id="services" className="py-24 max-w-6xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
-            className="mb-12"
-          >
-            <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-2">What We Do</p>
-            <h2 className="text-4xl font-black text-slate-900 tracking-tight">Everything done for you.</h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {services.map((s, i) => (
-              <motion.div
-                key={s.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-white rounded-2xl border border-slate-100 p-7 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
-              >
-                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
-                  <s.icon className="w-5 h-5 text-[#1F62FF]" />
+        {/* ── INDUSTRIES ── */}
+        <section id="industries" className="py-24 max-w-6xl mx-auto px-6">
+          <Fade>
+            <SectionLabel>Who We Work With</SectionLabel>
+            <SectionHeading>Built for businesses where time literally equals money</SectionHeading>
+          </Fade>
+          <div className="mt-10 grid md:grid-cols-3 gap-5">
+            {industries.map((ind, i) => (
+              <Fade key={ind.title} delay={i * 0.08}>
+                <div className="bg-[#0C1525] border border-[#182844] rounded-2xl p-7 hover:border-[#1F62FF]/40 hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 h-full">
+                  <div className="text-3xl">{ind.icon}</div>
+                  <h3 className="font-bold text-white text-lg">{ind.title}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed flex-1">{ind.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {ind.tags.map(tag => (
+                      <span key={tag} className="text-[#1F62FF] text-xs font-medium bg-[#1F62FF]/10 border border-[#1F62FF]/20 px-3 py-1 rounded-full">{tag}</span>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="font-bold text-slate-900 text-lg mb-2">{s.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed mb-5">{s.desc}</p>
-                <ul className="space-y-2">
-                  {s.points.map(pt => (
-                    <li key={pt} className="flex items-start gap-2 text-sm text-slate-600">
-                      <CheckCircle2 className="w-4 h-4 text-[#1F62FF] flex-shrink-0 mt-0.5" />
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+              </Fade>
             ))}
           </div>
         </section>
 
-        {/* ── RESULTS ── */}
-        <section id="results" className="bg-slate-900 py-24">
+        {/* ── SERVICES ── */}
+        <section id="services" className="py-24" style={{ background: "rgba(255,255,255,0.02)" }}>
           <div className="max-w-6xl mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55 }}
-              className="mb-12"
-            >
-              <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-2">Client Results</p>
-              <h2 className="text-4xl font-black text-white tracking-tight">Real results from real clients.</h2>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-5">
-              {caseStudies.map((c, i) => (
-                <motion.div
-                  key={c.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="bg-slate-800 rounded-2xl border border-slate-700 p-6 flex flex-col gap-5"
-                  data-testid={`card-case-study-${i}`}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#1F62FF]/20 border border-[#1F62FF]/30 flex items-center justify-center text-[#1F62FF] font-bold text-sm flex-shrink-0">
-                      {c.name[0]}
+            <Fade>
+              <SectionLabel>What We Build</SectionLabel>
+              <SectionHeading>Five core systems. Infinite hours recovered.</SectionHeading>
+            </Fade>
+            <div className="mt-10 flex flex-col gap-4">
+              {services.map((s, i) => (
+                <Fade key={s.title} delay={i * 0.06}>
+                  <div className="bg-[#0C1525] border border-[#182844] rounded-2xl p-7 flex flex-col md:flex-row gap-5 hover:border-[#1F62FF]/30 hover:-translate-y-0.5 transition-all duration-300">
+                    <div className="flex-shrink-0">
+                      <span className="text-6xl font-black text-[#1F62FF]/15 leading-none select-none">{s.num}</span>
                     </div>
-                    <div>
-                      <p className="font-semibold text-white text-sm">{c.name}</p>
-                      <p className="text-slate-400 text-xs">{c.title}</p>
-                    </div>
-                    <div className="ml-auto flex gap-0.5">
-                      {[1,2,3,4,5].map(s => <Star key={s} className="w-3 h-3 text-yellow-400 fill-yellow-400" />)}
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-white text-xl mb-2">{s.title}</h3>
+                      <p className="text-white/50 text-sm leading-relaxed mb-4">{s.desc}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {s.tags.map(tag => (
+                          <span key={tag} className="text-white/50 text-xs bg-white/5 border border-white/10 px-3 py-1 rounded-full">{tag}</span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                  <div className="space-y-2 text-sm">
-                    <p className="text-slate-400"><span className="text-slate-500 font-medium">Before: </span>{c.before}</p>
-                    <p className="text-slate-200"><span className="text-slate-300 font-medium">After: </span>{c.after}</p>
-                  </div>
-                  <div className="pt-4 border-t border-slate-700 flex items-center justify-between">
-                    <span className="text-emerald-400 font-semibold text-sm">{c.revenue}</span>
-                    <span className="text-[#1F62FF] font-bold text-xs bg-[#1F62FF]/10 px-3 py-1 rounded-full border border-[#1F62FF]/20">{c.roi}</span>
-                  </div>
-                </motion.div>
+                </Fade>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── HOW IT WORKS ── */}
-        <section id="how-it-works" className="py-24 max-w-6xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
-            className="mb-12"
-          >
-            <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-2">The Process</p>
-            <h2 className="text-4xl font-black text-slate-900 tracking-tight">How We Get You 10 Qualified Calls in 60 Days.</h2>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* ── PROCESS ── */}
+        <section className="py-24 max-w-6xl mx-auto px-6">
+          <Fade>
+            <SectionLabel>The Process</SectionLabel>
+            <SectionHeading>Up and running in 30 days. Optimizing forever.</SectionHeading>
+          </Fade>
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {steps.map((s, i) => (
-              <motion.div
-                key={s.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm"
-                data-testid={`card-step-${i}`}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
-                    <s.icon className="w-5 h-5 text-[#1F62FF]" />
+              <Fade key={s.title} delay={i * 0.08}>
+                <div className="bg-[#0C1525] border border-[#182844] rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300" data-testid={`card-step-${i}`}>
+                  <div className="flex items-center justify-between mb-5">
+                    <span className="text-3xl font-black text-[#1F62FF]">{s.num}</span>
+                    <span className="text-xs font-medium text-white/30 bg-white/5 border border-white/10 px-2.5 py-1 rounded-full">{s.sub}</span>
                   </div>
-                  <span className="text-xs font-medium text-slate-400 bg-slate-50 px-2.5 py-1 rounded-full border border-slate-200">{s.sub}</span>
+                  <h3 className="font-bold text-white text-base mb-2">{s.title}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed">{s.desc}</p>
                 </div>
-                <p className="text-[#1F62FF] text-xs font-black mb-1">{s.num}</p>
-                <h3 className="font-bold text-slate-900 text-base mb-2">{s.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-              </motion.div>
+              </Fade>
             ))}
           </div>
         </section>
 
         {/* ── GUARANTEE ── */}
-        <section className="bg-[#1F62FF] py-20">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <motion.div
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.55 }}
-                className="flex-1"
-              >
-                <p className="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-3">Zero Risk</p>
-                <h2 className="text-4xl font-black text-white tracking-tight mb-5">Our Iron-Clad 60-Day Guarantee.</h2>
-                <p className="text-blue-100 leading-relaxed mb-4 text-lg">
-                  We guarantee you <strong className="text-white">10 qualified sales calls</strong> booked in your first 60 days — or we work for free until we hit that number.
+        <section className="py-10 px-6">
+          <Fade>
+            <div className="max-w-4xl mx-auto rounded-2xl p-10 text-center relative overflow-hidden"
+              style={{ background: "#0C1525", boxShadow: "0 0 0 1.5px #1F62FF, 0 0 60px rgba(31,98,255,0.25)" }}>
+              <div className="absolute inset-0 opacity-5" style={{
+                backgroundImage: "radial-gradient(ellipse at center, #1F62FF 0%, transparent 70%)"
+              }} />
+              <div className="relative z-10">
+                <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-4">Our Promise</p>
+                <h2 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
+                  $30,000 in recovered time within 90 days — guaranteed.
+                </h2>
+                <p className="text-white/50 text-lg mb-8 max-w-2xl mx-auto">
+                  If we don't deliver measurable ROI in your first 90 days, we keep working until we do. No extra charge. No excuses.
                 </p>
-                <p className="text-blue-200 leading-relaxed mb-8">
-                  If we don't deliver, we waive your monthly fee and keep working. You have nothing to lose.
+                <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                  <button className="bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-bold text-base px-10 h-12 rounded-lg transition-all inline-flex items-center gap-2 shadow-[0_0_30px_rgba(31,98,255,0.4)]" data-testid="button-guarantee-cta">
+                    Claim Your Free Audit Call <ArrowRight className="w-4 h-4" />
+                  </button>
+                </a>
+                <p className="text-white/30 text-xs mt-4">Month-to-month. No long-term contracts. You own everything we build.</p>
+              </div>
+            </div>
+          </Fade>
+        </section>
+
+        {/* ── COMMUNITY ── */}
+        <section className="py-24 max-w-6xl mx-auto px-6">
+          <Fade>
+            <SectionLabel>Community</SectionLabel>
+            <SectionHeading>Ready to bring back hours of time? Join our community.</SectionHeading>
+          </Fade>
+          <div className="mt-10 grid md:grid-cols-2 gap-8 items-center">
+            <Fade delay={0.08}>
+              <div className="flex flex-col gap-5">
+                <p className="text-white/50 text-lg leading-relaxed">
+                  Join founders and operators inside our community — breakdowns, templates, and live Q&amp;A on automation that actually ships.
                 </p>
-                <div className="flex items-center gap-4">
-                  <img src="/ryne.png" alt="Ryne Bandolik" className="w-12 h-12 rounded-full object-cover object-top border-2 border-white/30 flex-shrink-0" />
-                  <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
-                    <button
-                      className="bg-white text-[#1F62FF] font-bold text-base px-7 h-12 rounded-lg hover:bg-blue-50 transition-all"
-                      data-testid="button-book-call-guarantee"
-                    >
-                      Book a Free Strategy Call
+                <div>
+                  <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                    <button className="border border-[#1F62FF] text-[#1F62FF] hover:bg-[#1F62FF] hover:text-white font-semibold px-6 h-10 rounded-lg transition-all text-sm">
+                      Join the community →
                     </button>
                   </a>
                 </div>
-              </motion.div>
+              </div>
+            </Fade>
+            <Fade delay={0.15}>
+              <VideoPlayer />
+            </Fade>
+          </div>
+        </section>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.97 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.55 }}
-                className="flex-1 w-full"
-              >
-                <div className="bg-white/10 border border-white/20 rounded-2xl p-8 text-center backdrop-blur-sm">
-                  <div className="w-14 h-14 bg-white/15 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                    <Shield className="w-7 h-7 text-white" />
-                  </div>
-                  <p className="text-3xl font-black text-white mb-2">10 Calls in 60 Days</p>
-                  <p className="text-blue-200 text-sm mb-6">or we work for free until we do</p>
-                  <div className="space-y-3">
-                    {["No extra charge if we miss the target", "Dedicated campaign manager throughout", "Weekly performance reports included"].map(item => (
-                      <div key={item} className="flex items-center gap-3 text-sm text-blue-100">
-                        <CheckCircle2 className="w-4 h-4 text-white flex-shrink-0" />
-                        {item}
+        {/* ── RESULTS (video testimonials) ── */}
+        <section id="results" className="py-24" style={{ background: "rgba(255,255,255,0.02)" }}>
+          <div className="max-w-6xl mx-auto px-6">
+            <Fade>
+              <SectionLabel>Client Results</SectionLabel>
+              <SectionHeading>Real founders. Real results. All on camera.</SectionHeading>
+              <p className="text-white/40 mt-3 mb-10">10 agency owners and business founders share exactly what changed after working with us.</p>
+            </Fade>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {testimonials.map((t, i) => (
+                <Fade key={t.name} delay={i * 0.05}>
+                  <div className="bg-[#0C1525] border border-[#182844] rounded-2xl overflow-hidden hover:border-[#1F62FF]/30 hover:-translate-y-1 transition-all duration-300" data-testid={`card-testimonial-${i}`}>
+                    {/* fake video thumbnail */}
+                    <div className="aspect-video relative cursor-pointer group"
+                      style={{ background: "linear-gradient(135deg,#0a1628,#0f1f3d)" }}>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-12 h-12 rounded-full bg-[#1F62FF]/80 flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(31,98,255,0.4)]">
+                          <Play className="w-5 h-5 text-white ml-0.5" fill="white" />
+                        </div>
                       </div>
-                    ))}
+                    </div>
+                    <div className="p-5">
+                      <p className="font-bold text-white text-sm">{t.name}</p>
+                      <p className="text-[#1F62FF] text-xs font-medium">{t.company}</p>
+                      <p className="text-white/40 text-xs mb-3">{t.role}</p>
+                      <p className="text-white/60 text-sm italic">"{t.quote}"</p>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
+                </Fade>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── FAQ ── */}
-        <section id="faq" className="py-24 max-w-6xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-14 lg:gap-20">
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55 }}
-              className="lg:w-72 flex-shrink-0"
-            >
-              <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-3">FAQ</p>
-              <h2 className="text-4xl font-black text-slate-900 tracking-tight mb-5">Frequently Asked Questions.</h2>
-              <p className="text-slate-500 text-sm leading-relaxed mb-6">
-                Everything you need to know before booking your free strategy call.
-              </p>
-              <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
-                <button className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm px-6 h-10 rounded-lg transition-all flex items-center gap-1.5">
-                  Book a Strategy Call <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </a>
-            </motion.div>
+        {/* ── WRITTEN REVIEWS ── */}
+        <section className="py-24 max-w-6xl mx-auto px-6">
+          <Fade>
+            <SectionLabel>Reviews</SectionLabel>
+            <SectionHeading className="mb-10">What clients say</SectionHeading>
+          </Fade>
+          <Fade delay={0.1}>
+            <div className="mt-10">
+              <ReviewsCarousel />
+            </div>
+          </Fade>
+        </section>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: 0.1 }}
-              className="flex-1"
-            >
-              {faqs.map((f) => <FaqItem key={f.q} q={f.q} a={f.a} />)}
-            </motion.div>
+        {/* ── FAQ ── */}
+        <section id="faq" className="py-24" style={{ background: "rgba(255,255,255,0.02)" }}>
+          <div className="max-w-3xl mx-auto px-6">
+            <Fade>
+              <SectionLabel>FAQ</SectionLabel>
+              <SectionHeading>Common questions</SectionHeading>
+            </Fade>
+            <Fade delay={0.1}>
+              <div className="mt-10">
+                {faqs.map(f => <FaqItem key={f.q} q={f.q} a={f.a} />)}
+              </div>
+            </Fade>
           </div>
         </section>
 
         {/* ── FINAL CTA ── */}
-        <section className="bg-slate-900 py-24">
-          <div className="max-w-3xl mx-auto px-6 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-4">Ready to grow?</p>
-              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-5 leading-[1.05]">
-                Book your free strategy call today.
-              </h2>
-              <p className="text-slate-400 text-lg mb-10">
-                We'll show you exactly how we'd get you 10 calls in 60 days — or you don't pay.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-                <img src="/ryne.png" alt="Ryne Bandolik" className="w-14 h-14 rounded-full object-cover object-top border-2 border-slate-600 flex-shrink-0" />
-                <div className="flex flex-col items-center sm:items-start gap-1">
-                  <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
-                    <button
-                      className="bg-white hover:bg-slate-100 text-slate-900 font-black text-lg px-10 h-14 rounded-lg transition-all flex items-center gap-2"
-                      data-testid="button-book-call-final"
-                    >
-                      Book Your Free Strategy Call <ArrowRight className="w-5 h-5" />
-                    </button>
-                  </a>
-                  <span className="text-slate-500 text-xs">Talk directly with Ryne</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+        <section className="py-28 text-center px-6" style={{ background: "radial-gradient(ellipse at center, rgba(31,98,255,0.12) 0%, transparent 70%), #070D18" }}>
+          <Fade>
+            <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-4">Ready to get your time back?</p>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-5 leading-tight">
+              Book your free automation audit call
+            </h2>
+            <p className="text-white/50 text-lg max-w-xl mx-auto mb-10">
+              In 45 minutes, we'll map your biggest bottlenecks and hand you a custom roadmap — whether you hire us or not.
+            </p>
+            <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+              <button className="bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-black text-lg px-12 h-14 rounded-xl transition-all inline-flex items-center gap-2 shadow-[0_0_40px_rgba(31,98,255,0.45)]" data-testid="button-final-cta">
+                Book a Call <ArrowRight className="w-5 h-5" />
+              </button>
+            </a>
+            <p className="text-white/30 text-xs mt-5">No commitment. No sales pressure. Just a clear roadmap for your business.</p>
+          </Fade>
         </section>
 
       </main>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-slate-950 border-t border-slate-800 py-10">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-5 text-sm">
-          <div className="flex items-center gap-4">
-            <JobsDoneLogo dark />
-            <div className="flex items-center gap-2">
-              <img src="/ryne.png" alt="Ryne Bandolik" className="w-6 h-6 rounded-full object-cover object-top border border-slate-600" />
-              <span className="text-slate-500 text-xs">Ryne Bandolik, Founder</span>
+      <footer className="border-t border-white/[0.06] py-14" style={{ background: "#04090F" }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between gap-10 mb-12">
+            <div className="flex flex-col gap-4 max-w-xs">
+              <JobsDoneLogo />
+              <p className="text-white/40 text-sm leading-relaxed">Your embedded automation team.</p>
+              <div className="flex gap-4">
+                <a href="#" className="text-white/30 hover:text-[#1F62FF] transition-colors"><Linkedin className="w-5 h-5" /></a>
+                <a href="#" className="text-white/30 hover:text-[#1F62FF] transition-colors"><Youtube className="w-5 h-5" /></a>
+                <a href="#" className="text-white/30 hover:text-[#1F62FF] transition-colors"><Twitter className="w-5 h-5" /></a>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-10 text-sm">
+              <div>
+                <p className="text-white/60 font-semibold mb-3">Services</p>
+                {["CRM Infrastructure","Lead Capture","Lead Nurture","Transcript Analysis","Client Onboarding"].map(l => (
+                  <p key={l} className="text-white/30 hover:text-white/60 cursor-pointer mb-1.5 transition-colors">{l}</p>
+                ))}
+              </div>
+              <div>
+                <p className="text-white/60 font-semibold mb-3">Industries</p>
+                {["Marketing Agencies","Home Service","Finance Firms","Professional Services"].map(l => (
+                  <p key={l} className="text-white/30 hover:text-white/60 cursor-pointer mb-1.5 transition-colors">{l}</p>
+                ))}
+              </div>
+              <div>
+                <p className="text-white/60 font-semibold mb-3">Company</p>
+                <Link href="/privacy" className="block text-white/30 hover:text-white/60 mb-1.5 transition-colors">Privacy Policy</Link>
+                <Link href="/terms" className="block text-white/30 hover:text-white/60 mb-1.5 transition-colors">Terms of Service</Link>
+                <a href={`mailto:support@jobsdonelabs.ai`} className="block text-white/30 hover:text-white/60 mb-1.5 transition-colors">Contact</a>
+              </div>
             </div>
           </div>
-          <span className="text-slate-500">support@jobsdonelabs.ai</span>
-          <div className="flex items-center gap-5 text-slate-500">
-            <Link href="/privacy" className="hover:text-slate-300 transition-colors" data-testid="link-privacy">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-slate-300 transition-colors" data-testid="link-terms">Terms of Service</Link>
+          <div className="border-t border-white/[0.06] pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-white/20">
+            <span>© {new Date().getFullYear()} JobsDone Labs. All rights reserved.</span>
+            <span>support@jobsdonelabs.ai</span>
           </div>
         </div>
       </footer>
