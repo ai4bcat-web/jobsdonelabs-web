@@ -13,8 +13,34 @@ import {
   BarChart3,
   Shield,
   Star,
+  FlaskConical,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
+  const scales = {
+    sm: { flask: "w-5 h-5", jobs: "text-sm", done: "text-sm", labs: "text-[9px]", gap: "gap-1.5" },
+    md: { flask: "w-8 h-8", jobs: "text-xl", done: "text-xl", labs: "text-[11px]", gap: "gap-2" },
+    lg: { flask: "w-10 h-10", jobs: "text-2xl", done: "text-2xl", labs: "text-xs", gap: "gap-2.5" },
+  };
+  const s = scales[size];
+  return (
+    <div className={`flex items-center ${s.gap}`}>
+      <FlaskConical className={`${s.flask} text-primary flex-shrink-0`} />
+      <div className="flex flex-col leading-none">
+        <div className="flex items-baseline gap-0">
+          <span className={`font-black ${s.jobs} text-white tracking-tight`}>JOBS</span>
+          <span className={`font-black ${s.done} text-primary tracking-tight`}>DONE</span>
+        </div>
+        <div className="flex items-center gap-1 mt-0.5">
+          <span className="flex-1 h-px bg-primary/50" />
+          <span className={`${s.labs} font-semibold text-white/60 tracking-[0.2em] uppercase`}>Labs</span>
+          <span className="flex-1 h-px bg-primary/50" />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -89,7 +115,7 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/6 bg-background/95 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center" data-testid="link-logo">
-            <img src="/logo-transparent.png" alt="JobsDone Labs" className="h-11 w-auto" style={{ filter: "brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(190deg)" }} />
+            <JobsDoneLogo size="md" />
           </Link>
           <Button
             className="bg-primary hover:bg-primary/90 text-white rounded-lg px-5 font-semibold text-sm h-9 shadow-[0_2px_12px_rgba(31,98,255,0.3)]"
@@ -479,8 +505,8 @@ export default function Home() {
       {/* ── FOOTER ── */}
       <footer className="border-t border-white/6 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/30">
-          <div className="flex items-center gap-3">
-            <img src="/logo-transparent.png" alt="JobsDone Labs" className="h-8 w-auto" />
+          <div className="flex items-center gap-4">
+            <JobsDoneLogo size="sm" />
             <div className="flex items-center gap-2">
               <img src="/ryne.png" alt="Ryne Bandolik" className="w-7 h-7 rounded-full object-cover object-top border border-white/15" />
               <span className="text-white/40 text-xs">Ryne Bandolik, Founder</span>
