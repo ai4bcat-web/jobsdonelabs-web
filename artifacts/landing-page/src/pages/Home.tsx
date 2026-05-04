@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -12,6 +12,8 @@ import {
   Linkedin,
   Youtube,
   Twitter,
+  X,
+  Calculator,
 } from "lucide-react";
 
 /* ─────────────────────────────────────────────── */
@@ -338,6 +340,100 @@ function SectionHeading({ children, light = false }: { children: React.ReactNode
 const CALENDLY = "https://calendly.com/ryne-bandolik";
 
 /* ─────────────────────────────────────────────── */
+/*  Exit-Intent Popup                              */
+/* ─────────────────────────────────────────────── */
+function ExitIntentPopup() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const alreadyShown = sessionStorage.getItem("exit_popup_shown");
+    if (alreadyShown) return;
+
+    const handleMouseLeave = (e: MouseEvent) => {
+      if (e.clientY <= 5) {
+        setVisible(true);
+        sessionStorage.setItem("exit_popup_shown", "1");
+        document.removeEventListener("mouseleave", handleMouseLeave);
+      }
+    };
+
+    const timer = setTimeout(() => {
+      document.addEventListener("mouseleave", handleMouseLeave);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
+
+  return (
+    <AnimatePresence>
+      {visible && (
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[100]"
+            onClick={() => setVisible(false)}
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.94, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.94, y: 20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="fixed inset-0 flex items-center justify-center z-[101] px-4"
+          >
+            <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative border border-slate-100">
+              <button
+                onClick={() => setVisible(false)}
+                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              <div className="text-center mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-[#1F62FF]/10 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🔒</span>
+                </div>
+                <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-2">Wait — before you go</p>
+                <h2 className="text-2xl font-black text-slate-900 leading-tight mb-3">
+                  We guarantee $30,000 recovered in 90 days — or we keep working for free.
+                </h2>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  Most businesses are leaking revenue every day through slow follow-up and broken ops. Book a free 45-min audit and we'll show you exactly where.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="block">
+                  <button className="w-full bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-bold text-base h-12 rounded-lg transition-all flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(31,98,255,0.3)]">
+                    Book My Free Audit Call <ArrowRight className="w-4 h-4" />
+                  </button>
+                </a>
+                <button
+                  onClick={() => setVisible(false)}
+                  className="w-full text-slate-400 hover:text-slate-600 text-sm py-2 transition-colors"
+                >
+                  No thanks, I'll pass on the free roadmap
+                </button>
+              </div>
+
+              <div className="mt-4 flex items-center justify-center gap-4 text-xs text-slate-400">
+                <span>✓ No commitment</span>
+                <span>✓ Month-to-month</span>
+                <span>✓ You own everything</span>
+              </div>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+}
+
+/* ─────────────────────────────────────────────── */
 /*  Page                                           */
 /* ─────────────────────────────────────────────── */
 export default function Home() {
@@ -345,6 +441,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen font-sans overflow-x-hidden text-slate-900" style={{ background: "linear-gradient(160deg,#eef6ff 0%,#ffffff 40%,#f0f8ff 100%)" }}>
+
+      <ExitIntentPopup />
 
       {/* ── NAV ── */}
       <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur-md">
@@ -354,6 +452,11 @@ export default function Home() {
             {[["Services","services"],["Industries","industries"],["Results","results"],["FAQ","faq"]].map(([label,id]) => (
               <button key={id} onClick={() => scrollTo(id)} className="text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors">{label}</button>
             ))}
+            <Link href="/roi-calculator">
+              <button className="flex items-center gap-1.5 text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors">
+                <Calculator className="w-3.5 h-3.5" /> ROI Calculator
+              </button>
+            </Link>
           </nav>
           <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
             <button className="bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-5 h-9 rounded-lg transition-all" data-testid="button-nav-cta">
@@ -380,14 +483,13 @@ export default function Home() {
                 <span className="w-1 h-1 rounded-full bg-slate-400 inline-block" />
                 <span>90-Day Guarantee</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-[1.0] text-slate-900 mb-6">
-                Stop Running<br />
-                Your Business.<br />
-                Let <span className="text-[#1F62FF]">Automation</span><br />
-                Run It For You.
+              <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.08] text-slate-900 mb-6">
+                We guarantee you recover a minimum of{" "}
+                <span className="text-[#1F62FF]">$30,000 in lost revenue</span>{" "}
+                within 90 days.
               </h1>
               <p className="text-slate-500 text-lg leading-relaxed mb-8 max-w-md">
-                We build custom AI systems that cut 60–80% of manual work for marketing agencies, home service businesses, and finance firms — giving you back the time to actually grow.
+                By eliminating the lead leaks, slow follow-up, and manual bottlenecks currently costing you deals — or we keep working until we do. No excuses.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
