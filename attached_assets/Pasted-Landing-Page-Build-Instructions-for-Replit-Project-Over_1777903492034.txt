@@ -1,0 +1,509 @@
+Landing Page Build Instructions for Replit
+
+Project Overview
+Build a high-converting VSL landing page for a done-for-you cold email & LinkedIn outreach agency. The page must be optimized for cold traffic B2B prospects (coaches, consultants, service providers) and designed to maximize qualified call bookings.
+
+---
+
+Technical Requirements
+
+Tech Stack
+• Framework: Next.js 14+ with App Router
+• Styling: Tailwind CSS
+• Video Player: Vimeo or custom HTML5 player (NOT YouTube • no distractions)
+• Form: Simple calendar booking integration (Calendly embed or custom form)
+• Hosting: Vercel (for easy deployment from Replit)
+
+Performance Requirements
+• Page load time under 2 seconds
+• Mobile-responsive (50%+ of traffic will be mobile)
+• No unnecessary animations or distractions
+• Clean, professional design (not flashy)
+
+---
+
+Page Structure & Layout
+
+• HERO SECTION (Above the Fold)
+
+Layout:
+• Full-width section, centered content
+• Max-width: 1200px
+• Background: Clean white or very light gray (F9FAFB)
+• No hero image or background video (distracting)
+
+Content:
+
+Headline (H1):
+```
+We'll Book You 5 Qualified Sales Calls in 60 Days—Or We Work For Free Until We Do
+```
+
+Styling:
+• Font: Inter or similar sans-serif, bold
+• Size: 48px desktop, 32px mobile
+• Color: Dark gray/black (111827)
+• Line height: 1.2
+• Center-aligned
+
+Subheadline (H2):
+```
+For B2B service providers, coaches, and consultants who need predictable sales calls without the guesswork.
+```
+
+Styling:
+• Font: Inter, regular weight
+• Size: 20px desktop, 18px mobile
+• Color: Medium gray (6B7280)
+• Line height: 1.5
+• Center-aligned
+• Margin-top: 16px
+
+CTA Button (Primary):
+```
+Book Your Free Strategy Call
+```
+
+Styling:
+• Background: Bold color (e.g., 2563EB blue or DC2626 red)
+• Text: White, bold, 18px
+• Padding: 16px 32px
+• Border-radius: 8px
+• Hover effect: Slightly darker shade
+• Center-aligned
+• Margin-top: 32px
+
+Trust Indicators (Below CTA):
+```
+✓ No credit card required
+✓ 30-minute call
+✓ We'll show you exactly how we'd get you 5 calls in 60 days
+```
+
+Styling:
+• Font: 14px, gray (6B7280)
+• Checkmarks: Green (10B981)
+• Center-aligned
+• Margin-top: 16px
+
+---
+
+• VIDEO SECTION
+
+Layout:
+• Full-width section
+• Background: White
+• Padding: 80px 0
+
+Video Container:
+• Max-width: 900px
+• Center-aligned
+• Aspect ratio: 16:9
+• Border-radius: 12px
+• Box-shadow: 0 10px 40px rgba(0,0,0,0.1)
+
+Video Player:
+• Vimeo embed (recommended) or custom HTML5 player
+• No autoplay
+• Custom thumbnail with play button overlay
+• Controls: Play/pause, volume, fullscreen only (no share buttons)
+
+Above Video (Optional):
+```
+Watch This 8-Minute Video to See How We Guarantee 5 Qualified Sales Calls in 60 Days
+```
+
+Styling:
+• Font: 24px, bold
+• Color: 111827
+• Center-aligned
+• Margin-bottom: 24px
+
+Below Video:
+
+CTA Button (Secondary):
+```
+Yes, I Want 5 Qualified Calls in 60 Days
+```
+
+Styling:
+• Same as primary CTA button
+• Margin-top: 32px
+
+---
+
+• SOCIAL PROOF SECTION (Case Studies)
+
+Layout:
+• Full-width section
+• Background: Light gray (F9FAFB)
+• Padding: 80px 0
+
+Section Header:
+```
+Real Results From Real Clients
+```
+
+Styling:
+• Font: 36px, bold
+• Color: 111827
+• Center-aligned
+• Margin-bottom: 48px
+
+Case Study Cards (3 cards in a row, stack on mobile):
+
+Each card contains:
+• Client Name & Title (e.g., "John Smith, B2B SaaS Consultant")
+• Before State (e.g., "Was booking 2-3 calls/month through referrals")
+• After State (e.g., "Now booking 8-10 calls/month consistently")
+• Revenue Impact (e.g., "$180,000 in new revenue in 6 months")
+• ROI (e.g., "11.6x ROI")
+
+Card Styling:
+• Background: White
+• Border-radius: 12px
+• Padding: 32px
+• Box-shadow: 0 4px 12px rgba(0,0,0,0.08)
+• Margin-bottom: 24px (for mobile stacking)
+
+Layout:
+• Desktop: 3 columns (33% width each)
+• Tablet: 2 columns (50% width each)
+• Mobile: 1 column (100% width)
+
+Content Styling:
+• Client name: 18px, bold, 111827
+• Before/After: 16px, regular, 374151
+• Revenue impact: 20px, bold, 10B981 (green)
+• ROI: 16px, bold, 2563EB (blue)
+
+---
+
+• GUARANTEE SECTION
+
+Layout:
+• Full-width section
+• Background: White
+• Padding: 80px 0
+
+Content:
+
+Headline:
+```
+Our Iron-Clad Guarantee
+```
+
+Styling:
+• Font: 36px, bold
+• Color: 111827
+• Center-aligned
+• Margin-bottom: 32px
+
+Guarantee Box:
+• Background: Light blue (EFF6FF) or light green (F0FDF4)
+• Border: 2px solid blue (2563EB) or green (10B981)
+• Border-radius: 12px
+• Padding: 48px
+• Max-width: 800px
+• Center-aligned
+
+Guarantee Text:
+```
+We guarantee you 5 qualified sales calls booked in your first 60 days—or we work for free until we hit that number.
+
+If we don't book you 5 qualified calls in 60 days, we waive your monthly fee and keep working for free until we do.
+
+You have nothing to lose and everything to gain.
+```
+
+Styling:
+• Font: 20px, regular
+• Color: 111827
+• Line height: 1.6
+• Center-aligned
+
+CTA Button (Below Guarantee):
+```
+Book Your Free Strategy Call Now
+```
+
+Styling:
+• Same as primary CTA button
+• Margin-top: 32px
+
+---
+
+• HOW IT WORKS SECTION
+
+Layout:
+• Full-width section
+• Background: Light gray (F9FAFB)
+• Padding: 80px 0
+
+Section Header:
+```
+How We Get You 5 Qualified Calls in 60 Days
+```
+
+Styling:
+• Font: 36px, bold
+• Color: 111827
+• Center-aligned
+• Margin-bottom: 48px
+
+Process Steps (4 steps in a vertical timeline or horizontal row):
+
+Step 1:
+• Icon: Magnifying glass or checklist icon
+• Title: "Infrastructure Setup (Week 1-2)"
+• Description: "We build your entire cold email & LinkedIn infrastructure: 5-10 domains, 10-20 email inboxes, LinkedIn automation, lead list of 5,000+ verified contacts."
+
+Step 2:
+• Icon: Rocket or paper plane icon
+• Title: "Campaign Launch (Week 3-4)"
+• Description: "We write all your email copy and LinkedIn messages, then launch campaigns: 10,000 emails/month • 500 LinkedIn requests/month."
+
+Step 3:
+• Icon: Chat bubble or phone icon
+• Title: "Response Management (Ongoing)"
+• Description: "We monitor all responses 24/7, qualify leads using your ICP criteria, and book qualified calls directly into your calendar."
+
+Step 4:
+• Icon: Chart or graph icon
+• Title: "Optimization & Scaling (Month 2+)"
+• Description: "We A/B test messaging, monitor deliverability, refresh lead lists monthly, and provide weekly performance reports."
+
+Styling:
+• Desktop: 4 columns (25% width each) or vertical timeline
+• Mobile: Stack vertically
+• Icon: 48px, blue (2563EB)
+• Title: 20px, bold, 111827
+• Description: 16px, regular, 6B7280
+• Padding: 24px per step
+• Background: White (if using cards)
+• Border-radius: 12px (if using cards)
+
+---
+
+• FAQ SECTION
+
+Layout:
+• Full-width section
+• Background: White
+• Padding: 80px 0
+
+Section Header:
+```
+Frequently Asked Questions
+```
+
+Styling:
+• Font: 36px, bold
+• Color: 111827
+• Center-aligned
+• Margin-bottom: 48px
+
+FAQ Accordion (6-8 questions):
+
+Questions to Include:
+• "Why should I trust you to deliver these results?"
+• "How do I know this will work for my specific business?"
+• "What if I'm not tech-savvy?"
+• "How long does it take to see results?"
+• "What counts as a 'qualified call'?"
+• "Can I cancel anytime?"
+• "Do you work with businesses in my industry?"
+• "What's the catch?"
+
+Accordion Styling:
+• Question: 18px, bold, 111827
+• Answer: 16px, regular, 374151
+• Padding: 24px
+• Border-bottom: 1px solid E5E7EB
+• Expand/collapse icon: Chevron down/up
+• Max-width: 800px
+• Center-aligned
+
+Interaction:
+• Click question to expand/collapse answer
+• Only one answer open at a time (accordion behavior)
+• Smooth animation (0.3s ease)
+
+---
+
+• FINAL CTA SECTION
+
+Layout:
+• Full-width section
+• Background: Dark blue (1E3A8A) or dark gray (111827)
+• Padding: 80px 0
+
+Content:
+
+Headline:
+```
+Ready to Get 5 Qualified Sales Calls in 60 Days?
+```
+
+Styling:
+• Font: 36px, bold
+• Color: White
+• Center-aligned
+• Margin-bottom: 24px
+
+Subheadline:
+```
+Book your free 30-minute strategy call now. We'll show you exactly how we'd get you 5 calls in 60 days—or you don't pay.
+```
+
+Styling:
+• Font: 20px, regular
+• Color: Light gray (D1D5DB)
+• Center-aligned
+• Margin-bottom: 32px
+
+CTA Button:
+```
+Book Your Free Strategy Call
+```
+
+Styling:
+• Background: White
+• Text: Dark blue (1E3A8A), bold, 18px
+• Padding: 16px 32px
+• Border-radius: 8px
+• Hover effect: Light gray background (F3F4F6)
+• Center-aligned
+
+P.S. (Below CTA):
+```
+P.S. — Every week you wait is another 30 hours wasted on manual lead gen. That's $18,000 in opportunity cost per month. How much longer are you going to let that continue?
+```
+
+Styling:
+• Font: 16px, italic
+• Color: Light gray (D1D5DB)
+• Center-aligned
+• Margin-top: 24px
+
+---
+
+• FOOTER
+
+Layout:
+• Full-width section
+• Background: Very dark gray (0F172A)
+• Padding: 40px 0
+
+Content:
+• Company name
+• Email: support@yourcompany.com
+• Privacy Policy link
+• Terms of Service link
+
+Styling:
+• Font: 14px, regular
+• Color: Medium gray (9CA3AF)
+• Center-aligned
+• Links: Underline on hover
+
+---
+
+Design System
+
+Colors
+• Primary: 2563EB (blue) or DC2626 (red)
+• Success: 10B981 (green)
+• Background: FFFFFF (white), F9FAFB (light gray)
+• Text: 111827 (dark), 6B7280 (medium gray), 9CA3AF (light gray)
+• Borders: E5E7EB
+
+Typography
+• Font Family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif
+• Headings: Bold weight
+• Body: Regular weight
+• Line Height: 1.5 for body text, 1.2 for headings
+
+Spacing
+• Section Padding: 80px top/bottom (desktop), 48px (mobile)
+• Element Spacing: 16px, 24px, 32px, 48px (use multiples of 8)
+
+Buttons
+• Primary: Bold background color, white text, 16px-18px font size
+• Hover: Slightly darker shade (10-20% darker)
+• Padding: 16px 32px
+• Border-radius: 8px
+
+Cards
+• Background: White
+• Border-radius: 12px
+• Box-shadow: 0 4px 12px rgba(0,0,0,0.08)
+• Padding: 32px
+
+---
+
+Mobile Responsiveness
+
+Breakpoints
+• Desktop: 1024px+
+• Tablet: 768px • 1023px
+• Mobile: 0px • 767px
+
+Mobile Adjustments
+• Reduce font sizes by 20-30%
+• Stack columns vertically
+• Reduce padding (80px → 48px)
+• Increase button size for touch targets (min 44px height)
+• Simplify navigation (hamburger menu if needed)
+
+---
+
+Form/Calendar Integration
+
+Option 1: Calendly Embed
+```html
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/your-link" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+```
+
+Option 2: Custom Form
+If using a custom form, collect:
+• Name (required)
+• Email (required)
+• Phone (optional)
+• Company/Business Name (optional)
+• "What's your biggest challenge with lead generation?" (optional text area)
+
+Form Styling:
+• Input fields: 16px font, 48px height, 12px padding, E5E7EB border
+• Submit button: Same as primary CTA button
+• Validation: Red error messages below fields
+
+---
+
+Additional Notes
+
+What NOT to Include
+• No navigation menu (single-page VSL landing page)
+• No footer links to other pages (keep them on this page)
+• No social media icons (distracting)
+• No live chat widget (distracting)
+• No pop-ups or exit-intent modals (annoying)
+
+What TO Include
+• Smooth scroll to CTA buttons
+• Sticky CTA button on mobile (optional)
+• Fast page load (optimize images, lazy load video)
+• Clean, professional design (not flashy or "salesy")
+
+---
+
+File Structure for Replit
+
+```
+/app
+  /page.tsx (main landing page)
+  /layout.tsx (root layout)
+  /globals.css (Tailwind imports

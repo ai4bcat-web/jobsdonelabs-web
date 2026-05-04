@@ -1,36 +1,148 @@
+import { useState } from "react";
 import { Link } from "wouter";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FlaskConical,
   Play,
-  Share2,
-  Heart,
-  BookmarkPlus,
   ArrowRight,
   CheckCircle2,
-  Zap,
+  ChevronDown,
+  Search,
+  Rocket,
+  MessageSquare,
+  BarChart3,
+  Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const fadeIn = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const stagger = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
+};
+
+const faqs = [
+  {
+    q: "Why should I trust you to deliver these results?",
+    a: "We've booked thousands of qualified sales calls for B2B service providers across coaching, consulting, and agency niches. Every client gets a dedicated campaign manager, weekly reporting, and our ironclad guarantee — if we don't hit your target, we keep working for free.",
+  },
+  {
+    q: "How do I know this will work for my specific business?",
+    a: "During your free strategy call, we'll audit your current lead generation, map your ICP, and build a custom campaign blueprint. If we don't think we can get you results, we'll tell you upfront — we only take on clients we're confident we can help.",
+  },
+  {
+    q: "What if I'm not tech-savvy?",
+    a: "You don't need to be. We handle 100% of the technical setup — domains, email inboxes, LinkedIn automation, lead lists, copy, and response management. All you do is show up to the booked calls.",
+  },
+  {
+    q: "How long does it take to see results?",
+    a: "Most clients see their first qualified calls booked within 30 days. We guarantee 5 calls in 60 days. Setup takes 1–2 weeks, campaigns launch in week 3, and calls typically start rolling in shortly after.",
+  },
+  {
+    q: "What counts as a 'qualified call'?",
+    a: "A qualified call is a booked meeting with a prospect who matches your ideal client profile — right industry, right size, right pain point, and has expressed genuine interest in your service. Cold tire-kickers don't count.",
+  },
+  {
+    q: "Can I cancel anytime?",
+    a: "Yes. There are no long-term lock-ins. We work on a month-to-month basis after an initial setup period. If you're not happy, you can cancel with 30 days' notice.",
+  },
+  {
+    q: "Do you work with businesses in my industry?",
+    a: "We work best with B2B service providers — coaches, consultants, agencies, and professional services with a high average client value ($3k+ per engagement). If you're B2C or have a very broad target market, we may not be the right fit.",
+  },
+  {
+    q: "What's the catch?",
+    a: "There isn't one. We take on a limited number of clients each month to maintain quality. If we can't get you results, we don't get paid beyond setup. Our success is directly tied to yours.",
+  },
+];
+
+const caseStudies = [
+  {
+    name: "James R., B2B SaaS Consultant",
+    before: "Booking 2–3 calls/month through referrals only",
+    after: "Now booking 10–12 calls/month consistently",
+    revenue: "$220,000 in new revenue in 6 months",
+    roi: "14.2x ROI",
+  },
+  {
+    name: "Priya M., Executive Coach",
+    before: "Relying on LinkedIn DMs manually — inconsistent",
+    after: "6–8 qualified discovery calls booked every week",
+    revenue: "$95,000 added to pipeline in 90 days",
+    roi: "9.8x ROI",
+  },
+  {
+    name: "Tom K., Agency Owner",
+    before: "Spending 15 hrs/week on cold outreach personally",
+    after: "Fully automated — zero time spent on prospecting",
+    revenue: "$180,000 in new contracts signed in 4 months",
+    roi: "11.6x ROI",
+  },
+];
+
+const steps = [
+  {
+    icon: Search,
+    title: "Infrastructure Setup (Week 1–2)",
+    desc: "We build your entire cold email & LinkedIn infrastructure: 5–10 domains, 10–20 email inboxes, LinkedIn automation, and a lead list of 5,000+ verified contacts.",
+  },
+  {
+    icon: Rocket,
+    title: "Campaign Launch (Week 3–4)",
+    desc: "We write all your email copy and LinkedIn messages, then launch campaigns — 10,000 emails/month and 500 LinkedIn connection requests per month.",
+  },
+  {
+    icon: MessageSquare,
+    title: "Response Management (Ongoing)",
+    desc: "We monitor all responses 24/7, qualify leads using your ICP criteria, and book qualified calls directly into your calendar.",
+  },
+  {
+    icon: BarChart3,
+    title: "Optimization & Scaling (Month 2+)",
+    desc: "We A/B test messaging, monitor deliverability, refresh lead lists monthly, and provide weekly performance reports.",
+  },
+];
+
+function FaqItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-border last:border-0">
+      <button
+        className="w-full flex items-center justify-between py-6 text-left gap-4"
+        onClick={() => setOpen((o) => !o)}
+        data-testid={`faq-toggle-${q.slice(0, 20).replace(/\s/g, "-")}`}
+      >
+        <span className="text-white font-semibold text-base md:text-lg">{q}</span>
+        <ChevronDown
+          className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <p className="pb-6 text-muted-foreground leading-relaxed">{a}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 export default function Home() {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
-  const stagger = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30">
-      {/* SECTION 1 — NAVIGATION */}
+
+      {/* NAV */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group" data-testid="link-logo">
@@ -43,7 +155,7 @@ export default function Home() {
           </Link>
           <Button
             variant="outline"
-            className="border-[#4F535B] text-white hover:bg-white/5 hover:text-white rounded-[4px] font-medium"
+            className="border-border text-white hover:bg-white/5 hover:text-white rounded-md font-medium"
             data-testid="button-book-call-nav"
           >
             Book a Call
@@ -51,9 +163,10 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="pt-32 pb-16">
-        {/* SECTION 2 — HERO */}
-        <section className="container mx-auto px-4 pt-10 pb-20 flex flex-col items-center text-center">
+      <main className="pt-24">
+
+        {/* HERO */}
+        <section className="container mx-auto px-4 pt-20 pb-24 flex flex-col items-center text-center">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -61,226 +174,141 @@ export default function Home() {
             className="max-w-4xl mx-auto flex flex-col items-center"
           >
             <motion.div variants={fadeIn} className="mb-8">
-              <div className="inline-flex items-center rounded-full border border-border/50 bg-card p-1 pr-4 text-sm shadow-sm transition-colors hover:bg-card/80">
+              <div className="inline-flex items-center rounded-full border border-border/50 bg-card p-1 pr-4 text-sm shadow-sm">
                 <span className="rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary mr-3">
                   Attention
                 </span>
                 <span className="text-muted-foreground flex items-center gap-1">
-                  Businesses Looking to Automate <ArrowRight className="w-3 h-3 ml-1" />
+                  B2B Service Providers &amp; Coaches <ArrowRight className="w-3 h-3 ml-1" />
                 </span>
               </div>
             </motion.div>
 
             <motion.h1
               variants={fadeIn}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-8 leading-[1.1]"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
             >
-              We'll identify <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">$25,000-$250,000</span> in AI automation savings for your business, or you don't pay.
+              We'll Book You{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
+                5 Qualified Sales Calls
+              </span>{" "}
+              in 60 Days—Or We Work For Free Until We Do
             </motion.h1>
 
             <motion.p
               variants={fadeIn}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
             >
-              Get an executive-grade AI readiness analysis that maps automatable processes, calculates 3-year ROI, and reveals quick wins to accelerate your growth.
+              For B2B service providers, coaches, and consultants who need predictable sales calls without the guesswork.
             </motion.p>
 
-            <motion.div variants={fadeIn} className="flex flex-col items-center gap-6 mb-12">
-              <div className="flex items-center gap-2 text-sm font-semibold text-white/90 bg-white/5 py-2 px-6 rounded-full border border-white/10">
-                <Zap className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                $12+ Million in Savings Identified for Our Clients
-                <Zap className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              </div>
-
+            <motion.div variants={fadeIn} className="flex flex-col items-center gap-5">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white rounded-[6px] h-14 px-8 text-lg font-bold shadow-[0_0_40px_-10px_rgba(31,98,255,0.5)] hover:shadow-[0_0_60px_-15px_rgba(31,98,255,0.7)] transition-all"
-                data-testid="button-get-report-hero"
+                className="bg-primary hover:bg-primary/90 text-white rounded-md h-14 px-8 text-lg font-bold shadow-[0_0_40px_-10px_rgba(31,98,255,0.5)] hover:shadow-[0_0_60px_-15px_rgba(31,98,255,0.7)] transition-all"
+                data-testid="button-book-call-hero"
               >
-                Get Your Free AI Readiness Report
+                Book Your Free Strategy Call
               </Button>
+
+              <div className="flex flex-col sm:flex-row items-center gap-3 text-sm text-muted-foreground">
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  No credit card required
+                </span>
+                <span className="hidden sm:block text-border">|</span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  30-minute call
+                </span>
+                <span className="hidden sm:block text-border">|</span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  We'll show you exactly how we'd get you 5 calls in 60 days
+                </span>
+              </div>
             </motion.div>
           </motion.div>
         </section>
 
-        {/* SECTION 3 — VSL VIDEO PLAYER */}
-        <section className="container mx-auto px-4 pb-24">
+        {/* VIDEO SECTION */}
+        <section className="container mx-auto px-4 pb-28">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-5xl mx-auto rounded-2xl overflow-hidden border border-border bg-card shadow-2xl relative group cursor-pointer"
+            transition={{ duration: 0.7 }}
+            className="max-w-4xl mx-auto text-center"
           >
-            {/* Fake Video Header */}
-            <div className="h-12 bg-black/40 border-b border-border/50 flex items-center justify-between px-4 absolute top-0 left-0 right-0 z-10 backdrop-blur-sm">
-              <div className="flex flex-col">
-                <span className="text-white font-semibold text-sm">The NEW Way to Identify AI Automation Opportunities</span>
-                <span className="text-muted-foreground text-xs">JobsDone Labs</span>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Heart className="w-4 h-4 hover:text-white transition-colors" />
-                <BookmarkPlus className="w-4 h-4 hover:text-white transition-colors" />
-                <Share2 className="w-4 h-4 hover:text-white transition-colors" />
-              </div>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+              Watch This 8-Minute Video to See How We Guarantee 5 Qualified Sales Calls in 60 Days
+            </h2>
 
-            {/* Video Thumbnail */}
-            <div className="aspect-video relative bg-card">
-              <img
-                src="/vsl-thumb.png"
-                alt="Presentation Thumbnail"
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                onError={(e) => {
-                  e.currentTarget.src = "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=2000";
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-black/30" />
-              
-              {/* Play Button Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center backdrop-blur-md shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-8 h-8 text-white fill-white ml-1" />
+            <div
+              className="rounded-xl overflow-hidden border border-border shadow-[0_10px_40px_rgba(0,0,0,0.4)] relative group cursor-pointer"
+              data-testid="vsl-video-container"
+            >
+              <div className="aspect-video relative bg-card">
+                <img
+                  src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1600"
+                  alt="VSL Video Thumbnail"
+                  className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(31,98,255,0.5)] group-hover:scale-110 transition-transform duration-300">
+                    <Play className="w-8 h-8 text-white fill-white ml-1" />
+                  </div>
                 </div>
               </div>
-
-              {/* Progress bar fake */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
-                <div className="h-full bg-primary w-1/3" />
-              </div>
             </div>
+
+            <Button
+              size="lg"
+              className="mt-10 bg-primary hover:bg-primary/90 text-white rounded-md h-14 px-8 text-lg font-bold shadow-[0_0_30px_-10px_rgba(31,98,255,0.5)] transition-all"
+              data-testid="button-book-call-below-video"
+            >
+              Yes, I Want 5 Qualified Calls in 60 Days
+            </Button>
           </motion.div>
         </section>
 
-        {/* SECTION 4 — SOCIAL PROOF / RESULTS */}
-        <section className="border-y border-border bg-card/30 py-12 overflow-hidden">
+        {/* CASE STUDIES */}
+        <section className="bg-card/30 border-y border-border py-24">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-border/50">
-              <div className="flex flex-col items-center">
-                <span className="text-4xl font-bold text-white mb-2">100+</span>
-                <span className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">Businesses Analyzed</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="text-4xl font-bold text-white mb-2">$12M+</span>
-                <span className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">Savings Identified</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="text-4xl font-bold text-white mb-2">3.4x</span>
-                <span className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">Average ROI</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="text-4xl font-bold text-white mb-2">95%</span>
-                <span className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">Client Satisfaction</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 5 — HOW IT WORKS */}
-        <section className="container mx-auto px-4 py-24">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">How It Works</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Our streamlined process to uncover hidden revenue and time savings in your operations.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                step: "01",
-                title: "Submit Your URL",
-                desc: "Fill out a brief 2-minute form with your company details and current tech stack.",
-              },
-              {
-                step: "02",
-                title: "We Analyze",
-                desc: "Our experts map your workflows against 400+ automation frameworks to find inefficiencies.",
-              },
-              {
-                step: "03",
-                title: "Get Your Report",
-                desc: "Receive a comprehensive AI readiness report with projected ROI and actionable steps.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={item.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                className="bg-card border border-border p-8 rounded-2xl relative"
-              >
-                <div className="text-6xl font-black text-white/5 absolute top-4 right-6 pointer-events-none select-none">
-                  {item.step}
-                </div>
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary font-bold text-xl mb-6">
-                  {i + 1}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* SECTION 6 — TESTIMONIALS */}
-        <section className="bg-card/50 py-24 border-y border-border">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Don't just take our word for it</h2>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-14"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Real Results From Real Clients</h2>
+            </motion.div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {[
-                {
-                  quote: "JobsDone Labs found $140,000 in annualized savings in our customer service workflows alone. The ROI on their audit was immediate.",
-                  name: "Marcus T.",
-                  role: "COO, Nexus Retail",
-                  img: "/testimonial-1.png",
-                },
-                {
-                  quote: "I thought we were too small for AI. They showed us how to automate 30 hours of manual data entry a week using tools we already paid for.",
-                  name: "Sarah J.",
-                  role: "Founder, Elevate Agency",
-                  img: "/testimonial-2.png",
-                },
-                {
-                  quote: "The report was an eye-opener. It wasn't just technical jargon—it was a clear business case with exact dollar amounts and implementation timelines.",
-                  name: "David W.",
-                  role: "Owner, Precision Logistics",
-                  img: "/testimonial-3.png",
-                },
-              ].map((test, i) => (
+              {caseStudies.map((c, i) => (
                 <motion.div
-                  key={test.name}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  key={c.name}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-background border border-border p-8 rounded-2xl flex flex-col justify-between"
+                  className="bg-background border border-border rounded-xl p-8 flex flex-col gap-4"
+                  data-testid={`card-case-study-${i}`}
                 >
-                  <div className="mb-8">
-                    <div className="flex gap-1 mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <svg key={star} className="w-5 h-5 text-primary fill-primary" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-                    <p className="text-lg text-white/90 italic">"{test.quote}"</p>
+                  <p className="font-bold text-white text-lg">{c.name}</p>
+                  <div className="space-y-2 text-sm">
+                    <p className="text-muted-foreground">
+                      <span className="font-semibold text-white/70">Before: </span>{c.before}
+                    </p>
+                    <p className="text-muted-foreground">
+                      <span className="font-semibold text-white/70">After: </span>{c.after}
+                    </p>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={test.img}
-                      alt={test.name}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-border"
-                      onError={(e) => {
-                        e.currentTarget.src = `https://ui-avatars.com/api/?name=${test.name}&background=1F62FF&color=fff`;
-                      }}
-                    />
-                    <div>
-                      <div className="font-bold text-white">{test.name}</div>
-                      <div className="text-sm text-muted-foreground">{test.role}</div>
-                    </div>
+                  <div className="pt-2 border-t border-border flex items-center justify-between">
+                    <span className="text-green-400 font-bold text-base">{c.revenue}</span>
+                    <span className="text-primary font-bold text-sm bg-primary/10 px-3 py-1 rounded-full">{c.roi}</span>
                   </div>
                 </motion.div>
               ))}
@@ -288,50 +316,152 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SECTION 7 — FINAL CTA */}
-        <section className="py-32 relative overflow-hidden">
-          <div className="absolute inset-0 bg-primary/5 pattern-dots pattern-border pattern-size-4 pattern-opacity-10 mix-blend-overlay" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
-          
-          <div className="container mx-auto px-4 relative z-10 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Stop Leaving Money on the Table</h2>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Find out exactly how much time and money AI can save your business. The analysis is free. The insights are priceless.
-            </p>
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white rounded-[6px] h-14 px-10 text-lg font-bold shadow-[0_0_40px_-10px_rgba(31,98,255,0.5)] hover:shadow-[0_0_60px_-15px_rgba(31,98,255,0.7)] transition-all"
-              data-testid="button-get-report-bottom"
+        {/* GUARANTEE */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
             >
-              Get Your Free AI Readiness Report
-            </Button>
-            <p className="mt-4 text-sm text-muted-foreground flex items-center justify-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-green-500" />
-              100% Free. No commitment required.
-            </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Our Iron-Clad Guarantee</h2>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-3xl mx-auto border-2 border-primary/40 bg-primary/5 rounded-2xl p-10 md:p-14 text-center"
+            >
+              <Shield className="w-14 h-14 text-primary mx-auto mb-6" />
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-4">
+                We guarantee you <strong className="text-white">5 qualified sales calls</strong> booked in your first 60 days—or we work for free until we hit that number.
+              </p>
+              <p className="text-lg text-white/90 leading-relaxed mb-4">
+                If we don't book you 5 qualified calls in 60 days, we waive your monthly fee and keep working for free until we do.
+              </p>
+              <p className="text-lg font-semibold text-primary">You have nothing to lose and everything to gain.</p>
+              <Button
+                size="lg"
+                className="mt-10 bg-primary hover:bg-primary/90 text-white rounded-md h-14 px-8 text-lg font-bold shadow-[0_0_30px_-10px_rgba(31,98,255,0.5)] transition-all"
+                data-testid="button-book-call-guarantee"
+              >
+                Book Your Free Strategy Call Now
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* HOW IT WORKS */}
+        <section className="bg-card/30 border-y border-border py-24">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-14"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                How We Get You 5 Qualified Calls in 60 Days
+              </h2>
+            </motion.div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {steps.map((s, i) => (
+                <motion.div
+                  key={s.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="bg-background border border-border rounded-xl p-7 flex flex-col gap-4 relative"
+                  data-testid={`card-step-${i}`}
+                >
+                  <div className="text-6xl font-black text-white/4 absolute top-4 right-5 select-none pointer-events-none">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <s.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-white text-base leading-snug">{s.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-14"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Frequently Asked Questions</h2>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto">
+              {faqs.map((item) => (
+                <FaqItem key={item.q} q={item.q} a={item.a} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FINAL CTA */}
+        <section className="bg-card/50 border-t border-border py-28 relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-primary/15 rounded-full blur-[140px] pointer-events-none" />
+          <div className="container mx-auto px-4 relative z-10 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Ready to Get 5 Qualified Sales Calls in 60 Days?
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+                Book your free 30-minute strategy call now. We'll show you exactly how we'd get you 5 calls in 60 days—or you don't pay.
+              </p>
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white rounded-md h-14 px-10 text-lg font-bold shadow-[0_0_40px_-10px_rgba(31,98,255,0.5)] hover:shadow-[0_0_60px_-15px_rgba(31,98,255,0.7)] transition-all"
+                data-testid="button-book-call-final"
+              >
+                Book Your Free Strategy Call
+              </Button>
+              <p className="mt-6 text-sm italic text-muted-foreground max-w-xl mx-auto leading-relaxed">
+                P.S. — Every week you wait is another 30 hours wasted on manual lead gen. That's $18,000 in opportunity cost per month. How much longer are you going to let that continue?
+              </p>
+            </motion.div>
           </div>
         </section>
       </main>
 
-      {/* SECTION 8 — FOOTER */}
-      <footer className="border-t border-border bg-background py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-2">
-              <FlaskConical className="w-5 h-5 text-primary" />
-              <span className="font-bold text-lg">JOBSDONE <span className="text-primary">LABS</span></span>
-            </div>
-            
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <Link href="/privacy" className="hover:text-white transition-colors" data-testid="link-privacy">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-white transition-colors" data-testid="link-terms">Terms of Service</Link>
-              <Link href="/contact" className="hover:text-white transition-colors" data-testid="link-contact">Contact</Link>
-            </div>
-            
-            <div className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} JobsDone Labs. All rights reserved.
-            </div>
+      {/* FOOTER */}
+      <footer className="border-t border-border bg-background py-10">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <FlaskConical className="w-4 h-4 text-primary" />
+            <span className="font-bold text-white">JOBSDONE <span className="text-primary">LABS</span></span>
           </div>
+          <div className="flex items-center gap-1 text-center">
+            support@jobsdonelabs.com
+          </div>
+          <div className="flex items-center gap-5">
+            <Link href="/privacy" className="hover:text-white transition-colors" data-testid="link-privacy">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors" data-testid="link-terms">Terms of Service</Link>
+          </div>
+          <span>© {new Date().getFullYear()} JobsDone Labs. All rights reserved.</span>
         </div>
       </footer>
     </div>
