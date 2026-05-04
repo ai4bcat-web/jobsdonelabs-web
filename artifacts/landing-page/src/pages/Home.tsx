@@ -196,7 +196,7 @@ export default function Home() {
       <main>
 
         {/* ── HERO ── */}
-        <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-black">
+        <section className="relative overflow-hidden bg-black pt-32 pb-0">
           <Starfield />
 
           {/* Abstract blurred shapes */}
@@ -204,7 +204,7 @@ export default function Home() {
           <div className="absolute top-2/5 right-1/4 w-[300px] h-[80px] bg-white/[0.018] rounded-full blur-2xl pointer-events-none" />
           <div className="absolute bottom-1/3 left-1/3 w-[400px] h-[100px] bg-[#1F62FF]/[0.04] rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative max-w-7xl mx-auto px-6 pb-24 pt-40 w-full">
+          <div className="relative max-w-7xl mx-auto px-6">
             {/* Stats */}
             <motion.p
               initial={{ opacity: 0 }}
@@ -265,7 +265,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.45 }}
-              className="flex flex-wrap items-center gap-6 text-white/30 text-sm"
+              className="flex flex-wrap items-center gap-6 text-white/30 text-sm mb-16"
             >
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
@@ -275,6 +275,37 @@ export default function Home() {
                 <Clock className="w-4 h-4" />
                 <span>24/7 response management</span>
               </div>
+            </motion.div>
+
+            {/* VSL Video */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.55 }}
+              className="relative"
+            >
+              <div
+                className="rounded-2xl overflow-hidden border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.8)] relative group cursor-pointer max-w-4xl mx-auto"
+                data-testid="vsl-video-container"
+              >
+                <div className="aspect-video relative bg-zinc-900">
+                  <img
+                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1400"
+                    alt="VSL thumbnail"
+                    className="w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-400"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-[0_4px_40px_rgba(255,255,255,0.25)] group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-8 h-8 text-black ml-1 fill-black" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm text-white/70 text-xs px-3 py-1.5 rounded-md font-medium">
+                    8:42
+                  </div>
+                </div>
+              </div>
+              <p className="text-center text-white/25 text-xs mt-4 pb-20">Watch before booking · No fluff, just results</p>
             </motion.div>
           </div>
         </section>
