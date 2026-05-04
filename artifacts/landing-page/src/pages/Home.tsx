@@ -31,7 +31,7 @@ const faqs = [
   { q: "Why should I trust you to deliver these results?", a: "We've booked thousands of qualified sales calls for B2B service providers across coaching, consulting, and agency niches. Every client gets a dedicated campaign manager, weekly reporting, and our ironclad guarantee — if we don't hit your target, we keep working for free." },
   { q: "How do I know this will work for my specific business?", a: "During your free strategy call, we'll audit your current lead generation, map your ICP, and build a custom campaign blueprint. If we don't think we can get you results, we'll tell you upfront — we only take on clients we're confident we can help." },
   { q: "What if I'm not tech-savvy?", a: "You don't need to be. We handle 100% of the technical setup — domains, email inboxes, LinkedIn automation, lead lists, copy, and response management. All you do is show up to the booked calls." },
-  { q: "How long does it take to see results?", a: "Most clients see their first qualified calls booked within 30 days. We guarantee 5 calls in 60 days. Setup takes 1–2 weeks, campaigns launch in week 3, and calls typically start rolling in shortly after." },
+  { q: "How long does it take to see results?", a: "Most clients see their first qualified calls booked within 30 days. We guarantee 10 calls in 60 days. Setup takes 1–2 weeks, campaigns launch in week 3, and calls typically start rolling in shortly after." },
   { q: "What counts as a 'qualified call'?", a: "A qualified call is a booked meeting with a prospect who matches your ideal client profile — right industry, right size, right pain point, and has expressed genuine interest in your service. Cold tire-kickers don't count." },
   { q: "Can I cancel anytime?", a: "Yes. There are no long-term lock-ins. We work on a month-to-month basis after an initial setup period. If you're not happy, you can cancel with 30 days' notice." },
   { q: "Do you work with businesses in my industry?", a: "We work best with B2B service providers — coaches, consultants, agencies, and professional services with a high average client value ($3k+ per engagement). If you're B2C or have a very broad target market, we may not be the right fit." },
@@ -131,7 +131,7 @@ export default function Home() {
                 className="text-4xl md:text-5xl font-bold text-white leading-[1.1] tracking-tight mb-5"
               >
                 Stop Chasing Leads.{" "}
-                <span className="text-primary">Book 5 Qualified</span>{" "}
+                <span className="text-primary">Book 10 Qualified</span>{" "}
                 Sales Calls in 60 Days—
                 <span className="text-primary">Guaranteed.</span>
               </motion.h1>
@@ -163,7 +163,7 @@ export default function Home() {
               {/* Bullet benefits */}
               <motion.ul variants={stagger} className="space-y-3 mb-8">
                 {[
-                  "Cold email & LinkedIn systems that book 5+ qualified calls in 60 days",
+                  "Cold email & LinkedIn systems that book 10+ qualified calls in 60 days",
                   "Fully done-for-you — no manual prospecting ever again",
                   "Ironclad guarantee: we work free until you hit your target",
                 ].map((item) => (
@@ -307,7 +307,7 @@ export default function Home() {
                 <p className="text-primary text-xs uppercase tracking-widest font-semibold mb-2">Zero Risk</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">Our Iron-Clad Guarantee</h2>
                 <p className="text-white/55 leading-relaxed mb-4">
-                  We guarantee you <strong className="text-white">5 qualified sales calls</strong> booked in your first 60 days—or we work for free until we hit that number.
+                  We guarantee you <strong className="text-white">10 qualified sales calls</strong> booked in your first 60 days—or we work for free until we hit that number.
                 </p>
                 <p className="text-white/55 leading-relaxed mb-6">
                   If we don't deliver, we waive your monthly fee and keep working for free. You have nothing to lose and everything to gain.
@@ -359,7 +359,7 @@ export default function Home() {
               className="mb-12"
             >
               <p className="text-primary text-xs uppercase tracking-widest font-semibold mb-2">The Process</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">How We Get You 5 Qualified Calls in 60 Days</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">How We Get You 10 Qualified Calls in 60 Days</h2>
             </motion.div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -427,10 +427,10 @@ export default function Home() {
                 className="max-w-xl"
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-                  Ready to Get <span className="text-primary">5 Qualified Sales Calls</span> in 60 Days?
+                  Ready to Get <span className="text-primary">10 Qualified Sales Calls</span> in 60 Days?
                 </h2>
                 <p className="text-white/50 text-lg leading-relaxed mb-2">
-                  Book your free 30-minute strategy call. We'll show you exactly how we'd get you 5 calls in 60 days—or you don't pay.
+                  Book your free 30-minute strategy call. We'll show you exactly how we'd get you 10 calls in 60 days—or you don't pay.
                 </p>
                 <p className="text-sm italic text-white/30 leading-relaxed">
                   P.S. — Every week you wait is another 30 hours wasted on manual lead gen. That's $18,000 in opportunity cost per month.
