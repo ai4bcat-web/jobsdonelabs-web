@@ -730,22 +730,60 @@ export default function Home() {
         </section>
 
         {/* ── FINAL CTA ── */}
-        <section className="py-28 text-center px-6" style={{ background: "radial-gradient(ellipse at center, rgba(31,98,255,0.07) 0%, transparent 70%), #f8faff" }}>
-          <Fade>
-            <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-4">Ready to get your time back?</p>
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-5 leading-tight">
-              Book your free automation audit call
-            </h2>
-            <p className="text-slate-500 text-lg max-w-xl mx-auto mb-10">
-              In 45 minutes, we'll map your biggest bottlenecks and hand you a custom roadmap — whether you hire us or not.
-            </p>
-            <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-              <button className="bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-black text-lg px-12 h-14 rounded-xl transition-all inline-flex items-center gap-2 shadow-[0_4px_30px_rgba(31,98,255,0.35)]" data-testid="button-final-cta">
-                Book a Call <ArrowRight className="w-5 h-5" />
-              </button>
-            </a>
-            <p className="text-slate-400 text-xs mt-5">No commitment. No sales pressure. Just a clear roadmap for your business.</p>
-          </Fade>
+        <section className="py-20 px-6" style={{ background: "radial-gradient(ellipse at 30% 50%, rgba(31,98,255,0.07) 0%, transparent 65%), #f8faff" }}>
+          <div className="max-w-5xl mx-auto">
+            <Fade>
+              <div className="bg-white border border-slate-100 rounded-3xl shadow-sm overflow-hidden">
+                <div className="flex flex-col md:flex-row items-stretch">
+
+                  {/* Photo side */}
+                  <div className="md:w-[340px] flex-shrink-0 relative bg-slate-100">
+                    <img
+                      src={`${import.meta.env.BASE_URL}ryne.png`}
+                      alt="Ryne Bandolik — Founder, JobsDone Labs"
+                      className="w-full h-full object-cover object-top min-h-[280px] md:min-h-full"
+                    />
+                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/70 to-transparent p-5">
+                      <p className="text-white font-bold text-sm leading-none">Ryne Bandolik</p>
+                      <p className="text-white/60 text-xs mt-0.5">Founder, JobsDone Labs</p>
+                    </div>
+                  </div>
+
+                  {/* Text side */}
+                  <div className="flex-1 flex flex-col justify-center p-10 md:p-14">
+                    <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-4">Ready to get your time back?</p>
+                    <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-5 leading-tight">
+                      Book your free<br />automation audit call
+                    </h2>
+                    <p className="text-slate-500 text-base leading-relaxed mb-8">
+                      In 45 minutes, I'll personally map your biggest bottlenecks and hand you a custom roadmap — whether you hire us or not.
+                    </p>
+
+                    <div className="flex flex-col gap-3">
+                      <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                        <button className="w-full sm:w-auto bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-black text-base px-10 h-13 py-3.5 rounded-xl transition-all inline-flex items-center gap-2 shadow-[0_4px_24px_rgba(31,98,255,0.3)]" data-testid="button-final-cta">
+                          Book a Call with Ryne <ArrowRight className="w-4 h-4" />
+                        </button>
+                      </a>
+                      <p className="text-slate-400 text-xs">No commitment. No sales pressure. You keep the roadmap either way.</p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-4 mt-7 pt-7 border-t border-slate-100">
+                      {["$30K guaranteed in 90 days", "Month-to-month only", "You own everything we build"].map(t => (
+                        <span key={t} className="flex items-center gap-1.5 text-xs text-slate-500 font-medium">
+                          <span className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                            <svg className="w-2.5 h-2.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                          </span>
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </Fade>
+          </div>
         </section>
 
       </main>
