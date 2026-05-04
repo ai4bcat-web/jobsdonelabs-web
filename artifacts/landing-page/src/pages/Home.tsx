@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  FlaskConical,
   Play,
   ArrowRight,
   CheckCircle2,
@@ -89,11 +88,8 @@ export default function Home() {
       {/* ── NAV ── */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/6 bg-background/95 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5 group" data-testid="link-logo">
-            <FlaskConical className="w-6 h-6 text-primary" />
-            <span className="font-bold text-base tracking-tight text-white">
-              JOBSDONE <span className="text-primary">LABS</span>
-            </span>
+          <Link href="/" className="flex items-center" data-testid="link-logo">
+            <img src="/logo-transparent.png" alt="JobsDone Labs" className="h-11 w-auto" style={{ filter: "brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(190deg)" }} />
           </Link>
           <Button
             className="bg-primary hover:bg-primary/90 text-white rounded-lg px-5 font-semibold text-sm h-9 shadow-[0_2px_12px_rgba(31,98,255,0.3)]"
@@ -146,11 +142,13 @@ export default function Home() {
 
               {/* Founder block */}
               <motion.div variants={fadeIn} className="flex items-center gap-3 mb-7">
-                <div className="w-11 h-11 rounded-full bg-primary/25 border-2 border-primary/40 flex items-center justify-center text-primary font-bold text-sm flex-shrink-0">
-                  JL
-                </div>
+                <img
+                  src="/ryne.png"
+                  alt="Ryne Bandolik"
+                  className="w-12 h-12 rounded-full object-cover object-top border-2 border-primary/40 flex-shrink-0"
+                />
                 <div>
-                  <p className="text-white font-semibold text-sm leading-none mb-1">JobsDone Labs Team</p>
+                  <p className="text-white font-semibold text-sm leading-none mb-1">Ryne Bandolik, Founder</p>
                   <div className="flex items-center gap-1.5">
                     <div className="flex gap-0.5">
                       {[1,2,3,4,5].map(s => <Star key={s} className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />)}
@@ -312,13 +310,20 @@ export default function Home() {
                 <p className="text-white/55 leading-relaxed mb-6">
                   If we don't deliver, we waive your monthly fee and keep working for free. You have nothing to lose and everything to gain.
                 </p>
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white rounded-lg h-12 px-7 font-semibold text-base shadow-[0_4px_20px_rgba(31,98,255,0.3)] transition-all"
-                  data-testid="button-book-call-guarantee"
-                >
-                  Book Your Free Strategy Call Now
-                </Button>
+                <div className="flex items-center gap-4">
+                  <img
+                    src="/ryne.png"
+                    alt="Ryne Bandolik"
+                    className="w-14 h-14 rounded-full object-cover object-top border-2 border-primary/40 flex-shrink-0"
+                  />
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-white rounded-lg h-12 px-7 font-semibold text-base shadow-[0_4px_20px_rgba(31,98,255,0.3)] transition-all"
+                    data-testid="button-book-call-guarantee"
+                  >
+                    Book Your Free Strategy Call Now
+                  </Button>
+                </div>
               </motion.div>
 
               <motion.div
@@ -332,7 +337,7 @@ export default function Home() {
                   <div className="w-14 h-14 bg-primary/15 rounded-2xl flex items-center justify-center mx-auto mb-5">
                     <Shield className="w-7 h-7 text-primary" />
                   </div>
-                  <p className="text-2xl font-bold text-white mb-2">5 Calls in 60 Days</p>
+                  <p className="text-2xl font-bold text-white mb-2">10 Calls in 60 Days</p>
                   <p className="text-white/45 text-sm mb-5">or we work for free until we do</p>
                   <div className="space-y-2.5">
                     {["No extra charge if we miss the target", "Dedicated campaign manager throughout", "Weekly performance reports included"].map(item => (
@@ -444,13 +449,23 @@ export default function Home() {
                 transition={{ duration: 0.55 }}
                 className="flex flex-col items-center gap-4 flex-shrink-0"
               >
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white rounded-lg h-14 px-10 text-lg font-bold shadow-[0_6px_30px_rgba(31,98,255,0.4)] hover:shadow-[0_6px_40px_rgba(31,98,255,0.55)] transition-all whitespace-nowrap"
-                  data-testid="button-book-call-final"
-                >
-                  Book Your Free Strategy Call
-                </Button>
+                <div className="flex items-center gap-4">
+                  <img
+                    src="/ryne.png"
+                    alt="Ryne Bandolik"
+                    className="w-16 h-16 rounded-full object-cover object-top border-2 border-primary/40 flex-shrink-0"
+                  />
+                  <div className="flex flex-col gap-1">
+                    <Button
+                      size="lg"
+                      className="bg-primary hover:bg-primary/90 text-white rounded-lg h-14 px-10 text-lg font-bold shadow-[0_6px_30px_rgba(31,98,255,0.4)] hover:shadow-[0_6px_40px_rgba(31,98,255,0.55)] transition-all whitespace-nowrap"
+                      data-testid="button-book-call-final"
+                    >
+                      Book Your Free Strategy Call
+                    </Button>
+                    <span className="text-white/35 text-xs text-center">Talk directly with Ryne</span>
+                  </div>
+                </div>
                 <div className="flex items-center gap-2 text-white/35 text-xs">
                   <CheckCircle2 className="w-3.5 h-3.5 text-green-400" />
                   No credit card · 30 minutes · No commitment
@@ -464,9 +479,12 @@ export default function Home() {
       {/* ── FOOTER ── */}
       <footer className="border-t border-white/6 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/30">
-          <div className="flex items-center gap-2">
-            <FlaskConical className="w-4 h-4 text-primary" />
-            <span className="font-bold text-white/50">JOBSDONE <span className="text-primary">LABS</span></span>
+          <div className="flex items-center gap-3">
+            <img src="/logo-transparent.png" alt="JobsDone Labs" className="h-8 w-auto" />
+            <div className="flex items-center gap-2">
+              <img src="/ryne.png" alt="Ryne Bandolik" className="w-7 h-7 rounded-full object-cover object-top border border-white/15" />
+              <span className="text-white/40 text-xs">Ryne Bandolik, Founder</span>
+            </div>
           </div>
           <span>support@jobsdonelabs.com</span>
           <div className="flex items-center gap-5">
