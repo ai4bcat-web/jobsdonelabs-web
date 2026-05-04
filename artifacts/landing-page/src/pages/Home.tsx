@@ -521,9 +521,15 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="flex-1 min-w-0 w-full lg:max-w-[460px]"
+              className="flex-1 min-w-0 w-full lg:max-w-[560px]"
             >
-              <WorkflowCard />
+              <div className="rounded-2xl overflow-hidden shadow-[0_8px_48px_rgba(31,98,255,0.15)] ring-1 ring-slate-200">
+                <img
+                  src={`${import.meta.env.BASE_URL}hero-diagram.png`}
+                  alt="Inbound to Impact — Automated by JobsDone Labs"
+                  className="w-full h-auto block"
+                />
+              </div>
             </motion.div>
 
           </div>
