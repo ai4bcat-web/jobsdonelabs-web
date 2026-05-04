@@ -44,6 +44,108 @@ function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
 }
 
 /* ─────────────────────────────────────────────── */
+/*  Workflow Card (hero right)                     */
+/* ─────────────────────────────────────────────── */
+function WorkflowCard() {
+  return (
+    <div className="bg-[#0C1525] border border-[#182844] rounded-2xl p-5 w-full shadow-[0_8px_40px_rgba(0,0,0,0.4)]">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-1.5 text-xs font-semibold text-white/30 uppercase tracking-wider">
+          <span className="w-1.5 h-1.5 rounded-full bg-white/30 inline-block" />
+          Live Automation System
+        </div>
+        <span className="flex items-center gap-1 text-xs font-semibold text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded-full border border-emerald-400/20">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+          Active
+        </span>
+      </div>
+
+      {/* Step 1 */}
+      <div className="bg-[#0a1628] border border-[#182844] rounded-xl p-3.5 flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 bg-[#1F62FF]/15 rounded-lg flex items-center justify-center flex-shrink-0 text-base">📋</div>
+          <div>
+            <p className="font-semibold text-white text-sm leading-none mb-0.5">Lead Capture</p>
+            <p className="text-white/30 text-xs">New inquiry received</p>
+          </div>
+        </div>
+        <span className="text-xs font-medium text-[#1F62FF] bg-[#1F62FF]/10 px-2.5 py-1 rounded-md border border-[#1F62FF]/20 whitespace-nowrap">Triggered</span>
+      </div>
+
+      <div className="flex justify-center my-1.5">
+        <div className="w-px h-5 border-l-2 border-dashed border-white/10" />
+      </div>
+
+      {/* Step 2 */}
+      <div className="bg-[#0a1628] border border-[#182844] rounded-xl p-3.5 flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 bg-[#1F62FF]/15 rounded-lg flex items-center justify-center flex-shrink-0 text-base">🤖</div>
+          <div>
+            <p className="font-semibold text-white text-sm leading-none mb-0.5">AI Qualification</p>
+            <p className="text-white/30 text-xs">Tagged, scored, enriched</p>
+          </div>
+        </div>
+        <span className="text-xs font-medium text-white/40 bg-white/5 px-2.5 py-1 rounded-md border border-white/10 whitespace-nowrap">→ Processing</span>
+      </div>
+
+      <div className="flex justify-center my-1.5">
+        <div className="w-px h-5 border-l-2 border-dashed border-white/10" />
+      </div>
+
+      {/* Step 3 — parallel */}
+      <div className="grid grid-cols-2 gap-2">
+        <div className="bg-[#0a1628] border border-[#182844] rounded-xl p-3 flex items-start gap-2">
+          <div className="w-7 h-7 bg-[#1F62FF]/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm">📧</div>
+          <div>
+            <p className="font-semibold text-white text-xs leading-none mb-0.5">Email Nurture</p>
+            <p className="text-white/30 text-[11px]">Follow-up sent</p>
+          </div>
+        </div>
+        <div className="bg-[#0a1628] border border-[#182844] rounded-xl p-3 flex items-start gap-2">
+          <div className="w-7 h-7 bg-amber-400/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm">🔔</div>
+          <div>
+            <p className="font-semibold text-white text-xs leading-none mb-0.5">Team Alert</p>
+            <p className="text-white/30 text-[11px]">Sales notified</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center my-1.5">
+        <div className="w-px h-5 border-l-2 border-dashed border-white/10" />
+      </div>
+
+      {/* Step 4 */}
+      <div className="bg-[#0a1628] border border-[#182844] rounded-xl p-3.5 flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 bg-emerald-400/10 rounded-lg flex items-center justify-center flex-shrink-0 text-base">🚀</div>
+          <div>
+            <p className="font-semibold text-white text-sm leading-none mb-0.5">Client Onboarding</p>
+            <p className="text-white/30 text-xs">Resources created automatically</p>
+          </div>
+        </div>
+        <span className="text-xs font-medium text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded-md border border-emerald-400/20">Complete</span>
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-white/[0.06]">
+        <div className="text-center">
+          <p className="text-xl font-black text-[#1F62FF]">12h</p>
+          <p className="text-xs text-white/30">Saved weekly</p>
+        </div>
+        <div className="text-center">
+          <p className="text-xl font-black text-[#1F62FF]">0</p>
+          <p className="text-xs text-white/30">Manual steps</p>
+        </div>
+        <div className="text-center">
+          <p className="text-xl font-black text-[#1F62FF]">24/7</p>
+          <p className="text-xs text-white/30">Always running</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────── */
 /*  Video Player placeholder                       */
 /* ─────────────────────────────────────────────── */
 function VideoPlayer({ label }: { label?: string }) {
@@ -312,45 +414,65 @@ export default function Home() {
       <main>
 
         {/* ── HERO ── */}
-        <section className="max-w-4xl mx-auto px-6 pt-20 pb-8 text-center">
-          <Fade>
-            <div className="inline-flex items-center gap-2 text-white/50 text-xs font-medium mb-8 border border-white/10 rounded-full px-4 py-1.5">
-              <span>For Agencies &amp; Service Businesses</span>
-              <span className="w-1 h-1 rounded-full bg-white/30 inline-block" />
-              <span>90-Day Guarantee</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.0] mb-6">
-              Stop Running Your Business.<br />
-              Let <span className="text-[#1F62FF]">Automation</span> Run It For You.
-            </h1>
-            <p className="text-white/50 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-8">
-              We build custom AI systems that cut 60–80% of manual work for marketing agencies, home service businesses, and finance firms — giving you back the time to actually grow.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                <button className="bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-bold text-base px-8 h-12 rounded-lg transition-all flex items-center gap-2 shadow-[0_0_30px_rgba(31,98,255,0.4)]" data-testid="button-hero-primary">
-                  Book a Free Audit Call <ArrowRight className="w-4 h-4" />
-                </button>
-              </a>
-              <button onClick={() => scrollTo("results")} className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white text-base font-medium px-8 h-12 rounded-lg transition-all" data-testid="button-hero-results">
-                See Client Results
-              </button>
-            </div>
-          </Fade>
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-10">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-          {/* Video */}
-          <Fade delay={0.12}>
-            <VideoPlayer label="Watch: How we save agencies $30K+ in 90 days (3 min)" />
-          </Fade>
-
-          {/* Stars + social proof */}
-          <Fade delay={0.18}>
-            <div className="mt-6 flex flex-col items-center gap-2">
-              <div className="flex gap-1">
-                {[1,2,3,4,5].map(s => <Star key={s} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
+            {/* Left column */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex-1 min-w-0"
+            >
+              <div className="inline-flex items-center gap-2 text-white/50 text-xs font-medium mb-7 border border-white/10 rounded-full px-4 py-1.5">
+                <span>For Agencies &amp; Service Businesses</span>
+                <span className="w-1 h-1 rounded-full bg-white/30 inline-block" />
+                <span>90-Day Guarantee</span>
               </div>
-              <p className="text-white/40 text-sm">50+ businesses automated · Avg. $30K+ saved in 90 days</p>
-            </div>
+              <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-[1.0] mb-6">
+                Stop Running<br />
+                Your Business.<br />
+                Let <span className="text-[#1F62FF]">Automation</span><br />
+                Run It For You.
+              </h1>
+              <p className="text-white/50 text-lg leading-relaxed mb-8 max-w-md">
+                We build custom AI systems that cut 60–80% of manual work for marketing agencies, home service businesses, and finance firms — giving you back the time to actually grow.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-8">
+                <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                  <button className="bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-bold text-base px-8 h-12 rounded-lg transition-all flex items-center gap-2 shadow-[0_0_30px_rgba(31,98,255,0.4)]" data-testid="button-hero-primary">
+                    Book a Free Audit Call <ArrowRight className="w-4 h-4" />
+                  </button>
+                </a>
+                <button onClick={() => scrollTo("results")} className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white text-base font-medium px-8 h-12 rounded-lg transition-all" data-testid="button-hero-results">
+                  See Client Results
+                </button>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="flex gap-0.5">
+                  {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
+                </div>
+                <p className="text-white/40 text-sm">50+ businesses automated · Avg. $30K+ saved in 90 days</p>
+              </div>
+            </motion.div>
+
+            {/* Right column — workflow card */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="flex-1 min-w-0 w-full lg:max-w-[460px]"
+            >
+              <WorkflowCard />
+            </motion.div>
+
+          </div>
+        </section>
+
+        {/* ── VIDEO ── */}
+        <section className="max-w-4xl mx-auto px-6 pb-10">
+          <Fade>
+            <VideoPlayer label="Watch: How we save agencies $30K+ in 90 days (3 min)" />
           </Fade>
         </section>
 
