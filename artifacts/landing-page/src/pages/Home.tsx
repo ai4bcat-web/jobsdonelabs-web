@@ -676,9 +676,9 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="flex-1 min-w-0 w-full lg:max-w-[660px]"
+              className="flex-1 min-w-0 w-full lg:max-w-[460px]"
             >
-              <HeroDiagram />
+              <WorkflowCard />
             </motion.div>
 
           </div>
@@ -734,7 +734,16 @@ export default function Home() {
               <SectionLabel>What We Build</SectionLabel>
               <SectionHeading>Five core systems. Infinite hours recovered.</SectionHeading>
             </Fade>
-            <div className="mt-10 flex flex-col gap-4">
+            <Fade delay={0.1}>
+              <div className="mt-10 mb-6 rounded-2xl overflow-hidden shadow-[0_4px_32px_rgba(31,98,255,0.12)] ring-1 ring-slate-200">
+                <img
+                  src={`${import.meta.env.BASE_URL}hero-diagram.png`}
+                  alt="Inbound to Impact — Automated by JobsDone Labs"
+                  className="w-full h-auto block"
+                />
+              </div>
+            </Fade>
+            <div className="flex flex-col gap-4">
               {services.map((s, i) => (
                 <Fade key={s.title} delay={i * 0.06}>
                   <div className="bg-white border border-slate-100 rounded-2xl p-7 flex flex-col md:flex-row gap-5 hover:border-[#1F62FF]/20 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 shadow-sm">
