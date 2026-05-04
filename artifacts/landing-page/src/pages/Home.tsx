@@ -521,7 +521,7 @@ export default function Home() {
               <span className="text-white/40 text-xs">Ryne Bandolik, Founder</span>
             </div>
           </div>
-          <span>support@jobsdonelabs.com</span>
+          <span>support@jobsdonelabs.ai</span>
           <div className="flex items-center gap-5">
             <Link href="/privacy" className="hover:text-white/55 transition-colors" data-testid="link-privacy">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white/55 transition-colors" data-testid="link-terms">Terms of Service</Link>
