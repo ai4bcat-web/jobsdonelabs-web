@@ -117,12 +117,14 @@ export default function Home() {
           <Link href="/" className="flex items-center" data-testid="link-logo">
             <JobsDoneLogo size="md" />
           </Link>
-          <Button
-            className="bg-primary hover:bg-primary/90 text-white rounded-lg px-5 font-semibold text-sm h-9 shadow-[0_2px_12px_rgba(31,98,255,0.3)]"
-            data-testid="button-book-call-nav"
-          >
-            Book a Call
-          </Button>
+          <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
+            <Button
+              className="bg-primary hover:bg-primary/90 text-white rounded-lg px-5 font-semibold text-sm h-9 shadow-[0_2px_12px_rgba(31,98,255,0.3)]"
+              data-testid="button-book-call-nav"
+            >
+              Book a Call
+            </Button>
+          </a>
         </div>
       </header>
 
@@ -200,13 +202,15 @@ export default function Home() {
 
               {/* Dual CTAs */}
               <motion.div variants={fadeIn} className="flex flex-wrap items-center gap-3">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white rounded-lg h-12 px-7 font-semibold text-base shadow-[0_4px_20px_rgba(31,98,255,0.35)] hover:shadow-[0_4px_28px_rgba(31,98,255,0.5)] transition-all"
-                  data-testid="button-book-call-hero"
-                >
-                  Book a Free Strategy Call <ArrowRight className="w-4 h-4 ml-1" />
-                </Button>
+                <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-white rounded-lg h-12 px-7 font-semibold text-base shadow-[0_4px_20px_rgba(31,98,255,0.35)] hover:shadow-[0_4px_28px_rgba(31,98,255,0.5)] transition-all"
+                    data-testid="button-book-call-hero"
+                  >
+                    Book a Free Strategy Call <ArrowRight className="w-4 h-4 ml-1" />
+                  </Button>
+                </a>
                 <Button
                   variant="ghost"
                   size="lg"
@@ -342,13 +346,15 @@ export default function Home() {
                     alt="Ryne Bandolik"
                     className="w-14 h-14 rounded-full object-cover object-top border-2 border-primary/40 flex-shrink-0"
                   />
-                  <Button
-                    size="lg"
-                    className="bg-primary hover:bg-primary/90 text-white rounded-lg h-12 px-7 font-semibold text-base shadow-[0_4px_20px_rgba(31,98,255,0.3)] transition-all"
-                    data-testid="button-book-call-guarantee"
-                  >
-                    Book Your Free Strategy Call Now
-                  </Button>
+                  <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      size="lg"
+                      className="bg-primary hover:bg-primary/90 text-white rounded-lg h-12 px-7 font-semibold text-base shadow-[0_4px_20px_rgba(31,98,255,0.3)] transition-all"
+                      data-testid="button-book-call-guarantee"
+                    >
+                      Book Your Free Strategy Call Now
+                    </Button>
+                  </a>
                 </div>
               </motion.div>
 
@@ -482,13 +488,15 @@ export default function Home() {
                     className="w-16 h-16 rounded-full object-cover object-top border-2 border-primary/40 flex-shrink-0"
                   />
                   <div className="flex flex-col gap-1">
-                    <Button
-                      size="lg"
-                      className="bg-primary hover:bg-primary/90 text-white rounded-lg h-14 px-10 text-lg font-bold shadow-[0_6px_30px_rgba(31,98,255,0.4)] hover:shadow-[0_6px_40px_rgba(31,98,255,0.55)] transition-all whitespace-nowrap"
-                      data-testid="button-book-call-final"
-                    >
-                      Book Your Free Strategy Call
-                    </Button>
+                    <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
+                      <Button
+                        size="lg"
+                        className="bg-primary hover:bg-primary/90 text-white rounded-lg h-14 px-10 text-lg font-bold shadow-[0_6px_30px_rgba(31,98,255,0.4)] hover:shadow-[0_6px_40px_rgba(31,98,255,0.55)] transition-all whitespace-nowrap"
+                        data-testid="button-book-call-final"
+                      >
+                        Book Your Free Strategy Call
+                      </Button>
+                    </a>
                     <span className="text-white/35 text-xs text-center">Talk directly with Ryne</span>
                   </div>
                 </div>
