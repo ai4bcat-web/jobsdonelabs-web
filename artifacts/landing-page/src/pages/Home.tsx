@@ -204,109 +204,111 @@ export default function Home() {
           <div className="absolute top-2/5 right-1/4 w-[300px] h-[80px] bg-white/[0.018] rounded-full blur-2xl pointer-events-none" />
           <div className="absolute bottom-1/3 left-1/3 w-[400px] h-[100px] bg-[#1F62FF]/[0.04] rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative max-w-7xl mx-auto px-6">
-            {/* Stats */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              className="text-white/35 text-sm mb-8 tracking-wide"
-            >
-              500+ B2B clients served &nbsp;·&nbsp; 4.9/5 avg rating
-            </motion.p>
+          <div className="relative max-w-7xl mx-auto px-6 pb-24">
+            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
 
-            {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-5xl sm:text-6xl md:text-7xl font-black text-white leading-[1.02] tracking-tight mb-5 max-w-4xl"
-            >
-              We Book 10 Qualified<br />
-              <span className="text-[#1F62FF]">Sales Calls in 60 Days</span>
-            </motion.h1>
-
-            {/* Sub lines */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.22 }}
-            >
-              <p className="text-white/50 text-xl md:text-2xl mb-1.5">with done-for-you cold email &amp; LinkedIn outreach</p>
-              <p className="text-white/30 text-lg md:text-xl mb-10">guaranteed — or we work for free until we do</p>
-            </motion.div>
-
-            {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.34 }}
-              className="flex flex-wrap items-center gap-4 mb-8"
-            >
-              <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
-                <button
-                  className="bg-white text-black font-bold text-base px-7 h-12 rounded-lg hover:bg-white/90 active:scale-95 transition-all duration-200 flex items-center gap-2"
-                  data-testid="button-book-call-hero"
+              {/* Left column — copy */}
+              <div className="flex-1 min-w-0">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-white/35 text-sm mb-8 tracking-wide"
                 >
-                  Book a Free Strategy Call <ArrowRight className="w-4 h-4" />
-                </button>
-              </a>
-              <button
-                onClick={() => scrollTo("case-studies")}
-                className="border border-white/20 text-white/70 hover:text-white hover:border-white/45 text-base font-medium px-7 h-12 rounded-lg transition-all duration-200"
-                data-testid="button-see-offer"
-              >
-                View Case Studies
-              </button>
-            </motion.div>
+                  500+ B2B clients served &nbsp;·&nbsp; 4.9/5 avg rating
+                </motion.p>
 
-            {/* Trust marks */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.45 }}
-              className="flex flex-wrap items-center gap-6 text-white/30 text-sm mb-16"
-            >
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
-                <span>Ironclad guarantee</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>24/7 response management</span>
-              </div>
-            </motion.div>
+                <motion.h1
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.1 }}
+                  className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.02] tracking-tight mb-5"
+                >
+                  We Book 10 Qualified<br />
+                  <span className="text-[#1F62FF]">Sales Calls in 60 Days</span>
+                </motion.h1>
 
-            {/* VSL Video */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.55 }}
-              className="relative"
-            >
-              <div
-                className="rounded-2xl overflow-hidden border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.8)] relative group cursor-pointer max-w-4xl mx-auto"
-                data-testid="vsl-video-container"
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.22 }}
+                >
+                  <p className="text-white/50 text-lg md:text-xl mb-1.5">with done-for-you cold email &amp; LinkedIn outreach</p>
+                  <p className="text-white/30 text-base md:text-lg mb-10">guaranteed — or we work for free until we do</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.34 }}
+                  className="flex flex-wrap items-center gap-4 mb-8"
+                >
+                  <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
+                    <button
+                      className="bg-white text-black font-bold text-base px-7 h-12 rounded-lg hover:bg-white/90 active:scale-95 transition-all duration-200 flex items-center gap-2"
+                      data-testid="button-book-call-hero"
+                    >
+                      Book a Free Strategy Call <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </a>
+                  <button
+                    onClick={() => scrollTo("case-studies")}
+                    className="border border-white/20 text-white/70 hover:text-white hover:border-white/45 text-base font-medium px-7 h-12 rounded-lg transition-all duration-200"
+                    data-testid="button-see-offer"
+                  >
+                    View Case Studies
+                  </button>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.45 }}
+                  className="flex flex-wrap items-center gap-6 text-white/30 text-sm"
+                >
+                  <div className="flex items-center gap-2">
+                    <Shield className="w-4 h-4" />
+                    <span>Ironclad guarantee</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    <span>24/7 response management</span>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Right column — VSL */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, delay: 0.25 }}
+                className="flex-1 min-w-0 w-full lg:max-w-[560px]"
               >
-                <div className="aspect-video relative bg-zinc-900">
-                  <img
-                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1400"
-                    alt="VSL thumbnail"
-                    className="w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-400"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-[0_4px_40px_rgba(255,255,255,0.25)] group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-8 h-8 text-black ml-1 fill-black" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <div
+                  className="rounded-2xl overflow-hidden border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.8)] relative group cursor-pointer"
+                  data-testid="vsl-video-container"
+                >
+                  <div className="aspect-video relative bg-zinc-900">
+                    <img
+                      src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200"
+                      alt="VSL thumbnail"
+                      className="w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-400"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-18 h-18 bg-white rounded-full flex items-center justify-center shadow-[0_4px_40px_rgba(255,255,255,0.25)] group-hover:scale-110 transition-transform duration-300 p-5">
+                        <svg className="w-8 h-8 fill-black ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white/70 text-xs px-2.5 py-1 rounded-md font-medium">
+                      8:42
                     </div>
                   </div>
-                  <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm text-white/70 text-xs px-3 py-1.5 rounded-md font-medium">
-                    8:42
-                  </div>
                 </div>
-              </div>
-              <p className="text-center text-white/25 text-xs mt-4 pb-20">Watch before booking · No fluff, just results</p>
-            </motion.div>
+                <p className="text-center text-white/25 text-xs mt-3">Watch before booking · No fluff, just results</p>
+              </motion.div>
+
+            </div>
           </div>
         </section>
 
