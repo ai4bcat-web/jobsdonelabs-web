@@ -566,30 +566,31 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── RESULTS (video testimonials) ── */}
+        {/* ── RESULTS (text testimonials) ── */}
         <section id="results" className="py-24 bg-slate-50">
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
               <SectionLabel>Client Results</SectionLabel>
-              <SectionHeading>Real founders. Real results. All on camera.</SectionHeading>
-              <p className="text-slate-400 mt-3 mb-10">10 agency owners and business founders share exactly what changed after working with us.</p>
+              <SectionHeading>Founders who've used our system — and what happened.</SectionHeading>
+              <p className="text-slate-400 mt-3 mb-10">Agency owners and business founders share what changed after putting our automation systems to work.</p>
             </Fade>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {testimonials.map((t, i) => (
                 <Fade key={t.name} delay={i * 0.05}>
-                  <div className="bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-[#1F62FF]/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300 shadow-sm" data-testid={`card-testimonial-${i}`}>
-                    <div className="aspect-video relative cursor-pointer group" style={{ background: "linear-gradient(135deg,#0a1628,#0f1f3d)" }}>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-12 h-12 rounded-full bg-[#1F62FF]/80 flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(31,98,255,0.4)]">
-                          <Play className="w-5 h-5 text-white ml-0.5" fill="white" />
-                        </div>
-                      </div>
+                  <div className="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col gap-4 hover:border-[#1F62FF]/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300 shadow-sm" data-testid={`card-testimonial-${i}`}>
+                    <div className="flex gap-0.5">
+                      {[1,2,3,4,5].map(s => <Star key={s} className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />)}
                     </div>
-                    <div className="p-5">
-                      <p className="font-bold text-slate-900 text-sm">{t.name}</p>
-                      <p className="text-[#1F62FF] text-xs font-medium">{t.company}</p>
-                      <p className="text-slate-400 text-xs mb-3">{t.role}</p>
-                      <p className="text-slate-500 text-sm italic">"{t.quote}"</p>
+                    <p className="text-slate-600 text-sm leading-relaxed italic flex-1">"{t.quote}"</p>
+                    <div className="flex items-center gap-3 pt-2 border-t border-slate-100">
+                      <div className="w-9 h-9 rounded-full bg-[#1F62FF]/10 border border-[#1F62FF]/20 flex items-center justify-center text-[#1F62FF] font-bold text-sm flex-shrink-0">
+                        {t.name[0]}
+                      </div>
+                      <div>
+                        <p className="font-bold text-slate-900 text-sm leading-none mb-0.5">{t.name}</p>
+                        <p className="text-[#1F62FF] text-xs font-medium">{t.company}</p>
+                        <p className="text-slate-400 text-xs">{t.role}</p>
+                      </div>
                     </div>
                   </div>
                 </Fade>
