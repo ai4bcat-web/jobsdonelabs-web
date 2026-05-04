@@ -15,29 +15,54 @@ import {
   X,
   Calculator,
   Check,
+  Megaphone,
+  Wrench,
+  BarChart3,
+  ClipboardList,
+  Bot,
+  Mail,
+  Bell,
+  Rocket,
+  Database,
+  Funnel,
+  Users,
+  FileText,
+  Zap,
 } from "lucide-react";
+
+/* ─────────────────────────────────────────────── */
+/*  Constants                                      */
+/* ─────────────────────────────────────────────── */
+const ACCENT = "#1F62FF";
+const SURFACE = "#161618";
+const BORDER = "#222226";
+const TEXT = "#F0F0F0";
+const MUTED = "#888892";
+const BG = "#0E0E10";
+const BG2 = "#121214";
+const CALENDLY = "https://calendly.com/ryne-bandolik";
 
 /* ─────────────────────────────────────────────── */
 /*  Logo                                           */
 /* ─────────────────────────────────────────────── */
-function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg"; dark?: boolean }) {
+function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
   const s = {
-    sm: { icon: "w-5 h-5", text: "text-sm", labs: "text-[9px]", gap: "gap-1.5" },
-    md: { icon: "w-7 h-7", text: "text-lg", labs: "text-[10px]", gap: "gap-2" },
-    lg: { icon: "w-9 h-9", text: "text-2xl", labs: "text-xs", gap: "gap-2.5" },
+    sm: { icon: "w-4 h-4", text: "text-[15px]", labs: "text-[8px]", gap: "gap-1.5" },
+    md: { icon: "w-5 h-5", text: "text-[17px]", labs: "text-[9px]", gap: "gap-2" },
+    lg: { icon: "w-7 h-7", text: "text-2xl", labs: "text-[11px]", gap: "gap-2.5" },
   }[size];
   return (
     <div className={`flex items-center ${s.gap}`}>
-      <FlaskConical className={`${s.icon} text-[#1F62FF] flex-shrink-0`} />
+      <FlaskConical className={`${s.icon} flex-shrink-0`} style={{ color: ACCENT }} />
       <div className="flex flex-col leading-none">
         <div className="flex items-baseline">
-          <span className={`font-black ${s.text} text-[#FAFAFA] tracking-tight`}>JOBS</span>
-          <span className={`font-black ${s.text} text-[#1F62FF] tracking-tight`}>DONE</span>
+          <span className={`font-bold ${s.text} sg tracking-tight`} style={{ color: TEXT }}>JOBS</span>
+          <span className={`font-bold ${s.text} sg tracking-tight`} style={{ color: ACCENT }}>DONE</span>
         </div>
         <div className="flex items-center gap-1 mt-0.5">
-          <span className="flex-1 h-px bg-[#1F62FF]/40" />
-          <span className={`${s.labs} font-semibold text-white/30 tracking-[0.18em] uppercase`}>Labs</span>
-          <span className="flex-1 h-px bg-[#1F62FF]/40" />
+          <span className="flex-1 h-px" style={{ background: `${ACCENT}30` }} />
+          <span className={`${s.labs} font-medium tracking-[0.16em] uppercase`} style={{ color: `${TEXT}35` }}>Labs</span>
+          <span className="flex-1 h-px" style={{ background: `${ACCENT}30` }} />
         </div>
       </div>
     </div>
@@ -45,97 +70,92 @@ function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg"; dark?: boole
 }
 
 /* ─────────────────────────────────────────────── */
-/*  Workflow Card  (dark)                          */
+/*  Workflow Card  (dark, no emojis)               */
 /* ─────────────────────────────────────────────── */
 function WorkflowCard() {
-  return (
-    <div className="bg-[#111114] rounded-2xl border border-[#1F1F23] p-5 w-full shadow-[0_8px_60px_rgba(31,98,255,0.12)]">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-1.5 text-xs font-semibold text-white/30 uppercase tracking-wider">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#1F62FF]/50 inline-block" />
-          Live Automation System
+  const row = (icon: React.ReactNode, label: string, sub: string, badge: React.ReactNode) => (
+    <div className="flex items-center justify-between px-3.5 py-2.5 rounded-lg" style={{ background: BG, border: `1px solid ${BORDER}` }}>
+      <div className="flex items-center gap-2.5">
+        <div className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0" style={{ background: `${ACCENT}12`, border: `1px solid ${ACCENT}20` }}>
+          {icon}
         </div>
-        <span className="flex items-center gap-1 text-xs font-semibold text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-800/60">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+        <div>
+          <p className="font-semibold text-[13px] leading-none mb-0.5 sg" style={{ color: TEXT }}>{label}</p>
+          <p className="text-[11px]" style={{ color: MUTED }}>{sub}</p>
+        </div>
+      </div>
+      {badge}
+    </div>
+  );
+
+  const pill = (label: string, variant: "blue" | "gray" | "green") => {
+    const styles = {
+      blue: { color: ACCENT, bg: `${ACCENT}12`, border: `${ACCENT}25` },
+      gray: { color: MUTED, bg: `${BORDER}80`, border: BORDER },
+      green: { color: "#34d399", bg: "#34d39912", border: "#34d39925" },
+    }[variant];
+    return (
+      <span className="text-[11px] font-medium px-2 py-0.5 rounded" style={{ color: styles.color, background: styles.bg, border: `1px solid ${styles.border}` }}>
+        {label}
+      </span>
+    );
+  };
+
+  return (
+    <div className="w-full rounded-xl overflow-hidden" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+      <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: `1px solid ${BORDER}` }}>
+        <div className="flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: ACCENT }} />
+          <span className="text-[11px] font-semibold uppercase tracking-wider sg" style={{ color: MUTED }}>Live Automation System</span>
+        </div>
+        <span className="flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full" style={{ color: "#34d399", background: "#34d39910", border: "1px solid #34d39920" }}>
+          <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "#34d399" }} />
           Active
         </span>
       </div>
 
-      <div className="bg-[#0A0A0B] border border-[#1F1F23] rounded-xl p-3.5 flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-[#1F62FF]/10 rounded-lg flex items-center justify-center flex-shrink-0 text-base">📋</div>
-          <div>
-            <p className="font-semibold text-[#FAFAFA] text-sm leading-none mb-0.5">Lead Capture</p>
-            <p className="text-[#9CA3AF] text-xs">New inquiry received</p>
+      <div className="flex flex-col gap-2 p-4">
+        {row(<ClipboardList className="w-3.5 h-3.5" style={{ color: ACCENT }} />, "Lead Capture", "New inquiry received", pill("Triggered", "blue"))}
+        <div className="flex justify-center">
+          <div className="w-px h-3.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
+        </div>
+        {row(<Bot className="w-3.5 h-3.5" style={{ color: ACCENT }} />, "AI Qualification", "Tagged, scored, enriched", pill("→ Processing", "gray"))}
+        <div className="flex justify-center">
+          <div className="w-px h-3.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          <div className="flex items-start gap-2 px-3 py-2.5 rounded-lg" style={{ background: BG, border: `1px solid ${BORDER}` }}>
+            <div className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: `${ACCENT}12` }}>
+              <Mail className="w-3 h-3" style={{ color: ACCENT }} />
+            </div>
+            <div>
+              <p className="font-semibold text-[12px] leading-none mb-0.5 sg" style={{ color: TEXT }}>Email Nurture</p>
+              <p className="text-[10px]" style={{ color: MUTED }}>Follow-up sent</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2 px-3 py-2.5 rounded-lg" style={{ background: BG, border: `1px solid ${BORDER}` }}>
+            <div className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "#f59e0b12" }}>
+              <Bell className="w-3 h-3" style={{ color: "#f59e0b" }} />
+            </div>
+            <div>
+              <p className="font-semibold text-[12px] leading-none mb-0.5 sg" style={{ color: TEXT }}>Team Alert</p>
+              <p className="text-[10px]" style={{ color: MUTED }}>Sales notified</p>
+            </div>
           </div>
         </div>
-        <span className="text-xs font-medium text-[#1F62FF] bg-[#1F62FF]/10 px-2.5 py-1 rounded-md border border-[#1F62FF]/20 whitespace-nowrap">Triggered</span>
+        <div className="flex justify-center">
+          <div className="w-px h-3.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
+        </div>
+        {row(<Rocket className="w-3.5 h-3.5" style={{ color: "#34d399" }} />, "Client Onboarding", "Resources created automatically", pill("Complete", "green"))}
       </div>
 
-      <div className="flex justify-center my-1.5">
-        <div className="w-px h-5 border-l-2 border-dashed border-[#1F1F23]" />
-      </div>
-
-      <div className="bg-[#0A0A0B] border border-[#1F1F23] rounded-xl p-3.5 flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-[#1F62FF]/10 rounded-lg flex items-center justify-center flex-shrink-0 text-base">🤖</div>
-          <div>
-            <p className="font-semibold text-[#FAFAFA] text-sm leading-none mb-0.5">AI Qualification</p>
-            <p className="text-[#9CA3AF] text-xs">Tagged, scored, enriched</p>
+      <div className="grid grid-cols-3 divide-x px-0" style={{ borderTop: `1px solid ${BORDER}`, borderColor: BORDER }}>
+        {[["12h", "Saved weekly"], ["0", "Manual steps"], ["24/7", "Always on"]].map(([v, l]) => (
+          <div key={l} className="py-3 text-center">
+            <p className="text-base font-bold sg" style={{ color: ACCENT }}>{v}</p>
+            <p className="text-[10px]" style={{ color: MUTED }}>{l}</p>
           </div>
-        </div>
-        <span className="text-xs font-medium text-[#9CA3AF] bg-[#1F1F23] px-2.5 py-1 rounded-md border border-[#1F1F23] whitespace-nowrap">→ Processing</span>
-      </div>
-
-      <div className="flex justify-center my-1.5">
-        <div className="w-px h-5 border-l-2 border-dashed border-[#1F1F23]" />
-      </div>
-
-      <div className="grid grid-cols-2 gap-2">
-        <div className="bg-[#0A0A0B] border border-[#1F1F23] rounded-xl p-3 flex items-start gap-2">
-          <div className="w-7 h-7 bg-[#1F62FF]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm">📧</div>
-          <div>
-            <p className="font-semibold text-[#FAFAFA] text-xs leading-none mb-0.5">Email Nurture</p>
-            <p className="text-[#9CA3AF] text-[11px]">Follow-up sent</p>
-          </div>
-        </div>
-        <div className="bg-[#0A0A0B] border border-[#1F1F23] rounded-xl p-3 flex items-start gap-2">
-          <div className="w-7 h-7 bg-amber-950/40 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm">🔔</div>
-          <div>
-            <p className="font-semibold text-[#FAFAFA] text-xs leading-none mb-0.5">Team Alert</p>
-            <p className="text-[#9CA3AF] text-[11px]">Sales notified</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex justify-center my-1.5">
-        <div className="w-px h-5 border-l-2 border-dashed border-[#1F1F23]" />
-      </div>
-
-      <div className="bg-[#0A0A0B] border border-[#1F1F23] rounded-xl p-3.5 flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-emerald-950/40 rounded-lg flex items-center justify-center flex-shrink-0 text-base">🚀</div>
-          <div>
-            <p className="font-semibold text-[#FAFAFA] text-sm leading-none mb-0.5">Client Onboarding</p>
-            <p className="text-[#9CA3AF] text-xs">Resources created automatically</p>
-          </div>
-        </div>
-        <span className="text-xs font-medium text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-md border border-emerald-800/60">Complete</span>
-      </div>
-
-      <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-[#1F1F23]">
-        <div className="text-center">
-          <p className="text-xl font-black text-[#1F62FF]">12h</p>
-          <p className="text-xs text-[#9CA3AF]">Saved weekly</p>
-        </div>
-        <div className="text-center">
-          <p className="text-xl font-black text-[#1F62FF]">0</p>
-          <p className="text-xs text-[#9CA3AF]">Manual steps</p>
-        </div>
-        <div className="text-center">
-          <p className="text-xl font-black text-[#1F62FF]">24/7</p>
-          <p className="text-xs text-[#9CA3AF]">Always running</p>
-        </div>
+        ))}
       </div>
     </div>
   );
@@ -149,8 +169,8 @@ function VideoPlayer({ label }: { label?: string }) {
   return (
     <div className="w-full">
       <div
-        className="relative w-full aspect-video rounded-2xl overflow-hidden cursor-pointer"
-        style={{ background: "linear-gradient(135deg,#060610 0%,#0c0c1a 100%)", boxShadow: "0 0 0 1px #1F1F23, 0 8px 60px rgba(31,98,255,0.2)" }}
+        className="relative w-full aspect-video rounded-xl overflow-hidden cursor-pointer"
+        style={{ background: "#0a0a0c", border: `1px solid ${BORDER}` }}
         onClick={() => !playing && setPlaying(true)}
       >
         {playing ? (
@@ -162,25 +182,25 @@ function VideoPlayer({ label }: { label?: string }) {
           />
         ) : (
           <>
-            <div className="absolute inset-0 opacity-[0.06]" style={{
-              backgroundImage: "linear-gradient(rgba(31,98,255,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(31,98,255,0.5) 1px,transparent 1px)",
-              backgroundSize: "40px 40px"
+            <div className="absolute inset-0 opacity-[0.04]" style={{
+              backgroundImage: `linear-gradient(${ACCENT}40 1px,transparent 1px),linear-gradient(90deg,${ACCENT}40 1px,transparent 1px)`,
+              backgroundSize: "44px 44px"
             }} />
             <div className="absolute inset-0 flex items-center justify-center">
               <div
-                className="flex items-center justify-center w-20 h-20 rounded-full bg-[#1F62FF] hover:scale-110 transition-transform duration-200"
-                style={{ animation: "pulse-play 2.5s ease-in-out infinite" }}
+                className="flex items-center justify-center w-14 h-14 rounded-full transition-opacity duration-150 hover:opacity-90"
+                style={{ background: ACCENT }}
               >
-                <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                <Play className="w-5 h-5 text-white ml-0.5" fill="white" />
               </div>
             </div>
-            <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-              <p className="text-white/50 text-xs">▶ Placeholder — swap in your real video</p>
+            <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+              <p className="text-[11px]" style={{ color: `${TEXT}50` }}>▶ Placeholder — swap in your real video</p>
             </div>
           </>
         )}
       </div>
-      {label && <p className="text-center text-[#9CA3AF] text-sm mt-4 tracking-wide">{label}</p>}
+      {label && <p className="text-center text-[13px] mt-3 tracking-wide" style={{ color: MUTED }}>{label}</p>}
     </div>
   );
 }
@@ -191,17 +211,32 @@ function VideoPlayer({ label }: { label?: string }) {
 const trustLogos = ["Apollo.io","HubSpot","Make.com","Airtable","Slack","ClickUp","Zapier","ActiveCampaign"];
 
 const industries = [
-  { icon: "📢", title: "Marketing Agencies", desc: "Automate client onboarding, CRM management, lead nurture, and sales call transcriptions — so your team delivers faster without growing headcount.", tags: ["Onboarding in minutes","Zero manual CRM entry","Faster client delivery"] },
-  { icon: "🏠", title: "Home Service Businesses", desc: "From lead capture to follow-up to scheduling — stop losing jobs to missed calls and slow responses. Your automated ops system works while your crews are in the field.", tags: ["Instant lead response","Automated follow-ups","Job tracking & reports"] },
-  { icon: "💼", title: "Finance & Professional Services", desc: "Streamline client intake, compliance documentation, appointment nurture, and reporting. Show measurable ROI to clients while running a leaner back office.", tags: ["Client intake automated","No-show reduction","Reporting automated"] },
+  {
+    Icon: Megaphone,
+    title: "Marketing Agencies",
+    desc: "Automate client onboarding, CRM management, lead nurture, and sales call transcriptions — so your team delivers faster without growing headcount.",
+    tags: ["Onboarding in minutes","Zero manual CRM entry","Faster client delivery"],
+  },
+  {
+    Icon: Wrench,
+    title: "Home Service Businesses",
+    desc: "From lead capture to follow-up to scheduling — stop losing jobs to missed calls and slow responses. Your automated ops system works while your crews are in the field.",
+    tags: ["Instant lead response","Automated follow-ups","Job tracking & reports"],
+  },
+  {
+    Icon: BarChart3,
+    title: "Finance & Professional Services",
+    desc: "Streamline client intake, compliance documentation, appointment nurture, and reporting. Show measurable ROI to clients while running a leaner back office.",
+    tags: ["Client intake automated","No-show reduction","Reporting automated"],
+  },
 ];
 
 const services = [
-  { num: "01", title: "CRM Infrastructure", desc: "A solid CRM is the backbone of every scalable business. We build it right — so every lead is automatically structured, tagged, and scored without anyone lifting a finger.", tags: ["Auto lead scoring","Consistent naming conventions","Pipeline automation"] },
-  { num: "02", title: "Lead Capture", desc: "Every inquiry from every channel flows automatically into your CRM. No more manual copy-paste, no more lost leads from slow response times.", tags: ["Omni-channel capture","Instant qualification","Zero data entry errors"] },
-  { num: "03", title: "Lead Nurture", desc: "Prospects who don't book immediately get systematically engaged with personalized touchpoints — dramatically reducing no-shows and building trust before the call.", tags: ["Reduced no-shows","Personalized sequences","Better-qualified leads"] },
-  { num: "04", title: "Transcript Analysis", desc: "Every sales call is automatically recorded, transcribed, and analyzed. Get strategic insights, action items, and performance data without reviewing a single recording yourself.", tags: ["Auto transcription","AI insights","Sales performance data"] },
-  { num: "05", title: "Client Onboarding", desc: "From signed contract to full access — automated. Resources created, comms sent, permissions set. Your clients hit the ground running the moment ink dries.", tags: ["Instant resource creation","Consistent experience","Zero missed steps"] },
+  { num: "01", Icon: Database, title: "CRM Infrastructure", desc: "A solid CRM is the backbone of every scalable business. We build it right — so every lead is automatically structured, tagged, and scored without anyone lifting a finger.", tags: ["Auto lead scoring","Consistent naming conventions","Pipeline automation"] },
+  { num: "02", Icon: Funnel, title: "Lead Capture", desc: "Every inquiry from every channel flows automatically into your CRM. No more manual copy-paste, no more lost leads from slow response times.", tags: ["Omni-channel capture","Instant qualification","Zero data entry errors"] },
+  { num: "03", Icon: Mail, title: "Lead Nurture", desc: "Prospects who don't book immediately get systematically engaged with personalized touchpoints — dramatically reducing no-shows and building trust before the call.", tags: ["Reduced no-shows","Personalized sequences","Better-qualified leads"] },
+  { num: "04", Icon: FileText, title: "Transcript Analysis", desc: "Every sales call is automatically recorded, transcribed, and analyzed. Get strategic insights, action items, and performance data without reviewing a single recording yourself.", tags: ["Auto transcription","AI insights","Sales performance data"] },
+  { num: "05", Icon: Zap, title: "Client Onboarding", desc: "From signed contract to full access — automated. Resources created, comms sent, permissions set. Your clients hit the ground running the moment ink dries.", tags: ["Instant resource creation","Consistent experience","Zero missed steps"] },
 ];
 
 const steps = [
@@ -251,18 +286,77 @@ const faqs = [
 ];
 
 /* ─────────────────────────────────────────────── */
+/*  Shared components                              */
+/* ─────────────────────────────────────────────── */
+function Fade({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.4, delay, ease: "easeOut" }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function Label({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] mb-3 sg" style={{ color: ACCENT }}>
+      {children}
+    </p>
+  );
+}
+
+function H2({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="text-3xl md:text-[2.6rem] font-bold leading-[1.1] sg" style={{ color: TEXT, letterSpacing: "-0.02em" }}>
+      {children}
+    </h2>
+  );
+}
+
+function PrimaryBtn({ href, children, size = "md", onClick, className = "" }: { href?: string; children: React.ReactNode; size?: "sm" | "md" | "lg"; onClick?: () => void; className?: string }) {
+  const pad = size === "lg" ? "px-8 h-12 text-[15px]" : size === "sm" ? "px-4 h-8 text-[13px]" : "px-6 h-10 text-[14px]";
+  const btn = (
+    <button
+      onClick={onClick}
+      className={`inline-flex items-center gap-2 font-semibold rounded-lg transition-colors duration-150 ${pad} ${className}`}
+      style={{ background: ACCENT, color: "#fff" }}
+    >
+      {children}
+    </button>
+  );
+  if (!href) return btn;
+  return <a href={href} target="_blank" rel="noopener noreferrer">{btn}</a>;
+}
+
+function OutlineBtn({ onClick, children, className = "" }: { onClick?: () => void; children: React.ReactNode; className?: string }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`inline-flex items-center gap-2 font-medium rounded-lg transition-colors duration-150 px-6 h-10 text-[14px] ${className}`}
+      style={{ border: `1px solid ${BORDER}`, color: MUTED }}
+      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "#444448"; (e.currentTarget as HTMLElement).style.color = TEXT; }}
+      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = BORDER; (e.currentTarget as HTMLElement).style.color = MUTED; }}
+    >
+      {children}
+    </button>
+  );
+}
+
+/* ─────────────────────────────────────────────── */
 /*  FAQ Item                                       */
 /* ─────────────────────────────────────────────── */
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-[#1F1F23] last:border-0">
-      <button
-        className="w-full flex items-center justify-between py-5 text-left gap-4 group"
-        onClick={() => setOpen(o => !o)}
-      >
-        <span className="text-[#FAFAFA] font-semibold text-base leading-snug group-hover:text-[#1F62FF] transition-colors">{q}</span>
-        <ChevronDown className={`w-5 h-5 text-[#9CA3AF] flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-[#1F62FF]" : ""}`} />
+    <div style={{ borderBottom: `1px solid ${BORDER}` }} className="last:border-0">
+      <button className="w-full flex items-center justify-between py-4 text-left gap-4" onClick={() => setOpen(o => !o)}>
+        <span className="font-medium text-[15px] leading-snug sg transition-colors duration-150" style={{ color: open ? ACCENT : TEXT }}>{q}</span>
+        <ChevronDown className={`w-4 h-4 flex-shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`} style={{ color: open ? ACCENT : MUTED }} />
       </button>
       <AnimatePresence initial={false}>
         {open && (
@@ -270,10 +364,10 @@ function FaqItem({ q, a }: { q: string; a: string }) {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-[#9CA3AF] leading-relaxed text-sm">{a}</p>
+            <p className="pb-4 text-[14px] leading-relaxed" style={{ color: MUTED }}>{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -290,86 +384,44 @@ function ReviewsCarousel() {
   const next = () => setIdx(i => (i + 1) % reviews.length);
   const r = reviews[idx];
   return (
-    <div className="relative max-w-2xl mx-auto">
+    <div className="relative max-w-xl mx-auto">
       <AnimatePresence mode="wait">
         <motion.div
           key={idx}
-          initial={{ opacity: 0, x: 30 }}
+          initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -30 }}
-          transition={{ duration: 0.3 }}
-          className="bg-[#111114] border border-[#1F1F23] rounded-2xl p-8 text-center"
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.2 }}
+          className="rounded-xl p-8"
+          style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
         >
-          <div className="flex justify-center gap-1 mb-5">
-            {[1,2,3,4,5].map(s => <Star key={s} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
+          <div className="flex gap-0.5 mb-5">
+            {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
           </div>
-          <p className="text-[#FAFAFA] text-lg leading-relaxed mb-6 italic">"{r.quote}"</p>
-          <p className="font-bold text-[#FAFAFA]">{r.name}</p>
-          <p className="text-[#9CA3AF] text-sm">{r.company}</p>
+          <p className="text-[15px] leading-relaxed mb-6 italic" style={{ color: TEXT }}>"{r.quote}"</p>
+          <p className="font-semibold text-[14px] sg" style={{ color: TEXT }}>{r.name}</p>
+          <p className="text-[13px]" style={{ color: MUTED }}>{r.company}</p>
         </motion.div>
       </AnimatePresence>
-      <div className="flex justify-center gap-3 mt-6">
-        <button onClick={prev} className="w-10 h-10 rounded-full border border-[#1F1F23] flex items-center justify-center hover:border-[#1F62FF] hover:text-[#1F62FF] text-[#9CA3AF] transition-colors">
-          <ChevronLeft className="w-5 h-5" />
+      <div className="flex justify-center gap-2.5 mt-5">
+        <button onClick={prev} className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors duration-150" style={{ border: `1px solid ${BORDER}`, color: MUTED }}
+          onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#444448"}
+          onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}>
+          <ChevronLeft className="w-4 h-4" />
         </button>
         {reviews.map((_, i) => (
-          <button key={i} onClick={() => setIdx(i)} className={`h-2.5 rounded-full transition-all ${i === idx ? "bg-[#1F62FF] w-6" : "bg-[#1F1F23] w-2.5"}`} />
+          <button key={i} onClick={() => setIdx(i)} className={`h-1.5 rounded-full transition-all duration-200 ${i === idx ? "w-5" : "w-1.5"}`}
+            style={{ background: i === idx ? ACCENT : BORDER }} />
         ))}
-        <button onClick={next} className="w-10 h-10 rounded-full border border-[#1F1F23] flex items-center justify-center hover:border-[#1F62FF] hover:text-[#1F62FF] text-[#9CA3AF] transition-colors">
-          <ChevronRight className="w-5 h-5" />
+        <button onClick={next} className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors duration-150" style={{ border: `1px solid ${BORDER}`, color: MUTED }}
+          onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#444448"}
+          onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}>
+          <ChevronRight className="w-4 h-4" />
         </button>
       </div>
     </div>
   );
 }
-
-/* ─────────────────────────────────────────────── */
-/*  Helpers                                        */
-/* ─────────────────────────────────────────────── */
-function Fade({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return <p className="text-[#1F62FF] text-[13px] font-semibold uppercase tracking-[0.12em] mb-4">{children}</p>;
-}
-
-function SectionHeading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2
-      className="text-4xl md:text-5xl font-black tracking-tight text-[#FAFAFA] leading-[1.05]"
-      style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", letterSpacing: "-0.02em" }}
-    >
-      {children}
-    </h2>
-  );
-}
-
-function CtaButton({ href, children, size = "md", className = "" }: { href: string; children: React.ReactNode; size?: "sm" | "md" | "lg"; className?: string }) {
-  const p = size === "lg" ? "px-10 h-16 text-lg" : size === "sm" ? "px-6 h-10 text-sm" : "px-8 h-13 text-base";
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
-      <button
-        className={`bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-bold ${p} rounded-xl transition-all inline-flex items-center gap-2 hover:scale-[1.03] hover:shadow-[0_0_32px_rgba(31,98,255,0.45)]`}
-        style={{ boxShadow: "0 4px 24px rgba(31,98,255,0.35)" }}
-      >
-        {children}
-      </button>
-    </a>
-  );
-}
-
-const CALENDLY = "https://calendly.com/ryne-bandolik";
 
 /* ─────────────────────────────────────────────── */
 /*  Exit-Intent Popup                              */
@@ -380,7 +432,6 @@ function ExitIntentPopup() {
   useEffect(() => {
     const alreadyShown = sessionStorage.getItem("exit_popup_shown");
     if (alreadyShown) return;
-
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 5) {
         setVisible(true);
@@ -388,80 +439,52 @@ function ExitIntentPopup() {
         document.removeEventListener("mouseleave", handleMouseLeave);
       }
     };
-
-    const timer = setTimeout(() => {
-      document.addEventListener("mouseleave", handleMouseLeave);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timer);
-      document.removeEventListener("mouseleave", handleMouseLeave);
-    };
+    const timer = setTimeout(() => document.addEventListener("mouseleave", handleMouseLeave), 3000);
+    return () => { clearTimeout(timer); document.removeEventListener("mouseleave", handleMouseLeave); };
   }, []);
 
   return (
     <AnimatePresence>
       {visible && (
         <>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100]"
-            onClick={() => setVisible(false)}
-          />
-          <motion.div
-            initial={{ opacity: 0, scale: 0.94, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.94, y: 20 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed inset-0 flex items-center justify-center z-[101] px-4"
-          >
-            <div className="bg-[#111114] rounded-2xl shadow-2xl max-w-md w-full p-8 relative border border-[#1F1F23]">
-              <button
-                onClick={() => setVisible(false)}
-                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-[#1F1F23] text-[#9CA3AF] hover:text-[#FAFAFA] transition-colors"
-              >
-                <X className="w-4 h-4" />
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100]" style={{ background: "rgba(0,0,0,0.65)" }}
+            onClick={() => setVisible(false)} />
+          <motion.div initial={{ opacity: 0, scale: 0.97, y: 12 }} animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.97, y: 12 }} transition={{ duration: 0.2, ease: "easeOut" }}
+            className="fixed inset-0 flex items-center justify-center z-[101] px-4">
+            <div className="rounded-xl max-w-sm w-full p-7 relative" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+              <button onClick={() => setVisible(false)}
+                className="absolute top-3.5 right-3.5 w-7 h-7 flex items-center justify-center rounded-md transition-colors duration-150"
+                style={{ color: MUTED }} onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = BORDER}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "transparent"}>
+                <X className="w-3.5 h-3.5" />
               </button>
-
-              <div className="flex items-center gap-4 mb-5">
-                <img
-                  src={`${import.meta.env.BASE_URL}ryne.png`}
-                  alt="Ryne Bandolik"
-                  className="w-16 h-16 rounded-full object-cover object-top flex-shrink-0 border-2 border-[#1F62FF]/40"
-                />
-                <div className="text-left">
-                  <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-0.5">Wait — before you go</p>
-                  <p className="font-bold text-[#FAFAFA] text-sm leading-snug">A personal note from Ryne</p>
-                  <p className="text-[#9CA3AF] text-xs">Founder, JobsDone Labs</p>
+              <div className="flex items-center gap-3.5 mb-5">
+                <img src={`${import.meta.env.BASE_URL}ryne.png`} alt="Ryne Bandolik"
+                  className="w-12 h-12 rounded-full object-cover object-top flex-shrink-0" style={{ border: `2px solid ${BORDER}` }} />
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-wider sg mb-0.5" style={{ color: ACCENT }}>Wait — before you go</p>
+                  <p className="font-semibold text-[14px] sg" style={{ color: TEXT }}>A note from Ryne</p>
+                  <p className="text-[12px]" style={{ color: MUTED }}>Founder, JobsDone Labs</p>
                 </div>
               </div>
-              <div className="mb-6">
-                <h2 className="text-2xl font-black text-[#FAFAFA] leading-tight mb-3">
-                  We guarantee $30,000 recovered in 90 days — or we keep working for free.
-                </h2>
-                <p className="text-[#9CA3AF] text-sm leading-relaxed">
-                  Most businesses are leaking revenue every day through slow follow-up and broken ops. Book a free 45-min audit and I'll show you exactly where yours are.
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <CtaButton href={CALENDLY} className="block">
+              <h2 className="text-[1.35rem] font-bold sg leading-snug mb-2.5" style={{ color: TEXT, letterSpacing: "-0.015em" }}>
+                We guarantee $30,000 recovered in 90 days.
+              </h2>
+              <p className="text-[13px] leading-relaxed mb-6" style={{ color: MUTED }}>
+                Most businesses are leaking revenue every day through slow follow-up and broken ops. Book a free 45-min audit and I'll show you exactly where yours are.
+              </p>
+              <div className="flex flex-col gap-2.5">
+                <PrimaryBtn href={CALENDLY} size="lg" className="w-full justify-center">
                   Book My Free Audit Call <ArrowRight className="w-4 h-4" />
-                </CtaButton>
-                <button
-                  onClick={() => setVisible(false)}
-                  className="w-full text-[#9CA3AF] hover:text-[#FAFAFA] text-sm py-2 transition-colors"
-                >
+                </PrimaryBtn>
+                <button onClick={() => setVisible(false)} className="text-[13px] py-1.5 transition-colors duration-150" style={{ color: MUTED }}>
                   No thanks, I'll pass on the free roadmap
                 </button>
               </div>
-
-              <div className="mt-4 flex items-center justify-center gap-4 text-xs text-[#9CA3AF]">
-                <span>✓ No commitment</span>
-                <span>✓ Month-to-month</span>
-                <span>✓ You own everything</span>
+              <div className="flex items-center justify-center gap-4 mt-4 text-[12px]" style={{ color: MUTED }}>
+                <span>✓ No commitment</span><span>✓ Month-to-month</span><span>✓ You own everything</span>
               </div>
             </div>
           </motion.div>
@@ -479,98 +502,100 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > 48);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <div className="min-h-screen font-sans overflow-x-hidden" style={{ background: "#0A0A0B", color: "#FAFAFA" }}>
-
+    <div className="min-h-screen overflow-x-hidden" style={{ background: BG, color: TEXT, fontFamily: "'Inter', sans-serif" }}>
       <ExitIntentPopup />
 
       {/* ── NAV ── */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-[#0A0A0B]/85 backdrop-blur-md border-b border-[#1F1F23]"
-            : "bg-transparent border-b border-transparent"
-        }`}
+        className="sticky top-0 z-50 transition-all duration-200"
+        style={{
+          background: scrolled ? `${BG}e0` : "transparent",
+          backdropFilter: scrolled ? "blur(12px)" : "none",
+          borderBottom: scrolled ? `1px solid ${BORDER}` : "1px solid transparent",
+        }}
       >
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link href="/" data-testid="link-logo"><JobsDoneLogo /></Link>
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-7">
             {[["Services","services"],["Industries","industries"],["Results","results"],["FAQ","faq"]].map(([label,id]) => (
-              <button key={id} onClick={() => scrollTo(id)} className="text-[#9CA3AF] hover:text-[#FAFAFA] text-sm font-medium transition-colors">{label}</button>
+              <button key={id} onClick={() => scrollTo(id)}
+                className="text-[13px] font-medium transition-colors duration-150"
+                style={{ color: MUTED }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>
+                {label}
+              </button>
             ))}
             <Link href="/roi-calculator">
-              <button className="flex items-center gap-1.5 text-[#9CA3AF] hover:text-[#FAFAFA] text-sm font-medium transition-colors">
+              <button className="flex items-center gap-1.5 text-[13px] font-medium transition-colors duration-150" style={{ color: MUTED }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>
                 <Calculator className="w-3.5 h-3.5" /> ROI Calculator
               </button>
             </Link>
           </nav>
-          <CtaButton href={CALENDLY} size="sm">
-            Book a Call
-          </CtaButton>
+          <PrimaryBtn href={CALENDLY} size="sm">Book a Call</PrimaryBtn>
         </div>
       </header>
 
       <main>
 
         {/* ── HERO ── */}
-        <section
-          className="max-w-6xl mx-auto px-6 pt-20 pb-12"
-          style={{ background: "radial-gradient(ellipse 80% 60% at 60% -10%, rgba(31,98,255,0.13) 0%, transparent 60%)" }}
-        >
-          <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-10">
+          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
 
             <motion.div
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65 }}
-              className="flex-1 min-w-0"
+              transition={{ duration: 0.4 }}
+              className="flex-1 min-w-0 pt-2"
             >
-              <div className="inline-flex items-center gap-2 text-[#1F62FF] text-[12px] font-semibold uppercase tracking-[0.12em] mb-8 border border-[#1F62FF]/25 rounded-full px-4 py-1.5 bg-[#1F62FF]/5">
+              <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.1em] mb-6 rounded px-3 py-1 sg"
+                style={{ color: ACCENT, background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>
                 <span>For Agencies &amp; Service Businesses</span>
-                <span className="w-1 h-1 rounded-full bg-[#1F62FF] inline-block" />
+                <span className="w-1 h-1 rounded-full inline-block" style={{ background: ACCENT }} />
                 <span>90-Day Guarantee</span>
               </div>
-              <h1
-                className="text-5xl md:text-6xl lg:text-[4.5rem] font-black leading-[1.04] text-[#FAFAFA] mb-6"
-                style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", letterSpacing: "-0.025em" }}
-              >
+
+              <h1 className="font-bold leading-[1.05] mb-5 sg"
+                style={{ fontSize: "clamp(2.2rem, 5vw, 3.4rem)", color: TEXT, letterSpacing: "-0.025em" }}>
                 We guarantee you recover a minimum of{" "}
-                <span className="text-[#1F62FF]">$30,000 in lost revenue</span>{" "}
+                <span style={{ color: ACCENT }}>$30,000 in lost revenue</span>{" "}
                 within 90 days.
               </h1>
-              <p className="text-[#9CA3AF] text-lg leading-[1.65] mb-9 max-w-lg">
-                By eliminating the lead leaks, slow follow-up, and manual bottlenecks currently costing you deals — or we keep working until we do. No excuses.
+
+              <p className="text-[16px] leading-[1.65] mb-8 max-w-[480px]" style={{ color: MUTED }}>
+                By eliminating the lead leaks, slow follow-up, and manual bottlenecks currently costing you deals — or we keep working until we do.
               </p>
-              <div className="flex flex-wrap gap-4 mb-9">
-                <CtaButton href={CALENDLY} data-testid="button-hero-primary">
+
+              <div className="flex flex-wrap gap-3 mb-7">
+                <PrimaryBtn href={CALENDLY} size="lg" data-testid="button-hero-primary">
                   Book a Free Audit Call <ArrowRight className="w-4 h-4" />
-                </CtaButton>
-                <button
-                  onClick={() => scrollTo("results")}
-                  className="border border-[#1F1F23] hover:border-[#1F62FF]/40 text-[#9CA3AF] hover:text-[#FAFAFA] text-base font-medium px-8 h-13 py-3.5 rounded-xl transition-all"
-                  data-testid="button-hero-results"
-                >
+                </PrimaryBtn>
+                <OutlineBtn onClick={() => scrollTo("results")} data-testid="button-hero-results">
                   See Client Results
-                </button>
+                </OutlineBtn>
               </div>
+
               <div className="flex items-center gap-2.5">
                 <div className="flex gap-0.5">
-                  {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
+                  {[1,2,3,4,5].map(s => <Star key={s} className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />)}
                 </div>
-                <p className="text-[#9CA3AF] text-sm">50+ businesses automated · Avg. $30K+ saved in 90 days</p>
+                <p className="text-[13px]" style={{ color: MUTED }}>50+ businesses automated · Avg. $30K+ saved in 90 days</p>
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.15 }}
-              className="flex-1 min-w-0 w-full lg:max-w-[460px]"
+              transition={{ duration: 0.45, delay: 0.1 }}
+              className="flex-1 min-w-0 w-full lg:max-w-[420px]"
             >
               <WorkflowCard />
             </motion.div>
@@ -579,41 +604,38 @@ export default function Home() {
         </section>
 
         {/* ── VIDEO ── */}
-        <section className="max-w-4xl mx-auto px-6 pb-16">
+        <section className="max-w-4xl mx-auto px-6 pb-14">
           <Fade>
             <VideoPlayer label="WATCH: How we save agencies $30K+ in 90 days (3 min)" />
           </Fade>
         </section>
 
         {/* ── LOGO STRIP ── */}
-        <section className="border-y border-[#1F1F23] bg-[#0D0D10] py-8 overflow-hidden">
-          <p className="text-center text-[#9CA3AF] text-[12px] uppercase tracking-[0.14em] font-semibold mb-6">As featured in — Trusted by 7-figure founders</p>
+        <section className="py-7 overflow-hidden" style={{ borderTop: `1px solid ${BORDER}`, borderBottom: `1px solid ${BORDER}`, background: BG2 }}>
+          <p className="text-center text-[11px] uppercase tracking-[0.13em] font-semibold mb-5 sg" style={{ color: MUTED }}>
+            Trusted by 7-figure agency founders &amp; business owners
+          </p>
           <div className="relative">
-            <div className="flex animate-[marquee_28s_linear_infinite] gap-16 w-max">
+            <div className="flex animate-[marquee_30s_linear_infinite] gap-16 w-max">
               {[...trustLogos,...trustLogos].map((l,i) => (
-                <span key={i} className="text-white/20 font-bold text-sm tracking-wide whitespace-nowrap">{l}</span>
+                <span key={i} className="font-semibold text-[13px] tracking-wide whitespace-nowrap sg" style={{ color: `${TEXT}18` }}>{l}</span>
               ))}
             </div>
           </div>
         </section>
 
         {/* ── BIG NUMBERS ── */}
-        <section className="py-24 max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-3 gap-8 text-center">
+        <section className="py-16 max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-3 gap-6">
             {[
               { num: "$30K+", label: "Average saved per client in 90 days" },
               { num: "50+", label: "Businesses automated" },
               { num: "80%", label: "Reduction in manual ops work" },
             ].map(({ num, label }) => (
               <Fade key={num}>
-                <div>
-                  <p
-                    className="text-[#1F62FF] font-black mb-2 leading-none"
-                    style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", fontSize: "clamp(3rem, 7vw, 5rem)", letterSpacing: "-0.03em", textShadow: "0 0 60px rgba(31,98,255,0.35)" }}
-                  >
-                    {num}
-                  </p>
-                  <p className="text-[#9CA3AF] text-sm leading-snug">{label}</p>
+                <div className="border-l-2 pl-5" style={{ borderColor: `${ACCENT}40` }}>
+                  <p className="font-bold mb-1 sg" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: ACCENT, letterSpacing: "-0.03em" }}>{num}</p>
+                  <p className="text-[13px] leading-snug" style={{ color: MUTED }}>{label}</p>
                 </div>
               </Fade>
             ))}
@@ -621,23 +643,30 @@ export default function Home() {
         </section>
 
         {/* ── INDUSTRIES ── */}
-        <section id="industries" className="py-24 bg-[#0D0D10]">
+        <section id="industries" className="py-16" style={{ background: BG2 }}>
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
-              <SectionLabel>Who We Work With</SectionLabel>
-              <SectionHeading>Built for businesses where time literally equals money</SectionHeading>
+              <Label>Who We Work With</Label>
+              <H2>Built for businesses where time literally equals money</H2>
             </Fade>
-            <div className="mt-12 grid md:grid-cols-3 gap-5">
+            <div className="mt-10 grid md:grid-cols-3 gap-4">
               {industries.map((ind, i) => (
-                <Fade key={ind.title} delay={i * 0.08}>
-                  <div className="bg-[#111114] border border-[#1F1F23] rounded-2xl p-7 hover:border-[#1F62FF]/35 hover:shadow-[0_4px_32px_rgba(31,98,255,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 h-full">
-                    <div className="text-3xl">{ind.icon}</div>
-                    <h3 className="font-bold text-[#FAFAFA] text-xl">{ind.title}</h3>
-                    <p className="text-[#9CA3AF] text-sm leading-relaxed flex-1">{ind.desc}</p>
-                    <div className="flex flex-wrap gap-2">
+                <Fade key={ind.title} delay={i * 0.06}>
+                  <div
+                    className="rounded-xl p-6 flex flex-col gap-4 h-full transition-colors duration-150"
+                    style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#2e2e32"}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}
+                  >
+                    <div className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: `${ACCENT}10`, border: `1px solid ${ACCENT}18` }}>
+                      <ind.Icon className="w-4.5 h-4.5" style={{ color: ACCENT }} />
+                    </div>
+                    <h3 className="font-bold text-[17px] sg" style={{ color: TEXT, letterSpacing: "-0.01em" }}>{ind.title}</h3>
+                    <p className="text-[13px] leading-relaxed flex-1" style={{ color: MUTED }}>{ind.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
                       {ind.tags.map(tag => (
-                        <span key={tag} className="flex items-center gap-1.5 text-[#1F62FF] text-xs font-medium bg-[#1F62FF]/8 border border-[#1F62FF]/20 px-3 py-1 rounded-full">
-                          <Check className="w-3 h-3" /> {tag}
+                        <span key={tag} className="flex items-center gap-1 text-[12px] font-medium px-2.5 py-1 rounded-md" style={{ color: MUTED, background: `${TEXT}06`, border: `1px solid ${BORDER}` }}>
+                          <Check className="w-3 h-3" style={{ color: ACCENT }} /> {tag}
                         </span>
                       ))}
                     </div>
@@ -649,26 +678,29 @@ export default function Home() {
         </section>
 
         {/* ── INLINE CTA #1 ── */}
-        <section className="py-16 bg-[#1F62FF]">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-5 tracking-tight">Ready to see what's possible for your business?</h2>
-            <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-              <button className="bg-white hover:bg-[#FAFAFA] text-[#1F62FF] font-bold text-base px-10 h-13 py-3.5 rounded-xl transition-all inline-flex items-center gap-2 hover:scale-[1.03]">
+        <section className="py-12" style={{ background: BG }}>
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-8 px-8 rounded-xl" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+              <div>
+                <p className="font-bold text-[18px] sg mb-1" style={{ color: TEXT, letterSpacing: "-0.01em" }}>Ready to see what's possible for your business?</p>
+                <p className="text-[13px]" style={{ color: MUTED }}>Free 45-minute audit. No commitment. You keep the roadmap.</p>
+              </div>
+              <PrimaryBtn href={CALENDLY} size="lg" className="flex-shrink-0">
                 Book Your Free Audit <ArrowRight className="w-4 h-4" />
-              </button>
-            </a>
+              </PrimaryBtn>
+            </div>
           </div>
         </section>
 
         {/* ── SERVICES ── */}
-        <section id="services" className="py-24 bg-[#0A0A0B]">
+        <section id="services" className="py-16" style={{ background: BG2 }}>
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
-              <SectionLabel>What We Build</SectionLabel>
-              <SectionHeading>Five core systems. Infinite hours recovered.</SectionHeading>
+              <Label>What We Build</Label>
+              <H2>Five core systems. Infinite hours recovered.</H2>
             </Fade>
-            <Fade delay={0.1}>
-              <div className="mt-12 mb-8 rounded-2xl overflow-hidden ring-1 ring-[#1F1F23]" style={{ boxShadow: "0 4px 60px rgba(31,98,255,0.15)" }}>
+            <Fade delay={0.08}>
+              <div className="mt-10 mb-8 rounded-xl overflow-hidden" style={{ border: `1px solid ${BORDER}` }}>
                 <img
                   src={`${import.meta.env.BASE_URL}hero-diagram.png`}
                   alt="Inbound to Impact — Automated by JobsDone Labs"
@@ -676,24 +708,24 @@ export default function Home() {
                 />
               </div>
             </Fade>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               {services.map((s, i) => (
-                <Fade key={s.title} delay={i * 0.06}>
-                  <div className="bg-[#111114] border border-[#1F1F23] rounded-2xl p-7 flex flex-col md:flex-row gap-6 hover:border-[#1F62FF]/30 hover:shadow-[0_4px_32px_rgba(31,98,255,0.1)] hover:-translate-y-0.5 transition-all duration-300">
-                    <div className="flex-shrink-0">
-                      <span
-                        className="font-black text-[#1F62FF]/15 leading-none select-none"
-                        style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", fontSize: "5.5rem", lineHeight: 1 }}
-                      >
-                        {s.num}
-                      </span>
+                <Fade key={s.title} delay={i * 0.05}>
+                  <div
+                    className="rounded-xl p-6 flex flex-col md:flex-row gap-5 transition-colors duration-150"
+                    style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#2e2e32"}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}
+                  >
+                    <div className="flex-shrink-0 flex items-start gap-3 md:w-16">
+                      <span className="font-bold text-[2.2rem] leading-none sg" style={{ color: `${ACCENT}25`, letterSpacing: "-0.03em" }}>{s.num}</span>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-bold text-[#FAFAFA] text-xl mb-2">{s.title}</h3>
-                      <p className="text-[#9CA3AF] text-sm leading-relaxed mb-4">{s.desc}</p>
-                      <div className="flex flex-wrap gap-2">
+                      <h3 className="font-bold text-[17px] mb-1.5 sg" style={{ color: TEXT, letterSpacing: "-0.01em" }}>{s.title}</h3>
+                      <p className="text-[13px] leading-relaxed mb-3" style={{ color: MUTED }}>{s.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
                         {s.tags.map(tag => (
-                          <span key={tag} className="text-[#9CA3AF] text-xs bg-[#1F1F23] border border-white/5 px-3 py-1 rounded-full">{tag}</span>
+                          <span key={tag} className="text-[12px] px-2.5 py-1 rounded-md" style={{ color: MUTED, background: `${TEXT}06`, border: `1px solid ${BORDER}` }}>{tag}</span>
                         ))}
                       </div>
                     </div>
@@ -705,27 +737,28 @@ export default function Home() {
         </section>
 
         {/* ── PROCESS ── */}
-        <section className="py-24 bg-[#0D0D10]">
+        <section className="py-16" style={{ background: BG }}>
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
-              <SectionLabel>The Process</SectionLabel>
-              <SectionHeading>Up and running in 30 days. Optimizing forever.</SectionHeading>
+              <Label>The Process</Label>
+              <H2>Up and running in 30 days. Optimizing forever.</H2>
             </Fade>
-            <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {steps.map((s, i) => (
-                <Fade key={s.title} delay={i * 0.08}>
-                  <div className="bg-[#111114] border border-[#1F1F23] rounded-2xl p-6 hover:border-[#1F62FF]/30 hover:shadow-[0_4px_24px_rgba(31,98,255,0.1)] hover:-translate-y-1 transition-all duration-300" data-testid={`card-step-${i}`}>
-                    <div className="flex items-center justify-between mb-5">
-                      <span
-                        className="font-black text-[#1F62FF]"
-                        style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", fontSize: "2rem" }}
-                      >
-                        {s.num}
-                      </span>
-                      <span className="text-xs font-medium text-[#9CA3AF] bg-[#1F1F23] border border-white/5 px-2.5 py-1 rounded-full">{s.sub}</span>
+                <Fade key={s.title} delay={i * 0.06}>
+                  <div
+                    className="rounded-xl p-5 transition-colors duration-150"
+                    style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
+                    data-testid={`card-step-${i}`}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#2e2e32"}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="font-bold text-[1.5rem] sg" style={{ color: ACCENT, letterSpacing: "-0.02em" }}>{s.num}</span>
+                      <span className="text-[11px] font-medium px-2 py-0.5 rounded-md sg" style={{ color: MUTED, background: `${TEXT}06`, border: `1px solid ${BORDER}` }}>{s.sub}</span>
                     </div>
-                    <h3 className="font-bold text-[#FAFAFA] text-base mb-2">{s.title}</h3>
-                    <p className="text-[#9CA3AF] text-sm leading-relaxed">{s.desc}</p>
+                    <h3 className="font-bold text-[15px] mb-1.5 sg" style={{ color: TEXT }}>{s.title}</h3>
+                    <p className="text-[13px] leading-relaxed" style={{ color: MUTED }}>{s.desc}</p>
                   </div>
                 </Fade>
               ))}
@@ -734,34 +767,31 @@ export default function Home() {
         </section>
 
         {/* ── COMPARISON TABLE ── */}
-        <section className="py-24 bg-[#0A0A0B]">
+        <section className="py-16" style={{ background: BG2 }}>
           <div className="max-w-5xl mx-auto px-6">
             <Fade>
-              <SectionLabel>Us vs. The Alternative</SectionLabel>
-              <SectionHeading>Why founders choose us over everything else</SectionHeading>
+              <Label>Us vs. The Alternative</Label>
+              <H2>Why founders choose us over everything else</H2>
             </Fade>
-            <Fade delay={0.1}>
-              <div className="mt-12 rounded-2xl border border-[#1F1F23] overflow-hidden">
-                {/* Header */}
-                <div className="grid grid-cols-4 bg-[#111114] border-b border-[#1F1F23]">
-                  <div className="p-4 text-[#9CA3AF] text-sm font-semibold" />
-                  <div className="p-4 text-[#9CA3AF] text-sm font-semibold text-center border-l border-[#1F1F23]">Hiring In-House</div>
-                  <div className="p-4 text-[#9CA3AF] text-sm font-semibold text-center border-l border-[#1F1F23]">Generic Freelancers</div>
-                  <div className="p-4 text-center border-l border-[#1F62FF]/40" style={{ background: "rgba(31,98,255,0.06)" }}>
-                    <span className="text-[#1F62FF] text-sm font-bold">Working With Us</span>
-                  </div>
+            <Fade delay={0.08}>
+              <div className="mt-10 rounded-xl overflow-hidden" style={{ border: `1px solid ${BORDER}` }}>
+                <div className="grid grid-cols-4" style={{ background: SURFACE, borderBottom: `1px solid ${BORDER}` }}>
+                  <div className="p-4" />
+                  {["Hiring In-House","Generic Freelancers","Working With Us"].map((h, i) => (
+                    <div key={h} className="p-4 text-center" style={{
+                      borderLeft: `1px solid ${BORDER}`,
+                      ...(i === 2 ? { background: `${ACCENT}08`, borderLeft: `1px solid ${ACCENT}25` } : {}),
+                    }}>
+                      <span className="text-[13px] font-semibold sg" style={{ color: i === 2 ? ACCENT : MUTED }}>{h}</span>
+                    </div>
+                  ))}
                 </div>
                 {comparison.map((row, i) => (
-                  <div key={row.aspect} className={`grid grid-cols-4 border-b border-[#1F1F23] last:border-0 ${i % 2 === 0 ? "bg-[#0A0A0B]" : "bg-[#0D0D10]"}`}>
-                    <div className="p-4 text-[#9CA3AF] text-sm font-semibold">{row.aspect}</div>
-                    <div className="p-4 text-[#9CA3AF] text-sm text-center border-l border-[#1F1F23]">{row.inHouse}</div>
-                    <div className="p-4 text-[#9CA3AF] text-sm text-center border-l border-[#1F1F23]">{row.freelancer}</div>
-                    <div
-                      className="p-4 text-[#1F62FF] text-sm font-semibold text-center border-l border-[#1F62FF]/30"
-                      style={{ background: "rgba(31,98,255,0.06)" }}
-                    >
-                      {row.us}
-                    </div>
+                  <div key={row.aspect} className="grid grid-cols-4" style={{ borderBottom: i < comparison.length - 1 ? `1px solid ${BORDER}` : "none", background: i % 2 === 0 ? BG : BG2 }}>
+                    <div className="px-4 py-3 text-[13px] font-medium sg" style={{ color: MUTED }}>{row.aspect}</div>
+                    <div className="px-4 py-3 text-[13px] text-center" style={{ borderLeft: `1px solid ${BORDER}`, color: MUTED }}>{row.inHouse}</div>
+                    <div className="px-4 py-3 text-[13px] text-center" style={{ borderLeft: `1px solid ${BORDER}`, color: MUTED }}>{row.freelancer}</div>
+                    <div className="px-4 py-3 text-[13px] text-center font-semibold sg" style={{ borderLeft: `1px solid ${ACCENT}25`, background: `${ACCENT}06`, color: ACCENT }}>{row.us}</div>
                   </div>
                 ))}
               </div>
@@ -770,86 +800,83 @@ export default function Home() {
         </section>
 
         {/* ── GUARANTEE ── */}
-        <section className="py-20 px-6 bg-[#0D0D10]">
+        <section className="py-16 px-6" style={{ background: BG }}>
           <Fade>
-            <div
-              className="max-w-4xl mx-auto rounded-2xl p-12 text-center relative overflow-hidden"
-              style={{ animation: "pulse-glow 3s ease-in-out infinite", background: "linear-gradient(135deg, #0D0D14 0%, #0A0A10 100%)" }}
-            >
-              <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(ellipse at center, #1F62FF 0%, transparent 70%)" }} />
-              <div className="relative z-10">
-                <p className="text-[#1F62FF] text-[12px] font-semibold uppercase tracking-[0.14em] mb-5">Our Promise</p>
-                <h2
-                  className="text-4xl md:text-5xl font-black text-[#FAFAFA] mb-5 leading-tight"
-                  style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", letterSpacing: "-0.02em" }}
-                >
-                  $30,000 in recovered time within 90 days — guaranteed.
-                </h2>
-                <p className="text-[#9CA3AF] text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-                  If we don't deliver measurable ROI in your first 90 days, we keep working until we do. No extra charge. No excuses.
-                </p>
-                <CtaButton href={CALENDLY} size="lg" data-testid="button-guarantee-cta">
-                  Claim Your Free Audit Call <ArrowRight className="w-5 h-5" />
-                </CtaButton>
-                <p className="text-[#9CA3AF]/60 text-xs mt-5">Month-to-month. No long-term contracts. You own everything we build.</p>
-              </div>
+            <div className="max-w-3xl mx-auto rounded-xl p-10 text-center" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+              <Label>Our Promise</Label>
+              <h2 className="font-bold leading-tight mb-4 sg" style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", color: TEXT, letterSpacing: "-0.02em" }}>
+                $30,000 in recovered time within 90 days — guaranteed.
+              </h2>
+              <p className="text-[15px] leading-relaxed mb-8 max-w-xl mx-auto" style={{ color: MUTED }}>
+                If we don't deliver measurable ROI in your first 90 days, we keep working until we do. No extra charge. No excuses.
+              </p>
+              <PrimaryBtn href={CALENDLY} size="lg" data-testid="button-guarantee-cta">
+                Claim Your Free Audit Call <ArrowRight className="w-4 h-4" />
+              </PrimaryBtn>
+              <p className="text-[12px] mt-4" style={{ color: `${MUTED}80` }}>Month-to-month. No long-term contracts. You own everything we build.</p>
             </div>
           </Fade>
         </section>
 
         {/* ── COMMUNITY ── */}
-        <section className="py-24 bg-[#0A0A0B]">
+        <section className="py-16" style={{ background: BG2 }}>
           <div className="max-w-6xl mx-auto px-6">
-            <Fade>
-              <SectionLabel>Community</SectionLabel>
-              <SectionHeading>Ready to bring back hours of time?</SectionHeading>
-            </Fade>
-            <div className="mt-12 grid md:grid-cols-2 gap-10 items-center">
-              <Fade delay={0.08}>
-                <div className="flex flex-col gap-5">
-                  <p className="text-[#9CA3AF] text-lg leading-relaxed">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              <Fade>
+                <div>
+                  <Label>Community</Label>
+                  <H2>Ready to bring back hours of time?</H2>
+                  <p className="text-[15px] leading-relaxed mt-4 mb-6" style={{ color: MUTED }}>
                     Join founders and operators inside our community — breakdowns, templates, and live Q&amp;A on automation that actually ships.
                   </p>
-                  <div>
-                    <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                      <button className="border border-[#1F62FF]/50 text-[#1F62FF] hover:bg-[#1F62FF] hover:text-white font-semibold px-6 h-10 rounded-lg transition-all text-sm">
-                        Join the community →
-                      </button>
-                    </a>
-                  </div>
+                  <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                    <button className="text-[14px] font-medium transition-colors duration-150" style={{ color: ACCENT }}
+                      onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.7"}
+                      onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}>
+                      Join the community →
+                    </button>
+                  </a>
                 </div>
               </Fade>
-              <Fade delay={0.15}>
+              <Fade delay={0.1}>
                 <VideoPlayer />
               </Fade>
             </div>
           </div>
         </section>
 
-        {/* ── RESULTS (text testimonials) ── */}
-        <section id="results" className="py-24 bg-[#0D0D10]">
+        {/* ── RESULTS (testimonials) ── */}
+        <section id="results" className="py-16" style={{ background: BG }}>
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
-              <SectionLabel>Client Results</SectionLabel>
-              <SectionHeading>Founders who've used our system — and what happened.</SectionHeading>
-              <p className="text-[#9CA3AF] mt-4 mb-12 text-lg leading-relaxed max-w-2xl">Agency owners and business founders share what changed after putting our automation systems to work.</p>
+              <Label>Client Results</Label>
+              <H2>Founders who've used our system — and what happened.</H2>
+              <p className="text-[14px] mt-3 mb-9 max-w-xl leading-relaxed" style={{ color: MUTED }}>
+                Agency owners and business founders share what changed after putting our automation systems to work.
+              </p>
             </Fade>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {testimonials.map((t, i) => (
-                <Fade key={t.name} delay={i * 0.05}>
-                  <div className="bg-[#111114] border border-[#1F1F23] rounded-2xl p-6 flex flex-col gap-4 hover:border-[#1F62FF]/30 hover:shadow-[0_4px_24px_rgba(31,98,255,0.1)] hover:-translate-y-1 transition-all duration-300" data-testid={`card-testimonial-${i}`}>
+                <Fade key={t.name} delay={i * 0.04}>
+                  <div
+                    className="rounded-xl p-5 flex flex-col gap-3.5 transition-colors duration-150"
+                    style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
+                    data-testid={`card-testimonial-${i}`}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#2e2e32"}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}
+                  >
                     <div className="flex gap-0.5">
-                      {[1,2,3,4,5].map(s => <Star key={s} className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />)}
+                      {[1,2,3,4,5].map(s => <Star key={s} className="w-3 h-3 text-yellow-400 fill-yellow-400" />)}
                     </div>
-                    <p className="text-[#9CA3AF] text-sm leading-relaxed italic flex-1">"{t.quote}"</p>
-                    <div className="flex items-center gap-3 pt-3 border-t border-[#1F1F23]">
-                      <div className="w-9 h-9 rounded-full bg-[#1F62FF]/10 border border-[#1F62FF]/20 flex items-center justify-center text-[#1F62FF] font-bold text-sm flex-shrink-0">
+                    <p className="text-[13px] leading-relaxed italic flex-1" style={{ color: MUTED }}>"{t.quote}"</p>
+                    <div className="flex items-center gap-2.5 pt-3" style={{ borderTop: `1px solid ${BORDER}` }}>
+                      <div className="w-8 h-8 rounded-lg flex items-center justify-center text-[13px] font-bold sg flex-shrink-0" style={{ background: `${ACCENT}12`, color: ACCENT }}>
                         {t.name[0]}
                       </div>
                       <div>
-                        <p className="font-bold text-[#FAFAFA] text-sm leading-none mb-0.5">{t.name}</p>
-                        <p className="text-[#1F62FF] text-xs font-medium">{t.company}</p>
-                        <p className="text-[#9CA3AF] text-xs">{t.role}</p>
+                        <p className="font-semibold text-[13px] leading-none mb-0.5 sg" style={{ color: TEXT }}>{t.name}</p>
+                        <p className="text-[12px]" style={{ color: ACCENT }}>{t.company}</p>
+                        <p className="text-[11px]" style={{ color: MUTED }}>{t.role}</p>
                       </div>
                     </div>
                   </div>
@@ -860,14 +887,14 @@ export default function Home() {
         </section>
 
         {/* ── WRITTEN REVIEWS ── */}
-        <section className="py-24 bg-[#0A0A0B]">
+        <section className="py-16" style={{ background: BG2 }}>
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
-              <SectionLabel>Reviews</SectionLabel>
-              <SectionHeading>What clients say</SectionHeading>
+              <Label>Reviews</Label>
+              <H2>What clients say</H2>
             </Fade>
-            <Fade delay={0.1}>
-              <div className="mt-12">
+            <Fade delay={0.08}>
+              <div className="mt-10">
                 <ReviewsCarousel />
               </div>
             </Fade>
@@ -875,75 +902,61 @@ export default function Home() {
         </section>
 
         {/* ── FAQ ── */}
-        <section id="faq" className="py-24 bg-[#0D0D10]">
-          <div className="max-w-3xl mx-auto px-6">
+        <section id="faq" className="py-16" style={{ background: BG }}>
+          <div className="max-w-2xl mx-auto px-6">
             <Fade>
-              <SectionLabel>FAQ</SectionLabel>
-              <SectionHeading>Common questions</SectionHeading>
+              <Label>FAQ</Label>
+              <H2>Common questions</H2>
             </Fade>
-            <Fade delay={0.1}>
-              <div className="mt-12 bg-[#111114] rounded-2xl border border-[#1F1F23] px-6">
-                {faqs.map(f => <FaqItem key={f.q} q={f.q} a={f.a} />)}
+            <Fade delay={0.08}>
+              <div className="mt-8 rounded-xl overflow-hidden" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+                <div className="px-6">
+                  {faqs.map(f => <FaqItem key={f.q} q={f.q} a={f.a} />)}
+                </div>
               </div>
             </Fade>
           </div>
         </section>
 
         {/* ── FINAL CTA ── */}
-        <section
-          className="py-24 px-6 bg-[#0A0A0B]"
-          style={{ background: "radial-gradient(ellipse 80% 60% at 30% 50%, rgba(31,98,255,0.08) 0%, transparent 65%), #0A0A0B" }}
-        >
+        <section className="py-16 px-6" style={{ background: BG2 }}>
           <div className="max-w-5xl mx-auto">
             <Fade>
-              <div className="bg-[#111114] border border-[#1F1F23] rounded-3xl overflow-hidden">
+              <div className="rounded-xl overflow-hidden" style={{ border: `1px solid ${BORDER}` }}>
                 <div className="flex flex-col md:flex-row items-stretch">
-
-                  {/* Photo side */}
-                  <div className="md:w-[340px] flex-shrink-0 relative bg-[#0A0A0B]">
+                  <div className="md:w-72 flex-shrink-0 relative" style={{ background: "#0a0a0c" }}>
                     <img
                       src={`${import.meta.env.BASE_URL}ryne.png`}
                       alt="Ryne Bandolik — Founder, JobsDone Labs"
-                      className="w-full h-full object-cover object-top min-h-[280px] md:min-h-full"
+                      className="w-full h-full object-cover object-top min-h-[240px] md:min-h-full"
                     />
-                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-5">
-                      <p className="text-white font-bold text-sm leading-none">Ryne Bandolik</p>
-                      <p className="text-white/50 text-xs mt-0.5">Founder, JobsDone Labs</p>
+                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/75 to-transparent p-4">
+                      <p className="text-white font-semibold text-[13px] leading-none sg">Ryne Bandolik</p>
+                      <p className="text-[11px] mt-0.5" style={{ color: "rgba(255,255,255,0.45)" }}>Founder, JobsDone Labs</p>
                     </div>
                   </div>
-
-                  {/* Text side */}
-                  <div className="flex-1 flex flex-col justify-center p-10 md:p-14">
-                    <p className="text-[#1F62FF] text-[12px] font-semibold uppercase tracking-[0.12em] mb-5">Ready to get your time back?</p>
-                    <h2
-                      className="font-black text-[#FAFAFA] tracking-tight mb-5 leading-tight text-3xl md:text-4xl"
-                      style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", letterSpacing: "-0.02em" }}
-                    >
+                  <div className="flex-1 flex flex-col justify-center p-8 md:p-12" style={{ background: SURFACE }}>
+                    <Label>Ready to get your time back?</Label>
+                    <h2 className="font-bold leading-tight mb-4 sg" style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)", color: TEXT, letterSpacing: "-0.02em" }}>
                       Book your free<br />automation audit call
                     </h2>
-                    <p className="text-[#9CA3AF] text-base leading-relaxed mb-9">
+                    <p className="text-[14px] leading-relaxed mb-7" style={{ color: MUTED }}>
                       In 45 minutes, I'll personally map your biggest bottlenecks and hand you a custom roadmap — whether you hire us or not.
                     </p>
-
-                    <div className="flex flex-col gap-3">
-                      <CtaButton href={CALENDLY} size="lg" className="w-full sm:w-auto" data-testid="button-final-cta">
-                        Book a Call with Ryne <ArrowRight className="w-5 h-5" />
-                      </CtaButton>
-                      <p className="text-[#9CA3AF]/60 text-xs">No commitment. No sales pressure. You keep the roadmap either way.</p>
+                    <div className="flex flex-col gap-2">
+                      <PrimaryBtn href={CALENDLY} size="lg" className="w-full sm:w-auto" data-testid="button-final-cta">
+                        Book a Call with Ryne <ArrowRight className="w-4 h-4" />
+                      </PrimaryBtn>
+                      <p className="text-[12px]" style={{ color: `${MUTED}70` }}>No commitment. No sales pressure. You keep the roadmap either way.</p>
                     </div>
-
-                    <div className="flex flex-wrap gap-4 mt-8 pt-8 border-t border-[#1F1F23]">
-                      {["$30K guaranteed in 90 days", "Month-to-month only", "You own everything we build"].map(t => (
-                        <span key={t} className="flex items-center gap-1.5 text-xs text-[#9CA3AF] font-medium">
-                          <span className="w-4 h-4 rounded-full bg-[#1F62FF]/15 flex items-center justify-center flex-shrink-0">
-                            <Check className="w-2.5 h-2.5 text-[#1F62FF]" />
-                          </span>
-                          {t}
+                    <div className="flex flex-wrap gap-4 mt-6 pt-6" style={{ borderTop: `1px solid ${BORDER}` }}>
+                      {["$30K guaranteed in 90 days","Month-to-month only","You own everything"].map(t => (
+                        <span key={t} className="flex items-center gap-1.5 text-[12px] sg" style={{ color: MUTED }}>
+                          <Check className="w-3.5 h-3.5" style={{ color: ACCENT }} /> {t}
                         </span>
                       ))}
                     </div>
                   </div>
-
                 </div>
               </div>
             </Fade>
@@ -953,40 +966,56 @@ export default function Home() {
       </main>
 
       {/* ── FOOTER ── */}
-      <footer className="border-t border-[#1F1F23] bg-[#0A0A0B] py-14">
+      <footer className="py-12" style={{ borderTop: `1px solid ${BORDER}`, background: BG }}>
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between gap-10 mb-10">
-            <div className="flex flex-col gap-4 max-w-xs">
+          <div className="flex flex-col md:flex-row justify-between gap-10 mb-8">
+            <div className="flex flex-col gap-3.5 max-w-[220px]">
               <JobsDoneLogo />
-              <p className="text-[#9CA3AF] text-sm leading-relaxed">Your embedded automation team.</p>
-              <div className="flex gap-4">
-                <a href="#" className="text-white/20 hover:text-[#1F62FF] transition-colors"><Linkedin className="w-5 h-5" /></a>
-                <a href="#" className="text-white/20 hover:text-[#1F62FF] transition-colors"><Youtube className="w-5 h-5" /></a>
-                <a href="#" className="text-white/20 hover:text-[#1F62FF] transition-colors"><Twitter className="w-5 h-5" /></a>
+              <p className="text-[13px] leading-relaxed" style={{ color: MUTED }}>Your embedded automation team.</p>
+              <div className="flex gap-3.5">
+                <a href="#" className="transition-colors duration-150" style={{ color: `${TEXT}20` }}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = ACCENT}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = `${TEXT}20`}>
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a href="#" className="transition-colors duration-150" style={{ color: `${TEXT}20` }}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = ACCENT}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = `${TEXT}20`}>
+                  <Youtube className="w-4 h-4" />
+                </a>
+                <a href="#" className="transition-colors duration-150" style={{ color: `${TEXT}20` }}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = ACCENT}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = `${TEXT}20`}>
+                  <Twitter className="w-4 h-4" />
+                </a>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-10 text-sm">
+            <div className="grid grid-cols-3 gap-10 text-[13px]">
               <div>
-                <p className="text-[#FAFAFA] font-semibold mb-3">Services</p>
+                <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Services</p>
                 {["CRM Infrastructure","Lead Capture","Lead Nurture","Transcript Analysis","Client Onboarding"].map(l => (
-                  <p key={l} className="text-[#9CA3AF] hover:text-[#FAFAFA] cursor-pointer mb-1.5 transition-colors">{l}</p>
+                  <p key={l} className="mb-1.5 transition-colors duration-150 cursor-pointer" style={{ color: MUTED }}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>{l}</p>
                 ))}
               </div>
               <div>
-                <p className="text-[#FAFAFA] font-semibold mb-3">Industries</p>
+                <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Industries</p>
                 {["Marketing Agencies","Home Service","Finance Firms","Professional Services"].map(l => (
-                  <p key={l} className="text-[#9CA3AF] hover:text-[#FAFAFA] cursor-pointer mb-1.5 transition-colors">{l}</p>
+                  <p key={l} className="mb-1.5 transition-colors duration-150 cursor-pointer" style={{ color: MUTED }}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>{l}</p>
                 ))}
               </div>
               <div>
-                <p className="text-[#FAFAFA] font-semibold mb-3">Company</p>
-                <Link href="/privacy" className="block text-[#9CA3AF] hover:text-[#FAFAFA] mb-1.5 transition-colors">Privacy Policy</Link>
-                <Link href="/terms" className="block text-[#9CA3AF] hover:text-[#FAFAFA] mb-1.5 transition-colors">Terms of Service</Link>
-                <a href="mailto:support@jobsdonelabs.ai" className="block text-[#9CA3AF] hover:text-[#FAFAFA] mb-1.5 transition-colors">Contact</a>
+                <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Company</p>
+                <Link href="/privacy" className="block mb-1.5 transition-colors duration-150" style={{ color: MUTED }}>Privacy Policy</Link>
+                <Link href="/terms" className="block mb-1.5 transition-colors duration-150" style={{ color: MUTED }}>Terms of Service</Link>
+                <a href="mailto:support@jobsdonelabs.ai" className="block mb-1.5 transition-colors duration-150" style={{ color: MUTED }}>Contact</a>
               </div>
             </div>
           </div>
-          <div className="border-t border-[#1F1F23] pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-[#9CA3AF]">
+          <div className="pt-5 flex flex-col md:flex-row justify-between items-center gap-2 text-[12px]" style={{ borderTop: `1px solid ${BORDER}`, color: `${MUTED}70` }}>
             <span>© {new Date().getFullYear()} JobsDone Labs. All rights reserved.</span>
             <span>support@jobsdonelabs.ai</span>
           </div>

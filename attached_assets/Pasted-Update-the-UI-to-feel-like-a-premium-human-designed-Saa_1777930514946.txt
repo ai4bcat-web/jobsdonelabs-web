@@ -1,0 +1,62 @@
+Update the UI to feel like a premium, human-designed SaaS product — not a generic AI template.
+
+Make the following changes:
+
+**Typography**
+
+* Replace the current font with a more distinctive, modern font pairing:
+
+  * Headings: use something bold and character-rich (e.g. Space Grotesk, Satoshi, or Neue Haas Grotesk)
+  * Body: use a clean but less overused font (e.g. Inter Tight or DM Sans)
+* Increase heading contrast and tighten letter spacing slightly for a more editorial feel
+* Avoid overly large, bulky hero text — make it feel more refined and intentional
+
+**Color & Styling**
+
+* Reduce heavy gradients and glowing blue effects
+* Shift to a more restrained palette (dark charcoal, off-white, subtle accent color)
+* Use soft shadows and subtle borders instead of glow effects
+* Add slight imperfections like noise texture or subtle grain to avoid the “too perfect” AI look
+
+**Layout**
+
+* Break the rigid “perfect grid” feel:
+
+  * Introduce more asymmetry in sections
+  * Add varied spacing between elements (not everything evenly spaced)
+* Reduce oversized padding and make sections feel tighter and more content-dense
+* Align elements more like a modern editorial layout instead of a SaaS template
+
+**Icons & Visuals**
+
+* Remove emojis entirely
+* Replace generic icons with a consistent icon set (e.g. Lucide or custom SVGs)
+* Use fewer icons overall — only where they add meaning
+* Avoid overly rounded, bubbly icon containers
+
+**Components**
+
+* Simplify cards:
+
+  * Reduce border radius
+  * Remove glowing outlines
+  * Use subtle hover states instead of animations everywhere
+* Buttons:
+
+  * Make them flatter and more minimal
+  * Avoid heavy gradients — use solid or very subtle styling
+
+**Motion**
+
+* Remove excessive animations
+* Keep only fast, subtle transitions (150–250ms)
+* Avoid “AI-looking” loading or pulsing effects
+
+**Overall Goal**
+The design should feel:
+
+* More like Stripe / Linear / Notion
+* Less like a generic AI landing page builder
+* More intentional, slightly imperfect, and human-crafted
+
+Prioritize clarity, hierarchy, and restraint over flashiness.
