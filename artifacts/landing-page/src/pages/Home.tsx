@@ -14,30 +14,29 @@ import {
   Twitter,
   X,
   Calculator,
+  Check,
 } from "lucide-react";
 
 /* ─────────────────────────────────────────────── */
-/*  Logo  (light-mode: dark text)                  */
+/*  Logo                                           */
 /* ─────────────────────────────────────────────── */
-function JobsDoneLogo({ size = "md", dark = false }: { size?: "sm" | "md" | "lg"; dark?: boolean }) {
+function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg"; dark?: boolean }) {
   const s = {
     sm: { icon: "w-5 h-5", text: "text-sm", labs: "text-[9px]", gap: "gap-1.5" },
     md: { icon: "w-7 h-7", text: "text-lg", labs: "text-[10px]", gap: "gap-2" },
     lg: { icon: "w-9 h-9", text: "text-2xl", labs: "text-xs", gap: "gap-2.5" },
   }[size];
-  const jobsColor = dark ? "text-white" : "text-slate-900";
-  const labsColor = dark ? "text-white/40" : "text-slate-400";
   return (
     <div className={`flex items-center ${s.gap}`}>
       <FlaskConical className={`${s.icon} text-[#1F62FF] flex-shrink-0`} />
       <div className="flex flex-col leading-none">
         <div className="flex items-baseline">
-          <span className={`font-black ${s.text} ${jobsColor} tracking-tight`}>JOBS</span>
+          <span className={`font-black ${s.text} text-[#FAFAFA] tracking-tight`}>JOBS</span>
           <span className={`font-black ${s.text} text-[#1F62FF] tracking-tight`}>DONE</span>
         </div>
         <div className="flex items-center gap-1 mt-0.5">
           <span className="flex-1 h-px bg-[#1F62FF]/40" />
-          <span className={`${s.labs} font-semibold ${labsColor} tracking-[0.18em] uppercase`}>Labs</span>
+          <span className={`${s.labs} font-semibold text-white/30 tracking-[0.18em] uppercase`}>Labs</span>
           <span className="flex-1 h-px bg-[#1F62FF]/40" />
         </div>
       </div>
@@ -46,96 +45,96 @@ function JobsDoneLogo({ size = "md", dark = false }: { size?: "sm" | "md" | "lg"
 }
 
 /* ─────────────────────────────────────────────── */
-/*  Workflow Card  (light)                          */
+/*  Workflow Card  (dark)                          */
 /* ─────────────────────────────────────────────── */
 function WorkflowCard() {
   return (
-    <div className="bg-white rounded-2xl border border-slate-100 p-5 w-full shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
+    <div className="bg-[#111114] rounded-2xl border border-[#1F1F23] p-5 w-full shadow-[0_8px_60px_rgba(31,98,255,0.12)]">
       <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-          <span className="w-1.5 h-1.5 rounded-full bg-slate-300 inline-block" />
+        <div className="flex items-center gap-1.5 text-xs font-semibold text-white/30 uppercase tracking-wider">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#1F62FF]/50 inline-block" />
           Live Automation System
         </div>
-        <span className="flex items-center gap-1 text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
+        <span className="flex items-center gap-1 text-xs font-semibold text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-800/60">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
           Active
         </span>
       </div>
 
-      <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5 flex items-center justify-between">
+      <div className="bg-[#0A0A0B] border border-[#1F1F23] rounded-xl p-3.5 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 text-base">📋</div>
+          <div className="w-8 h-8 bg-[#1F62FF]/10 rounded-lg flex items-center justify-center flex-shrink-0 text-base">📋</div>
           <div>
-            <p className="font-semibold text-slate-800 text-sm leading-none mb-0.5">Lead Capture</p>
-            <p className="text-slate-400 text-xs">New inquiry received</p>
+            <p className="font-semibold text-[#FAFAFA] text-sm leading-none mb-0.5">Lead Capture</p>
+            <p className="text-[#9CA3AF] text-xs">New inquiry received</p>
           </div>
         </div>
-        <span className="text-xs font-medium text-[#1F62FF] bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 whitespace-nowrap">Triggered</span>
+        <span className="text-xs font-medium text-[#1F62FF] bg-[#1F62FF]/10 px-2.5 py-1 rounded-md border border-[#1F62FF]/20 whitespace-nowrap">Triggered</span>
       </div>
 
       <div className="flex justify-center my-1.5">
-        <div className="w-px h-5 border-l-2 border-dashed border-slate-200" />
+        <div className="w-px h-5 border-l-2 border-dashed border-[#1F1F23]" />
       </div>
 
-      <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5 flex items-center justify-between">
+      <div className="bg-[#0A0A0B] border border-[#1F1F23] rounded-xl p-3.5 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 text-base">🤖</div>
+          <div className="w-8 h-8 bg-[#1F62FF]/10 rounded-lg flex items-center justify-center flex-shrink-0 text-base">🤖</div>
           <div>
-            <p className="font-semibold text-slate-800 text-sm leading-none mb-0.5">AI Qualification</p>
-            <p className="text-slate-400 text-xs">Tagged, scored, enriched</p>
+            <p className="font-semibold text-[#FAFAFA] text-sm leading-none mb-0.5">AI Qualification</p>
+            <p className="text-[#9CA3AF] text-xs">Tagged, scored, enriched</p>
           </div>
         </div>
-        <span className="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200 whitespace-nowrap">→ Processing</span>
+        <span className="text-xs font-medium text-[#9CA3AF] bg-[#1F1F23] px-2.5 py-1 rounded-md border border-[#1F1F23] whitespace-nowrap">→ Processing</span>
       </div>
 
       <div className="flex justify-center my-1.5">
-        <div className="w-px h-5 border-l-2 border-dashed border-slate-200" />
+        <div className="w-px h-5 border-l-2 border-dashed border-[#1F1F23]" />
       </div>
 
       <div className="grid grid-cols-2 gap-2">
-        <div className="bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-start gap-2">
-          <div className="w-7 h-7 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm">📧</div>
+        <div className="bg-[#0A0A0B] border border-[#1F1F23] rounded-xl p-3 flex items-start gap-2">
+          <div className="w-7 h-7 bg-[#1F62FF]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm">📧</div>
           <div>
-            <p className="font-semibold text-slate-800 text-xs leading-none mb-0.5">Email Nurture</p>
-            <p className="text-slate-400 text-[11px]">Follow-up sent</p>
+            <p className="font-semibold text-[#FAFAFA] text-xs leading-none mb-0.5">Email Nurture</p>
+            <p className="text-[#9CA3AF] text-[11px]">Follow-up sent</p>
           </div>
         </div>
-        <div className="bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-start gap-2">
-          <div className="w-7 h-7 bg-amber-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm">🔔</div>
+        <div className="bg-[#0A0A0B] border border-[#1F1F23] rounded-xl p-3 flex items-start gap-2">
+          <div className="w-7 h-7 bg-amber-950/40 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm">🔔</div>
           <div>
-            <p className="font-semibold text-slate-800 text-xs leading-none mb-0.5">Team Alert</p>
-            <p className="text-slate-400 text-[11px]">Sales notified</p>
+            <p className="font-semibold text-[#FAFAFA] text-xs leading-none mb-0.5">Team Alert</p>
+            <p className="text-[#9CA3AF] text-[11px]">Sales notified</p>
           </div>
         </div>
       </div>
 
       <div className="flex justify-center my-1.5">
-        <div className="w-px h-5 border-l-2 border-dashed border-slate-200" />
+        <div className="w-px h-5 border-l-2 border-dashed border-[#1F1F23]" />
       </div>
 
-      <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5 flex items-center justify-between">
+      <div className="bg-[#0A0A0B] border border-[#1F1F23] rounded-xl p-3.5 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center flex-shrink-0 text-base">🚀</div>
+          <div className="w-8 h-8 bg-emerald-950/40 rounded-lg flex items-center justify-center flex-shrink-0 text-base">🚀</div>
           <div>
-            <p className="font-semibold text-slate-800 text-sm leading-none mb-0.5">Client Onboarding</p>
-            <p className="text-slate-400 text-xs">Resources created automatically</p>
+            <p className="font-semibold text-[#FAFAFA] text-sm leading-none mb-0.5">Client Onboarding</p>
+            <p className="text-[#9CA3AF] text-xs">Resources created automatically</p>
           </div>
         </div>
-        <span className="text-xs font-medium text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">Complete</span>
+        <span className="text-xs font-medium text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-md border border-emerald-800/60">Complete</span>
       </div>
 
-      <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-slate-100">
+      <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-[#1F1F23]">
         <div className="text-center">
           <p className="text-xl font-black text-[#1F62FF]">12h</p>
-          <p className="text-xs text-slate-400">Saved weekly</p>
+          <p className="text-xs text-[#9CA3AF]">Saved weekly</p>
         </div>
         <div className="text-center">
           <p className="text-xl font-black text-[#1F62FF]">0</p>
-          <p className="text-xs text-slate-400">Manual steps</p>
+          <p className="text-xs text-[#9CA3AF]">Manual steps</p>
         </div>
         <div className="text-center">
           <p className="text-xl font-black text-[#1F62FF]">24/7</p>
-          <p className="text-xs text-slate-400">Always running</p>
+          <p className="text-xs text-[#9CA3AF]">Always running</p>
         </div>
       </div>
     </div>
@@ -143,170 +142,15 @@ function WorkflowCard() {
 }
 
 /* ─────────────────────────────────────────────── */
-/*  Hero Diagram                                   */
-/* ─────────────────────────────────────────────── */
-const channels = [
-  { icon: "💼", label: "LinkedIn" },
-  { icon: "📱", label: "Meta Ads" },
-  { icon: "🔍", label: "Google Ads" },
-  { icon: "📧", label: "Email Campaigns" },
-  { icon: "🌐", label: "Web / Forms" },
-  { icon: "⭐", label: "Referrals" },
-  { icon: "📞", label: "Cold Calls" },
-];
-
-const outcomes = [
-  { icon: "👥", label: "Qualified Leads", sub: "Higher quality pipeline" },
-  { icon: "⚡", label: "Faster Response", sub: "Instant follow-up & nurture" },
-  { icon: "📈", label: "More Conversions", sub: "Better experience, more wins" },
-  { icon: "⚙️", label: "Less Manual Work", sub: "Automate the busywork" },
-];
-
-function HeroDiagram() {
-  return (
-    <div className="bg-white border border-slate-100 rounded-2xl shadow-[0_8px_48px_rgba(31,98,255,0.13)] overflow-hidden w-full">
-
-      {/* Header bar */}
-      <div className="flex items-center justify-between px-5 py-3 border-b border-slate-100 bg-slate-50/60">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-[#1F62FF] inline-block" />
-          <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Live Automation System</span>
-        </div>
-        <span className="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />Active
-        </span>
-      </div>
-
-      {/* Three-column body */}
-      <div className="flex divide-x divide-slate-100 min-h-[340px]">
-
-        {/* LEFT — Channels */}
-        <div className="w-[130px] flex-shrink-0 p-3 flex flex-col">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Inbound Channels</p>
-          <div className="flex flex-col gap-1.5 flex-1">
-            {channels.map((c) => (
-              <div key={c.label} className="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg px-2 py-1.5 group">
-                <span className="text-xs">{c.icon}</span>
-                <span className="text-[11px] font-medium text-slate-600 flex-1 leading-none">{c.label}</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#1F62FF]/40 flex-shrink-0" />
-              </div>
-            ))}
-          </div>
-          <div className="mt-3 flex justify-end items-center gap-1 text-[#1F62FF]/50">
-            <span className="flex-1 h-px bg-[#1F62FF]/20" />
-            <ArrowRight className="w-3.5 h-3.5" />
-          </div>
-        </div>
-
-        {/* CENTER — Automation flow */}
-        <div className="flex-1 p-4 flex flex-col gap-2">
-          {/* Step 1 */}
-          <div className="bg-slate-50 border border-slate-100 rounded-xl px-3 py-2.5 flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <span className="text-sm">📋</span>
-              <div>
-                <p className="text-[11px] font-bold text-slate-800 leading-none mb-0.5">Lead Capture</p>
-                <p className="text-[10px] text-slate-400">New inquiry received</p>
-              </div>
-            </div>
-            <span className="text-[10px] font-semibold text-[#1F62FF] bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-md whitespace-nowrap">Triggered</span>
-          </div>
-
-          <div className="flex justify-center"><div className="w-px h-4 border-l-2 border-dashed border-slate-200" /></div>
-
-          {/* Step 2 */}
-          <div className="bg-slate-50 border border-slate-100 rounded-xl px-3 py-2.5 flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <span className="text-sm">🤖</span>
-              <div>
-                <p className="text-[11px] font-bold text-slate-800 leading-none mb-0.5">AI Qualification</p>
-                <p className="text-[10px] text-slate-400">Tagged, scored, enriched</p>
-              </div>
-            </div>
-            <span className="text-[10px] font-medium text-slate-400 bg-white border border-slate-200 px-2 py-0.5 rounded-md whitespace-nowrap">→ Processing</span>
-          </div>
-
-          <div className="flex justify-center"><div className="w-px h-4 border-l-2 border-dashed border-slate-200" /></div>
-
-          {/* Step 3 — parallel */}
-          <div className="grid grid-cols-2 gap-2">
-            <div className="bg-slate-50 border border-slate-100 rounded-xl px-2.5 py-2 flex items-start gap-2">
-              <span className="text-xs mt-0.5">📧</span>
-              <div>
-                <p className="text-[11px] font-bold text-slate-800 leading-none mb-0.5">Email Nurture</p>
-                <p className="text-[10px] text-slate-400">Follow-up sent</p>
-              </div>
-            </div>
-            <div className="bg-slate-50 border border-slate-100 rounded-xl px-2.5 py-2 flex items-start gap-2">
-              <span className="text-xs mt-0.5">🔔</span>
-              <div>
-                <p className="text-[11px] font-bold text-slate-800 leading-none mb-0.5">Team Alert</p>
-                <p className="text-[10px] text-slate-400">Sales notified</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex justify-center"><div className="w-px h-4 border-l-2 border-dashed border-slate-200" /></div>
-
-          {/* Step 4 */}
-          <div className="bg-slate-50 border border-slate-100 rounded-xl px-3 py-2.5 flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <span className="text-sm">🚀</span>
-              <div>
-                <p className="text-[11px] font-bold text-slate-800 leading-none mb-0.5">Client Onboarding</p>
-                <p className="text-[10px] text-slate-400">Resources created automatically</p>
-              </div>
-            </div>
-            <span className="text-[10px] font-semibold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">Complete</span>
-          </div>
-        </div>
-
-        {/* RIGHT — Outcomes */}
-        <div className="w-[175px] flex-shrink-0 p-4 flex flex-col">
-          <div className="flex items-center gap-1 mb-3 text-[#1F62FF]/50">
-            <ArrowRight className="w-3.5 h-3.5" />
-            <span className="flex-1 h-px bg-[#1F62FF]/20" />
-          </div>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Outcomes</p>
-          <div className="flex flex-col gap-3 flex-1">
-            {outcomes.map((o) => (
-              <div key={o.label} className="flex items-start gap-2 min-w-0">
-                <span className="text-base leading-none mt-0.5 flex-shrink-0">{o.icon}</span>
-                <div className="min-w-0">
-                  <p className="text-[11px] font-bold text-slate-700 leading-snug truncate">{o.label}</p>
-                  <p className="text-[10px] text-slate-400 leading-snug truncate">{o.sub}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-      </div>
-
-      {/* Stats footer */}
-      <div className="grid grid-cols-3 divide-x divide-slate-100 border-t border-slate-100">
-        {[["12h", "Saved weekly"], ["0", "Manual steps"], ["24/7", "Always running"]].map(([val, label]) => (
-          <div key={label} className="py-3 text-center">
-            <p className="text-base font-black text-[#1F62FF]">{val}</p>
-            <p className="text-[10px] text-slate-400">{label}</p>
-          </div>
-        ))}
-      </div>
-
-    </div>
-  );
-}
-
-/* ─────────────────────────────────────────────── */
-/*  Video Player placeholder                       */
+/*  Video Player                                   */
 /* ─────────────────────────────────────────────── */
 function VideoPlayer({ label }: { label?: string }) {
   const [playing, setPlaying] = useState(false);
   return (
     <div className="w-full">
       <div
-        className="relative w-full aspect-video rounded-2xl overflow-hidden cursor-pointer shadow-[0_4px_40px_rgba(31,98,255,0.15)] ring-1 ring-slate-200"
-        style={{ background: "linear-gradient(135deg,#0a1628 0%,#0f1f3d 100%)" }}
+        className="relative w-full aspect-video rounded-2xl overflow-hidden cursor-pointer"
+        style={{ background: "linear-gradient(135deg,#060610 0%,#0c0c1a 100%)", boxShadow: "0 0 0 1px #1F1F23, 0 8px 60px rgba(31,98,255,0.2)" }}
         onClick={() => !playing && setPlaying(true)}
       >
         {playing ? (
@@ -318,22 +162,25 @@ function VideoPlayer({ label }: { label?: string }) {
           />
         ) : (
           <>
-            <div className="absolute inset-0 opacity-10" style={{
-              backgroundImage: "linear-gradient(rgba(31,98,255,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(31,98,255,0.3) 1px,transparent 1px)",
+            <div className="absolute inset-0 opacity-[0.06]" style={{
+              backgroundImage: "linear-gradient(rgba(31,98,255,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(31,98,255,0.5) 1px,transparent 1px)",
               backgroundSize: "40px 40px"
             }} />
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex items-center justify-center w-20 h-20 rounded-full bg-[#1F62FF] shadow-[0_0_40px_rgba(31,98,255,0.6)] hover:scale-110 transition-transform duration-200">
+              <div
+                className="flex items-center justify-center w-20 h-20 rounded-full bg-[#1F62FF] hover:scale-110 transition-transform duration-200"
+                style={{ animation: "pulse-play 2.5s ease-in-out infinite" }}
+              >
                 <Play className="w-8 h-8 text-white ml-1" fill="white" />
               </div>
             </div>
             <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-              <p className="text-white/70 text-xs">▶ Placeholder — swap in your real video</p>
+              <p className="text-white/50 text-xs">▶ Placeholder — swap in your real video</p>
             </div>
           </>
         )}
       </div>
-      {label && <p className="text-center text-slate-400 text-sm mt-3">{label}</p>}
+      {label && <p className="text-center text-[#9CA3AF] text-sm mt-4 tracking-wide">{label}</p>}
     </div>
   );
 }
@@ -358,10 +205,19 @@ const services = [
 ];
 
 const steps = [
-  { num: "1", title: "Free Audit Call", sub: "Day 1", desc: "We map your business, find the biggest bottlenecks eating your time, and build a custom automation roadmap." },
-  { num: "2", title: "Onboarding & Setup", sub: "Week 1", desc: "Your dedicated automation engineer learns your systems, tools, and workflows. We're in your Slack within 48 hours." },
-  { num: "3", title: "Weekly Builds", sub: "Ongoing", desc: "Each week we ship new automations based on your priorities. Weekly strategy calls keep everything aligned." },
-  { num: "4", title: "24/7 Maintenance", sub: "Always On", desc: "We monitor, fix, and optimize every system we build. Under 24-hour response to any issue, guaranteed." },
+  { num: "01", title: "Free Audit Call", sub: "Day 1", desc: "We map your business, find the biggest bottlenecks eating your time, and build a custom automation roadmap." },
+  { num: "02", title: "Onboarding & Setup", sub: "Week 1", desc: "Your dedicated automation engineer learns your systems, tools, and workflows. We're in your Slack within 48 hours." },
+  { num: "03", title: "Weekly Builds", sub: "Ongoing", desc: "Each week we ship new automations based on your priorities. Weekly strategy calls keep everything aligned." },
+  { num: "04", title: "24/7 Maintenance", sub: "Always On", desc: "We monitor, fix, and optimize every system we build. Under 24-hour response to any issue, guaranteed." },
+];
+
+const comparison = [
+  { aspect: "Cost", inHouse: "$80K+/year salary", freelancer: "Inconsistent", us: "Predictable monthly" },
+  { aspect: "Time to start", inHouse: "3–6 months", freelancer: "Weeks", us: "48 hours" },
+  { aspect: "Strategy", inHouse: "Limited", freelancer: "None", us: "Weekly strategy calls" },
+  { aspect: "Maintenance", inHouse: "On you", freelancer: "On you", us: "24/7 on us" },
+  { aspect: "Quality", inHouse: "Manager-led", freelancer: "Hit or miss", us: "Senior engineer" },
+  { aspect: "You own it", inHouse: "✗", freelancer: "Varies", us: "✓ Always" },
 ];
 
 const testimonials = [
@@ -395,18 +251,18 @@ const faqs = [
 ];
 
 /* ─────────────────────────────────────────────── */
-/*  FAQ Item  (light)                              */
+/*  FAQ Item                                       */
 /* ─────────────────────────────────────────────── */
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-slate-200 last:border-0">
+    <div className="border-b border-[#1F1F23] last:border-0">
       <button
         className="w-full flex items-center justify-between py-5 text-left gap-4 group"
         onClick={() => setOpen(o => !o)}
       >
-        <span className="text-slate-800 font-semibold text-base leading-snug group-hover:text-[#1F62FF] transition-colors">{q}</span>
-        <ChevronDown className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-[#1F62FF]" : ""}`} />
+        <span className="text-[#FAFAFA] font-semibold text-base leading-snug group-hover:text-[#1F62FF] transition-colors">{q}</span>
+        <ChevronDown className={`w-5 h-5 text-[#9CA3AF] flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-[#1F62FF]" : ""}`} />
       </button>
       <AnimatePresence initial={false}>
         {open && (
@@ -417,7 +273,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.25, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-slate-500 leading-relaxed text-sm">{a}</p>
+            <p className="pb-5 text-[#9CA3AF] leading-relaxed text-sm">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -426,7 +282,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 }
 
 /* ─────────────────────────────────────────────── */
-/*  Reviews Carousel  (light)                      */
+/*  Reviews Carousel                               */
 /* ─────────────────────────────────────────────── */
 function ReviewsCarousel() {
   const [idx, setIdx] = useState(0);
@@ -442,24 +298,24 @@ function ReviewsCarousel() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -30 }}
           transition={{ duration: 0.3 }}
-          className="bg-white border border-slate-100 rounded-2xl p-8 text-center shadow-sm"
+          className="bg-[#111114] border border-[#1F1F23] rounded-2xl p-8 text-center"
         >
           <div className="flex justify-center gap-1 mb-5">
             {[1,2,3,4,5].map(s => <Star key={s} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
           </div>
-          <p className="text-slate-600 text-lg leading-relaxed mb-6 italic">"{r.quote}"</p>
-          <p className="font-bold text-slate-900">{r.name}</p>
-          <p className="text-slate-400 text-sm">{r.company}</p>
+          <p className="text-[#FAFAFA] text-lg leading-relaxed mb-6 italic">"{r.quote}"</p>
+          <p className="font-bold text-[#FAFAFA]">{r.name}</p>
+          <p className="text-[#9CA3AF] text-sm">{r.company}</p>
         </motion.div>
       </AnimatePresence>
       <div className="flex justify-center gap-3 mt-6">
-        <button onClick={prev} className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:border-[#1F62FF] hover:text-[#1F62FF] text-slate-400 transition-colors">
+        <button onClick={prev} className="w-10 h-10 rounded-full border border-[#1F1F23] flex items-center justify-center hover:border-[#1F62FF] hover:text-[#1F62FF] text-[#9CA3AF] transition-colors">
           <ChevronLeft className="w-5 h-5" />
         </button>
         {reviews.map((_, i) => (
-          <button key={i} onClick={() => setIdx(i)} className={`h-2.5 rounded-full transition-all ${i === idx ? "bg-[#1F62FF] w-6" : "bg-slate-300 w-2.5"}`} />
+          <button key={i} onClick={() => setIdx(i)} className={`h-2.5 rounded-full transition-all ${i === idx ? "bg-[#1F62FF] w-6" : "bg-[#1F1F23] w-2.5"}`} />
         ))}
-        <button onClick={next} className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:border-[#1F62FF] hover:text-[#1F62FF] text-slate-400 transition-colors">
+        <button onClick={next} className="w-10 h-10 rounded-full border border-[#1F1F23] flex items-center justify-center hover:border-[#1F62FF] hover:text-[#1F62FF] text-[#9CA3AF] transition-colors">
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>
@@ -473,10 +329,10 @@ function ReviewsCarousel() {
 function Fade({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 22 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.55, delay }}
+      transition={{ duration: 0.6, delay }}
       className={className}
     >
       {children}
@@ -485,11 +341,32 @@ function Fade({ children, delay = 0, className = "" }: { children: React.ReactNo
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
-  return <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-3">{children}</p>;
+  return <p className="text-[#1F62FF] text-[13px] font-semibold uppercase tracking-[0.12em] mb-4">{children}</p>;
 }
 
-function SectionHeading({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
-  return <h2 className={`text-3xl md:text-4xl font-black tracking-tight ${light ? "text-white" : "text-slate-900"}`}>{children}</h2>;
+function SectionHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h2
+      className="text-4xl md:text-5xl font-black tracking-tight text-[#FAFAFA] leading-[1.05]"
+      style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", letterSpacing: "-0.02em" }}
+    >
+      {children}
+    </h2>
+  );
+}
+
+function CtaButton({ href, children, size = "md", className = "" }: { href: string; children: React.ReactNode; size?: "sm" | "md" | "lg"; className?: string }) {
+  const p = size === "lg" ? "px-10 h-16 text-lg" : size === "sm" ? "px-6 h-10 text-sm" : "px-8 h-13 text-base";
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+      <button
+        className={`bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-bold ${p} rounded-xl transition-all inline-flex items-center gap-2 hover:scale-[1.03] hover:shadow-[0_0_32px_rgba(31,98,255,0.45)]`}
+        style={{ boxShadow: "0 4px 24px rgba(31,98,255,0.35)" }}
+      >
+        {children}
+      </button>
+    </a>
+  );
 }
 
 const CALENDLY = "https://calendly.com/ryne-bandolik";
@@ -530,7 +407,7 @@ function ExitIntentPopup() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[100]"
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100]"
             onClick={() => setVisible(false)}
           />
           <motion.div
@@ -540,10 +417,10 @@ function ExitIntentPopup() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="fixed inset-0 flex items-center justify-center z-[101] px-4"
           >
-            <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative border border-slate-100">
+            <div className="bg-[#111114] rounded-2xl shadow-2xl max-w-md w-full p-8 relative border border-[#1F1F23]">
               <button
                 onClick={() => setVisible(false)}
-                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors"
+                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-[#1F1F23] text-[#9CA3AF] hover:text-[#FAFAFA] transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -552,38 +429,36 @@ function ExitIntentPopup() {
                 <img
                   src={`${import.meta.env.BASE_URL}ryne.png`}
                   alt="Ryne Bandolik"
-                  className="w-16 h-16 rounded-full object-cover object-top flex-shrink-0 border-2 border-[#1F62FF]/20"
+                  className="w-16 h-16 rounded-full object-cover object-top flex-shrink-0 border-2 border-[#1F62FF]/40"
                 />
                 <div className="text-left">
                   <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-0.5">Wait — before you go</p>
-                  <p className="font-bold text-slate-900 text-sm leading-snug">A personal note from Ryne</p>
-                  <p className="text-slate-400 text-xs">Founder, JobsDone Labs</p>
+                  <p className="font-bold text-[#FAFAFA] text-sm leading-snug">A personal note from Ryne</p>
+                  <p className="text-[#9CA3AF] text-xs">Founder, JobsDone Labs</p>
                 </div>
               </div>
               <div className="mb-6">
-                <h2 className="text-2xl font-black text-slate-900 leading-tight mb-3">
+                <h2 className="text-2xl font-black text-[#FAFAFA] leading-tight mb-3">
                   We guarantee $30,000 recovered in 90 days — or we keep working for free.
                 </h2>
-                <p className="text-slate-500 text-sm leading-relaxed">
+                <p className="text-[#9CA3AF] text-sm leading-relaxed">
                   Most businesses are leaking revenue every day through slow follow-up and broken ops. Book a free 45-min audit and I'll show you exactly where yours are.
                 </p>
               </div>
 
               <div className="flex flex-col gap-3">
-                <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="block">
-                  <button className="w-full bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-bold text-base h-12 rounded-lg transition-all flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(31,98,255,0.3)]">
-                    Book My Free Audit Call <ArrowRight className="w-4 h-4" />
-                  </button>
-                </a>
+                <CtaButton href={CALENDLY} className="block">
+                  Book My Free Audit Call <ArrowRight className="w-4 h-4" />
+                </CtaButton>
                 <button
                   onClick={() => setVisible(false)}
-                  className="w-full text-slate-400 hover:text-slate-600 text-sm py-2 transition-colors"
+                  className="w-full text-[#9CA3AF] hover:text-[#FAFAFA] text-sm py-2 transition-colors"
                 >
                   No thanks, I'll pass on the free roadmap
                 </button>
               </div>
 
-              <div className="mt-4 flex items-center justify-center gap-4 text-xs text-slate-400">
+              <div className="mt-4 flex items-center justify-center gap-4 text-xs text-[#9CA3AF]">
                 <span>✓ No commitment</span>
                 <span>✓ Month-to-month</span>
                 <span>✓ You own everything</span>
@@ -601,74 +476,93 @@ function ExitIntentPopup() {
 /* ─────────────────────────────────────────────── */
 export default function Home() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <div className="min-h-screen font-sans overflow-x-hidden text-slate-900" style={{ background: "linear-gradient(160deg,#eef6ff 0%,#ffffff 40%,#f0f8ff 100%)" }}>
+    <div className="min-h-screen font-sans overflow-x-hidden" style={{ background: "#0A0A0B", color: "#FAFAFA" }}>
 
       <ExitIntentPopup />
 
       {/* ── NAV ── */}
-      <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur-md">
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-[#0A0A0B]/85 backdrop-blur-md border-b border-[#1F1F23]"
+            : "bg-transparent border-b border-transparent"
+        }`}
+      >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" data-testid="link-logo"><JobsDoneLogo /></Link>
           <nav className="hidden md:flex items-center gap-8">
             {[["Services","services"],["Industries","industries"],["Results","results"],["FAQ","faq"]].map(([label,id]) => (
-              <button key={id} onClick={() => scrollTo(id)} className="text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors">{label}</button>
+              <button key={id} onClick={() => scrollTo(id)} className="text-[#9CA3AF] hover:text-[#FAFAFA] text-sm font-medium transition-colors">{label}</button>
             ))}
             <Link href="/roi-calculator">
-              <button className="flex items-center gap-1.5 text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors">
+              <button className="flex items-center gap-1.5 text-[#9CA3AF] hover:text-[#FAFAFA] text-sm font-medium transition-colors">
                 <Calculator className="w-3.5 h-3.5" /> ROI Calculator
               </button>
             </Link>
           </nav>
-          <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-            <button className="bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-5 h-9 rounded-lg transition-all" data-testid="button-nav-cta">
-              Book a Call
-            </button>
-          </a>
+          <CtaButton href={CALENDLY} size="sm">
+            Book a Call
+          </CtaButton>
         </div>
       </header>
 
       <main>
 
         {/* ── HERO ── */}
-        <section className="max-w-6xl mx-auto px-6 pt-16 pb-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <section
+          className="max-w-6xl mx-auto px-6 pt-20 pb-12"
+          style={{ background: "radial-gradient(ellipse 80% 60% at 60% -10%, rgba(31,98,255,0.13) 0%, transparent 60%)" }}
+        >
+          <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.65 }}
               className="flex-1 min-w-0"
             >
-              <div className="inline-flex items-center gap-2 text-slate-500 text-xs font-medium mb-7 border border-slate-300 rounded-full px-4 py-1.5">
+              <div className="inline-flex items-center gap-2 text-[#1F62FF] text-[12px] font-semibold uppercase tracking-[0.12em] mb-8 border border-[#1F62FF]/25 rounded-full px-4 py-1.5 bg-[#1F62FF]/5">
                 <span>For Agencies &amp; Service Businesses</span>
-                <span className="w-1 h-1 rounded-full bg-slate-400 inline-block" />
+                <span className="w-1 h-1 rounded-full bg-[#1F62FF] inline-block" />
                 <span>90-Day Guarantee</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.08] text-slate-900 mb-6">
+              <h1
+                className="text-5xl md:text-6xl lg:text-[4.5rem] font-black leading-[1.04] text-[#FAFAFA] mb-6"
+                style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", letterSpacing: "-0.025em" }}
+              >
                 We guarantee you recover a minimum of{" "}
                 <span className="text-[#1F62FF]">$30,000 in lost revenue</span>{" "}
                 within 90 days.
               </h1>
-              <p className="text-slate-500 text-lg leading-relaxed mb-8 max-w-md">
+              <p className="text-[#9CA3AF] text-lg leading-[1.65] mb-9 max-w-lg">
                 By eliminating the lead leaks, slow follow-up, and manual bottlenecks currently costing you deals — or we keep working until we do. No excuses.
               </p>
-              <div className="flex flex-wrap gap-3 mb-8">
-                <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                  <button className="bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-bold text-base px-8 h-12 rounded-lg transition-all flex items-center gap-2 shadow-[0_4px_20px_rgba(31,98,255,0.35)]" data-testid="button-hero-primary">
-                    Book a Free Audit Call <ArrowRight className="w-4 h-4" />
-                  </button>
-                </a>
-                <button onClick={() => scrollTo("results")} className="border border-slate-300 hover:border-slate-400 text-slate-600 hover:text-slate-800 text-base font-medium px-8 h-12 rounded-lg transition-all" data-testid="button-hero-results">
+              <div className="flex flex-wrap gap-4 mb-9">
+                <CtaButton href={CALENDLY} data-testid="button-hero-primary">
+                  Book a Free Audit Call <ArrowRight className="w-4 h-4" />
+                </CtaButton>
+                <button
+                  onClick={() => scrollTo("results")}
+                  className="border border-[#1F1F23] hover:border-[#1F62FF]/40 text-[#9CA3AF] hover:text-[#FAFAFA] text-base font-medium px-8 h-13 py-3.5 rounded-xl transition-all"
+                  data-testid="button-hero-results"
+                >
                   See Client Results
                 </button>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2.5">
                 <div className="flex gap-0.5">
                   {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
                 </div>
-                <p className="text-slate-400 text-sm">50+ businesses automated · Avg. $30K+ saved in 90 days</p>
+                <p className="text-[#9CA3AF] text-sm">50+ businesses automated · Avg. $30K+ saved in 90 days</p>
               </div>
             </motion.div>
 
@@ -685,57 +579,96 @@ export default function Home() {
         </section>
 
         {/* ── VIDEO ── */}
-        <section className="max-w-4xl mx-auto px-6 pb-12">
+        <section className="max-w-4xl mx-auto px-6 pb-16">
           <Fade>
-            <VideoPlayer label="Watch: How we save agencies $30K+ in 90 days (3 min)" />
+            <VideoPlayer label="WATCH: How we save agencies $30K+ in 90 days (3 min)" />
           </Fade>
         </section>
 
         {/* ── LOGO STRIP ── */}
-        <section className="border-y border-slate-100 bg-white/70 py-8 overflow-hidden">
-          <p className="text-center text-slate-400 text-xs uppercase tracking-widest font-semibold mb-6">Trusted by 7-figure agency founders &amp; business owners</p>
+        <section className="border-y border-[#1F1F23] bg-[#0D0D10] py-8 overflow-hidden">
+          <p className="text-center text-[#9CA3AF] text-[12px] uppercase tracking-[0.14em] font-semibold mb-6">As featured in — Trusted by 7-figure founders</p>
           <div className="relative">
             <div className="flex animate-[marquee_28s_linear_infinite] gap-16 w-max">
               {[...trustLogos,...trustLogos].map((l,i) => (
-                <span key={i} className="text-slate-300 font-bold text-sm tracking-wide whitespace-nowrap">{l}</span>
+                <span key={i} className="text-white/20 font-bold text-sm tracking-wide whitespace-nowrap">{l}</span>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── INDUSTRIES ── */}
-        <section id="industries" className="py-24 max-w-6xl mx-auto px-6">
-          <Fade>
-            <SectionLabel>Who We Work With</SectionLabel>
-            <SectionHeading>Built for businesses where time literally equals money</SectionHeading>
-          </Fade>
-          <div className="mt-10 grid md:grid-cols-3 gap-5">
-            {industries.map((ind, i) => (
-              <Fade key={ind.title} delay={i * 0.08}>
-                <div className="bg-white border border-slate-100 rounded-2xl p-7 hover:border-[#1F62FF]/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 h-full shadow-sm">
-                  <div className="text-3xl">{ind.icon}</div>
-                  <h3 className="font-bold text-slate-900 text-lg">{ind.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed flex-1">{ind.desc}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {ind.tags.map(tag => (
-                      <span key={tag} className="text-[#1F62FF] text-xs font-medium bg-blue-50 border border-blue-100 px-3 py-1 rounded-full">{tag}</span>
-                    ))}
-                  </div>
+        {/* ── BIG NUMBERS ── */}
+        <section className="py-24 max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-3 gap-8 text-center">
+            {[
+              { num: "$30K+", label: "Average saved per client in 90 days" },
+              { num: "50+", label: "Businesses automated" },
+              { num: "80%", label: "Reduction in manual ops work" },
+            ].map(({ num, label }) => (
+              <Fade key={num}>
+                <div>
+                  <p
+                    className="text-[#1F62FF] font-black mb-2 leading-none"
+                    style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", fontSize: "clamp(3rem, 7vw, 5rem)", letterSpacing: "-0.03em", textShadow: "0 0 60px rgba(31,98,255,0.35)" }}
+                  >
+                    {num}
+                  </p>
+                  <p className="text-[#9CA3AF] text-sm leading-snug">{label}</p>
                 </div>
               </Fade>
             ))}
           </div>
         </section>
 
+        {/* ── INDUSTRIES ── */}
+        <section id="industries" className="py-24 bg-[#0D0D10]">
+          <div className="max-w-6xl mx-auto px-6">
+            <Fade>
+              <SectionLabel>Who We Work With</SectionLabel>
+              <SectionHeading>Built for businesses where time literally equals money</SectionHeading>
+            </Fade>
+            <div className="mt-12 grid md:grid-cols-3 gap-5">
+              {industries.map((ind, i) => (
+                <Fade key={ind.title} delay={i * 0.08}>
+                  <div className="bg-[#111114] border border-[#1F1F23] rounded-2xl p-7 hover:border-[#1F62FF]/35 hover:shadow-[0_4px_32px_rgba(31,98,255,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 h-full">
+                    <div className="text-3xl">{ind.icon}</div>
+                    <h3 className="font-bold text-[#FAFAFA] text-xl">{ind.title}</h3>
+                    <p className="text-[#9CA3AF] text-sm leading-relaxed flex-1">{ind.desc}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {ind.tags.map(tag => (
+                        <span key={tag} className="flex items-center gap-1.5 text-[#1F62FF] text-xs font-medium bg-[#1F62FF]/8 border border-[#1F62FF]/20 px-3 py-1 rounded-full">
+                          <Check className="w-3 h-3" /> {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </Fade>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── INLINE CTA #1 ── */}
+        <section className="py-16 bg-[#1F62FF]">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-5 tracking-tight">Ready to see what's possible for your business?</h2>
+            <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+              <button className="bg-white hover:bg-[#FAFAFA] text-[#1F62FF] font-bold text-base px-10 h-13 py-3.5 rounded-xl transition-all inline-flex items-center gap-2 hover:scale-[1.03]">
+                Book Your Free Audit <ArrowRight className="w-4 h-4" />
+              </button>
+            </a>
+          </div>
+        </section>
+
         {/* ── SERVICES ── */}
-        <section id="services" className="py-24 bg-slate-50">
+        <section id="services" className="py-24 bg-[#0A0A0B]">
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
               <SectionLabel>What We Build</SectionLabel>
               <SectionHeading>Five core systems. Infinite hours recovered.</SectionHeading>
             </Fade>
             <Fade delay={0.1}>
-              <div className="mt-10 mb-6 rounded-2xl overflow-hidden shadow-[0_4px_32px_rgba(31,98,255,0.12)] ring-1 ring-slate-200">
+              <div className="mt-12 mb-8 rounded-2xl overflow-hidden ring-1 ring-[#1F1F23]" style={{ boxShadow: "0 4px 60px rgba(31,98,255,0.15)" }}>
                 <img
                   src={`${import.meta.env.BASE_URL}hero-diagram.png`}
                   alt="Inbound to Impact — Automated by JobsDone Labs"
@@ -746,16 +679,21 @@ export default function Home() {
             <div className="flex flex-col gap-4">
               {services.map((s, i) => (
                 <Fade key={s.title} delay={i * 0.06}>
-                  <div className="bg-white border border-slate-100 rounded-2xl p-7 flex flex-col md:flex-row gap-5 hover:border-[#1F62FF]/20 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 shadow-sm">
+                  <div className="bg-[#111114] border border-[#1F1F23] rounded-2xl p-7 flex flex-col md:flex-row gap-6 hover:border-[#1F62FF]/30 hover:shadow-[0_4px_32px_rgba(31,98,255,0.1)] hover:-translate-y-0.5 transition-all duration-300">
                     <div className="flex-shrink-0">
-                      <span className="text-6xl font-black text-[#1F62FF]/10 leading-none select-none">{s.num}</span>
+                      <span
+                        className="font-black text-[#1F62FF]/15 leading-none select-none"
+                        style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", fontSize: "5.5rem", lineHeight: 1 }}
+                      >
+                        {s.num}
+                      </span>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-bold text-slate-900 text-xl mb-2">{s.title}</h3>
-                      <p className="text-slate-500 text-sm leading-relaxed mb-4">{s.desc}</p>
+                      <h3 className="font-bold text-[#FAFAFA] text-xl mb-2">{s.title}</h3>
+                      <p className="text-[#9CA3AF] text-sm leading-relaxed mb-4">{s.desc}</p>
                       <div className="flex flex-wrap gap-2">
                         {s.tags.map(tag => (
-                          <span key={tag} className="text-slate-500 text-xs bg-slate-100 border border-slate-200 px-3 py-1 rounded-full">{tag}</span>
+                          <span key={tag} className="text-[#9CA3AF] text-xs bg-[#1F1F23] border border-white/5 px-3 py-1 rounded-full">{tag}</span>
                         ))}
                       </div>
                     </div>
@@ -767,103 +705,151 @@ export default function Home() {
         </section>
 
         {/* ── PROCESS ── */}
-        <section className="py-24 max-w-6xl mx-auto px-6">
-          <Fade>
-            <SectionLabel>The Process</SectionLabel>
-            <SectionHeading>Up and running in 30 days. Optimizing forever.</SectionHeading>
-          </Fade>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {steps.map((s, i) => (
-              <Fade key={s.title} delay={i * 0.08}>
-                <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" data-testid={`card-step-${i}`}>
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-3xl font-black text-[#1F62FF]">{s.num}</span>
-                    <span className="text-xs font-medium text-slate-400 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-full">{s.sub}</span>
+        <section className="py-24 bg-[#0D0D10]">
+          <div className="max-w-6xl mx-auto px-6">
+            <Fade>
+              <SectionLabel>The Process</SectionLabel>
+              <SectionHeading>Up and running in 30 days. Optimizing forever.</SectionHeading>
+            </Fade>
+            <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {steps.map((s, i) => (
+                <Fade key={s.title} delay={i * 0.08}>
+                  <div className="bg-[#111114] border border-[#1F1F23] rounded-2xl p-6 hover:border-[#1F62FF]/30 hover:shadow-[0_4px_24px_rgba(31,98,255,0.1)] hover:-translate-y-1 transition-all duration-300" data-testid={`card-step-${i}`}>
+                    <div className="flex items-center justify-between mb-5">
+                      <span
+                        className="font-black text-[#1F62FF]"
+                        style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", fontSize: "2rem" }}
+                      >
+                        {s.num}
+                      </span>
+                      <span className="text-xs font-medium text-[#9CA3AF] bg-[#1F1F23] border border-white/5 px-2.5 py-1 rounded-full">{s.sub}</span>
+                    </div>
+                    <h3 className="font-bold text-[#FAFAFA] text-base mb-2">{s.title}</h3>
+                    <p className="text-[#9CA3AF] text-sm leading-relaxed">{s.desc}</p>
                   </div>
-                  <h3 className="font-bold text-slate-900 text-base mb-2">{s.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
+                </Fade>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── COMPARISON TABLE ── */}
+        <section className="py-24 bg-[#0A0A0B]">
+          <div className="max-w-5xl mx-auto px-6">
+            <Fade>
+              <SectionLabel>Us vs. The Alternative</SectionLabel>
+              <SectionHeading>Why founders choose us over everything else</SectionHeading>
+            </Fade>
+            <Fade delay={0.1}>
+              <div className="mt-12 rounded-2xl border border-[#1F1F23] overflow-hidden">
+                {/* Header */}
+                <div className="grid grid-cols-4 bg-[#111114] border-b border-[#1F1F23]">
+                  <div className="p-4 text-[#9CA3AF] text-sm font-semibold" />
+                  <div className="p-4 text-[#9CA3AF] text-sm font-semibold text-center border-l border-[#1F1F23]">Hiring In-House</div>
+                  <div className="p-4 text-[#9CA3AF] text-sm font-semibold text-center border-l border-[#1F1F23]">Generic Freelancers</div>
+                  <div className="p-4 text-center border-l border-[#1F62FF]/40" style={{ background: "rgba(31,98,255,0.06)" }}>
+                    <span className="text-[#1F62FF] text-sm font-bold">Working With Us</span>
+                  </div>
                 </div>
-              </Fade>
-            ))}
+                {comparison.map((row, i) => (
+                  <div key={row.aspect} className={`grid grid-cols-4 border-b border-[#1F1F23] last:border-0 ${i % 2 === 0 ? "bg-[#0A0A0B]" : "bg-[#0D0D10]"}`}>
+                    <div className="p-4 text-[#9CA3AF] text-sm font-semibold">{row.aspect}</div>
+                    <div className="p-4 text-[#9CA3AF] text-sm text-center border-l border-[#1F1F23]">{row.inHouse}</div>
+                    <div className="p-4 text-[#9CA3AF] text-sm text-center border-l border-[#1F1F23]">{row.freelancer}</div>
+                    <div
+                      className="p-4 text-[#1F62FF] text-sm font-semibold text-center border-l border-[#1F62FF]/30"
+                      style={{ background: "rgba(31,98,255,0.06)" }}
+                    >
+                      {row.us}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Fade>
           </div>
         </section>
 
         {/* ── GUARANTEE ── */}
-        <section className="py-12 px-6 bg-slate-50">
+        <section className="py-20 px-6 bg-[#0D0D10]">
           <Fade>
-            <div className="max-w-4xl mx-auto rounded-2xl p-10 text-center relative overflow-hidden bg-white"
-              style={{ boxShadow: "0 0 0 1.5px #1F62FF, 0 8px 40px rgba(31,98,255,0.12)" }}>
-              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(ellipse at center, #1F62FF 0%, transparent 70%)" }} />
+            <div
+              className="max-w-4xl mx-auto rounded-2xl p-12 text-center relative overflow-hidden"
+              style={{ animation: "pulse-glow 3s ease-in-out infinite", background: "linear-gradient(135deg, #0D0D14 0%, #0A0A10 100%)" }}
+            >
+              <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(ellipse at center, #1F62FF 0%, transparent 70%)" }} />
               <div className="relative z-10">
-                <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-4">Our Promise</p>
-                <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 leading-tight">
+                <p className="text-[#1F62FF] text-[12px] font-semibold uppercase tracking-[0.14em] mb-5">Our Promise</p>
+                <h2
+                  className="text-4xl md:text-5xl font-black text-[#FAFAFA] mb-5 leading-tight"
+                  style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", letterSpacing: "-0.02em" }}
+                >
                   $30,000 in recovered time within 90 days — guaranteed.
                 </h2>
-                <p className="text-slate-500 text-lg mb-8 max-w-2xl mx-auto">
+                <p className="text-[#9CA3AF] text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
                   If we don't deliver measurable ROI in your first 90 days, we keep working until we do. No extra charge. No excuses.
                 </p>
-                <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                  <button className="bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-bold text-base px-10 h-12 rounded-lg transition-all inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(31,98,255,0.35)]" data-testid="button-guarantee-cta">
-                    Claim Your Free Audit Call <ArrowRight className="w-4 h-4" />
-                  </button>
-                </a>
-                <p className="text-slate-400 text-xs mt-4">Month-to-month. No long-term contracts. You own everything we build.</p>
+                <CtaButton href={CALENDLY} size="lg" data-testid="button-guarantee-cta">
+                  Claim Your Free Audit Call <ArrowRight className="w-5 h-5" />
+                </CtaButton>
+                <p className="text-[#9CA3AF]/60 text-xs mt-5">Month-to-month. No long-term contracts. You own everything we build.</p>
               </div>
             </div>
           </Fade>
         </section>
 
         {/* ── COMMUNITY ── */}
-        <section className="py-24 max-w-6xl mx-auto px-6">
-          <Fade>
-            <SectionLabel>Community</SectionLabel>
-            <SectionHeading>Ready to bring back hours of time? Join our community.</SectionHeading>
-          </Fade>
-          <div className="mt-10 grid md:grid-cols-2 gap-8 items-center">
-            <Fade delay={0.08}>
-              <div className="flex flex-col gap-5">
-                <p className="text-slate-500 text-lg leading-relaxed">
-                  Join founders and operators inside our community — breakdowns, templates, and live Q&amp;A on automation that actually ships.
-                </p>
-                <div>
-                  <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                    <button className="border border-[#1F62FF] text-[#1F62FF] hover:bg-[#1F62FF] hover:text-white font-semibold px-6 h-10 rounded-lg transition-all text-sm">
-                      Join the community →
-                    </button>
-                  </a>
+        <section className="py-24 bg-[#0A0A0B]">
+          <div className="max-w-6xl mx-auto px-6">
+            <Fade>
+              <SectionLabel>Community</SectionLabel>
+              <SectionHeading>Ready to bring back hours of time?</SectionHeading>
+            </Fade>
+            <div className="mt-12 grid md:grid-cols-2 gap-10 items-center">
+              <Fade delay={0.08}>
+                <div className="flex flex-col gap-5">
+                  <p className="text-[#9CA3AF] text-lg leading-relaxed">
+                    Join founders and operators inside our community — breakdowns, templates, and live Q&amp;A on automation that actually ships.
+                  </p>
+                  <div>
+                    <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                      <button className="border border-[#1F62FF]/50 text-[#1F62FF] hover:bg-[#1F62FF] hover:text-white font-semibold px-6 h-10 rounded-lg transition-all text-sm">
+                        Join the community →
+                      </button>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </Fade>
-            <Fade delay={0.15}>
-              <VideoPlayer />
-            </Fade>
+              </Fade>
+              <Fade delay={0.15}>
+                <VideoPlayer />
+              </Fade>
+            </div>
           </div>
         </section>
 
         {/* ── RESULTS (text testimonials) ── */}
-        <section id="results" className="py-24 bg-slate-50">
+        <section id="results" className="py-24 bg-[#0D0D10]">
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
               <SectionLabel>Client Results</SectionLabel>
               <SectionHeading>Founders who've used our system — and what happened.</SectionHeading>
-              <p className="text-slate-400 mt-3 mb-10">Agency owners and business founders share what changed after putting our automation systems to work.</p>
+              <p className="text-[#9CA3AF] mt-4 mb-12 text-lg leading-relaxed max-w-2xl">Agency owners and business founders share what changed after putting our automation systems to work.</p>
             </Fade>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {testimonials.map((t, i) => (
                 <Fade key={t.name} delay={i * 0.05}>
-                  <div className="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col gap-4 hover:border-[#1F62FF]/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300 shadow-sm" data-testid={`card-testimonial-${i}`}>
+                  <div className="bg-[#111114] border border-[#1F1F23] rounded-2xl p-6 flex flex-col gap-4 hover:border-[#1F62FF]/30 hover:shadow-[0_4px_24px_rgba(31,98,255,0.1)] hover:-translate-y-1 transition-all duration-300" data-testid={`card-testimonial-${i}`}>
                     <div className="flex gap-0.5">
                       {[1,2,3,4,5].map(s => <Star key={s} className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />)}
                     </div>
-                    <p className="text-slate-600 text-sm leading-relaxed italic flex-1">"{t.quote}"</p>
-                    <div className="flex items-center gap-3 pt-2 border-t border-slate-100">
+                    <p className="text-[#9CA3AF] text-sm leading-relaxed italic flex-1">"{t.quote}"</p>
+                    <div className="flex items-center gap-3 pt-3 border-t border-[#1F1F23]">
                       <div className="w-9 h-9 rounded-full bg-[#1F62FF]/10 border border-[#1F62FF]/20 flex items-center justify-center text-[#1F62FF] font-bold text-sm flex-shrink-0">
                         {t.name[0]}
                       </div>
                       <div>
-                        <p className="font-bold text-slate-900 text-sm leading-none mb-0.5">{t.name}</p>
+                        <p className="font-bold text-[#FAFAFA] text-sm leading-none mb-0.5">{t.name}</p>
                         <p className="text-[#1F62FF] text-xs font-medium">{t.company}</p>
-                        <p className="text-slate-400 text-xs">{t.role}</p>
+                        <p className="text-[#9CA3AF] text-xs">{t.role}</p>
                       </div>
                     </div>
                   </div>
@@ -874,27 +860,29 @@ export default function Home() {
         </section>
 
         {/* ── WRITTEN REVIEWS ── */}
-        <section className="py-24 max-w-6xl mx-auto px-6">
-          <Fade>
-            <SectionLabel>Reviews</SectionLabel>
-            <SectionHeading>What clients say</SectionHeading>
-          </Fade>
-          <Fade delay={0.1}>
-            <div className="mt-10">
-              <ReviewsCarousel />
-            </div>
-          </Fade>
+        <section className="py-24 bg-[#0A0A0B]">
+          <div className="max-w-6xl mx-auto px-6">
+            <Fade>
+              <SectionLabel>Reviews</SectionLabel>
+              <SectionHeading>What clients say</SectionHeading>
+            </Fade>
+            <Fade delay={0.1}>
+              <div className="mt-12">
+                <ReviewsCarousel />
+              </div>
+            </Fade>
+          </div>
         </section>
 
         {/* ── FAQ ── */}
-        <section id="faq" className="py-24 bg-slate-50">
+        <section id="faq" className="py-24 bg-[#0D0D10]">
           <div className="max-w-3xl mx-auto px-6">
             <Fade>
               <SectionLabel>FAQ</SectionLabel>
               <SectionHeading>Common questions</SectionHeading>
             </Fade>
             <Fade delay={0.1}>
-              <div className="mt-10 bg-white rounded-2xl border border-slate-100 shadow-sm px-6">
+              <div className="mt-12 bg-[#111114] rounded-2xl border border-[#1F1F23] px-6">
                 {faqs.map(f => <FaqItem key={f.q} q={f.q} a={f.a} />)}
               </div>
             </Fade>
@@ -902,49 +890,53 @@ export default function Home() {
         </section>
 
         {/* ── FINAL CTA ── */}
-        <section className="py-20 px-6" style={{ background: "radial-gradient(ellipse at 30% 50%, rgba(31,98,255,0.07) 0%, transparent 65%), #f8faff" }}>
+        <section
+          className="py-24 px-6 bg-[#0A0A0B]"
+          style={{ background: "radial-gradient(ellipse 80% 60% at 30% 50%, rgba(31,98,255,0.08) 0%, transparent 65%), #0A0A0B" }}
+        >
           <div className="max-w-5xl mx-auto">
             <Fade>
-              <div className="bg-white border border-slate-100 rounded-3xl shadow-sm overflow-hidden">
+              <div className="bg-[#111114] border border-[#1F1F23] rounded-3xl overflow-hidden">
                 <div className="flex flex-col md:flex-row items-stretch">
 
                   {/* Photo side */}
-                  <div className="md:w-[340px] flex-shrink-0 relative bg-slate-100">
+                  <div className="md:w-[340px] flex-shrink-0 relative bg-[#0A0A0B]">
                     <img
                       src={`${import.meta.env.BASE_URL}ryne.png`}
                       alt="Ryne Bandolik — Founder, JobsDone Labs"
                       className="w-full h-full object-cover object-top min-h-[280px] md:min-h-full"
                     />
-                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/70 to-transparent p-5">
+                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-5">
                       <p className="text-white font-bold text-sm leading-none">Ryne Bandolik</p>
-                      <p className="text-white/60 text-xs mt-0.5">Founder, JobsDone Labs</p>
+                      <p className="text-white/50 text-xs mt-0.5">Founder, JobsDone Labs</p>
                     </div>
                   </div>
 
                   {/* Text side */}
                   <div className="flex-1 flex flex-col justify-center p-10 md:p-14">
-                    <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-4">Ready to get your time back?</p>
-                    <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-5 leading-tight">
+                    <p className="text-[#1F62FF] text-[12px] font-semibold uppercase tracking-[0.12em] mb-5">Ready to get your time back?</p>
+                    <h2
+                      className="font-black text-[#FAFAFA] tracking-tight mb-5 leading-tight text-3xl md:text-4xl"
+                      style={{ fontFamily: "'Inter Display', 'Inter', sans-serif", letterSpacing: "-0.02em" }}
+                    >
                       Book your free<br />automation audit call
                     </h2>
-                    <p className="text-slate-500 text-base leading-relaxed mb-8">
+                    <p className="text-[#9CA3AF] text-base leading-relaxed mb-9">
                       In 45 minutes, I'll personally map your biggest bottlenecks and hand you a custom roadmap — whether you hire us or not.
                     </p>
 
                     <div className="flex flex-col gap-3">
-                      <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                        <button className="w-full sm:w-auto bg-[#1F62FF] hover:bg-[#1a54e0] text-white font-black text-base px-10 h-13 py-3.5 rounded-xl transition-all inline-flex items-center gap-2 shadow-[0_4px_24px_rgba(31,98,255,0.3)]" data-testid="button-final-cta">
-                          Book a Call with Ryne <ArrowRight className="w-4 h-4" />
-                        </button>
-                      </a>
-                      <p className="text-slate-400 text-xs">No commitment. No sales pressure. You keep the roadmap either way.</p>
+                      <CtaButton href={CALENDLY} size="lg" className="w-full sm:w-auto" data-testid="button-final-cta">
+                        Book a Call with Ryne <ArrowRight className="w-5 h-5" />
+                      </CtaButton>
+                      <p className="text-[#9CA3AF]/60 text-xs">No commitment. No sales pressure. You keep the roadmap either way.</p>
                     </div>
 
-                    <div className="flex flex-wrap gap-4 mt-7 pt-7 border-t border-slate-100">
+                    <div className="flex flex-wrap gap-4 mt-8 pt-8 border-t border-[#1F1F23]">
                       {["$30K guaranteed in 90 days", "Month-to-month only", "You own everything we build"].map(t => (
-                        <span key={t} className="flex items-center gap-1.5 text-xs text-slate-500 font-medium">
-                          <span className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
-                            <svg className="w-2.5 h-2.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                        <span key={t} className="flex items-center gap-1.5 text-xs text-[#9CA3AF] font-medium">
+                          <span className="w-4 h-4 rounded-full bg-[#1F62FF]/15 flex items-center justify-center flex-shrink-0">
+                            <Check className="w-2.5 h-2.5 text-[#1F62FF]" />
                           </span>
                           {t}
                         </span>
@@ -961,40 +953,40 @@ export default function Home() {
       </main>
 
       {/* ── FOOTER ── */}
-      <footer className="border-t border-slate-200 bg-white py-14">
+      <footer className="border-t border-[#1F1F23] bg-[#0A0A0B] py-14">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between gap-10 mb-10">
             <div className="flex flex-col gap-4 max-w-xs">
               <JobsDoneLogo />
-              <p className="text-slate-400 text-sm leading-relaxed">Your embedded automation team.</p>
+              <p className="text-[#9CA3AF] text-sm leading-relaxed">Your embedded automation team.</p>
               <div className="flex gap-4">
-                <a href="#" className="text-slate-300 hover:text-[#1F62FF] transition-colors"><Linkedin className="w-5 h-5" /></a>
-                <a href="#" className="text-slate-300 hover:text-[#1F62FF] transition-colors"><Youtube className="w-5 h-5" /></a>
-                <a href="#" className="text-slate-300 hover:text-[#1F62FF] transition-colors"><Twitter className="w-5 h-5" /></a>
+                <a href="#" className="text-white/20 hover:text-[#1F62FF] transition-colors"><Linkedin className="w-5 h-5" /></a>
+                <a href="#" className="text-white/20 hover:text-[#1F62FF] transition-colors"><Youtube className="w-5 h-5" /></a>
+                <a href="#" className="text-white/20 hover:text-[#1F62FF] transition-colors"><Twitter className="w-5 h-5" /></a>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-10 text-sm">
               <div>
-                <p className="text-slate-700 font-semibold mb-3">Services</p>
+                <p className="text-[#FAFAFA] font-semibold mb-3">Services</p>
                 {["CRM Infrastructure","Lead Capture","Lead Nurture","Transcript Analysis","Client Onboarding"].map(l => (
-                  <p key={l} className="text-slate-400 hover:text-slate-600 cursor-pointer mb-1.5 transition-colors">{l}</p>
+                  <p key={l} className="text-[#9CA3AF] hover:text-[#FAFAFA] cursor-pointer mb-1.5 transition-colors">{l}</p>
                 ))}
               </div>
               <div>
-                <p className="text-slate-700 font-semibold mb-3">Industries</p>
+                <p className="text-[#FAFAFA] font-semibold mb-3">Industries</p>
                 {["Marketing Agencies","Home Service","Finance Firms","Professional Services"].map(l => (
-                  <p key={l} className="text-slate-400 hover:text-slate-600 cursor-pointer mb-1.5 transition-colors">{l}</p>
+                  <p key={l} className="text-[#9CA3AF] hover:text-[#FAFAFA] cursor-pointer mb-1.5 transition-colors">{l}</p>
                 ))}
               </div>
               <div>
-                <p className="text-slate-700 font-semibold mb-3">Company</p>
-                <Link href="/privacy" className="block text-slate-400 hover:text-slate-600 mb-1.5 transition-colors">Privacy Policy</Link>
-                <Link href="/terms" className="block text-slate-400 hover:text-slate-600 mb-1.5 transition-colors">Terms of Service</Link>
-                <a href="mailto:support@jobsdonelabs.ai" className="block text-slate-400 hover:text-slate-600 mb-1.5 transition-colors">Contact</a>
+                <p className="text-[#FAFAFA] font-semibold mb-3">Company</p>
+                <Link href="/privacy" className="block text-[#9CA3AF] hover:text-[#FAFAFA] mb-1.5 transition-colors">Privacy Policy</Link>
+                <Link href="/terms" className="block text-[#9CA3AF] hover:text-[#FAFAFA] mb-1.5 transition-colors">Terms of Service</Link>
+                <a href="mailto:support@jobsdonelabs.ai" className="block text-[#9CA3AF] hover:text-[#FAFAFA] mb-1.5 transition-colors">Contact</a>
               </div>
             </div>
           </div>
-          <div className="border-t border-slate-100 pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-slate-400">
+          <div className="border-t border-[#1F1F23] pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-[#9CA3AF]">
             <span>© {new Date().getFullYear()} JobsDone Labs. All rights reserved.</span>
             <span>support@jobsdonelabs.ai</span>
           </div>
