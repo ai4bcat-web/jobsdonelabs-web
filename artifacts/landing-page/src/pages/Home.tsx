@@ -143,6 +143,161 @@ function WorkflowCard() {
 }
 
 /* ─────────────────────────────────────────────── */
+/*  Hero Diagram                                   */
+/* ─────────────────────────────────────────────── */
+const channels = [
+  { icon: "💼", label: "LinkedIn" },
+  { icon: "📱", label: "Meta Ads" },
+  { icon: "🔍", label: "Google Ads" },
+  { icon: "📧", label: "Email Campaigns" },
+  { icon: "🌐", label: "Web / Forms" },
+  { icon: "⭐", label: "Referrals" },
+  { icon: "📞", label: "Cold Calls" },
+];
+
+const outcomes = [
+  { icon: "👥", label: "Qualified Leads", sub: "Higher quality pipeline" },
+  { icon: "⚡", label: "Faster Response", sub: "Instant follow-up & nurture" },
+  { icon: "📈", label: "More Conversions", sub: "Better experience, more wins" },
+  { icon: "⚙️", label: "Less Manual Work", sub: "Automate the busywork" },
+];
+
+function HeroDiagram() {
+  return (
+    <div className="bg-white border border-slate-100 rounded-2xl shadow-[0_8px_48px_rgba(31,98,255,0.13)] overflow-hidden w-full">
+
+      {/* Header bar */}
+      <div className="flex items-center justify-between px-5 py-3 border-b border-slate-100 bg-slate-50/60">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-[#1F62FF] inline-block" />
+          <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Live Automation System</span>
+        </div>
+        <span className="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />Active
+        </span>
+      </div>
+
+      {/* Three-column body */}
+      <div className="flex divide-x divide-slate-100 min-h-[340px]">
+
+        {/* LEFT — Channels */}
+        <div className="w-[130px] flex-shrink-0 p-3 flex flex-col">
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Inbound Channels</p>
+          <div className="flex flex-col gap-1.5 flex-1">
+            {channels.map((c) => (
+              <div key={c.label} className="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg px-2 py-1.5 group">
+                <span className="text-xs">{c.icon}</span>
+                <span className="text-[11px] font-medium text-slate-600 flex-1 leading-none">{c.label}</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#1F62FF]/40 flex-shrink-0" />
+              </div>
+            ))}
+          </div>
+          <div className="mt-3 flex justify-end items-center gap-1 text-[#1F62FF]/50">
+            <span className="flex-1 h-px bg-[#1F62FF]/20" />
+            <ArrowRight className="w-3.5 h-3.5" />
+          </div>
+        </div>
+
+        {/* CENTER — Automation flow */}
+        <div className="flex-1 p-4 flex flex-col gap-2">
+          {/* Step 1 */}
+          <div className="bg-slate-50 border border-slate-100 rounded-xl px-3 py-2.5 flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="text-sm">📋</span>
+              <div>
+                <p className="text-[11px] font-bold text-slate-800 leading-none mb-0.5">Lead Capture</p>
+                <p className="text-[10px] text-slate-400">New inquiry received</p>
+              </div>
+            </div>
+            <span className="text-[10px] font-semibold text-[#1F62FF] bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-md whitespace-nowrap">Triggered</span>
+          </div>
+
+          <div className="flex justify-center"><div className="w-px h-4 border-l-2 border-dashed border-slate-200" /></div>
+
+          {/* Step 2 */}
+          <div className="bg-slate-50 border border-slate-100 rounded-xl px-3 py-2.5 flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="text-sm">🤖</span>
+              <div>
+                <p className="text-[11px] font-bold text-slate-800 leading-none mb-0.5">AI Qualification</p>
+                <p className="text-[10px] text-slate-400">Tagged, scored, enriched</p>
+              </div>
+            </div>
+            <span className="text-[10px] font-medium text-slate-400 bg-white border border-slate-200 px-2 py-0.5 rounded-md whitespace-nowrap">→ Processing</span>
+          </div>
+
+          <div className="flex justify-center"><div className="w-px h-4 border-l-2 border-dashed border-slate-200" /></div>
+
+          {/* Step 3 — parallel */}
+          <div className="grid grid-cols-2 gap-2">
+            <div className="bg-slate-50 border border-slate-100 rounded-xl px-2.5 py-2 flex items-start gap-2">
+              <span className="text-xs mt-0.5">📧</span>
+              <div>
+                <p className="text-[11px] font-bold text-slate-800 leading-none mb-0.5">Email Nurture</p>
+                <p className="text-[10px] text-slate-400">Follow-up sent</p>
+              </div>
+            </div>
+            <div className="bg-slate-50 border border-slate-100 rounded-xl px-2.5 py-2 flex items-start gap-2">
+              <span className="text-xs mt-0.5">🔔</span>
+              <div>
+                <p className="text-[11px] font-bold text-slate-800 leading-none mb-0.5">Team Alert</p>
+                <p className="text-[10px] text-slate-400">Sales notified</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-center"><div className="w-px h-4 border-l-2 border-dashed border-slate-200" /></div>
+
+          {/* Step 4 */}
+          <div className="bg-slate-50 border border-slate-100 rounded-xl px-3 py-2.5 flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="text-sm">🚀</span>
+              <div>
+                <p className="text-[11px] font-bold text-slate-800 leading-none mb-0.5">Client Onboarding</p>
+                <p className="text-[10px] text-slate-400">Resources created automatically</p>
+              </div>
+            </div>
+            <span className="text-[10px] font-semibold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">Complete</span>
+          </div>
+        </div>
+
+        {/* RIGHT — Outcomes */}
+        <div className="w-[175px] flex-shrink-0 p-4 flex flex-col">
+          <div className="flex items-center gap-1 mb-3 text-[#1F62FF]/50">
+            <ArrowRight className="w-3.5 h-3.5" />
+            <span className="flex-1 h-px bg-[#1F62FF]/20" />
+          </div>
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Outcomes</p>
+          <div className="flex flex-col gap-3 flex-1">
+            {outcomes.map((o) => (
+              <div key={o.label} className="flex items-start gap-2 min-w-0">
+                <span className="text-base leading-none mt-0.5 flex-shrink-0">{o.icon}</span>
+                <div className="min-w-0">
+                  <p className="text-[11px] font-bold text-slate-700 leading-snug truncate">{o.label}</p>
+                  <p className="text-[10px] text-slate-400 leading-snug truncate">{o.sub}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+      {/* Stats footer */}
+      <div className="grid grid-cols-3 divide-x divide-slate-100 border-t border-slate-100">
+        {[["12h", "Saved weekly"], ["0", "Manual steps"], ["24/7", "Always running"]].map(([val, label]) => (
+          <div key={label} className="py-3 text-center">
+            <p className="text-base font-black text-[#1F62FF]">{val}</p>
+            <p className="text-[10px] text-slate-400">{label}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────── */
 /*  Video Player placeholder                       */
 /* ─────────────────────────────────────────────── */
 function VideoPlayer({ label }: { label?: string }) {
@@ -521,15 +676,9 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="flex-1 min-w-0 w-full lg:max-w-[560px]"
+              className="flex-1 min-w-0 w-full lg:max-w-[660px]"
             >
-              <div className="rounded-2xl overflow-hidden shadow-[0_8px_48px_rgba(31,98,255,0.15)] ring-1 ring-slate-200">
-                <img
-                  src={`${import.meta.env.BASE_URL}hero-diagram.png`}
-                  alt="Inbound to Impact — Automated by JobsDone Labs"
-                  className="w-full h-auto block"
-                />
-              </div>
+              <HeroDiagram />
             </motion.div>
 
           </div>
