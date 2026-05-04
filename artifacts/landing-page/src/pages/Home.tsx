@@ -46,14 +46,26 @@ const CALENDLY = "https://calendly.com/ryne-bandolik";
 /*  Logo                                           */
 /* ─────────────────────────────────────────────── */
 function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
-  const h = { sm: "h-7", md: "h-9", lg: "h-11" }[size];
+  const s = {
+    sm: { icon: "w-4 h-4", text: "text-[15px]", labs: "text-[8px]", gap: "gap-1.5" },
+    md: { icon: "w-5 h-5", text: "text-[17px]", labs: "text-[9px]", gap: "gap-2" },
+    lg: { icon: "w-7 h-7", text: "text-2xl", labs: "text-[11px]", gap: "gap-2.5" },
+  }[size];
   return (
-    <img
-      src={`${import.meta.env.BASE_URL}logo.png`}
-      alt="JobsDone Labs"
-      className={`${h} w-auto object-contain`}
-      style={{ maxWidth: 180 }}
-    />
+    <div className={`flex items-center ${s.gap}`}>
+      <FlaskConical className={`${s.icon} flex-shrink-0`} style={{ color: ACCENT }} />
+      <div className="flex flex-col leading-none">
+        <div className="flex items-baseline">
+          <span className={`font-bold ${s.text} tracking-tight`} style={{ color: TEXT }}>JOBS</span>
+          <span className={`font-bold ${s.text} tracking-tight`} style={{ color: ACCENT }}>DONE</span>
+        </div>
+        <div className="flex items-center gap-1 mt-0.5">
+          <span className="flex-1 h-px" style={{ background: `${ACCENT}30` }} />
+          <span className={`${s.labs} font-medium tracking-[0.16em] uppercase`} style={{ color: `${TEXT}35` }}>Labs</span>
+          <span className="flex-1 h-px" style={{ background: `${ACCENT}30` }} />
+        </div>
+      </div>
+    </div>
   );
 }
 
