@@ -1,95 +1,155 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
   ChevronDown,
+  Star,
+  FlaskConical,
+  CheckCircle2,
+  Shield,
   Search,
   Rocket,
   MessageSquare,
   BarChart3,
-  Shield,
-  Star,
-  FlaskConical,
-  CheckCircle2,
-  Clock,
+  Target,
+  Calendar,
+  Mail,
+  Linkedin,
+  Zap,
 } from "lucide-react";
 
-/* ── Logo ── */
-function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
-  const scales = {
-    sm: { flask: "w-5 h-5", jobs: "text-sm", done: "text-sm", labs: "text-[9px]", gap: "gap-1.5" },
-    md: { flask: "w-8 h-8", jobs: "text-xl", done: "text-xl", labs: "text-[11px]", gap: "gap-2" },
-    lg: { flask: "w-10 h-10", jobs: "text-2xl", done: "text-2xl", labs: "text-xs", gap: "gap-2.5" },
-  };
-  const s = scales[size];
+/* ── Logo (light-mode version) ── */
+function JobsDoneLogo({ dark = false }: { dark?: boolean }) {
   return (
-    <div className={`flex items-center ${s.gap}`}>
-      <FlaskConical className={`${s.flask} text-[#1F62FF] flex-shrink-0`} />
+    <div className="flex items-center gap-2">
+      <FlaskConical className="w-7 h-7 text-[#1F62FF] flex-shrink-0" />
       <div className="flex flex-col leading-none">
-        <div className="flex items-baseline gap-0">
-          <span className={`font-black ${s.jobs} text-white tracking-tight`}>JOBS</span>
-          <span className={`font-black ${s.done} text-[#1F62FF] tracking-tight`}>DONE</span>
+        <div className="flex items-baseline">
+          <span className={`font-black text-lg tracking-tight ${dark ? "text-white" : "text-slate-900"}`}>JOBS</span>
+          <span className="font-black text-lg text-[#1F62FF] tracking-tight">DONE</span>
         </div>
-        <div className="flex items-center gap-1 mt-0.5">
-          <span className="flex-1 h-px bg-[#1F62FF]/50" />
-          <span className={`${s.labs} font-semibold text-white/50 tracking-[0.2em] uppercase`}>Labs</span>
-          <span className="flex-1 h-px bg-[#1F62FF]/50" />
+        <div className="flex items-center gap-1">
+          <span className="flex-1 h-px bg-[#1F62FF]/40" />
+          <span className={`text-[9px] font-semibold tracking-[0.2em] uppercase ${dark ? "text-white/50" : "text-slate-400"}`}>Labs</span>
+          <span className="flex-1 h-px bg-[#1F62FF]/40" />
         </div>
       </div>
     </div>
   );
 }
 
-/* ── Animated starfield ── */
-function Starfield() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+/* ── Workflow card (hero right) ── */
+function WorkflowCard() {
+  return (
+    <div className="bg-white rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.10)] border border-slate-100 p-5 w-full">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+          <span className="w-1.5 h-1.5 rounded-full bg-slate-400 inline-block" />
+          Live Outreach System
+        </div>
+        <span className="flex items-center gap-1 text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
+          Active
+        </span>
+      </div>
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+      {/* Step 1 */}
+      <div className="bg-slate-50 rounded-xl p-3.5 flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+            <Target className="w-4 h-4 text-[#1F62FF]" />
+          </div>
+          <div>
+            <p className="font-semibold text-slate-800 text-sm leading-none mb-0.5">Lead List Built</p>
+            <p className="text-slate-400 text-xs">5,000+ contacts verified</p>
+          </div>
+        </div>
+        <span className="text-xs font-medium text-[#1F62FF] bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 whitespace-nowrap">Triggered</span>
+      </div>
 
-    let animId: number;
+      {/* Connector */}
+      <div className="flex justify-center my-1.5">
+        <div className="w-px h-5 border-l-2 border-dashed border-slate-200" />
+      </div>
 
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    resize();
-    window.addEventListener("resize", resize);
+      {/* Step 2 */}
+      <div className="bg-slate-50 rounded-xl p-3.5 flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+            <Mail className="w-4 h-4 text-[#1F62FF]" />
+          </div>
+          <div>
+            <p className="font-semibold text-slate-800 text-sm leading-none mb-0.5">Campaign Launched</p>
+            <p className="text-slate-400 text-xs">10,000 emails deployed</p>
+          </div>
+        </div>
+        <span className="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200 whitespace-nowrap">→ Processing</span>
+      </div>
 
-    const stars = Array.from({ length: 140 }, () => ({
-      x: Math.random(),
-      y: Math.random(),
-      r: Math.random() * 1.1 + 0.2,
-      baseAlpha: Math.random() * 0.35 + 0.05,
-      speed: Math.random() * 0.0008 + 0.0003,
-      offset: Math.random() * Math.PI * 2,
-    }));
+      {/* Connector */}
+      <div className="flex justify-center my-1.5">
+        <div className="w-px h-5 border-l-2 border-dashed border-slate-200" />
+      </div>
 
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const t = Date.now();
-      stars.forEach((star) => {
-        const alpha = star.baseAlpha + Math.sin(t * star.speed + star.offset) * 0.15;
-        ctx.beginPath();
-        ctx.arc(star.x * canvas.width, star.y * canvas.height, star.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,255,255,${Math.max(0, alpha)})`;
-        ctx.fill();
-      });
-      animId = requestAnimationFrame(draw);
-    };
-    draw();
+      {/* Step 3 — two parallel */}
+      <div className="grid grid-cols-2 gap-2">
+        <div className="bg-slate-50 rounded-xl p-3 flex items-start gap-2">
+          <div className="w-7 h-7 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+            <MessageSquare className="w-3.5 h-3.5 text-[#1F62FF]" />
+          </div>
+          <div>
+            <p className="font-semibold text-slate-800 text-xs leading-none mb-0.5">Reply Received</p>
+            <p className="text-slate-400 text-[11px]">Lead responds</p>
+          </div>
+        </div>
+        <div className="bg-slate-50 rounded-xl p-3 flex items-start gap-2">
+          <div className="w-7 h-7 bg-amber-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+            <Calendar className="w-3.5 h-3.5 text-amber-500" />
+          </div>
+          <div>
+            <p className="font-semibold text-slate-800 text-xs leading-none mb-0.5">Call Booked</p>
+            <p className="text-slate-400 text-[11px]">Cal. notified</p>
+          </div>
+        </div>
+      </div>
 
-    return () => {
-      cancelAnimationFrame(animId);
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
+      {/* Connector */}
+      <div className="flex justify-center my-1.5">
+        <div className="w-px h-5 border-l-2 border-dashed border-slate-200" />
+      </div>
 
-  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />;
+      {/* Step 4 */}
+      <div className="bg-slate-50 rounded-xl p-3.5 flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center flex-shrink-0">
+            <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+          </div>
+          <div>
+            <p className="font-semibold text-slate-800 text-sm leading-none mb-0.5">Qualified Call Confirmed</p>
+            <p className="text-slate-400 text-xs">Added to your calendar</p>
+          </div>
+        </div>
+        <span className="text-xs font-medium text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">Complete</span>
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-slate-100">
+        <div className="text-center">
+          <p className="text-xl font-black text-[#1F62FF]">10+</p>
+          <p className="text-xs text-slate-400">Calls/month</p>
+        </div>
+        <div className="text-center">
+          <p className="text-xl font-black text-[#1F62FF]">0</p>
+          <p className="text-xs text-slate-400">Manual steps</p>
+        </div>
+        <div className="text-center">
+          <p className="text-xl font-black text-[#1F62FF]">60d</p>
+          <p className="text-xs text-slate-400">Guaranteed</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 /* ── Data ── */
@@ -110,27 +170,51 @@ const caseStudies = [
   { name: "Tom K.", title: "Agency Owner", before: "Spending 15 hrs/week on cold outreach personally", after: "Fully automated — zero time spent on prospecting", revenue: "$180,000 in new contracts signed in 4 months", roi: "11.6x ROI" },
 ];
 
+const services = [
+  {
+    icon: Mail,
+    title: "Cold Email Infrastructure",
+    desc: "We build and manage your entire cold email system — 5–10 domains, 10–20 warmed inboxes, verified lead lists, and compelling copy — all done for you.",
+    points: ["5,000+ verified contacts per campaign", "10,000+ emails deployed per month", "Full domain & inbox management"],
+  },
+  {
+    icon: Linkedin,
+    title: "LinkedIn Outreach",
+    desc: "We deploy targeted LinkedIn connection campaigns using your profile or a dedicated SDR account, reaching decision-makers with personalized sequences.",
+    points: ["500 connection requests per month", "Multi-step message sequences", "ICP-matched prospect targeting"],
+  },
+  {
+    icon: Calendar,
+    title: "Response Management",
+    desc: "We monitor all replies 24/7, qualify every lead against your ICP, handle objections, and book only the best-fit prospects directly into your calendar.",
+    points: ["24/7 inbox monitoring & reply handling", "ICP qualification before booking", "Calls land directly in your calendar"],
+  },
+];
+
 const steps = [
-  { icon: Search, title: "Infrastructure Setup", sub: "Week 1–2", desc: "We build your entire cold email & LinkedIn infrastructure: 5–10 domains, 10–20 email inboxes, LinkedIn automation, and a lead list of 5,000+ verified contacts." },
-  { icon: Rocket, title: "Campaign Launch", sub: "Week 3–4", desc: "We write all your email copy and LinkedIn messages, then launch campaigns — 10,000 emails/month and 500 LinkedIn connection requests per month." },
-  { icon: MessageSquare, title: "Response Management", sub: "Ongoing", desc: "We monitor all responses 24/7, qualify leads using your ICP criteria, and book qualified calls directly into your calendar." },
-  { icon: BarChart3, title: "Optimization & Scaling", sub: "Month 2+", desc: "We A/B test messaging, monitor deliverability, refresh lead lists monthly, and provide weekly performance reports." },
+  { num: "01", icon: Search, title: "Strategy & Setup", sub: "Week 1–2", desc: "We audit your ICP, build your domain infrastructure, warm inboxes, and compile a targeted list of 5,000+ verified prospects." },
+  { num: "02", icon: Rocket, title: "Campaign Launch", sub: "Week 3–4", desc: "We write all copy and launch cold email and LinkedIn campaigns simultaneously — 10,000+ emails and 500 connection requests per month." },
+  { num: "03", icon: MessageSquare, title: "Response Management", sub: "Ongoing", desc: "We handle every reply 24/7, qualify leads, handle objections, and book calls directly into your calendar." },
+  { num: "04", icon: BarChart3, title: "Optimize & Scale", sub: "Month 2+", desc: "We A/B test messaging, refresh lead lists, monitor deliverability, and send you weekly performance reports." },
 ];
 
 const trustLogos = ["Apollo.io", "Instantly", "Lemlist", "HubSpot", "LinkedIn", "Clay", "Smartlead", "Salesforce"];
+
+const avatarColors = ["bg-blue-500", "bg-emerald-500", "bg-violet-500", "bg-amber-500"];
+const avatarInitials = ["ES", "DH", "MZ", "RK"];
 
 /* ── FAQ Item ── */
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-white/8 last:border-0">
+    <div className="border-b border-slate-200 last:border-0">
       <button
         className="w-full flex items-center justify-between py-5 text-left gap-4 group"
         onClick={() => setOpen((o) => !o)}
         data-testid={`faq-toggle-${q.slice(0, 20).replace(/\s/g, "-")}`}
       >
-        <span className="text-white font-semibold text-base leading-snug group-hover:text-[#1F62FF] transition-colors duration-200">{q}</span>
-        <ChevronDown className={`w-5 h-5 text-white/30 flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-[#1F62FF]" : ""}`} />
+        <span className="text-slate-800 font-semibold text-base leading-snug group-hover:text-[#1F62FF] transition-colors">{q}</span>
+        <ChevronDown className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-[#1F62FF]" : ""}`} />
       </button>
       <AnimatePresence initial={false}>
         {open && (
@@ -138,10 +222,10 @@ function FaqItem({ q, a }: { q: string; a: string }) {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.28, ease: "easeInOut" }}
+            transition={{ duration: 0.26, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-white/50 leading-relaxed text-sm">{a}</p>
+            <p className="pb-5 text-slate-500 leading-relaxed text-sm">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -155,19 +239,20 @@ export default function Home() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   const navLinks = [
-    { label: "Results", id: "case-studies" },
+    { label: "Services", id: "services" },
+    { label: "Results", id: "results" },
     { label: "How It Works", id: "how-it-works" },
     { label: "FAQ", id: "faq" },
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans overflow-x-hidden">
+    <div className="min-h-screen font-sans overflow-x-hidden" style={{ background: "linear-gradient(160deg, #eef6ff 0%, #ffffff 40%, #f0f8ff 100%)" }}>
 
       {/* ── NAV ── */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/8">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" data-testid="link-logo">
-            <JobsDoneLogo size="md" />
+            <JobsDoneLogo />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -175,7 +260,7 @@ export default function Home() {
               <button
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
-                className="text-white/55 hover:text-white text-sm font-medium transition-colors duration-200"
+                className="text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors"
               >
                 {link.label}
               </button>
@@ -184,10 +269,10 @@ export default function Home() {
 
           <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
             <button
-              className="border border-white/25 hover:border-white/60 text-white text-sm font-semibold px-5 h-9 rounded-lg transition-all duration-200 hover:bg-white/5"
+              className="bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-5 h-9 rounded-lg transition-all flex items-center gap-1.5"
               data-testid="button-book-call-nav"
             >
-              Book a Call
+              Book a Call <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </a>
         </div>
@@ -196,129 +281,89 @@ export default function Home() {
       <main>
 
         {/* ── HERO ── */}
-        <section className="relative overflow-hidden bg-black pt-32 pb-0">
-          <Starfield />
+        <section className="max-w-6xl mx-auto px-6 pt-16 pb-24">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-          {/* Abstract blurred shapes */}
-          <div className="absolute top-1/4 left-1/5 w-[500px] h-[120px] bg-white/[0.025] rounded-full blur-3xl -rotate-12 pointer-events-none" />
-          <div className="absolute top-2/5 right-1/4 w-[300px] h-[80px] bg-white/[0.018] rounded-full blur-2xl pointer-events-none" />
-          <div className="absolute bottom-1/3 left-1/3 w-[400px] h-[100px] bg-[#1F62FF]/[0.04] rounded-full blur-3xl pointer-events-none" />
-
-          <div className="relative max-w-7xl mx-auto px-6 pb-24">
-            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
-
-              {/* Left column — copy */}
-              <div className="flex-1 min-w-0">
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.6 }}
-                  className="text-white/35 text-sm mb-8 tracking-wide"
-                >
-                  500+ B2B clients served &nbsp;·&nbsp; 4.9/5 avg rating
-                </motion.p>
-
-                <motion.h1
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.1 }}
-                  className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.02] tracking-tight mb-5"
-                >
-                  We Book 10 Qualified<br />
-                  <span className="text-[#1F62FF]">Sales Calls in 60 Days</span>
-                </motion.h1>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.22 }}
-                >
-                  <p className="text-white/50 text-lg md:text-xl mb-1.5">with done-for-you cold email &amp; LinkedIn outreach</p>
-                  <p className="text-white/30 text-base md:text-lg mb-10">guaranteed — or we work for free until we do</p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.34 }}
-                  className="flex flex-wrap items-center gap-4 mb-8"
-                >
-                  <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
-                    <button
-                      className="bg-white text-black font-bold text-base px-7 h-12 rounded-lg hover:bg-white/90 active:scale-95 transition-all duration-200 flex items-center gap-2"
-                      data-testid="button-book-call-hero"
-                    >
-                      Book a Free Strategy Call <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </a>
-                  <button
-                    onClick={() => scrollTo("case-studies")}
-                    className="border border-white/20 text-white/70 hover:text-white hover:border-white/45 text-base font-medium px-7 h-12 rounded-lg transition-all duration-200"
-                    data-testid="button-see-offer"
-                  >
-                    View Case Studies
-                  </button>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.45 }}
-                  className="flex flex-wrap items-center gap-6 text-white/30 text-sm"
-                >
-                  <div className="flex items-center gap-2">
-                    <Shield className="w-4 h-4" />
-                    <span>Ironclad guarantee</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>24/7 response management</span>
-                  </div>
-                </motion.div>
+            {/* Left column */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex-1 min-w-0"
+            >
+              {/* Badge pills */}
+              <div className="flex flex-wrap gap-2 mb-7">
+                <span className="border border-slate-300 text-slate-600 text-xs font-medium px-3.5 py-1.5 rounded-full">For B2B Service Businesses</span>
+                <span className="border border-slate-300 text-slate-600 text-xs font-medium px-3.5 py-1.5 rounded-full">60-Day Guarantee</span>
               </div>
 
-              {/* Right column — VSL */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.25 }}
-                className="flex-1 min-w-0 w-full lg:max-w-[560px]"
-              >
-                <div
-                  className="rounded-2xl overflow-hidden border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.8)] relative group cursor-pointer"
-                  data-testid="vsl-video-container"
-                >
-                  <div className="aspect-video relative bg-zinc-900">
-                    <img
-                      src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200"
-                      alt="VSL thumbnail"
-                      className="w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-400"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-18 h-18 bg-white rounded-full flex items-center justify-center shadow-[0_4px_40px_rgba(255,255,255,0.25)] group-hover:scale-110 transition-transform duration-300 p-5">
-                        <svg className="w-8 h-8 fill-black ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white/70 text-xs px-2.5 py-1 rounded-md font-medium">
-                      8:42
-                    </div>
-                  </div>
-                </div>
-                <p className="text-center text-white/25 text-xs mt-3">Watch before booking · No fluff, just results</p>
-              </motion.div>
+              {/* Headline */}
+              <h1 className="text-5xl md:text-6xl font-black text-slate-900 leading-[1.0] tracking-tight mb-6">
+                Stop Chasing<br />
+                Leads. Let<br />
+                <span className="text-[#1F62FF]">Outreach</span><br />
+                Run For You.
+              </h1>
 
-            </div>
+              {/* Body */}
+              <p className="text-slate-500 text-lg leading-relaxed mb-8 max-w-md">
+                JobsDone Labs deploys done-for-you cold email &amp; LinkedIn outreach that books 10+ qualified sales calls in 60 days — giving you back the time to actually close.
+              </p>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap items-center gap-3 mb-8">
+                <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
+                  <button
+                    className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-base px-7 h-12 rounded-lg transition-all flex items-center gap-2"
+                    data-testid="button-book-call-hero"
+                  >
+                    Book a Free Strategy Call <ArrowRight className="w-4 h-4" />
+                  </button>
+                </a>
+                <button
+                  onClick={() => scrollTo("results")}
+                  className="border border-slate-300 text-slate-600 hover:border-slate-400 hover:text-slate-800 text-base font-medium px-7 h-12 rounded-lg transition-all"
+                  data-testid="button-see-offer"
+                >
+                  See Client Results
+                </button>
+              </div>
+
+              {/* Social proof */}
+              <div className="flex items-center gap-3">
+                <div className="flex -space-x-2">
+                  {avatarInitials.map((init, i) => (
+                    <div key={i} className={`w-9 h-9 rounded-full ${avatarColors[i]} border-2 border-white flex items-center justify-center text-white text-xs font-bold flex-shrink-0`}>
+                      {init}
+                    </div>
+                  ))}
+                </div>
+                <p className="text-slate-500 text-sm">
+                  <strong className="text-slate-800">500+ businesses</strong> served. Avg. 10+ calls booked in 60 days.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right column — workflow card */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="flex-1 min-w-0 w-full lg:max-w-[480px]"
+            >
+              <WorkflowCard />
+            </motion.div>
+
           </div>
         </section>
 
-        {/* ── TRUST BAR ── */}
-        <section className="border-y border-white/6 py-8 overflow-hidden bg-black">
-          <p className="text-center text-white/25 text-xs uppercase tracking-widest font-semibold mb-6">Trusted by teams using</p>
+        {/* ── TRUST LOGOS ── */}
+        <section className="border-y border-slate-100 bg-white/70 py-7 overflow-hidden">
+          <p className="text-center text-slate-400 text-xs uppercase tracking-widest font-semibold mb-5">Trusted by teams using</p>
           <div className="relative">
-            <div className="flex animate-[marquee_25s_linear_infinite] gap-14 w-max">
+            <div className="flex animate-[marquee_28s_linear_infinite] gap-14 w-max">
               {[...trustLogos, ...trustLogos].map((logo, i) => (
-                <span key={i} className="text-white/20 font-bold text-sm tracking-wide whitespace-nowrap hover:text-white/45 transition-colors cursor-default">
+                <span key={i} className="text-slate-300 font-bold text-sm tracking-wide whitespace-nowrap hover:text-slate-500 transition-colors cursor-default">
                   {logo}
                 </span>
               ))}
@@ -326,18 +371,59 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── CASE STUDIES ── */}
-        <section id="case-studies" className="py-28 bg-black">
-          <div className="max-w-7xl mx-auto px-6">
+        {/* ── SERVICES ── */}
+        <section id="services" className="py-24 max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
+            className="mb-12"
+          >
+            <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-2">What We Do</p>
+            <h2 className="text-4xl font-black text-slate-900 tracking-tight">Everything done for you.</h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {services.map((s, i) => (
+              <motion.div
+                key={s.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="bg-white rounded-2xl border border-slate-100 p-7 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+              >
+                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
+                  <s.icon className="w-5 h-5 text-[#1F62FF]" />
+                </div>
+                <h3 className="font-bold text-slate-900 text-lg mb-2">{s.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed mb-5">{s.desc}</p>
+                <ul className="space-y-2">
+                  {s.points.map(pt => (
+                    <li key={pt} className="flex items-start gap-2 text-sm text-slate-600">
+                      <CheckCircle2 className="w-4 h-4 text-[#1F62FF] flex-shrink-0 mt-0.5" />
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── RESULTS ── */}
+        <section id="results" className="bg-slate-900 py-24">
+          <div className="max-w-6xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
-              className="mb-14"
+              className="mb-12"
             >
-              <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-3">Client Results</p>
-              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">Real results from real clients.</h2>
+              <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-2">Client Results</p>
+              <h2 className="text-4xl font-black text-white tracking-tight">Real results from real clients.</h2>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-5">
@@ -348,29 +434,27 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="border border-white/8 rounded-xl p-7 flex flex-col gap-5 hover:border-white/15 hover:bg-white/[0.02] transition-all duration-300 bg-white/[0.01]"
+                  className="bg-slate-800 rounded-2xl border border-slate-700 p-6 flex flex-col gap-5"
                   data-testid={`card-case-study-${i}`}
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#1F62FF]/15 border border-[#1F62FF]/25 flex items-center justify-center text-[#1F62FF] font-bold text-sm flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-[#1F62FF]/20 border border-[#1F62FF]/30 flex items-center justify-center text-[#1F62FF] font-bold text-sm flex-shrink-0">
                       {c.name[0]}
                     </div>
                     <div>
                       <p className="font-semibold text-white text-sm">{c.name}</p>
-                      <p className="text-white/35 text-xs">{c.title}</p>
+                      <p className="text-slate-400 text-xs">{c.title}</p>
                     </div>
-                    <div className="ml-auto flex gap-0.5 flex-shrink-0">
+                    <div className="ml-auto flex gap-0.5">
                       {[1,2,3,4,5].map(s => <Star key={s} className="w-3 h-3 text-yellow-400 fill-yellow-400" />)}
                     </div>
                   </div>
-
                   <div className="space-y-2 text-sm">
-                    <p className="text-white/35 leading-relaxed"><span className="text-white/20 font-medium">Before: </span>{c.before}</p>
-                    <p className="text-white/65 leading-relaxed"><span className="text-white/40 font-medium">After: </span>{c.after}</p>
+                    <p className="text-slate-400"><span className="text-slate-500 font-medium">Before: </span>{c.before}</p>
+                    <p className="text-slate-200"><span className="text-slate-300 font-medium">After: </span>{c.after}</p>
                   </div>
-
-                  <div className="pt-4 border-t border-white/6 flex items-center justify-between">
-                    <span className="text-green-400 font-semibold text-sm">{c.revenue}</span>
+                  <div className="pt-4 border-t border-slate-700 flex items-center justify-between">
+                    <span className="text-emerald-400 font-semibold text-sm">{c.revenue}</span>
                     <span className="text-[#1F62FF] font-bold text-xs bg-[#1F62FF]/10 px-3 py-1 rounded-full border border-[#1F62FF]/20">{c.roi}</span>
                   </div>
                 </motion.div>
@@ -379,10 +463,48 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── HOW IT WORKS ── */}
+        <section id="how-it-works" className="py-24 max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
+            className="mb-12"
+          >
+            <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-2">The Process</p>
+            <h2 className="text-4xl font-black text-slate-900 tracking-tight">How We Get You 10 Qualified Calls in 60 Days.</h2>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {steps.map((s, i) => (
+              <motion.div
+                key={s.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm"
+                data-testid={`card-step-${i}`}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
+                    <s.icon className="w-5 h-5 text-[#1F62FF]" />
+                  </div>
+                  <span className="text-xs font-medium text-slate-400 bg-slate-50 px-2.5 py-1 rounded-full border border-slate-200">{s.sub}</span>
+                </div>
+                <p className="text-[#1F62FF] text-xs font-black mb-1">{s.num}</p>
+                <h3 className="font-bold text-slate-900 text-base mb-2">{s.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         {/* ── GUARANTEE ── */}
-        <section className="border-t border-white/6 py-28 bg-black">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <section className="bg-[#1F62FF] py-20">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
               <motion.div
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -390,26 +512,22 @@ export default function Home() {
                 transition={{ duration: 0.55 }}
                 className="flex-1"
               >
-                <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-3">Zero Risk</p>
-                <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-6">Our Iron-Clad Guarantee.</h2>
-                <p className="text-white/50 leading-relaxed mb-4 text-lg">
+                <p className="text-blue-200 text-xs uppercase tracking-widest font-semibold mb-3">Zero Risk</p>
+                <h2 className="text-4xl font-black text-white tracking-tight mb-5">Our Iron-Clad 60-Day Guarantee.</h2>
+                <p className="text-blue-100 leading-relaxed mb-4 text-lg">
                   We guarantee you <strong className="text-white">10 qualified sales calls</strong> booked in your first 60 days — or we work for free until we hit that number.
                 </p>
-                <p className="text-white/40 leading-relaxed mb-10">
-                  If we don't deliver, we waive your monthly fee and keep working at no charge. You have nothing to lose and everything to gain.
+                <p className="text-blue-200 leading-relaxed mb-8">
+                  If we don't deliver, we waive your monthly fee and keep working. You have nothing to lose.
                 </p>
                 <div className="flex items-center gap-4">
-                  <img
-                    src="/ryne.png"
-                    alt="Ryne Bandolik"
-                    className="w-14 h-14 rounded-full object-cover object-top border-2 border-[#1F62FF]/35 flex-shrink-0"
-                  />
+                  <img src="/ryne.png" alt="Ryne Bandolik" className="w-12 h-12 rounded-full object-cover object-top border-2 border-white/30 flex-shrink-0" />
                   <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
                     <button
-                      className="bg-white text-black font-bold text-base px-7 h-12 rounded-lg hover:bg-white/90 transition-all duration-200"
+                      className="bg-white text-[#1F62FF] font-bold text-base px-7 h-12 rounded-lg hover:bg-blue-50 transition-all"
                       data-testid="button-book-call-guarantee"
                     >
-                      Book Your Free Strategy Call Now
+                      Book a Free Strategy Call
                     </button>
                   </a>
                 </div>
@@ -422,16 +540,16 @@ export default function Home() {
                 transition={{ duration: 0.55 }}
                 className="flex-1 w-full"
               >
-                <div className="border border-[#1F62FF]/20 bg-[#1F62FF]/[0.04] rounded-2xl p-10 text-center">
-                  <div className="w-16 h-16 bg-[#1F62FF]/12 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Shield className="w-8 h-8 text-[#1F62FF]" />
+                <div className="bg-white/10 border border-white/20 rounded-2xl p-8 text-center backdrop-blur-sm">
+                  <div className="w-14 h-14 bg-white/15 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                    <Shield className="w-7 h-7 text-white" />
                   </div>
                   <p className="text-3xl font-black text-white mb-2">10 Calls in 60 Days</p>
-                  <p className="text-white/40 text-sm mb-7">or we work for free until we do</p>
+                  <p className="text-blue-200 text-sm mb-6">or we work for free until we do</p>
                   <div className="space-y-3">
                     {["No extra charge if we miss the target", "Dedicated campaign manager throughout", "Weekly performance reports included"].map(item => (
-                      <div key={item} className="flex items-center gap-3 text-sm text-white/60">
-                        <CheckCircle2 className="w-4 h-4 text-[#1F62FF] flex-shrink-0" />
+                      <div key={item} className="flex items-center gap-3 text-sm text-blue-100">
+                        <CheckCircle2 className="w-4 h-4 text-white flex-shrink-0" />
                         {item}
                       </div>
                     ))}
@@ -442,87 +560,43 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── HOW IT WORKS ── */}
-        <section id="how-it-works" className="border-t border-white/6 py-28 bg-black">
-          <div className="max-w-7xl mx-auto px-6">
+        {/* ── FAQ ── */}
+        <section id="faq" className="py-24 max-w-6xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-14 lg:gap-20">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
-              className="mb-14"
+              className="lg:w-72 flex-shrink-0"
             >
-              <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-3">The Process</p>
-              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">How We Get You 10 Qualified<br className="hidden md:block" /> Calls in 60 Days.</h2>
+              <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-3">FAQ</p>
+              <h2 className="text-4xl font-black text-slate-900 tracking-tight mb-5">Frequently Asked Questions.</h2>
+              <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                Everything you need to know before booking your free strategy call.
+              </p>
+              <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
+                <button className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm px-6 h-10 rounded-lg transition-all flex items-center gap-1.5">
+                  Book a Strategy Call <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </a>
             </motion.div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {steps.map((s, i) => (
-                <motion.div
-                  key={s.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="border border-white/8 rounded-xl p-7 flex flex-col gap-4 hover:border-white/16 hover:bg-white/[0.02] transition-all duration-300 bg-white/[0.01]"
-                  data-testid={`card-step-${i}`}
-                >
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="w-11 h-11 bg-[#1F62FF]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <s.icon className="w-5 h-5 text-[#1F62FF]" />
-                    </div>
-                    <span className="text-xs font-medium text-[#1F62FF]/70 bg-[#1F62FF]/8 px-2.5 py-1 rounded-full border border-[#1F62FF]/15 whitespace-nowrap">{s.sub}</span>
-                  </div>
-                  <h3 className="font-bold text-white text-base leading-snug">{s.title}</h3>
-                  <p className="text-white/40 text-sm leading-relaxed">{s.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ ── */}
-        <section id="faq" className="border-t border-white/6 py-28 bg-black">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col lg:flex-row gap-14 lg:gap-24">
-              <motion.div
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.55 }}
-                className="lg:w-80 flex-shrink-0"
-              >
-                <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-3">Got Questions?</p>
-                <h2 className="text-4xl font-black text-white tracking-tight mb-5">Frequently Asked Questions.</h2>
-                <p className="text-white/40 text-sm leading-relaxed mb-8">
-                  Everything you need to know before booking your free strategy call.
-                </p>
-                <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
-                  <button className="bg-white text-black font-bold text-sm px-6 h-10 rounded-lg hover:bg-white/90 transition-all">
-                    Book a Strategy Call
-                  </button>
-                </a>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.55, delay: 0.1 }}
-                className="flex-1"
-              >
-                {faqs.map((f) => <FaqItem key={f.q} q={f.q} a={f.a} />)}
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55, delay: 0.1 }}
+              className="flex-1"
+            >
+              {faqs.map((f) => <FaqItem key={f.q} q={f.q} a={f.a} />)}
+            </motion.div>
           </div>
         </section>
 
         {/* ── FINAL CTA ── */}
-        <section className="border-t border-white/6 py-28 bg-black relative overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#1F62FF]/[0.05] rounded-full blur-3xl" />
-          </div>
-          <div className="relative max-w-7xl mx-auto px-6 text-center">
+        <section className="bg-slate-900 py-24">
+          <div className="max-w-3xl mx-auto px-6 text-center">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -530,29 +604,24 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-[#1F62FF] text-xs uppercase tracking-widest font-semibold mb-4">Ready to grow?</p>
-              <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-5 max-w-3xl mx-auto leading-[1.05]">
-                Book your free<br />strategy call today.
+              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-5 leading-[1.05]">
+                Book your free strategy call today.
               </h2>
-              <p className="text-white/40 text-lg mb-12 max-w-xl mx-auto">
+              <p className="text-slate-400 text-lg mb-10">
                 We'll show you exactly how we'd get you 10 calls in 60 days — or you don't pay.
               </p>
-
               <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-                <img
-                  src="/ryne.png"
-                  alt="Ryne Bandolik"
-                  className="w-16 h-16 rounded-full object-cover object-top border-2 border-[#1F62FF]/35 flex-shrink-0"
-                />
+                <img src="/ryne.png" alt="Ryne Bandolik" className="w-14 h-14 rounded-full object-cover object-top border-2 border-slate-600 flex-shrink-0" />
                 <div className="flex flex-col items-center sm:items-start gap-1">
                   <a href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener noreferrer">
                     <button
-                      className="bg-white text-black font-black text-lg px-10 h-14 rounded-lg hover:bg-white/90 active:scale-95 transition-all duration-200"
+                      className="bg-white hover:bg-slate-100 text-slate-900 font-black text-lg px-10 h-14 rounded-lg transition-all flex items-center gap-2"
                       data-testid="button-book-call-final"
                     >
-                      Book Your Free Strategy Call
+                      Book Your Free Strategy Call <ArrowRight className="w-5 h-5" />
                     </button>
                   </a>
-                  <span className="text-white/30 text-xs">Talk directly with Ryne</span>
+                  <span className="text-slate-500 text-xs">Talk directly with Ryne</span>
                 </div>
               </div>
             </motion.div>
@@ -562,19 +631,19 @@ export default function Home() {
       </main>
 
       {/* ── FOOTER ── */}
-      <footer className="border-t border-white/6 py-10 bg-black">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white/25">
+      <footer className="bg-slate-950 border-t border-slate-800 py-10">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-5 text-sm">
           <div className="flex items-center gap-4">
-            <JobsDoneLogo size="sm" />
+            <JobsDoneLogo dark />
             <div className="flex items-center gap-2">
-              <img src="/ryne.png" alt="Ryne Bandolik" className="w-7 h-7 rounded-full object-cover object-top border border-white/12" />
-              <span className="text-white/30 text-xs">Ryne Bandolik, Founder</span>
+              <img src="/ryne.png" alt="Ryne Bandolik" className="w-6 h-6 rounded-full object-cover object-top border border-slate-600" />
+              <span className="text-slate-500 text-xs">Ryne Bandolik, Founder</span>
             </div>
           </div>
-          <span>support@jobsdonelabs.ai</span>
-          <div className="flex items-center gap-6">
-            <Link href="/privacy" className="hover:text-white/50 transition-colors" data-testid="link-privacy">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white/50 transition-colors" data-testid="link-terms">Terms of Service</Link>
+          <span className="text-slate-500">support@jobsdonelabs.ai</span>
+          <div className="flex items-center gap-5 text-slate-500">
+            <Link href="/privacy" className="hover:text-slate-300 transition-colors" data-testid="link-privacy">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-slate-300 transition-colors" data-testid="link-terms">Terms of Service</Link>
           </div>
         </div>
       </footer>
