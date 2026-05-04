@@ -393,16 +393,24 @@ function ExitIntentPopup() {
                 <X className="w-4 h-4" />
               </button>
 
-              <div className="text-center mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-[#1F62FF]/10 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🔒</span>
+              <div className="flex items-center gap-4 mb-5">
+                <img
+                  src={`${import.meta.env.BASE_URL}ryne.png`}
+                  alt="Ryne Bandolik"
+                  className="w-16 h-16 rounded-full object-cover object-top flex-shrink-0 border-2 border-[#1F62FF]/20"
+                />
+                <div className="text-left">
+                  <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-0.5">Wait — before you go</p>
+                  <p className="font-bold text-slate-900 text-sm leading-snug">A personal note from Ryne</p>
+                  <p className="text-slate-400 text-xs">Founder, JobsDone Labs</p>
                 </div>
-                <p className="text-[#1F62FF] text-xs font-semibold uppercase tracking-widest mb-2">Wait — before you go</p>
+              </div>
+              <div className="mb-6">
                 <h2 className="text-2xl font-black text-slate-900 leading-tight mb-3">
                   We guarantee $30,000 recovered in 90 days — or we keep working for free.
                 </h2>
                 <p className="text-slate-500 text-sm leading-relaxed">
-                  Most businesses are leaking revenue every day through slow follow-up and broken ops. Book a free 45-min audit and we'll show you exactly where.
+                  Most businesses are leaking revenue every day through slow follow-up and broken ops. Book a free 45-min audit and I'll show you exactly where yours are.
                 </p>
               </div>
 
