@@ -612,7 +612,7 @@ export default function Home() {
 
         {/* ── LOGO STRIP ── */}
         <section className="py-7 overflow-hidden" style={{ borderTop: `1px solid ${BORDER}`, borderBottom: `1px solid ${BORDER}`, background: BG2 }}>
-          <p className="text-center text-[11px] uppercase tracking-[0.13em] font-semibold mb-5 sg" style={{ color: MUTED }}>
+          <p className="text-center text-[11px] uppercase tracking-[0.13em] font-semibold mb-5 sg" style={{ color: ACCENT }}>
             Trusted by 7-figure agency founders &amp; business owners
           </p>
           <div className="relative">
