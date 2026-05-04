@@ -216,6 +216,7 @@ export default function Home() {
                   size="lg"
                   className="text-white/70 hover:text-white hover:bg-white/6 rounded-lg h-12 px-6 font-medium text-base border border-white/10 hover:border-white/20 transition-all"
                   data-testid="button-see-offer"
+                  onClick={() => document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   See How It Works <ChevronRight className="w-4 h-4 ml-0.5" />
                 </Button>
@@ -386,7 +387,7 @@ export default function Home() {
         </section>
 
         {/* ── HOW IT WORKS ── */}
-        <section className="border-t border-white/6 py-24">
+        <section id="how-it-works" className="border-t border-white/6 py-24">
           <div className="max-w-6xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
