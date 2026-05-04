@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  FlaskConical,
   Play,
   ArrowRight,
   CheckCircle2,
@@ -12,6 +11,8 @@ import {
   MessageSquare,
   BarChart3,
   Shield,
+  CalendarCheck,
+  Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -62,21 +63,24 @@ const faqs = [
 
 const caseStudies = [
   {
-    name: "James R., B2B SaaS Consultant",
+    name: "James R.",
+    title: "B2B SaaS Consultant",
     before: "Booking 2–3 calls/month through referrals only",
     after: "Now booking 10–12 calls/month consistently",
     revenue: "$220,000 in new revenue in 6 months",
     roi: "14.2x ROI",
   },
   {
-    name: "Priya M., Executive Coach",
+    name: "Priya M.",
+    title: "Executive Coach",
     before: "Relying on LinkedIn DMs manually — inconsistent",
     after: "6–8 qualified discovery calls booked every week",
     revenue: "$95,000 added to pipeline in 90 days",
     roi: "9.8x ROI",
   },
   {
-    name: "Tom K., Agency Owner",
+    name: "Tom K.",
+    title: "Agency Owner",
     before: "Spending 15 hrs/week on cold outreach personally",
     after: "Fully automated — zero time spent on prospecting",
     revenue: "$180,000 in new contracts signed in 4 months",
@@ -87,22 +91,26 @@ const caseStudies = [
 const steps = [
   {
     icon: Search,
-    title: "Infrastructure Setup (Week 1–2)",
+    title: "Infrastructure Setup",
+    sub: "Week 1–2",
     desc: "We build your entire cold email & LinkedIn infrastructure: 5–10 domains, 10–20 email inboxes, LinkedIn automation, and a lead list of 5,000+ verified contacts.",
   },
   {
     icon: Rocket,
-    title: "Campaign Launch (Week 3–4)",
+    title: "Campaign Launch",
+    sub: "Week 3–4",
     desc: "We write all your email copy and LinkedIn messages, then launch campaigns — 10,000 emails/month and 500 LinkedIn connection requests per month.",
   },
   {
     icon: MessageSquare,
-    title: "Response Management (Ongoing)",
+    title: "Response Management",
+    sub: "Ongoing",
     desc: "We monitor all responses 24/7, qualify leads using your ICP criteria, and book qualified calls directly into your calendar.",
   },
   {
     icon: BarChart3,
-    title: "Optimization & Scaling (Month 2+)",
+    title: "Optimization & Scaling",
+    sub: "Month 2+",
     desc: "We A/B test messaging, monitor deliverability, refresh lead lists monthly, and provide weekly performance reports.",
   },
 ];
@@ -110,15 +118,15 @@ const steps = [
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-border last:border-0">
+    <div className="border-b border-border/60 last:border-0">
       <button
-        className="w-full flex items-center justify-between py-6 text-left gap-4"
+        className="w-full flex items-center justify-between py-6 text-left gap-4 group"
         onClick={() => setOpen((o) => !o)}
         data-testid={`faq-toggle-${q.slice(0, 20).replace(/\s/g, "-")}`}
       >
-        <span className="text-white font-semibold text-base md:text-lg">{q}</span>
+        <span className="text-white font-semibold text-base md:text-lg leading-snug group-hover:text-primary/90 transition-colors">{q}</span>
         <ChevronDown
-          className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-primary" : ""}`}
         />
       </button>
       <AnimatePresence initial={false}>
@@ -130,7 +138,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-muted-foreground leading-relaxed">{a}</p>
+            <p className="pb-6 text-muted-foreground leading-relaxed text-base">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -140,124 +148,130 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30">
+    <div className="min-h-screen bg-background text-foreground font-sans">
 
       {/* NAV */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group" data-testid="link-logo">
-            <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
-              <FlaskConical className="w-6 h-6 text-primary" />
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/90 backdrop-blur-xl">
+        <div className="container mx-auto px-6 h-18 flex items-center justify-between py-4">
+          <Link href="/" className="flex items-center gap-3" data-testid="link-logo">
+            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+              <CalendarCheck className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-xl tracking-tight">
-              JOBSDONE <span className="text-primary">LABS</span>
+            <span className="font-semibold text-lg text-white tracking-tight">
+              JobsDone <span className="text-primary">Labs</span>
             </span>
           </Link>
           <Button
-            variant="outline"
-            className="border-border text-white hover:bg-white/5 hover:text-white rounded-md font-medium"
+            className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 font-medium text-sm h-10"
             data-testid="button-book-call-nav"
           >
-            Book a Call
+            Book a Free Call
           </Button>
         </div>
       </header>
 
-      <main className="pt-24">
+      <main className="pt-20">
 
         {/* HERO */}
-        <section className="container mx-auto px-4 pt-20 pb-24 flex flex-col items-center text-center">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={stagger}
-            className="max-w-4xl mx-auto flex flex-col items-center"
-          >
-            <motion.div variants={fadeIn} className="mb-8">
-              <div className="inline-flex items-center rounded-full border border-border/50 bg-card p-1 pr-4 text-sm shadow-sm">
-                <span className="rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary mr-3">
-                  Attention
-                </span>
-                <span className="text-muted-foreground flex items-center gap-1">
-                  B2B Service Providers &amp; Coaches <ArrowRight className="w-3 h-3 ml-1" />
-                </span>
-              </div>
-            </motion.div>
-
-            <motion.h1
-              variants={fadeIn}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/8 via-transparent to-transparent pointer-events-none" />
+          <div className="container mx-auto px-6 pt-24 pb-28 flex flex-col items-center text-center relative z-10">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={stagger}
+              className="max-w-3xl mx-auto flex flex-col items-center"
             >
-              We'll Book You{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
-                5 Qualified Sales Calls
-              </span>{" "}
-              in 60 Days—Or We Work For Free Until We Do
-            </motion.h1>
+              <motion.div variants={fadeIn} className="mb-7">
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-4 py-2 text-sm">
+                  <span className="text-primary font-medium">Attention</span>
+                  <span className="text-white/60">·</span>
+                  <span className="text-white/70">B2B Service Providers &amp; Coaches</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-primary" />
+                </div>
+              </motion.div>
 
-            <motion.p
-              variants={fadeIn}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
-            >
-              For B2B service providers, coaches, and consultants who need predictable sales calls without the guesswork.
-            </motion.p>
-
-            <motion.div variants={fadeIn} className="flex flex-col items-center gap-5">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white rounded-md h-14 px-8 text-lg font-bold shadow-[0_0_40px_-10px_rgba(31,98,255,0.5)] hover:shadow-[0_0_60px_-15px_rgba(31,98,255,0.7)] transition-all"
-                data-testid="button-book-call-hero"
+              <motion.h1
+                variants={fadeIn}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.12] tracking-tight"
               >
-                Book Your Free Strategy Call
-              </Button>
+                We'll Book You{" "}
+                <span className="text-primary">
+                  5 Qualified Sales Calls
+                </span>{" "}
+                in 60 Days—Or We Work For Free
+              </motion.h1>
 
-              <div className="flex flex-col sm:flex-row items-center gap-3 text-sm text-muted-foreground">
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
-                  No credit card required
-                </span>
-                <span className="hidden sm:block text-border">|</span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
-                  30-minute call
-                </span>
-                <span className="hidden sm:block text-border">|</span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
-                  We'll show you exactly how we'd get you 5 calls in 60 days
-                </span>
-              </div>
+              <motion.p
+                variants={fadeIn}
+                className="text-lg text-white/60 mb-10 max-w-xl leading-relaxed"
+              >
+                For B2B service providers, coaches, and consultants who need predictable sales calls without the guesswork.
+              </motion.p>
+
+              <motion.div variants={fadeIn} className="flex flex-col items-center gap-5 w-full max-w-sm">
+                <Button
+                  size="lg"
+                  className="w-full bg-primary hover:bg-primary/90 text-white rounded-full h-14 text-lg font-semibold shadow-[0_8px_30px_rgba(31,98,255,0.35)] hover:shadow-[0_8px_40px_rgba(31,98,255,0.5)] transition-all"
+                  data-testid="button-book-call-hero"
+                >
+                  Book Your Free Strategy Call
+                </Button>
+
+                <div className="flex flex-col sm:flex-row items-center gap-3 text-sm text-white/50">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 flex-shrink-0" />
+                    No credit card required
+                  </span>
+                  <span className="hidden sm:block">·</span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 flex-shrink-0" />
+                    30-minute call
+                  </span>
+                  <span className="hidden sm:block">·</span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 flex-shrink-0" />
+                    No commitment
+                  </span>
+                </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </section>
 
         {/* VIDEO SECTION */}
-        <section className="container mx-auto px-4 pb-28">
+        <section className="container mx-auto px-6 pb-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
-              Watch This 8-Minute Video to See How We Guarantee 5 Qualified Sales Calls in 60 Days
+            <p className="text-white/50 uppercase text-xs tracking-widest font-medium mb-4">Watch Before You Decide</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 leading-snug">
+              See How We Guarantee 5 Qualified Sales Calls in 60 Days
             </h2>
 
             <div
-              className="rounded-xl overflow-hidden border border-border shadow-[0_10px_40px_rgba(0,0,0,0.4)] relative group cursor-pointer"
+              className="rounded-2xl overflow-hidden border border-white/8 shadow-[0_20px_60px_rgba(0,0,0,0.5)] relative group cursor-pointer"
               data-testid="vsl-video-container"
             >
               <div className="aspect-video relative bg-card">
                 <img
                   src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1600"
                   alt="VSL Video Thumbnail"
-                  className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-500"
+                  className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(31,98,255,0.5)] group-hover:scale-110 transition-transform duration-300">
-                    <Play className="w-8 h-8 text-white fill-white ml-1" />
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-18 h-18 w-[72px] h-[72px] bg-white/95 rounded-full flex items-center justify-center shadow-[0_4px_24px_rgba(0,0,0,0.3)] group-hover:scale-110 transition-transform duration-300">
+                      <Play className="w-7 h-7 text-primary fill-primary ml-1" />
+                    </div>
+                    <span className="text-white/80 text-sm font-medium bg-black/30 backdrop-blur-sm px-4 py-1.5 rounded-full">
+                      8 minutes · No fluff
+                    </span>
                   </div>
                 </div>
               </div>
@@ -265,7 +279,7 @@ export default function Home() {
 
             <Button
               size="lg"
-              className="mt-10 bg-primary hover:bg-primary/90 text-white rounded-md h-14 px-8 text-lg font-bold shadow-[0_0_30px_-10px_rgba(31,98,255,0.5)] transition-all"
+              className="mt-10 bg-primary hover:bg-primary/90 text-white rounded-full h-13 h-[52px] px-8 text-base font-semibold shadow-[0_8px_24px_rgba(31,98,255,0.3)] transition-all"
               data-testid="button-book-call-below-video"
             >
               Yes, I Want 5 Qualified Calls in 60 Days
@@ -273,9 +287,35 @@ export default function Home() {
           </motion.div>
         </section>
 
+        {/* STATS BAR */}
+        <section className="border-y border-white/6 py-12">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              {[
+                { val: "500+", label: "Clients Served" },
+                { val: "$40M+", label: "Pipeline Generated" },
+                { val: "60 Days", label: "Guaranteed" },
+                { val: "97%", label: "Client Satisfaction" },
+              ].map((s, i) => (
+                <motion.div
+                  key={s.label}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="flex flex-col items-center gap-1"
+                >
+                  <span className="text-3xl md:text-4xl font-bold text-white">{s.val}</span>
+                  <span className="text-sm text-white/40 font-medium">{s.label}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CASE STUDIES */}
-        <section className="bg-card/30 border-y border-border py-24">
-          <div className="container mx-auto px-4">
+        <section className="py-24">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -283,10 +323,11 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-center mb-14"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Real Results From Real Clients</h2>
+              <p className="text-primary text-xs uppercase tracking-widest font-semibold mb-3">Client Results</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Real results from real clients</h2>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {caseStudies.map((c, i) => (
                 <motion.div
                   key={c.name}
@@ -294,21 +335,36 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-background border border-border rounded-xl p-8 flex flex-col gap-4"
+                  className="bg-white/4 border border-white/8 rounded-2xl p-7 flex flex-col gap-5 hover:border-primary/30 hover:bg-white/6 transition-all duration-300"
                   data-testid={`card-case-study-${i}`}
                 >
-                  <p className="font-bold text-white text-lg">{c.name}</p>
-                  <div className="space-y-2 text-sm">
-                    <p className="text-muted-foreground">
-                      <span className="font-semibold text-white/70">Before: </span>{c.before}
-                    </p>
-                    <p className="text-muted-foreground">
-                      <span className="font-semibold text-white/70">After: </span>{c.after}
-                    </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm">
+                      {c.name[0]}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white text-sm">{c.name}</p>
+                      <p className="text-white/40 text-xs">{c.title}</p>
+                    </div>
+                    <div className="ml-auto flex gap-0.5">
+                      {[1,2,3,4,5].map(s => <Star key={s} className="w-3 h-3 text-primary fill-primary" />)}
+                    </div>
                   </div>
-                  <div className="pt-2 border-t border-border flex items-center justify-between">
-                    <span className="text-green-400 font-bold text-base">{c.revenue}</span>
-                    <span className="text-primary font-bold text-sm bg-primary/10 px-3 py-1 rounded-full">{c.roi}</span>
+
+                  <div className="space-y-2.5 text-sm">
+                    <div className="flex gap-2">
+                      <span className="text-white/30 text-xs mt-0.5 shrink-0">Before</span>
+                      <span className="text-white/60">{c.before}</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-white/30 text-xs mt-0.5 shrink-0">After</span>
+                      <span className="text-white/80">{c.after}</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/8 flex items-center justify-between">
+                    <span className="text-green-400 font-semibold text-sm">{c.revenue}</span>
+                    <span className="text-primary font-bold text-xs bg-primary/10 px-3 py-1 rounded-full border border-primary/20">{c.roi}</span>
                   </div>
                 </motion.div>
               ))}
@@ -317,8 +373,9 @@ export default function Home() {
         </section>
 
         {/* GUARANTEE */}
-        <section className="py-24">
-          <div className="container mx-auto px-4">
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/6 via-transparent to-transparent pointer-events-none" />
+          <div className="container mx-auto px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -326,27 +383,30 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
+              <p className="text-primary text-xs uppercase tracking-widest font-semibold mb-3">Zero Risk</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Our Iron-Clad Guarantee</h2>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.97 }}
+              initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="max-w-3xl mx-auto border-2 border-primary/40 bg-primary/5 rounded-2xl p-10 md:p-14 text-center"
+              className="max-w-2xl mx-auto border border-primary/25 bg-primary/5 rounded-3xl p-10 md:p-14 text-center"
             >
-              <Shield className="w-14 h-14 text-primary mx-auto mb-6" />
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-4">
-                We guarantee you <strong className="text-white">5 qualified sales calls</strong> booked in your first 60 days—or we work for free until we hit that number.
+              <div className="w-14 h-14 bg-primary/15 rounded-2xl flex items-center justify-center mx-auto mb-7">
+                <Shield className="w-7 h-7 text-primary" />
+              </div>
+              <p className="text-white text-lg md:text-xl leading-relaxed mb-4">
+                We guarantee you <strong>5 qualified sales calls</strong> booked in your first 60 days—or we work for free until we hit that number.
               </p>
-              <p className="text-lg text-white/90 leading-relaxed mb-4">
+              <p className="text-white/60 leading-relaxed mb-4">
                 If we don't book you 5 qualified calls in 60 days, we waive your monthly fee and keep working for free until we do.
               </p>
-              <p className="text-lg font-semibold text-primary">You have nothing to lose and everything to gain.</p>
+              <p className="font-semibold text-primary">You have nothing to lose and everything to gain.</p>
               <Button
                 size="lg"
-                className="mt-10 bg-primary hover:bg-primary/90 text-white rounded-md h-14 px-8 text-lg font-bold shadow-[0_0_30px_-10px_rgba(31,98,255,0.5)] transition-all"
+                className="mt-8 bg-primary hover:bg-primary/90 text-white rounded-full h-13 h-[52px] px-8 text-base font-semibold shadow-[0_8px_24px_rgba(31,98,255,0.3)] transition-all w-full sm:w-auto"
                 data-testid="button-book-call-guarantee"
               >
                 Book Your Free Strategy Call Now
@@ -356,8 +416,8 @@ export default function Home() {
         </section>
 
         {/* HOW IT WORKS */}
-        <section className="bg-card/30 border-y border-border py-24">
-          <div className="container mx-auto px-4">
+        <section className="py-24 border-t border-white/6">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -365,12 +425,13 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-center mb-14"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <p className="text-primary text-xs uppercase tracking-widest font-semibold mb-3">The Process</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
                 How We Get You 5 Qualified Calls in 60 Days
               </h2>
             </motion.div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
               {steps.map((s, i) => (
                 <motion.div
                   key={s.title}
@@ -378,17 +439,17 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-background border border-border rounded-xl p-7 flex flex-col gap-4 relative"
+                  className="bg-white/3 border border-white/8 rounded-2xl p-7 flex flex-col gap-4 hover:border-primary/25 hover:bg-white/5 transition-all duration-300"
                   data-testid={`card-step-${i}`}
                 >
-                  <div className="text-6xl font-black text-white/4 absolute top-4 right-5 select-none pointer-events-none">
-                    {String(i + 1).padStart(2, "0")}
+                  <div className="flex items-center justify-between">
+                    <div className="w-11 h-11 bg-primary/12 rounded-xl flex items-center justify-center">
+                      <s.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-primary/60 bg-primary/8 px-2.5 py-1 rounded-full border border-primary/15">{s.sub}</span>
                   </div>
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <s.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-bold text-white text-base leading-snug">{s.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+                  <h3 className="font-semibold text-white text-base leading-snug">{s.title}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed">{s.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -396,8 +457,8 @@ export default function Home() {
         </section>
 
         {/* FAQ */}
-        <section className="py-24">
-          <div className="container mx-auto px-4">
+        <section className="py-24 border-t border-white/6">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -405,10 +466,11 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-center mb-14"
             >
+              <p className="text-primary text-xs uppercase tracking-widest font-semibold mb-3">Got Questions?</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Frequently Asked Questions</h2>
             </motion.div>
 
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-2xl mx-auto">
               {faqs.map((item) => (
                 <FaqItem key={item.q} q={item.q} a={item.a} />
               ))}
@@ -417,29 +479,30 @@ export default function Home() {
         </section>
 
         {/* FINAL CTA */}
-        <section className="bg-card/50 border-t border-border py-28 relative overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-primary/15 rounded-full blur-[140px] pointer-events-none" />
-          <div className="container mx-auto px-4 relative z-10 text-center">
+        <section className="py-28 border-t border-white/6 relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/12 rounded-full blur-[120px] pointer-events-none" />
+          <div className="container mx-auto px-6 relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="max-w-xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
                 Ready to Get 5 Qualified Sales Calls in 60 Days?
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-                Book your free 30-minute strategy call now. We'll show you exactly how we'd get you 5 calls in 60 days—or you don't pay.
+              <p className="text-lg text-white/50 mb-10 leading-relaxed">
+                Book your free 30-minute strategy call. We'll show you exactly how we'd get you 5 calls in 60 days—or you don't pay.
               </p>
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white rounded-md h-14 px-10 text-lg font-bold shadow-[0_0_40px_-10px_rgba(31,98,255,0.5)] hover:shadow-[0_0_60px_-15px_rgba(31,98,255,0.7)] transition-all"
+                className="bg-primary hover:bg-primary/90 text-white rounded-full h-14 px-10 text-lg font-semibold shadow-[0_8px_40px_rgba(31,98,255,0.4)] hover:shadow-[0_8px_50px_rgba(31,98,255,0.55)] transition-all w-full sm:w-auto"
                 data-testid="button-book-call-final"
               >
                 Book Your Free Strategy Call
               </Button>
-              <p className="mt-6 text-sm italic text-muted-foreground max-w-xl mx-auto leading-relaxed">
+              <p className="mt-8 text-sm italic text-white/35 leading-relaxed">
                 P.S. — Every week you wait is another 30 hours wasted on manual lead gen. That's $18,000 in opportunity cost per month. How much longer are you going to let that continue?
               </p>
             </motion.div>
@@ -448,20 +511,20 @@ export default function Home() {
       </main>
 
       {/* FOOTER */}
-      <footer className="border-t border-border bg-background py-10">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <FlaskConical className="w-4 h-4 text-primary" />
-            <span className="font-bold text-white">JOBSDONE <span className="text-primary">LABS</span></span>
+      <footer className="border-t border-white/6 bg-background py-10">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-5 text-sm text-white/30">
+          <div className="flex items-center gap-2.5">
+            <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+              <CalendarCheck className="w-3 h-3 text-white" />
+            </div>
+            <span className="font-semibold text-white/60">JobsDone <span className="text-primary">Labs</span></span>
           </div>
-          <div className="flex items-center gap-1 text-center">
-            support@jobsdonelabs.com
-          </div>
+          <span>support@jobsdonelabs.com</span>
           <div className="flex items-center gap-5">
-            <Link href="/privacy" className="hover:text-white transition-colors" data-testid="link-privacy">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors" data-testid="link-terms">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-white/60 transition-colors" data-testid="link-privacy">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white/60 transition-colors" data-testid="link-terms">Terms of Service</Link>
           </div>
-          <span>© {new Date().getFullYear()} JobsDone Labs. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} JobsDone Labs</span>
         </div>
       </footer>
     </div>
