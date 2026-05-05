@@ -470,7 +470,7 @@ function ExitIntentPopup() {
                 </div>
               </div>
               <h2 className="text-[1.35rem] font-bold sg leading-snug mb-2.5" style={{ color: TEXT, letterSpacing: "-0.015em" }}>
-                We guarantee $30,000 recovered in 90 days.
+                We guarantee $30,000 in net revenue within 90 days.
               </h2>
               <p className="text-[13px] leading-relaxed mb-6" style={{ color: MUTED }}>
                 Most businesses are leaking revenue every day through slow follow-up and broken ops. Book a free 45-min audit and I'll show you exactly where yours are.
@@ -565,8 +565,8 @@ export default function Home() {
 
               <h1 className="font-bold leading-[1.05] mb-5 sg"
                 style={{ fontSize: "clamp(2.2rem, 5vw, 3.4rem)", color: TEXT, letterSpacing: "-0.025em" }}>
-                We guarantee you recover a minimum of{" "}
-                <span style={{ color: ACCENT }}>$30,000 in lost revenue</span>{" "}
+                We guarantee you generate{" "}
+                <span style={{ color: ACCENT }}>$30,000 in net revenue</span>{" "}
                 within 90 days.
               </h1>
 
@@ -587,7 +587,7 @@ export default function Home() {
                 <div className="flex gap-0.5">
                   {[1,2,3,4,5].map(s => <Star key={s} className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />)}
                 </div>
-                <p className="text-[13px]" style={{ color: MUTED }}>50+ businesses automated · Avg. $30K+ saved in 90 days</p>
+                <p className="text-[13px]" style={{ color: MUTED }}>50+ businesses automated · Avg. $30K+ generated in 90 days</p>
               </div>
             </motion.div>
 
@@ -606,7 +606,7 @@ export default function Home() {
         {/* ── VIDEO ── */}
         <section className="max-w-4xl mx-auto px-6 pb-14">
           <Fade>
-            <VideoPlayer label="WATCH: How we save agencies $30K+ in 90 days (3 min)" />
+            <VideoPlayer label="WATCH: How we generate $30K+ in net revenue in 90 days (3 min)" />
           </Fade>
         </section>
 
@@ -628,7 +628,7 @@ export default function Home() {
         <section className="py-16 max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-3 gap-6">
             {[
-              { num: "$30K+", label: "Average saved per client in 90 days" },
+              { num: "$30K+", label: "Average net revenue generated per client in 90 days" },
               { num: "50+", label: "Businesses automated" },
               { num: "80%", label: "Reduction in manual ops work" },
             ].map(({ num, label }) => (
@@ -805,7 +805,7 @@ export default function Home() {
             <div className="max-w-3xl mx-auto rounded-xl p-10 text-center" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
               <Label>Our Promise</Label>
               <h2 className="font-bold leading-tight mb-4 sg" style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", color: TEXT, letterSpacing: "-0.02em" }}>
-                $30,000 in recovered time within 90 days — guaranteed.
+                $30,000 in net revenue within 90 days — guaranteed.
               </h2>
               <p className="text-[15px] leading-relaxed mb-8 max-w-xl mx-auto" style={{ color: MUTED }}>
                 If we don't deliver measurable ROI in your first 90 days, we keep working until we do. No extra charge. No excuses.
@@ -950,7 +950,7 @@ export default function Home() {
                       <p className="text-[12px]" style={{ color: `${MUTED}70` }}>No commitment. No sales pressure. You keep the roadmap either way.</p>
                     </div>
                     <div className="flex flex-wrap gap-4 mt-6 pt-6" style={{ borderTop: `1px solid ${BORDER}` }}>
-                      {["$30K guaranteed in 90 days","Month-to-month only","You own everything"].map(t => (
+                      {["$30K net revenue in 90 days","Month-to-month only","You own everything"].map(t => (
                         <span key={t} className="flex items-center gap-1.5 text-[12px] sg" style={{ color: MUTED }}>
                           <Check className="w-3.5 h-3.5" style={{ color: ACCENT }} /> {t}
                         </span>
