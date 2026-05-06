@@ -10,7 +10,7 @@ const TEXT = "#F0F0F0";
 const MUTED = "#888892";
 const BG = "#0E0E10";
 const BG2 = "#121214";
-const CALENDLY = "https://calendly.com/ryne-bandolik";
+const CALENDLY = "https://api.leadconnectorhq.com/widget/bookings/jdl-audit-call-ryne";
 
 function JobsDoneLogo() {
   return (
