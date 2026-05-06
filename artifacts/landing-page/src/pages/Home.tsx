@@ -556,10 +556,10 @@ export default function Home() {
               transition={{ duration: 0.4 }}
               className="flex-1 min-w-0 pt-2"
             >
-              <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.1em] mb-6 rounded px-3 py-1 sg"
+              <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] mb-6 rounded px-3 py-1.5 sg"
                 style={{ color: ACCENT, background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>
                 <span>For Agencies &amp; Service Businesses</span>
-                <span className="w-1 h-1 rounded-full inline-block" style={{ background: ACCENT }} />
+                <span className="w-1 h-1 rounded-full inline-block flex-shrink-0" style={{ background: ACCENT }} />
                 <span>90-Day Guarantee</span>
               </div>
 
@@ -625,8 +625,8 @@ export default function Home() {
         </section>
 
         {/* ── BIG NUMBERS ── */}
-        <section className="py-16 max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-3 gap-6">
+        <section className="py-12 md:py-16 max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { num: "$30K+", label: "Average net revenue generated per client in 90 days" },
               { num: "50+", label: "Businesses automated" },
@@ -680,7 +680,7 @@ export default function Home() {
         {/* ── INLINE CTA #1 ── */}
         <section className="py-12" style={{ background: BG }}>
           <div className="max-w-6xl mx-auto px-6">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-8 px-8 rounded-xl" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-6 px-6 sm:py-8 sm:px-8 rounded-xl" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
               <div>
                 <p className="font-bold text-[18px] sg mb-1" style={{ color: TEXT, letterSpacing: "-0.01em" }}>Ready to see what's possible for your business?</p>
                 <p className="text-[13px]" style={{ color: MUTED }}>Free 45-minute audit. No commitment. You keep the roadmap.</p>
@@ -774,26 +774,28 @@ export default function Home() {
               <H2>Why founders choose us over everything else</H2>
             </Fade>
             <Fade delay={0.08}>
-              <div className="mt-10 rounded-xl overflow-hidden" style={{ border: `1px solid ${BORDER}` }}>
-                <div className="grid grid-cols-4" style={{ background: SURFACE, borderBottom: `1px solid ${BORDER}` }}>
-                  <div className="p-4" />
-                  {["Hiring In-House","Generic Freelancers","Working With Us"].map((h, i) => (
-                    <div key={h} className="p-4 text-center" style={{
-                      borderLeft: `1px solid ${BORDER}`,
-                      ...(i === 2 ? { background: `${ACCENT}08`, borderLeft: `1px solid ${ACCENT}25` } : {}),
-                    }}>
-                      <span className="text-[13px] font-semibold sg" style={{ color: i === 2 ? ACCENT : MUTED }}>{h}</span>
+              <div className="mt-10 rounded-xl overflow-hidden overflow-x-auto" style={{ border: `1px solid ${BORDER}` }}>
+                <div className="min-w-[520px]">
+                  <div className="grid grid-cols-4" style={{ background: SURFACE, borderBottom: `1px solid ${BORDER}` }}>
+                    <div className="p-3 sm:p-4" />
+                    {["Hiring In-House","Generic Freelancers","Working With Us"].map((h, i) => (
+                      <div key={h} className="p-3 sm:p-4 text-center" style={{
+                        borderLeft: `1px solid ${BORDER}`,
+                        ...(i === 2 ? { background: `${ACCENT}08`, borderLeft: `1px solid ${ACCENT}25` } : {}),
+                      }}>
+                        <span className="text-[12px] sm:text-[13px] font-semibold sg" style={{ color: i === 2 ? ACCENT : MUTED }}>{h}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {comparison.map((row, i) => (
+                    <div key={row.aspect} className="grid grid-cols-4" style={{ borderBottom: i < comparison.length - 1 ? `1px solid ${BORDER}` : "none", background: i % 2 === 0 ? BG : BG2 }}>
+                      <div className="px-3 sm:px-4 py-3 text-[12px] sm:text-[13px] font-medium sg" style={{ color: MUTED }}>{row.aspect}</div>
+                      <div className="px-3 sm:px-4 py-3 text-[12px] sm:text-[13px] text-center" style={{ borderLeft: `1px solid ${BORDER}`, color: MUTED }}>{row.inHouse}</div>
+                      <div className="px-3 sm:px-4 py-3 text-[12px] sm:text-[13px] text-center" style={{ borderLeft: `1px solid ${BORDER}`, color: MUTED }}>{row.freelancer}</div>
+                      <div className="px-3 sm:px-4 py-3 text-[12px] sm:text-[13px] text-center font-semibold sg" style={{ borderLeft: `1px solid ${ACCENT}25`, background: `${ACCENT}06`, color: ACCENT }}>{row.us}</div>
                     </div>
                   ))}
                 </div>
-                {comparison.map((row, i) => (
-                  <div key={row.aspect} className="grid grid-cols-4" style={{ borderBottom: i < comparison.length - 1 ? `1px solid ${BORDER}` : "none", background: i % 2 === 0 ? BG : BG2 }}>
-                    <div className="px-4 py-3 text-[13px] font-medium sg" style={{ color: MUTED }}>{row.aspect}</div>
-                    <div className="px-4 py-3 text-[13px] text-center" style={{ borderLeft: `1px solid ${BORDER}`, color: MUTED }}>{row.inHouse}</div>
-                    <div className="px-4 py-3 text-[13px] text-center" style={{ borderLeft: `1px solid ${BORDER}`, color: MUTED }}>{row.freelancer}</div>
-                    <div className="px-4 py-3 text-[13px] text-center font-semibold sg" style={{ borderLeft: `1px solid ${ACCENT}25`, background: `${ACCENT}06`, color: ACCENT }}>{row.us}</div>
-                  </div>
-                ))}
               </div>
             </Fade>
           </div>
@@ -802,7 +804,7 @@ export default function Home() {
         {/* ── GUARANTEE ── */}
         <section className="py-16 px-6" style={{ background: BG }}>
           <Fade>
-            <div className="max-w-3xl mx-auto rounded-xl p-10 text-center" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+            <div className="max-w-3xl mx-auto rounded-xl p-6 sm:p-10 text-center" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
               <Label>Our Promise</Label>
               <h2 className="font-bold leading-tight mb-4 sg" style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", color: TEXT, letterSpacing: "-0.02em" }}>
                 $30,000 in net revenue within 90 days — guaranteed.
@@ -990,7 +992,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-10 text-[13px]">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-10 text-[13px]">
               <div>
                 <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Services</p>
                 {["CRM Infrastructure","Lead Capture","Lead Nurture","Transcript Analysis","Client Onboarding"].map(l => (
