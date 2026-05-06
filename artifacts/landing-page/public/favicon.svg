@@ -1,3 +1,26 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+  <!-- Dark rounded background -->
+  <rect width="180" height="180" rx="36" fill="#0E0E10"/>
+
+  <!-- Flask neck top cap -->
+  <rect x="72" y="24" width="36" height="10" rx="5" fill="#1F62FF"/>
+
+  <!-- Flask neck -->
+  <rect x="78" y="32" width="24" height="34" rx="3" fill="#1F62FF"/>
+
+  <!-- Flask body -->
+  <path d="M78 66 L52 120 Q47 132 58 136 L122 136 Q133 132 128 120 L102 66 Z" fill="#1F62FF"/>
+
+  <!-- Flask body inner shade -->
+  <path d="M84 66 L62 116 Q59 124 67 128 L113 128 Q121 124 118 116 L96 66 Z" fill="#1540CC"/>
+
+  <!-- Circuit nodes -->
+  <circle cx="80" cy="104" r="4.5" fill="#5B9BFF"/>
+  <circle cx="100" cy="118" r="4.5" fill="#5B9BFF"/>
+  <circle cx="100" cy="90" r="4.5" fill="#5B9BFF"/>
+
+  <!-- Circuit lines -->
+  <line x1="80" y1="104" x2="100" y2="90"  stroke="#7AB0FF" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="100" y1="90"  x2="100" y2="118" stroke="#7AB0FF" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="80" y1="104" x2="100" y2="118" stroke="#7AB0FF" stroke-width="2.5" stroke-linecap="round"/>
 </svg>
