@@ -222,7 +222,7 @@ export default function ROICalculator() {
                 <>
                   <p className="font-bold text-[15px] mb-1.5" style={{ color: "#34d399" }}>✓ You qualify for our $30K guarantee</p>
                   <p className="text-[13px] leading-relaxed" style={{ color: "#34d39980" }}>
-                    Based on your numbers, we're confident we can generate $30,000+ in net revenue within 90 days — or we keep working until we do.
+                    Based on your numbers, we're confident we can generate $30,000+ in net profit within 90 days — or we keep working until we do.
                   </p>
                 </>
               ) : (
