@@ -1,0 +1,132 @@
+# JDL Website — Terms & Privacy — Replit Deployment
+
+Two ready-to-deploy HTML pages for A2P 10DLC compliance. Drop these into your Replit project and they'll serve at `/terms` and `/privacy`.
+
+## ⚠️ Before publishing
+
+These files are **templates** — Claude is not a lawyer. Have an attorney or compliance service (Termly, iubenda, Rocket Lawyer) review before going live.
+
+## What's included
+
+- `terms.html` — Terms of Service page
+- `privacy.html` — Privacy Policy page
+
+Both files are self-contained: HTML + inline CSS, no external dependencies, mobile-responsive, A2P-compliant language.
+
+## Setup options (pick one based on your Replit project type)
+
+### Option A — Static HTML site
+
+If your Replit project is a static site (just HTML/CSS/JS), this is the simplest path:
+
+1. Upload both files to your project root or a `public/` folder
+2. Rename if your routing requires it (e.g., to `/terms/index.html` and `/privacy/index.html` if you want clean URLs without the `.html` extension)
+3. Make sure your homepage links to `/terms` and `/privacy` in the footer
+
+### Option B — Express / Node.js server
+
+If your Replit is running an Express server, add these routes:
+
+```javascript
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Serve static HTML files
+app.get('/terms', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'terms.html'));
+});
+
+app.get('/privacy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'privacy.html'));
+});
+
+// Or serve the entire public folder
+app.use(express.static('public'));
+
+app.listen(3000);
+```
+
+Place both `terms.html` and `privacy.html` in a `public/` folder.
+
+### Option C — React / Next.js / Vite
+
+If your Replit is a React app, you have two paths:
+
+1. **Static**: Place the HTML files in `public/` directly. They'll be served at `/terms.html` and `/privacy.html`. Routes-as-files.
+
+2. **As components**: Convert each HTML file into a React component (extract the `<main>` content, wrap in JSX, paste inline CSS into a styled component or CSS module). Then add routes:
+
+```jsx
+// App.jsx (using react-router)
+import { Routes, Route } from 'react-router-dom';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/terms" element={<Terms />} />
+  <Route path="/privacy" element={<Privacy />} />
+</Routes>
+```
+
+### Option D — Next.js App Router
+
+```
+app/
+  ├── terms/
+  │   └── page.tsx   ← convert terms.html content here
+  └── privacy/
+      └── page.tsx   ← convert privacy.html content here
+```
+
+## Required edits before publishing
+
+In **both** files, replace `[REPLACE WITH DATE]` with the actual date you publish, e.g., `May 7, 2026`.
+
+## Required website-wide changes (not in these files)
+
+To pass A2P 10DLC review, the **entire website** must show:
+
+1. **Footer links to /terms and /privacy on every page** — copy the `<footer>` block from these files into your homepage and other pages, OR use a shared footer component.
+
+2. **SMS consent disclosure on every form that collects a phone number.** Add this near the phone field:
+
+   ```
+   By providing your phone number, you agree to receive SMS messages from
+   Jobs Done Labs about your inquiry. Message and data rates may apply.
+   Reply STOP to opt out. View our Privacy Policy: /privacy
+   ```
+
+3. **Business address, email, phone visible on the site** — the footer block from these files handles this.
+
+4. **GHL chat widget embedded** on relevant pages (if you use it).
+
+5. **No mention of "buying leads" or "affiliate marketing leads"** anywhere on the website.
+
+## Verifying once deployed
+
+1. Visit `https://jobsdonelabs.ai/terms` — should load without 404
+2. Visit `https://jobsdonelabs.ai/privacy` — should load without 404
+3. Footer links work from homepage
+4. Mobile view looks readable (test at narrow widths)
+5. The SMS-related sections are clearly visible in the Privacy Policy
+
+Once verified, take screenshots of both live pages — Twilio/TCR may ask for them during A2P review.
+
+## A2P-required language already in these files
+
+The Privacy Policy includes the explicit language carriers check for:
+
+- "We do NOT sell, rent, lease, or share your phone number, SMS opt-in data, or text-message content with any third parties for their own marketing or promotional purposes."
+- Message frequency disclosure
+- "Message and data rates may apply"
+- STOP / HELP keyword handling
+- Consent is not required for purchase
+- Description of message types
+
+Don't remove this language during your edits.
+
+## Questions
+
+If anything in the templates doesn't fit your business (different governing state, different services, etc.), edit accordingly — but keep the SMS section intact for A2P compliance.

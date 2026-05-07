@@ -5,6 +5,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import ROICalculator from "@/pages/ROICalculator";
+import Terms from "@/pages/Terms";
+import Privacy from "@/pages/Privacy";
 
 const queryClient = new QueryClient();
 
@@ -13,6 +15,8 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/roi-calculator" component={ROICalculator} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/privacy" component={Privacy} />
       <Route component={NotFound} />
     </Switch>
   );
