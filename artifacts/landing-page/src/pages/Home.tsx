@@ -630,36 +630,54 @@ export default function Home() {
         </section>
 
         {/* ── CASE STUDY LINK ── */}
-        <section className="py-8" style={{ background: BG }}>
+        <section className="py-12" style={{ background: BG }}>
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
-              <a
-                href={`${import.meta.env.BASE_URL}case-study.pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-5 rounded-xl transition-colors duration-150 group"
-                style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
-                onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#2e2e32"}
-                onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>
-                    <FileText className="w-4.5 h-4.5" style={{ color: ACCENT }} />
-                  </div>
-                  <div>
-                    <div className="flex flex-wrap items-center gap-2 mb-0.5">
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.1em] sg" style={{ color: ACCENT }}>Case Study · March 2026</span>
-                      <span className="text-[11px]" style={{ color: MUTED }}>· BCAT Logistics · Ivan Cartage · Best Care Auto</span>
+              <div className="rounded-xl overflow-hidden" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+                <div className="flex flex-col md:flex-row">
+                  {/* Left — description */}
+                  <div className="flex-1 p-7 md:p-9 flex flex-col justify-center gap-4">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="text-[11px] font-semibold uppercase tracking-[0.1em] px-2.5 py-1 rounded sg" style={{ color: ACCENT, background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>Case Study · March 2026</span>
+                      <span className="text-[12px]" style={{ color: MUTED }}>BCAT Logistics · Ivan Cartage · Best Care Auto</span>
                     </div>
-                    <p className="font-semibold text-[15px] sg" style={{ color: TEXT, letterSpacing: "-0.01em" }}>
-                      How One Logistics Group Created $2.0M in Net New Revenue — Without Adding Headcount
+                    <h3 className="font-bold sg leading-tight" style={{ fontSize: "clamp(1.3rem, 2.5vw, 1.75rem)", color: TEXT, letterSpacing: "-0.02em" }}>
+                      How One Logistics Group Created<br className="hidden sm:block" /> $2.0M in Net New Revenue — Without Adding Headcount
+                    </h3>
+                    <p className="text-[14px] leading-relaxed max-w-lg" style={{ color: MUTED }}>
+                      A multi-company transportation group deployed a unified AI command center across three business units — turning five hidden revenue leaks into five working profit engines in 12 months.
                     </p>
+                    <div className="flex flex-wrap gap-4 pt-1">
+                      {[["$2.0M+", "Net new revenue"], ["$310K", "Margin recovery"], ["$3.78M", "Active pipeline"]].map(([v, l]) => (
+                        <div key={l}>
+                          <p className="font-bold text-[1.1rem] sg leading-none mb-0.5" style={{ color: ACCENT, letterSpacing: "-0.02em" }}>{v}</p>
+                          <p className="text-[12px]" style={{ color: MUTED }}>{l}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right — CTA */}
+                  <div className="md:w-64 flex-shrink-0 flex flex-col items-center justify-center gap-5 p-7 md:p-9" style={{ borderTop: `1px solid ${BORDER}`, ...(true && { borderTop: undefined }) }}>
+                    <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>
+                      <FileText className="w-6 h-6" style={{ color: ACCENT }} />
+                    </div>
+                    <div className="text-center">
+                      <p className="font-semibold text-[14px] sg mb-1" style={{ color: TEXT }}>Full case study</p>
+                      <p className="text-[12px]" style={{ color: MUTED }}>12-page PDF · Free download</p>
+                    </div>
+                    <a
+                      href={`${import.meta.env.BASE_URL}case-study.pdf`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 font-semibold text-[14px] px-5 py-2.5 rounded-lg transition-opacity duration-150 hover:opacity-80 sg"
+                      style={{ background: ACCENT, color: "#fff" }}
+                    >
+                      Read the Case Study <ArrowRight className="w-4 h-4" />
+                    </a>
                   </div>
                 </div>
-                <div className="flex items-center gap-1.5 text-[13px] font-medium flex-shrink-0 sg" style={{ color: ACCENT }}>
-                  Read the case study <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
-                </div>
-              </a>
+              </div>
             </Fade>
           </div>
         </section>
