@@ -28,6 +28,7 @@ import {
   Users,
   FileText,
   Zap,
+  PhoneCall,
 } from "lucide-react";
 
 /* ─────────────────────────────────────────────── */
@@ -129,7 +130,7 @@ function WorkflowCard() {
               <Mail className="w-3 h-3" style={{ color: ACCENT }} />
             </div>
             <div>
-              <p className="font-semibold text-[12px] leading-none mb-0.5 sg" style={{ color: TEXT }}>Email Nurture</p>
+              <p className="font-semibold text-[12px] leading-none mb-0.5 sg" style={{ color: TEXT }}>Email/SMS Nurture</p>
               <p className="text-[10px]" style={{ color: MUTED }}>Follow-up sent</p>
             </div>
           </div>
@@ -143,6 +144,10 @@ function WorkflowCard() {
             </div>
           </div>
         </div>
+        <div className="flex justify-center">
+          <div className="w-px h-3.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
+        </div>
+        {row(<PhoneCall className="w-3.5 h-3.5" style={{ color: "#34d399" }} />, "Sales Call", "Closed / Won", pill("Closed/Won", "green"))}
         <div className="flex justify-center">
           <div className="w-px h-3.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
         </div>
