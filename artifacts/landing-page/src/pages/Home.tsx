@@ -218,12 +218,6 @@ const trustLogos = ["Apollo.io","HubSpot","Make.com","Airtable","Slack","ClickUp
 
 const industries = [
   {
-    Icon: Megaphone,
-    title: "Marketing Agencies",
-    desc: "Automate client onboarding, CRM management, lead nurture, and sales call transcriptions — so your team delivers faster without growing headcount.",
-    tags: ["Onboarding in minutes","Zero manual CRM entry","Faster client delivery"],
-  },
-  {
     Icon: Wrench,
     title: "Home Service Businesses",
     desc: "From lead capture to follow-up to scheduling — stop losing jobs to missed calls and slow responses. Your automated ops system works while your crews are in the field.",
@@ -234,6 +228,12 @@ const industries = [
     title: "Aesthetic & High-Ticket Service Businesses",
     desc: "Medspas, cosmetic practices, and premium service providers — automate consultation booking, lead nurture, and client follow-up so no inquiry slips through the cracks.",
     tags: ["Consultation booking automated","Lead nurture sequences","No-show reduction"],
+  },
+  {
+    Icon: Megaphone,
+    title: "Marketing Agencies",
+    desc: "Automate client onboarding, CRM management, lead nurture, and sales call transcriptions — so your team delivers faster without growing headcount.",
+    tags: ["Onboarding in minutes","Zero manual CRM entry","Faster client delivery"],
   },
 ];
 
@@ -1048,7 +1048,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Industries</p>
-                {["Marketing Agencies","Home Service","Aesthetic Businesses","Medspas & Practices"].map(l => (
+                {["Home Service","Aesthetic Businesses","Medspas & Practices","Marketing Agencies"].map(l => (
                   <p key={l} className="mb-1.5 transition-colors duration-150 cursor-pointer" style={{ color: MUTED }}
                     onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
                     onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>{l}</p>
