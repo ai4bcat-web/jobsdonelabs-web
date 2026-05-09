@@ -629,6 +629,81 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── CASE STUDY ── */}
+        <section className="py-16 md:py-20" style={{ background: BG }}>
+          <div className="max-w-6xl mx-auto px-6">
+            <Fade>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.12em] px-2.5 py-1 rounded sg" style={{ color: ACCENT, background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>Case Study · March 2026</span>
+                <span className="text-[13px]" style={{ color: MUTED }}>BCAT Logistics · Ivan Cartage · Best Care Auto</span>
+              </div>
+              <h2 className="font-bold leading-[1.0] mb-6 sg" style={{ fontSize: "clamp(2.6rem, 6vw, 5rem)", color: TEXT, letterSpacing: "-0.03em" }}>
+                $2.0M in net new revenue.<br />
+                <span style={{ color: ACCENT }}>One platform. Three companies.</span>
+              </h2>
+              <p className="text-[16px] leading-relaxed max-w-2xl mb-10" style={{ color: MUTED }}>
+                A multi-company transportation group stopped leaking revenue and started capturing it — by deploying a unified AI-powered command center across three business units, without adding headcount.
+              </p>
+            </Fade>
+
+            <Fade delay={0.06}>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                {[
+                  { num: "$2.0M+", label: "Net new revenue created", sub: "12-month period" },
+                  { num: "$310K", label: "Margin recovery", sub: "Across all 3 companies" },
+                  { num: "$3.78M", label: "Active sales pipeline", sub: "At close of study" },
+                  { num: "160bps", label: "Gross margin lift", sub: "BCAT Logistics alone" },
+                ].map(({ num, label, sub }) => (
+                  <div key={num} className="rounded-xl p-5" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+                    <p className="font-bold mb-1 sg" style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", color: ACCENT, letterSpacing: "-0.03em" }}>{num}</p>
+                    <p className="text-[13px] font-medium leading-snug mb-1 sg" style={{ color: TEXT }}>{label}</p>
+                    <p className="text-[11px]" style={{ color: MUTED }}>{sub}</p>
+                  </div>
+                ))}
+              </div>
+            </Fade>
+
+            <Fade delay={0.1}>
+              <div className="rounded-xl p-6 md:p-8" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  <div className="flex-1">
+                    <div className="flex gap-6 flex-wrap mb-5">
+                      {[
+                        { name: "BCAT Logistics", role: "Freight Brokerage", stat: "$9.7M rev · 16.8% margin" },
+                        { name: "Ivan Cartage", role: "Amazon DSP", stat: "5.2% → 7.5% true profit" },
+                        { name: "Best Care Auto", role: "Vehicle Transport", stat: "$940K pipeline · 3.9x ROAS" },
+                      ].map(c => (
+                        <div key={c.name} className="flex flex-col gap-0.5">
+                          <p className="font-semibold text-[13px] sg" style={{ color: TEXT }}>{c.name}</p>
+                          <p className="text-[11px] uppercase tracking-wide" style={{ color: ACCENT }}>{c.role}</p>
+                          <p className="text-[12px]" style={{ color: MUTED }}>{c.stat}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <blockquote className="text-[15px] leading-relaxed italic" style={{ color: `${TEXT}bb`, borderLeft: `2px solid ${ACCENT}40`, paddingLeft: "1rem" }}>
+                      "Visibility isn't a reporting benefit — it's a revenue lever. Every dollar of new revenue in this study traces back to a decision that was only possible because the data existed in real time."
+                    </blockquote>
+                    <p className="text-[12px] mt-2 ml-4" style={{ color: MUTED }}>— Ryne Bandolik, Founder · JobsDone Labs</p>
+                  </div>
+                  <div className="flex flex-col gap-3 md:w-56 flex-shrink-0">
+                    {[
+                      ["26.4%", "BCAT win rate"],
+                      ["96.2%", "Group on-time delivery"],
+                      ["28", "Monthly meetings booked"],
+                      ["8.4%", "Email reply rate (vs 3–5% avg)"],
+                    ].map(([v, l]) => (
+                      <div key={l} className="flex items-center justify-between py-2.5 px-3 rounded-lg" style={{ background: BG, border: `1px solid ${BORDER}` }}>
+                        <span className="text-[12px]" style={{ color: MUTED }}>{l}</span>
+                        <span className="font-bold text-[14px] sg" style={{ color: ACCENT }}>{v}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Fade>
+          </div>
+        </section>
+
         {/* ── BIG NUMBERS ── */}
         <section className="py-12 md:py-16 max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
