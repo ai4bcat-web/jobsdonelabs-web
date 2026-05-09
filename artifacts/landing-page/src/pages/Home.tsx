@@ -29,6 +29,7 @@ import {
   FileText,
   Zap,
   PhoneCall,
+  Sparkles,
 } from "lucide-react";
 
 /* ─────────────────────────────────────────────── */
@@ -229,10 +230,10 @@ const industries = [
     tags: ["Instant lead response","Automated follow-ups","Job tracking & reports"],
   },
   {
-    Icon: BarChart3,
-    title: "Finance & Professional Services",
-    desc: "Streamline client intake, compliance documentation, appointment nurture, and reporting. Show measurable ROI to clients while running a leaner back office.",
-    tags: ["Client intake automated","No-show reduction","Reporting automated"],
+    Icon: Sparkles,
+    title: "Aesthetic & High-Ticket Service Businesses",
+    desc: "Medspas, cosmetic practices, and premium service providers — automate consultation booking, lead nurture, and client follow-up so no inquiry slips through the cracks.",
+    tags: ["Consultation booking automated","Lead nurture sequences","No-show reduction"],
   },
 ];
 
@@ -1047,7 +1048,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Industries</p>
-                {["Marketing Agencies","Home Service","Finance Firms","Professional Services"].map(l => (
+                {["Marketing Agencies","Home Service","Aesthetic Businesses","Medspas & Practices"].map(l => (
                   <p key={l} className="mb-1.5 transition-colors duration-150 cursor-pointer" style={{ color: MUTED }}
                     onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
                     onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>{l}</p>
