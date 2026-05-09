@@ -946,20 +946,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── WRITTEN REVIEWS ── */}
-        <section className="py-16" style={{ background: BG2 }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <Fade>
-              <Label>Reviews</Label>
-              <H2>What clients say</H2>
-            </Fade>
-            <Fade delay={0.08}>
-              <div className="mt-10">
-                <ReviewsCarousel />
-              </div>
-            </Fade>
-          </div>
-        </section>
 
         {/* ── FAQ ── */}
         <section id="faq" className="py-16" style={{ background: BG }}>
