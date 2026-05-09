@@ -906,44 +906,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── RESULTS (testimonials) ── */}
+        {/* ── WRITTEN REVIEWS ── */}
         <section id="results" className="py-16" style={{ background: BG }}>
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
               <Label>Client Results</Label>
-              <H2>Founders who've used our system — and what happened.</H2>
-              <p className="text-[14px] mt-3 mb-9 max-w-xl leading-relaxed" style={{ color: MUTED }}>
-                Agency owners and business founders share what changed after putting our automation systems to work.
-              </p>
+              <H2>What clients say</H2>
             </Fade>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {testimonials.map((t, i) => (
-                <Fade key={t.name} delay={i * 0.04}>
-                  <div
-                    className="rounded-xl p-5 flex flex-col gap-3.5 transition-colors duration-150"
-                    style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
-                    data-testid={`card-testimonial-${i}`}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#2e2e32"}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}
-                  >
-                    <div className="flex gap-0.5">
-                      {[1,2,3,4,5].map(s => <Star key={s} className="w-3 h-3 text-yellow-400 fill-yellow-400" />)}
-                    </div>
-                    <p className="text-[13px] leading-relaxed italic flex-1" style={{ color: MUTED }}>"{t.quote}"</p>
-                    <div className="flex items-center gap-2.5 pt-3" style={{ borderTop: `1px solid ${BORDER}` }}>
-                      <div className="w-8 h-8 rounded-lg flex items-center justify-center text-[13px] font-bold sg flex-shrink-0" style={{ background: `${ACCENT}12`, color: ACCENT }}>
-                        {t.name[0]}
-                      </div>
-                      <div>
-                        <p className="font-semibold text-[13px] leading-none mb-0.5 sg" style={{ color: TEXT }}>{t.name}</p>
-                        <p className="text-[12px]" style={{ color: ACCENT }}>{t.company}</p>
-                        <p className="text-[11px]" style={{ color: MUTED }}>{t.role}</p>
-                      </div>
-                    </div>
-                  </div>
-                </Fade>
-              ))}
-            </div>
+            <Fade delay={0.08}>
+              <div className="mt-10">
+                <ReviewsCarousel />
+              </div>
+            </Fade>
           </div>
         </section>
 
