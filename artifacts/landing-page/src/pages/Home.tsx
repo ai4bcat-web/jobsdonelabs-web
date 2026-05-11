@@ -553,67 +553,90 @@ export default function Home() {
       <main>
 
         {/* ── HERO ── */}
-        <section className="max-w-6xl mx-auto px-6 pt-16 pb-10">
-          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+        <section className="w-full px-6 pt-14 pb-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="max-w-3xl mx-auto"
+          >
+            {/* Badge */}
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[11px] font-semibold uppercase tracking-[0.1em] mb-6 rounded px-3 py-1.5 sg"
+              style={{ color: ACCENT, background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>
+              <span>For Agencies &amp; Service Businesses</span>
+              <span className="w-1 h-1 rounded-full inline-block flex-shrink-0" style={{ background: ACCENT }} />
+              <span>90-Day Guarantee</span>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="flex-1 min-w-0 pt-2"
-            >
-              <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] mb-6 rounded px-3 py-1.5 sg"
-                style={{ color: ACCENT, background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>
-                <span>For Agencies &amp; Service Businesses</span>
-                <span className="w-1 h-1 rounded-full inline-block flex-shrink-0" style={{ background: ACCENT }} />
-                <span>90-Day Guarantee</span>
-              </div>
+            {/* Headline */}
+            <h1 className="font-bold leading-[1.08] mb-5 sg"
+              style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", color: TEXT, letterSpacing: "-0.025em" }}>
+              We guarantee you generate{" "}
+              <span style={{ color: ACCENT }}>$30,000 in net profit</span>{" "}
+              within 90 days.
+            </h1>
 
-              <h1 className="font-bold leading-[1.05] mb-5 sg"
-                style={{ fontSize: "clamp(2.2rem, 5vw, 3.4rem)", color: TEXT, letterSpacing: "-0.025em" }}>
-                We guarantee you generate{" "}
-                <span style={{ color: ACCENT }}>$30,000 in net profit</span>{" "}
-                within 90 days.
-              </h1>
+            {/* Sub-copy */}
+            <p className="text-[16px] leading-[1.65] mb-8 max-w-[540px] mx-auto" style={{ color: MUTED }}>
+              By eliminating the lead leaks, slow follow-up, and manual bottlenecks currently costing you deals — or we keep working until we do.
+            </p>
+          </motion.div>
 
-              <p className="text-[16px] leading-[1.65] mb-8 max-w-[480px]" style={{ color: MUTED }}>
-                By eliminating the lead leaks, slow follow-up, and manual bottlenecks currently costing you deals — or we keep working until we do.
-              </p>
-
-              <div className="flex flex-wrap gap-3 mb-7">
-                <PrimaryBtn href={CALENDLY} size="lg" data-testid="button-hero-primary">
-                  Book a Free Audit Call <ArrowRight className="w-4 h-4" />
-                </PrimaryBtn>
-                <OutlineBtn onClick={() => scrollTo("results")} data-testid="button-hero-results">
-                  See Client Results
-                </OutlineBtn>
-              </div>
-
-              <div className="flex items-center gap-2.5">
-                <div className="flex gap-0.5">
-                  {[1,2,3,4,5].map(s => <Star key={s} className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />)}
-                </div>
-                <p className="text-[13px]" style={{ color: MUTED }}>50+ businesses automated · Avg. $30K+ generated in 90 days</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.45, delay: 0.1 }}
-              className="flex-1 min-w-0 w-full lg:max-w-[420px]"
-            >
-              <WorkflowCard />
-            </motion.div>
-
-          </div>
-        </section>
-
-        {/* ── VIDEO ── */}
-        <section className="max-w-4xl mx-auto px-6 pb-14">
-          <Fade>
+          {/* Video */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: 0.12 }}
+            className="max-w-2xl mx-auto mb-7"
+          >
             <VideoPlayer label="WATCH: How we generate $30K+ in net profit in 90 days (3 min)" />
-          </Fade>
+          </motion.div>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.22 }}
+            className="flex flex-wrap items-center justify-center gap-3 mb-10"
+          >
+            <PrimaryBtn href={CALENDLY} size="lg" data-testid="button-hero-primary">
+              Book a Free Audit Call <ArrowRight className="w-4 h-4" />
+            </PrimaryBtn>
+          </motion.div>
+
+          {/* Laurel stats */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.32 }}
+            className="flex flex-wrap items-center justify-center gap-6 sm:gap-10"
+          >
+            {[
+              { value: "50+", label: "Businesses Automated" },
+              { value: "$30K+", label: "Avg. Generated" },
+              { value: "90 Days", label: "Or We Keep Working" },
+              { value: "5-Star", label: "Client Reviews" },
+            ].map(({ value, label }) => (
+              <div key={label} className="flex flex-col items-center gap-1">
+                <div className="flex items-center gap-2">
+                  {/* left laurel */}
+                  <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.85"/>
+                    <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.7"/>
+                    <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.55"/>
+                  </svg>
+                  <span className="font-bold sg text-[18px]" style={{ color: TEXT }}>{value}</span>
+                  {/* right laurel */}
+                  <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: "scaleX(-1)" }}>
+                    <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.85"/>
+                    <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.7"/>
+                    <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.55"/>
+                  </svg>
+                </div>
+                <span className="text-[11px] uppercase tracking-[0.08em] font-semibold sg" style={{ color: MUTED }}>{label}</span>
+              </div>
+            ))}
+          </motion.div>
         </section>
 
         {/* ── LOGO STRIP ── */}
