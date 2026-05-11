@@ -30,6 +30,8 @@ import {
   Zap,
   PhoneCall,
   Sparkles,
+  DollarSign,
+  CalendarDays,
 } from "lucide-react";
 
 /* ─────────────────────────────────────────────── */
@@ -611,33 +613,43 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.32 }}
             className="max-w-5xl mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16 text-left"
           >
-            {/* Left: laurel stats */}
-            <div className="flex-1 grid grid-cols-2 gap-4 w-full">
-              {[
-                { value: "50+", label: "Businesses Automated" },
-                { value: "$30K+", label: "Avg. Generated" },
-                { value: "90 Days", label: "Or We Keep Working" },
-                { value: "5-Star", label: "Client Reviews" },
-              ].map(({ value, label }) => (
-                <div key={label} className="flex flex-col items-center justify-center gap-3 rounded-xl py-7 px-4"
-                  style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-                  {/* laurel row */}
-                  <div className="flex items-center gap-2.5">
-                    <svg width="26" height="32" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.9"/>
-                      <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.75"/>
-                      <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.6"/>
-                    </svg>
-                    <span className="font-bold sg" style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: TEXT, letterSpacing: "-0.03em", lineHeight: 1 }}>{value}</span>
-                    <svg width="26" height="32" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: "scaleX(-1)" }}>
-                      <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.9"/>
-                      <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.75"/>
-                      <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.6"/>
-                    </svg>
+            {/* Left: headline + stat cards */}
+            <div className="flex-1 flex flex-col gap-6">
+              {/* Stacked headline */}
+              <div>
+                <p className="font-black sg leading-[1.05] tracking-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: TEXT }}>
+                  AUTOMATE.<br />
+                  <span style={{ color: ACCENT }}>CLOSE MORE.</span><br />
+                  GROW FASTER.
+                </p>
+                <div className="w-10 h-1 rounded-full mt-3 mb-4" style={{ background: ACCENT }} />
+                <p className="text-[14px] leading-relaxed max-w-[340px]" style={{ color: MUTED }}>
+                  Our live automation system works 24/7 to capture leads, nurture prospects, and close more deals on autopilot.
+                </p>
+              </div>
+
+              {/* 2×2 stat cards */}
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { Icon: Users,        value: "50+",   line1: "BUSINESSES",  line2: "AUTOMATED" },
+                  { Icon: DollarSign,   value: "$30K+", line1: "AVG. REVENUE", line2: "GENERATED" },
+                  { Icon: CalendarDays, value: "90 DAYS", line1: "OR WE KEEP", line2: "WORKING" },
+                  { Icon: Star,         value: "5-STAR", line1: "CLIENT",      line2: "REVIEWS" },
+                ].map(({ Icon, value, line1, line2 }) => (
+                  <div key={value} className="flex items-center gap-3 rounded-xl px-4 py-5"
+                    style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+                      style={{ background: `${ACCENT}15`, border: `1px solid ${ACCENT}25` }}>
+                      <Icon className="w-4.5 h-4.5" style={{ color: ACCENT }} />
+                    </div>
+                    <div>
+                      <p className="font-black sg leading-none mb-1" style={{ fontSize: "clamp(1.3rem, 2.5vw, 1.75rem)", color: TEXT, letterSpacing: "-0.02em" }}>{value}</p>
+                      <p className="text-[11px] font-semibold sg leading-tight" style={{ color: ACCENT }}>{line1}</p>
+                      <p className="text-[11px] font-semibold sg leading-tight" style={{ color: MUTED }}>{line2}</p>
+                    </div>
                   </div>
-                  <span className="text-[12px] uppercase tracking-[0.09em] font-semibold sg text-center" style={{ color: MUTED }}>{label}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
             {/* Right: WorkflowCard */}
