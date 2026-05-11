@@ -724,6 +724,19 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── FUNNEL DIAGRAM ── */}
+        <section className="max-w-5xl mx-auto px-6 pb-14">
+          <Fade>
+            <div className="rounded-xl overflow-hidden" style={{ border: `1px solid ${BORDER}` }}>
+              <img
+                src={`${import.meta.env.BASE_URL}hero-diagram.png`}
+                alt="Inbound to Impact — Automated by JobsDone Labs"
+                className="w-full h-auto block"
+              />
+            </div>
+          </Fade>
+        </section>
+
         {/* ── INDUSTRIES ── */}
         <section id="industries" className="py-16" style={{ background: BG2 }}>
           <div className="max-w-6xl mx-auto px-6">
