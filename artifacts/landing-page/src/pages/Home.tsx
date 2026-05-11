@@ -604,46 +604,45 @@ export default function Home() {
             </PrimaryBtn>
           </motion.div>
 
-          {/* Laurel stats */}
+          {/* Laurel stats + Workflow Card — 2 columns */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.32 }}
-            className="flex flex-wrap items-center justify-center gap-6 sm:gap-10"
+            className="max-w-5xl mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16 text-left"
           >
-            {[
-              { value: "50+", label: "Businesses Automated" },
-              { value: "$30K+", label: "Avg. Generated" },
-              { value: "90 Days", label: "Or We Keep Working" },
-              { value: "5-Star", label: "Client Reviews" },
-            ].map(({ value, label }) => (
-              <div key={label} className="flex flex-col items-center gap-1">
-                <div className="flex items-center gap-2">
-                  {/* left laurel */}
-                  <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.85"/>
-                    <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.7"/>
-                    <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.55"/>
-                  </svg>
-                  <span className="font-bold sg text-[18px]" style={{ color: TEXT }}>{value}</span>
-                  {/* right laurel */}
-                  <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: "scaleX(-1)" }}>
-                    <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.85"/>
-                    <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.7"/>
-                    <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.55"/>
-                  </svg>
+            {/* Left: laurel stats */}
+            <div className="flex-1 grid grid-cols-2 gap-x-10 gap-y-7 justify-items-center lg:justify-items-start">
+              {[
+                { value: "50+", label: "Businesses Automated" },
+                { value: "$30K+", label: "Avg. Generated" },
+                { value: "90 Days", label: "Or We Keep Working" },
+                { value: "5-Star", label: "Client Reviews" },
+              ].map(({ value, label }) => (
+                <div key={label} className="flex flex-col items-center gap-1">
+                  <div className="flex items-center gap-2">
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.85"/>
+                      <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.7"/>
+                      <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.55"/>
+                    </svg>
+                    <span className="font-bold sg text-[18px]" style={{ color: TEXT }}>{value}</span>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: "scaleX(-1)" }}>
+                      <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.85"/>
+                      <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.7"/>
+                      <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.55"/>
+                    </svg>
+                  </div>
+                  <span className="text-[11px] uppercase tracking-[0.08em] font-semibold sg" style={{ color: MUTED }}>{label}</span>
                 </div>
-                <span className="text-[11px] uppercase tracking-[0.08em] font-semibold sg" style={{ color: MUTED }}>{label}</span>
-              </div>
-            ))}
-          </motion.div>
-        </section>
+              ))}
+            </div>
 
-        {/* ── WORKFLOW CARD ── */}
-        <section className="max-w-md mx-auto px-6 pb-14">
-          <Fade>
-            <WorkflowCard />
-          </Fade>
+            {/* Right: WorkflowCard */}
+            <div className="w-full lg:w-auto lg:flex-shrink-0 lg:max-w-[420px]">
+              <WorkflowCard />
+            </div>
+          </motion.div>
         </section>
 
         {/* ── LOGO STRIP ── */}
