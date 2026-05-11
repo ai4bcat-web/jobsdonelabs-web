@@ -639,6 +639,13 @@ export default function Home() {
           </motion.div>
         </section>
 
+        {/* ── WORKFLOW CARD ── */}
+        <section className="max-w-md mx-auto px-6 pb-14">
+          <Fade>
+            <WorkflowCard />
+          </Fade>
+        </section>
+
         {/* ── LOGO STRIP ── */}
         <section className="py-7 overflow-hidden" style={{ borderTop: `1px solid ${BORDER}`, borderBottom: `1px solid ${BORDER}`, background: BG2 }}>
           <p className="text-center text-[11px] uppercase tracking-[0.13em] font-semibold mb-5 sg" style={{ color: ACCENT }}>
@@ -722,13 +729,6 @@ export default function Home() {
               </Fade>
             ))}
           </div>
-        </section>
-
-        {/* ── WORKFLOW CARD ── */}
-        <section className="max-w-md mx-auto px-6 pb-14">
-          <Fade>
-            <WorkflowCard />
-          </Fade>
         </section>
 
         {/* ── INDUSTRIES ── */}
