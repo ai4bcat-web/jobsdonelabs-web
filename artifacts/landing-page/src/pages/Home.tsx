@@ -612,28 +612,30 @@ export default function Home() {
             className="max-w-5xl mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16 text-left"
           >
             {/* Left: laurel stats */}
-            <div className="flex-1 grid grid-cols-2 gap-x-10 gap-y-7 justify-items-center lg:justify-items-start">
+            <div className="flex-1 grid grid-cols-2 gap-4 w-full">
               {[
                 { value: "50+", label: "Businesses Automated" },
                 { value: "$30K+", label: "Avg. Generated" },
                 { value: "90 Days", label: "Or We Keep Working" },
                 { value: "5-Star", label: "Client Reviews" },
               ].map(({ value, label }) => (
-                <div key={label} className="flex flex-col items-center gap-1">
-                  <div className="flex items-center gap-2">
-                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.85"/>
-                      <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.7"/>
-                      <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.55"/>
+                <div key={label} className="flex flex-col items-center justify-center gap-3 rounded-xl py-7 px-4"
+                  style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+                  {/* laurel row */}
+                  <div className="flex items-center gap-2.5">
+                    <svg width="26" height="32" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.9"/>
+                      <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.75"/>
+                      <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.6"/>
                     </svg>
-                    <span className="font-bold sg text-[18px]" style={{ color: TEXT }}>{value}</span>
-                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: "scaleX(-1)" }}>
-                      <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.85"/>
-                      <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.7"/>
-                      <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.55"/>
+                    <span className="font-bold sg" style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: TEXT, letterSpacing: "-0.03em", lineHeight: 1 }}>{value}</span>
+                    <svg width="26" height="32" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: "scaleX(-1)" }}>
+                      <path d="M9 2C7 5 4 6 2 5c1 3 3 5 6 6C10 8 12 5 9 2z" fill="#ca9a3c" opacity="0.9"/>
+                      <path d="M9 8C6 10 3 10 1 8c1 4 4 7 8 8C11 13 13 10 9 8z" fill="#ca9a3c" opacity="0.75"/>
+                      <path d="M9 15c-3 1-5 0-6-2 0 3 2 6 6 7 2-2 3-5 0-5z" fill="#ca9a3c" opacity="0.6"/>
                     </svg>
                   </div>
-                  <span className="text-[11px] uppercase tracking-[0.08em] font-semibold sg" style={{ color: MUTED }}>{label}</span>
+                  <span className="text-[12px] uppercase tracking-[0.09em] font-semibold sg text-center" style={{ color: MUTED }}>{label}</span>
                 </div>
               ))}
             </div>
