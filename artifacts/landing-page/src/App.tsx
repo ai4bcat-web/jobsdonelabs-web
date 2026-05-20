@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import ROICalculator from "@/pages/ROICalculator";
 import Terms from "@/pages/Terms";
 import Privacy from "@/pages/Privacy";
+import Contact from "@/pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/roi-calculator" component={ROICalculator} />
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
   );

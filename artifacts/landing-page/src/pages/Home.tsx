@@ -547,6 +547,13 @@ export default function Home() {
                 <Calculator className="w-3.5 h-3.5" /> ROI Calculator
               </button>
             </Link>
+            <Link href="/contact">
+              <button className="flex items-center gap-1.5 text-[13px] font-medium transition-colors duration-150" style={{ color: MUTED }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>
+                Contact
+              </button>
+            </Link>
           </nav>
           <PrimaryBtn href={CALENDLY} size="sm">Book a Call</PrimaryBtn>
         </div>
@@ -1075,7 +1082,7 @@ export default function Home() {
                 <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Company</p>
                 <Link href="/privacy" className="block mb-1.5 transition-colors duration-150" style={{ color: MUTED }}>Privacy Policy</Link>
                 <Link href="/terms" className="block mb-1.5 transition-colors duration-150" style={{ color: MUTED }}>Terms of Service</Link>
-                <a href="mailto:support@jobsdonelabs.ai" className="block mb-1.5 transition-colors duration-150" style={{ color: MUTED }}>Contact</a>
+                <Link href="/contact" className="block mb-1.5 transition-colors duration-150" style={{ color: MUTED }}>Contact</Link>
               </div>
             </div>
           </div>
