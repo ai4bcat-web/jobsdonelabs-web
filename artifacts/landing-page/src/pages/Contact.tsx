@@ -143,7 +143,7 @@ export default function Contact() {
               </Field>
 
               {/* Email */}
-              <Field label="Email" error={errors.email} hint="JobsDone Labs may contact you to follow up.">
+              <Field label="Email" error={errors.email} hint="Jobsdone Inc. may contact you to follow up.">
                 <input
                   name="email"
                   type="email"
@@ -163,7 +163,7 @@ export default function Contact() {
               </Field>
 
               {/* Phone */}
-              <Field label="Phone number" error={errors.phone} hint="JobsDone Labs may contact you to follow up.">
+              <Field label="Phone number" error={errors.phone} hint="Jobsdone Inc. may contact you to follow up.">
                 <input
                   name="phone"
                   type="tel"
@@ -192,7 +192,7 @@ export default function Contact() {
                 <div>
                   <p className="font-semibold text-[15px] mb-2" style={{ color: TEXT }}>Consent to Contact</p>
                   <p className="text-[13px] leading-relaxed" style={{ color: MUTED }}>
-                    By submitting this form and providing your phone number, you agree to receive SMS messages from JobsDone Labs about your inquiry. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. View our{" "}
+                    By submitting this form and providing your phone number, you agree to receive SMS messages from Jobsdone Inc. about your inquiry. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. View our{" "}
                     <Link href="/privacy" style={{ color: ACCENT }}>Privacy Policy</Link> and{" "}
                     <Link href="/terms" style={{ color: ACCENT }}>Terms</Link>.
                   </p>
