@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import BookingModal from "@/components/BookingModal";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -436,6 +437,7 @@ function ReviewsCarousel() {
 /* ─────────────────────────────────────────────── */
 function ExitIntentPopup() {
   const [visible, setVisible] = useState(false);
+  const [showBooking, setShowBooking] = useState(false);
 
   useEffect(() => {
     const alreadyShown = sessionStorage.getItem("exit_popup_shown");
@@ -452,6 +454,7 @@ function ExitIntentPopup() {
   }, []);
 
   return (
+    <>
     <AnimatePresence>
       {visible && (
         <>
@@ -484,7 +487,7 @@ function ExitIntentPopup() {
                 Most businesses are leaking revenue every day through slow follow-up and broken ops. Book a free 45-min audit and I'll show you exactly where yours are.
               </p>
               <div className="flex flex-col gap-2.5">
-                <PrimaryBtn href={CALENDLY} size="lg" className="w-full justify-center">
+                <PrimaryBtn size="lg" className="w-full justify-center" onClick={() => setShowBooking(true)}>
                   Book My Free Audit Call <ArrowRight className="w-4 h-4" />
                 </PrimaryBtn>
                 <button onClick={() => setVisible(false)} className="text-[13px] py-1.5 transition-colors duration-150" style={{ color: MUTED }}>
@@ -499,6 +502,8 @@ function ExitIntentPopup() {
         </>
       )}
     </AnimatePresence>
+    <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
+    </>
   );
 }
 
@@ -508,6 +513,7 @@ function ExitIntentPopup() {
 export default function Home() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   const [scrolled, setScrolled] = useState(false);
+  const [showBooking, setShowBooking] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 48);
@@ -555,7 +561,7 @@ export default function Home() {
               </button>
             </Link>
           </nav>
-          <PrimaryBtn href={CALENDLY} size="sm">Book a Call</PrimaryBtn>
+          <PrimaryBtn size="sm" onClick={() => setShowBooking(true)}>Book a Call</PrimaryBtn>
         </div>
       </header>
 
@@ -608,7 +614,7 @@ export default function Home() {
             transition={{ duration: 0.4, delay: 0.22 }}
             className="flex flex-wrap items-center justify-center gap-3 mb-10"
           >
-            <PrimaryBtn href={CALENDLY} size="lg" data-testid="button-hero-primary">
+            <PrimaryBtn size="lg" onClick={() => setShowBooking(true)}>
               Book a Free Audit Call <ArrowRight className="w-4 h-4" />
             </PrimaryBtn>
           </motion.div>
@@ -794,7 +800,7 @@ export default function Home() {
                 <p className="font-bold text-[18px] sg mb-1" style={{ color: TEXT, letterSpacing: "-0.01em" }}>Ready to see what's possible for your business?</p>
                 <p className="text-[13px]" style={{ color: MUTED }}>Free 45-minute audit. No commitment. You keep the roadmap.</p>
               </div>
-              <PrimaryBtn href={CALENDLY} size="lg" className="flex-shrink-0">
+              <PrimaryBtn size="lg" className="flex-shrink-0" onClick={() => setShowBooking(true)}>
                 Book Your Free Audit <ArrowRight className="w-4 h-4" />
               </PrimaryBtn>
             </div>
@@ -921,7 +927,7 @@ export default function Home() {
               <p className="text-[15px] leading-relaxed mb-8 max-w-xl mx-auto" style={{ color: MUTED }}>
                 If we don't deliver measurable ROI in your first 90 days, we keep working until we do. No extra charge. No excuses.
               </p>
-              <PrimaryBtn href={CALENDLY} size="lg" data-testid="button-guarantee-cta">
+              <PrimaryBtn size="lg" onClick={() => setShowBooking(true)}>
                 Claim Your Free Audit Call <ArrowRight className="w-4 h-4" />
               </PrimaryBtn>
               <p className="text-[12px] mt-4" style={{ color: `${MUTED}80` }}>Month-to-month. No long-term contracts. You own everything we build.</p>
@@ -940,13 +946,11 @@ export default function Home() {
                   <p className="text-[15px] leading-relaxed mt-4 mb-6" style={{ color: MUTED }}>
                     Join founders and operators inside our community — breakdowns, templates, and live Q&amp;A on automation that actually ships.
                   </p>
-                  <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                    <button className="text-[14px] font-medium transition-colors duration-150" style={{ color: ACCENT }}
-                      onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.7"}
-                      onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}>
-                      Join the community →
-                    </button>
-                  </a>
+                  <button onClick={() => setShowBooking(true)} className="text-[14px] font-medium transition-colors duration-150" style={{ color: ACCENT }}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.7"}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}>
+                    Join the community →
+                  </button>
                 </div>
               </Fade>
               <Fade delay={0.1}>
@@ -1015,7 +1019,7 @@ export default function Home() {
                       In 45 minutes, I'll personally map your biggest bottlenecks and hand you a custom roadmap — whether you hire us or not.
                     </p>
                     <div className="flex flex-col gap-2">
-                      <PrimaryBtn href={CALENDLY} size="lg" className="w-full sm:w-auto" data-testid="button-final-cta">
+                      <PrimaryBtn size="lg" className="w-full sm:w-auto" onClick={() => setShowBooking(true)}>
                         Book a Call with Ryne <ArrowRight className="w-4 h-4" />
                       </PrimaryBtn>
                       <p className="text-[12px]" style={{ color: `${MUTED}70` }}>No commitment. No sales pressure. You keep the roadmap either way.</p>
@@ -1093,6 +1097,7 @@ export default function Home() {
         </div>
       </footer>
 
+      <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BookingModal from "@/components/BookingModal";
 import { Link } from "wouter";
 import { FlaskConical, CheckCircle2, ArrowRight, Loader2 } from "lucide-react";
 
@@ -66,6 +67,7 @@ export default function Contact() {
   const [errors, setErrors] = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [showBooking, setShowBooking] = useState(false);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { name, value, type, checked } = e.target;
@@ -97,17 +99,15 @@ export default function Contact() {
           <Link href="/" className="transition-colors hover:text-white" style={{ color: MUTED }}>Home</Link>
           <Link href="/terms" className="transition-colors hover:text-white" style={{ color: MUTED }}>Terms</Link>
           <Link href="/privacy" className="transition-colors hover:text-white" style={{ color: MUTED }}>Privacy</Link>
-          <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-            <button className="text-[13px] font-semibold px-4 py-1.5 rounded-lg transition-colors" style={{ background: ACCENT, color: "#fff" }}>
-              Book a Call
-            </button>
-          </a>
+          <button onClick={() => setShowBooking(true)} className="text-[13px] font-semibold px-4 py-1.5 rounded-lg transition-colors" style={{ background: ACCENT, color: "#fff" }}>
+            Book a Call
+          </button>
         </div>
       </nav>
 
       <main className="max-w-lg mx-auto px-6 py-16">
         {submitted ? (
-          <SuccessState name={form.fullName} />
+          <SuccessState name={form.fullName} onOpenBooking={() => setShowBooking(true)} />
         ) : (
           <>
             {/* Header */}
@@ -273,6 +273,8 @@ export default function Contact() {
           </div>
         </div>
       </footer>
+
+      <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
     </div>
   );
 }
@@ -304,7 +306,7 @@ function Field({
   );
 }
 
-function SuccessState({ name }: { name: string }) {
+function SuccessState({ name, onOpenBooking }: { name: string; onOpenBooking: () => void }) {
   const firstName = name.split(" ")[0];
   return (
     <div className="flex flex-col items-center text-center py-10">
@@ -317,16 +319,14 @@ function SuccessState({ name }: { name: string }) {
       <p className="text-[15px] leading-relaxed mb-8 max-w-sm" style={{ color: MUTED }}>
         We've received your info and will be in touch shortly. In the meantime, you can book your audit call directly.
       </p>
-      <a
-        href={CALENDLY}
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        onClick={onOpenBooking}
         className="inline-flex items-center gap-2 font-semibold text-[15px] px-6 py-3 rounded-xl transition-opacity hover:opacity-90"
         style={{ background: ACCENT, color: "#fff" }}
       >
         Book Your Audit Call
         <ArrowRight className="w-4 h-4" />
-      </a>
+      </button>
       <Link href="/" className="mt-4 text-[13px] transition-colors hover:text-white" style={{ color: MUTED }}>
         ← Back to home
       </Link>

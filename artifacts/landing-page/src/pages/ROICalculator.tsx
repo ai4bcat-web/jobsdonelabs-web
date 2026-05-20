@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import BookingModal from "@/components/BookingModal";
 import { Link } from "wouter";
 import { ArrowRight, FlaskConical, ArrowLeft, TrendingUp, DollarSign, Clock, Zap } from "lucide-react";
 import { motion } from "framer-motion";
@@ -10,7 +11,7 @@ const TEXT = "#F0F0F0";
 const MUTED = "#888892";
 const BG = "#0E0E10";
 const BG2 = "#121214";
-const CALENDLY = "https://api.leadconnectorhq.com/widget/bookings/jdl-audit-call-ryne";
+const CALENDLY = "https://api.leadconnectorhq.com/widget/bookings/jdl-audit-call-ryne"; // kept for reference
 
 function JobsDoneLogo() {
   return (
@@ -89,6 +90,7 @@ function ResultCard({ icon, label, value, sub, highlight = false }: {
 }
 
 export default function ROICalculator() {
+  const [showBooking, setShowBooking] = useState(false);
   const [monthlyLeads, setMonthlyLeads] = useState(80);
   const [dealSize, setDealSize] = useState(3000);
   const [closeRate, setCloseRate] = useState(20);
@@ -245,22 +247,22 @@ export default function ROICalculator() {
                   Book a free 45-minute audit call. We'll map your exact leaks and hand you a custom roadmap.
                 </p>
               </div>
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                <button
-                  className="w-full font-semibold text-[14px] h-11 rounded-lg transition-colors duration-150 flex items-center justify-center gap-2"
-                  style={{ background: ACCENT, color: "#fff" }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "#1a54e0"}
-                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = ACCENT}
-                >
-                  Book a Free Audit Call <ArrowRight className="w-4 h-4" />
-                </button>
-              </a>
+              <button
+                onClick={() => setShowBooking(true)}
+                className="w-full font-semibold text-[14px] h-11 rounded-lg transition-colors duration-150 flex items-center justify-center gap-2"
+                style={{ background: ACCENT, color: "#fff" }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "#1a54e0"}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = ACCENT}
+              >
+                Book a Free Audit Call <ArrowRight className="w-4 h-4" />
+              </button>
               <p className="text-[12px]" style={{ color: `${MUTED}70` }}>No commitment. No sales pressure. You keep the roadmap either way.</p>
             </div>
           </motion.div>
 
         </div>
       </main>
+      <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
     </div>
   );
 }
