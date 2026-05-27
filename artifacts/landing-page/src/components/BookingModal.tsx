@@ -8,9 +8,16 @@ interface BookingModalProps {
   onClose: () => void;
 }
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 export default function BookingModal({ open, onClose }: BookingModalProps) {
   useEffect(() => {
     if (!open) return;
+    window.fbq?.("track", "Schedule");
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
