@@ -560,6 +560,13 @@ export default function Home() {
                 Contact
               </button>
             </Link>
+            <a href="https://replit.com/@rynestone/Jobsdone-Labs-Course-AI-Platform" target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[13px] font-semibold px-2.5 py-1 rounded-md transition-colors duration-150"
+              style={{ color: ACCENT, border: `1px solid ${ACCENT}30`, background: `${ACCENT}10` }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = `${ACCENT}20`; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = `${ACCENT}10`; }}>
+              Free AI Course
+            </a>
           </nav>
           <PrimaryBtn size="sm" onClick={() => setShowBooking(true)}>Book a Call</PrimaryBtn>
         </div>
@@ -617,6 +624,17 @@ export default function Home() {
             <PrimaryBtn size="lg" onClick={() => setShowBooking(true)}>
               Book a Free Audit Call <ArrowRight className="w-4 h-4" />
             </PrimaryBtn>
+            <a
+              href="https://replit.com/@rynestone/Jobsdone-Labs-Course-AI-Platform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[15px] font-semibold px-5 py-2.5 rounded-xl transition-colors duration-150"
+              style={{ color: ACCENT, border: `1px solid ${ACCENT}40`, background: `${ACCENT}0d` }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = `${ACCENT}1a`; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = `${ACCENT}0d`; }}
+            >
+              Free AI Course <ArrowRight className="w-4 h-4" />
+            </a>
           </motion.div>
 
           {/* Laurel stats + Workflow Card — 2 columns */}
