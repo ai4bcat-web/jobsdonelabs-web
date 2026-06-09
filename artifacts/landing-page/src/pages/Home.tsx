@@ -556,7 +556,7 @@ function Hero({ onBook }: { onBook:()=>void }) {
                   padding:"0.02em 0.14em 0.07em", borderRadius:4, display:"inline" }}>$30K</span>
                 {" "}hiding in<br />your operations.
               </h1>
-              <p className="anton" style={{ fontSize:"clamp(1.25rem,2.2vw,1.6rem)", color:INK_SOFT,
+              <p className="anton" style={{ fontSize:"clamp(1.25rem,2.2vw,1.6rem)", color:INK,
                 marginBottom:20, fontStyle:"italic" }}>
                 In 90 days or you don't pay.
               </p>
