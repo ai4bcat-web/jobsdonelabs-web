@@ -348,7 +348,7 @@ function H2({ children, onDark=false, style: extraStyle={}, className="" }: { ch
   return (
     <h2 className={`anton ${className}`}
       style={{ fontSize:"clamp(2rem,4.2vw,3rem)", lineHeight:1.08, letterSpacing:"-0.01em",
-        color:onDark?CREAM:INK, marginBottom:18, textTransform:"none", ...extraStyle }}>
+        color:onDark?CREAM:INK, marginBottom:18, ...extraStyle }}>
       {children}
     </h2>
   );
@@ -548,7 +548,7 @@ function Hero({ onBook }: { onBook:()=>void }) {
               background:INK, borderRadius:6, padding:"7px 14px", marginBottom:24 }}>
               <span style={{ fontSize:10.5, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:CREAM, fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
             </div>
-            <h1 className="anton" style={{ fontSize:"clamp(2.7rem,5.5vw,4rem)", lineHeight:1.05, letterSpacing:"-0.01em", color:INK, marginBottom:10, textTransform:"none" }}>
+            <h1 className="anton" style={{ fontSize:"clamp(2.7rem,5.5vw,4rem)", lineHeight:1.05, letterSpacing:"-0.01em", color:INK, marginBottom:10 }}>
               We find the{" "}
               <span style={{ background:ACCENT, color:"#fff", padding:"0.02em 0.16em 0.08em", borderRadius:5, display:"inline" }}>$30K</span>
               {" "}hiding in your operations.
