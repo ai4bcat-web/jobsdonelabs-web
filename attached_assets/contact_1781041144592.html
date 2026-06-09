@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact | Jobs Done Labs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="page.css" />
+<link rel="stylesheet" href="subpage.css" />
+<style>html{scroll-behavior:smooth}body{margin:0;background:#F4EFE3}</style>
+</head>
+<body>
+<div class="lp">
+  <header class="sm-header">
+    <div class="sm-header-in">
+      <a class="sm-logo" href="Jobs Done Labs.html">
+        <svg class="sm-flask" viewBox="0 0 48 48" fill="none">
+          <path d="M18 7 H30 M20 7 V19 L11.5 38 Q10 41.5 13.8 41.5 H34.2 Q38 41.5 36.5 38 L28 19 V7" stroke="#1466FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="20.5" y1="25.5" x2="26" y2="30.5" stroke="#1466FF" stroke-width="2" stroke-linecap="round"/>
+          <line x1="26" y1="30.5" x2="20.5" y2="35.5" stroke="#1466FF" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="20.5" cy="25.5" r="2.6" fill="#1466FF"/><circle cx="26.5" cy="30.5" r="2.6" fill="#1466FF"/><circle cx="20.5" cy="35.5" r="2.6" fill="#1466FF"/>
+        </svg>
+        <span class="sm-wm"><span class="row1">JOBS<i>DONE</i></span><span class="sm-labs"><span class="r"></span>LABS<span class="r"></span></span></span>
+      </a>
+      <nav class="sm-nav">
+        <a href="Jobs Done Labs.html#services">Services</a>
+        <a href="Jobs Done Labs.html#industries">Industries</a>
+        <a href="roi-calculator.html">ROI Calculator</a>
+        <a class="btn btn-sm" href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener">Book a Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="sub-hero">
+      <a class="back-link" href="Jobs Done Labs.html">← Back to home</a>
+    </section>
+    <section class="contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow"><span class="pulse"></span> Contact</span>
+        <h2 class="h2" style="margin-top:18px;">Let's find your<br />$30K.</h2>
+        <p>The fastest way to start is to book a free Profit Recovery Audit. Prefer to send a note first? Use the form and we'll get back within one business day.</p>
+        <div class="contact-chips">
+          <div class="cchip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div>ryne@jobsdone.io<small>Email us anytime</small></div></div>
+          <div class="cchip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div>Mon–Fri · 9am–6pm<small>We reply within 1 business day</small></div></div>
+          <div class="cchip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span><div>Remote-first<small>Serving operators across North America</small></div></div>
+        </div>
+      </div>
+
+      <form class="form-card" onsubmit="event.preventDefault(); this.querySelector('.btn').textContent='Sent — we\'ll be in touch ✓';">
+        <div class="field"><label>Full name</label><input type="text" placeholder="Jane Operator" required /></div>
+        <div class="field"><label>Work email</label><input type="email" placeholder="jane@yourbusiness.com" required /></div>
+        <div class="field"><label>Company</label><input type="text" placeholder="Your business" /></div>
+        <div class="field"><label>Industry</label>
+          <select>
+            <option>Home service (HVAC, plumbing, etc.)</option>
+            <option>Logistics &amp; freight</option>
+            <option>Manufacturing</option>
+            <option>Aesthetic &amp; high-ticket</option>
+            <option>Marketing agency</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label>Annual revenue</label>
+          <select>
+            <option>$1M – $3M</option>
+            <option>$3M – $10M</option>
+            <option>$10M – $25M</option>
+            <option>$25M+</option>
+          </select>
+        </div>
+        <div class="field"><label>What's leaking? (optional)</label><textarea placeholder="Tell us where you think profit is slipping away…"></textarea></div>
+        <button type="submit" class="btn btn-lg">Send message →</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bot" style="border-top:none;padding-top:0;">
+        <span>© 2026 Jobs Done Labs. All rights reserved.</span>
+        <span style="display:flex;gap:22px;">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="roi-calculator.html">ROI Calculator</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

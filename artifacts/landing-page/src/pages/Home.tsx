@@ -1,505 +1,385 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import BookingModal from "@/components/BookingModal";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  ArrowRight,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  Star,
-  FlaskConical,
-  Play,
-  Linkedin,
-  Youtube,
-  Twitter,
-  X,
-  Calculator,
-  Check,
-  Megaphone,
-  Wrench,
-  BarChart3,
-  ClipboardList,
-  Bot,
-  Mail,
-  Bell,
-  Rocket,
-  Database,
-  Funnel,
-  Users,
-  FileText,
-  Zap,
-  PhoneCall,
-  Sparkles,
-  DollarSign,
-  CalendarDays,
+  ArrowRight, Star, Check, X, Plus,
+  Clock, PhoneOff, Route, Eye,
+  Home as HomeIcon, Truck, Building2,
+  Filter, Database, Settings, BarChart3,
+  Linkedin, Youtube, Twitter,
 } from "lucide-react";
 
-/* ─────────────────────────────────────────────── */
-/*  Constants                                      */
-/* ─────────────────────────────────────────────── */
-const ACCENT = "#1F62FF";
-const SURFACE = "#161618";
-const BORDER = "#222226";
-const TEXT = "#F0F0F0";
-const MUTED = "#888892";
-const BG = "#0E0E10";
-const BG2 = "#121214";
-const CALENDLY = "https://api.leadconnectorhq.com/widget/bookings/jdl-audit-call-ryne";
+/* ───────────────────────────────────────────── */
+/*  Design tokens                                */
+/* ───────────────────────────────────────────── */
+const CREAM       = "#F4EFE3";
+const CREAM2      = "#EFE8D8";
+const INK         = "#0B0D12";
+const INK2        = "#11131B";
+const INK_SOFT    = "#54596A";
+const LINE        = "rgba(11,13,18,.12)";
+const ACCENT      = "#1466FF";
+const ACCENT_DEEP = "#0B49C9";
+const GREEN       = "#34d399";
 
-/* ─────────────────────────────────────────────── */
-/*  Logo                                           */
-/* ─────────────────────────────────────────────── */
-function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
-  const s = {
-    sm: { icon: "w-4 h-4", text: "text-[15px]", labs: "text-[8px]", gap: "gap-1.5" },
-    md: { icon: "w-5 h-5", text: "text-[17px]", labs: "text-[9px]", gap: "gap-2" },
-    lg: { icon: "w-7 h-7", text: "text-2xl", labs: "text-[11px]", gap: "gap-2.5" },
-  }[size];
+/* ───────────────────────────────────────────── */
+/*  Brand                                        */
+/* ───────────────────────────────────────────── */
+function FlaskMark({ stroke = ACCENT, size = 32 }: { stroke?: string; size?: number }) {
   return (
-    <div className={`flex items-center ${s.gap}`}>
-      <FlaskConical className={`${s.icon} flex-shrink-0`} style={{ color: ACCENT }} />
-      <div className="flex flex-col leading-none">
-        <div className="flex items-baseline">
-          <span className={`font-bold ${s.text} tracking-tight`} style={{ color: TEXT }}>JOBS</span>
-          <span className={`font-bold ${s.text} tracking-tight`} style={{ color: ACCENT }}>DONE</span>
-        </div>
-        <div className="flex items-center gap-1 mt-0.5">
-          <span className="flex-1 h-px" style={{ background: `${ACCENT}30` }} />
-          <span className={`${s.labs} font-medium tracking-[0.16em] uppercase`} style={{ color: `${TEXT}35` }}>Labs</span>
-          <span className="flex-1 h-px" style={{ background: `${ACCENT}30` }} />
-        </div>
-      </div>
-    </div>
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path d="M18 7 H30 M20 7 V19 L11.5 38 Q10 41.5 13.8 41.5 H34.2 Q38 41.5 36.5 38 L28 19 V7"
+        stroke={stroke} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1="20.5" y1="25.5" x2="26" y2="30.5" stroke={stroke} strokeWidth="2" strokeLinecap="round" />
+      <line x1="26" y1="30.5" x2="20.5" y2="35.5" stroke={stroke} strokeWidth="2" strokeLinecap="round" />
+      <circle cx="20.5" cy="25.5" r="2.6" fill={stroke} />
+      <circle cx="26.5" cy="30.5" r="2.6" fill={stroke} />
+      <circle cx="20.5" cy="35.5" r="2.6" fill={stroke} />
+    </svg>
   );
 }
 
-/* ─────────────────────────────────────────────── */
-/*  Profit Recovery Tracker Card                   */
-/* ─────────────────────────────────────────────── */
-function WorkflowCard() {
-  const GREEN = "#34d399";
-  const GOAL = 30000;
-
-  const leaks = [
-    { Icon: Users,       label: "Missed Lead Follow-up",  sub: "Automated re-engagement",      amount: 8400,  done: true  },
-    { Icon: Wrench,      label: "Manual Ops Overhead",    sub: "15 hrs/wk → automated",        amount: 9200,  done: true  },
-    { Icon: Rocket,      label: "Slow Client Onboarding", sub: "3 days → 1 click",             amount: 7800,  done: true  },
-    { Icon: Zap,         label: "Disconnected Tools",     sub: "Full stack integration live",  amount: 6600,  done: false },
-  ];
-
-  const recovered = leaks.filter(l => l.done).reduce((s, l) => s + l.amount, 0);
-  const pending   = leaks.find(l => !l.done)?.amount ?? 0;
-  const total     = recovered + pending;
-  const pct       = Math.min(100, Math.round((total / GOAL) * 100));
-
+function Wordmark({ size = 20, onDark = false }: { size?: number; onDark?: boolean }) {
+  const inkColor   = onDark ? CREAM : INK;
+  const mutedColor = onDark ? "rgba(244,239,227,.65)" : INK_SOFT;
   return (
-    <div className="w-full rounded-xl overflow-hidden" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-
-      {/* ── header ── */}
-      <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: `1px solid ${BORDER}` }}>
-        <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full inline-block animate-pulse" style={{ background: ACCENT }} />
-          <span className="text-[11px] font-semibold uppercase tracking-wider sg" style={{ color: MUTED }}>Profit Recovery Tracker</span>
-        </div>
-        <span className="flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full" style={{ color: GREEN, background: `${GREEN}10`, border: `1px solid ${GREEN}20` }}>
-          <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: GREEN }} />
-          Day 73 of 90
+    <div style={{ display:"flex", alignItems:"center", gap:10, fontSize:size, lineHeight:1, userSelect:"none" }}>
+      <FlaskMark stroke={ACCENT} size={Math.round(size * 1.55)} />
+      <div style={{ display:"flex", flexDirection:"column" }}>
+        <span style={{ fontStyle:"italic", fontWeight:800, letterSpacing:"-0.01em", fontSize:"1em", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+          <span style={{ color:inkColor }}>JOBS</span><span style={{ color:ACCENT }}>DONE</span>
+        </span>
+        <span style={{ display:"flex", alignItems:"center", gap:"0.4em", marginTop:"0.35em",
+          fontWeight:700, fontSize:"0.28em", letterSpacing:"0.42em",
+          color:mutedColor, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+          <span style={{ flex:1, height:1.5, background:"currentColor", opacity:0.5 }} />
+          <span style={{ paddingLeft:"0.42em" }}>LABS</span>
+          <span style={{ flex:1, height:1.5, background:"currentColor", opacity:0.5 }} />
         </span>
       </div>
+    </div>
+  );
+}
 
-      {/* ── leak rows ── */}
-      <div className="flex flex-col gap-2 p-4">
-        {leaks.map(({ Icon, label, sub, amount, done }) => (
-          <div key={label} className="flex items-center justify-between px-3.5 py-2.5 rounded-lg" style={{ background: BG, border: `1px solid ${done ? `${GREEN}18` : BORDER}` }}>
-            <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0" style={{ background: done ? `${GREEN}10` : `${ACCENT}10`, border: `1px solid ${done ? GREEN + "20" : ACCENT + "20"}` }}>
-                <Icon className="w-3.5 h-3.5" style={{ color: done ? GREEN : ACCENT }} />
-              </div>
-              <div>
-                <p className="font-semibold text-[12px] leading-none mb-0.5 sg" style={{ color: TEXT }}>{label}</p>
-                <p className="text-[10px]" style={{ color: MUTED }}>{sub}</p>
-              </div>
-            </div>
-            <span className="text-[11px] font-semibold px-2 py-0.5 rounded flex-shrink-0" style={done
-              ? { color: GREEN,  background: `${GREEN}10`,  border: `1px solid ${GREEN}25`  }
-              : { color: ACCENT, background: `${ACCENT}10`, border: `1px solid ${ACCENT}25` }}>
-              {done ? `+$${amount.toLocaleString()}` : "→ Tracking"}
+function StampBadge({ size = 104 }: { size?: number }) {
+  const r = 40, cx = 50, cy = 50;
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" className="spin-slow" aria-hidden="true">
+      <defs>
+        <path id="stamp-ring" d={`M ${cx},${cy-r} A ${r},${r} 0 1,1 ${cx-0.001},${cy-r}`} />
+      </defs>
+      <circle cx={cx} cy={cy} r={r} fill={ACCENT} />
+      <circle cx={cx} cy={cy} r={r-7} fill="none" stroke="rgba(255,255,255,.32)" strokeWidth="1" strokeDasharray="3 3" />
+      <text fill="white" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:8.5, letterSpacing:"0.13em" }}>
+        <textPath href="#stamp-ring" startOffset="50%" textAnchor="middle">$30K GUARANTEED · 90 DAYS · $30K GUARANTEED · 90 DAYS ·</textPath>
+      </text>
+      <text x={cx} y={cy-3} textAnchor="middle" fill="white" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:17, letterSpacing:"-0.01em" }}>$30K</text>
+      <text x={cx} y={cy+11} textAnchor="middle" fill="rgba(255,255,255,.82)" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:8, letterSpacing:"0.08em" }}>GUAR.</text>
+    </svg>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  VSL Player                                   */
+/* ───────────────────────────────────────────── */
+function VSL({ videoId = "FP_yxHX9Zvc" }: { videoId?: string }) {
+  const [sound, setSound] = useState(false);
+  const src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${sound?0:1}&rel=0&playsinline=1&modestbranding=1`;
+  return (
+    <div style={{ width:"100%", borderRadius:18, overflow:"hidden", background:"#0A0E16", position:"relative", boxShadow:"0 24px 64px -16px rgba(0,0,0,.28)" }}>
+      <div style={{ position:"absolute", inset:0, zIndex:0,
+        background:"radial-gradient(70% 90% at 50% 25%,rgba(20,102,255,.28),transparent 60%)" }} />
+      <div style={{ position:"relative", zIndex:1, aspectRatio:"16/9", width:"100%",
+        background:"linear-gradient(135deg,#0E1422 0%,#0A101C 55%,#0B1730 100%)",
+        display:"flex", alignItems:"center", justifyContent:"center" }}>
+        <div style={{ position:"absolute", inset:0,
+          backgroundImage:"linear-gradient(rgba(255,255,255,.042) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.042) 1px,transparent 1px)",
+          backgroundSize:"46px 46px",
+          maskImage:"radial-gradient(68% 68% at 50% 44%,#000,transparent)" }} />
+        <iframe key={sound?"snd":"mut"}
+          style={{ position:"absolute", inset:0, width:"100%", height:"100%", border:0, zIndex:3 }}
+          src={src} title="Jobs Done Labs — Profit Recovery"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen />
+        {!sound && (
+          <button onClick={() => setSound(true)}
+            style={{ position:"absolute", inset:0, zIndex:4, border:"none", cursor:"pointer", padding:"18px 20px",
+              background:"linear-gradient(0deg,rgba(0,0,0,.36),transparent 44%)",
+              display:"flex", alignItems:"flex-end", justifyContent:"flex-start" }}>
+            <span style={{ display:"inline-flex", alignItems:"center", gap:9,
+              background:"rgba(10,14,22,.78)", backdropFilter:"blur(6px)",
+              color:"#fff", fontSize:14, fontWeight:700, letterSpacing:"-0.01em",
+              padding:"10px 16px", borderRadius:100,
+              boxShadow:"0 8px 22px -6px rgba(0,0,0,.5)", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style={{ color:ACCENT, flex:"0 0 auto" }}>
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8v8a4.5 4.5 0 002.5-4zM14 3v2.06a7 7 0 010 13.88V21a9 9 0 000-18z" />
+              </svg>
+              Watch the 4-min breakdown
+              <span style={{ fontSize:12, fontWeight:600, color:"rgba(255,255,255,.55)" }}>· Tap for sound</span>
             </span>
-          </div>
-        ))}
-      </div>
-
-      {/* ── progress toward $30K guarantee ── */}
-      <div className="px-4 pb-3">
-        <div className="flex items-center justify-between mb-1.5">
-          <span className="text-[10px] font-medium sg uppercase tracking-wider" style={{ color: MUTED }}>Progress to $30K Guarantee</span>
-          <span className="text-[11px] font-bold sg" style={{ color: pct >= 100 ? GREEN : TEXT }}>{pct}%</span>
-        </div>
-        <div className="h-1.5 rounded-full overflow-hidden" style={{ background: `${BORDER}` }}>
-          <div className="h-full rounded-full transition-all duration-700" style={{ width: `${pct}%`, background: pct >= 100 ? GREEN : ACCENT }} />
-        </div>
-      </div>
-
-      {/* ── bottom stats ── */}
-      <div className="grid grid-cols-3 divide-x" style={{ borderTop: `1px solid ${BORDER}`, borderColor: BORDER }}>
-        {[
-          [`$${total.toLocaleString()}`, "Recovered"],
-          [`$${GOAL.toLocaleString()}`, "Guaranteed"],
-          ["100%", "Money back"],
-        ].map(([v, l]) => (
-          <div key={l} className="py-3 text-center">
-            <p className="text-[13px] font-bold sg" style={{ color: v === `$${total.toLocaleString()}` ? GREEN : ACCENT }}>{v}</p>
-            <p className="text-[10px]" style={{ color: MUTED }}>{l}</p>
-          </div>
-        ))}
-      </div>
-
-    </div>
-  );
-}
-
-/* ─────────────────────────────────────────────── */
-/*  Profit Recovery Diagram                        */
-/* ─────────────────────────────────────────────── */
-function ProfitDiagram() {
-  const GREEN = "#34d399";
-  const ORANGE = "#f97316";
-
-  const leaks = [
-    "Missed lead follow-up",
-    "Manual data entry",
-    "Slow client onboarding",
-    "Disconnected tools",
-    "No sales visibility",
-    "Manual reporting",
-    "Slow response times",
-    "Inconsistent follow-up",
-  ];
-
-  const outcomes = [
-    { amount: "$8,400+", label: "More closed deals",    sub: "Recovered from missed leads"   },
-    { amount: "$9,200+", label: "Zero manual hours",    sub: "Ops overhead automated away"   },
-    { amount: "$7,800+", label: "Faster onboarding",    sub: "3 days → 1 click"              },
-    { amount: "$6,600+", label: "Tool integration",     sub: "Full stack connected"          },
-  ];
-
-  const engineSteps = [
-    { num: "01", label: "Audit",     sub: "Identify every profit leak"         },
-    { num: "02", label: "Blueprint", sub: "Design recovery systems"            },
-    { num: "03", label: "Build",     sub: "Implement in 30 days"               },
-    { num: "04", label: "Recover",   sub: "$30K+ in 90 days — guaranteed"      },
-  ];
-
-  return (
-    <div className="w-full rounded-xl overflow-hidden select-none" style={{ background: "#08080A", border: `1px solid ${BORDER}` }}>
-
-      {/* ── top headline bar ── */}
-      <div className="px-6 pt-6 pb-5" style={{ borderBottom: `1px solid ${BORDER}` }}>
-        <p className="font-black sg leading-tight tracking-tight mb-1.5" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)", color: TEXT }}>
-          PROFIT LEAKS <span style={{ color: `${MUTED}60` }}>→</span> FIXED.{" "}
-          <span style={{ color: ACCENT }}>GUARANTEED BY JOBSDONE.</span>
-        </p>
-        <p className="text-[12px]" style={{ color: MUTED }}>Every dollar you're losing has a system that recovers it.</p>
-      </div>
-
-      {/* ── three-column diagram ── */}
-      <div className="grid grid-cols-[1fr_auto_1fr] md:grid-cols-[200px_1fr_200px] gap-0" style={{ minHeight: 260 }}>
-
-        {/* LEFT — leak sources */}
-        <div className="flex flex-col gap-0 px-4 py-4" style={{ borderRight: `1px solid ${BORDER}` }}>
-          <p className="text-[10px] font-bold uppercase tracking-widest mb-3 sg" style={{ color: MUTED }}>Where You're Losing Money</p>
-          <div className="flex flex-col gap-2">
-            {leaks.map(l => (
-              <div key={l} className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: ORANGE, opacity: 0.75 }} />
-                <span className="text-[11px] leading-snug" style={{ color: `${TEXT}70` }}>{l}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CENTER — recovery engine */}
-        <div className="flex flex-col items-center justify-center px-5 py-5 gap-4">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: ACCENT }} />
-            <span className="text-[10px] font-bold uppercase tracking-widest sg" style={{ color: MUTED }}>Recovery Engine</span>
-            <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full" style={{ color: GREEN, background: `${GREEN}10`, border: `1px solid ${GREEN}20` }}>Active</span>
-          </div>
-          <div className="w-full flex flex-col gap-1.5">
-            {engineSteps.map((s, i) => (
-              <div key={s.num}>
-                <div className="flex items-center gap-3 px-3.5 py-2.5 rounded-lg" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-                  <span className="text-[11px] font-bold sg flex-shrink-0" style={{ color: ACCENT }}>{s.num}</span>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-[12px] leading-none mb-0.5 sg truncate" style={{ color: TEXT }}>{s.label}</p>
-                    <p className="text-[10px] truncate" style={{ color: MUTED }}>{s.sub}</p>
-                  </div>
-                  <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: i === 3 ? GREEN : `${ACCENT}60` }} />
-                </div>
-                {i < engineSteps.length - 1 && (
-                  <div className="flex justify-center py-0.5">
-                    <div className="w-px h-2.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          {/* arrow lines — decorative dashes on sides */}
-          <div className="flex items-center gap-2 mt-1">
-            <div className="h-px w-8" style={{ background: `linear-gradient(to right, transparent, ${ACCENT}40)` }} />
-            <span className="text-[10px] font-semibold sg" style={{ color: `${ACCENT}60` }}>90 DAYS</span>
-            <div className="h-px w-8" style={{ background: `linear-gradient(to left, transparent, ${ACCENT}40)` }} />
-          </div>
-        </div>
-
-        {/* RIGHT — outcomes */}
-        <div className="flex flex-col gap-0 px-4 py-4" style={{ borderLeft: `1px solid ${BORDER}` }}>
-          <p className="text-[10px] font-bold uppercase tracking-widest mb-3 sg" style={{ color: MUTED }}>What You Recover</p>
-          <div className="flex flex-col gap-3">
-            {outcomes.map(o => (
-              <div key={o.label} className="flex flex-col gap-0.5">
-                <div className="flex items-center gap-1.5">
-                  <span className="text-[13px] font-bold sg" style={{ color: GREEN }}>{o.amount}</span>
-                </div>
-                <p className="text-[11px] font-semibold leading-none" style={{ color: TEXT }}>{o.label}</p>
-                <p className="text-[10px]" style={{ color: `${MUTED}80` }}>{o.sub}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-      </div>
-
-      {/* ── bottom bar ── */}
-      <div className="flex flex-col sm:flex-row items-center justify-between px-6 py-3 gap-2" style={{ borderTop: `1px solid ${BORDER}`, background: `${ACCENT}05` }}>
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: `${ACCENT}15`, border: `1px solid ${ACCENT}25` }}>
-            <Bot className="w-3.5 h-3.5" style={{ color: ACCENT }} />
-          </div>
-          <p className="text-[11px] font-medium sg" style={{ color: `${TEXT}70` }}>
-            CUSTOM AUTOMATION SYSTEMS BUILT IN 90 DAYS SO YOUR BUSINESS RECOVERS{" "}
-            <span style={{ color: ACCENT }}>$30K+</span>
-          </p>
-        </div>
-        <div className="flex items-center gap-1.5">
-          <span className="font-bold text-[13px] sg tracking-tight" style={{ color: TEXT }}>JOBS</span>
-          <span className="font-bold text-[13px] sg tracking-tight" style={{ color: ACCENT }}>DONE</span>
-          <span className="text-[9px] font-medium tracking-widest uppercase" style={{ color: `${TEXT}30` }}>Labs</span>
-        </div>
-      </div>
-
-    </div>
-  );
-}
-
-/* ─────────────────────────────────────────────── */
-/*  Video Player                                   */
-/* ─────────────────────────────────────────────── */
-function VideoPlayer({ label }: { label?: string }) {
-  const [playing, setPlaying] = useState(false);
-  return (
-    <div className="w-full">
-      <div
-        className="relative w-full aspect-video rounded-2xl overflow-hidden cursor-pointer"
-        style={{ background: "#0a0a0c" }}
-        onClick={() => !playing && setPlaying(true)}
-      >
-        {playing ? (
-          <iframe
-            className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-          />
-        ) : (
-          <>
-            <div className="absolute inset-0 opacity-[0.04]" style={{
-              backgroundImage: `linear-gradient(${ACCENT}40 1px,transparent 1px),linear-gradient(90deg,${ACCENT}40 1px,transparent 1px)`,
-              backgroundSize: "44px 44px"
-            }} />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className="flex items-center justify-center w-14 h-14 rounded-full transition-opacity duration-150 hover:opacity-90"
-                style={{ background: ACCENT }}
-              >
-                <Play className="w-5 h-5 text-white ml-0.5" fill="white" />
-              </div>
-            </div>
-            <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-              <p className="text-[11px]" style={{ color: `${TEXT}50` }}>▶ Placeholder — swap in your real video</p>
-            </div>
-          </>
+          </button>
         )}
       </div>
-      {label && <p className="text-center text-[13px] mt-3 tracking-wide" style={{ color: MUTED }}>{label}</p>}
     </div>
   );
 }
 
-/* ─────────────────────────────────────────────── */
-/*  Data                                           */
-/* ─────────────────────────────────────────────── */
-const trustLogos = ["Apollo.io","HubSpot","Make.com","Airtable","Slack","ClickUp","Zapier","ActiveCampaign"];
-
-const industries = [
-  {
-    Icon: Wrench,
-    title: "Home Service Businesses",
-    desc: "From lead capture to follow-up to scheduling — stop losing jobs to missed calls and slow responses. Your automated ops system works while your crews are in the field.",
-    tags: ["Instant lead response","Automated follow-ups","Job tracking & reports"],
-  },
-  {
-    Icon: Sparkles,
-    title: "Aesthetic & High-Ticket Service Businesses",
-    desc: "Medspas, cosmetic practices, and premium service providers — automate consultation booking, lead nurture, and client follow-up so no inquiry slips through the cracks.",
-    tags: ["Consultation booking automated","Lead nurture sequences","No-show reduction"],
-  },
-  {
-    Icon: Megaphone,
-    title: "Marketing Agencies",
-    desc: "Automate client onboarding, CRM management, lead nurture, and sales call transcriptions — so your team delivers faster without growing headcount.",
-    tags: ["Onboarding in minutes","Zero manual CRM entry","Faster client delivery"],
-  },
+/* ───────────────────────────────────────────── */
+/*  Profit Recovery Tracker                      */
+/* ───────────────────────────────────────────── */
+const LEAKS = [
+  { icon:<Filter size={15}/>,   name:"Lead response system",  pct:"92%", amt:"+$11.2K" },
+  { icon:<Settings size={15}/>, name:"Quote automation",       pct:"84%", amt:"+$9.4K"  },
+  { icon:<Database size={15}/>, name:"Scheduling & ops",       pct:"76%", amt:"+$7.1K"  },
+  { icon:<BarChart3 size={15}/>,name:"Billing & reporting",    pct:"68%", amt:"+$5.8K"  },
 ];
 
-const services = [
-  { num: "01", Icon: ClipboardList, title: "Profit Recovery Audit", desc: "A free analysis of your entire operation to identify exactly where you're losing money. We map every profit leak and hand you a complete blueprint of what we'd build — yours to keep whether you hire us or not.", tags: ["Profit leak analysis","Custom blueprint","Free to keep"] },
-  { num: "02", Icon: Bot, title: "Custom Automation Build", desc: "End-to-end system design and implementation. We build every workflow, integration, and automation your business needs to stop leaking revenue and recover your $30K in 90 days.", tags: ["Full system build","Team training","Weeks 3–4"] },
-  { num: "03", Icon: Zap, title: "Tool Integration", desc: "Connect your entire tech stack so data flows automatically between every platform. No more manual data entry, no more tools that don't talk to each other, no more revenue falling through the cracks.", tags: ["Full stack connection","Automated data flow","Zero manual entry"] },
-  { num: "04", Icon: DollarSign, title: "90-Day Profit Recovery Program", desc: "Our flagship offer. We step in as your fractional systems operator, build your complete automation infrastructure, and guarantee $30,000 in measurable net profit recovery within 90 days—or you pay nothing.", tags: ["$30K guarantee","90-day timeline","100% money back"] },
-];
-
-const steps = [
-  { num: "01", title: "Audit", sub: "Week 1", desc: "We analyze your current systems and identify exactly where you're losing money—every profit leak, every manual bottleneck, every missed follow-up." },
-  { num: "02", title: "Blueprint", sub: "Week 2", desc: "We design your custom automation systems and walk you through the complete profit recovery plan. You see exactly what we'll build and how it recovers $30K." },
-  { num: "03", title: "Build", sub: "Weeks 3–4", desc: "We implement everything and train your team on every system. Your automations go live and start recovering revenue immediately." },
-  { num: "04", title: "Recover", sub: "Days 30–90", desc: "We measure, optimize, and push until you hit $30K+ in recovered profit. Weekly check-ins keep everything on track." },
-];
-
-const comparison = [
-  { aspect: "Cost", inHouse: "$80K+/year salary", freelancer: "Inconsistent", us: "Predictable monthly" },
-  { aspect: "Time to start", inHouse: "3–6 months", freelancer: "Weeks", us: "48 hours" },
-  { aspect: "Strategy", inHouse: "Limited", freelancer: "None", us: "Weekly strategy calls" },
-  { aspect: "Maintenance", inHouse: "On you", freelancer: "On you", us: "24/7 on us" },
-  { aspect: "Quality", inHouse: "Manager-led", freelancer: "Hit or miss", us: "Senior engineer" },
-  { aspect: "You own it", inHouse: "✗", freelancer: "Varies", us: "✓ Always" },
-];
-
-const testimonials = [
-  { name: "Evan Seech", company: "Sell More Online", role: "7-Fig Ads & Funnels", quote: "An onshore automations team is light years above anything offshore." },
-  { name: "Dylan Hendrickson", company: "STAXX", role: "7-Fig Fractional CFO", quote: "Solved in a couple weeks what I couldn't solve for over a year." },
-  { name: "Philip Moldovanu", company: "Social Scout", role: "7-Fig Email Marketing", quote: "You click one button and everything's just ready to go." },
-  { name: "Connor Rodgers", company: "Social Scout", role: "Operations Lead", quote: "We needed a partner to build the systems and keep up — that's what we got." },
-  { name: "Meelad Zarrabi", company: "Fluid Creatives", role: "Creative Director", quote: "You took all the revisions and executed them perfectly." },
-  { name: "Samu Kovács", company: "KS Media", role: "Founder", quote: "Your audit call was just different." },
-  { name: "Jeppe Schrøder", company: "Markeity", role: "CEO", quote: "The clarity and structure they brought was something we'd been trying for months." },
-  { name: "Matthew Lucero", company: "Anevo Marketing", role: "Owner", quote: "They identified things I didn't even understand and built them out proactively." },
-  { name: "Dan James", company: "THAKOS", role: "Founder", quote: "My PM's life is 400 trillion times easier. We've saved so many hours." },
-  { name: "Ro Bhardwaj", company: "Life's A Pitch", role: "CEO", quote: "Not just a builder — an automation strategist." },
-];
-
-const reviews = [
-  { stars: 5, quote: "An ops hire costs $60–80K+ and takes months to ramp. JobsDone Labs gave us a full team from day one, working 24/7. Best investment we've ever made.", name: "Evan S.", company: "Sell More Online" },
-  { stars: 5, quote: "I spent over a year trying to solve our CRM chaos. They fixed it in two weeks flat. I genuinely don't know how I ran the business before.", name: "Dylan H.", company: "STAXX" },
-  { stars: 5, quote: "Our client onboarding used to take 3 days of back-and-forth. Now it's one click and everything's ready. The client experience has completely changed.", name: "Philip M.", company: "Social Scout" },
-  { stars: 5, quote: "My PM says her life is 400 trillion times easier — and that's only a slight exaggeration. Hours saved every single week.", name: "Dan J.", company: "THAKOS" },
-  { stars: 5, quote: "They're not just automation builders — they're strategists. They spotted opportunities I hadn't even thought of and built them out proactively.", name: "Matthew L.", company: "Anevo Marketing" },
-];
-
-const faqs = [
-  { q: "What exactly is a $30,000 profit recovery guarantee?", a: "We guarantee that the automation systems we build will generate at least $30,000 in measurable net profit impact within 90 days—through recovered leads, reduced manual labor costs, faster close rates, or documented revenue you would have otherwise lost. If we don't hit $30K in measurable impact, you get 100% of your money back." },
-  { q: "What qualifies as a measurable profit recovery?", a: "We track it together from day one: leads captured that your old system missed, hours of manual work eliminated (converted to dollar value), revenue from deals closed faster, and margin recovered from operational waste. We build the dashboards that show you in real time." },
-  { q: "Who is this program for?", a: "Service businesses doing $500K–$5M per year with an average customer value above $2,000. This includes home service companies, marketing agencies, medspas, logistics operators, and any service business with a real sales process that has gaps in follow-up or operations." },
-  { q: "What does 'fractional systems operator' mean?", a: "It means we fill the 'systems seat' of your business — the role that most owners end up doing themselves at 2am. We audit, design, build, and maintain your automation infrastructure. You get a full systems team without hiring one." },
-  { q: "Is there a long-term contract?", a: "No. If we don't hit $30K in measurable profit recovery within 90 days, you pay nothing. You own everything we build — the automations, the blueprints, all of it." },
-  { q: "What tools do you work with?", a: "We build on Make.com, Airtable, Slack, and GoHighLevel — but we integrate with virtually any CRM, calendar, payment processor, or project management tool your business already uses. We adapt to your stack." },
-];
-
-/* ─────────────────────────────────────────────── */
-/*  Shared components                              */
-/* ─────────────────────────────────────────────── */
-function Fade({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+function Tracker() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.4, delay, ease: "easeOut" }}
-      className={className}
-    >
+    <div style={{ background:INK2, borderRadius:20, padding:28, border:"1px solid rgba(255,255,255,.08)", boxShadow:"0 24px 56px -12px rgba(0,0,0,.22)" }}>
+      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:22 }}>
+        <span style={{ color:CREAM, fontWeight:700, fontSize:15, fontFamily:"'Hanken Grotesk',sans-serif" }}>Profit Recovery Tracker</span>
+        <span style={{ background:"rgba(52,211,153,.15)", color:GREEN, fontSize:12, fontWeight:700, padding:"4px 10px", borderRadius:100, fontFamily:"'Hanken Grotesk',sans-serif" }}>LIVE</span>
+      </div>
+      <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+        {LEAKS.map(l => (
+          <div key={l.name}>
+            <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:7 }}>
+              <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+                <span style={{ color:ACCENT }}>{l.icon}</span>
+                <span style={{ color:"rgba(244,239,227,.82)", fontSize:13.5, fontWeight:500, fontFamily:"'Hanken Grotesk',sans-serif" }}>{l.name}</span>
+              </div>
+              <span style={{ color:GREEN, fontSize:13, fontWeight:700, fontFamily:"'Hanken Grotesk',sans-serif" }}>{l.amt}</span>
+            </div>
+            <div style={{ height:7, background:"rgba(255,255,255,.07)", borderRadius:100, overflow:"hidden" }}>
+              <div style={{ height:"100%", width:l.pct, background:`linear-gradient(90deg,${ACCENT},${ACCENT_DEEP})`, borderRadius:100 }} />
+            </div>
+          </div>
+        ))}
+      </div>
+      <div style={{ marginTop:22, paddingTop:18, borderTop:"1px solid rgba(255,255,255,.08)", display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+        <span style={{ color:"rgba(244,239,227,.55)", fontSize:13, fontFamily:"'Hanken Grotesk',sans-serif" }}>Recovered this quarter</span>
+        <span style={{ color:GREEN, fontSize:20, fontWeight:800, fontFamily:"'Hanken Grotesk',sans-serif" }}>$33.5K</span>
+      </div>
+    </div>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  ProfitDiagram                                */
+/* ───────────────────────────────────────────── */
+function ProfitDiagram() {
+  const col = (label: string, items: string[], bg: string, textCol: string, border: string) => (
+    <div style={{ flex:1, minWidth:0 }}>
+      <div style={{ fontSize:11, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:INK_SOFT, marginBottom:10, fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</div>
+      <div style={{ background:bg, borderRadius:14, padding:"14px 16px", display:"flex", flexDirection:"column", gap:9, border:`1px solid ${border}` }}>
+        {items.map(item => (
+          <div key={item} style={{ fontSize:13, fontWeight:500, color:textCol, fontFamily:"'Hanken Grotesk',sans-serif" }}>{item}</div>
+        ))}
+      </div>
+    </div>
+  );
+  const arrow = (
+    <div style={{ display:"flex", alignItems:"center", justifyContent:"center", paddingTop:30, flex:"0 0 auto" }}>
+      <ArrowRight size={19} style={{ color:ACCENT }} />
+    </div>
+  );
+  return (
+    <div style={{ display:"flex", gap:10, alignItems:"stretch", marginBottom:36, flexWrap:"wrap" }}>
+      {col("Where it leaks",["Missed follow-ups","Slow quoting","Manual dispatch","Invisible billing gaps"],CREAM,INK,LINE)}
+      {arrow}
+      {col("Recovery engine",["Auto lead capture","Quote automation","Ops command center","Revenue tracking"],INK,CREAM,"rgba(255,255,255,.09)")}
+      {arrow}
+      {col("What you keep",["$8K–$14K/yr back","$6K–$12K/yr back","$9K–$18K/yr back","$7K–$11K/yr back"],`${ACCENT}14`,ACCENT_DEEP,`${ACCENT}30`)}
+    </div>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Data                                         */
+/* ───────────────────────────────────────────── */
+const PAINS = [
+  { icon:<PhoneOff size={20}/>, title:"Leads slip through the cracks",
+    body:"Every missed response or slow follow-up costs you $2K–$5K in lost jobs. It's your biggest invisible drain.", cost:"$8,400–$14,000 / yr avg" },
+  { icon:<Clock size={20}/>, title:"Quotes take too long, lose deals",
+    body:"Manual quoting delays mean competitors win jobs you should have. Speed decides who gets the sale.", cost:"$6,200–$12,000 / yr avg" },
+  { icon:<Route size={20}/>, title:"Ops run on memory and spreadsheets",
+    body:"When systems live in people's heads, mistakes happen, capacity caps early, and you hire before you're ready.", cost:"$9,000–$18,000 / yr avg" },
+  { icon:<Eye size={20}/>, title:"Billing and reporting lag behind",
+    body:"Late invoices, missed upsells, and no real profitability visibility keep you reactive instead of in control.", cost:"$7,100–$11,000 / yr avg" },
+];
+
+const INDUSTRIES = [
+  { icon:<HomeIcon size={22}/>, title:"Service Businesses",
+    body:"HVAC, plumbing, electrical, field service — we stop the lead and scheduling leaks that cap your capacity.",
+    tags:["Lead Response","Dispatch","Job Tracking"] },
+  { icon:<Truck size={22}/>, title:"Logistics & Transportation",
+    body:"Freight brokers, auto transport, last-mile delivery — we automate the ops that slow down your margin.",
+    tags:["Load Management","Driver Ops","Customer Updates"] },
+  { icon:<Building2 size={22}/>, title:"Manufacturing & Industrial",
+    body:"Job shops, contract manufacturers, industrial services — we connect your floor to your books.",
+    tags:["Quoting","Work Orders","Production Tracking"] },
+];
+
+const SERVICES = [
+  { num:"01", title:"Lead & Quote Automation",
+    body:"Every lead captured, responded to, and followed up automatically. Quotes generated and sent without your team touching a keyboard." },
+  { num:"02", title:"Operations Command Center",
+    body:"One view of every job, truck, technician, or order in motion. No more status calls, spreadsheet updates, or missed handoffs." },
+  { num:"03", title:"Revenue Intelligence",
+    body:"Real-time visibility into what's profitable, what's leaking, and what to fix next. Know your numbers without building reports manually." },
+  { num:"04", title:"Client Communication Stack",
+    body:"Automated updates, review requests, and upsell sequences that run without anyone on your team sending a single message." },
+];
+
+const STEPS = [
+  { num:"01", title:"Profit Audit",
+    body:"A deep-dive into your current ops — we map every system, workflow, and cost center. You'll see exactly where money is leaving the building." },
+  { num:"02", title:"Custom Blueprint",
+    body:"We design the exact stack for your business — no templates, no bloat. Just the systems that will recover your $30K." },
+  { num:"03", title:"Build & Install",
+    body:"We build it inside your business using tools you already pay for — or purpose-built where needed. You own everything." },
+  { num:"04", title:"Recovered & Reinvested",
+    body:"Inside 90 days, you're on new systems. The profit we recover goes back into scaling, not into fixing the same problems." },
+];
+
+const RESULTS_STATS = [
+  { stat:"$200K+",  label:"Net new profit created in 12 months"  },
+  { stat:"+120 bps",label:"Gross margin lift — same team"         },
+  { stat:"$3.78M",  label:"Combined active sales pipeline"        },
+  { stat:"96.2%",   label:"On-time delivery, up from 91.4%"       },
+];
+
+const COMPARISON_ROWS = [
+  { feature:"Guaranteed results",      inhouse:false, freelance:false, jdl:true  },
+  { feature:"Built for your industry", inhouse:false, freelance:null,  jdl:true  },
+  { feature:"You own the systems",     inhouse:null,  freelance:false, jdl:true  },
+  { feature:"Profit recovery focus",   inhouse:false, freelance:false, jdl:true  },
+  { feature:"90-day delivery",         inhouse:false, freelance:false, jdl:true  },
+  { feature:"No long-term retainer",   inhouse:null,  freelance:false, jdl:true  },
+];
+
+const GUARANTEE_ITEMS = [
+  "$30K in recovered profit, guaranteed in 90 days",
+  "If we miss, you pay nothing — zero. Not reduced. Zero.",
+  "No retainer. No licensing. You own what we build.",
+  "Every system tested and validated before handoff.",
+];
+
+const FAQ_ITEMS = [
+  { q:"How can you guarantee $30K in 90 days?",
+    a:"Because we don't take clients we can't deliver for. Before you pay anything, we run a Profit Audit. If we don't see a clear path to $30K, we tell you — and we part as friends. Once we start, we build the systems and stay accountable to the number." },
+  { q:"What does it cost?",
+    a:"Pricing depends on the scope we uncover in your audit. We've worked with businesses from $50K to $120K engagements. But here's what matters: every engagement is priced against a hard ROI target. If the math doesn't work for you, we won't sell you." },
+  { q:"Do I need to already have software or tools?",
+    a:"No. We'll work with what you have or build what makes sense. We use tools you already pay for where possible, and set up new ones when the ROI justifies it. You own everything we build or configure." },
+  { q:"How long does implementation take?",
+    a:"The audit takes 1–2 weeks. Build phase is typically 6–10 weeks. You'll see early wins in the first 30 days — systems coming online, numbers improving. The guarantee window is 90 days from kickoff." },
+  { q:"Who handles the systems after you build them?",
+    a:"You do. We document everything, train your team, and hand off full ownership. We also offer an optional maintenance retainer if you want us on-call — but it's not required, and most clients don't need it." },
+  { q:"What if my business is seasonal?",
+    a:"We take seasonality into account in the audit. The $30K benchmark is adjusted for your actual revenue cycle. We've worked with businesses that have 3-month peak seasons — the systems we build are designed to maximize those windows." },
+];
+
+const MARQUEE_ITEMS = [
+  "HVAC & Plumbing","Freight Brokerage","Manufacturing","Field Services",
+  "Auto Transport","Food Service Distribution","Construction Services","Industrial Staffing",
+];
+
+const PILOT_SEATS = [
+  { label:"HVAC & Plumbing",     filled:true  },
+  { label:"Freight & Logistics", filled:false },
+  { label:"Manufacturing",       filled:false },
+  { label:"Field Service",       filled:false },
+  { label:"Auto Transport",      filled:false },
+];
+
+/* ───────────────────────────────────────────── */
+/*  Shared UI                                    */
+/* ───────────────────────────────────────────── */
+function Fade({ children, delay=0, className="" }: { children:React.ReactNode; delay?:number; className?:string }) {
+  return (
+    <motion.div className={className}
+      initial={{ opacity:0, y:22 }}
+      whileInView={{ opacity:1, y:0 }}
+      viewport={{ once:true, margin:"-60px" }}
+      transition={{ duration:0.52, ease:[0.22,1,0.36,1], delay }}>
       {children}
     </motion.div>
   );
 }
 
-function Label({ children }: { children: React.ReactNode }) {
+function SectionLabel({ children, onDark=false }: { children:React.ReactNode; onDark?:boolean }) {
   return (
-    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] mb-3 sg" style={{ color: ACCENT }}>
-      {children}
-    </p>
+    <div style={{ display:"inline-flex", alignItems:"center", gap:8, marginBottom:16 }}>
+      <span style={{ width:26, height:2, background:ACCENT, borderRadius:2, flex:"0 0 auto" }} />
+      <span style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase",
+        color:onDark?"rgba(244,239,227,.6)":ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+        {children}
+      </span>
+    </div>
   );
 }
 
-function H2({ children }: { children: React.ReactNode }) {
+function H2({ children, onDark=false, style: extraStyle={}, className="" }: { children:React.ReactNode; onDark?:boolean; style?:React.CSSProperties; className?:string }) {
   return (
-    <h2 className="font-bold leading-[1.07] sg" style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)", color: TEXT, letterSpacing: "-0.025em" }}>
+    <h2 className={`anton ${className}`}
+      style={{ fontSize:"clamp(2rem,4.2vw,3rem)", lineHeight:1.08, letterSpacing:"-0.01em",
+        color:onDark?CREAM:INK, marginBottom:18, ...extraStyle }}>
       {children}
     </h2>
   );
 }
 
-function PrimaryBtn({ href, children, size = "md", onClick, className = "" }: { href?: string; children: React.ReactNode; size?: "sm" | "md" | "lg" | "xl"; onClick?: () => void; className?: string }) {
-  const pad = size === "xl" ? "px-10 text-[18px] font-bold rounded-2xl" : size === "lg" ? "px-8 h-12 text-[15px]" : size === "sm" ? "px-4 h-8 text-[13px]" : "px-6 h-10 text-[14px]";
-  const height = size === "xl" ? { height: "62px" } : {};
-  const btn = (
-    <button
-      onClick={onClick}
-      className={`inline-flex items-center gap-2 font-semibold rounded-lg transition-opacity duration-150 hover:opacity-90 ${pad} ${className}`}
-      style={{ background: ACCENT, color: "#fff", ...height }}
-    >
-      {children}
-    </button>
-  );
-  if (!href) return btn;
-  return <a href={href} target="_blank" rel="noopener noreferrer">{btn}</a>;
-}
-
-function OutlineBtn({ onClick, children, className = "" }: { onClick?: () => void; children: React.ReactNode; className?: string }) {
+function PrimaryBtn({ children, onClick, small=false, light=false }: { children:React.ReactNode; onClick?:()=>void; small?:boolean; light?:boolean }) {
   return (
-    <button
-      onClick={onClick}
-      className={`inline-flex items-center gap-2 font-medium rounded-lg transition-colors duration-150 px-6 h-10 text-[14px] ${className}`}
-      style={{ border: `1px solid ${BORDER}`, color: MUTED }}
-      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "#444448"; (e.currentTarget as HTMLElement).style.color = TEXT; }}
-      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = BORDER; (e.currentTarget as HTMLElement).style.color = MUTED; }}
-    >
+    <button onClick={onClick}
+      style={{ display:"inline-flex", alignItems:"center", gap:8,
+        background:light?"#fff":ACCENT, color:light?ACCENT_DEEP:"#fff",
+        fontSize:small?14:15.5, fontWeight:700, padding:small?"11px 20px":"14px 26px",
+        borderRadius:100, border:"none", cursor:"pointer", letterSpacing:"-0.01em",
+        boxShadow:light?"0 8px 28px -8px rgba(0,0,0,.28)":`0 6px 22px -6px ${ACCENT}88`,
+        fontFamily:"'Hanken Grotesk',sans-serif",
+        transition:"transform .15s,box-shadow .15s" }}
+      onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.transform="translateY(-2px)"; }}
+      onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.transform="translateY(0)"; }}>
       {children}
     </button>
   );
 }
 
-/* ─────────────────────────────────────────────── */
-/*  FAQ Item                                       */
-/* ─────────────────────────────────────────────── */
-function FaqItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false);
+function OutlineBtn({ children, onClick, onDark=false }: { children:React.ReactNode; onClick?:()=>void; onDark?:boolean }) {
   return (
-    <div style={{ borderBottom: `1px solid ${BORDER}` }} className="last:border-0">
-      <button className="w-full flex items-center justify-between py-4 text-left gap-4" onClick={() => setOpen(o => !o)}>
-        <span className="font-medium text-[15px] leading-snug sg transition-colors duration-150" style={{ color: open ? ACCENT : TEXT }}>{q}</span>
-        <ChevronDown className={`w-4 h-4 flex-shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`} style={{ color: open ? ACCENT : MUTED }} />
+    <button onClick={onClick}
+      style={{ display:"inline-flex", alignItems:"center", gap:8,
+        background:"transparent", color:onDark?CREAM:INK,
+        fontSize:15.5, fontWeight:600, padding:"14px 24px",
+        borderRadius:100, border:`1.5px solid ${onDark?"rgba(244,239,227,.28)":LINE}`,
+        cursor:"pointer", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif",
+        transition:"background .15s,border-color .15s" }}>
+      {children}
+    </button>
+  );
+}
+
+function FAQItem({ q, a, open, onToggle }: { q:string; a:string; open:boolean; onToggle:()=>void }) {
+  return (
+    <div style={{ borderBottom:`1px solid ${LINE}` }}>
+      <button onClick={onToggle}
+        style={{ width:"100%", textAlign:"left", padding:"20px 0", border:"none", background:"none", cursor:"pointer",
+          display:"flex", alignItems:"center", justifyContent:"space-between", gap:16 }}>
+        <span style={{ fontSize:16.5, fontWeight:700, color:INK, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{q}</span>
+        <motion.span animate={{ rotate:open?45:0 }} transition={{ duration:0.2 }} style={{ flex:"0 0 auto", color:ACCENT }}>
+          <Plus size={20} />
+        </motion.span>
       </button>
       <AnimatePresence initial={false}>
         {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <p className="pb-4 text-[14px] leading-relaxed" style={{ color: MUTED }}>{a}</p>
+          <motion.div key="body" initial={{ height:0, opacity:0 }} animate={{ height:"auto", opacity:1 }}
+            exit={{ height:0, opacity:0 }} transition={{ duration:0.28, ease:"easeInOut" }}
+            style={{ overflow:"hidden" }}>
+            <p style={{ paddingBottom:20, color:INK_SOFT, fontSize:15.5, lineHeight:1.65, fontFamily:"'Hanken Grotesk',sans-serif" }}>{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -507,751 +387,861 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-/* ─────────────────────────────────────────────── */
-/*  Reviews Carousel                               */
-/* ─────────────────────────────────────────────── */
-function ReviewsCarousel() {
-  const [idx, setIdx] = useState(0);
-  const prev = () => setIdx(i => (i - 1 + reviews.length) % reviews.length);
-  const next = () => setIdx(i => (i + 1) % reviews.length);
-  const r = reviews[idx];
+/* ───────────────────────────────────────────── */
+/*  Exit intent popup                            */
+/* ───────────────────────────────────────────── */
+function ExitIntentPopup({ onOpen }: { onOpen:()=>void }) {
+  const [show, setShow] = useState(false);
+  const fired = useRef(false);
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (fired.current || e.clientY > 40) return;
+      fired.current = true;
+      setShow(true);
+    };
+    document.addEventListener("mouseleave", handler);
+    return () => document.removeEventListener("mouseleave", handler);
+  }, []);
+  if (!show) return null;
   return (
-    <div className="relative max-w-xl mx-auto">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={idx}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          transition={{ duration: 0.2 }}
-          className="rounded-xl p-8"
-          style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
-        >
-          <div className="flex gap-0.5 mb-5">
-            {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
-          </div>
-          <p className="text-[15px] leading-relaxed mb-6 italic" style={{ color: TEXT }}>"{r.quote}"</p>
-          <p className="font-semibold text-[14px] sg" style={{ color: TEXT }}>{r.name}</p>
-          <p className="text-[13px]" style={{ color: MUTED }}>{r.company}</p>
+    <AnimatePresence>
+      <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }}
+        style={{ position:"fixed", inset:0, zIndex:9998, background:"rgba(11,13,18,.6)", backdropFilter:"blur(6px)",
+          display:"flex", alignItems:"center", justifyContent:"center", padding:20 }}
+        onClick={() => setShow(false)}>
+        <motion.div initial={{ scale:0.9, opacity:0 }} animate={{ scale:1, opacity:1 }} exit={{ scale:0.9, opacity:0 }}
+          transition={{ type:"spring", damping:22 }}
+          style={{ background:CREAM, borderRadius:24, padding:"36px 32px", maxWidth:420, width:"100%",
+            border:`1px solid ${LINE}`, boxShadow:"0 32px 80px -16px rgba(0,0,0,.22)", position:"relative" }}
+          onClick={e => e.stopPropagation()}>
+          <button onClick={() => setShow(false)}
+            style={{ position:"absolute", top:14, right:14, background:CREAM2, border:"none", borderRadius:100,
+              width:30, height:30, cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center" }}>
+            <X size={14} style={{ color:INK_SOFT }} />
+          </button>
+          <div style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.1em", color:ACCENT, textTransform:"uppercase", marginBottom:10, fontFamily:"'Hanken Grotesk',sans-serif" }}>WAIT — BEFORE YOU GO</div>
+          <h3 className="anton" style={{ fontSize:26, color:INK, lineHeight:1.1, marginBottom:10 }}>Know your profit leak number?</h3>
+          <p style={{ color:INK_SOFT, fontSize:14.5, lineHeight:1.6, marginBottom:22, fontFamily:"'Hanken Grotesk',sans-serif" }}>Most operators don't. A free 20-minute audit tells you exactly where money is leaving your business — no pitch, no obligation.</p>
+          <PrimaryBtn onClick={() => { setShow(false); onOpen(); }}>
+            Book the Free Audit <ArrowRight size={16} />
+          </PrimaryBtn>
         </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Nav                                          */
+/* ───────────────────────────────────────────── */
+function LPNav({ onBook }: { onBook:()=>void }) {
+  const [menu, setMenu] = useState(false);
+  return (
+    <nav style={{ position:"sticky", top:0, zIndex:50,
+      background:"rgba(244,239,227,.86)", backdropFilter:"blur(14px) saturate(1.25)",
+      borderBottom:`1px solid ${LINE}` }}>
+      <div style={{ maxWidth:1120, margin:"0 auto", padding:"0 24px", height:64,
+        display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+        <Link href="/" style={{ textDecoration:"none" }}>
+          <Wordmark size={18} onDark={false} />
+        </Link>
+        <div className="hidden md:flex" style={{ alignItems:"center", gap:28 }}>
+          {[["/#services","Services"],["/#process","Process"],["/#results","Results"],["/#faq","FAQ"]].map(([href,label]) => (
+            <a key={href} href={href}
+              style={{ fontSize:14.5, fontWeight:600, color:INK_SOFT, textDecoration:"none", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}
+              onMouseEnter={e => { (e.currentTarget).style.color=INK; }}
+              onMouseLeave={e => { (e.currentTarget).style.color=INK_SOFT; }}>
+              {label}
+            </a>
+          ))}
+        </div>
+        <div style={{ display:"flex", alignItems:"center", gap:10 }}>
+          <PrimaryBtn onClick={onBook} small>Book Free Audit</PrimaryBtn>
+          <button className="flex md:hidden" onClick={() => setMenu(m => !m)}
+            style={{ border:"none", background:"none", cursor:"pointer", padding:6, color:INK, display:"flex", flexDirection:"column" }}>
+            <div style={{ width:20, height:2, background:INK, borderRadius:2, marginBottom:5, transition:"transform .2s", transform:menu?"rotate(45deg) translateY(7px)":"none" }} />
+            <div style={{ width:20, height:2, background:INK, borderRadius:2, transition:"opacity .2s", opacity:menu?0:1 }} />
+            <div style={{ width:20, height:2, background:INK, borderRadius:2, marginTop:5, transition:"transform .2s", transform:menu?"rotate(-45deg) translateY(-7px)":"none" }} />
+          </button>
+        </div>
+      </div>
+      <AnimatePresence>
+        {menu && (
+          <motion.div initial={{ height:0, opacity:0 }} animate={{ height:"auto", opacity:1 }} exit={{ height:0, opacity:0 }}
+            style={{ overflow:"hidden", borderTop:`1px solid ${LINE}`, background:CREAM }}>
+            {[["/#services","Services"],["/#process","Process"],["/#results","Results"],["/#faq","FAQ"]].map(([href,label]) => (
+              <a key={href} href={href} onClick={() => setMenu(false)}
+                style={{ display:"block", padding:"14px 24px", fontSize:16, fontWeight:600, color:INK,
+                  textDecoration:"none", borderBottom:`1px solid ${LINE}`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+                {label}
+              </a>
+            ))}
+            <div style={{ padding:"14px 24px" }}>
+              <PrimaryBtn onClick={() => { setMenu(false); onBook(); }}>Book Free Audit</PrimaryBtn>
+            </div>
+          </motion.div>
+        )}
       </AnimatePresence>
-      <div className="flex justify-center gap-2.5 mt-5">
-        <button onClick={prev} className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors duration-150" style={{ border: `1px solid ${BORDER}`, color: MUTED }}
-          onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#444448"}
-          onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}>
-          <ChevronLeft className="w-4 h-4" />
-        </button>
-        {reviews.map((_, i) => (
-          <button key={i} onClick={() => setIdx(i)} className={`h-1.5 rounded-full transition-all duration-200 ${i === idx ? "w-5" : "w-1.5"}`}
-            style={{ background: i === idx ? ACCENT : BORDER }} />
+    </nav>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Hero                                         */
+/* ───────────────────────────────────────────── */
+function Hero({ onBook }: { onBook:()=>void }) {
+  return (
+    <section style={{ background:CREAM, padding:"80px 24px 100px" }}>
+      <div style={{ maxWidth:1120, margin:"0 auto" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <Fade>
+            <div style={{ display:"inline-flex", alignItems:"center", gap:8,
+              background:`${ACCENT}14`, border:`1px solid ${ACCENT}30`,
+              borderRadius:100, padding:"7px 14px", marginBottom:24 }}>
+              <span style={{ fontSize:10.5, fontWeight:700, letterSpacing:"0.11em", textTransform:"uppercase", color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>Free Profit Recovery Audit</span>
+            </div>
+            <h1 className="anton" style={{ fontSize:"clamp(2.7rem,5.5vw,4rem)", lineHeight:1.05, letterSpacing:"-0.01em", color:INK, marginBottom:10 }}>
+              We find the{" "}
+              <span style={{ background:ACCENT, color:"#fff", padding:"0.02em 0.16em 0.08em", borderRadius:7, display:"inline" }}>$30K</span>
+              {" "}hiding in your operations.
+            </h1>
+            <p className="anton" style={{ fontSize:"clamp(1.4rem,2.6vw,1.9rem)", color:INK_SOFT, marginBottom:22, fontStyle:"italic" }}>
+              In 90 days or you don't pay.
+            </p>
+            <p style={{ fontSize:17, lineHeight:1.65, color:INK_SOFT, maxWidth:520, marginBottom:32, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              If you're doing $1M+ in service, logistics, or manufacturing, you're leaking profit every week. We find it. We fix it. We guarantee it.
+            </p>
+            <div style={{ display:"flex", flexWrap:"wrap", gap:12, marginBottom:36 }}>
+              <PrimaryBtn onClick={onBook}>
+                Book Your Free Profit Recovery Audit <ArrowRight size={17} />
+              </PrimaryBtn>
+              <OutlineBtn onClick={() => document.getElementById("process")?.scrollIntoView({ behavior:"smooth" })}>
+                See How It Works
+              </OutlineBtn>
+            </div>
+            <div style={{ display:"flex", alignItems:"center", gap:14 }}>
+              <div style={{ display:"flex" }}>
+                {(["#1466FF","#34d399","#f97316","#a855f7","#ec4899"] as string[]).map((c, i) => (
+                  <div key={c} style={{ width:34, height:34, borderRadius:"50%", background:c,
+                    border:`2.5px solid ${CREAM}`, marginLeft:i===0?0:-10,
+                    display:"flex", alignItems:"center", justifyContent:"center",
+                    fontSize:11.5, fontWeight:700, color:"#fff", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+                    {(["RB","JM","TK","AL","SR"] as string[])[i]}
+                  </div>
+                ))}
+              </div>
+              <div>
+                <div style={{ display:"flex", gap:2, marginBottom:3 }}>
+                  {[1,2,3,4,5].map(s => <Star key={s} size={13} fill="#f59e0b" stroke="none" />)}
+                </div>
+                <p style={{ fontSize:13, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif", margin:0 }}>
+                  <strong style={{ color:INK }}>40+ operators</strong> automated
+                </p>
+              </div>
+            </div>
+          </Fade>
+          <Fade delay={0.12}>
+            <div style={{ position:"relative" }}>
+              <div style={{ position:"absolute", top:-16, right:-8, zIndex:10 }}>
+                <StampBadge size={94} />
+              </div>
+              <VSL />
+            </div>
+          </Fade>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Trust strip                                  */
+/* ───────────────────────────────────────────── */
+function TrustStrip() {
+  const items = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
+  return (
+    <div style={{ background:INK2, borderTop:"1px solid rgba(255,255,255,.06)", borderBottom:"1px solid rgba(255,255,255,.06)", overflow:"hidden", padding:"18px 0" }}>
+      <div style={{ display:"flex", width:"max-content", animation:"marquee 22s linear infinite" }}>
+        {items.map((item, i) => (
+          <div key={`${item}-${i}`} style={{ display:"flex", alignItems:"center", gap:18, padding:"0 28px", whiteSpace:"nowrap" }}>
+            <span style={{ width:5, height:5, borderRadius:"50%", background:ACCENT, flex:"0 0 auto" }} />
+            <span style={{ fontSize:13, fontWeight:600, letterSpacing:"0.06em", textTransform:"uppercase", color:"rgba(244,239,227,.62)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{item}</span>
+          </div>
         ))}
-        <button onClick={next} className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors duration-150" style={{ border: `1px solid ${BORDER}`, color: MUTED }}
-          onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#444448"}
-          onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}>
-          <ChevronRight className="w-4 h-4" />
-        </button>
       </div>
     </div>
   );
 }
 
-/* ─────────────────────────────────────────────── */
-/*  Exit-Intent Popup                              */
-/* ─────────────────────────────────────────────── */
-function ExitIntentPopup() {
-  const [visible, setVisible] = useState(false);
-  const [showBooking, setShowBooking] = useState(false);
-
-  useEffect(() => {
-    const alreadyShown = sessionStorage.getItem("exit_popup_shown");
-    if (alreadyShown) return;
-    const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 5) {
-        setVisible(true);
-        sessionStorage.setItem("exit_popup_shown", "1");
-        document.removeEventListener("mouseleave", handleMouseLeave);
-      }
-    };
-    const timer = setTimeout(() => document.addEventListener("mouseleave", handleMouseLeave), 3000);
-    return () => { clearTimeout(timer); document.removeEventListener("mouseleave", handleMouseLeave); };
-  }, []);
-
+/* ───────────────────────────────────────────── */
+/*  Problem                                      */
+/* ───────────────────────────────────────────── */
+function Problem() {
   return (
-    <>
-    <AnimatePresence>
-      {visible && (
-        <>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100]" style={{ background: "rgba(0,0,0,0.65)" }}
-            onClick={() => setVisible(false)} />
-          <motion.div initial={{ opacity: 0, scale: 0.97, y: 12 }} animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.97, y: 12 }} transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed inset-0 flex items-center justify-center z-[101] px-4">
-            <div className="rounded-xl max-w-sm w-full p-7 relative" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-              <button onClick={() => setVisible(false)}
-                className="absolute top-3.5 right-3.5 w-7 h-7 flex items-center justify-center rounded-md transition-colors duration-150"
-                style={{ color: MUTED }} onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = BORDER}
-                onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "transparent"}>
-                <X className="w-3.5 h-3.5" />
-              </button>
-              <div className="flex items-center gap-3.5 mb-5">
-                <img src={`${import.meta.env.BASE_URL}ryne.png`} alt="Ryne Bandolik"
-                  className="w-12 h-12 rounded-full object-cover object-top flex-shrink-0" style={{ border: `2px solid ${BORDER}` }} />
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-wider sg mb-0.5" style={{ color: ACCENT }}>Wait — before you go</p>
-                  <p className="font-semibold text-[14px] sg" style={{ color: TEXT }}>A note from Ryne</p>
-                  <p className="text-[12px]" style={{ color: MUTED }}>Founder, JobsDone Labs</p>
+    <section style={{ background:INK, padding:"96px 24px" }}>
+      <div style={{ maxWidth:1120, margin:"0 auto" }}>
+        <Fade>
+          <div style={{ textAlign:"center", marginBottom:52 }}>
+            <SectionLabel onDark>The Problem</SectionLabel>
+            <H2 onDark style={{ maxWidth:680, margin:"0 auto 16px" }}>
+              Your business is bleeding $30K+ a year.<br/>You just can't see where.
+            </H2>
+            <p style={{ color:"rgba(244,239,227,.55)", fontSize:17, lineHeight:1.65, maxWidth:500, margin:"0 auto", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              It's not one big hole. It's a hundred small leaks.
+            </p>
+          </div>
+        </Fade>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {PAINS.map((p, i) => (
+            <Fade key={p.title} delay={i*0.07}>
+              <div style={{ background:"rgba(255,255,255,.04)", border:"1px solid rgba(255,255,255,.08)", borderRadius:18, padding:"28px 26px" }}>
+                <div style={{ width:44, height:44, borderRadius:12, background:`${ACCENT}22`,
+                  display:"flex", alignItems:"center", justifyContent:"center", marginBottom:16, color:ACCENT }}>
+                  {p.icon}
+                </div>
+                <h3 style={{ fontSize:17, fontWeight:700, color:CREAM, marginBottom:8, fontFamily:"'Hanken Grotesk',sans-serif", letterSpacing:"-0.01em" }}>{p.title}</h3>
+                <p style={{ fontSize:14.5, lineHeight:1.6, color:"rgba(244,239,227,.52)", marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif" }}>{p.body}</p>
+                <div style={{ display:"inline-flex", alignItems:"center", gap:7, background:"rgba(249,115,22,.12)",
+                  border:"1px solid rgba(249,115,22,.2)", borderRadius:100, padding:"5px 12px" }}>
+                  <span style={{ width:7, height:7, borderRadius:"50%", background:"#f97316", flex:"0 0 auto" }} />
+                  <span style={{ fontSize:12.5, fontWeight:700, color:"#f97316", fontFamily:"'Hanken Grotesk',sans-serif" }}>{p.cost}</span>
                 </div>
               </div>
-              <h2 className="text-[1.35rem] font-bold sg leading-snug mb-2.5" style={{ color: TEXT, letterSpacing: "-0.015em" }}>
-                We guarantee $30,000 in net profit within 90 days.
-              </h2>
-              <p className="text-[13px] leading-relaxed mb-6" style={{ color: MUTED }}>
-                Most businesses are leaking revenue every day through slow follow-up and broken ops. Book a free 45-min audit and I'll show you exactly where yours are.
-              </p>
-              <div className="flex flex-col gap-2.5">
-                <PrimaryBtn size="lg" className="w-full justify-center" onClick={() => setShowBooking(true)}>
-                  Book My Free Profit Recovery Audit <ArrowRight className="w-4 h-4" />
-                </PrimaryBtn>
-                <button onClick={() => setVisible(false)} className="text-[13px] py-1.5 transition-colors duration-150" style={{ color: MUTED }}>
-                  No thanks, I'll pass on the free roadmap
-                </button>
-              </div>
-              <div className="flex items-center justify-center gap-4 mt-4 text-[12px]" style={{ color: MUTED }}>
-                <span>✓ No commitment</span><span>✓ Month-to-month</span><span>✓ You own everything</span>
-              </div>
-            </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
-    <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
-    </>
+            </Fade>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
-/* ─────────────────────────────────────────────── */
-/*  Page                                           */
-/* ─────────────────────────────────────────────── */
-export default function Home() {
-  const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  const [scrolled, setScrolled] = useState(false);
-  const [showBooking, setShowBooking] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 48);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
+/* ───────────────────────────────────────────── */
+/*  Industries                                   */
+/* ───────────────────────────────────────────── */
+function Industries() {
   return (
-    <div className="min-h-screen overflow-x-hidden" style={{ background: BG, color: TEXT, fontFamily: "'Inter', sans-serif" }}>
-      <ExitIntentPopup />
-
-      {/* ── NAV ── */}
-      <header
-        className="sticky top-0 z-50 transition-all duration-200"
-        style={{
-          background: scrolled ? `${BG}e0` : "transparent",
-          backdropFilter: scrolled ? "blur(12px)" : "none",
-          borderBottom: scrolled ? `1px solid ${BORDER}` : "1px solid transparent",
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/" data-testid="link-logo"><JobsDoneLogo /></Link>
-          <nav className="hidden md:flex items-center gap-7">
-            {[["Services","services"],["Industries","industries"],["Results","results"],["FAQ","faq"]].map(([label,id]) => (
-              <button key={id} onClick={() => scrollTo(id)}
-                className="text-[13px] font-medium transition-colors duration-150"
-                style={{ color: MUTED }}
-                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
-                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>
-                {label}
-              </button>
-            ))}
-            <Link href="/roi-calculator">
-              <button className="flex items-center gap-1.5 text-[13px] font-medium transition-colors duration-150" style={{ color: MUTED }}
-                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
-                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>
-                <Calculator className="w-3.5 h-3.5" /> ROI Calculator
-              </button>
-            </Link>
-            <Link href="/contact">
-              <button className="flex items-center gap-1.5 text-[13px] font-medium transition-colors duration-150" style={{ color: MUTED }}
-                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
-                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>
-                Contact
-              </button>
-            </Link>
-            <a href="https://replit.com/@rynestone/Jobsdone-Labs-Course-AI-Platform" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[13px] font-semibold px-2.5 py-1 rounded-md transition-colors duration-150"
-              style={{ color: ACCENT, border: `1px solid ${ACCENT}30`, background: `${ACCENT}10` }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = `${ACCENT}20`; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = `${ACCENT}10`; }}>
-              Free AI Course
-            </a>
-          </nav>
-          <PrimaryBtn size="sm" onClick={() => setShowBooking(true)}>Book a Call</PrimaryBtn>
-        </div>
-      </header>
-
-      <main>
-
-        {/* ── HERO ── */}
-        <section className="w-full px-6 pt-14 pb-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="max-w-3xl mx-auto"
-          >
-            {/* Badge */}
-            <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[11px] font-semibold uppercase tracking-[0.1em] mb-6 rounded px-3 py-1.5 sg"
-              style={{ color: ACCENT, background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>
-              <span>For Agencies &amp; Service Businesses</span>
-              <span className="w-1 h-1 rounded-full inline-block flex-shrink-0" style={{ background: ACCENT }} />
-              <span>90-Day Guarantee</span>
-            </div>
-
-            {/* Headline */}
-            <h1 className="font-bold leading-[1.05] mb-6 sg"
-              style={{ fontSize: "clamp(2.8rem, 7vw, 5rem)", color: TEXT, letterSpacing: "-0.03em" }}>
-              We Guarantee Service Businesses Recover At Least{" "}
-              <span style={{ color: ACCENT }}>$30,000 in Net Profit</span>{" "}
-              Within 90 Days—<span style={{ color: ACCENT }}>Or You Pay Nothing</span>
-            </h1>
-
-            {/* Sub-copy */}
-            <p className="text-[18px] leading-[1.6] mb-10 max-w-[600px] mx-auto" style={{ color: MUTED }}>
-              Custom AI automation systems that recover lost revenue from manual processes, missed follow-ups, and data chaos. If we don't hit $30K in measurable profit impact, you don't pay a dime.
-            </p>
-          </motion.div>
-
-          {/* Video */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.12 }}
-            className="max-w-2xl mx-auto mb-7"
-          >
-            <VideoPlayer label="WATCH: How we generate $30K+ in net profit in 90 days (3 min)" />
-          </motion.div>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.22 }}
-            className="flex flex-col items-center gap-4 mb-12"
-          >
-            <PrimaryBtn size="xl" className="w-full max-w-[440px] justify-center" onClick={() => setShowBooking(true)}>
-              Book Your Free Profit Recovery Audit <ArrowRight className="w-5 h-5" />
-            </PrimaryBtn>
-            <a
-              href="https://replit.com/@rynestone/Jobsdone-Labs-Course-AI-Platform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[15px] font-semibold transition-colors duration-150"
-              style={{ color: MUTED }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = TEXT; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = MUTED; }}
-            >
-              Free AI Course <ArrowRight className="w-4 h-4" />
-            </a>
-          </motion.div>
-
-          {/* Logo strip — right under CTA */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.38 }}
-            className="max-w-3xl mx-auto"
-          >
-            <p className="text-center text-[11px] uppercase tracking-[0.14em] font-semibold mb-5 sg" style={{ color: `${MUTED}80` }}>
-              Trusted by 7-figure founders &amp; business owners
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3">
-              {trustLogos.map((l) => (
-                <span key={l} className="font-bold text-[13px] tracking-wide sg" style={{ color: `${TEXT}28` }}>{l}</span>
-              ))}
-            </div>
-          </motion.div>
-        </section>
-
-        {/* ── STAT CARDS + WORKFLOW ── */}
-        <section className="py-16" style={{ background: BG2 }}>
-          <div className="max-w-5xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 text-left">
-            {/* Left: headline + stat cards */}
-            <div className="flex-1 flex flex-col gap-6">
-              <div>
-                <p className="font-black sg leading-[1.05] tracking-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: TEXT }}>
-                  YOUR FRACTIONAL<br />
-                  <span style={{ color: ACCENT }}>SYSTEMS OPERATOR</span>
-                </p>
-                <div className="w-10 h-1 rounded-full mt-3 mb-4" style={{ background: ACCENT }} />
-                <p className="text-[14px] leading-relaxed max-w-[340px]" style={{ color: MUTED }}>
-                  Most service business owners are stuck being the "systems guy" at 2am. We fill that seat for you. We audit your operation, identify profit leaks, and build the automated infrastructure that recovers that money within 90 days—guaranteed.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  { Icon: Users,        value: "50+",     line1: "BUSINESSES",   line2: "AUTOMATED" },
-                  { Icon: DollarSign,   value: "$30K+",   line1: "AVG. REVENUE", line2: "GENERATED" },
-                  { Icon: CalendarDays, value: "90 DAYS", line1: "OR WE KEEP",   line2: "WORKING" },
-                  { Icon: Star,         value: "5-STAR",  line1: "CLIENT",       line2: "REVIEWS" },
-                ].map(({ Icon, value, line1, line2 }) => (
-                  <div key={value} className="flex items-center gap-3 rounded-xl px-4 py-5"
-                    style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ background: `${ACCENT}15`, border: `1px solid ${ACCENT}25` }}>
-                      <Icon className="w-4.5 h-4.5" style={{ color: ACCENT }} />
-                    </div>
-                    <div>
-                      <p className="font-black sg leading-none mb-1" style={{ fontSize: "clamp(1.3rem, 2.5vw, 1.75rem)", color: TEXT, letterSpacing: "-0.02em" }}>{value}</p>
-                      <p className="text-[11px] font-semibold sg leading-tight" style={{ color: ACCENT }}>{line1}</p>
-                      <p className="text-[11px] font-semibold sg leading-tight" style={{ color: MUTED }}>{line2}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Right: WorkflowCard */}
-            <div className="w-full lg:w-auto lg:flex-shrink-0 lg:max-w-[420px]">
-              <WorkflowCard />
-            </div>
+    <section style={{ background:CREAM2, padding:"96px 24px" }}>
+      <div style={{ maxWidth:1120, margin:"0 auto" }}>
+        <Fade>
+          <div style={{ textAlign:"center", marginBottom:52 }}>
+            <SectionLabel>Who We Build For</SectionLabel>
+            <H2 style={{ maxWidth:560, margin:"0 auto 0" }}>
+              Built for the operators who keep things running.
+            </H2>
           </div>
-        </section>
-
-        {/* ── CASE STUDY LINK ── */}
-        <section className="py-12" style={{ background: BG }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <Fade>
-              <div className="rounded-xl overflow-hidden" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-                <div className="flex flex-col md:flex-row">
-                  {/* Left — description */}
-                  <div className="flex-1 p-7 md:p-9 flex flex-col justify-center gap-4">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.1em] px-2.5 py-1 rounded sg" style={{ color: ACCENT, background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>Case Study · March 2026</span>
-                      <span className="text-[12px]" style={{ color: MUTED }}>BCAT Logistics · Ivan Cartage · Best Care Auto</span>
-                    </div>
-                    <h3 className="font-bold sg leading-tight" style={{ fontSize: "clamp(1.3rem, 2.5vw, 1.75rem)", color: TEXT, letterSpacing: "-0.02em" }}>
-                      How One Logistics Group Created<br className="hidden sm:block" /> $2.0M in Net New Revenue — Without Adding Headcount
-                    </h3>
-                    <p className="text-[14px] leading-relaxed max-w-lg" style={{ color: MUTED }}>
-                      A multi-company transportation group deployed a unified AI command center across three business units — turning five hidden revenue leaks into five working profit engines in 12 months.
-                    </p>
-                    <div className="flex flex-wrap gap-4 pt-1">
-                      {[["$2.0M+", "Net new revenue"], ["$310K", "Margin recovery"], ["$3.78M", "Active pipeline"]].map(([v, l]) => (
-                        <div key={l}>
-                          <p className="font-bold text-[1.1rem] sg leading-none mb-0.5" style={{ color: ACCENT, letterSpacing: "-0.02em" }}>{v}</p>
-                          <p className="text-[12px]" style={{ color: MUTED }}>{l}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Right — CTA */}
-                  <div className="md:w-64 flex-shrink-0 flex flex-col items-center justify-center gap-5 p-7 md:p-9" style={{ borderTop: `1px solid ${BORDER}`, ...(true && { borderTop: undefined }) }}>
-                    <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: `${ACCENT}10`, border: `1px solid ${ACCENT}20` }}>
-                      <FileText className="w-6 h-6" style={{ color: ACCENT }} />
-                    </div>
-                    <div className="text-center">
-                      <p className="font-semibold text-[14px] sg mb-1" style={{ color: TEXT }}>Full case study</p>
-                      <p className="text-[12px]" style={{ color: MUTED }}>12-page PDF · Free download</p>
-                    </div>
-                    <a
-                      href={`${import.meta.env.BASE_URL}case-study.pdf`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 font-semibold text-[14px] px-5 py-2.5 rounded-lg transition-opacity duration-150 hover:opacity-80 sg"
-                      style={{ background: ACCENT, color: "#fff" }}
-                    >
-                      Read the Case Study <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </div>
+        </Fade>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {INDUSTRIES.map((ind, i) => (
+            <Fade key={ind.title} delay={i*0.08}>
+              <div style={{ background:CREAM, border:`1px solid ${LINE}`, borderRadius:20, padding:"28px 26px", height:"100%" }}>
+                <div style={{ width:48, height:48, borderRadius:14, background:`${ACCENT}12`,
+                  display:"flex", alignItems:"center", justifyContent:"center", marginBottom:18, color:ACCENT }}>
+                  {ind.icon}
                 </div>
-              </div>
-            </Fade>
-          </div>
-        </section>
-
-        {/* ── PROBLEM ── */}
-        <section className="py-16 px-6" style={{ background: BG }}>
-          <div className="max-w-5xl mx-auto">
-            <Fade>
-              <Label>Why Service Businesses Hire Us</Label>
-              <H2>Your business is bleeding $30K–$50K per year</H2>
-              <p className="text-[16px] leading-relaxed mt-4 max-w-2xl" style={{ color: MUTED }}>
-                Most service businesses aren't struggling because of a bad product or weak demand. They're losing money through three completely fixable problems.
-              </p>
-            </Fade>
-            <div className="mt-10 grid sm:grid-cols-3 gap-6">
-              {[
-                { Icon: Users, title: "Lost Leads", desc: "Manual follow-up means 40–60% of leads go cold before anyone reaches them. That's revenue walking out the door every single day." },
-                { Icon: BarChart3, title: "Data Chaos", desc: "No visibility into what's actually working costs you thousands in wasted spend. You can't optimize what you can't see." },
-                { Icon: Wrench, title: "Manual Busywork", desc: "Your team spends 15+ hours per week on tasks a system should handle. That's payroll dollars going to work a computer should be doing." },
-              ].map(({ Icon, title, desc }) => (
-                <Fade key={title}>
-                  <div className="rounded-xl p-6 flex flex-col gap-4 h-full" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-                    <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: `${ACCENT}10`, border: `1px solid ${ACCENT}18` }}>
-                      <Icon className="w-5 h-5" style={{ color: ACCENT }} />
-                    </div>
-                    <h3 className="font-bold text-[17px] sg" style={{ color: TEXT }}>{title}</h3>
-                    <p className="text-[13px] leading-relaxed" style={{ color: MUTED }}>{desc}</p>
-                  </div>
-                </Fade>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── INDUSTRIES ── */}
-        <section id="industries" className="py-16" style={{ background: BG2 }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <Fade>
-              <Label>Who We Work With</Label>
-              <H2>Built for businesses where time literally equals money</H2>
-            </Fade>
-            <div className="mt-10 grid md:grid-cols-3 gap-4">
-              {industries.map((ind, i) => (
-                <Fade key={ind.title} delay={i * 0.06}>
-                  <div
-                    className="rounded-xl p-6 flex flex-col gap-4 h-full transition-colors duration-150"
-                    style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#2e2e32"}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}
-                  >
-                    <div className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: `${ACCENT}10`, border: `1px solid ${ACCENT}18` }}>
-                      <ind.Icon className="w-4.5 h-4.5" style={{ color: ACCENT }} />
-                    </div>
-                    <h3 className="font-bold text-[17px] sg" style={{ color: TEXT, letterSpacing: "-0.01em" }}>{ind.title}</h3>
-                    <p className="text-[13px] leading-relaxed flex-1" style={{ color: MUTED }}>{ind.desc}</p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {ind.tags.map(tag => (
-                        <span key={tag} className="flex items-center gap-1 text-[12px] font-medium px-2.5 py-1 rounded-md" style={{ color: MUTED, background: `${TEXT}06`, border: `1px solid ${BORDER}` }}>
-                          <Check className="w-3 h-3" style={{ color: ACCENT }} /> {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </Fade>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── INLINE CTA #1 ── */}
-        <section className="py-12" style={{ background: BG }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-6 px-6 sm:py-8 sm:px-8 rounded-xl" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-              <div>
-                <p className="font-bold text-[18px] sg mb-1" style={{ color: TEXT, letterSpacing: "-0.01em" }}>Ready to recover your $30,000?</p>
-                <p className="text-[13px]" style={{ color: MUTED }}>Free profit recovery audit. No commitment. You keep the blueprint either way.</p>
-              </div>
-              <PrimaryBtn size="lg" className="flex-shrink-0" onClick={() => setShowBooking(true)}>
-                Book Your Free Profit Recovery Audit <ArrowRight className="w-4 h-4" />
-              </PrimaryBtn>
-            </div>
-          </div>
-        </section>
-
-        {/* ── SERVICES ── */}
-        <section id="services" className="py-16" style={{ background: BG2 }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <Fade>
-              <Label>What You Get</Label>
-              <H2>Four services that recover lost profit.</H2>
-            </Fade>
-            <Fade delay={0.08}>
-              <div className="mt-10 mb-8">
-                <ProfitDiagram />
-              </div>
-            </Fade>
-            <div className="flex flex-col gap-3">
-              {services.map((s, i) => (
-                <Fade key={s.title} delay={i * 0.05}>
-                  <div
-                    className="rounded-xl p-6 flex flex-col md:flex-row gap-5 transition-colors duration-150"
-                    style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#2e2e32"}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}
-                  >
-                    <div className="flex-shrink-0 flex items-start gap-3 md:w-16">
-                      <span className="font-bold text-[2.2rem] leading-none sg" style={{ color: `${ACCENT}25`, letterSpacing: "-0.03em" }}>{s.num}</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-bold text-[17px] mb-1.5 sg" style={{ color: TEXT, letterSpacing: "-0.01em" }}>{s.title}</h3>
-                      <p className="text-[13px] leading-relaxed mb-3" style={{ color: MUTED }}>{s.desc}</p>
-                      <div className="flex flex-wrap gap-1.5">
-                        {s.tags.map(tag => (
-                          <span key={tag} className="text-[12px] px-2.5 py-1 rounded-md" style={{ color: MUTED, background: `${TEXT}06`, border: `1px solid ${BORDER}` }}>{tag}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </Fade>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── PROCESS ── */}
-        <section className="py-16" style={{ background: BG }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <Fade>
-              <Label>The Process</Label>
-              <H2>The 90-Day Profit Recovery Process</H2>
-            </Fade>
-            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {steps.map((s, i) => (
-                <Fade key={s.title} delay={i * 0.06}>
-                  <div
-                    className="rounded-xl p-5 transition-colors duration-150"
-                    style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
-                    data-testid={`card-step-${i}`}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "#2e2e32"}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BORDER}
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="font-bold text-[1.5rem] sg" style={{ color: ACCENT, letterSpacing: "-0.02em" }}>{s.num}</span>
-                      <span className="text-[11px] font-medium px-2 py-0.5 rounded-md sg" style={{ color: MUTED, background: `${TEXT}06`, border: `1px solid ${BORDER}` }}>{s.sub}</span>
-                    </div>
-                    <h3 className="font-bold text-[15px] mb-1.5 sg" style={{ color: TEXT }}>{s.title}</h3>
-                    <p className="text-[13px] leading-relaxed" style={{ color: MUTED }}>{s.desc}</p>
-                  </div>
-                </Fade>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── COMPARISON TABLE ── */}
-        <section className="py-16" style={{ background: BG2 }}>
-          <div className="max-w-5xl mx-auto px-6">
-            <Fade>
-              <Label>Us vs. The Alternative</Label>
-              <H2>Why service businesses choose us over everything else</H2>
-            </Fade>
-            <Fade delay={0.08}>
-              <div className="mt-10 rounded-xl overflow-hidden overflow-x-auto" style={{ border: `1px solid ${BORDER}` }}>
-                <div className="min-w-[520px]">
-                  <div className="grid grid-cols-4" style={{ background: SURFACE, borderBottom: `1px solid ${BORDER}` }}>
-                    <div className="p-3 sm:p-4" />
-                    {["Hiring In-House","Generic Freelancers","Working With Us"].map((h, i) => (
-                      <div key={h} className="p-3 sm:p-4 text-center" style={{
-                        borderLeft: `1px solid ${BORDER}`,
-                        ...(i === 2 ? { background: `${ACCENT}08`, borderLeft: `1px solid ${ACCENT}25` } : {}),
-                      }}>
-                        <span className="text-[12px] sm:text-[13px] font-semibold sg" style={{ color: i === 2 ? ACCENT : MUTED }}>{h}</span>
-                      </div>
-                    ))}
-                  </div>
-                  {comparison.map((row, i) => (
-                    <div key={row.aspect} className="grid grid-cols-4" style={{ borderBottom: i < comparison.length - 1 ? `1px solid ${BORDER}` : "none", background: i % 2 === 0 ? BG : BG2 }}>
-                      <div className="px-3 sm:px-4 py-3 text-[12px] sm:text-[13px] font-medium sg" style={{ color: MUTED }}>{row.aspect}</div>
-                      <div className="px-3 sm:px-4 py-3 text-[12px] sm:text-[13px] text-center" style={{ borderLeft: `1px solid ${BORDER}`, color: MUTED }}>{row.inHouse}</div>
-                      <div className="px-3 sm:px-4 py-3 text-[12px] sm:text-[13px] text-center" style={{ borderLeft: `1px solid ${BORDER}`, color: MUTED }}>{row.freelancer}</div>
-                      <div className="px-3 sm:px-4 py-3 text-[12px] sm:text-[13px] text-center font-semibold sg" style={{ borderLeft: `1px solid ${ACCENT}25`, background: `${ACCENT}06`, color: ACCENT }}>{row.us}</div>
-                    </div>
+                <h3 style={{ fontSize:18, fontWeight:700, color:INK, marginBottom:10, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{ind.title}</h3>
+                <p style={{ fontSize:14.5, lineHeight:1.65, color:INK_SOFT, marginBottom:18, fontFamily:"'Hanken Grotesk',sans-serif" }}>{ind.body}</p>
+                <div style={{ display:"flex", flexWrap:"wrap", gap:7 }}>
+                  {ind.tags.map(tag => (
+                    <span key={tag} style={{ fontSize:12, fontWeight:600, color:INK_SOFT, background:CREAM2,
+                      border:`1px solid ${LINE}`, borderRadius:100, padding:"4px 12px", fontFamily:"'Hanken Grotesk',sans-serif" }}>{tag}</span>
                   ))}
                 </div>
               </div>
             </Fade>
-          </div>
-        </section>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
-        {/* ── GUARANTEE ── */}
-        <section className="py-16 px-6" style={{ background: BG }}>
+/* ───────────────────────────────────────────── */
+/*  FSO                                          */
+/* ───────────────────────────────────────────── */
+function FSO({ onBook }: { onBook:()=>void }) {
+  const stats = [
+    { num:"40+", label:"operators served"    },
+    { num:"92%", label:"avg automation rate" },
+    { num:"90",  label:"day guarantee window"},
+    { num:"$0",  label:"if targets missed"   },
+  ];
+  return (
+    <section style={{ background:CREAM, padding:"96px 24px" }}>
+      <div style={{ maxWidth:1120, margin:"0 auto" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <Fade>
-            <div className="max-w-3xl mx-auto rounded-xl p-6 sm:p-10 text-center" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-              <Label>Our Promise</Label>
-              <h2 className="font-bold leading-tight mb-4 sg" style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", color: TEXT, letterSpacing: "-0.02em" }}>
-                Our $30,000 Guarantee
-              </h2>
-              <p className="text-[15px] leading-relaxed mb-8 max-w-xl mx-auto" style={{ color: MUTED }}>
-                We guarantee you recover at least $30,000 in measurable net profit within 90 days of system implementation, or you get 100% of your money back—no questions asked. We only work with service businesses doing $500K+ annually with average customer values above $2,000, because we know the economics work.
-              </p>
-              <PrimaryBtn size="lg" onClick={() => setShowBooking(true)}>
-                Book Your Free Profit Recovery Audit <ArrowRight className="w-4 h-4" />
-              </PrimaryBtn>
-              <p className="text-[12px] mt-4" style={{ color: `${MUTED}80` }}>100% money back if we don't hit $30K. You own everything we build.</p>
+            <SectionLabel>How It Works</SectionLabel>
+            <H2 style={{ maxWidth:480 }}>Your fractional systems operator.</H2>
+            <p style={{ color:INK_SOFT, fontSize:16.5, lineHeight:1.7, maxWidth:480, marginBottom:30, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              We're not consultants. We're not developers. We're operators who build automated systems inside your business — and stand behind the results.
+            </p>
+            <div className="grid grid-cols-2 gap-4" style={{ marginBottom:32 }}>
+              {stats.map(s => (
+                <div key={s.label} style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:14, padding:"20px 18px" }}>
+                  <div className="anton" style={{ fontSize:30, color:ACCENT, lineHeight:1 }}>{s.num}</div>
+                  <div style={{ fontSize:13, color:INK_SOFT, marginTop:4, fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.label}</div>
+                </div>
+              ))}
+            </div>
+            <PrimaryBtn onClick={onBook}>Book Your Free Audit <ArrowRight size={16} /></PrimaryBtn>
+          </Fade>
+          <Fade delay={0.1}>
+            <Tracker />
+          </Fade>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Inline CTA                                   */
+/* ───────────────────────────────────────────── */
+function InlineCTA({ onBook }: { onBook:()=>void }) {
+  return (
+    <section style={{ background:ACCENT, padding:"60px 24px" }}>
+      <div style={{ maxWidth:800, margin:"0 auto", textAlign:"center" }}>
+        <h2 className="anton" style={{ fontSize:"clamp(1.9rem,3.8vw,2.6rem)", color:"#fff", marginBottom:16 }}>
+          Ready to recover your $30,000?
+        </h2>
+        <p style={{ fontSize:16.5, color:"rgba(255,255,255,.78)", marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+          Book a free Profit Recovery Audit. No pitch. Just a map of where your money is going.
+        </p>
+        <PrimaryBtn onClick={onBook} light>
+          Book Your Free Profit Recovery Audit <ArrowRight size={16} />
+        </PrimaryBtn>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Services                                     */
+/* ───────────────────────────────────────────── */
+function Services() {
+  return (
+    <section id="services" style={{ background:CREAM2, padding:"96px 24px" }}>
+      <div style={{ maxWidth:1120, margin:"0 auto" }}>
+        <Fade>
+          <div style={{ textAlign:"center", marginBottom:44 }}>
+            <SectionLabel>What We Build</SectionLabel>
+            <H2 style={{ maxWidth:560, margin:"0 auto 0" }}>
+              Four systems that recover lost profit.
+            </H2>
+          </div>
+          <ProfitDiagram />
+        </Fade>
+        <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+          {SERVICES.map((s, i) => (
+            <Fade key={s.num} delay={i*0.06}>
+              <div style={{ display:"flex", gap:22, alignItems:"flex-start",
+                background:CREAM, border:`1px solid ${LINE}`, borderRadius:18, padding:"24px 26px" }}>
+                <div className="anton" style={{ fontSize:40, color:`${ACCENT}28`, lineHeight:1, flex:"0 0 auto", minWidth:54, marginTop:2 }}>{s.num}</div>
+                <div>
+                  <h3 style={{ fontSize:17.5, fontWeight:700, color:INK, marginBottom:7, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.title}</h3>
+                  <p style={{ fontSize:15, lineHeight:1.65, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.body}</p>
+                </div>
+              </div>
+            </Fade>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Process                                      */
+/* ───────────────────────────────────────────── */
+function Process() {
+  return (
+    <section id="process" style={{ background:CREAM, padding:"96px 24px" }}>
+      <div style={{ maxWidth:1120, margin:"0 auto" }}>
+        <Fade>
+          <div style={{ textAlign:"center", marginBottom:52 }}>
+            <SectionLabel>The Process</SectionLabel>
+            <H2 style={{ maxWidth:540, margin:"0 auto 0" }}>
+              Three steps. Ninety days. Jobs done.
+            </H2>
+          </div>
+        </Fade>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {STEPS.map((s, i) => (
+            <Fade key={s.num} delay={i*0.08}>
+              <div style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:20, padding:"26px 22px", position:"relative", height:"100%", overflow:"hidden" }}>
+                <div style={{ position:"absolute", top:14, right:16 }}>
+                  <div className="anton" style={{ fontSize:54, color:`${ACCENT}14`, lineHeight:1 }}>{s.num}</div>
+                </div>
+                <div style={{ width:42, height:42, borderRadius:12, background:ACCENT, display:"flex", alignItems:"center", justifyContent:"center", marginBottom:18, position:"relative", zIndex:1 }}>
+                  <span className="anton" style={{ color:"#fff", fontSize:14 }}>{s.num}</span>
+                </div>
+                <h3 style={{ fontSize:17, fontWeight:700, color:INK, marginBottom:8, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.title}</h3>
+                <p style={{ fontSize:14, lineHeight:1.65, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.body}</p>
+              </div>
+            </Fade>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Results / Case Study                         */
+/* ───────────────────────────────────────────── */
+function Results() {
+  return (
+    <section id="results" style={{ background:INK2, padding:"96px 24px" }}>
+      <div style={{ maxWidth:1120, margin:"0 auto" }}>
+        <Fade>
+          <div style={{ display:"inline-flex", alignItems:"center", gap:8, background:`${ACCENT}22`,
+            border:`1px solid ${ACCENT}40`, borderRadius:100, padding:"7px 14px", marginBottom:20 }}>
+            <span style={{ width:7, height:7, borderRadius:"50%", background:ACCENT }} />
+            <span style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>Proof · BCAT Logistics Group</span>
+          </div>
+          <H2 onDark style={{ maxWidth:600 }}>
+            We built this inside our own logistics group first.
+          </H2>
+          <p style={{ color:"rgba(244,239,227,.58)", fontSize:16.5, lineHeight:1.7, maxWidth:540, marginBottom:48, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+            Before we asked anyone to trust us with their business, we proved the model on ours. Here's what happened in 12 months.
+          </p>
+        </Fade>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+          {RESULTS_STATS.map((r, i) => (
+            <Fade key={r.label} delay={i*0.07}>
+              <div style={{ background:"rgba(255,255,255,.04)", border:"1px solid rgba(255,255,255,.08)", borderRadius:18, padding:"24px 20px" }}>
+                <div className="anton" style={{ fontSize:"clamp(1.8rem,3vw,2.4rem)", color:ACCENT, lineHeight:1, marginBottom:8 }}>{r.stat}</div>
+                <p style={{ fontSize:13.5, color:"rgba(244,239,227,.58)", lineHeight:1.5, fontFamily:"'Hanken Grotesk',sans-serif" }}>{r.label}</p>
+              </div>
+            </Fade>
+          ))}
+        </div>
+        <Fade delay={0.2}>
+          <div style={{ background:"rgba(20,102,255,.1)", border:"1px solid rgba(20,102,255,.22)", borderRadius:20, padding:"28px 28px 24px", maxWidth:720 }}>
+            <p style={{ fontSize:17, lineHeight:1.7, color:"rgba(244,239,227,.88)", fontStyle:"italic", marginBottom:16, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              "The $200K wasn't hiding. It was just invisible. The command center made it visible — and the profit followed."
+            </p>
+            <div style={{ display:"flex", alignItems:"center", gap:12 }}>
+              <img src="/ryne.jpg" alt="Ryne Bandolik" style={{ width:38, height:38, borderRadius:"50%", objectFit:"cover", border:`2px solid ${ACCENT}` }} />
+              <div>
+                <div style={{ fontSize:14, fontWeight:700, color:CREAM, fontFamily:"'Hanken Grotesk',sans-serif" }}>Ryne Bandolik</div>
+                <div style={{ fontSize:12.5, color:"rgba(244,239,227,.48)", fontFamily:"'Hanken Grotesk',sans-serif" }}>Founder, BCAT Logistics Group &amp; Jobs Done Labs</div>
+              </div>
+            </div>
+          </div>
+        </Fade>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Comparison                                   */
+/* ───────────────────────────────────────────── */
+function TickOrX({ val }: { val:boolean|null }) {
+  if (val === true)  return <div style={{ width:26, height:26, borderRadius:"50%", background:`${GREEN}1A`, display:"flex", alignItems:"center", justifyContent:"center" }}><Check size={14} color={GREEN} strokeWidth={2.5} /></div>;
+  if (val === false) return <div style={{ width:26, height:26, borderRadius:"50%", background:"rgba(239,68,68,.12)", display:"flex", alignItems:"center", justifyContent:"center" }}><X size={14} color="#ef4444" strokeWidth={2.5} /></div>;
+  return <span style={{ fontSize:12.5, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>sometimes</span>;
+}
+
+function Comparison() {
+  return (
+    <section style={{ background:CREAM2, padding:"96px 24px" }}>
+      <div style={{ maxWidth:900, margin:"0 auto" }}>
+        <Fade>
+          <div style={{ textAlign:"center", marginBottom:48 }}>
+            <SectionLabel>Why Choose Us</SectionLabel>
+            <H2 style={{ maxWidth:560, margin:"0 auto 0" }}>
+              Why operators choose us over the alternatives.
+            </H2>
+          </div>
+        </Fade>
+        <Fade delay={0.08}>
+          <div style={{ background:CREAM, border:`1px solid ${LINE}`, borderRadius:20, overflow:"hidden" }}>
+            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr", borderBottom:`1px solid ${LINE}` }}>
+              <div style={{ padding:"16px 20px" }} />
+              {(["In-house","Freelancer","Jobs Done Labs"] as string[]).map((h, i) => (
+                <div key={h} style={{ padding:"16px 20px", textAlign:"center",
+                  background:i===2?`${ACCENT}0D`:"transparent",
+                  borderLeft:`1px solid ${LINE}` }}>
+                  <span style={{ fontSize:13.5, fontWeight:700, color:i===2?ACCENT:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{h}</span>
+                  {i===2 && <div style={{ width:6, height:6, borderRadius:"50%", background:ACCENT, margin:"5px auto 0" }} />}
+                </div>
+              ))}
+            </div>
+            {COMPARISON_ROWS.map((row, i) => (
+              <div key={row.feature} style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr",
+                borderBottom:i<COMPARISON_ROWS.length-1?`1px solid ${LINE}`:"none",
+                background:i%2===0?"transparent":`${CREAM2}66` }}>
+                <div style={{ padding:"15px 20px" }}>
+                  <span style={{ fontSize:14.5, fontWeight:500, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>{row.feature}</span>
+                </div>
+                {([row.inhouse, row.freelance, row.jdl] as (boolean|null)[]).map((v, ci) => (
+                  <div key={ci} style={{ padding:"15px 20px", display:"flex", alignItems:"center", justifyContent:"center",
+                    background:ci===2?`${ACCENT}07`:"transparent", borderLeft:`1px solid ${LINE}` }}>
+                    <TickOrX val={v} />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </Fade>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Guarantee                                    */
+/* ───────────────────────────────────────────── */
+function Guarantee({ onBook }: { onBook:()=>void }) {
+  return (
+    <section style={{ background:ACCENT, padding:"96px 24px" }}>
+      <div style={{ maxWidth:1120, margin:"0 auto" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          <Fade>
+            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-start", gap:22 }}>
+              <div style={{ position:"relative", display:"inline-block" }}>
+                <div style={{ width:160, height:160, borderRadius:"50%",
+                  background:"linear-gradient(135deg,rgba(255,255,255,.25),rgba(255,255,255,.08))",
+                  padding:4, border:"2px solid rgba(255,255,255,.3)" }}>
+                  <img src="/ryne.jpg" alt="Ryne Bandolik — Founder" style={{ width:"100%", height:"100%", borderRadius:"50%", objectFit:"cover", objectPosition:"top" }} />
+                </div>
+                <div style={{ position:"absolute", bottom:-10, right:-10 }}>
+                  <StampBadge size={72} />
+                </div>
+              </div>
+              <div style={{ background:"rgba(255,255,255,.12)", backdropFilter:"blur(8px)", border:"1px solid rgba(255,255,255,.2)", borderRadius:18, padding:"20px 22px", maxWidth:320 }}>
+                <p style={{ color:"rgba(255,255,255,.82)", fontSize:14.5, lineHeight:1.65, marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif", fontStyle:"italic" }}>
+                  "If we can't find your $30K, you pay nothing. I put my name on every engagement."
+                </p>
+                <div className="caveat" style={{ fontSize:24, color:"#fff", lineHeight:1, marginBottom:2 }}>Ryne Bandolik</div>
+                <div style={{ fontSize:12, color:"rgba(255,255,255,.62)", fontFamily:"'Hanken Grotesk',sans-serif" }}>Founder, Jobs Done Labs</div>
+              </div>
             </div>
           </Fade>
-        </section>
-
-        {/* ── WHO THIS IS FOR ── */}
-        <section className="py-16" style={{ background: BG2 }}>
-          <div className="max-w-4xl mx-auto px-6">
-            <Fade>
-              <Label>Who This Is For</Label>
-              <H2>Is this right for your business?</H2>
-              <p className="text-[16px] leading-relaxed mt-4 mb-8 max-w-2xl" style={{ color: MUTED }}>
-                We only work with service businesses where we know the economics work. Check how many of these apply to you.
-              </p>
-            </Fade>
-            <Fade delay={0.08}>
-              <div className="grid sm:grid-cols-2 gap-3 mb-8">
-                {[
-                  "Service business doing $500K–$5M per year",
-                  "Average customer value above $2,000",
-                  "Currently losing leads due to slow or manual follow-up",
-                  "Using 3+ disconnected tools that don't talk to each other",
-                  "Owner or team spending 10+ hours/week on manual busywork",
-                  "No clear visibility into what marketing or sales activities actually work",
-                ].map(item => (
-                  <div key={item} className="flex items-start gap-3 rounded-xl px-5 py-4" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: `${ACCENT}15`, border: `1px solid ${ACCENT}30` }}>
-                      <Check className="w-3 h-3" style={{ color: ACCENT }} />
-                    </div>
-                    <p className="text-[14px] leading-snug" style={{ color: TEXT }}>{item}</p>
+          <Fade delay={0.1}>
+            <SectionLabel onDark>The Guarantee</SectionLabel>
+            <H2 onDark style={{ maxWidth:500 }}>
+              Guaranteed results. Or you pay nothing.
+            </H2>
+            <p style={{ color:"rgba(255,255,255,.8)", fontSize:16.5, lineHeight:1.7, marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              We've built this. We've proven it. We put our reputation behind every engagement. Here's exactly what we promise.
+            </p>
+            <div style={{ display:"flex", flexDirection:"column", gap:14, marginBottom:36 }}>
+              {GUARANTEE_ITEMS.map(item => (
+                <div key={item} style={{ display:"flex", alignItems:"flex-start", gap:12 }}>
+                  <div style={{ width:24, height:24, borderRadius:"50%", background:"rgba(255,255,255,.18)", flex:"0 0 auto", display:"flex", alignItems:"center", justifyContent:"center" }}>
+                    <Check size={13} color="#fff" strokeWidth={2.5} />
                   </div>
-                ))}
-              </div>
-              <p className="text-[17px] font-semibold sg text-center" style={{ color: MUTED }}>
-                If you checked 3 or more,{" "}
-                <span style={{ color: TEXT }}>we can recover $30K+ for you in 90 days.</span>
-              </p>
-            </Fade>
-          </div>
-        </section>
-
-        {/* ── WRITTEN REVIEWS ── */}
-        <section id="results" className="py-16" style={{ background: BG }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <Fade>
-              <Label>Client Results</Label>
-              <H2>Recovered profit for service businesses like yours</H2>
-            </Fade>
-            <Fade delay={0.08}>
-              <div className="mt-10">
-                <ReviewsCarousel />
-              </div>
-            </Fade>
-          </div>
-        </section>
-
-
-        {/* ── FAQ ── */}
-        <section id="faq" className="py-16" style={{ background: BG }}>
-          <div className="max-w-2xl mx-auto px-6">
-            <Fade>
-              <Label>FAQ</Label>
-              <H2>Common questions</H2>
-            </Fade>
-            <Fade delay={0.08}>
-              <div className="mt-8 rounded-xl overflow-hidden" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
-                <div className="px-6">
-                  {faqs.map(f => <FaqItem key={f.q} q={f.q} a={f.a} />)}
+                  <span style={{ fontSize:15.5, color:"rgba(255,255,255,.92)", fontFamily:"'Hanken Grotesk',sans-serif", lineHeight:1.5 }}>{item}</span>
                 </div>
-              </div>
-            </Fade>
-          </div>
-        </section>
+              ))}
+            </div>
+            <PrimaryBtn onClick={onBook} light>
+              Claim Your Guarantee <ArrowRight size={16} />
+            </PrimaryBtn>
+          </Fade>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-        {/* ── FINAL CTA ── */}
-        <section className="py-16 px-6" style={{ background: BG2 }}>
-          <div className="max-w-5xl mx-auto">
-            <Fade>
-              <div className="rounded-xl overflow-hidden" style={{ border: `1px solid ${BORDER}` }}>
-                <div className="flex flex-col md:flex-row items-stretch">
-                  <div className="md:w-72 flex-shrink-0 relative" style={{ background: "#0a0a0c" }}>
-                    <img
-                      src={`${import.meta.env.BASE_URL}ryne.png`}
-                      alt="Ryne Bandolik — Founder, JobsDone Labs"
-                      className="w-full h-full object-cover object-top min-h-[240px] md:min-h-full"
-                    />
-                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/75 to-transparent p-4">
-                      <p className="text-white font-semibold text-[13px] leading-none sg">Ryne Bandolik</p>
-                      <p className="text-[11px] mt-0.5" style={{ color: "rgba(255,255,255,0.45)" }}>Founder, JobsDone Labs</p>
-                    </div>
-                  </div>
-                  <div className="flex-1 flex flex-col justify-center p-8 md:p-12" style={{ background: SURFACE }}>
-                    <Label>Ready To Recover Your $30K?</Label>
-                    <h2 className="font-bold leading-tight mb-4 sg" style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)", color: TEXT, letterSpacing: "-0.02em" }}>
-                      Book your free<br />Profit Recovery Audit
-                    </h2>
-                    <p className="text-[14px] leading-relaxed mb-7" style={{ color: MUTED }}>
-                      Book a free audit call. I'll find where you're bleeding money, show you exactly how we'd recover it, and give you a full blueprint of the systems we'd build—yours to keep either way.
-                    </p>
-                    <div className="flex flex-col gap-2">
-                      <PrimaryBtn size="lg" className="w-full sm:w-auto" onClick={() => setShowBooking(true)}>
-                        Book Your Free Profit Recovery Audit <ArrowRight className="w-4 h-4" />
-                      </PrimaryBtn>
-                      <p className="text-[12px]" style={{ color: `${MUTED}70` }}>No commitment. No sales pressure. You keep the blueprint either way.</p>
-                    </div>
-                    <div className="flex flex-wrap gap-4 mt-6 pt-6" style={{ borderTop: `1px solid ${BORDER}` }}>
-                      {["$30K profit recovery guaranteed","100% money back if we miss","You own everything we build"].map(t => (
-                        <span key={t} className="flex items-center gap-1.5 text-[12px] sg" style={{ color: MUTED }}>
-                          <Check className="w-3.5 h-3.5" style={{ color: ACCENT }} /> {t}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+/* ───────────────────────────────────────────── */
+/*  Fit                                          */
+/* ───────────────────────────────────────────── */
+const FIT_FOR = [
+  "Service, logistics, or manufacturing doing $1M+ in revenue",
+  "Real operational volume — leads, jobs, trucks, or orders flowing daily",
+  "Losing time and money to manual work, but can't pinpoint exactly where",
+  "Want systems you own and control — not another tool you rent forever",
+];
+const FIT_NOT = [
+  "Pre-revenue businesses or under $1M in annual revenue",
+  "Looking for a cheap chatbot or a one-off automation task",
+  "Not willing to give us access to understand how your business runs",
+  "Looking for hype, theory, or strategy — not measurable results",
+];
+
+function Fit() {
+  return (
+    <section style={{ background:CREAM, padding:"96px 24px" }}>
+      <div style={{ maxWidth:1000, margin:"0 auto" }}>
+        <Fade>
+          <div style={{ textAlign:"center", marginBottom:52 }}>
+            <SectionLabel>Is This a Fit?</SectionLabel>
+            <H2 style={{ maxWidth:560, margin:"0 auto 0" }}>
+              We're not for everyone. Here's the truth.
+            </H2>
+          </div>
+        </Fade>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Fade delay={0.05}>
+            <div style={{ background:INK, borderRadius:22, padding:"28px 26px", height:"100%" }}>
+              <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:22 }}>
+                <div style={{ width:32, height:32, borderRadius:"50%", background:`${GREEN}22`, display:"flex", alignItems:"center", justifyContent:"center" }}>
+                  <Check size={16} color={GREEN} strokeWidth={2.5} />
                 </div>
+                <h3 style={{ fontWeight:700, fontSize:16, color:CREAM, fontFamily:"'Hanken Grotesk',sans-serif" }}>This is for you if</h3>
               </div>
-            </Fade>
-          </div>
-        </section>
+              {FIT_FOR.map(item => (
+                <div key={item} style={{ display:"flex", gap:12, alignItems:"flex-start", marginBottom:14 }}>
+                  <div style={{ width:20, height:20, borderRadius:"50%", background:`${GREEN}20`, flex:"0 0 auto", display:"flex", alignItems:"center", justifyContent:"center", marginTop:1 }}>
+                    <Check size={11} color={GREEN} strokeWidth={2.5} />
+                  </div>
+                  <span style={{ fontSize:14.5, color:"rgba(244,239,227,.82)", lineHeight:1.55, fontFamily:"'Hanken Grotesk',sans-serif" }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </Fade>
+          <Fade delay={0.1}>
+            <div style={{ background:CREAM2, border:`2px solid ${LINE}`, borderRadius:22, padding:"28px 26px", height:"100%" }}>
+              <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:22 }}>
+                <div style={{ width:32, height:32, borderRadius:"50%", background:"rgba(239,68,68,.1)", display:"flex", alignItems:"center", justifyContent:"center" }}>
+                  <X size={16} color="#ef4444" strokeWidth={2.5} />
+                </div>
+                <h3 style={{ fontWeight:700, fontSize:16, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>This isn't for you if</h3>
+              </div>
+              {FIT_NOT.map(item => (
+                <div key={item} style={{ display:"flex", gap:12, alignItems:"flex-start", marginBottom:14 }}>
+                  <div style={{ width:20, height:20, borderRadius:"50%", background:"rgba(239,68,68,.1)", flex:"0 0 auto", display:"flex", alignItems:"center", justifyContent:"center", marginTop:1 }}>
+                    <X size={11} color="#ef4444" strokeWidth={2.5} />
+                  </div>
+                  <span style={{ fontSize:14.5, color:INK_SOFT, lineHeight:1.55, fontFamily:"'Hanken Grotesk',sans-serif" }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </Fade>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-      </main>
-
-      {/* ── FOOTER ── */}
-      <footer className="py-12" style={{ borderTop: `1px solid ${BORDER}`, background: BG }}>
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between gap-10 mb-8">
-            <div className="flex flex-col gap-3.5 max-w-[220px]">
-              <JobsDoneLogo />
-              <p className="text-[13px] leading-relaxed" style={{ color: MUTED }}>We recover $30K in profit within 90 days—guaranteed.</p>
-              <div className="flex gap-3.5">
-                <a href="#" className="transition-colors duration-150" style={{ color: `${TEXT}20` }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = ACCENT}
-                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = `${TEXT}20`}>
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a href="#" className="transition-colors duration-150" style={{ color: `${TEXT}20` }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = ACCENT}
-                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = `${TEXT}20`}>
-                  <Youtube className="w-4 h-4" />
-                </a>
-                <a href="#" className="transition-colors duration-150" style={{ color: `${TEXT}20` }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = ACCENT}
-                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = `${TEXT}20`}>
-                  <Twitter className="w-4 h-4" />
-                </a>
+/* ───────────────────────────────────────────── */
+/*  Pilot (replaces testimonials)                */
+/* ───────────────────────────────────────────── */
+function Pilot({ onBook }: { onBook:()=>void }) {
+  return (
+    <section style={{ background:CREAM2, padding:"96px 24px" }}>
+      <div style={{ maxWidth:800, margin:"0 auto", textAlign:"center" }}>
+        <Fade>
+          <div style={{ background:INK2, border:"1px solid rgba(255,255,255,.08)", borderRadius:28, padding:"48px 36px", position:"relative", overflow:"hidden" }}>
+            <div style={{ position:"absolute", top:20, right:24 }}>
+              <div style={{ display:"inline-flex", alignItems:"center", gap:6, background:"rgba(52,211,153,.14)", border:"1px solid rgba(52,211,153,.26)", borderRadius:100, padding:"6px 12px" }}>
+                <span style={{ width:6, height:6, borderRadius:"50%", background:GREEN, boxShadow:`0 0 0 3px ${GREEN}22` }} />
+                <span style={{ fontSize:11.5, fontWeight:700, color:GREEN, letterSpacing:"0.08em", fontFamily:"'Hanken Grotesk',sans-serif" }}>ACCEPTING APPLICATIONS</span>
               </div>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-10 text-[13px]">
-              <div>
-                <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Services</p>
-                {["Profit Recovery Audit","Custom Automation Build","Tool Integration","90-Day Profit Recovery Program"].map(l => (
-                  <p key={l} className="mb-1.5 transition-colors duration-150 cursor-pointer" style={{ color: MUTED }}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>{l}</p>
-                ))}
+            <SectionLabel onDark>Limited Availability</SectionLabel>
+            <H2 onDark style={{ maxWidth:560, margin:"0 auto 14px" }}>
+              We're building for 5 businesses right now.
+            </H2>
+            <p style={{ color:"rgba(244,239,227,.58)", fontSize:16, lineHeight:1.7, maxWidth:460, margin:"0 auto 36px", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              Each cohort is limited so we can deliver the results we guarantee. One seat per industry.
+            </p>
+            <div style={{ display:"flex", flexWrap:"wrap", gap:10, justifyContent:"center", marginBottom:32 }}>
+              {PILOT_SEATS.map(s => (
+                <div key={s.label} style={{ display:"flex", alignItems:"center", gap:8,
+                  background:s.filled?`${ACCENT}22`:"rgba(255,255,255,.05)",
+                  border:`1px solid ${s.filled?ACCENT+"44":"rgba(255,255,255,.1)"}`,
+                  borderRadius:100, padding:"9px 16px" }}>
+                  <span style={{ width:8, height:8, borderRadius:"50%",
+                    background:s.filled?ACCENT:"rgba(255,255,255,.25)",
+                    boxShadow:s.filled?`0 0 0 3px ${ACCENT}30`:"none",
+                    flex:"0 0 auto" }} />
+                  <span style={{ fontSize:13.5, fontWeight:600, color:s.filled?CREAM:"rgba(244,239,227,.48)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.label}</span>
+                  {s.filled && <span style={{ fontSize:10.5, fontWeight:700, color:ACCENT, letterSpacing:"0.05em", fontFamily:"'Hanken Grotesk',sans-serif" }}>FILLED</span>}
+                </div>
+              ))}
+            </div>
+            <div style={{ display:"inline-flex", alignItems:"center", gap:7, background:"rgba(255,255,255,.05)", border:"1px solid rgba(255,255,255,.1)", borderRadius:100, padding:"8px 14px", marginBottom:28 }}>
+              <span style={{ fontSize:12, fontWeight:600, color:"rgba(244,239,227,.42)", letterSpacing:"0.06em", fontFamily:"'Hanken Grotesk',sans-serif" }}>Case studies coming Q4 2026</span>
+            </div>
+            <div>
+              <PrimaryBtn onClick={onBook}>
+                Apply for the Next Cohort <ArrowRight size={16} />
+              </PrimaryBtn>
+            </div>
+          </div>
+        </Fade>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  FAQ                                          */
+/* ───────────────────────────────────────────── */
+function FAQ() {
+  const [open, setOpen] = useState<number|null>(null);
+  return (
+    <section id="faq" style={{ background:CREAM, padding:"96px 24px" }}>
+      <div style={{ maxWidth:760, margin:"0 auto" }}>
+        <Fade>
+          <div style={{ textAlign:"center", marginBottom:48 }}>
+            <SectionLabel>FAQ</SectionLabel>
+            <H2 style={{ margin:"0 auto 0" }}>No fluff. Straight answers.</H2>
+          </div>
+        </Fade>
+        <Fade delay={0.08}>
+          <div style={{ borderTop:`1px solid ${LINE}` }}>
+            {FAQ_ITEMS.map((item, i) => (
+              <FAQItem key={item.q} q={item.q} a={item.a}
+                open={open===i} onToggle={() => setOpen(open===i?null:i)} />
+            ))}
+          </div>
+        </Fade>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Final CTA                                    */
+/* ───────────────────────────────────────────── */
+function FinalCTA({ onBook }: { onBook:()=>void }) {
+  return (
+    <section style={{ background:CREAM2, padding:"96px 24px" }}>
+      <div style={{ maxWidth:1000, margin:"0 auto" }}>
+        <Fade>
+          <div style={{ background:INK, borderRadius:28, overflow:"hidden", display:"flex", flexWrap:"wrap" }}>
+            <div className="hidden md:block" style={{ flex:"0 0 280px", position:"relative", minHeight:360 }}>
+              <img src="/ryne.jpg" alt="Ryne Bandolik" style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", objectPosition:"top" }} />
+              <div style={{ position:"absolute", inset:0, background:"linear-gradient(to right,transparent 50%,rgba(11,13,18,.92))" }} />
+              <div style={{ position:"absolute", bottom:22, left:20 }}>
+                <div className="caveat" style={{ fontSize:24, color:"#fff", lineHeight:1 }}>Ryne Bandolik</div>
+                <div style={{ fontSize:12, color:"rgba(255,255,255,.55)", fontFamily:"'Hanken Grotesk',sans-serif" }}>Founder, Jobs Done Labs</div>
               </div>
-              <div>
-                <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Industries</p>
-                {["Home Service","Aesthetic Businesses","Medspas & Practices","Marketing Agencies"].map(l => (
-                  <p key={l} className="mb-1.5 transition-colors duration-150 cursor-pointer" style={{ color: MUTED }}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>{l}</p>
-                ))}
-              </div>
-              <div>
-                <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Company</p>
-                <Link href="/privacy" className="block mb-1.5 transition-colors duration-150" style={{ color: MUTED }}>Privacy Policy</Link>
-                <Link href="/terms" className="block mb-1.5 transition-colors duration-150" style={{ color: MUTED }}>Terms of Service</Link>
-                <Link href="/contact" className="block mb-1.5 transition-colors duration-150" style={{ color: MUTED }}>Contact</Link>
+            </div>
+            <div style={{ flex:1, minWidth:0, padding:"44px 40px" }}>
+              <SectionLabel onDark>Get Started</SectionLabel>
+              <H2 onDark style={{ maxWidth:420 }}>
+                Find your $30K in 90 days. Or pay nothing.
+              </H2>
+              <p style={{ color:"rgba(244,239,227,.62)", fontSize:15.5, lineHeight:1.7, marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+                Book a free Profit Recovery Audit. We'll map where your money is going and show you exactly how to get it back. No pitch, no obligation.
+              </p>
+              <PrimaryBtn onClick={onBook}>
+                Book Your Free Profit Recovery Audit <ArrowRight size={16} />
+              </PrimaryBtn>
+              <div style={{ display:"flex", alignItems:"center", gap:8, marginTop:16 }}>
+                <div style={{ display:"flex", gap:2 }}>
+                  {[1,2,3,4,5].map(s => <Star key={s} size={12} fill="#f59e0b" stroke="none" />)}
+                </div>
+                <span style={{ fontSize:13, color:"rgba(244,239,227,.4)", fontFamily:"'Hanken Grotesk',sans-serif" }}>Rated 5/5 by operators we've worked with</span>
               </div>
             </div>
           </div>
-          <div className="pt-5 flex flex-col md:flex-row justify-between items-center gap-2 text-[12px]" style={{ borderTop: `1px solid ${BORDER}`, color: `${MUTED}70` }}>
-            <span>© {new Date().getFullYear()} JobsDone Labs. All rights reserved.</span>
-            <span>support@jobsdonelabs.ai</span>
+        </Fade>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────────────── */
+/*  Footer                                       */
+/* ───────────────────────────────────────────── */
+function Footer() {
+  const linkStyle: React.CSSProperties = { display:"block", fontSize:14, color:"rgba(244,239,227,.55)", textDecoration:"none", marginBottom:8, fontFamily:"'Hanken Grotesk',sans-serif" };
+  const hoverIn = (e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color = CREAM; };
+  const hoverOut = (e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color = "rgba(244,239,227,.55)"; };
+  return (
+    <footer style={{ background:INK2, padding:"64px 24px 36px", borderTop:"1px solid rgba(255,255,255,.06)" }}>
+      <div style={{ maxWidth:1120, margin:"0 auto" }}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 pb-12" style={{ borderBottom:"1px solid rgba(255,255,255,.07)" }}>
+          <div className="col-span-2 md:col-span-1">
+            <Wordmark size={18} onDark />
+            <p style={{ fontSize:14, lineHeight:1.65, color:"rgba(244,239,227,.42)", marginTop:14, maxWidth:220, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              Recover $30K in 90 days with custom automation systems — or you pay nothing.
+            </p>
+            <div style={{ display:"flex", gap:10, marginTop:18 }}>
+              {([[Linkedin,"#"],[Youtube,"#"],[Twitter,"#"]] as [typeof Linkedin,string][]).map(([Icon,href],i) => (
+                <a key={i} href={href} target="_blank" rel="noopener noreferrer"
+                  style={{ width:34, height:34, borderRadius:10, background:"rgba(255,255,255,.07)", display:"flex", alignItems:"center", justifyContent:"center", color:"rgba(244,239,227,.5)", textDecoration:"none" }}
+                  onMouseEnter={e => { e.currentTarget.style.background="rgba(255,255,255,.12)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.background="rgba(255,255,255,.07)"; }}>
+                  <Icon size={15} />
+                </a>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize:12, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:"rgba(244,239,227,.38)", marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif" }}>Services</div>
+            {["Lead & Quote Automation","Operations Command Center","Revenue Intelligence","Client Communication Stack"].map(s => (
+              <a key={s} href="/#services" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>{s}</a>
+            ))}
+          </div>
+          <div>
+            <div style={{ fontSize:12, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:"rgba(244,239,227,.38)", marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif" }}>Industries</div>
+            {["Service Businesses","Logistics & Transportation","Manufacturing & Industrial"].map(s => (
+              <a key={s} href="/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>{s}</a>
+            ))}
+          </div>
+          <div>
+            <div style={{ fontSize:12, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:"rgba(244,239,227,.38)", marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif" }}>Company</div>
+            {([["ROI Calculator","/roi-calculator"],["Contact","/contact"],["Privacy Policy","/privacy"],["Terms of Service","/terms"],["Opt-In Proof","/opt-in-proof"]] as [string,string][]).map(([label,href]) => (
+              <Link key={href} href={href} style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>{label}</Link>
+            ))}
           </div>
         </div>
-      </footer>
+        <div style={{ paddingTop:28, display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent:"space-between", gap:12 }}>
+          <p style={{ fontSize:13, color:"rgba(244,239,227,.32)", fontFamily:"'Hanken Grotesk',sans-serif", margin:0 }}>
+            © 2026 Jobs Done Labs LLC. All rights reserved.
+          </p>
+          <div style={{ display:"flex", gap:20 }}>
+            {([["Privacy Policy","/privacy"],["Terms of Service","/terms"],["ryne@jobsdone.io","mailto:ryne@jobsdone.io"]] as [string,string][]).map(([label,href]) => (
+              <a key={href} href={href}
+                style={{ fontSize:13, color:"rgba(244,239,227,.32)", textDecoration:"none", fontFamily:"'Hanken Grotesk',sans-serif" }}
+                onMouseEnter={e => { e.currentTarget.style.color="rgba(244,239,227,.65)"; }}
+                onMouseLeave={e => { e.currentTarget.style.color="rgba(244,239,227,.32)"; }}>
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
 
+/* ───────────────────────────────────────────── */
+/*  Page                                         */
+/* ───────────────────────────────────────────── */
+export default function Home() {
+  const [showBooking, setShowBooking] = useState(false);
+  const open = () => setShowBooking(true);
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      const el = (e.target as Element).closest('a[href="#book"]');
+      if (el) { e.preventDefault(); setShowBooking(true); }
+    };
+    document.addEventListener("click", handler);
+    return () => document.removeEventListener("click", handler);
+  }, []);
+
+  return (
+    <div style={{ background:CREAM, color:INK, fontFamily:"'Hanken Grotesk',system-ui,sans-serif", WebkitFontSmoothing:"antialiased" }}>
+      <ExitIntentPopup onOpen={open} />
+      <LPNav onBook={open} />
+      <Hero onBook={open} />
+      <TrustStrip />
+      <Problem />
+      <Industries />
+      <FSO onBook={open} />
+      <InlineCTA onBook={open} />
+      <Services />
+      <Process />
+      <Results />
+      <Comparison />
+      <Guarantee onBook={open} />
+      <Fit />
+      <Pilot onBook={open} />
+      <FAQ />
+      <FinalCTA onBook={open} />
+      <Footer />
       <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
     </div>
   );

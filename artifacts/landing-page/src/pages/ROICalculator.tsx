@@ -1,142 +1,128 @@
 import { useState, useMemo } from "react";
 import BookingModal from "@/components/BookingModal";
 import { Link } from "wouter";
-import { ArrowRight, FlaskConical, ArrowLeft, TrendingUp, DollarSign, Clock, Zap } from "lucide-react";
+import { ArrowRight, ArrowLeft, TrendingUp, DollarSign, Clock, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
-const ACCENT = "#1F62FF";
-const SURFACE = "#161618";
-const BORDER = "#222226";
-const TEXT = "#F0F0F0";
-const MUTED = "#888892";
-const BG = "#0E0E10";
-const BG2 = "#121214";
-const CALENDLY = "https://api.leadconnectorhq.com/widget/bookings/jdl-audit-call-ryne"; // kept for reference
+const ACCENT      = "#1466FF";
+const ACCENT_DEEP = "#0B49C9";
+const CREAM       = "#F4EFE3";
+const CREAM2      = "#EFE8D8";
+const INK         = "#0B0D12";
+const INK_SOFT    = "#54596A";
+const LINE        = "rgba(11,13,18,.12)";
+const GREEN       = "#34d399";
 
-function JobsDoneLogo() {
+function SubLogo() {
   return (
-    <div className="flex items-center gap-2">
-      <FlaskConical className="w-5 h-5 flex-shrink-0" style={{ color: ACCENT }} />
-      <div className="flex flex-col leading-none">
-        <div className="flex items-baseline">
-          <span className="font-bold text-[17px] tracking-tight" style={{ color: TEXT }}>JOBS</span>
-          <span className="font-bold text-[17px] tracking-tight" style={{ color: ACCENT }}>DONE</span>
-        </div>
-        <div className="flex items-center gap-1 mt-0.5">
-          <span className="flex-1 h-px" style={{ background: `${ACCENT}30` }} />
-          <span className="text-[9px] font-medium tracking-[0.16em] uppercase" style={{ color: `${TEXT}35` }}>Labs</span>
-          <span className="flex-1 h-px" style={{ background: `${ACCENT}30` }} />
-        </div>
+    <div style={{ display:"flex", alignItems:"center", gap:10, userSelect:"none" }}>
+      <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
+        <path d="M18 7 H30 M20 7 V19 L11.5 38 Q10 41.5 13.8 41.5 H34.2 Q38 41.5 36.5 38 L28 19 V7"
+          stroke={ACCENT} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
+        <line x1="20.5" y1="25.5" x2="26" y2="30.5" stroke={ACCENT} strokeWidth="2" strokeLinecap="round"/>
+        <line x1="26" y1="30.5" x2="20.5" y2="35.5" stroke={ACCENT} strokeWidth="2" strokeLinecap="round"/>
+        <circle cx="20.5" cy="25.5" r="2.6" fill={ACCENT}/>
+        <circle cx="26.5" cy="30.5" r="2.6" fill={ACCENT}/>
+        <circle cx="20.5" cy="35.5" r="2.6" fill={ACCENT}/>
+      </svg>
+      <div style={{ display:"flex", flexDirection:"column", lineHeight:1 }}>
+        <span style={{ fontStyle:"italic", fontWeight:800, fontSize:17, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+          <span style={{ color:INK }}>JOBS</span><span style={{ color:ACCENT }}>DONE</span>
+        </span>
+        <span style={{ display:"flex", alignItems:"center", gap:"0.4em", marginTop:4, fontWeight:700, fontSize:5, letterSpacing:"0.42em", color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+          <span style={{ flex:1, height:1.5, background:"currentColor", opacity:0.5 }} />
+          <span style={{ paddingLeft:"0.42em" }}>LABS</span>
+          <span style={{ flex:1, height:1.5, background:"currentColor", opacity:0.5 }} />
+        </span>
       </div>
     </div>
   );
 }
 
-function Slider({
-  label, value, onChange, min, max, step = 1, format, hint,
-}: {
-  label: string; value: number; onChange: (v: number) => void;
-  min: number; max: number; step?: number; format: (v: number) => string; hint?: string;
+function Slider({ label, value, onChange, min, max, step=1, format, hint }: {
+  label:string; value:number; onChange:(v:number)=>void;
+  min:number; max:number; step?:number; format:(v:number)=>string; hint?:string;
 }) {
-  const pct = ((value - min) / (max - min)) * 100;
+  const pct = ((value-min)/(max-min))*100;
   return (
     <div className="flex flex-col gap-2.5">
       <div className="flex items-center justify-between">
-        <label className="text-[13px] font-semibold" style={{ color: TEXT }}>{label}</label>
-        <span className="text-[15px] font-bold" style={{ color: ACCENT }}>{format(value)}</span>
+        <label style={{ fontSize:13, fontWeight:600, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</label>
+        <span style={{ fontSize:15, fontWeight:700, color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{format(value)}</span>
       </div>
-      <div className="relative h-1.5 rounded-full" style={{ background: BORDER }}>
-        <div
-          className="absolute left-0 top-0 h-1.5 rounded-full transition-all duration-100"
-          style={{ width: `${pct}%`, background: ACCENT }}
-        />
-        <input
-          type="range" min={min} max={max} step={step} value={value}
+      <div className="relative h-1.5 rounded-full" style={{ background:LINE }}>
+        <div className="absolute left-0 top-0 h-1.5 rounded-full transition-all duration-100" style={{ width:`${pct}%`, background:ACCENT }} />
+        <input type="range" min={min} max={max} step={step} value={value}
           onChange={e => onChange(Number(e.target.value))}
-          className="absolute inset-0 w-full opacity-0 cursor-pointer h-1.5"
-        />
-        <div
-          className="absolute top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full pointer-events-none transition-all duration-100"
-          style={{ left: `calc(${pct}% - 7px)`, background: ACCENT, border: `2px solid ${BG}`, boxShadow: `0 0 0 1px ${ACCENT}` }}
-        />
+          className="absolute inset-0 w-full opacity-0 cursor-pointer h-1.5" />
+        <div className="absolute top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full pointer-events-none transition-all duration-100"
+          style={{ left:`calc(${pct}% - 7px)`, background:ACCENT, border:`2px solid ${CREAM}`, boxShadow:`0 0 0 1px ${ACCENT}` }} />
       </div>
-      {hint && <p className="text-[12px]" style={{ color: MUTED }}>{hint}</p>}
+      {hint && <p style={{ fontSize:12, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{hint}</p>}
     </div>
   );
 }
 
-function ResultCard({ icon, label, value, sub, highlight = false }: {
-  icon: React.ReactNode; label: string; value: string; sub?: string; highlight?: boolean;
+function ResultCard({ icon, label, value, sub, highlight=false }: {
+  icon:React.ReactNode; label:string; value:string; sub?:string; highlight?:boolean;
 }) {
   return (
-    <div
-      className="rounded-xl p-5 flex flex-col gap-2"
-      style={{
-        background: highlight ? ACCENT : SURFACE,
-        border: `1px solid ${highlight ? ACCENT : BORDER}`,
-      }}
-    >
-      <div
-        className="w-8 h-8 rounded-lg flex items-center justify-center"
-        style={{ background: highlight ? "rgba(255,255,255,0.15)" : `${ACCENT}12` }}
-      >
-        <span style={{ color: highlight ? "#fff" : ACCENT }}>{icon}</span>
+    <div className="rounded-xl p-5 flex flex-col gap-2"
+      style={{ background:highlight?ACCENT:CREAM, border:`1px solid ${highlight?ACCENT:LINE}` }}>
+      <div className="w-8 h-8 rounded-lg flex items-center justify-center"
+        style={{ background:highlight?"rgba(255,255,255,.18)":`${ACCENT}14` }}>
+        <span style={{ color:highlight?"#fff":ACCENT }}>{icon}</span>
       </div>
-      <p className="text-[11px] font-semibold uppercase tracking-wider mt-0.5" style={{ color: highlight ? "rgba(255,255,255,0.65)" : MUTED }}>{label}</p>
-      <p className="text-[1.5rem] font-black leading-none" style={{ color: highlight ? "#fff" : TEXT }}>{value}</p>
-      {sub && <p className="text-[12px]" style={{ color: highlight ? "rgba(255,255,255,0.5)" : MUTED }}>{sub}</p>}
+      <p className="text-[11px] font-semibold uppercase tracking-wider mt-0.5" style={{ color:highlight?"rgba(255,255,255,.65)":INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</p>
+      <p className="text-[1.5rem] font-black leading-none" style={{ color:highlight?"#fff":INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>{value}</p>
+      {sub && <p className="text-[12px]" style={{ color:highlight?"rgba(255,255,255,.55)":INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{sub}</p>}
     </div>
   );
 }
 
 export default function ROICalculator() {
   const [showBooking, setShowBooking] = useState(false);
-  const [monthlyLeads, setMonthlyLeads] = useState(80);
-  const [dealSize, setDealSize] = useState(3000);
-  const [closeRate, setCloseRate] = useState(20);
-  const [responseHours, setResponseHours] = useState(4);
+  const [monthlyLeads, setMonthlyLeads]     = useState(80);
+  const [dealSize, setDealSize]             = useState(3000);
+  const [closeRate, setCloseRate]           = useState(20);
+  const [responseHours, setResponseHours]   = useState(4);
 
   const results = useMemo(() => {
-    const currentMonthlyRevenue = (monthlyLeads * (closeRate / 100)) * dealSize;
-    const leakagePct = Math.min(0.35, responseHours * 0.05 + 0.15);
-    const recoveredLeakage = monthlyLeads * leakagePct * (closeRate / 100) * dealSize;
-    const closeRateLift = Math.min(closeRate * 0.25, 12);
-    const improvedCloseRevenue = monthlyLeads * ((closeRate + closeRateLift) / 100) * dealSize - currentMonthlyRevenue;
-    const totalMonthlyRecovery = recoveredLeakage + improvedCloseRevenue;
-    const ninetyDayRecovery = totalMonthlyRecovery * 3;
-    const annualRecovery = totalMonthlyRecovery * 12;
-    const hoursSaved = Math.round(10 + (monthlyLeads / 20));
-    const roiMultiple = ninetyDayRecovery > 0 ? (ninetyDayRecovery / 2000).toFixed(1) : "—";
+    const currentMonthlyRevenue    = (monthlyLeads*(closeRate/100))*dealSize;
+    const leakagePct               = Math.min(0.35, responseHours*0.05+0.15);
+    const recoveredLeakage         = monthlyLeads*leakagePct*(closeRate/100)*dealSize;
+    const closeRateLift            = Math.min(closeRate*0.25, 12);
+    const improvedCloseRevenue     = monthlyLeads*((closeRate+closeRateLift)/100)*dealSize - currentMonthlyRevenue;
+    const totalMonthlyRecovery     = recoveredLeakage+improvedCloseRevenue;
+    const ninetyDayRecovery        = totalMonthlyRecovery*3;
+    const annualRecovery           = totalMonthlyRecovery*12;
+    const hoursSaved               = Math.round(10+(monthlyLeads/20));
+    const roiMultiple              = ninetyDayRecovery>0?(ninetyDayRecovery/2000).toFixed(1):"—";
     return {
       currentMonthlyRevenue: Math.round(currentMonthlyRevenue),
-      totalMonthlyRecovery: Math.round(totalMonthlyRecovery),
-      ninetyDayRecovery: Math.round(ninetyDayRecovery),
-      annualRecovery: Math.round(annualRecovery),
-      hoursSaved,
-      roiMultiple,
-      meetsGuarantee: ninetyDayRecovery >= 30000,
+      totalMonthlyRecovery:  Math.round(totalMonthlyRecovery),
+      ninetyDayRecovery:     Math.round(ninetyDayRecovery),
+      annualRecovery:        Math.round(annualRecovery),
+      hoursSaved, roiMultiple,
+      meetsGuarantee: ninetyDayRecovery>=30000,
     };
-  }, [monthlyLeads, dealSize, closeRate, responseHours]);
+  }, [monthlyLeads,dealSize,closeRate,responseHours]);
 
-  const fmt$ = (n: number) =>
-    n >= 1000000 ? `$${(n / 1000000).toFixed(1)}M`
-    : n >= 1000 ? `$${(n / 1000).toFixed(0)}K`
-    : `$${n}`;
+  const fmt$ = (n:number) =>
+    n>=1000000?`$${(n/1000000).toFixed(1)}M`
+    :n>=1000?`$${(n/1000).toFixed(0)}K`
+    :`$${n}`;
 
   return (
-    <div className="min-h-screen font-sans" style={{ background: BG, color: TEXT }}>
-
-      {/* NAV */}
-      <header className="sticky top-0 z-50 transition-all duration-200" style={{ background: `${BG}e0`, backdropFilter: "blur(12px)", borderBottom: `1px solid ${BORDER}` }}>
+    <div className="min-h-screen" style={{ background:CREAM2, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+      <header className="sticky top-0 z-50" style={{ background:"rgba(244,239,227,.88)", backdropFilter:"blur(14px)", borderBottom:`1px solid ${LINE}` }}>
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/"><JobsDoneLogo /></Link>
+          <Link href="/"><SubLogo /></Link>
           <Link href="/">
-            <button
-              className="flex items-center gap-1.5 text-[13px] font-medium transition-colors duration-150"
-              style={{ color: MUTED }}
-              onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}
-            >
+            <button className="flex items-center gap-1.5 transition-colors duration-150"
+              style={{ fontSize:13, fontWeight:600, color:INK_SOFT, border:"none", background:"none", cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif" }}
+              onMouseEnter={e=>(e.currentTarget as HTMLElement).style.color=INK}
+              onMouseLeave={e=>(e.currentTarget as HTMLElement).style.color=INK_SOFT}>
               <ArrowLeft className="w-3.5 h-3.5" /> Back to home
             </button>
           </Link>
@@ -144,122 +130,89 @@ export default function ROICalculator() {
       </header>
 
       <main className="max-w-5xl mx-auto px-6 py-14">
-
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="text-center mb-12"
-        >
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] mb-3" style={{ color: ACCENT }}>ROI Calculator</p>
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4" style={{ color: TEXT, letterSpacing: "-0.025em" }}>
+        <motion.div initial={{ opacity:0, y:16 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.4 }}
+          className="text-center mb-12">
+          <p style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:ACCENT, marginBottom:12, fontFamily:"'Hanken Grotesk',sans-serif" }}>ROI Calculator</p>
+          <h1 className="anton" style={{ fontSize:"clamp(2rem,4.5vw,3rem)", color:INK, letterSpacing:"-0.01em", lineHeight:1.08, marginBottom:14 }}>
             How much revenue are you<br className="hidden md:block" /> currently leaving on the table?
           </h1>
-          <p className="text-[16px] leading-relaxed max-w-xl mx-auto" style={{ color: MUTED }}>
+          <p style={{ fontSize:16, lineHeight:1.65, maxWidth:520, margin:"0 auto", color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
             Adjust the sliders to match your business — we'll show you exactly what slow follow-up and manual bottlenecks are costing you every month.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-6 items-start">
-
-          {/* Inputs */}
-          <motion.div
-            initial={{ opacity: 0, x: -16 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
+          <motion.div initial={{ opacity:0, x:-16 }} animate={{ opacity:1, x:0 }} transition={{ duration:0.4, delay:0.1 }}
             className="rounded-xl p-7 flex flex-col gap-7"
-            style={{ background: SURFACE, border: `1px solid ${BORDER}` }}
-          >
+            style={{ background:CREAM, border:`1px solid ${LINE}` }}>
             <div>
-              <h2 className="text-[17px] font-bold mb-1" style={{ color: TEXT }}>Your current numbers</h2>
-              <p className="text-[13px]" style={{ color: MUTED }}>Drag the sliders to reflect your business today.</p>
+              <h2 style={{ fontSize:17, fontWeight:700, marginBottom:4, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>Your current numbers</h2>
+              <p style={{ fontSize:13, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>Drag the sliders to reflect your business today.</p>
             </div>
-
             <Slider label="Monthly leads" value={monthlyLeads} onChange={setMonthlyLeads} min={10} max={500} step={5}
-              format={v => `${v} leads`} hint="All inbound inquiries across every channel" />
+              format={v=>`${v} leads`} hint="All inbound inquiries across every channel" />
             <Slider label="Average deal / client value" value={dealSize} onChange={setDealSize} min={500} max={25000} step={500}
-              format={v => fmt$(v)} hint="What the average new client is worth to your business" />
-            <Slider label="Current close rate" value={closeRate} onChange={setCloseRate} min={1} max={60} step={1}
-              format={v => `${v}%`} hint="Of leads that enter your pipeline, how many become clients" />
-            <Slider label="Average lead response time" value={responseHours} onChange={setResponseHours} min={0} max={48} step={1}
-              format={v => v === 0 ? "Instant" : v === 1 ? "1 hour" : `${v} hours`}
+              format={v=>fmt$(v)} hint="What the average new client is worth to your business" />
+            <Slider label="Current close rate" value={closeRate} onChange={setCloseRate} min={1} max={60}
+              format={v=>`${v}%`} hint="Of leads that enter your pipeline, how many become clients" />
+            <Slider label="Average lead response time" value={responseHours} onChange={setResponseHours} min={0} max={48}
+              format={v=>v===0?"Instant":v===1?"1 hour":`${v} hours`}
               hint="How long before a new lead hears back from your team" />
-
-            <div className="rounded-lg p-4" style={{ background: BG2, border: `1px solid ${BORDER}` }}>
-              <p className="text-[12px] leading-relaxed" style={{ color: MUTED }}>
-                <span className="font-semibold" style={{ color: TEXT }}>How we calculate this: </span>
+            <div className="rounded-lg p-4" style={{ background:CREAM2, border:`1px solid ${LINE}` }}>
+              <p style={{ fontSize:12, lineHeight:1.65, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+                <span style={{ fontWeight:600, color:INK }}>How we calculate this: </span>
                 We model lead leakage (leads lost to slow response and no follow-up) plus the close rate lift from sub-5-minute response times and automated nurture sequences — based on industry benchmarks.
               </p>
             </div>
           </motion.div>
 
-          {/* Results */}
-          <motion.div
-            initial={{ opacity: 0, x: 16 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: 0.15 }}
-            className="flex flex-col gap-4"
-          >
+          <motion.div initial={{ opacity:0, x:16 }} animate={{ opacity:1, x:0 }} transition={{ duration:0.4, delay:0.15 }}
+            className="flex flex-col gap-4">
             <div className="grid grid-cols-2 gap-3">
-              <ResultCard icon={<DollarSign className="w-4 h-4" />} label="Monthly revenue recovered"
+              <ResultCard icon={<DollarSign className="w-4 h-4"/>} label="Monthly revenue recovered"
                 value={fmt$(results.totalMonthlyRecovery)} sub="By eliminating lead leakage + boosting close rate" />
-              <ResultCard icon={<TrendingUp className="w-4 h-4" />} label="90-day recovery"
+              <ResultCard icon={<TrendingUp className="w-4 h-4"/>} label="90-day recovery"
                 value={fmt$(results.ninetyDayRecovery)} sub="Within your first quarter" highlight />
-              <ResultCard icon={<Zap className="w-4 h-4" />} label="Annual revenue upside"
+              <ResultCard icon={<Zap className="w-4 h-4"/>} label="Annual revenue upside"
                 value={fmt$(results.annualRecovery)} sub="If current trajectory continues" />
-              <ResultCard icon={<Clock className="w-4 h-4" />} label="Hours saved per week"
+              <ResultCard icon={<Clock className="w-4 h-4"/>} label="Hours saved per week"
                 value={`${results.hoursSaved}h`} sub="Freed from manual ops work" />
             </div>
 
-            {/* Guarantee callout */}
-            <div
-              className="rounded-xl p-5 text-center"
-              style={{
-                background: results.meetsGuarantee ? "#0d2e1a" : `${ACCENT}08`,
-                border: `1px solid ${results.meetsGuarantee ? "#1a5c34" : `${ACCENT}25`}`,
-              }}
-            >
+            <div className="rounded-xl p-5 text-center"
+              style={{ background:results.meetsGuarantee?`${GREEN}12`:`${ACCENT}0A`,
+                border:`1px solid ${results.meetsGuarantee?`${GREEN}40`:`${ACCENT}25`}` }}>
               {results.meetsGuarantee ? (
                 <>
-                  <p className="font-bold text-[15px] mb-1.5" style={{ color: "#34d399" }}>✓ You qualify for our $30K guarantee</p>
-                  <p className="text-[13px] leading-relaxed" style={{ color: "#34d39980" }}>
-                    Based on your numbers, we're confident we can generate $30,000+ in net profit within 90 days — or we keep working until we do.
-                  </p>
+                  <p style={{ fontWeight:700, fontSize:15, marginBottom:6, color:"#0a9968", fontFamily:"'Hanken Grotesk',sans-serif" }}>✓ You qualify for our $30K guarantee</p>
+                  <p style={{ fontSize:13, lineHeight:1.65, color:"#0a996880", fontFamily:"'Hanken Grotesk',sans-serif" }}>Based on your numbers, we're confident we can generate $30,000+ in net profit within 90 days — or we keep working until we do.</p>
                 </>
               ) : (
                 <>
-                  <p className="font-bold text-[15px] mb-1.5" style={{ color: ACCENT }}>Increase your leads or deal size to unlock the guarantee</p>
-                  <p className="text-[13px] leading-relaxed" style={{ color: MUTED }}>
-                    Our $30K guarantee applies when there's enough volume to work with. Book a call — we'll tell you honestly if we're a fit.
-                  </p>
+                  <p style={{ fontWeight:700, fontSize:15, marginBottom:6, color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>Increase your leads or deal size to unlock the guarantee</p>
+                  <p style={{ fontSize:13, lineHeight:1.65, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>Our $30K guarantee applies when there's enough volume to work with. Book a call — we'll tell you honestly if we're a fit.</p>
                 </>
               )}
             </div>
 
-            {/* CTA */}
-            <div className="rounded-xl p-6 text-center flex flex-col gap-4" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+            <div className="rounded-xl p-6 text-center flex flex-col gap-4" style={{ background:CREAM, border:`1px solid ${LINE}` }}>
               <div>
-                <p className="font-bold text-[15px] mb-1" style={{ color: TEXT }}>
+                <p style={{ fontWeight:700, fontSize:15, marginBottom:4, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>
                   Ready to stop leaving {fmt$(results.annualRecovery)}/year on the table?
                 </p>
-                <p className="text-[13px]" style={{ color: MUTED }}>
+                <p style={{ fontSize:13, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
                   Book a free 45-minute audit call. We'll map your exact leaks and hand you a custom roadmap.
                 </p>
               </div>
-              <button
-                onClick={() => setShowBooking(true)}
-                className="w-full font-semibold text-[14px] h-11 rounded-lg transition-colors duration-150 flex items-center justify-center gap-2"
-                style={{ background: ACCENT, color: "#fff" }}
-                onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "#1a54e0"}
-                onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = ACCENT}
-              >
+              <button onClick={() => setShowBooking(true)}
+                className="w-full h-11 rounded-lg flex items-center justify-center gap-2 transition-colors duration-150"
+                style={{ background:ACCENT, color:"#fff", fontWeight:700, fontSize:14, border:"none", cursor:"pointer",
+                  boxShadow:`0 4px 16px -4px ${ACCENT}55`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
                 Book a Free Audit Call <ArrowRight className="w-4 h-4" />
               </button>
-              <p className="text-[12px]" style={{ color: `${MUTED}70` }}>No commitment. No sales pressure. You keep the roadmap either way.</p>
+              <p style={{ fontSize:12, color:INK_SOFT, opacity:.6, fontFamily:"'Hanken Grotesk',sans-serif" }}>No commitment. No sales pressure. You keep the roadmap either way.</p>
             </div>
           </motion.div>
-
         </div>
       </main>
       <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />

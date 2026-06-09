@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ROI Calculator | Jobs Done Labs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="page.css" />
+<link rel="stylesheet" href="subpage.css" />
+<style>html{scroll-behavior:smooth}body{margin:0;background:#F4EFE3}</style>
+</head>
+<body>
+<div class="lp">
+  <header class="sm-header">
+    <div class="sm-header-in">
+      <a class="sm-logo" href="Jobs Done Labs.html">
+        <svg class="sm-flask" viewBox="0 0 48 48" fill="none">
+          <path d="M18 7 H30 M20 7 V19 L11.5 38 Q10 41.5 13.8 41.5 H34.2 Q38 41.5 36.5 38 L28 19 V7" stroke="#1466FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="20.5" y1="25.5" x2="26" y2="30.5" stroke="#1466FF" stroke-width="2" stroke-linecap="round"/>
+          <line x1="26" y1="30.5" x2="20.5" y2="35.5" stroke="#1466FF" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="20.5" cy="25.5" r="2.6" fill="#1466FF"/><circle cx="26.5" cy="30.5" r="2.6" fill="#1466FF"/><circle cx="20.5" cy="35.5" r="2.6" fill="#1466FF"/>
+        </svg>
+        <span class="sm-wm"><span class="row1">JOBS<i>DONE</i></span><span class="sm-labs"><span class="r"></span>LABS<span class="r"></span></span></span>
+      </a>
+      <nav class="sm-nav">
+        <a href="Jobs Done Labs.html#services">Services</a>
+        <a href="Jobs Done Labs.html#industries">Industries</a>
+        <a href="Jobs Done Labs.html#faq">FAQ</a>
+        <a class="btn btn-sm" href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener">Book a Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="sub-hero">
+      <a class="back-link" href="Jobs Done Labs.html">← Back to home</a>
+      <span class="eyebrow"><span class="pulse"></span> ROI Calculator</span>
+      <h2 class="h2">See what we can<br />recover for you.</h2>
+      <p class="lead">Move the sliders to match your business. This is a rough estimate of the net profit hiding in your operation — the free audit gives you the exact number.</p>
+    </section>
+
+    <section class="roi-grid">
+      <div class="roi-controls">
+        <div class="roi-field">
+          <div class="top"><span class="lab">Annual revenue</span><span class="val" id="vRev">$1.5M</span></div>
+          <input class="roi-range" id="rRev" type="range" min="1000000" max="20000000" step="250000" value="1500000" />
+        </div>
+        <div class="roi-field">
+          <div class="top"><span class="lab">Leads per month</span><span class="val" id="vLeads">120</span></div>
+          <input class="roi-range" id="rLeads" type="range" min="20" max="1000" step="10" value="120" />
+        </div>
+        <div class="roi-field">
+          <div class="top"><span class="lab">Avg. job / deal value</span><span class="val" id="vDeal">$2,500</span></div>
+          <input class="roi-range" id="rDeal" type="range" min="250" max="25000" step="250" value="2500" />
+        </div>
+        <div class="roi-field">
+          <div class="top"><span class="lab">Leads lost to slow follow-up</span><span class="val" id="vLost">25%</span></div>
+          <input class="roi-range" id="rLost" type="range" min="5" max="60" step="1" value="25" />
+        </div>
+        <div class="roi-field">
+          <div class="top"><span class="lab">Admin hours / week (team)</span><span class="val" id="vHours">40</span></div>
+          <input class="roi-range" id="rHours" type="range" min="5" max="200" step="5" value="40" />
+        </div>
+      </div>
+
+      <div class="roi-result">
+        <span class="lab">Estimated annual recovery</span>
+        <div class="roi-big" id="oTotal">$0</div>
+        <p class="roi-sub">What our systems could put back on your bottom line in the first 12 months.</p>
+        <div class="roi-breakdown">
+          <div class="roi-line"><span class="k">Recovered lost leads</span><span class="v" id="oLeads">$0</span></div>
+          <div class="roi-line"><span class="k">Reclaimed admin time</span><span class="v" id="oTime">$0</span></div>
+          <div class="roi-line"><span class="k">Faster cash &amp; efficiency</span><span class="v" id="oEff">$0</span></div>
+        </div>
+        <div class="roi-cta-row">
+          <a class="btn btn-lg" href="https://calendly.com/ryne-bandolik" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Book your free audit →</a>
+          <div class="roi-fine">Estimate only. The free audit gives you a precise, line-item recovery number.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bot" style="border-top:none;padding-top:0;">
+        <span>© 2026 Jobs Done Labs. All rights reserved.</span>
+        <span style="display:flex;gap:22px;">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="contact.html">Contact</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const money = n => '$' + Math.round(n).toLocaleString('en-US');
+  const moneyM = n => n >= 1000000 ? '$' + (n/1000000).toFixed(n % 1000000 === 0 ? 0 : 1) + 'M' : '$' + Math.round(n/1000)+'K';
+
+  function calc() {
+    const rev = +$('rRev').value, leads = +$('rLeads').value, deal = +$('rDeal').value,
+          lost = +$('rLost').value / 100, hours = +$('rHours').value;
+    // displays
+    $('vRev').textContent = moneyM(rev);
+    $('vLeads').textContent = leads;
+    $('vDeal').textContent = money(deal);
+    $('vLost').textContent = Math.round(lost*100) + '%';
+    $('vHours').textContent = hours;
+
+    // model: recover ~40% of currently-lost leads at a 30% close rate
+    const lostDealsYr = leads * 12 * lost;
+    const recoveredLeads = lostDealsYr * 0.40 * 0.30 * deal;
+    // admin time reclaimed valued at $45/hr, 50 wks
+    const reclaimedTime = hours * 0.55 * 45 * 50;
+    // efficiency: 1.1% of revenue from faster cash + tighter ops
+    const efficiency = rev * 0.011;
+
+    $('oLeads').textContent = money(recoveredLeads);
+    $('oTime').textContent = money(reclaimedTime);
+    $('oEff').textContent = money(efficiency);
+    const total = recoveredLeads + reclaimedTime + efficiency;
+    $('oTotal').textContent = money(Math.max(total, 30000));
+
+    // tint the active fill of each range
+    document.querySelectorAll('.roi-range').forEach(r => {
+      const pct = (r.value - r.min) / (r.max - r.min) * 100;
+      r.style.background = `linear-gradient(90deg, rgba(20,102,255,.5) ${pct}%, var(--cream) ${pct}%)`;
+    });
+  }
+  document.querySelectorAll('.roi-range').forEach(r => r.addEventListener('input', calc));
+  calc();
+</script>
+</body>
+</html>
