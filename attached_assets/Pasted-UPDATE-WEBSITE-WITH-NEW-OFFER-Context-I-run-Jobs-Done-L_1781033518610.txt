@@ -1,0 +1,138 @@
+UPDATE WEBSITE WITH NEW OFFER
+
+Context: I run Jobs Done Labs, a company that builds automated systems for service businesses. I need to update my website to reflect a new cold traffic offer with a $30K profit recovery guarantee.
+
+HOMEPAGE UPDATES
+
+Hero Section:
+• Main headline: "We Guarantee Service Businesses Recover At Least $30,000 in Net Profit Within 90 Days—Or You Pay Nothing"
+• Subheadline: "Custom AI automation systems that recover lost revenue from manual processes, missed follow-ups, and data chaos. If we don't hit $30K in measurable profit impact, you don't pay a dime."
+• CTA button: "Book Your Free Profit Recovery Audit" (links to calendar)
+
+Problem Section:
+• Headline: "Your Business Is Bleeding $30K-$50K Per Year"
+• 3 columns with icons:
+  • "Lost Leads" • Manual follow-up means 40-60% of leads go cold
+  • "Data Chaos" • No visibility into what's actually working costs you thousands in wasted spend
+  • "Manual Busywork" • Your team spends 15+ hours/week on tasks a system should handle
+
+Solution Section:
+• Headline: "We Step In As Your Fractional Systems Operator"
+• Body copy: "Most service business owners are stuck being the 'systems guy' at 2am. We fill that seat for you. We audit your operation, identify profit leaks, and build the automated infrastructure that recovers that money within 90 days—guaranteed."
+• Visual: Simple diagram showing "Sales Seat • Manager Seat • Systems Seat (us)" = Complete Business
+
+What We Do Section:
+• Headline: "What You Get"
+• Bullet list:
+  • Complete operational audit identifying all profit leaks
+  • Custom automation blueprint (yours to keep)
+  • Full system build and integration across your entire tech stack
+  • Data dashboards showing real-time profit recovery
+  • Team training on all new systems
+  • 90-day implementation support with weekly check-ins
+  • $30,000 profit recovery guarantee
+
+How It Works Section:
+• Headline: "The 90-Day Profit Recovery Process"
+• 4 steps with numbers:
+  • "Audit" • We analyze your current systems and identify where you're losing money (Week 1)
+  • "Blueprint" • We design your custom automation systems and show you the profit recovery plan (Week 2)
+  • "Build" • We implement everything and train your team (Weeks 3-4)
+  • "Recover" • We measure and optimize until you hit $30K+ in recovered profit (Days 30-90)
+
+Guarantee Section:
+• Headline: "Our $30,000 Guarantee"
+• Body: "We guarantee you recover at least $30,000 in measurable net profit within 90 days of system implementation, or you get 100% of your money back—no questions asked. We only work with service businesses doing $500K+ annually with average customer values above $2,000, because we know the economics work."
+• Visual: Badge or seal graphic saying "90-Day $30K Guarantee"
+
+Social Proof Section (if you have case studies):
+• Headline: "Recovered Profit For Service Businesses Like Yours"
+• 3 case study cards showing:
+  • Client business type
+  • Dollar amount recovered
+  • Timeline
+  • Quote
+• If no case studies yet, replace with: "Currently working with 5 service businesses in our pilot program. Case studies coming Q2 2025."
+
+Who This Is For Section:
+• Headline: "Is This Right For Your Business?"
+• Checklist format:
+  ✓ Service business doing $500K-$5M per year
+  ✓ Average customer value above $2,000
+  ✓ Currently losing leads due to slow/manual follow-up
+  ✓ Using 3+ disconnected tools that don't talk to each other
+  ✓ Owner or team spending 10+ hours/week on manual busywork
+  ✓ No clear visibility into what marketing/sales activities actually work
+  
+  "If you checked 3 or more, we can recover $30K+ for you in 90 days."
+
+Pricing Section:
+• Headline: "Investment"
+• Pricing card:
+  • $7,500 one-time setup
+  • $2,500/month for 90 days
+  • Total investment: $15,000
+  • Minimum guaranteed return: $30,000
+  • Your net profit: $15,000+ (2x ROI minimum)
+• Subtext: "Pay $15K to make $30K. If we don't hit $30K recovered, you pay nothing."
+
+Final CTA Section:
+• Headline: "Ready To Recover Your $30K?"
+• Body: "Book a free audit call. I'll find where you're bleeding money, show you exactly how we'd recover it, and give you a full blueprint of the systems we'd build—yours to keep either way."
+• CTA button: "Book Your Free Profit Recovery Audit"
+• Calendar embed or link to Calendly
+
+ABOUT PAGE UPDATES
+
+Update bio section:
+"I'm Ryne. I own a freight and logistics company here in Chicago, and I run Jobs Done Labs.
+
+I didn't set out to sell automation systems. I built them for my own business first because I was drowning in manual work—the same tasks eating my week, leads slipping through the cracks, problems I knew a system should be handling instead of me.
+
+Once I automated my own operation, my partners took over day-to-day and I realized building these systems was what I actually enjoyed. So I started doing it for other service business owners who were in the same position I was.
+
+Now I step in as a fractional systems operator for service businesses doing $500K-$5M per year. I build the automated infrastructure that recovers $30K+ in lost profit within 90 days—guaranteed."
+
+SERVICES PAGE (if separate from homepage)
+
+Replace generic "automation services" language with:
+• Headline: "Fractional Systems Operator Services"
+• 4 service cards:
+  • "Profit Recovery Audit" • Free analysis of where you're losing money
+  • "Custom Automation Build" • End-to-end system design and implementation
+  • "Tool Integration" • Connect your entire tech stack so data flows automatically
+  • "90-Day Profit Recovery Program" • Our flagship $30K guarantee offer
+
+CONTACT/BOOKING PAGE
+
+• Headline: "Book Your Free Profit Recovery Audit"
+• Form fields: Name, Email, Phone, Company Name, Annual Revenue, Brief description of biggest operational headache
+• Or embed Calendly directly
+• Confirmation message after booking: "Thanks for booking. Before our call, think about: 1) Where leads are falling through the cracks, 2) What manual tasks eat the most time, 3) What data you wish you could see but can't."
+
+FOOTER UPDATES
+
+Add guarantee badge/text: "90-Day $30K Profit Recovery Guarantee"
+
+META UPDATES
+
+Update page title: "Jobs Done Labs | Recover $30K in 90 Days with Custom Automation Systems"
+
+Update meta description: "We guarantee service businesses recover at least $30,000 in net profit within 90 days by building custom AI automation systems—or you pay nothing. Book your free audit."
+
+DESIGN NOTES
+
+• Use trust colors: Navy blue, white, accent of green (for money/profit theme)
+• Include calculator icon, dashboard mockups, or profit graph visuals
+• Keep it clean and professional—not flashy startup vibes
+• Mobile-responsive is critical (most service business owners browse on phone)
+• Fast load times (under 2 seconds)
+
+TECHNICAL REQUIREMENTS
+
+• Ensure calendar booking integration works (Calendly or similar)
+• Add Facebook Pixel and Google Analytics for retargeting
+• Set up conversion tracking on "Book Audit" button clicks
+• Add schema markup for local business (if applicable)
+• SSL certificate active
+• Contact form should send to your email immediately with auto-reply

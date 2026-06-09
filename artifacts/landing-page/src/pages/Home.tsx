@@ -241,18 +241,17 @@ const industries = [
 ];
 
 const services = [
-  { num: "01", Icon: Database, title: "CRM Infrastructure", desc: "A solid CRM is the backbone of every scalable business. We build it right — so every lead is automatically structured, tagged, and scored without anyone lifting a finger.", tags: ["Auto lead scoring","Consistent naming conventions","Pipeline automation"] },
-  { num: "02", Icon: Funnel, title: "Lead Capture", desc: "Every inquiry from every channel flows automatically into your CRM. No more manual copy-paste, no more lost leads from slow response times.", tags: ["Omni-channel capture","Instant qualification","Zero data entry errors"] },
-  { num: "03", Icon: Mail, title: "Lead Nurture", desc: "Prospects who don't book immediately get systematically engaged with personalized touchpoints — dramatically reducing no-shows and building trust before the call.", tags: ["Reduced no-shows","Personalized sequences","Better-qualified leads"] },
-  { num: "04", Icon: FileText, title: "Transcript Analysis", desc: "Every sales call is automatically recorded, transcribed, and analyzed. Get strategic insights, action items, and performance data without reviewing a single recording yourself.", tags: ["Auto transcription","AI insights","Sales performance data"] },
-  { num: "05", Icon: Zap, title: "Client Onboarding", desc: "From signed contract to full access — automated. Resources created, comms sent, permissions set. Your clients hit the ground running the moment ink dries.", tags: ["Instant resource creation","Consistent experience","Zero missed steps"] },
+  { num: "01", Icon: ClipboardList, title: "Profit Recovery Audit", desc: "A free analysis of your entire operation to identify exactly where you're losing money. We map every profit leak and hand you a complete blueprint of what we'd build — yours to keep whether you hire us or not.", tags: ["Profit leak analysis","Custom blueprint","Free to keep"] },
+  { num: "02", Icon: Bot, title: "Custom Automation Build", desc: "End-to-end system design and implementation. We build every workflow, integration, and automation your business needs to stop leaking revenue and recover your $30K in 90 days.", tags: ["Full system build","Team training","Weeks 3–4"] },
+  { num: "03", Icon: Zap, title: "Tool Integration", desc: "Connect your entire tech stack so data flows automatically between every platform. No more manual data entry, no more tools that don't talk to each other, no more revenue falling through the cracks.", tags: ["Full stack connection","Automated data flow","Zero manual entry"] },
+  { num: "04", Icon: DollarSign, title: "90-Day Profit Recovery Program", desc: "Our flagship offer. We step in as your fractional systems operator, build your complete automation infrastructure, and guarantee $30,000 in measurable net profit recovery within 90 days—or you pay nothing.", tags: ["$30K guarantee","90-day timeline","100% money back"] },
 ];
 
 const steps = [
-  { num: "01", title: "Free Audit Call", sub: "Day 1", desc: "We map your business, find the biggest bottlenecks eating your time, and build a custom automation roadmap." },
-  { num: "02", title: "Onboarding & Setup", sub: "Week 1", desc: "Your dedicated automation engineer learns your systems, tools, and workflows. We're in your Slack within 48 hours." },
-  { num: "03", title: "Weekly Builds", sub: "Ongoing", desc: "Each week we ship new automations based on your priorities. Weekly strategy calls keep everything aligned." },
-  { num: "04", title: "24/7 Maintenance", sub: "Always On", desc: "We monitor, fix, and optimize every system we build. Under 24-hour response to any issue, guaranteed." },
+  { num: "01", title: "Audit", sub: "Week 1", desc: "We analyze your current systems and identify exactly where you're losing money—every profit leak, every manual bottleneck, every missed follow-up." },
+  { num: "02", title: "Blueprint", sub: "Week 2", desc: "We design your custom automation systems and walk you through the complete profit recovery plan. You see exactly what we'll build and how it recovers $30K." },
+  { num: "03", title: "Build", sub: "Weeks 3–4", desc: "We implement everything and train your team on every system. Your automations go live and start recovering revenue immediately." },
+  { num: "04", title: "Recover", sub: "Days 30–90", desc: "We measure, optimize, and push until you hit $30K+ in recovered profit. Weekly check-ins keep everything on track." },
 ];
 
 const comparison = [
@@ -286,12 +285,12 @@ const reviews = [
 ];
 
 const faqs = [
-  { q: "How is this different from hiring a full-time ops person?", a: "An ops hire costs $60–80K+/year, takes months to ramp, and can only work on one thing at a time. We bring a full team — strategy, automation, implementation — from day one. You get an entire ops department at a fraction of the cost, working 24/7." },
-  { q: "What industries do you specialize in?", a: "Marketing agencies (ads, email, SEO, PPC, social, video), home service businesses (HVAC, roofing, plumbing, landscaping, cleaning), and finance & professional service firms." },
-  { q: "What does the monthly fee include?", a: "Ongoing automation management, new workflow builds each week, system optimization, priority Slack support (under 24-hr response), weekly strategy calls, and a monthly systems report." },
-  { q: "Is there a long-term contract?", a: "No. Month-to-month only. You own everything we build. If you ever leave, the automations stay with you." },
-  { q: "What if I already have some automations running?", a: "We work with what you have. We map your existing systems, identify gaps, and build on top of what's already working. We optimize — we don't rip and replace." },
-  { q: "What tools do you work with?", a: "We primarily build on Make.com, Airtable, and Slack — but we integrate with virtually any CRM, calendar, payment processor, or project management tool." },
+  { q: "What exactly is a $30,000 profit recovery guarantee?", a: "We guarantee that the automation systems we build will generate at least $30,000 in measurable net profit impact within 90 days—through recovered leads, reduced manual labor costs, faster close rates, or documented revenue you would have otherwise lost. If we don't hit $30K in measurable impact, you get 100% of your money back." },
+  { q: "What qualifies as a measurable profit recovery?", a: "We track it together from day one: leads captured that your old system missed, hours of manual work eliminated (converted to dollar value), revenue from deals closed faster, and margin recovered from operational waste. We build the dashboards that show you in real time." },
+  { q: "Who is this program for?", a: "Service businesses doing $500K–$5M per year with an average customer value above $2,000. This includes home service companies, marketing agencies, medspas, logistics operators, and any service business with a real sales process that has gaps in follow-up or operations." },
+  { q: "What does 'fractional systems operator' mean?", a: "It means we fill the 'systems seat' of your business — the role that most owners end up doing themselves at 2am. We audit, design, build, and maintain your automation infrastructure. You get a full systems team without hiring one." },
+  { q: "Is there a long-term contract?", a: "No. If we don't hit $30K in measurable profit recovery within 90 days, you pay nothing. You own everything we build — the automations, the blueprints, all of it." },
+  { q: "What tools do you work with?", a: "We build on Make.com, Airtable, Slack, and GoHighLevel — but we integrate with virtually any CRM, calendar, payment processor, or project management tool your business already uses. We adapt to your stack." },
 ];
 
 /* ─────────────────────────────────────────────── */
@@ -489,7 +488,7 @@ function ExitIntentPopup() {
               </p>
               <div className="flex flex-col gap-2.5">
                 <PrimaryBtn size="lg" className="w-full justify-center" onClick={() => setShowBooking(true)}>
-                  Book My Free Audit Call <ArrowRight className="w-4 h-4" />
+                  Book My Free Profit Recovery Audit <ArrowRight className="w-4 h-4" />
                 </PrimaryBtn>
                 <button onClick={() => setVisible(false)} className="text-[13px] py-1.5 transition-colors duration-150" style={{ color: MUTED }}>
                   No thanks, I'll pass on the free roadmap
@@ -594,14 +593,14 @@ export default function Home() {
             {/* Headline */}
             <h1 className="font-bold leading-[1.05] mb-6 sg"
               style={{ fontSize: "clamp(2.8rem, 7vw, 5rem)", color: TEXT, letterSpacing: "-0.03em" }}>
-              We guarantee you generate{" "}
-              <span style={{ color: ACCENT }}>$30,000 in net profit</span>{" "}
-              within 90 days.
+              We Guarantee Service Businesses Recover At Least{" "}
+              <span style={{ color: ACCENT }}>$30,000 in Net Profit</span>{" "}
+              Within 90 Days—<span style={{ color: ACCENT }}>Or You Pay Nothing</span>
             </h1>
 
             {/* Sub-copy */}
             <p className="text-[18px] leading-[1.6] mb-10 max-w-[600px] mx-auto" style={{ color: MUTED }}>
-              By eliminating the lead leaks, slow follow-up, and manual bottlenecks currently costing you deals — or we keep working until we do.
+              Custom AI automation systems that recover lost revenue from manual processes, missed follow-ups, and data chaos. If we don't hit $30K in measurable profit impact, you don't pay a dime.
             </p>
           </motion.div>
 
@@ -623,7 +622,7 @@ export default function Home() {
             className="flex flex-col items-center gap-4 mb-12"
           >
             <PrimaryBtn size="xl" className="w-full max-w-[440px] justify-center" onClick={() => setShowBooking(true)}>
-              Book a Free Audit Call <ArrowRight className="w-5 h-5" />
+              Book Your Free Profit Recovery Audit <ArrowRight className="w-5 h-5" />
             </PrimaryBtn>
             <a
               href="https://replit.com/@rynestone/Jobsdone-Labs-Course-AI-Platform"
@@ -663,13 +662,12 @@ export default function Home() {
             <div className="flex-1 flex flex-col gap-6">
               <div>
                 <p className="font-black sg leading-[1.05] tracking-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: TEXT }}>
-                  AUTOMATE.<br />
-                  <span style={{ color: ACCENT }}>CLOSE MORE.</span><br />
-                  GROW FASTER.
+                  YOUR FRACTIONAL<br />
+                  <span style={{ color: ACCENT }}>SYSTEMS OPERATOR</span>
                 </p>
                 <div className="w-10 h-1 rounded-full mt-3 mb-4" style={{ background: ACCENT }} />
                 <p className="text-[14px] leading-relaxed max-w-[340px]" style={{ color: MUTED }}>
-                  Our live automation system works 24/7 to capture leads, nurture prospects, and close more deals on autopilot.
+                  Most service business owners are stuck being the "systems guy" at 2am. We fill that seat for you. We audit your operation, identify profit leaks, and build the automated infrastructure that recovers that money within 90 days—guaranteed.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-3">
@@ -754,21 +752,33 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── BIG NUMBERS ── */}
-        <section className="py-12 md:py-16 max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {[
-              { num: "$30K+", label: "Average net profit generated per client in 90 days" },
-              { num: "50+", label: "Businesses automated" },
-              { num: "80%", label: "Reduction in manual ops work" },
-            ].map(({ num, label }) => (
-              <Fade key={num}>
-                <div className="border-l-2 pl-5" style={{ borderColor: `${ACCENT}40` }}>
-                  <p className="font-bold mb-1 sg" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: ACCENT, letterSpacing: "-0.03em" }}>{num}</p>
-                  <p className="text-[13px] leading-snug" style={{ color: MUTED }}>{label}</p>
-                </div>
-              </Fade>
-            ))}
+        {/* ── PROBLEM ── */}
+        <section className="py-16 px-6" style={{ background: BG }}>
+          <div className="max-w-5xl mx-auto">
+            <Fade>
+              <Label>Why Service Businesses Hire Us</Label>
+              <H2>Your business is bleeding $30K–$50K per year</H2>
+              <p className="text-[16px] leading-relaxed mt-4 max-w-2xl" style={{ color: MUTED }}>
+                Most service businesses aren't struggling because of a bad product or weak demand. They're losing money through three completely fixable problems.
+              </p>
+            </Fade>
+            <div className="mt-10 grid sm:grid-cols-3 gap-6">
+              {[
+                { Icon: Users, title: "Lost Leads", desc: "Manual follow-up means 40–60% of leads go cold before anyone reaches them. That's revenue walking out the door every single day." },
+                { Icon: BarChart3, title: "Data Chaos", desc: "No visibility into what's actually working costs you thousands in wasted spend. You can't optimize what you can't see." },
+                { Icon: Wrench, title: "Manual Busywork", desc: "Your team spends 15+ hours per week on tasks a system should handle. That's payroll dollars going to work a computer should be doing." },
+              ].map(({ Icon, title, desc }) => (
+                <Fade key={title}>
+                  <div className="rounded-xl p-6 flex flex-col gap-4 h-full" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: `${ACCENT}10`, border: `1px solid ${ACCENT}18` }}>
+                      <Icon className="w-5 h-5" style={{ color: ACCENT }} />
+                    </div>
+                    <h3 className="font-bold text-[17px] sg" style={{ color: TEXT }}>{title}</h3>
+                    <p className="text-[13px] leading-relaxed" style={{ color: MUTED }}>{desc}</p>
+                  </div>
+                </Fade>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -812,11 +822,11 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-6 px-6 sm:py-8 sm:px-8 rounded-xl" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
               <div>
-                <p className="font-bold text-[18px] sg mb-1" style={{ color: TEXT, letterSpacing: "-0.01em" }}>Ready to see what's possible for your business?</p>
-                <p className="text-[13px]" style={{ color: MUTED }}>Free 45-minute audit. No commitment. You keep the roadmap.</p>
+                <p className="font-bold text-[18px] sg mb-1" style={{ color: TEXT, letterSpacing: "-0.01em" }}>Ready to recover your $30,000?</p>
+                <p className="text-[13px]" style={{ color: MUTED }}>Free profit recovery audit. No commitment. You keep the blueprint either way.</p>
               </div>
               <PrimaryBtn size="lg" className="flex-shrink-0" onClick={() => setShowBooking(true)}>
-                Book Your Free Audit <ArrowRight className="w-4 h-4" />
+                Book Your Free Profit Recovery Audit <ArrowRight className="w-4 h-4" />
               </PrimaryBtn>
             </div>
           </div>
@@ -826,8 +836,8 @@ export default function Home() {
         <section id="services" className="py-16" style={{ background: BG2 }}>
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
-              <Label>What We Build</Label>
-              <H2>Five core systems. Infinite hours recovered.</H2>
+              <Label>What You Get</Label>
+              <H2>Four services that recover lost profit.</H2>
             </Fade>
             <Fade delay={0.08}>
               <div className="mt-10 mb-8 rounded-xl overflow-hidden" style={{ border: `1px solid ${BORDER}` }}>
@@ -871,7 +881,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
               <Label>The Process</Label>
-              <H2>Up and running in 30 days. Optimizing forever.</H2>
+              <H2>The 90-Day Profit Recovery Process</H2>
             </Fade>
             <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {steps.map((s, i) => (
@@ -901,7 +911,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto px-6">
             <Fade>
               <Label>Us vs. The Alternative</Label>
-              <H2>Why founders choose us over everything else</H2>
+              <H2>Why service businesses choose us over everything else</H2>
             </Fade>
             <Fade delay={0.08}>
               <div className="mt-10 rounded-xl overflow-hidden overflow-x-auto" style={{ border: `1px solid ${BORDER}` }}>
@@ -937,41 +947,52 @@ export default function Home() {
             <div className="max-w-3xl mx-auto rounded-xl p-6 sm:p-10 text-center" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
               <Label>Our Promise</Label>
               <h2 className="font-bold leading-tight mb-4 sg" style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", color: TEXT, letterSpacing: "-0.02em" }}>
-                $30,000 in net profit within 90 days — guaranteed.
+                Our $30,000 Guarantee
               </h2>
               <p className="text-[15px] leading-relaxed mb-8 max-w-xl mx-auto" style={{ color: MUTED }}>
-                If we don't deliver measurable ROI in your first 90 days, we keep working until we do. No extra charge. No excuses.
+                We guarantee you recover at least $30,000 in measurable net profit within 90 days of system implementation, or you get 100% of your money back—no questions asked. We only work with service businesses doing $500K+ annually with average customer values above $2,000, because we know the economics work.
               </p>
               <PrimaryBtn size="lg" onClick={() => setShowBooking(true)}>
-                Claim Your Free Audit Call <ArrowRight className="w-4 h-4" />
+                Book Your Free Profit Recovery Audit <ArrowRight className="w-4 h-4" />
               </PrimaryBtn>
-              <p className="text-[12px] mt-4" style={{ color: `${MUTED}80` }}>Month-to-month. No long-term contracts. You own everything we build.</p>
+              <p className="text-[12px] mt-4" style={{ color: `${MUTED}80` }}>100% money back if we don't hit $30K. You own everything we build.</p>
             </div>
           </Fade>
         </section>
 
-        {/* ── COMMUNITY ── */}
+        {/* ── WHO THIS IS FOR ── */}
         <section className="py-16" style={{ background: BG2 }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
-              <Fade>
-                <div>
-                  <Label>Community</Label>
-                  <H2>Ready to bring back hours of time?</H2>
-                  <p className="text-[15px] leading-relaxed mt-4 mb-6" style={{ color: MUTED }}>
-                    Join founders and operators inside our community — breakdowns, templates, and live Q&amp;A on automation that actually ships.
-                  </p>
-                  <button onClick={() => setShowBooking(true)} className="text-[14px] font-medium transition-colors duration-150" style={{ color: ACCENT }}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.7"}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}>
-                    Join the community →
-                  </button>
-                </div>
-              </Fade>
-              <Fade delay={0.1}>
-                <VideoPlayer />
-              </Fade>
-            </div>
+          <div className="max-w-4xl mx-auto px-6">
+            <Fade>
+              <Label>Who This Is For</Label>
+              <H2>Is this right for your business?</H2>
+              <p className="text-[16px] leading-relaxed mt-4 mb-8 max-w-2xl" style={{ color: MUTED }}>
+                We only work with service businesses where we know the economics work. Check how many of these apply to you.
+              </p>
+            </Fade>
+            <Fade delay={0.08}>
+              <div className="grid sm:grid-cols-2 gap-3 mb-8">
+                {[
+                  "Service business doing $500K–$5M per year",
+                  "Average customer value above $2,000",
+                  "Currently losing leads due to slow or manual follow-up",
+                  "Using 3+ disconnected tools that don't talk to each other",
+                  "Owner or team spending 10+ hours/week on manual busywork",
+                  "No clear visibility into what marketing or sales activities actually work",
+                ].map(item => (
+                  <div key={item} className="flex items-start gap-3 rounded-xl px-5 py-4" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: `${ACCENT}15`, border: `1px solid ${ACCENT}30` }}>
+                      <Check className="w-3 h-3" style={{ color: ACCENT }} />
+                    </div>
+                    <p className="text-[14px] leading-snug" style={{ color: TEXT }}>{item}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-[17px] font-semibold sg text-center" style={{ color: MUTED }}>
+                If you checked 3 or more,{" "}
+                <span style={{ color: TEXT }}>we can recover $30K+ for you in 90 days.</span>
+              </p>
+            </Fade>
           </div>
         </section>
 
@@ -980,7 +1001,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <Fade>
               <Label>Client Results</Label>
-              <H2>What clients say</H2>
+              <H2>Recovered profit for service businesses like yours</H2>
             </Fade>
             <Fade delay={0.08}>
               <div className="mt-10">
@@ -1026,21 +1047,21 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex-1 flex flex-col justify-center p-8 md:p-12" style={{ background: SURFACE }}>
-                    <Label>Ready to get your time back?</Label>
+                    <Label>Ready To Recover Your $30K?</Label>
                     <h2 className="font-bold leading-tight mb-4 sg" style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)", color: TEXT, letterSpacing: "-0.02em" }}>
-                      Book your free<br />automation audit call
+                      Book your free<br />Profit Recovery Audit
                     </h2>
                     <p className="text-[14px] leading-relaxed mb-7" style={{ color: MUTED }}>
-                      In 45 minutes, I'll personally map your biggest bottlenecks and hand you a custom roadmap — whether you hire us or not.
+                      Book a free audit call. I'll find where you're bleeding money, show you exactly how we'd recover it, and give you a full blueprint of the systems we'd build—yours to keep either way.
                     </p>
                     <div className="flex flex-col gap-2">
                       <PrimaryBtn size="lg" className="w-full sm:w-auto" onClick={() => setShowBooking(true)}>
-                        Book a Call with Ryne <ArrowRight className="w-4 h-4" />
+                        Book Your Free Profit Recovery Audit <ArrowRight className="w-4 h-4" />
                       </PrimaryBtn>
-                      <p className="text-[12px]" style={{ color: `${MUTED}70` }}>No commitment. No sales pressure. You keep the roadmap either way.</p>
+                      <p className="text-[12px]" style={{ color: `${MUTED}70` }}>No commitment. No sales pressure. You keep the blueprint either way.</p>
                     </div>
                     <div className="flex flex-wrap gap-4 mt-6 pt-6" style={{ borderTop: `1px solid ${BORDER}` }}>
-                      {["$30K net profit in 90 days","Month-to-month only","You own everything"].map(t => (
+                      {["$30K profit recovery guaranteed","100% money back if we miss","You own everything we build"].map(t => (
                         <span key={t} className="flex items-center gap-1.5 text-[12px] sg" style={{ color: MUTED }}>
                           <Check className="w-3.5 h-3.5" style={{ color: ACCENT }} /> {t}
                         </span>
@@ -1061,7 +1082,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between gap-10 mb-8">
             <div className="flex flex-col gap-3.5 max-w-[220px]">
               <JobsDoneLogo />
-              <p className="text-[13px] leading-relaxed" style={{ color: MUTED }}>Your embedded automation team.</p>
+              <p className="text-[13px] leading-relaxed" style={{ color: MUTED }}>We recover $30K in profit within 90 days—guaranteed.</p>
               <div className="flex gap-3.5">
                 <a href="#" className="transition-colors duration-150" style={{ color: `${TEXT}20` }}
                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = ACCENT}
@@ -1083,7 +1104,7 @@ export default function Home() {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-10 text-[13px]">
               <div>
                 <p className="font-semibold mb-3 sg text-[13px]" style={{ color: TEXT }}>Services</p>
-                {["CRM Infrastructure","Lead Capture","Lead Nurture","Transcript Analysis","Client Onboarding"].map(l => (
+                {["Profit Recovery Audit","Custom Automation Build","Tool Integration","90-Day Profit Recovery Program"].map(l => (
                   <p key={l} className="mb-1.5 transition-colors duration-150 cursor-pointer" style={{ color: MUTED }}
                     onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = TEXT}
                     onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = MUTED}>{l}</p>
