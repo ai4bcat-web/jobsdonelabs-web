@@ -60,13 +60,13 @@ function Wordmark({ size = 20, onDark = false }: { size?: number; onDark?: boole
   );
 }
 
-/* Dark rotating stamp badge */
+/* Static stamp badge — no spin */
 function StampBadge({ size = 104, dark = false }: { size?: number; dark?: boolean }) {
   const r = 40, cx = 50, cy = 50;
   const fill = dark ? INK : ACCENT;
   const uid = dark ? "stamp-d" : "stamp-l";
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" className="spin-slow" aria-hidden="true">
+    <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true">
       <defs>
         <path id={uid} d={`M ${cx},${cy-r} A ${r},${r} 0 1,1 ${cx-0.001},${cy-r}`} />
       </defs>
@@ -88,7 +88,7 @@ function VSL({ videoId = "FP_yxHX9Zvc" }: { videoId?: string }) {
   const [sound, setSound] = useState(false);
   const src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${sound?0:1}&rel=0&playsinline=1&modestbranding=1`;
   return (
-    <div style={{ width:"100%", borderRadius:18, overflow:"hidden", background:"#0A0E16", position:"relative", boxShadow:"0 24px 64px -16px rgba(0,0,0,.28)" }}>
+    <div style={{ width:"100%", borderRadius:12, overflow:"hidden", background:"#0A0E16", position:"relative", boxShadow:"0 24px 64px -16px rgba(0,0,0,.28)" }}>
       <div style={{ position:"absolute", inset:0, zIndex:0,
         background:"radial-gradient(70% 90% at 50% 25%,rgba(20,102,255,.28),transparent 60%)" }} />
       <div style={{ position:"relative", zIndex:1, aspectRatio:"16/9", width:"100%",
@@ -111,7 +111,7 @@ function VSL({ videoId = "FP_yxHX9Zvc" }: { videoId?: string }) {
             <span style={{ display:"inline-flex", alignItems:"center", gap:9,
               background:"rgba(10,14,22,.78)", backdropFilter:"blur(6px)",
               color:"#fff", fontSize:14, fontWeight:700, letterSpacing:"-0.01em",
-              padding:"10px 16px", borderRadius:100,
+              padding:"10px 16px", borderRadius:6,
               boxShadow:"0 8px 22px -6px rgba(0,0,0,.5)", fontFamily:"'Hanken Grotesk',sans-serif" }}>
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style={{ color:ACCENT, flex:"0 0 auto" }}>
                 <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8v8a4.5 4.5 0 002.5-4zM14 3v2.06a7 7 0 010 13.88V21a9 9 0 000-18z" />
@@ -138,10 +138,10 @@ const LEAKS = [
 
 function Tracker() {
   return (
-    <div style={{ background:INK2, borderRadius:20, padding:28, border:"1px solid rgba(255,255,255,.08)", boxShadow:"0 24px 56px -12px rgba(0,0,0,.22)" }}>
+    <div style={{ background:INK2, borderRadius:12, padding:28, border:"1px solid rgba(255,255,255,.08)", boxShadow:"0 24px 56px -12px rgba(0,0,0,.22)" }}>
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:22 }}>
         <span style={{ color:CREAM, fontWeight:700, fontSize:15, fontFamily:"'Hanken Grotesk',sans-serif" }}>Profit Recovery Tracker</span>
-        <span style={{ background:"rgba(52,211,153,.15)", color:GREEN, fontSize:12, fontWeight:700, padding:"4px 10px", borderRadius:100, fontFamily:"'Hanken Grotesk',sans-serif" }}>LIVE</span>
+        <span style={{ background:"rgba(52,211,153,.15)", color:GREEN, fontSize:12, fontWeight:700, padding:"4px 10px", borderRadius:4, fontFamily:"'Hanken Grotesk',sans-serif" }}>LIVE</span>
       </div>
       <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
         {LEAKS.map(l => (
@@ -153,8 +153,8 @@ function Tracker() {
               </div>
               <span style={{ color:GREEN, fontSize:13, fontWeight:700, fontFamily:"'Hanken Grotesk',sans-serif" }}>{l.amt}</span>
             </div>
-            <div style={{ height:7, background:"rgba(255,255,255,.07)", borderRadius:100, overflow:"hidden" }}>
-              <div style={{ height:"100%", width:l.pct, background:`linear-gradient(90deg,${ACCENT},${ACCENT_DEEP})`, borderRadius:100 }} />
+            <div style={{ height:7, background:"rgba(255,255,255,.07)", borderRadius:4, overflow:"hidden" }}>
+              <div style={{ height:"100%", width:l.pct, background:`linear-gradient(90deg,${ACCENT},${ACCENT_DEEP})`, borderRadius:4 }} />
             </div>
           </div>
         ))}
@@ -174,7 +174,7 @@ function ProfitDiagram() {
   const col = (label: string, items: string[], bg: string, textCol: string, border: string) => (
     <div style={{ flex:1, minWidth:0 }}>
       <div style={{ fontSize:11, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:INK_SOFT, marginBottom:10, fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</div>
-      <div style={{ background:bg, borderRadius:14, padding:"14px 16px", display:"flex", flexDirection:"column", gap:9, border:`1px solid ${border}` }}>
+      <div style={{ background:bg, borderRadius:8, padding:"14px 16px", display:"flex", flexDirection:"column", gap:9, border:`1px solid ${border}` }}>
         {items.map(item => (
           <div key={item} style={{ fontSize:13, fontWeight:500, color:textCol, fontFamily:"'Hanken Grotesk',sans-serif" }}>{item}</div>
         ))}
@@ -354,17 +354,18 @@ function H2({ children, onDark=false, style: extraStyle={}, className="" }: { ch
   );
 }
 
+/* Buttons — slightly rounded (8px), not pill */
 function PrimaryBtn({ children, onClick, small=false, light=false }: { children:React.ReactNode; onClick?:()=>void; small?:boolean; light?:boolean }) {
   return (
     <button onClick={onClick}
       style={{ display:"inline-flex", alignItems:"center", gap:8,
         background:light?"#fff":ACCENT, color:light?ACCENT_DEEP:"#fff",
-        fontSize:small?14:15.5, fontWeight:700, padding:small?"11px 20px":"14px 26px",
-        borderRadius:100, border:"none", cursor:"pointer", letterSpacing:"-0.01em",
-        boxShadow:light?"0 8px 28px -8px rgba(0,0,0,.28)":`0 6px 22px -6px ${ACCENT}88`,
+        fontSize:small?14:15.5, fontWeight:700, padding:small?"10px 18px":"14px 26px",
+        borderRadius:8, border:"none", cursor:"pointer", letterSpacing:"-0.01em",
+        boxShadow:light?"0 8px 28px -8px rgba(0,0,0,.28)":`0 4px 16px -4px ${ACCENT}66`,
         fontFamily:"'Hanken Grotesk',sans-serif",
         transition:"transform .15s,box-shadow .15s" }}
-      onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.transform="translateY(-2px)"; }}
+      onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.transform="translateY(-1px)"; }}
       onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.transform="translateY(0)"; }}>
       {children}
     </button>
@@ -419,11 +420,11 @@ function ExitIntentPopup({ onOpen }: { onOpen:()=>void }) {
         onClick={() => setShow(false)}>
         <motion.div initial={{ scale:0.9, opacity:0 }} animate={{ scale:1, opacity:1 }} exit={{ scale:0.9, opacity:0 }}
           transition={{ type:"spring", damping:22 }}
-          style={{ background:CREAM, borderRadius:24, padding:"36px 32px", maxWidth:420, width:"100%",
+          style={{ background:CREAM, borderRadius:12, padding:"36px 32px", maxWidth:420, width:"100%",
             border:`1px solid ${LINE}`, boxShadow:"0 32px 80px -16px rgba(0,0,0,.22)", position:"relative" }}
           onClick={e => e.stopPropagation()}>
           <button onClick={() => setShow(false)}
-            style={{ position:"absolute", top:14, right:14, background:CREAM2, border:"none", borderRadius:100,
+            style={{ position:"absolute", top:14, right:14, background:CREAM2, border:"none", borderRadius:6,
               width:30, height:30, cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center" }}>
             <X size={14} style={{ color:INK_SOFT }} />
           </button>
@@ -483,14 +484,14 @@ function LPNav({ onBook }: { onBook:()=>void }) {
           ))}
         </div>
         <div style={{ display:"flex", alignItems:"center", gap:12 }}>
-          {/* Ghost "Free AI Course" link — desktop only */}
+          {/* Ghost "Free AI Course" link */}
           <a href="/ai-course" className="hidden md:inline"
             style={{ fontSize:14, fontWeight:600, color:ACCENT, textDecoration:"none", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif", opacity:.85 }}
             onMouseEnter={e => { e.currentTarget.style.opacity="1"; }}
             onMouseLeave={e => { e.currentTarget.style.opacity=".85"; }}>
             Free AI Course
           </a>
-          <PrimaryBtn onClick={onBook} small>Book a Free Audit</PrimaryBtn>
+          <PrimaryBtn onClick={onBook} small>Book a Call <ArrowRight size={14} /></PrimaryBtn>
           <button className="flex md:hidden" onClick={() => setMenu(m => !m)}
             style={{ border:"none", background:"none", cursor:"pointer", padding:6, color:INK, display:"flex", flexDirection:"column" }}>
             <div style={{ width:20, height:2, background:INK, borderRadius:2, marginBottom:5, transition:"transform .2s", transform:menu?"rotate(45deg) translateY(7px)":"none" }} />
@@ -524,7 +525,7 @@ function LPNav({ onBook }: { onBook:()=>void }) {
               Free AI Course
             </a>
             <div style={{ padding:"14px 24px" }}>
-              <PrimaryBtn onClick={() => { setMenu(false); onBook(); }}>Book a Free Audit</PrimaryBtn>
+              <PrimaryBtn onClick={() => { setMenu(false); onBook(); }}>Book a Call <ArrowRight size={14} /></PrimaryBtn>
             </div>
           </motion.div>
         )}
@@ -542,36 +543,34 @@ function Hero({ onBook }: { onBook:()=>void }) {
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <Fade>
-            {/* Dark pill eyebrow */}
+            {/* Dark slightly-rounded pill eyebrow */}
             <div style={{ display:"inline-flex", alignItems:"center", gap:8,
-              background:INK, borderRadius:100, padding:"7px 16px", marginBottom:24 }}>
-              <span style={{ fontSize:10.5, fontWeight:700, letterSpacing:"0.08em", textTransform:"uppercase", color:CREAM, fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
+              background:INK, borderRadius:6, padding:"7px 14px", marginBottom:24 }}>
+              <span style={{ fontSize:10.5, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:CREAM, fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
             </div>
             <h1 className="anton" style={{ fontSize:"clamp(2.7rem,5.5vw,4rem)", lineHeight:1.05, letterSpacing:"-0.01em", color:INK, marginBottom:10 }}>
               We find the{" "}
-              <span style={{ background:ACCENT, color:"#fff", padding:"0.02em 0.16em 0.08em", borderRadius:7, display:"inline" }}>$30K</span>
+              <span style={{ background:ACCENT, color:"#fff", padding:"0.02em 0.16em 0.08em", borderRadius:5, display:"inline" }}>$30K</span>
               {" "}hiding in your operations.
             </h1>
             <p className="anton" style={{ fontSize:"clamp(1.4rem,2.6vw,1.9rem)", color:INK_SOFT, marginBottom:22, fontStyle:"italic" }}>
               In 90 days or you don't pay.
             </p>
             <p style={{ fontSize:17, lineHeight:1.65, color:INK_SOFT, maxWidth:520, marginBottom:32, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              If you're doing $1M+ in service, logistics, or manufacturing, you're leaking profit from leads that go cold, jobs that slip, and work that should run itself. We find the money. We recover it. We guarantee it.
+              If you're doing $1M+ in service, logistics, or manufacturing, you're leaking profit every week — to leads that go cold, jobs that slip, and work that should run itself. We find that money and recover it in 90 days, guaranteed.
             </p>
             <div style={{ display:"flex", flexWrap:"wrap", gap:12, marginBottom:36 }}>
               <PrimaryBtn onClick={onBook}>
                 Book your free audit <ArrowRight size={17} />
               </PrimaryBtn>
             </div>
+            {/* Microtrust — muted gray avatars */}
             <div style={{ display:"flex", alignItems:"center", gap:14 }}>
               <div style={{ display:"flex" }}>
-                {(["#1466FF","#34d399","#f97316","#a855f7","#ec4899"] as string[]).map((c, i) => (
-                  <div key={c} style={{ width:34, height:34, borderRadius:"50%", background:c,
-                    border:`2.5px solid ${CREAM}`, marginLeft:i===0?0:-10,
-                    display:"flex", alignItems:"center", justifyContent:"center",
-                    fontSize:11.5, fontWeight:700, color:"#fff", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                    {(["RB","JM","TK","AL","SR"] as string[])[i]}
-                  </div>
+                {[0,1,2,3,4].map(i => (
+                  <div key={i} style={{ width:34, height:34, borderRadius:"50%",
+                    background:`rgba(11,13,18,${0.12 + i*0.04})`,
+                    border:`2.5px solid ${CREAM}`, marginLeft:i===0?0:-10 }} />
                 ))}
               </div>
               <div>
@@ -586,7 +585,7 @@ function Hero({ onBook }: { onBook:()=>void }) {
           </Fade>
           <Fade delay={0.12}>
             <div style={{ position:"relative" }}>
-              {/* Dark stamp on video */}
+              {/* Static dark stamp on video */}
               <div style={{ position:"absolute", top:-16, right:-8, zIndex:10 }}>
                 <StampBadge size={94} dark />
               </div>
@@ -639,7 +638,7 @@ function Problem() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {PAINS.map((p, i) => (
             <Fade key={p.title} delay={i*0.07}>
-              <div style={{ background:"rgba(255,255,255,.04)", border:"1px solid rgba(255,255,255,.08)", borderRadius:18, padding:"28px 26px" }}>
+              <div style={{ background:"rgba(255,255,255,.04)", border:"1px solid rgba(255,255,255,.08)", borderRadius:12, padding:"28px 26px" }}>
                 <h3 style={{ fontSize:17, fontWeight:700, color:CREAM, marginBottom:10, fontFamily:"'Hanken Grotesk',sans-serif", letterSpacing:"-0.01em" }}>{p.title}</h3>
                 <p style={{ fontSize:14.5, lineHeight:1.6, color:"rgba(244,239,227,.52)", marginBottom:18, fontFamily:"'Hanken Grotesk',sans-serif" }}>{p.body}</p>
                 <div style={{ display:"flex", alignItems:"center", gap:7 }}>
@@ -675,13 +674,13 @@ function Industries() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {INDUSTRIES.map((ind, i) => (
             <Fade key={ind.title} delay={i*0.08}>
-              <div style={{ background:CREAM, border:`1px solid ${LINE}`, borderRadius:20, padding:"28px 26px", height:"100%" }}>
+              <div style={{ background:CREAM, border:`1px solid ${LINE}`, borderRadius:12, padding:"28px 26px", height:"100%" }}>
                 <h3 style={{ fontSize:18, fontWeight:700, color:INK, marginBottom:10, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{ind.title}</h3>
                 <p style={{ fontSize:14.5, lineHeight:1.65, color:INK_SOFT, marginBottom:18, fontFamily:"'Hanken Grotesk',sans-serif" }}>{ind.body}</p>
                 <div style={{ display:"flex", flexWrap:"wrap", gap:7 }}>
                   {ind.tags.map(tag => (
                     <span key={tag} style={{ fontSize:12, fontWeight:600, color:INK_SOFT, background:CREAM2,
-                      border:`1px solid ${LINE}`, borderRadius:100, padding:"4px 12px", fontFamily:"'Hanken Grotesk',sans-serif" }}>{tag}</span>
+                      border:`1px solid ${LINE}`, borderRadius:4, padding:"4px 10px", fontFamily:"'Hanken Grotesk',sans-serif" }}>{tag}</span>
                   ))}
                 </div>
               </div>
@@ -715,7 +714,7 @@ function FSO() {
             </p>
             <div className="grid grid-cols-2 gap-4">
               {stats.map(s => (
-                <div key={s.label} style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:14, padding:"20px 18px" }}>
+                <div key={s.label} style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:10, padding:"20px 18px" }}>
                   <div className="anton" style={{ fontSize:30, color:ACCENT, lineHeight:1 }}>{s.num}</div>
                   <div style={{ fontSize:13, color:INK_SOFT, marginTop:4, fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.label}</div>
                 </div>
@@ -769,7 +768,7 @@ function Services() {
           {SERVICES.map((s, i) => (
             <Fade key={s.num} delay={i*0.06}>
               <div style={{ display:"flex", gap:22, alignItems:"flex-start",
-                background:CREAM, border:`1px solid ${LINE}`, borderRadius:18, padding:"24px 26px" }}>
+                background:CREAM, border:`1px solid ${LINE}`, borderRadius:12, padding:"24px 26px" }}>
                 <div className="anton" style={{ fontSize:40, color:`${ACCENT}28`, lineHeight:1, flex:"0 0 auto", minWidth:54, marginTop:2 }}>{s.num}</div>
                 <div style={{ flex:1 }}>
                   <h3 style={{ fontSize:17.5, fontWeight:700, color:INK, marginBottom:7, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.title}</h3>
@@ -777,7 +776,7 @@ function Services() {
                   <div style={{ display:"flex", flexWrap:"wrap", gap:7 }}>
                     {s.pills.map(pill => (
                       <span key={pill} style={{ fontSize:12, fontWeight:600, color:ACCENT, background:`${ACCENT}0F`,
-                        border:`1px solid ${ACCENT}28`, borderRadius:100, padding:"4px 12px", fontFamily:"'Hanken Grotesk',sans-serif" }}>{pill}</span>
+                        border:`1px solid ${ACCENT}28`, borderRadius:4, padding:"4px 10px", fontFamily:"'Hanken Grotesk',sans-serif" }}>{pill}</span>
                     ))}
                   </div>
                 </div>
@@ -808,16 +807,14 @@ function Process() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {STEPS.map((s, i) => (
             <Fade key={s.num} delay={i*0.08}>
-              <div style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:20, padding:"26px 22px", height:"100%" }}>
-                {/* Solid blue number badge */}
-                <div style={{ width:38, height:38, borderRadius:10, background:ACCENT,
+              <div style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:12, padding:"26px 22px", height:"100%" }}>
+                <div style={{ width:38, height:38, borderRadius:8, background:ACCENT,
                   display:"flex", alignItems:"center", justifyContent:"center", marginBottom:12 }}>
                   <span className="anton" style={{ color:"#fff", fontSize:14 }}>{s.num}</span>
                 </div>
-                {/* Timeline badge */}
                 <div style={{ display:"inline-flex", alignItems:"center", gap:6,
-                  background:`${ACCENT}0F`, border:`1px solid ${ACCENT}28`, borderRadius:100,
-                  padding:"3px 10px", marginBottom:14 }}>
+                  background:`${ACCENT}0F`, border:`1px solid ${ACCENT}28`, borderRadius:4,
+                  padding:"3px 9px", marginBottom:14 }}>
                   <span style={{ fontSize:11, fontWeight:700, color:ACCENT, letterSpacing:"0.05em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.badge}</span>
                 </div>
                 <h3 style={{ fontSize:17, fontWeight:700, color:INK, marginBottom:8, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.title}</h3>
@@ -840,7 +837,7 @@ function Results() {
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
         <Fade>
           <div style={{ display:"inline-flex", alignItems:"center", gap:8, background:`${ACCENT}22`,
-            border:`1px solid ${ACCENT}40`, borderRadius:100, padding:"7px 14px", marginBottom:20 }}>
+            border:`1px solid ${ACCENT}40`, borderRadius:6, padding:"7px 14px", marginBottom:20 }}>
             <span style={{ width:7, height:7, borderRadius:"50%", background:ACCENT }} />
             <span style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>Proof · BCAT Logistics Group</span>
           </div>
@@ -854,7 +851,7 @@ function Results() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
           {RESULTS_STATS.map((r, i) => (
             <Fade key={r.label} delay={i*0.07}>
-              <div style={{ background:"rgba(255,255,255,.04)", border:"1px solid rgba(255,255,255,.08)", borderRadius:18, padding:"24px 20px" }}>
+              <div style={{ background:"rgba(255,255,255,.04)", border:"1px solid rgba(255,255,255,.08)", borderRadius:12, padding:"24px 20px" }}>
                 <div className="anton" style={{ fontSize:"clamp(1.8rem,3vw,2.4rem)", color:ACCENT, lineHeight:1, marginBottom:8 }}>{r.stat}</div>
                 <p style={{ fontSize:13.5, color:"rgba(244,239,227,.58)", lineHeight:1.5, fontFamily:"'Hanken Grotesk',sans-serif" }}>{r.label}</p>
               </div>
@@ -862,7 +859,7 @@ function Results() {
           ))}
         </div>
         <Fade delay={0.2}>
-          <div style={{ background:"rgba(20,102,255,.1)", border:"1px solid rgba(20,102,255,.22)", borderRadius:20, padding:"28px 28px 24px", maxWidth:720 }}>
+          <div style={{ background:"rgba(20,102,255,.1)", border:"1px solid rgba(20,102,255,.22)", borderRadius:12, padding:"28px 28px 24px", maxWidth:720 }}>
             <p style={{ fontSize:17, lineHeight:1.7, color:"rgba(244,239,227,.88)", fontStyle:"italic", marginBottom:16, fontFamily:"'Hanken Grotesk',sans-serif" }}>
               "The $200K wasn't hiding. It was just invisible. The command center made it visible — and the profit followed."
             </p>
@@ -911,7 +908,7 @@ function Comparison() {
           </div>
         </Fade>
         <Fade delay={0.08}>
-          <div style={{ background:CREAM, border:`1px solid ${LINE}`, borderRadius:20, overflow:"hidden" }}>
+          <div style={{ background:CREAM, border:`1px solid ${LINE}`, borderRadius:12, overflow:"hidden" }}>
             <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr", borderBottom:`1px solid ${LINE}` }}>
               <div style={{ padding:"16px 20px" }} />
               {(["In-house hire","Freelancer","Jobs Done Labs"] as string[]).map((h, i) => (
@@ -961,12 +958,11 @@ function Guarantee() {
                   padding:4, border:"2px solid rgba(255,255,255,.3)" }}>
                   <img src="/ryne.jpg" alt="Ryne Bandolik — Founder" style={{ width:"100%", height:"100%", borderRadius:"50%", objectFit:"cover", objectPosition:"top" }} />
                 </div>
-                {/* Round dark $30K GUARANTEED badge */}
                 <div style={{ position:"absolute", bottom:-10, right:-10 }}>
                   <StampBadge size={72} dark />
                 </div>
               </div>
-              <div style={{ background:"rgba(255,255,255,.12)", backdropFilter:"blur(8px)", border:"1px solid rgba(255,255,255,.2)", borderRadius:18, padding:"20px 22px", maxWidth:340 }}>
+              <div style={{ background:"rgba(255,255,255,.12)", backdropFilter:"blur(8px)", border:"1px solid rgba(255,255,255,.2)", borderRadius:10, padding:"20px 22px", maxWidth:340 }}>
                 <p style={{ color:"rgba(255,255,255,.82)", fontSize:14.5, lineHeight:1.65, marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif", fontStyle:"italic" }}>
                   "I put my own fee on the line because I ran this on my own operation and recovered $200K doing it. If it works there, I'll prove it works for you."
                 </p>
@@ -978,7 +974,7 @@ function Guarantee() {
                   <span style={{ fontSize:12.5, fontWeight:700, color:"rgba(255,255,255,.9)", fontFamily:"'Hanken Grotesk',sans-serif" }}>40+ Companies</span>
                   <span style={{ fontSize:12.5, color:"rgba(255,255,255,.4)", fontFamily:"'Hanken Grotesk',sans-serif" }}>·</span>
                   <span style={{ fontSize:12.5, fontWeight:700, color:"rgba(255,255,255,.9)", fontFamily:"'Hanken Grotesk',sans-serif" }}>$0 Your risk</span>
-                  <div style={{ display:"inline-flex", alignItems:"center", gap:4, background:"rgba(255,255,255,.1)", border:"1px solid rgba(255,255,255,.18)", borderRadius:100, padding:"2px 8px", marginLeft:"auto" }}>
+                  <div style={{ display:"inline-flex", alignItems:"center", gap:4, background:"rgba(255,255,255,.1)", border:"1px solid rgba(255,255,255,.18)", borderRadius:4, padding:"2px 8px", marginLeft:"auto" }}>
                     <span style={{ fontSize:11, fontWeight:700, letterSpacing:"0.06em", color:"rgba(255,255,255,.7)", fontFamily:"'Hanken Grotesk',sans-serif" }}>PERSONALLY BACKED</span>
                   </div>
                 </div>
@@ -1027,7 +1023,7 @@ function Fit() {
         </Fade>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Fade delay={0.05}>
-            <div style={{ background:INK, borderRadius:22, padding:"28px 26px", height:"100%" }}>
+            <div style={{ background:INK, borderRadius:12, padding:"28px 26px", height:"100%" }}>
               <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:22 }}>
                 <div style={{ width:32, height:32, borderRadius:"50%", background:`${GREEN}22`, display:"flex", alignItems:"center", justifyContent:"center" }}>
                   <Check size={16} color={GREEN} strokeWidth={2.5} />
@@ -1045,7 +1041,7 @@ function Fit() {
             </div>
           </Fade>
           <Fade delay={0.1}>
-            <div style={{ background:CREAM2, border:`2px solid ${LINE}`, borderRadius:22, padding:"28px 26px", height:"100%" }}>
+            <div style={{ background:CREAM2, border:`2px solid ${LINE}`, borderRadius:12, padding:"28px 26px", height:"100%" }}>
               <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:22 }}>
                 <div style={{ width:32, height:32, borderRadius:"50%", background:"rgba(239,68,68,.1)", display:"flex", alignItems:"center", justifyContent:"center" }}>
                   <X size={16} color="#ef4444" strokeWidth={2.5} />
@@ -1076,7 +1072,7 @@ function Pilot({ onBook }: { onBook:()=>void }) {
     <section style={{ background:CREAM2, padding:"96px 24px" }}>
       <div style={{ maxWidth:800, margin:"0 auto", textAlign:"center" }}>
         <Fade>
-          <div style={{ background:INK2, border:"1px solid rgba(255,255,255,.08)", borderRadius:28, padding:"48px 36px", position:"relative", overflow:"hidden" }}>
+          <div style={{ background:INK2, border:"1px solid rgba(255,255,255,.08)", borderRadius:16, padding:"48px 36px", position:"relative", overflow:"hidden" }}>
             <SectionLabel onDark>Pilot program · 2026</SectionLabel>
             <H2 onDark style={{ maxWidth:560, margin:"0 auto 14px" }}>
               We're building for 5 service businesses right now.
@@ -1087,17 +1083,14 @@ function Pilot({ onBook }: { onBook:()=>void }) {
             <div style={{ display:"flex", flexWrap:"wrap", gap:10, justifyContent:"center", marginBottom:32 }}>
               {PILOT_SEATS.map(s => (
                 <div key={s.label} style={{ display:"flex", alignItems:"center", gap:8,
-                  background:"rgba(255,255,255,.05)",
-                  border:"1px solid rgba(255,255,255,.1)",
-                  borderRadius:100, padding:"9px 16px" }}>
-                  <span style={{ width:8, height:8, borderRadius:"50%",
-                    background:"rgba(255,255,255,.25)",
-                    flex:"0 0 auto" }} />
+                  background:"rgba(255,255,255,.05)", border:"1px solid rgba(255,255,255,.1)",
+                  borderRadius:6, padding:"9px 16px" }}>
+                  <span style={{ width:8, height:8, borderRadius:"50%", background:"rgba(255,255,255,.25)", flex:"0 0 auto" }} />
                   <span style={{ fontSize:13.5, fontWeight:600, color:"rgba(244,239,227,.7)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.label}</span>
                 </div>
               ))}
             </div>
-            <div style={{ display:"inline-flex", alignItems:"center", gap:7, background:"rgba(255,255,255,.05)", border:"1px solid rgba(255,255,255,.1)", borderRadius:100, padding:"8px 14px", marginBottom:28 }}>
+            <div style={{ display:"inline-flex", alignItems:"center", gap:7, background:"rgba(255,255,255,.05)", border:"1px solid rgba(255,255,255,.1)", borderRadius:6, padding:"8px 14px", marginBottom:28 }}>
               <span style={{ fontSize:12, fontWeight:600, color:"rgba(244,239,227,.42)", letterSpacing:"0.06em", fontFamily:"'Hanken Grotesk',sans-serif" }}>Case studies coming Q4 2026</span>
             </div>
             <div>
@@ -1148,7 +1141,7 @@ function FinalCTA({ onBook }: { onBook:()=>void }) {
     <section style={{ background:CREAM2, padding:"96px 24px" }}>
       <div style={{ maxWidth:1000, margin:"0 auto" }}>
         <Fade>
-          <div style={{ background:INK, borderRadius:28, overflow:"hidden", display:"flex", flexWrap:"wrap" }}>
+          <div style={{ background:INK, borderRadius:16, overflow:"hidden", display:"flex", flexWrap:"wrap" }}>
             <div className="hidden md:block" style={{ flex:"0 0 280px", position:"relative", minHeight:360 }}>
               <img src="/ryne.jpg" alt="Ryne Bandolik" style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", objectPosition:"top" }} />
               <div style={{ position:"absolute", inset:0, background:"linear-gradient(to right,transparent 50%,rgba(11,13,18,.92))" }} />
@@ -1205,7 +1198,7 @@ function Footer() {
             <div style={{ display:"flex", gap:10, marginTop:18 }}>
               {([[Linkedin,"#"],[Youtube,"#"],[Twitter,"#"]] as [typeof Linkedin,string][]).map(([Icon,href],i) => (
                 <a key={i} href={href} target="_blank" rel="noopener noreferrer"
-                  style={{ width:34, height:34, borderRadius:10, background:"rgba(255,255,255,.07)", display:"flex", alignItems:"center", justifyContent:"center", color:"rgba(244,239,227,.5)", textDecoration:"none" }}
+                  style={{ width:34, height:34, borderRadius:6, background:"rgba(255,255,255,.07)", display:"flex", alignItems:"center", justifyContent:"center", color:"rgba(244,239,227,.5)", textDecoration:"none" }}
                   onMouseEnter={e => { e.currentTarget.style.background="rgba(255,255,255,.12)"; }}
                   onMouseLeave={e => { e.currentTarget.style.background="rgba(255,255,255,.07)"; }}>
                   <Icon size={15} />
