@@ -160,6 +160,140 @@ function WorkflowCard() {
 }
 
 /* ─────────────────────────────────────────────── */
+/*  Profit Recovery Diagram                        */
+/* ─────────────────────────────────────────────── */
+function ProfitDiagram() {
+  const GREEN = "#34d399";
+  const ORANGE = "#f97316";
+
+  const leaks = [
+    "Missed lead follow-up",
+    "Manual data entry",
+    "Slow client onboarding",
+    "Disconnected tools",
+    "No sales visibility",
+    "Manual reporting",
+    "Slow response times",
+    "Inconsistent follow-up",
+  ];
+
+  const outcomes = [
+    { amount: "$8,400+", label: "More closed deals",    sub: "Recovered from missed leads"   },
+    { amount: "$9,200+", label: "Zero manual hours",    sub: "Ops overhead automated away"   },
+    { amount: "$7,800+", label: "Faster onboarding",    sub: "3 days → 1 click"              },
+    { amount: "$6,600+", label: "Tool integration",     sub: "Full stack connected"          },
+  ];
+
+  const engineSteps = [
+    { num: "01", label: "Audit",     sub: "Identify every profit leak"         },
+    { num: "02", label: "Blueprint", sub: "Design recovery systems"            },
+    { num: "03", label: "Build",     sub: "Implement in 30 days"               },
+    { num: "04", label: "Recover",   sub: "$30K+ in 90 days — guaranteed"      },
+  ];
+
+  return (
+    <div className="w-full rounded-xl overflow-hidden select-none" style={{ background: "#08080A", border: `1px solid ${BORDER}` }}>
+
+      {/* ── top headline bar ── */}
+      <div className="px-6 pt-6 pb-5" style={{ borderBottom: `1px solid ${BORDER}` }}>
+        <p className="font-black sg leading-tight tracking-tight mb-1.5" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)", color: TEXT }}>
+          PROFIT LEAKS <span style={{ color: `${MUTED}60` }}>→</span> FIXED.{" "}
+          <span style={{ color: ACCENT }}>GUARANTEED BY JOBSDONE.</span>
+        </p>
+        <p className="text-[12px]" style={{ color: MUTED }}>Every dollar you're losing has a system that recovers it.</p>
+      </div>
+
+      {/* ── three-column diagram ── */}
+      <div className="grid grid-cols-[1fr_auto_1fr] md:grid-cols-[200px_1fr_200px] gap-0" style={{ minHeight: 260 }}>
+
+        {/* LEFT — leak sources */}
+        <div className="flex flex-col gap-0 px-4 py-4" style={{ borderRight: `1px solid ${BORDER}` }}>
+          <p className="text-[10px] font-bold uppercase tracking-widest mb-3 sg" style={{ color: MUTED }}>Where You're Losing Money</p>
+          <div className="flex flex-col gap-2">
+            {leaks.map(l => (
+              <div key={l} className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: ORANGE, opacity: 0.75 }} />
+                <span className="text-[11px] leading-snug" style={{ color: `${TEXT}70` }}>{l}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CENTER — recovery engine */}
+        <div className="flex flex-col items-center justify-center px-5 py-5 gap-4">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: ACCENT }} />
+            <span className="text-[10px] font-bold uppercase tracking-widest sg" style={{ color: MUTED }}>Recovery Engine</span>
+            <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full" style={{ color: GREEN, background: `${GREEN}10`, border: `1px solid ${GREEN}20` }}>Active</span>
+          </div>
+          <div className="w-full flex flex-col gap-1.5">
+            {engineSteps.map((s, i) => (
+              <div key={s.num}>
+                <div className="flex items-center gap-3 px-3.5 py-2.5 rounded-lg" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+                  <span className="text-[11px] font-bold sg flex-shrink-0" style={{ color: ACCENT }}>{s.num}</span>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-[12px] leading-none mb-0.5 sg truncate" style={{ color: TEXT }}>{s.label}</p>
+                    <p className="text-[10px] truncate" style={{ color: MUTED }}>{s.sub}</p>
+                  </div>
+                  <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: i === 3 ? GREEN : `${ACCENT}60` }} />
+                </div>
+                {i < engineSteps.length - 1 && (
+                  <div className="flex justify-center py-0.5">
+                    <div className="w-px h-2.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          {/* arrow lines — decorative dashes on sides */}
+          <div className="flex items-center gap-2 mt-1">
+            <div className="h-px w-8" style={{ background: `linear-gradient(to right, transparent, ${ACCENT}40)` }} />
+            <span className="text-[10px] font-semibold sg" style={{ color: `${ACCENT}60` }}>90 DAYS</span>
+            <div className="h-px w-8" style={{ background: `linear-gradient(to left, transparent, ${ACCENT}40)` }} />
+          </div>
+        </div>
+
+        {/* RIGHT — outcomes */}
+        <div className="flex flex-col gap-0 px-4 py-4" style={{ borderLeft: `1px solid ${BORDER}` }}>
+          <p className="text-[10px] font-bold uppercase tracking-widest mb-3 sg" style={{ color: MUTED }}>What You Recover</p>
+          <div className="flex flex-col gap-3">
+            {outcomes.map(o => (
+              <div key={o.label} className="flex flex-col gap-0.5">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[13px] font-bold sg" style={{ color: GREEN }}>{o.amount}</span>
+                </div>
+                <p className="text-[11px] font-semibold leading-none" style={{ color: TEXT }}>{o.label}</p>
+                <p className="text-[10px]" style={{ color: `${MUTED}80` }}>{o.sub}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+      {/* ── bottom bar ── */}
+      <div className="flex flex-col sm:flex-row items-center justify-between px-6 py-3 gap-2" style={{ borderTop: `1px solid ${BORDER}`, background: `${ACCENT}05` }}>
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: `${ACCENT}15`, border: `1px solid ${ACCENT}25` }}>
+            <Bot className="w-3.5 h-3.5" style={{ color: ACCENT }} />
+          </div>
+          <p className="text-[11px] font-medium sg" style={{ color: `${TEXT}70` }}>
+            CUSTOM AUTOMATION SYSTEMS BUILT IN 90 DAYS SO YOUR BUSINESS RECOVERS{" "}
+            <span style={{ color: ACCENT }}>$30K+</span>
+          </p>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <span className="font-bold text-[13px] sg tracking-tight" style={{ color: TEXT }}>JOBS</span>
+          <span className="font-bold text-[13px] sg tracking-tight" style={{ color: ACCENT }}>DONE</span>
+          <span className="text-[9px] font-medium tracking-widest uppercase" style={{ color: `${TEXT}30` }}>Labs</span>
+        </div>
+      </div>
+
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────── */
 /*  Video Player                                   */
 /* ─────────────────────────────────────────────── */
 function VideoPlayer({ label }: { label?: string }) {
@@ -829,12 +963,8 @@ export default function Home() {
               <H2>Four services that recover lost profit.</H2>
             </Fade>
             <Fade delay={0.08}>
-              <div className="mt-10 mb-8 rounded-xl overflow-hidden" style={{ border: `1px solid ${BORDER}` }}>
-                <img
-                  src={`${import.meta.env.BASE_URL}hero-diagram.png`}
-                  alt="Inbound to Impact — Automated by JobsDone Labs"
-                  className="w-full h-auto block"
-                />
+              <div className="mt-10 mb-8">
+                <ProfitDiagram />
               </div>
             </Fade>
             <div className="flex flex-col gap-3">
