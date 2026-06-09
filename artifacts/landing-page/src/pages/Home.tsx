@@ -539,33 +539,33 @@ function LPNav({ onBook }: { onBook:()=>void }) {
 /* ───────────────────────────────────── */
 function Hero({ onBook }: { onBook:()=>void }) {
   return (
-    <section style={{ background:CREAM, padding:"80px 24px 100px" }}>
+    <section style={{ background:CREAM, padding:"80px 24px 72px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <Fade>
-            {/* Dark slightly-rounded pill eyebrow */}
+        {/* Text block — centered */}
+        <Fade>
+          <div style={{ textAlign:"center", maxWidth:800, margin:"0 auto 52px" }}>
             <div style={{ display:"inline-flex", alignItems:"center", gap:8,
               background:INK, borderRadius:6, padding:"7px 14px", marginBottom:24 }}>
               <span style={{ fontSize:10.5, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:CREAM, fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
             </div>
-            <h1 className="anton" style={{ fontSize:"clamp(2.7rem,5.5vw,4rem)", lineHeight:1.05, letterSpacing:"-0.01em", color:INK, marginBottom:10 }}>
+            <h1 className="anton" style={{ fontSize:"clamp(2.9rem,5.8vw,4.4rem)", lineHeight:1.04, letterSpacing:"-0.01em", color:INK, marginBottom:10 }}>
               We find the{" "}
               <span style={{ background:ACCENT, color:"#fff", padding:"0.02em 0.16em 0.08em", borderRadius:5, display:"inline" }}>$30K</span>
               {" "}hiding in your operations.
             </h1>
-            <p className="anton" style={{ fontSize:"clamp(1.4rem,2.6vw,1.9rem)", color:INK_SOFT, marginBottom:22, fontStyle:"italic" }}>
+            <p className="anton" style={{ fontSize:"clamp(1.4rem,2.4vw,1.8rem)", color:INK_SOFT, marginBottom:24, fontStyle:"italic" }}>
               In 90 days or you don't pay.
             </p>
-            <p style={{ fontSize:17, lineHeight:1.65, color:INK_SOFT, maxWidth:520, marginBottom:32, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+            <p style={{ fontSize:17, lineHeight:1.65, color:INK_SOFT, maxWidth:600, margin:"0 auto 32px", fontFamily:"'Hanken Grotesk',sans-serif" }}>
               If you're doing $1M+ in service, logistics, or manufacturing, you're leaking profit every week — to leads that go cold, jobs that slip, and work that should run itself. We find that money and recover it in 90 days, guaranteed.
             </p>
-            <div style={{ display:"flex", flexWrap:"wrap", gap:12, marginBottom:36 }}>
+            <div style={{ display:"flex", flexWrap:"wrap", gap:12, marginBottom:28, justifyContent:"center" }}>
               <PrimaryBtn onClick={onBook}>
                 Book your free audit <ArrowRight size={17} />
               </PrimaryBtn>
             </div>
             {/* Microtrust — muted gray avatars */}
-            <div style={{ display:"flex", alignItems:"center", gap:14 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:14, justifyContent:"center" }}>
               <div style={{ display:"flex" }}>
                 {[0,1,2,3,4].map(i => (
                   <div key={i} style={{ width:34, height:34, borderRadius:"50%",
@@ -582,17 +582,17 @@ function Hero({ onBook }: { onBook:()=>void }) {
                 </p>
               </div>
             </div>
-          </Fade>
-          <Fade delay={0.12}>
-            <div style={{ position:"relative" }}>
-              {/* Static dark stamp on video */}
-              <div style={{ position:"absolute", top:-16, right:-8, zIndex:10 }}>
-                <StampBadge size={94} dark />
-              </div>
-              <VSL />
+          </div>
+        </Fade>
+        {/* Full-width VSL */}
+        <Fade delay={0.1}>
+          <div style={{ position:"relative", maxWidth:920, margin:"0 auto" }}>
+            <div style={{ position:"absolute", top:-16, right:-8, zIndex:10 }}>
+              <StampBadge size={100} dark />
             </div>
-          </Fade>
-        </div>
+            <VSL />
+          </div>
+        </Fade>
       </div>
     </section>
   );
