@@ -362,7 +362,7 @@ function PrimaryBtn({ children, onClick, small=false, light=false }: { children:
       style={{ display:"inline-flex", alignItems:"center", gap:8,
         background:light?"#fff":ACCENT, color:light?ACCENT_DEEP:"#fff",
         fontSize:small?14:15.5, fontWeight:700, padding:small?"10px 18px":"14px 26px",
-        borderRadius:8, border:"none", cursor:"pointer", letterSpacing:"-0.01em",
+        borderRadius:50, border:"none", cursor:"pointer", letterSpacing:"-0.01em",
         boxShadow:light?"0 8px 28px -8px rgba(0,0,0,.28)":`0 4px 16px -4px ${ACCENT}66`,
         fontFamily:"'Hanken Grotesk',sans-serif",
         transition:"transform .15s,box-shadow .15s" }}
@@ -553,12 +553,12 @@ function Hero({ onBook }: { onBook:()=>void }) {
                   textTransform:"uppercase", color:CREAM,
                   fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
               </div>
-              <h1 className="anton" style={{ fontSize:"clamp(2.6rem,4.8vw,3.6rem)", lineHeight:1.05,
+              <h1 className="anton" style={{ fontSize:"clamp(1.8rem,3.4vw,2.7rem)", lineHeight:1.08,
                 color:INK, marginBottom:8 }}>
                 We find the{" "}
                 <span style={{ background:ACCENT, color:"#fff",
                   padding:"0.02em 0.14em 0.07em", borderRadius:4, display:"inline" }}>$30K</span>
-                {" "}hiding in your operations.
+                {" "}hiding in<br />your operations.
               </h1>
               <p className="anton" style={{ fontSize:"clamp(1.25rem,2.2vw,1.6rem)", color:INK_SOFT,
                 marginBottom:20, fontStyle:"italic" }}>
@@ -597,8 +597,8 @@ function Hero({ onBook }: { onBook:()=>void }) {
           {/* Right: video */}
           <Fade delay={0.12}>
             <div style={{ position:"relative" }}>
-              <div style={{ position:"absolute", top:-18, right:-14, zIndex:10 }}>
-                <StampBadge size={96} dark />
+              <div style={{ position:"absolute", top:-22, right:-22, zIndex:10, transform:"rotate(14deg)" }}>
+                <StampBadge size={114} dark />
               </div>
               <VSL />
             </div>
