@@ -958,18 +958,19 @@ function Guarantee() {
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <Fade>
-            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-start", gap:22 }}>
-              <div style={{ position:"relative", display:"inline-block" }}>
-                <div style={{ width:160, height:160, borderRadius:"50%",
+            <div style={{ display:"flex", flexDirection:"column", alignItems:"center" }}>
+              {/* Photo — centered, overlaps card below */}
+              <div style={{ position:"relative", display:"inline-block", zIndex:2, marginBottom:-56 }}>
+                <div style={{ width:140, height:140, borderRadius:"50%",
                   background:"linear-gradient(135deg,rgba(255,255,255,.25),rgba(255,255,255,.08))",
                   padding:4, border:"2px solid rgba(255,255,255,.3)" }}>
                   <img src="/ryne.jpg" alt="Ryne Bandolik — Founder" style={{ width:"100%", height:"100%", borderRadius:"50%", objectFit:"cover", objectPosition:"top" }} />
                 </div>
-                <div style={{ position:"absolute", bottom:-10, right:-10 }}>
-                  <StampBadge size={72} dark />
+                <div style={{ position:"absolute", bottom:-8, right:-8 }}>
+                  <StampBadge size={64} dark />
                 </div>
               </div>
-              <div style={{ background:"rgba(255,255,255,.12)", backdropFilter:"blur(8px)", border:"1px solid rgba(255,255,255,.2)", borderRadius:10, padding:"20px 22px", maxWidth:340 }}>
+              <div style={{ background:"rgba(255,255,255,.12)", backdropFilter:"blur(8px)", border:"1px solid rgba(255,255,255,.2)", borderRadius:10, padding:"72px 22px 20px", maxWidth:360, width:"100%", textAlign:"center" }}>
                 <p style={{ color:"rgba(255,255,255,.82)", fontSize:14.5, lineHeight:1.65, marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif", fontStyle:"italic" }}>
                   "I put my own fee on the line because I ran this on my own operation and recovered $200K doing it. If it works there, I'll prove it works for you."
                 </p>
