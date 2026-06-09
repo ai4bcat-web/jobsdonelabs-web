@@ -65,6 +65,7 @@ function StampBadge({ size = 104, dark = false }: { size?: number; dark?: boolea
   const r = 40, cx = 50, cy = 50;
   const fill = dark ? INK : ACCENT;
   const uid = dark ? "stamp-d" : "stamp-l";
+  const centerTextColor = dark ? ACCENT : "white";
   return (
     <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true">
       <defs>
@@ -75,8 +76,8 @@ function StampBadge({ size = 104, dark = false }: { size?: number; dark?: boolea
       <text fill="white" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:8.5, letterSpacing:"0.13em" }}>
         <textPath href={`#${uid}`} startOffset="50%" textAnchor="middle">$30K GUARANTEED · 90 DAYS · $30K GUARANTEED · 90 DAYS ·</textPath>
       </text>
-      <text x={cx} y={cy-3} textAnchor="middle" fill="white" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:17, letterSpacing:"-0.01em" }}>$30K</text>
-      <text x={cx} y={cy+11} textAnchor="middle" fill="rgba(255,255,255,.82)" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:8, letterSpacing:"0.08em" }}>GUAR.</text>
+      <text x={cx} y={cy-3} textAnchor="middle" fill={centerTextColor} style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:17, letterSpacing:"-0.01em" }}>$30K</text>
+      <text x={cx} y={cy+11} textAnchor="middle" fill="rgba(255,255,255,.82)" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:8, letterSpacing:"0.08em" }}>GUARANTEED</text>
     </svg>
   );
 }
@@ -539,60 +540,70 @@ function LPNav({ onBook }: { onBook:()=>void }) {
 /* ───────────────────────────────────── */
 function Hero({ onBook }: { onBook:()=>void }) {
   return (
-    <section style={{ background:CREAM, padding:"80px 24px 72px" }}>
+    <section style={{ background:CREAM, padding:"72px 24px 88px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
-        {/* Text block — centered */}
-        <Fade>
-          <div style={{ textAlign:"center", maxWidth:800, margin:"0 auto 52px" }}>
-            <div style={{ display:"inline-flex", alignItems:"center", gap:8,
-              background:INK, borderRadius:6, padding:"7px 14px", marginBottom:24 }}>
-              <span style={{ fontSize:10.5, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:CREAM, fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
-            </div>
-            <h1 className="anton" style={{ fontSize:"clamp(2.9rem,5.8vw,4.4rem)", lineHeight:1.04, letterSpacing:"-0.01em", color:INK, marginBottom:10 }}>
-              We find the{" "}
-              <span style={{ background:ACCENT, color:"#fff", padding:"0.02em 0.16em 0.08em", borderRadius:5, display:"inline" }}>$30K</span>
-              {" "}hiding in your operations.
-            </h1>
-            <p className="anton" style={{ fontSize:"clamp(1.4rem,2.4vw,1.8rem)", color:INK_SOFT, marginBottom:24, fontStyle:"italic" }}>
-              In 90 days or you don't pay.
-            </p>
-            <p style={{ fontSize:17, lineHeight:1.65, color:INK_SOFT, maxWidth:600, margin:"0 auto 32px", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              If you're doing $1M+ in service, logistics, or manufacturing, you're leaking profit every week — to leads that go cold, jobs that slip, and work that should run itself. We find that money and recover it in 90 days, guaranteed.
-            </p>
-            <div style={{ display:"flex", flexWrap:"wrap", gap:12, marginBottom:28, justifyContent:"center" }}>
-              <PrimaryBtn onClick={onBook}>
-                Book your free audit <ArrowRight size={17} />
-              </PrimaryBtn>
-            </div>
-            {/* Microtrust — muted gray avatars */}
-            <div style={{ display:"flex", alignItems:"center", gap:14, justifyContent:"center" }}>
-              <div style={{ display:"flex" }}>
-                {[0,1,2,3,4].map(i => (
-                  <div key={i} style={{ width:34, height:34, borderRadius:"50%",
-                    background:`rgba(11,13,18,${0.12 + i*0.04})`,
-                    border:`2.5px solid ${CREAM}`, marginLeft:i===0?0:-10 }} />
-                ))}
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1.18fr", gap:"56px", alignItems:"center" }}
+          className="grid-hero">
+          {/* Left: text */}
+          <Fade>
+            <div>
+              <div style={{ display:"inline-flex", alignItems:"center", gap:7,
+                background:INK, borderRadius:6, padding:"6px 13px", marginBottom:20 }}>
+                <span style={{ fontSize:10, fontWeight:700, letterSpacing:"0.12em",
+                  textTransform:"uppercase", color:CREAM,
+                  fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
               </div>
-              <div>
-                <div style={{ display:"flex", gap:2, marginBottom:3 }}>
-                  {[1,2,3,4,5].map(s => <Star key={s} size={13} fill="#f59e0b" stroke="none" />)}
+              <h1 className="anton" style={{ fontSize:"clamp(2.6rem,4.8vw,3.6rem)", lineHeight:1.05,
+                color:INK, marginBottom:8 }}>
+                We find the{" "}
+                <span style={{ background:ACCENT, color:"#fff",
+                  padding:"0.02em 0.14em 0.07em", borderRadius:4, display:"inline" }}>$30K</span>
+                {" "}hiding in your operations.
+              </h1>
+              <p className="anton" style={{ fontSize:"clamp(1.25rem,2.2vw,1.6rem)", color:INK_SOFT,
+                marginBottom:20, fontStyle:"italic" }}>
+                In 90 days or you don't pay.
+              </p>
+              <p style={{ fontSize:16, lineHeight:1.68, color:INK_SOFT, maxWidth:460,
+                marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+                If you're doing $1M+ in service, logistics, or manufacturing, you're leaking profit every week — to leads that go cold, jobs that slip, and work that should run itself. We find that money and recover it in 90 days, guaranteed.
+              </p>
+              <div style={{ display:"flex", flexWrap:"wrap", gap:12, marginBottom:28 }}>
+                <PrimaryBtn onClick={onBook}>
+                  Book your free audit <ArrowRight size={16} />
+                </PrimaryBtn>
+              </div>
+              {/* Microtrust */}
+              <div style={{ display:"flex", alignItems:"center", gap:12 }}>
+                <div style={{ display:"flex" }}>
+                  {[0,1,2,3,4].map(i => (
+                    <div key={i} style={{ width:32, height:32, borderRadius:"50%",
+                      background:`rgba(11,13,18,${0.13 + i*0.04})`,
+                      border:`2.5px solid ${CREAM}`, marginLeft:i===0?0:-9 }} />
+                  ))}
                 </div>
-                <p style={{ fontSize:13, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif", margin:0 }}>
-                  <strong style={{ color:INK }}>40+ operators</strong> automated
-                </p>
+                <div>
+                  <div style={{ display:"flex", gap:2, marginBottom:2 }}>
+                    {[1,2,3,4,5].map(s => <Star key={s} size={12} fill="#f59e0b" stroke="none" />)}
+                  </div>
+                  <p style={{ fontSize:12.5, color:INK_SOFT,
+                    fontFamily:"'Hanken Grotesk',sans-serif", margin:0 }}>
+                    <strong style={{ color:INK }}>40+ operators</strong> automated
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </Fade>
-        {/* Full-width VSL */}
-        <Fade delay={0.1}>
-          <div style={{ position:"relative", maxWidth:920, margin:"0 auto" }}>
-            <div style={{ position:"absolute", top:-16, right:-8, zIndex:10 }}>
-              <StampBadge size={100} dark />
+          </Fade>
+          {/* Right: video */}
+          <Fade delay={0.12}>
+            <div style={{ position:"relative" }}>
+              <div style={{ position:"absolute", top:-18, right:-14, zIndex:10 }}>
+                <StampBadge size={96} dark />
+              </div>
+              <VSL />
             </div>
-            <VSL />
-          </div>
-        </Fade>
+          </Fade>
+        </div>
       </div>
     </section>
   );
