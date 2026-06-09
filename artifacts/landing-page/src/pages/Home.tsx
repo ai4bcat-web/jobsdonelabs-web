@@ -178,8 +178,8 @@ function VideoPlayer({ label }: { label?: string }) {
   return (
     <div className="w-full">
       <div
-        className="relative w-full aspect-video rounded-xl overflow-hidden cursor-pointer"
-        style={{ background: "#0a0a0c", border: `1px solid ${BORDER}` }}
+        className="relative w-full aspect-video rounded-2xl overflow-hidden cursor-pointer"
+        style={{ background: "#0a0a0c" }}
         onClick={() => !playing && setPlaying(true)}
       >
         {playing ? (
@@ -321,19 +321,20 @@ function Label({ children }: { children: React.ReactNode }) {
 
 function H2({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-3xl md:text-[2.6rem] font-bold leading-[1.1] sg" style={{ color: TEXT, letterSpacing: "-0.02em" }}>
+    <h2 className="font-bold leading-[1.07] sg" style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)", color: TEXT, letterSpacing: "-0.025em" }}>
       {children}
     </h2>
   );
 }
 
-function PrimaryBtn({ href, children, size = "md", onClick, className = "" }: { href?: string; children: React.ReactNode; size?: "sm" | "md" | "lg"; onClick?: () => void; className?: string }) {
-  const pad = size === "lg" ? "px-8 h-12 text-[15px]" : size === "sm" ? "px-4 h-8 text-[13px]" : "px-6 h-10 text-[14px]";
+function PrimaryBtn({ href, children, size = "md", onClick, className = "" }: { href?: string; children: React.ReactNode; size?: "sm" | "md" | "lg" | "xl"; onClick?: () => void; className?: string }) {
+  const pad = size === "xl" ? "px-10 text-[18px] font-bold rounded-2xl" : size === "lg" ? "px-8 h-12 text-[15px]" : size === "sm" ? "px-4 h-8 text-[13px]" : "px-6 h-10 text-[14px]";
+  const height = size === "xl" ? { height: "62px" } : {};
   const btn = (
     <button
       onClick={onClick}
-      className={`inline-flex items-center gap-2 font-semibold rounded-lg transition-colors duration-150 ${pad} ${className}`}
-      style={{ background: ACCENT, color: "#fff" }}
+      className={`inline-flex items-center gap-2 font-semibold rounded-lg transition-opacity duration-150 hover:opacity-90 ${pad} ${className}`}
+      style={{ background: ACCENT, color: "#fff", ...height }}
     >
       {children}
     </button>
@@ -591,15 +592,15 @@ export default function Home() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-bold leading-[1.08] mb-5 sg"
-              style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", color: TEXT, letterSpacing: "-0.025em" }}>
+            <h1 className="font-bold leading-[1.05] mb-6 sg"
+              style={{ fontSize: "clamp(2.8rem, 7vw, 5rem)", color: TEXT, letterSpacing: "-0.03em" }}>
               We guarantee you generate{" "}
               <span style={{ color: ACCENT }}>$30,000 in net profit</span>{" "}
               within 90 days.
             </h1>
 
             {/* Sub-copy */}
-            <p className="text-[16px] leading-[1.65] mb-8 max-w-[540px] mx-auto" style={{ color: MUTED }}>
+            <p className="text-[18px] leading-[1.6] mb-10 max-w-[600px] mx-auto" style={{ color: MUTED }}>
               By eliminating the lead leaks, slow follow-up, and manual bottlenecks currently costing you deals — or we keep working until we do.
             </p>
           </motion.div>
@@ -619,34 +620,47 @@ export default function Home() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.22 }}
-            className="flex flex-wrap items-center justify-center gap-3 mb-10"
+            className="flex flex-col items-center gap-4 mb-12"
           >
-            <PrimaryBtn size="lg" onClick={() => setShowBooking(true)}>
-              Book a Free Audit Call <ArrowRight className="w-4 h-4" />
+            <PrimaryBtn size="xl" className="w-full max-w-[440px] justify-center" onClick={() => setShowBooking(true)}>
+              Book a Free Audit Call <ArrowRight className="w-5 h-5" />
             </PrimaryBtn>
             <a
               href="https://replit.com/@rynestone/Jobsdone-Labs-Course-AI-Platform"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[15px] font-semibold px-5 py-2.5 rounded-xl transition-colors duration-150"
-              style={{ color: ACCENT, border: `1px solid ${ACCENT}40`, background: `${ACCENT}0d` }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = `${ACCENT}1a`; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = `${ACCENT}0d`; }}
+              className="inline-flex items-center gap-2 text-[15px] font-semibold transition-colors duration-150"
+              style={{ color: MUTED }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = TEXT; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = MUTED; }}
             >
               Free AI Course <ArrowRight className="w-4 h-4" />
             </a>
           </motion.div>
 
-          {/* Laurel stats + Workflow Card — 2 columns */}
+          {/* Logo strip — right under CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.32 }}
-            className="max-w-5xl mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16 text-left"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.38 }}
+            className="max-w-3xl mx-auto"
           >
+            <p className="text-center text-[11px] uppercase tracking-[0.14em] font-semibold mb-5 sg" style={{ color: `${MUTED}80` }}>
+              Trusted by 7-figure founders &amp; business owners
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3">
+              {trustLogos.map((l) => (
+                <span key={l} className="font-bold text-[13px] tracking-wide sg" style={{ color: `${TEXT}28` }}>{l}</span>
+              ))}
+            </div>
+          </motion.div>
+        </section>
+
+        {/* ── STAT CARDS + WORKFLOW ── */}
+        <section className="py-16" style={{ background: BG2 }}>
+          <div className="max-w-5xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 text-left">
             {/* Left: headline + stat cards */}
             <div className="flex-1 flex flex-col gap-6">
-              {/* Stacked headline */}
               <div>
                 <p className="font-black sg leading-[1.05] tracking-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: TEXT }}>
                   AUTOMATE.<br />
@@ -658,14 +672,12 @@ export default function Home() {
                   Our live automation system works 24/7 to capture leads, nurture prospects, and close more deals on autopilot.
                 </p>
               </div>
-
-              {/* 2×2 stat cards */}
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { Icon: Users,        value: "50+",   line1: "BUSINESSES",  line2: "AUTOMATED" },
-                  { Icon: DollarSign,   value: "$30K+", line1: "AVG. REVENUE", line2: "GENERATED" },
-                  { Icon: CalendarDays, value: "90 DAYS", line1: "OR WE KEEP", line2: "WORKING" },
-                  { Icon: Star,         value: "5-STAR", line1: "CLIENT",      line2: "REVIEWS" },
+                  { Icon: Users,        value: "50+",     line1: "BUSINESSES",   line2: "AUTOMATED" },
+                  { Icon: DollarSign,   value: "$30K+",   line1: "AVG. REVENUE", line2: "GENERATED" },
+                  { Icon: CalendarDays, value: "90 DAYS", line1: "OR WE KEEP",   line2: "WORKING" },
+                  { Icon: Star,         value: "5-STAR",  line1: "CLIENT",       line2: "REVIEWS" },
                 ].map(({ Icon, value, line1, line2 }) => (
                   <div key={value} className="flex items-center gap-3 rounded-xl px-4 py-5"
                     style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
@@ -682,24 +694,9 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
             {/* Right: WorkflowCard */}
             <div className="w-full lg:w-auto lg:flex-shrink-0 lg:max-w-[420px]">
               <WorkflowCard />
-            </div>
-          </motion.div>
-        </section>
-
-        {/* ── LOGO STRIP ── */}
-        <section className="py-7 overflow-hidden" style={{ borderTop: `1px solid ${BORDER}`, borderBottom: `1px solid ${BORDER}`, background: BG2 }}>
-          <p className="text-center text-[11px] uppercase tracking-[0.13em] font-semibold mb-5 sg" style={{ color: ACCENT }}>
-            Trusted by 7-figure agency founders &amp; business owners
-          </p>
-          <div className="relative">
-            <div className="flex animate-[marquee_30s_linear_infinite] gap-16 w-max">
-              {[...trustLogos,...trustLogos].map((l,i) => (
-                <span key={i} className="font-semibold text-[13px] tracking-wide whitespace-nowrap sg" style={{ color: `${TEXT}18` }}>{l}</span>
-              ))}
             </div>
           </div>
         </section>
