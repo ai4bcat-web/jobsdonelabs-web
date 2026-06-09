@@ -75,97 +75,86 @@ function JobsDoneLogo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
 }
 
 /* ─────────────────────────────────────────────── */
-/*  Workflow Card  (dark, no emojis)               */
+/*  Profit Recovery Tracker Card                   */
 /* ─────────────────────────────────────────────── */
 function WorkflowCard() {
-  const row = (icon: React.ReactNode, label: string, sub: string, badge: React.ReactNode) => (
-    <div className="flex items-center justify-between px-3.5 py-2.5 rounded-lg" style={{ background: BG, border: `1px solid ${BORDER}` }}>
-      <div className="flex items-center gap-2.5">
-        <div className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0" style={{ background: `${ACCENT}12`, border: `1px solid ${ACCENT}20` }}>
-          {icon}
-        </div>
-        <div>
-          <p className="font-semibold text-[13px] leading-none mb-0.5 sg" style={{ color: TEXT }}>{label}</p>
-          <p className="text-[11px]" style={{ color: MUTED }}>{sub}</p>
-        </div>
-      </div>
-      {badge}
-    </div>
-  );
+  const GREEN = "#34d399";
+  const GOAL = 30000;
 
-  const pill = (label: string, variant: "blue" | "gray" | "green") => {
-    const styles = {
-      blue: { color: ACCENT, bg: `${ACCENT}12`, border: `${ACCENT}25` },
-      gray: { color: MUTED, bg: `${BORDER}80`, border: BORDER },
-      green: { color: "#34d399", bg: "#34d39912", border: "#34d39925" },
-    }[variant];
-    return (
-      <span className="text-[11px] font-medium px-2 py-0.5 rounded" style={{ color: styles.color, background: styles.bg, border: `1px solid ${styles.border}` }}>
-        {label}
-      </span>
-    );
-  };
+  const leaks = [
+    { Icon: Users,       label: "Missed Lead Follow-up",  sub: "Automated re-engagement",      amount: 8400,  done: true  },
+    { Icon: Wrench,      label: "Manual Ops Overhead",    sub: "15 hrs/wk → automated",        amount: 9200,  done: true  },
+    { Icon: Rocket,      label: "Slow Client Onboarding", sub: "3 days → 1 click",             amount: 7800,  done: true  },
+    { Icon: Zap,         label: "Disconnected Tools",     sub: "Full stack integration live",  amount: 6600,  done: false },
+  ];
+
+  const recovered = leaks.filter(l => l.done).reduce((s, l) => s + l.amount, 0);
+  const pending   = leaks.find(l => !l.done)?.amount ?? 0;
+  const total     = recovered + pending;
+  const pct       = Math.min(100, Math.round((total / GOAL) * 100));
 
   return (
     <div className="w-full rounded-xl overflow-hidden" style={{ background: SURFACE, border: `1px solid ${BORDER}` }}>
+
+      {/* ── header ── */}
       <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: `1px solid ${BORDER}` }}>
         <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: ACCENT }} />
-          <span className="text-[11px] font-semibold uppercase tracking-wider sg" style={{ color: MUTED }}>Live Automation System</span>
+          <span className="w-1.5 h-1.5 rounded-full inline-block animate-pulse" style={{ background: ACCENT }} />
+          <span className="text-[11px] font-semibold uppercase tracking-wider sg" style={{ color: MUTED }}>Profit Recovery Tracker</span>
         </div>
-        <span className="flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full" style={{ color: "#34d399", background: "#34d39910", border: "1px solid #34d39920" }}>
-          <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "#34d399" }} />
-          Active
+        <span className="flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full" style={{ color: GREEN, background: `${GREEN}10`, border: `1px solid ${GREEN}20` }}>
+          <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: GREEN }} />
+          Day 73 of 90
         </span>
       </div>
 
+      {/* ── leak rows ── */}
       <div className="flex flex-col gap-2 p-4">
-        {row(<ClipboardList className="w-3.5 h-3.5" style={{ color: ACCENT }} />, "Lead Capture", "New inquiry received", pill("Triggered", "blue"))}
-        <div className="flex justify-center">
-          <div className="w-px h-3.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
-        </div>
-        {row(<Bot className="w-3.5 h-3.5" style={{ color: ACCENT }} />, "AI Qualification", "Tagged, scored, enriched", pill("→ Processing", "gray"))}
-        <div className="flex justify-center">
-          <div className="w-px h-3.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
-        </div>
-        <div className="grid grid-cols-2 gap-2">
-          <div className="flex items-start gap-2 px-3 py-2.5 rounded-lg" style={{ background: BG, border: `1px solid ${BORDER}` }}>
-            <div className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: `${ACCENT}12` }}>
-              <Mail className="w-3 h-3" style={{ color: ACCENT }} />
+        {leaks.map(({ Icon, label, sub, amount, done }) => (
+          <div key={label} className="flex items-center justify-between px-3.5 py-2.5 rounded-lg" style={{ background: BG, border: `1px solid ${done ? `${GREEN}18` : BORDER}` }}>
+            <div className="flex items-center gap-2.5">
+              <div className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0" style={{ background: done ? `${GREEN}10` : `${ACCENT}10`, border: `1px solid ${done ? GREEN + "20" : ACCENT + "20"}` }}>
+                <Icon className="w-3.5 h-3.5" style={{ color: done ? GREEN : ACCENT }} />
+              </div>
+              <div>
+                <p className="font-semibold text-[12px] leading-none mb-0.5 sg" style={{ color: TEXT }}>{label}</p>
+                <p className="text-[10px]" style={{ color: MUTED }}>{sub}</p>
+              </div>
             </div>
-            <div>
-              <p className="font-semibold text-[12px] leading-none mb-0.5 sg" style={{ color: TEXT }}>Email/SMS Nurture</p>
-              <p className="text-[10px]" style={{ color: MUTED }}>Follow-up sent</p>
-            </div>
+            <span className="text-[11px] font-semibold px-2 py-0.5 rounded flex-shrink-0" style={done
+              ? { color: GREEN,  background: `${GREEN}10`,  border: `1px solid ${GREEN}25`  }
+              : { color: ACCENT, background: `${ACCENT}10`, border: `1px solid ${ACCENT}25` }}>
+              {done ? `+$${amount.toLocaleString()}` : "→ Tracking"}
+            </span>
           </div>
-          <div className="flex items-start gap-2 px-3 py-2.5 rounded-lg" style={{ background: BG, border: `1px solid ${BORDER}` }}>
-            <div className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "#f59e0b12" }}>
-              <Bell className="w-3 h-3" style={{ color: "#f59e0b" }} />
-            </div>
-            <div>
-              <p className="font-semibold text-[12px] leading-none mb-0.5 sg" style={{ color: TEXT }}>Team Alert</p>
-              <p className="text-[10px]" style={{ color: MUTED }}>Sales notified</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="w-px h-3.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
-        </div>
-        {row(<PhoneCall className="w-3.5 h-3.5" style={{ color: "#34d399" }} />, "Sales Call", "Closed / Won", pill("Closed/Won", "green"))}
-        <div className="flex justify-center">
-          <div className="w-px h-3.5" style={{ borderLeft: `1px dashed ${BORDER}` }} />
-        </div>
-        {row(<Rocket className="w-3.5 h-3.5" style={{ color: "#34d399" }} />, "Client Onboarding", "Resources created automatically", pill("Complete", "green"))}
+        ))}
       </div>
 
-      <div className="grid grid-cols-3 divide-x px-0" style={{ borderTop: `1px solid ${BORDER}`, borderColor: BORDER }}>
-        {[["12h", "Saved weekly"], ["0", "Manual steps"], ["24/7", "Always on"]].map(([v, l]) => (
+      {/* ── progress toward $30K guarantee ── */}
+      <div className="px-4 pb-3">
+        <div className="flex items-center justify-between mb-1.5">
+          <span className="text-[10px] font-medium sg uppercase tracking-wider" style={{ color: MUTED }}>Progress to $30K Guarantee</span>
+          <span className="text-[11px] font-bold sg" style={{ color: pct >= 100 ? GREEN : TEXT }}>{pct}%</span>
+        </div>
+        <div className="h-1.5 rounded-full overflow-hidden" style={{ background: `${BORDER}` }}>
+          <div className="h-full rounded-full transition-all duration-700" style={{ width: `${pct}%`, background: pct >= 100 ? GREEN : ACCENT }} />
+        </div>
+      </div>
+
+      {/* ── bottom stats ── */}
+      <div className="grid grid-cols-3 divide-x" style={{ borderTop: `1px solid ${BORDER}`, borderColor: BORDER }}>
+        {[
+          [`$${total.toLocaleString()}`, "Recovered"],
+          [`$${GOAL.toLocaleString()}`, "Guaranteed"],
+          ["100%", "Money back"],
+        ].map(([v, l]) => (
           <div key={l} className="py-3 text-center">
-            <p className="text-base font-bold sg" style={{ color: ACCENT }}>{v}</p>
+            <p className="text-[13px] font-bold sg" style={{ color: v === `$${total.toLocaleString()}` ? GREEN : ACCENT }}>{v}</p>
             <p className="text-[10px]" style={{ color: MUTED }}>{l}</p>
           </div>
         ))}
       </div>
+
     </div>
   );
 }
