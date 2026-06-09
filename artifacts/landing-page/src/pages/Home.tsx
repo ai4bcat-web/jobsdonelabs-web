@@ -348,7 +348,7 @@ function H2({ children, onDark=false, style: extraStyle={}, className="" }: { ch
   return (
     <h2 className={`anton ${className}`}
       style={{ fontSize:"clamp(2rem,4.2vw,3rem)", lineHeight:1.08, letterSpacing:"-0.01em",
-        color:onDark?CREAM:INK, marginBottom:18, ...extraStyle }}>
+        color:onDark?CREAM:INK, marginBottom:18, textTransform:"none", ...extraStyle }}>
       {children}
     </h2>
   );
@@ -428,7 +428,7 @@ function ExitIntentPopup({ onOpen }: { onOpen:()=>void }) {
               width:30, height:30, cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center" }}>
             <X size={14} style={{ color:INK_SOFT }} />
           </button>
-          <div style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.1em", color:ACCENT, textTransform:"uppercase", marginBottom:10, fontFamily:"'Hanken Grotesk',sans-serif" }}>WAIT — BEFORE YOU GO</div>
+          <div style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.1em", color:ACCENT, marginBottom:10, fontFamily:"'Hanken Grotesk',sans-serif" }}>Wait — before you go</div>
           <h3 className="anton" style={{ fontSize:26, color:INK, lineHeight:1.1, marginBottom:10 }}>Know your profit leak number?</h3>
           <p style={{ color:INK_SOFT, fontSize:14.5, lineHeight:1.6, marginBottom:22, fontFamily:"'Hanken Grotesk',sans-serif" }}>Most operators don't. A free 45-minute audit tells you exactly where money is leaving your business — no pitch, no obligation.</p>
           <PrimaryBtn onClick={() => { setShow(false); onOpen(); }}>
@@ -548,7 +548,7 @@ function Hero({ onBook }: { onBook:()=>void }) {
               background:INK, borderRadius:6, padding:"7px 14px", marginBottom:24 }}>
               <span style={{ fontSize:10.5, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:CREAM, fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
             </div>
-            <h1 className="anton" style={{ fontSize:"clamp(2.7rem,5.5vw,4rem)", lineHeight:1.05, letterSpacing:"-0.01em", color:INK, marginBottom:10 }}>
+            <h1 className="anton" style={{ fontSize:"clamp(2.7rem,5.5vw,4rem)", lineHeight:1.05, letterSpacing:"-0.01em", color:INK, marginBottom:10, textTransform:"none" }}>
               We find the{" "}
               <span style={{ background:ACCENT, color:"#fff", padding:"0.02em 0.16em 0.08em", borderRadius:5, display:"inline" }}>$30K</span>
               {" "}hiding in your operations.

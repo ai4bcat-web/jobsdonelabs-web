@@ -128,6 +128,6 @@
 }
 
 .sg { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
-.anton { font-family: 'Anton', 'Impact', sans-serif; }
+.anton { font-family: 'Anton', 'Impact', sans-serif; text-transform: none; }
 .caveat { font-family: 'Caveat', cursive; }
 .spin-slow { animation: spin-slow 14s linear infinite; }
