@@ -72,12 +72,8 @@ function StampBadge({ size = 104, dark = false }: { size?: number; dark?: boolea
         <path id={uid} d={`M ${cx},${cy-r} A ${r},${r} 0 1,1 ${cx-0.001},${cy-r}`} />
       </defs>
       <circle cx={cx} cy={cy} r={r} fill={fill} />
-      <circle cx={cx} cy={cy} r={r-7} fill="none" stroke="rgba(255,255,255,.32)" strokeWidth="1" strokeDasharray="3 3" />
-      <text fill="white" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:8.5, letterSpacing:"0.13em" }}>
-        <textPath href={`#${uid}`} startOffset="50%" textAnchor="middle">$30K GUARANTEED · 90 DAYS · $30K GUARANTEED · 90 DAYS ·</textPath>
-      </text>
-      <text x={cx} y={cy-3} textAnchor="middle" fill={centerTextColor} style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:17, letterSpacing:"-0.01em" }}>$30K</text>
-      <text x={cx} y={cy+11} textAnchor="middle" fill="rgba(255,255,255,.82)" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:8, letterSpacing:"0.08em" }}>GUARANTEED</text>
+      <text x={cx} y={cy-2} textAnchor="middle" fill={centerTextColor} style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:20, letterSpacing:"-0.01em" }}>$30K</text>
+      <text x={cx} y={cy+14} textAnchor="middle" fill="rgba(255,255,255,.88)" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:9, letterSpacing:"0.1em" }}>GUARANTEED</text>
     </svg>
   );
 }
@@ -548,7 +544,7 @@ function Hero({ onBook }: { onBook:()=>void }) {
           <Fade>
             <div>
               <div style={{ display:"inline-flex", alignItems:"center", gap:7,
-                background:INK, borderRadius:6, padding:"6px 13px", marginBottom:20 }}>
+                background:INK, borderRadius:3, padding:"6px 13px", marginBottom:20 }}>
                 <span style={{ fontSize:10, fontWeight:700, letterSpacing:"0.12em",
                   textTransform:"uppercase", color:CREAM,
                   fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
@@ -597,8 +593,8 @@ function Hero({ onBook }: { onBook:()=>void }) {
           {/* Right: video */}
           <Fade delay={0.12}>
             <div style={{ position:"relative" }}>
-              <div style={{ position:"absolute", top:-22, right:-22, zIndex:10, transform:"rotate(14deg)" }}>
-                <StampBadge size={114} dark />
+              <div style={{ position:"absolute", top:-36, right:-36, zIndex:10, transform:"rotate(14deg)" }}>
+                <StampBadge size={130} dark />
               </div>
               <VSL />
             </div>
