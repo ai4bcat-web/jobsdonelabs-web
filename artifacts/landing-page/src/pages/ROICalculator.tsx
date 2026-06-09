@@ -1,19 +1,17 @@
 import { useState, useMemo } from "react";
 import BookingModal from "@/components/BookingModal";
 import { Link } from "wouter";
-import { ArrowRight, ArrowLeft, TrendingUp, DollarSign, Clock, Zap } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const ACCENT      = "#1466FF";
-const ACCENT_DEEP = "#0B49C9";
 const CREAM       = "#F4EFE3";
 const CREAM2      = "#EFE8D8";
 const INK         = "#0B0D12";
+const INK2        = "#11131B";
 const INK_SOFT    = "#54596A";
 const LINE        = "rgba(11,13,18,.12)";
-const GREEN       = "#34d399";
 
-function SubLogo() {
+function Logo() {
   return (
     <div style={{ display:"flex", alignItems:"center", gap:10, userSelect:"none" }}>
       <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
@@ -39,182 +37,200 @@ function SubLogo() {
   );
 }
 
-function Slider({ label, value, onChange, min, max, step=1, format, hint }: {
+function Slider({ label, value, onChange, min, max, step=1, format }: {
   label:string; value:number; onChange:(v:number)=>void;
-  min:number; max:number; step?:number; format:(v:number)=>string; hint?:string;
+  min:number; max:number; step?:number; format:(v:number)=>string;
 }) {
-  const pct = ((value-min)/(max-min))*100;
+  const pct = ((value - min) / (max - min)) * 100;
   return (
-    <div className="flex flex-col gap-2.5">
-      <div className="flex items-center justify-between">
-        <label style={{ fontSize:13, fontWeight:600, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</label>
-        <span style={{ fontSize:15, fontWeight:700, color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{format(value)}</span>
+    <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+        <label style={{ fontSize:13.5, fontWeight:600, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</label>
+        <span style={{ fontSize:16, fontWeight:700, color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{format(value)}</span>
       </div>
-      <div className="relative h-1.5 rounded-full" style={{ background:LINE }}>
-        <div className="absolute left-0 top-0 h-1.5 rounded-full transition-all duration-100" style={{ width:`${pct}%`, background:ACCENT }} />
+      <div style={{ position:"relative", height:6, borderRadius:99, background:LINE }}>
+        <div style={{ position:"absolute", left:0, top:0, height:"100%", borderRadius:99, background:ACCENT, width:`${pct}%`, transition:"width .08s" }} />
         <input type="range" min={min} max={max} step={step} value={value}
           onChange={e => onChange(Number(e.target.value))}
-          className="absolute inset-0 w-full opacity-0 cursor-pointer h-1.5" />
-        <div className="absolute top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full pointer-events-none transition-all duration-100"
-          style={{ left:`calc(${pct}% - 7px)`, background:ACCENT, border:`2px solid ${CREAM}`, boxShadow:`0 0 0 1px ${ACCENT}` }} />
+          style={{ position:"absolute", inset:0, width:"100%", opacity:0, cursor:"pointer", height:"100%", margin:0 }} />
+        <div style={{ position:"absolute", top:"50%", transform:"translateY(-50%)", width:16, height:16, borderRadius:"50%",
+          background:ACCENT, border:`2.5px solid ${CREAM}`, boxShadow:`0 0 0 1.5px ${ACCENT}`,
+          left:`calc(${pct}% - 8px)`, pointerEvents:"none", transition:"left .08s" }} />
       </div>
-      {hint && <p style={{ fontSize:12, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{hint}</p>}
-    </div>
-  );
-}
-
-function ResultCard({ icon, label, value, sub, highlight=false }: {
-  icon:React.ReactNode; label:string; value:string; sub?:string; highlight?:boolean;
-}) {
-  return (
-    <div className="rounded-xl p-5 flex flex-col gap-2"
-      style={{ background:highlight?ACCENT:CREAM, border:`1px solid ${highlight?ACCENT:LINE}` }}>
-      <div className="w-8 h-8 rounded-lg flex items-center justify-center"
-        style={{ background:highlight?"rgba(255,255,255,.18)":`${ACCENT}14` }}>
-        <span style={{ color:highlight?"#fff":ACCENT }}>{icon}</span>
-      </div>
-      <p className="text-[11px] font-semibold uppercase tracking-wider mt-0.5" style={{ color:highlight?"rgba(255,255,255,.65)":INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</p>
-      <p className="text-[1.5rem] font-black leading-none" style={{ color:highlight?"#fff":INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>{value}</p>
-      {sub && <p className="text-[12px]" style={{ color:highlight?"rgba(255,255,255,.55)":INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{sub}</p>}
     </div>
   );
 }
 
 export default function ROICalculator() {
-  const [showBooking, setShowBooking] = useState(false);
-  const [monthlyLeads, setMonthlyLeads]     = useState(80);
-  const [dealSize, setDealSize]             = useState(3000);
-  const [closeRate, setCloseRate]           = useState(20);
-  const [responseHours, setResponseHours]   = useState(4);
+  const [showBooking, setShowBooking]       = useState(false);
+  const [annualRevenue, setAnnualRevenue]   = useState(1500000);
+  const [leadsPerMonth, setLeadsPerMonth]   = useState(120);
+  const [dealValue, setDealValue]           = useState(2500);
+  const [leadsLostPct, setLeadsLostPct]     = useState(25);
+  const [adminHours, setAdminHours]         = useState(40);
 
   const results = useMemo(() => {
-    const currentMonthlyRevenue    = (monthlyLeads*(closeRate/100))*dealSize;
-    const leakagePct               = Math.min(0.35, responseHours*0.05+0.15);
-    const recoveredLeakage         = monthlyLeads*leakagePct*(closeRate/100)*dealSize;
-    const closeRateLift            = Math.min(closeRate*0.25, 12);
-    const improvedCloseRevenue     = monthlyLeads*((closeRate+closeRateLift)/100)*dealSize - currentMonthlyRevenue;
-    const totalMonthlyRecovery     = recoveredLeakage+improvedCloseRevenue;
-    const ninetyDayRecovery        = totalMonthlyRecovery*3;
-    const annualRecovery           = totalMonthlyRecovery*12;
-    const hoursSaved               = Math.round(10+(monthlyLeads/20));
-    const roiMultiple              = ninetyDayRecovery>0?(ninetyDayRecovery/2000).toFixed(1):"—";
-    return {
-      currentMonthlyRevenue: Math.round(currentMonthlyRevenue),
-      totalMonthlyRecovery:  Math.round(totalMonthlyRecovery),
-      ninetyDayRecovery:     Math.round(ninetyDayRecovery),
-      annualRecovery:        Math.round(annualRecovery),
-      hoursSaved, roiMultiple,
-      meetsGuarantee: ninetyDayRecovery>=30000,
-    };
-  }, [monthlyLeads,dealSize,closeRate,responseHours]);
+    const leadRecovery      = Math.round(leadsPerMonth * (leadsLostPct / 100) * dealValue * 0.12 * 12);
+    const adminRecovery     = Math.round(adminHours * 52 * 23.8 / 500) * 500;
+    const efficiencyGain    = Math.round(annualRevenue * 0.011 / 500) * 500;
+    const total             = leadRecovery + adminRecovery + efficiencyGain;
+    return { leadRecovery, adminRecovery, efficiencyGain, total };
+  }, [annualRevenue, leadsPerMonth, dealValue, leadsLostPct, adminHours]);
 
-  const fmt$ = (n:number) =>
-    n>=1000000?`$${(n/1000000).toFixed(1)}M`
-    :n>=1000?`$${(n/1000).toFixed(0)}K`
-    :`$${n}`;
+  const fmtRevenue = (v: number) =>
+    v >= 1_000_000 ? `$${(v / 1_000_000).toFixed(1)}M` : `$${(v / 1_000).toFixed(0)}K`;
+
+  const fmtDollar = (v: number) =>
+    `$${v.toLocaleString("en-US")}`;
 
   return (
-    <div className="min-h-screen" style={{ background:CREAM2, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-      <header className="sticky top-0 z-50" style={{ background:"rgba(244,239,227,.88)", backdropFilter:"blur(14px)", borderBottom:`1px solid ${LINE}` }}>
-        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/"><SubLogo /></Link>
-          <Link href="/">
-            <button className="flex items-center gap-1.5 transition-colors duration-150"
-              style={{ fontSize:13, fontWeight:600, color:INK_SOFT, border:"none", background:"none", cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif" }}
-              onMouseEnter={e=>(e.currentTarget as HTMLElement).style.color=INK}
-              onMouseLeave={e=>(e.currentTarget as HTMLElement).style.color=INK_SOFT}>
-              <ArrowLeft className="w-3.5 h-3.5" /> Back to home
+    <div style={{ minHeight:"100vh", background:CREAM, color:INK, fontFamily:"'Hanken Grotesk',sans-serif", display:"flex", flexDirection:"column" }}>
+
+      {/* Nav */}
+      <header style={{ position:"sticky", top:0, zIndex:50, background:"rgba(244,239,227,.92)", backdropFilter:"blur(14px)", borderBottom:`1px solid ${LINE}` }}>
+        <div style={{ maxWidth:1120, margin:"0 auto", padding:"0 24px", height:60, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+          <Link href="/"><Logo /></Link>
+          <nav style={{ display:"flex", alignItems:"center", gap:28 }}>
+            {["Services","Industries","FAQ"].map(l => (
+              <Link key={l} href={`/#${l.toLowerCase()}`}>
+                <span style={{ fontSize:14, fontWeight:600, color:INK_SOFT, cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif",
+                  textDecoration:"none", transition:"color .15s" }}
+                  onMouseEnter={e=>(e.currentTarget as HTMLElement).style.color=INK}
+                  onMouseLeave={e=>(e.currentTarget as HTMLElement).style.color=INK_SOFT}>
+                  {l}
+                </span>
+              </Link>
+            ))}
+            <button onClick={() => setShowBooking(true)}
+              style={{ background:ACCENT, color:"#fff", border:"none", borderRadius:50,
+                padding:"10px 22px", fontSize:14, fontWeight:700, cursor:"pointer",
+                fontFamily:"'Hanken Grotesk',sans-serif", boxShadow:`0 4px 16px -4px ${ACCENT}66` }}>
+              Book a Call
             </button>
-          </Link>
+          </nav>
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 py-14">
-        <motion.div initial={{ opacity:0, y:16 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.4 }}
-          className="text-center mb-12">
-          <p style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:ACCENT, marginBottom:12, fontFamily:"'Hanken Grotesk',sans-serif" }}>ROI Calculator</p>
-          <h1 className="anton" style={{ fontSize:"clamp(2rem,4.5vw,3rem)", color:INK, letterSpacing:"-0.01em", lineHeight:1.08, marginBottom:14 }}>
-            How much revenue are you<br className="hidden md:block" /> currently leaving on the table?
+      <main style={{ maxWidth:1120, margin:"0 auto", padding:"48px 24px 80px", flex:1 }}>
+
+        {/* Breadcrumb */}
+        <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:40 }}>
+          <Link href="/">
+            <span style={{ display:"inline-flex", alignItems:"center", gap:6, fontSize:13.5, fontWeight:600,
+              color:INK_SOFT, cursor:"pointer", textDecoration:"none" }}
+              onMouseEnter={e=>(e.currentTarget as HTMLElement).style.color=INK}
+              onMouseLeave={e=>(e.currentTarget as HTMLElement).style.color=INK_SOFT}>
+              <ArrowLeft size={14} /> Back to home
+            </span>
+          </Link>
+          <div style={{ display:"inline-flex", alignItems:"center", gap:7, border:`1.5px solid ${ACCENT}`,
+            borderRadius:50, padding:"4px 12px" }}>
+            <span style={{ width:7, height:7, borderRadius:"50%", background:ACCENT, flexShrink:0 }} />
+            <span style={{ fontSize:11, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase",
+              color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>ROI Calculator</span>
+          </div>
+        </div>
+
+        {/* Headline */}
+        <div style={{ maxWidth:560, marginBottom:48 }}>
+          <h1 className="anton" style={{ fontSize:"clamp(2.2rem,4.5vw,3.4rem)", lineHeight:1.06,
+            color:INK, marginBottom:16 }}>
+            See what we can<br />recover for you.
           </h1>
-          <p style={{ fontSize:16, lineHeight:1.65, maxWidth:520, margin:"0 auto", color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-            Adjust the sliders to match your business — we'll show you exactly what slow follow-up and manual bottlenecks are costing you every month.
+          <p style={{ fontSize:16, lineHeight:1.68, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+            Move the sliders to match your business. This is a rough estimate of the net profit hiding in your operation — the free audit gives you the exact number.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 items-start">
-          <motion.div initial={{ opacity:0, x:-16 }} animate={{ opacity:1, x:0 }} transition={{ duration:0.4, delay:0.1 }}
-            className="rounded-xl p-7 flex flex-col gap-7"
-            style={{ background:CREAM, border:`1px solid ${LINE}` }}>
-            <div>
-              <h2 style={{ fontSize:17, fontWeight:700, marginBottom:4, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>Your current numbers</h2>
-              <p style={{ fontSize:13, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>Drag the sliders to reflect your business today.</p>
-            </div>
-            <Slider label="Monthly leads" value={monthlyLeads} onChange={setMonthlyLeads} min={10} max={500} step={5}
-              format={v=>`${v} leads`} hint="All inbound inquiries across every channel" />
-            <Slider label="Average deal / client value" value={dealSize} onChange={setDealSize} min={500} max={25000} step={500}
-              format={v=>fmt$(v)} hint="What the average new client is worth to your business" />
-            <Slider label="Current close rate" value={closeRate} onChange={setCloseRate} min={1} max={60}
-              format={v=>`${v}%`} hint="Of leads that enter your pipeline, how many become clients" />
-            <Slider label="Average lead response time" value={responseHours} onChange={setResponseHours} min={0} max={48}
-              format={v=>v===0?"Instant":v===1?"1 hour":`${v} hours`}
-              hint="How long before a new lead hears back from your team" />
-            <div className="rounded-lg p-4" style={{ background:CREAM2, border:`1px solid ${LINE}` }}>
-              <p style={{ fontSize:12, lineHeight:1.65, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                <span style={{ fontWeight:600, color:INK }}>How we calculate this: </span>
-                We model lead leakage (leads lost to slow response and no follow-up) plus the close rate lift from sub-5-minute response times and automated nurture sequences — based on industry benchmarks.
-              </p>
-            </div>
-          </motion.div>
+        {/* Two panels */}
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:24, alignItems:"start" }}
+          className="grid-roi-panels">
 
-          <motion.div initial={{ opacity:0, x:16 }} animate={{ opacity:1, x:0 }} transition={{ duration:0.4, delay:0.15 }}
-            className="flex flex-col gap-4">
-            <div className="grid grid-cols-2 gap-3">
-              <ResultCard icon={<DollarSign className="w-4 h-4"/>} label="Monthly revenue recovered"
-                value={fmt$(results.totalMonthlyRecovery)} sub="By eliminating lead leakage + boosting close rate" />
-              <ResultCard icon={<TrendingUp className="w-4 h-4"/>} label="90-day recovery"
-                value={fmt$(results.ninetyDayRecovery)} sub="Within your first quarter" highlight />
-              <ResultCard icon={<Zap className="w-4 h-4"/>} label="Annual revenue upside"
-                value={fmt$(results.annualRecovery)} sub="If current trajectory continues" />
-              <ResultCard icon={<Clock className="w-4 h-4"/>} label="Hours saved per week"
-                value={`${results.hoursSaved}h`} sub="Freed from manual ops work" />
+          {/* Left: sliders */}
+          <div style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:16,
+            padding:"32px 28px", display:"flex", flexDirection:"column", gap:28 }}>
+            <Slider label="Annual revenue" value={annualRevenue} onChange={setAnnualRevenue}
+              min={200000} max={10000000} step={100000} format={fmtRevenue} />
+            <Slider label="Leads per month" value={leadsPerMonth} onChange={setLeadsPerMonth}
+              min={10} max={500} step={5} format={v => `${v}`} />
+            <Slider label="Avg. job / deal value" value={dealValue} onChange={setDealValue}
+              min={500} max={50000} step={500} format={v => `$${v.toLocaleString("en-US")}`} />
+            <Slider label="Leads lost to slow follow-up" value={leadsLostPct} onChange={setLeadsLostPct}
+              min={5} max={60} step={1} format={v => `${v}%`} />
+            <Slider label="Admin hours / week (team)" value={adminHours} onChange={setAdminHours}
+              min={5} max={200} step={5} format={v => `${v}`} />
+          </div>
+
+          {/* Right: results */}
+          <div style={{ background:INK2, borderRadius:16, padding:"36px 32px",
+            display:"flex", flexDirection:"column", gap:0 }}>
+            <p style={{ fontSize:11, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase",
+              color:"rgba(255,255,255,.45)", fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:10 }}>
+              Estimated annual recovery
+            </p>
+            <p style={{ fontFamily:"'Hanken Grotesk',sans-serif", fontSize:"clamp(2.6rem,4vw,3.6rem)",
+              fontWeight:900, color:"#fff", lineHeight:1, marginBottom:14 }}>
+              {fmtDollar(results.total)}
+            </p>
+            <p style={{ fontSize:14.5, lineHeight:1.6, color:"rgba(255,255,255,.55)",
+              fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:28 }}>
+              What our systems could put back on your bottom line in the first 12 months.
+            </p>
+
+            {/* Line items */}
+            <div style={{ display:"flex", flexDirection:"column", gap:0,
+              borderTop:"1px solid rgba(255,255,255,.1)", marginBottom:28 }}>
+              {[
+                { label:"Recovered lost leads",        value:results.leadRecovery },
+                { label:"Reclaimed admin time",        value:results.adminRecovery },
+                { label:"Faster cash & efficiency",    value:results.efficiencyGain },
+              ].map(item => (
+                <div key={item.label} style={{ display:"flex", justifyContent:"space-between",
+                  alignItems:"center", padding:"13px 0",
+                  borderBottom:"1px solid rgba(255,255,255,.08)" }}>
+                  <span style={{ fontSize:14, color:"rgba(255,255,255,.62)",
+                    fontFamily:"'Hanken Grotesk',sans-serif" }}>{item.label}</span>
+                  <span style={{ fontSize:14, fontWeight:700, color:"rgba(255,255,255,.9)",
+                    fontFamily:"'Hanken Grotesk',sans-serif" }}>{fmtDollar(item.value)}</span>
+                </div>
+              ))}
             </div>
 
-            <div className="rounded-xl p-5 text-center"
-              style={{ background:results.meetsGuarantee?`${GREEN}12`:`${ACCENT}0A`,
-                border:`1px solid ${results.meetsGuarantee?`${GREEN}40`:`${ACCENT}25`}` }}>
-              {results.meetsGuarantee ? (
-                <>
-                  <p style={{ fontWeight:700, fontSize:15, marginBottom:6, color:"#0a9968", fontFamily:"'Hanken Grotesk',sans-serif" }}>✓ You qualify for our $30K guarantee</p>
-                  <p style={{ fontSize:13, lineHeight:1.65, color:"#0a996880", fontFamily:"'Hanken Grotesk',sans-serif" }}>Based on your numbers, we're confident we can generate $30,000+ in net profit within 90 days — or we keep working until we do.</p>
-                </>
-              ) : (
-                <>
-                  <p style={{ fontWeight:700, fontSize:15, marginBottom:6, color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>Increase your leads or deal size to unlock the guarantee</p>
-                  <p style={{ fontSize:13, lineHeight:1.65, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>Our $30K guarantee applies when there's enough volume to work with. Book a call — we'll tell you honestly if we're a fit.</p>
-                </>
-              )}
-            </div>
-
-            <div className="rounded-xl p-6 text-center flex flex-col gap-4" style={{ background:CREAM, border:`1px solid ${LINE}` }}>
-              <div>
-                <p style={{ fontWeight:700, fontSize:15, marginBottom:4, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                  Ready to stop leaving {fmt$(results.annualRecovery)}/year on the table?
-                </p>
-                <p style={{ fontSize:13, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                  Book a free 45-minute audit call. We'll map your exact leaks and hand you a custom roadmap.
-                </p>
-              </div>
-              <button onClick={() => setShowBooking(true)}
-                className="w-full h-11 rounded-lg flex items-center justify-center gap-2 transition-colors duration-150"
-                style={{ background:ACCENT, color:"#fff", fontWeight:700, fontSize:14, border:"none", cursor:"pointer",
-                  boxShadow:`0 4px 16px -4px ${ACCENT}55`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                Book a Free Audit Call <ArrowRight className="w-4 h-4" />
-              </button>
-              <p style={{ fontSize:12, color:INK_SOFT, opacity:.6, fontFamily:"'Hanken Grotesk',sans-serif" }}>No commitment. No sales pressure. You keep the roadmap either way.</p>
-            </div>
-          </motion.div>
+            {/* CTA */}
+            <button onClick={() => setShowBooking(true)}
+              style={{ width:"100%", padding:"16px", borderRadius:50, border:"none",
+                background:ACCENT, color:"#fff", fontSize:15, fontWeight:700,
+                cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif",
+                display:"flex", alignItems:"center", justifyContent:"center", gap:8,
+                marginBottom:14, boxShadow:`0 6px 24px -6px ${ACCENT}88` }}>
+              Book your free audit <ArrowRight size={16} />
+            </button>
+            <p style={{ fontSize:12, color:"rgba(255,255,255,.32)", textAlign:"center",
+              fontFamily:"'Hanken Grotesk',sans-serif", lineHeight:1.5 }}>
+              Estimate only. The free audit gives you a precise, line-item recovery number.
+            </p>
+          </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer style={{ background:INK2, padding:"28px 24px" }}>
+        <div style={{ maxWidth:1120, margin:"0 auto", display:"flex",
+          alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:12 }}>
+          <p style={{ fontSize:13, color:"rgba(255,255,255,.35)", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+            © 2026 Jobs Done Labs. All rights reserved.
+          </p>
+          <div style={{ display:"flex", gap:20 }}>
+            {[["Privacy Policy","/privacy"],["Terms of Service","/terms"],["Contact","/contact"]].map(([label,href]) => (
+              <Link key={label} href={href}>
+                <span style={{ fontSize:13, color:"rgba(255,255,255,.45)", cursor:"pointer",
+                  fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </footer>
+
       <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
     </div>
   );
