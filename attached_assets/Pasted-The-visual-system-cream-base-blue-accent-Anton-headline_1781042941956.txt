@@ -1,0 +1,185 @@
+The visual system (cream base, blue accent, Anton headlines, $30K highlight) is
+component styles**. Fix list is top-to-bottom.
+
+---
+
+## 0. NAV BAR (priority — currently wrong)
+- Desktop links must be, in order: **Services · Industries · Results · FAQ · RO
+**Industries**, **ROI Calculator**, and **Contact**.)
+- Right side: a ghost text link **"Free AI Course"** + a solid button **"Book a
+- ROI Calculator links to `/roi-calculator`; Contact links to `/contact`.
+- The hamburger is fine for mobile only — show the full link row on desktop.
+
+## 1. HERO
+- **Eyebrow:** dark flag pill reading **"⚡ Profit recovery, guaranteed"** (dar
+"FREE PROFIT RECOVERY AUDIT" — restyle + retext.
+- **Subheadline (exact):** "If you're doing $1M+ in service, logistics, or manu
+leads that go cold, jobs that slip, and work that should run itself. We find th
+(Currently shortened to "We find it. We fix it. We guarantee it." — use the ful
+- **CTAs:** ONE primary button only — **"Book your free audit"**. Remove the se
+stay as-is — those are correct.)
+- **Stamp on the video:** a round **dark pill/circle** reading **"$30K GUARANTE
+lifted above the video edge. Currently a blue starburst seal — replace with the
+- Microtrust: plain stacked avatars are fine; the colored-initial avatars are a
+
+## 2. INDUSTRY MARQUEE (black bar)
+Use exactly these eight, looping: **HVAC & Plumbing · Freight & Logistics · Man
+Distribution · Home Service · Wholesale & Supply**. (Currently a different/shor
+
+## 3. PROBLEM (dark)
+- **Eyebrow:** "The leak" (currently "THE PROBLEM").
+- **Lead under the headline (exact):** "It's not a sales problem. It's a thousa
+balls, and zero visibility — quietly draining profit you already earned." (Curr
+leaks.")
+- **The 4 cards must be exactly these (title / body / cost line):**
+  1. **Your team quotes by hand** — "Estimates sit in someone's inbox for days.
+or gone to a competitor who answered first." — *Lost: 20–40% of winnable jobs
+  2. **Leads slip through the cracks** — "Calls missed, forms unanswered, follo
+fast, consistent response is money walking out the door." — *Lost: thousands 
+  3. **Your operations run on guesswork** — "Jobs double-booked, your calendar 
+appointments. The inefficiency you can't see is the inefficiency you keep pay
+  4. **You're flying blind on the numbers** — "No real-time view of margin, uti
+something's broken a quarter too late." — *Lost: $30K+ you never recover*
+- Cost line format = "Lost: …" with a ▸ marker, not a dollar-range chip.
+
+## 4. INDUSTRIES
+- **Eyebrow:** "Industries" (currently "WHO WE BUILD FOR").
+- **Lead (exact):** "If your business has real operational volume and thin time
+ones we recover it for most."
+- **Three cards — exact body + pills:**
+  1. **Service Businesses** — "HVAC, plumbing, electrical, roofing, and field s
+that win or lose on response speed." — pills: **Instant quoting · Scheduling 
+  2. **Logistics & Transportation** — "Freight brokerages, Amazon DSPs, fleets,
+per-asset visibility decides whether you profit." — pills: **Spot quoting · P
+  3. **Manufacturing & Industrial** — "Shops, fabricators, and production teams
+and zero real-time visibility on the floor." — pills: **RFQ automation · Job 
+
+## 5. FRACTIONAL SYSTEMS OPERATOR
+- **Eyebrow:** "Your unfair advantage" (currently "HOW IT WORKS").
+- **Sub (exact):** "Not an agency you manage. Not software you babysit. A dedic
+numbers, and keeps the profit flowing back to you."
+- **The 4 stat cards must be (number / label):** **50+** Businesses automated ·
+Systems always running · **48hr** From signed to building. (Currently 40+ / 92%
+- Remove the extra "Book Your Free Audit" button under the stats (the reference
+- **Profit Recovery Tracker** rows are correct: Lead response · Quote automatio
++$11.2K / +$9.4K / +$7.1K / +$5.8K and "Recovered this quarter $33.5K". (Just c
+
+## 6. INLINE CTA BANNER (blue)
+- Headline "Ready to recover your $30,000?" is correct.
+- Button label → **"Book your free audit"**. Remove the sub-line ("Book a free 
+is headline + button only.
+
+## 7. SERVICES + PROFIT DIAGRAM
+- **Eyebrow:** "Services" (currently "WHAT WE BUILD").
+- **Profit Diagram — exact 3 columns:**
+  - *Where it leaks:* Slow lead response · Manual quoting · Dropped follow-ups 
+  - *The recovery engine:* Capture · Automate · Optimize · Report
+  - *What you keep:* More booked jobs · Faster cash · Hours back · $30K+ recove
+  (Currently uses "Manual dispatch" and dollar-range outcomes — replace with th
+- **The 4 service rows — exact title + restore the 3 pills each:**
+  1. **Lead capture & instant response** — "Every call, form, and message captu
+and chat — so no opportunity ever goes cold." — pills: Speed-to-lead · Missed
+  2. **Quoting & sales automation** — "Turn requests into branded quotes automa
+close so your team doesn't have to." — pills: Auto-quotes · Follow-up · Pipel
+  3. **Operations & scheduling systems** — "Scheduling, job tracking, and capac
+fewer gaps, smoother workflow, more billable hours." — pills: Scheduling · Jo
+  4. **Reporting & profit visibility** — "Real-time dashboards on margin, utili
+money is and where it's still leaking." — pills: Dashboards · Margin · Alerts
+  (Currently titled "Operations Command Center / Revenue Intelligence / Client 
+the pills back.)
+
+## 8. PROCESS (4 steps)
+- **Eyebrow:** "How it works" (currently "THE PROCESS").
+- **Step names + timeline badges (exact):**
+  - **01 Audit** · *Week 1 · Free* — "We map every workflow in your operation a
+quoting, follow-up, scheduling, billing, reporting. You get a clear number: w
+  - **02 Blueprint** · *Week 2* — "We design the exact systems to plug those le
+and the projected return before a single thing gets built."
+  - **03 Build** · *Weeks 3–4* — "We architect, integrate, and deploy custom AI
+against your actual data and tested with your team."
+  - **04 Recover** · *Days 30–90* — "Systems run live and claw back profit — fa
+operations, real-time visibility. We measure recovery against the guarantee."
+- Style: each step has a small **solid blue number badge** at top (01–04) and a
+the description. (Currently big faint watermark numbers with no timeline badge.
+
+## 9. COMPARISON TABLE
+- **Eyebrow:** "The honest comparison" (currently "WHY CHOOSE US").
+- Columns: **In-house hire · Freelancer · Jobs Done Labs** (blue column).
+- **Rows must be exactly (and binary ✓/✗ only — no "sometimes"):**
+  | Row | In-house | Freelancer | Us |
+  |---|---|---|---|
+  | Recovers profit in 90 days | ✗ | ✗ | ✓ |
+  | Guaranteed result or you pay $0 | ✗ | ✗ | ✓ |
+  | Built by real operators | ✗ | ✗ | ✓ |
+  | Systems you own outright | ✓ | ✗ | ✓ |
+  | No long-term retainer | ✗ | ✓ | ✓ |
+  | Live in weeks, not quarters | ✗ | ✗ | ✓ |
+
+## 10. GUARANTEE (blue)
+- **Headline:** "Recover $30K in 90 days, or you pay nothing." (Currently "Guar
+- **Paragraph (exact):** "We put our entire fee on the line. Either we find and
+business within 90 days — or you owe us nothing. That's how confident we are in
+- **Checklist (exact 4):** "We recover at least $30,000 in net profit within 90
+cent" · "No long-term retainers, no lock-in contracts" · "You keep every system
+- Remove the "Claim Your Guarantee" button (reference has none here).
+- **Left side:**
+  - Ryne's photo in the circle with a **round dark "$30K GUARANTEED" badge** ac
+  - The card below it must include: a "Personally backed" label, the **Caveat-f
+Done Labs", this exact quote — "I put my own fee on the line because I ran th
+and recovered $200K doing it. If it works there, I'll prove it works for you.
+Companies · $0 Your risk**. (Currently uses a shorter quote and no stat strip
+
+## 11. FIT (who it's for / not)
+- **Eyebrow:** "Honest fit" (currently "IS THIS A FIT?"). Headline is correct.
+- Use these exact items:
+  - **For you if:** "You're a service, logistics, or manufacturing business doi
+volume — leads, jobs, trucks, orders flowing daily" · "You know you're losing
+where" · "You want systems you own, not another tool you rent forever".
+  - **Not for you if:** "You're pre-revenue or under $1M — the math doesn't wor
+automation, not real operational change" · "You're not willing to give us acc
+"You're looking for hype, not measurable profit recovery".
+
+## 12. PILOT CALLOUT (dark card, the `#results` section)
+- **Eyebrow:** "Pilot program · 2026" (currently "ACCEPTING APPLICATIONS / LIMI
+- **Headline:** "We're building for 5 service businesses right now." (keep the 
+- **Sub (exact):** "Instead of recycled testimonials, here's the truth: we're h
+founding cohort as we speak. Full, numbers-backed case studies drop Q4 2026 — g
+- **Seat chips:** HVAC & Plumbing · Freight & Logistics · Manufacturing · Field
+**no "FILLED" tag**.
+- Keep the "Case studies coming Q4 2026" stamp + **"Apply for the next cohort"*
+
+## 13. FAQ
+Use these 6 questions in this order (with the reference answers from lp-parts2.
+1. "How can you guarantee $30K in 90 days?"
+2. "What exactly do you build?"
+3. "Do I need a technical team?"
+4. "How is this different from hiring an agency or buying software?"
+5. "What does it cost?"
+6. "What happens on the free audit call?"
+(Currently a different set including "What if my business is seasonal?" — repla
+
+## 14. FINAL CTA (split card)
+- Headline "Find your $30K in 90 days. Or pay nothing." is correct.
+- **Sub (exact):** "Book a free Profit Recovery Audit. We'll show you exactly w
+recover it — no pitch, no pressure, no cost."
+- Button → **"Book your free audit"**.
+- Replace the "Rated 5/5…" star line with **three trust badges:** ✓ $30K guara
+
+## 15. FOOTER
+- **Services:** Lead capture · Quoting & sales · Operations · Reporting
+- **Industries:** Service businesses · Logistics & transportation · Manufacturi
+- **Company:** Book a call · Contact · FAQ · ryne@jobsdone.io
+- Bottom bar: © 2026 Jobs Done Labs · Privacy Policy · Terms of Service · Opt-i
+
+---
+
+## Global / interaction checks
+- **Every CTA button label** that books = **"Book your free audit"** (or nav "B
+Recovery Audit".
+- **Section eyebrows** use the exact labels above (Industries, Your unfair adva
+comparison, Honest fit, Pilot program · 2026, The leak, Proof · BCAT Logistics 
+- **Booking:** every CTA opens the Calendly modal (`calendly.com/ryne-bandolik`
+- **VSL:** YouTube `FP_yxHX9Zvc`, autoplay muted, caption "Watch the 4-min brea
+- **Email everywhere:** `ryne@jobsdone.io`. ✔
+- The **LeadConnector chat widget** is an intentional re-add — leave it.
+- Email/contact pills, ROI calculator, and legal pages should stay as built.

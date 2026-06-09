@@ -4,15 +4,13 @@ import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight, Star, Check, X, Plus,
-  Clock, PhoneOff, Route, Eye,
-  Home as HomeIcon, Truck, Building2,
   Filter, Database, Settings, BarChart3,
   Linkedin, Youtube, Twitter,
 } from "lucide-react";
 
-/* ───────────────────────────────────────────── */
-/*  Design tokens                                */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Design tokens                        */
+/* ───────────────────────────────────── */
 const CREAM       = "#F4EFE3";
 const CREAM2      = "#EFE8D8";
 const INK         = "#0B0D12";
@@ -23,9 +21,9 @@ const ACCENT      = "#1466FF";
 const ACCENT_DEEP = "#0B49C9";
 const GREEN       = "#34d399";
 
-/* ───────────────────────────────────────────── */
-/*  Brand                                        */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Brand                               */
+/* ───────────────────────────────────── */
 function FlaskMark({ stroke = ACCENT, size = 32 }: { stroke?: string; size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden="true">
@@ -62,17 +60,20 @@ function Wordmark({ size = 20, onDark = false }: { size?: number; onDark?: boole
   );
 }
 
-function StampBadge({ size = 104 }: { size?: number }) {
+/* Dark rotating stamp badge */
+function StampBadge({ size = 104, dark = false }: { size?: number; dark?: boolean }) {
   const r = 40, cx = 50, cy = 50;
+  const fill = dark ? INK : ACCENT;
+  const uid = dark ? "stamp-d" : "stamp-l";
   return (
     <svg width={size} height={size} viewBox="0 0 100 100" className="spin-slow" aria-hidden="true">
       <defs>
-        <path id="stamp-ring" d={`M ${cx},${cy-r} A ${r},${r} 0 1,1 ${cx-0.001},${cy-r}`} />
+        <path id={uid} d={`M ${cx},${cy-r} A ${r},${r} 0 1,1 ${cx-0.001},${cy-r}`} />
       </defs>
-      <circle cx={cx} cy={cy} r={r} fill={ACCENT} />
+      <circle cx={cx} cy={cy} r={r} fill={fill} />
       <circle cx={cx} cy={cy} r={r-7} fill="none" stroke="rgba(255,255,255,.32)" strokeWidth="1" strokeDasharray="3 3" />
       <text fill="white" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:8.5, letterSpacing:"0.13em" }}>
-        <textPath href="#stamp-ring" startOffset="50%" textAnchor="middle">$30K GUARANTEED · 90 DAYS · $30K GUARANTEED · 90 DAYS ·</textPath>
+        <textPath href={`#${uid}`} startOffset="50%" textAnchor="middle">$30K GUARANTEED · 90 DAYS · $30K GUARANTEED · 90 DAYS ·</textPath>
       </text>
       <text x={cx} y={cy-3} textAnchor="middle" fill="white" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:17, letterSpacing:"-0.01em" }}>$30K</text>
       <text x={cx} y={cy+11} textAnchor="middle" fill="rgba(255,255,255,.82)" style={{ fontFamily:"'Anton','Impact',sans-serif", fontSize:8, letterSpacing:"0.08em" }}>GUAR.</text>
@@ -80,9 +81,9 @@ function StampBadge({ size = 104 }: { size?: number }) {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  VSL Player                                   */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  VSL Player                          */
+/* ───────────────────────────────────── */
 function VSL({ videoId = "FP_yxHX9Zvc" }: { videoId?: string }) {
   const [sound, setSound] = useState(false);
   const src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${sound?0:1}&rel=0&playsinline=1&modestbranding=1`;
@@ -125,14 +126,14 @@ function VSL({ videoId = "FP_yxHX9Zvc" }: { videoId?: string }) {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Profit Recovery Tracker                      */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Profit Recovery Tracker             */
+/* ───────────────────────────────────── */
 const LEAKS = [
-  { icon:<Filter size={15}/>,   name:"Lead response system",  pct:"92%", amt:"+$11.2K" },
-  { icon:<Settings size={15}/>, name:"Quote automation",       pct:"84%", amt:"+$9.4K"  },
-  { icon:<Database size={15}/>, name:"Scheduling & ops",       pct:"76%", amt:"+$7.1K"  },
-  { icon:<BarChart3 size={15}/>,name:"Billing & reporting",    pct:"68%", amt:"+$5.8K"  },
+  { icon:<Filter size={15}/>,    name:"Lead response system",  pct:"92%", amt:"+$11.2K" },
+  { icon:<Settings size={15}/>,  name:"Quote automation",       pct:"84%", amt:"+$9.4K"  },
+  { icon:<Database size={15}/>,  name:"Scheduling & ops",       pct:"76%", amt:"+$7.1K"  },
+  { icon:<BarChart3 size={15}/>, name:"Billing & reporting",    pct:"68%", amt:"+$5.8K"  },
 ];
 
 function Tracker() {
@@ -166,9 +167,9 @@ function Tracker() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  ProfitDiagram                                */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Profit Diagram                      */
+/* ───────────────────────────────────── */
 function ProfitDiagram() {
   const col = (label: string, items: string[], bg: string, textCol: string, border: string) => (
     <div style={{ flex:1, minWidth:0 }}>
@@ -187,61 +188,69 @@ function ProfitDiagram() {
   );
   return (
     <div style={{ display:"flex", gap:10, alignItems:"stretch", marginBottom:36, flexWrap:"wrap" }}>
-      {col("Where it leaks",["Missed follow-ups","Slow quoting","Manual dispatch","Invisible billing gaps"],CREAM,INK,LINE)}
+      {col("Where it leaks", ["Slow lead response","Manual quoting","Dropped follow-ups","No visibility"], CREAM, INK, LINE)}
       {arrow}
-      {col("Recovery engine",["Auto lead capture","Quote automation","Ops command center","Revenue tracking"],INK,CREAM,"rgba(255,255,255,.09)")}
+      {col("The recovery engine", ["Capture","Automate","Optimize","Report"], INK, CREAM, "rgba(255,255,255,.09)")}
       {arrow}
-      {col("What you keep",["$8K–$14K/yr back","$6K–$12K/yr back","$9K–$18K/yr back","$7K–$11K/yr back"],`${ACCENT}14`,ACCENT_DEEP,`${ACCENT}30`)}
+      {col("What you keep", ["More booked jobs","Faster cash","Hours back","$30K+ recovered"], `${ACCENT}14`, ACCENT_DEEP, `${ACCENT}30`)}
     </div>
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Data                                         */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Data                                */
+/* ───────────────────────────────────── */
 const PAINS = [
-  { icon:<PhoneOff size={20}/>, title:"Leads slip through the cracks",
-    body:"Every missed response or slow follow-up costs you $2K–$5K in lost jobs. It's your biggest invisible drain.", cost:"$8,400–$14,000 / yr avg" },
-  { icon:<Clock size={20}/>, title:"Quotes take too long, lose deals",
-    body:"Manual quoting delays mean competitors win jobs you should have. Speed decides who gets the sale.", cost:"$6,200–$12,000 / yr avg" },
-  { icon:<Route size={20}/>, title:"Ops run on memory and spreadsheets",
-    body:"When systems live in people's heads, mistakes happen, capacity caps early, and you hire before you're ready.", cost:"$9,000–$18,000 / yr avg" },
-  { icon:<Eye size={20}/>, title:"Billing and reporting lag behind",
-    body:"Late invoices, missed upsells, and no real profitability visibility keep you reactive instead of in control.", cost:"$7,100–$11,000 / yr avg" },
+  { title:"Your team quotes by hand",
+    body:"Estimates sit in someone's inbox for days. Customers don't wait — they call the next guy or gone to a competitor who answered first.",
+    cost:"Lost: 20–40% of winnable jobs" },
+  { title:"Leads slip through the cracks",
+    body:"Calls missed, forms unanswered, follow-ups that never happen. Every hour without a fast, consistent response is money walking out the door.",
+    cost:"Lost: thousands per week" },
+  { title:"Your operations run on guesswork",
+    body:"Jobs double-booked, your calendar is a mess, and no one knows real capacity until you're missing appointments. The inefficiency you can't see is the inefficiency you keep paying for.",
+    cost:"Lost: unknown — that's the problem" },
+  { title:"You're flying blind on the numbers",
+    body:"No real-time view of margin, utilization, or where the leaks are. You find out something's broken a quarter too late.",
+    cost:"Lost: $30K+ you never recover" },
 ];
 
 const INDUSTRIES = [
-  { icon:<HomeIcon size={22}/>, title:"Service Businesses",
-    body:"HVAC, plumbing, electrical, field service — we stop the lead and scheduling leaks that cap your capacity.",
-    tags:["Lead Response","Dispatch","Job Tracking"] },
-  { icon:<Truck size={22}/>, title:"Logistics & Transportation",
-    body:"Freight brokers, auto transport, last-mile delivery — we automate the ops that slow down your margin.",
-    tags:["Load Management","Driver Ops","Customer Updates"] },
-  { icon:<Building2 size={22}/>, title:"Manufacturing & Industrial",
-    body:"Job shops, contract manufacturers, industrial services — we connect your floor to your books.",
-    tags:["Quoting","Work Orders","Production Tracking"] },
+  { title:"Service Businesses",
+    body:"HVAC, plumbing, electrical, roofing, and field service — operations that win or lose on response speed.",
+    tags:["Instant quoting","Scheduling automation","Lead capture"] },
+  { title:"Logistics & Transportation",
+    body:"Freight brokerages, Amazon DSPs, fleets, and last-mile operations where per-asset visibility decides whether you profit.",
+    tags:["Spot quoting","POD automation","Driver ops"] },
+  { title:"Manufacturing & Industrial",
+    body:"Shops, fabricators, and production teams running on whiteboards, spreadsheets, and zero real-time visibility on the floor.",
+    tags:["RFQ automation","Job costing","Production tracking"] },
 ];
 
 const SERVICES = [
-  { num:"01", title:"Lead & Quote Automation",
-    body:"Every lead captured, responded to, and followed up automatically. Quotes generated and sent without your team touching a keyboard." },
-  { num:"02", title:"Operations Command Center",
-    body:"One view of every job, truck, technician, or order in motion. No more status calls, spreadsheet updates, or missed handoffs." },
-  { num:"03", title:"Revenue Intelligence",
-    body:"Real-time visibility into what's profitable, what's leaking, and what to fix next. Know your numbers without building reports manually." },
-  { num:"04", title:"Client Communication Stack",
-    body:"Automated updates, review requests, and upsell sequences that run without anyone on your team sending a single message." },
+  { num:"01", title:"Lead capture & instant response",
+    body:"Every call, form, and message captured and responded to in under 60 seconds — across phone, web, and chat — so no opportunity ever goes cold.",
+    pills:["Speed-to-lead","Missed call text-back","24/7 capture"] },
+  { num:"02", title:"Quoting & sales automation",
+    body:"Turn requests into branded quotes automatically, followed up consistently, and moved through your pipeline to close so your team doesn't have to.",
+    pills:["Auto-quotes","Follow-up","Pipeline"] },
+  { num:"03", title:"Operations & scheduling systems",
+    body:"Scheduling, job tracking, and capacity management that eliminates double-booking, reduces no-shows, and creates fewer gaps, smoother workflow, more billable hours.",
+    pills:["Scheduling","Job tracking","Capacity"] },
+  { num:"04", title:"Reporting & profit visibility",
+    body:"Real-time dashboards on margin, utilization, and pipeline so you always know where the money is and where it's still leaking.",
+    pills:["Dashboards","Margin","Alerts"] },
 ];
 
 const STEPS = [
-  { num:"01", title:"Profit Audit",
-    body:"A deep-dive into your current ops — we map every system, workflow, and cost center. You'll see exactly where money is leaving the building." },
-  { num:"02", title:"Custom Blueprint",
-    body:"We design the exact stack for your business — no templates, no bloat. Just the systems that will recover your $30K." },
-  { num:"03", title:"Build & Install",
-    body:"We build it inside your business using tools you already pay for — or purpose-built where needed. You own everything." },
-  { num:"04", title:"Recovered & Reinvested",
-    body:"Inside 90 days, you're on new systems. The profit we recover goes back into scaling, not into fixing the same problems." },
+  { num:"01", title:"Audit",     badge:"Week 1 · Free",
+    body:"We map every workflow in your operation and calculate the exact dollar value of every leak — quoting, follow-up, scheduling, billing, reporting. You get a clear number: what recovery looks like for your business specifically." },
+  { num:"02", title:"Blueprint", badge:"Week 2",
+    body:"We design the exact systems to plug those leaks — specific tools, custom logic, and the projected return before a single thing gets built." },
+  { num:"03", title:"Build",     badge:"Weeks 3–4",
+    body:"We architect, integrate, and deploy custom AI-powered automation systems inside your business — built against your actual data and tested with your team." },
+  { num:"04", title:"Recover",   badge:"Days 30–90",
+    body:"Systems run live and claw back profit — faster responses, automated quoting, tighter operations, real-time visibility. We measure recovery against the guarantee." },
 ];
 
 const RESULTS_STATS = [
@@ -252,52 +261,65 @@ const RESULTS_STATS = [
 ];
 
 const COMPARISON_ROWS = [
-  { feature:"Guaranteed results",      inhouse:false, freelance:false, jdl:true  },
-  { feature:"Built for your industry", inhouse:false, freelance:null,  jdl:true  },
-  { feature:"You own the systems",     inhouse:null,  freelance:false, jdl:true  },
-  { feature:"Profit recovery focus",   inhouse:false, freelance:false, jdl:true  },
-  { feature:"90-day delivery",         inhouse:false, freelance:false, jdl:true  },
-  { feature:"No long-term retainer",   inhouse:null,  freelance:false, jdl:true  },
+  { feature:"Recovers profit in 90 days",       inhouse:false, freelance:false, jdl:true },
+  { feature:"Guaranteed result or you pay $0",  inhouse:false, freelance:false, jdl:true },
+  { feature:"Built by real operators",          inhouse:false, freelance:false, jdl:true },
+  { feature:"Systems you own outright",         inhouse:true,  freelance:false, jdl:true },
+  { feature:"No long-term retainer",            inhouse:false, freelance:true,  jdl:true },
+  { feature:"Live in weeks, not quarters",      inhouse:false, freelance:false, jdl:true },
 ];
 
 const GUARANTEE_ITEMS = [
-  "$30K in recovered profit, guaranteed in 90 days",
-  "If we miss, you pay nothing — zero. Not reduced. Zero.",
-  "No retainer. No licensing. You own what we build.",
-  "Every system tested and validated before handoff.",
+  "We recover at least $30,000 in net profit within 90 days — guaranteed to the last cent",
+  "No long-term retainers, no lock-in contracts",
+  "You keep every system we build, regardless of outcome",
+  "If we miss the target, you pay nothing. Zero.",
 ];
 
 const FAQ_ITEMS = [
   { q:"How can you guarantee $30K in 90 days?",
     a:"Because we don't take clients we can't deliver for. Before you pay anything, we run a Profit Audit. If we don't see a clear path to $30K, we tell you — and we part as friends. Once we start, we build the systems and stay accountable to the number." },
+  { q:"What exactly do you build?",
+    a:"We build the four systems that recover profit for operators: lead capture and instant response, quoting and sales automation, operations and scheduling systems, and reporting dashboards. Every build is custom to your business — not templates, not off-the-shelf tools with your logo on them." },
+  { q:"Do I need a technical team?",
+    a:"No. We handle the architecture, integration, and deployment. We document everything and train your team to use it. You don't need developers, IT staff, or anyone technical on your side. If you have them, great — we'll work with them. If you don't, we've got it covered." },
+  { q:"How is this different from hiring an agency or buying software?",
+    a:"Agencies deliver deliverables. Software gives you a tool. We deliver a measured result — $30K in recovered profit — or you pay nothing. We're operators, not marketers. We build inside your business, own the outcome, and hand you systems you control forever. No monthly SaaS fees, no retainer, no disappearing after launch." },
   { q:"What does it cost?",
     a:"Pricing depends on the scope we uncover in your audit. We've worked with businesses from $50K to $120K engagements. But here's what matters: every engagement is priced against a hard ROI target. If the math doesn't work for you, we won't sell you." },
-  { q:"Do I need to already have software or tools?",
-    a:"No. We'll work with what you have or build what makes sense. We use tools you already pay for where possible, and set up new ones when the ROI justifies it. You own everything we build or configure." },
-  { q:"How long does implementation take?",
-    a:"The audit takes 1–2 weeks. Build phase is typically 6–10 weeks. You'll see early wins in the first 30 days — systems coming online, numbers improving. The guarantee window is 90 days from kickoff." },
-  { q:"Who handles the systems after you build them?",
-    a:"You do. We document everything, train your team, and hand off full ownership. We also offer an optional maintenance retainer if you want us on-call — but it's not required, and most clients don't need it." },
-  { q:"What if my business is seasonal?",
-    a:"We take seasonality into account in the audit. The $30K benchmark is adjusted for your actual revenue cycle. We've worked with businesses that have 3-month peak seasons — the systems we build are designed to maximize those windows." },
+  { q:"What happens on the free audit call?",
+    a:"It's 45 minutes. We map your current ops — lead flow, quoting process, scheduling, reporting — and identify where the biggest leaks are. At the end, you get a rough number: what we think we can recover and how. No pitch, no pressure. You keep the map either way." },
 ];
 
 const MARQUEE_ITEMS = [
-  "HVAC & Plumbing","Freight Brokerage","Manufacturing","Field Services",
-  "Auto Transport","Food Service Distribution","Construction Services","Industrial Staffing",
+  "HVAC & Plumbing","Freight & Logistics","Manufacturing","Auto Transport",
+  "Food Service Distribution","Home Service","Wholesale & Supply","Field Services",
 ];
 
 const PILOT_SEATS = [
-  { label:"HVAC & Plumbing",     filled:true  },
-  { label:"Freight & Logistics", filled:false },
-  { label:"Manufacturing",       filled:false },
-  { label:"Field Service",       filled:false },
-  { label:"Auto Transport",      filled:false },
+  { label:"HVAC & Plumbing"     },
+  { label:"Freight & Logistics" },
+  { label:"Manufacturing"       },
+  { label:"Field Service"       },
+  { label:"Auto Transport"      },
 ];
 
-/* ───────────────────────────────────────────── */
-/*  Shared UI                                    */
-/* ───────────────────────────────────────────── */
+const FIT_FOR = [
+  "You're a service, logistics, or manufacturing business doing $1M+ in revenue",
+  "Real operational volume — leads, jobs, trucks, orders flowing daily",
+  "You know you're losing money somewhere but can't see exactly where",
+  "You want systems you own, not another tool you rent forever",
+];
+const FIT_NOT = [
+  "You're pre-revenue or under $1M — the math doesn't work yet",
+  "You want a chatbot or quick automation, not real operational change",
+  "You're not willing to give us access to understand how your business runs",
+  "You're looking for hype, not measurable profit recovery",
+];
+
+/* ───────────────────────────────────── */
+/*  Shared UI                           */
+/* ───────────────────────────────────── */
 function Fade({ children, delay=0, className="" }: { children:React.ReactNode; delay?:number; className?:string }) {
   return (
     <motion.div className={className}
@@ -349,20 +371,6 @@ function PrimaryBtn({ children, onClick, small=false, light=false }: { children:
   );
 }
 
-function OutlineBtn({ children, onClick, onDark=false }: { children:React.ReactNode; onClick?:()=>void; onDark?:boolean }) {
-  return (
-    <button onClick={onClick}
-      style={{ display:"inline-flex", alignItems:"center", gap:8,
-        background:"transparent", color:onDark?CREAM:INK,
-        fontSize:15.5, fontWeight:600, padding:"14px 24px",
-        borderRadius:100, border:`1.5px solid ${onDark?"rgba(244,239,227,.28)":LINE}`,
-        cursor:"pointer", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif",
-        transition:"background .15s,border-color .15s" }}>
-      {children}
-    </button>
-  );
-}
-
 function FAQItem({ q, a, open, onToggle }: { q:string; a:string; open:boolean; onToggle:()=>void }) {
   return (
     <div style={{ borderBottom:`1px solid ${LINE}` }}>
@@ -387,9 +395,9 @@ function FAQItem({ q, a, open, onToggle }: { q:string; a:string; open:boolean; o
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Exit intent popup                            */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Exit intent popup                   */
+/* ───────────────────────────────────── */
 function ExitIntentPopup({ onOpen }: { onOpen:()=>void }) {
   const [show, setShow] = useState(false);
   const fired = useRef(false);
@@ -421,9 +429,9 @@ function ExitIntentPopup({ onOpen }: { onOpen:()=>void }) {
           </button>
           <div style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.1em", color:ACCENT, textTransform:"uppercase", marginBottom:10, fontFamily:"'Hanken Grotesk',sans-serif" }}>WAIT — BEFORE YOU GO</div>
           <h3 className="anton" style={{ fontSize:26, color:INK, lineHeight:1.1, marginBottom:10 }}>Know your profit leak number?</h3>
-          <p style={{ color:INK_SOFT, fontSize:14.5, lineHeight:1.6, marginBottom:22, fontFamily:"'Hanken Grotesk',sans-serif" }}>Most operators don't. A free 20-minute audit tells you exactly where money is leaving your business — no pitch, no obligation.</p>
+          <p style={{ color:INK_SOFT, fontSize:14.5, lineHeight:1.6, marginBottom:22, fontFamily:"'Hanken Grotesk',sans-serif" }}>Most operators don't. A free 45-minute audit tells you exactly where money is leaving your business — no pitch, no obligation.</p>
           <PrimaryBtn onClick={() => { setShow(false); onOpen(); }}>
-            Book the Free Audit <ArrowRight size={16} />
+            Book your free audit <ArrowRight size={16} />
           </PrimaryBtn>
         </motion.div>
       </motion.div>
@@ -431,9 +439,18 @@ function ExitIntentPopup({ onOpen }: { onOpen:()=>void }) {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Nav                                          */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Nav                                 */
+/* ───────────────────────────────────── */
+const NAV_LINKS: [string,string][] = [
+  ["/#services","Services"],
+  ["/#industries","Industries"],
+  ["/#results","Results"],
+  ["/#faq","FAQ"],
+  ["/roi-calculator","ROI Calculator"],
+  ["/contact","Contact"],
+];
+
 function LPNav({ onBook }: { onBook:()=>void }) {
   const [menu, setMenu] = useState(false);
   return (
@@ -445,18 +462,35 @@ function LPNav({ onBook }: { onBook:()=>void }) {
         <Link href="/" style={{ textDecoration:"none" }}>
           <Wordmark size={18} onDark={false} />
         </Link>
-        <div className="hidden md:flex" style={{ alignItems:"center", gap:28 }}>
-          {[["/#services","Services"],["/#process","Process"],["/#results","Results"],["/#faq","FAQ"]].map(([href,label]) => (
-            <a key={href} href={href}
-              style={{ fontSize:14.5, fontWeight:600, color:INK_SOFT, textDecoration:"none", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}
-              onMouseEnter={e => { (e.currentTarget).style.color=INK; }}
-              onMouseLeave={e => { (e.currentTarget).style.color=INK_SOFT; }}>
-              {label}
-            </a>
+        {/* Desktop links */}
+        <div className="hidden md:flex" style={{ alignItems:"center", gap:22 }}>
+          {NAV_LINKS.map(([href,label]) => (
+            href.startsWith("/") && !href.startsWith("/#") ? (
+              <Link key={href} href={href}
+                style={{ fontSize:14, fontWeight:600, color:INK_SOFT, textDecoration:"none", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}
+                onMouseEnter={(e:React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color=INK; }}
+                onMouseLeave={(e:React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color=INK_SOFT; }}>
+                {label}
+              </Link>
+            ) : (
+              <a key={href} href={href}
+                style={{ fontSize:14, fontWeight:600, color:INK_SOFT, textDecoration:"none", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}
+                onMouseEnter={e => { e.currentTarget.style.color=INK; }}
+                onMouseLeave={e => { e.currentTarget.style.color=INK_SOFT; }}>
+                {label}
+              </a>
+            )
           ))}
         </div>
-        <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-          <PrimaryBtn onClick={onBook} small>Book Free Audit</PrimaryBtn>
+        <div style={{ display:"flex", alignItems:"center", gap:12 }}>
+          {/* Ghost "Free AI Course" link — desktop only */}
+          <a href="/ai-course" className="hidden md:inline"
+            style={{ fontSize:14, fontWeight:600, color:ACCENT, textDecoration:"none", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif", opacity:.85 }}
+            onMouseEnter={e => { e.currentTarget.style.opacity="1"; }}
+            onMouseLeave={e => { e.currentTarget.style.opacity=".85"; }}>
+            Free AI Course
+          </a>
+          <PrimaryBtn onClick={onBook} small>Book a Free Audit</PrimaryBtn>
           <button className="flex md:hidden" onClick={() => setMenu(m => !m)}
             style={{ border:"none", background:"none", cursor:"pointer", padding:6, color:INK, display:"flex", flexDirection:"column" }}>
             <div style={{ width:20, height:2, background:INK, borderRadius:2, marginBottom:5, transition:"transform .2s", transform:menu?"rotate(45deg) translateY(7px)":"none" }} />
@@ -469,15 +503,28 @@ function LPNav({ onBook }: { onBook:()=>void }) {
         {menu && (
           <motion.div initial={{ height:0, opacity:0 }} animate={{ height:"auto", opacity:1 }} exit={{ height:0, opacity:0 }}
             style={{ overflow:"hidden", borderTop:`1px solid ${LINE}`, background:CREAM }}>
-            {[["/#services","Services"],["/#process","Process"],["/#results","Results"],["/#faq","FAQ"]].map(([href,label]) => (
-              <a key={href} href={href} onClick={() => setMenu(false)}
-                style={{ display:"block", padding:"14px 24px", fontSize:16, fontWeight:600, color:INK,
-                  textDecoration:"none", borderBottom:`1px solid ${LINE}`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                {label}
-              </a>
+            {NAV_LINKS.map(([href,label]) => (
+              href.startsWith("/") && !href.startsWith("/#") ? (
+                <Link key={href} href={href} onClick={() => setMenu(false)}
+                  style={{ display:"block", padding:"14px 24px", fontSize:16, fontWeight:600, color:INK,
+                    textDecoration:"none", borderBottom:`1px solid ${LINE}`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+                  {label}
+                </Link>
+              ) : (
+                <a key={href} href={href} onClick={() => setMenu(false)}
+                  style={{ display:"block", padding:"14px 24px", fontSize:16, fontWeight:600, color:INK,
+                    textDecoration:"none", borderBottom:`1px solid ${LINE}`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+                  {label}
+                </a>
+              )
             ))}
+            <a href="/ai-course" onClick={() => setMenu(false)}
+              style={{ display:"block", padding:"14px 24px", fontSize:16, fontWeight:600, color:ACCENT,
+                textDecoration:"none", borderBottom:`1px solid ${LINE}`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              Free AI Course
+            </a>
             <div style={{ padding:"14px 24px" }}>
-              <PrimaryBtn onClick={() => { setMenu(false); onBook(); }}>Book Free Audit</PrimaryBtn>
+              <PrimaryBtn onClick={() => { setMenu(false); onBook(); }}>Book a Free Audit</PrimaryBtn>
             </div>
           </motion.div>
         )}
@@ -486,19 +533,19 @@ function LPNav({ onBook }: { onBook:()=>void }) {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Hero                                         */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Hero                                */
+/* ───────────────────────────────────── */
 function Hero({ onBook }: { onBook:()=>void }) {
   return (
     <section style={{ background:CREAM, padding:"80px 24px 100px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <Fade>
+            {/* Dark pill eyebrow */}
             <div style={{ display:"inline-flex", alignItems:"center", gap:8,
-              background:`${ACCENT}14`, border:`1px solid ${ACCENT}30`,
-              borderRadius:100, padding:"7px 14px", marginBottom:24 }}>
-              <span style={{ fontSize:10.5, fontWeight:700, letterSpacing:"0.11em", textTransform:"uppercase", color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>Free Profit Recovery Audit</span>
+              background:INK, borderRadius:100, padding:"7px 16px", marginBottom:24 }}>
+              <span style={{ fontSize:10.5, fontWeight:700, letterSpacing:"0.08em", textTransform:"uppercase", color:CREAM, fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
             </div>
             <h1 className="anton" style={{ fontSize:"clamp(2.7rem,5.5vw,4rem)", lineHeight:1.05, letterSpacing:"-0.01em", color:INK, marginBottom:10 }}>
               We find the{" "}
@@ -509,15 +556,12 @@ function Hero({ onBook }: { onBook:()=>void }) {
               In 90 days or you don't pay.
             </p>
             <p style={{ fontSize:17, lineHeight:1.65, color:INK_SOFT, maxWidth:520, marginBottom:32, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              If you're doing $1M+ in service, logistics, or manufacturing, you're leaking profit every week. We find it. We fix it. We guarantee it.
+              If you're doing $1M+ in service, logistics, or manufacturing, you're leaking profit from leads that go cold, jobs that slip, and work that should run itself. We find the money. We recover it. We guarantee it.
             </p>
             <div style={{ display:"flex", flexWrap:"wrap", gap:12, marginBottom:36 }}>
               <PrimaryBtn onClick={onBook}>
-                Book Your Free Profit Recovery Audit <ArrowRight size={17} />
+                Book your free audit <ArrowRight size={17} />
               </PrimaryBtn>
-              <OutlineBtn onClick={() => document.getElementById("process")?.scrollIntoView({ behavior:"smooth" })}>
-                See How It Works
-              </OutlineBtn>
             </div>
             <div style={{ display:"flex", alignItems:"center", gap:14 }}>
               <div style={{ display:"flex" }}>
@@ -542,8 +586,9 @@ function Hero({ onBook }: { onBook:()=>void }) {
           </Fade>
           <Fade delay={0.12}>
             <div style={{ position:"relative" }}>
+              {/* Dark stamp on video */}
               <div style={{ position:"absolute", top:-16, right:-8, zIndex:10 }}>
-                <StampBadge size={94} />
+                <StampBadge size={94} dark />
               </div>
               <VSL />
             </div>
@@ -554,9 +599,9 @@ function Hero({ onBook }: { onBook:()=>void }) {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Trust strip                                  */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Trust strip                         */
+/* ───────────────────────────────────── */
 function TrustStrip() {
   const items = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
   return (
@@ -573,21 +618,21 @@ function TrustStrip() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Problem                                      */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Problem                             */
+/* ───────────────────────────────────── */
 function Problem() {
   return (
     <section style={{ background:INK, padding:"96px 24px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
         <Fade>
           <div style={{ textAlign:"center", marginBottom:52 }}>
-            <SectionLabel onDark>The Problem</SectionLabel>
+            <SectionLabel onDark>The leak</SectionLabel>
             <H2 onDark style={{ maxWidth:680, margin:"0 auto 16px" }}>
               Your business is bleeding $30K+ a year.<br/>You just can't see where.
             </H2>
-            <p style={{ color:"rgba(244,239,227,.55)", fontSize:17, lineHeight:1.65, maxWidth:500, margin:"0 auto", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              It's not one big hole. It's a hundred small leaks.
+            <p style={{ color:"rgba(244,239,227,.55)", fontSize:17, lineHeight:1.65, maxWidth:620, margin:"0 auto", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              It's not a sales problem. It's a thousand small decisions happening without systems — missed calls, slow quotes, dropped balls, and zero visibility — quietly draining profit you already earned.
             </p>
           </div>
         </Fade>
@@ -595,16 +640,10 @@ function Problem() {
           {PAINS.map((p, i) => (
             <Fade key={p.title} delay={i*0.07}>
               <div style={{ background:"rgba(255,255,255,.04)", border:"1px solid rgba(255,255,255,.08)", borderRadius:18, padding:"28px 26px" }}>
-                <div style={{ width:44, height:44, borderRadius:12, background:`${ACCENT}22`,
-                  display:"flex", alignItems:"center", justifyContent:"center", marginBottom:16, color:ACCENT }}>
-                  {p.icon}
-                </div>
-                <h3 style={{ fontSize:17, fontWeight:700, color:CREAM, marginBottom:8, fontFamily:"'Hanken Grotesk',sans-serif", letterSpacing:"-0.01em" }}>{p.title}</h3>
-                <p style={{ fontSize:14.5, lineHeight:1.6, color:"rgba(244,239,227,.52)", marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif" }}>{p.body}</p>
-                <div style={{ display:"inline-flex", alignItems:"center", gap:7, background:"rgba(249,115,22,.12)",
-                  border:"1px solid rgba(249,115,22,.2)", borderRadius:100, padding:"5px 12px" }}>
-                  <span style={{ width:7, height:7, borderRadius:"50%", background:"#f97316", flex:"0 0 auto" }} />
-                  <span style={{ fontSize:12.5, fontWeight:700, color:"#f97316", fontFamily:"'Hanken Grotesk',sans-serif" }}>{p.cost}</span>
+                <h3 style={{ fontSize:17, fontWeight:700, color:CREAM, marginBottom:10, fontFamily:"'Hanken Grotesk',sans-serif", letterSpacing:"-0.01em" }}>{p.title}</h3>
+                <p style={{ fontSize:14.5, lineHeight:1.6, color:"rgba(244,239,227,.52)", marginBottom:18, fontFamily:"'Hanken Grotesk',sans-serif" }}>{p.body}</p>
+                <div style={{ display:"flex", alignItems:"center", gap:7 }}>
+                  <span style={{ color:"#f97316", fontSize:13, fontWeight:700, fontFamily:"'Hanken Grotesk',sans-serif" }}>▸ {p.cost}</span>
                 </div>
               </div>
             </Fade>
@@ -615,29 +654,28 @@ function Problem() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Industries                                   */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Industries                          */
+/* ───────────────────────────────────── */
 function Industries() {
   return (
-    <section style={{ background:CREAM2, padding:"96px 24px" }}>
+    <section id="industries" style={{ background:CREAM2, padding:"96px 24px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
         <Fade>
           <div style={{ textAlign:"center", marginBottom:52 }}>
-            <SectionLabel>Who We Build For</SectionLabel>
-            <H2 style={{ maxWidth:560, margin:"0 auto 0" }}>
+            <SectionLabel>Industries</SectionLabel>
+            <H2 style={{ maxWidth:560, margin:"0 auto 12px" }}>
               Built for the operators who keep things running.
             </H2>
+            <p style={{ fontSize:16.5, color:INK_SOFT, maxWidth:520, margin:"0 auto", fontFamily:"'Hanken Grotesk',sans-serif", lineHeight:1.65 }}>
+              If your business has real operational volume and thin time margins, these are the ones we recover it for most.
+            </p>
           </div>
         </Fade>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {INDUSTRIES.map((ind, i) => (
             <Fade key={ind.title} delay={i*0.08}>
               <div style={{ background:CREAM, border:`1px solid ${LINE}`, borderRadius:20, padding:"28px 26px", height:"100%" }}>
-                <div style={{ width:48, height:48, borderRadius:14, background:`${ACCENT}12`,
-                  display:"flex", alignItems:"center", justifyContent:"center", marginBottom:18, color:ACCENT }}>
-                  {ind.icon}
-                </div>
                 <h3 style={{ fontSize:18, fontWeight:700, color:INK, marginBottom:10, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{ind.title}</h3>
                 <p style={{ fontSize:14.5, lineHeight:1.65, color:INK_SOFT, marginBottom:18, fontFamily:"'Hanken Grotesk',sans-serif" }}>{ind.body}</p>
                 <div style={{ display:"flex", flexWrap:"wrap", gap:7 }}>
@@ -655,27 +693,27 @@ function Industries() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  FSO                                          */
-/* ───────────────────────────────────────────── */
-function FSO({ onBook }: { onBook:()=>void }) {
+/* ───────────────────────────────────── */
+/*  FSO                                 */
+/* ───────────────────────────────────── */
+function FSO() {
   const stats = [
-    { num:"40+", label:"operators served"    },
-    { num:"92%", label:"avg automation rate" },
-    { num:"90",  label:"day guarantee window"},
-    { num:"$0",  label:"if targets missed"   },
+    { num:"50+",  label:"businesses automated"   },
+    { num:"100%", label:"systems always running"  },
+    { num:"90",   label:"day guarantee window"    },
+    { num:"48hr", label:"from signed to building" },
   ];
   return (
     <section style={{ background:CREAM, padding:"96px 24px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <Fade>
-            <SectionLabel>How It Works</SectionLabel>
+            <SectionLabel>Your unfair advantage</SectionLabel>
             <H2 style={{ maxWidth:480 }}>Your fractional systems operator.</H2>
             <p style={{ color:INK_SOFT, fontSize:16.5, lineHeight:1.7, maxWidth:480, marginBottom:30, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              We're not consultants. We're not developers. We're operators who build automated systems inside your business — and stand behind the results.
+              Not an agency you manage. Not software you babysit. A dedicated operator who maps your leaks, builds the systems, runs the numbers, and keeps the profit flowing back to you.
             </p>
-            <div className="grid grid-cols-2 gap-4" style={{ marginBottom:32 }}>
+            <div className="grid grid-cols-2 gap-4">
               {stats.map(s => (
                 <div key={s.label} style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:14, padding:"20px 18px" }}>
                   <div className="anton" style={{ fontSize:30, color:ACCENT, lineHeight:1 }}>{s.num}</div>
@@ -683,7 +721,6 @@ function FSO({ onBook }: { onBook:()=>void }) {
                 </div>
               ))}
             </div>
-            <PrimaryBtn onClick={onBook}>Book Your Free Audit <ArrowRight size={16} /></PrimaryBtn>
           </Fade>
           <Fade delay={0.1}>
             <Tracker />
@@ -694,37 +731,34 @@ function FSO({ onBook }: { onBook:()=>void }) {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Inline CTA                                   */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Inline CTA                          */
+/* ───────────────────────────────────── */
 function InlineCTA({ onBook }: { onBook:()=>void }) {
   return (
     <section style={{ background:ACCENT, padding:"60px 24px" }}>
       <div style={{ maxWidth:800, margin:"0 auto", textAlign:"center" }}>
-        <h2 className="anton" style={{ fontSize:"clamp(1.9rem,3.8vw,2.6rem)", color:"#fff", marginBottom:16 }}>
+        <h2 className="anton" style={{ fontSize:"clamp(1.9rem,3.8vw,2.6rem)", color:"#fff", marginBottom:28 }}>
           Ready to recover your $30,000?
         </h2>
-        <p style={{ fontSize:16.5, color:"rgba(255,255,255,.78)", marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-          Book a free Profit Recovery Audit. No pitch. Just a map of where your money is going.
-        </p>
         <PrimaryBtn onClick={onBook} light>
-          Book Your Free Profit Recovery Audit <ArrowRight size={16} />
+          Book your free audit <ArrowRight size={16} />
         </PrimaryBtn>
       </div>
     </section>
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Services                                     */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Services                            */
+/* ───────────────────────────────────── */
 function Services() {
   return (
     <section id="services" style={{ background:CREAM2, padding:"96px 24px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
         <Fade>
           <div style={{ textAlign:"center", marginBottom:44 }}>
-            <SectionLabel>What We Build</SectionLabel>
+            <SectionLabel>Services</SectionLabel>
             <H2 style={{ maxWidth:560, margin:"0 auto 0" }}>
               Four systems that recover lost profit.
             </H2>
@@ -737,9 +771,15 @@ function Services() {
               <div style={{ display:"flex", gap:22, alignItems:"flex-start",
                 background:CREAM, border:`1px solid ${LINE}`, borderRadius:18, padding:"24px 26px" }}>
                 <div className="anton" style={{ fontSize:40, color:`${ACCENT}28`, lineHeight:1, flex:"0 0 auto", minWidth:54, marginTop:2 }}>{s.num}</div>
-                <div>
+                <div style={{ flex:1 }}>
                   <h3 style={{ fontSize:17.5, fontWeight:700, color:INK, marginBottom:7, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.title}</h3>
-                  <p style={{ fontSize:15, lineHeight:1.65, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.body}</p>
+                  <p style={{ fontSize:15, lineHeight:1.65, color:INK_SOFT, marginBottom:12, fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.body}</p>
+                  <div style={{ display:"flex", flexWrap:"wrap", gap:7 }}>
+                    {s.pills.map(pill => (
+                      <span key={pill} style={{ fontSize:12, fontWeight:600, color:ACCENT, background:`${ACCENT}0F`,
+                        border:`1px solid ${ACCENT}28`, borderRadius:100, padding:"4px 12px", fontFamily:"'Hanken Grotesk',sans-serif" }}>{pill}</span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </Fade>
@@ -750,30 +790,35 @@ function Services() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Process                                      */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Process                             */
+/* ───────────────────────────────────── */
 function Process() {
   return (
     <section id="process" style={{ background:CREAM, padding:"96px 24px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
         <Fade>
           <div style={{ textAlign:"center", marginBottom:52 }}>
-            <SectionLabel>The Process</SectionLabel>
+            <SectionLabel>How it works</SectionLabel>
             <H2 style={{ maxWidth:540, margin:"0 auto 0" }}>
-              Three steps. Ninety days. Jobs done.
+              Four steps. Ninety days. Jobs done.
             </H2>
           </div>
         </Fade>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {STEPS.map((s, i) => (
             <Fade key={s.num} delay={i*0.08}>
-              <div style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:20, padding:"26px 22px", position:"relative", height:"100%", overflow:"hidden" }}>
-                <div style={{ position:"absolute", top:14, right:16 }}>
-                  <div className="anton" style={{ fontSize:54, color:`${ACCENT}14`, lineHeight:1 }}>{s.num}</div>
-                </div>
-                <div style={{ width:42, height:42, borderRadius:12, background:ACCENT, display:"flex", alignItems:"center", justifyContent:"center", marginBottom:18, position:"relative", zIndex:1 }}>
+              <div style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:20, padding:"26px 22px", height:"100%" }}>
+                {/* Solid blue number badge */}
+                <div style={{ width:38, height:38, borderRadius:10, background:ACCENT,
+                  display:"flex", alignItems:"center", justifyContent:"center", marginBottom:12 }}>
                   <span className="anton" style={{ color:"#fff", fontSize:14 }}>{s.num}</span>
+                </div>
+                {/* Timeline badge */}
+                <div style={{ display:"inline-flex", alignItems:"center", gap:6,
+                  background:`${ACCENT}0F`, border:`1px solid ${ACCENT}28`, borderRadius:100,
+                  padding:"3px 10px", marginBottom:14 }}>
+                  <span style={{ fontSize:11, fontWeight:700, color:ACCENT, letterSpacing:"0.05em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.badge}</span>
                 </div>
                 <h3 style={{ fontSize:17, fontWeight:700, color:INK, marginBottom:8, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.title}</h3>
                 <p style={{ fontSize:14, lineHeight:1.65, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.body}</p>
@@ -786,9 +831,9 @@ function Process() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Results / Case Study                         */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Results / Case Study                */
+/* ───────────────────────────────────── */
 function Results() {
   return (
     <section id="results" style={{ background:INK2, padding:"96px 24px" }}>
@@ -835,13 +880,22 @@ function Results() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Comparison                                   */
-/* ───────────────────────────────────────────── */
-function TickOrX({ val }: { val:boolean|null }) {
-  if (val === true)  return <div style={{ width:26, height:26, borderRadius:"50%", background:`${GREEN}1A`, display:"flex", alignItems:"center", justifyContent:"center" }}><Check size={14} color={GREEN} strokeWidth={2.5} /></div>;
-  if (val === false) return <div style={{ width:26, height:26, borderRadius:"50%", background:"rgba(239,68,68,.12)", display:"flex", alignItems:"center", justifyContent:"center" }}><X size={14} color="#ef4444" strokeWidth={2.5} /></div>;
-  return <span style={{ fontSize:12.5, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>sometimes</span>;
+/* ───────────────────────────────────── */
+/*  Comparison                          */
+/* ───────────────────────────────────── */
+function TickOrX({ val }: { val:boolean }) {
+  if (val) return (
+    <div style={{ width:26, height:26, borderRadius:"50%", background:`${GREEN}1A`,
+      display:"flex", alignItems:"center", justifyContent:"center" }}>
+      <Check size={14} color={GREEN} strokeWidth={2.5} />
+    </div>
+  );
+  return (
+    <div style={{ width:26, height:26, borderRadius:"50%", background:"rgba(239,68,68,.12)",
+      display:"flex", alignItems:"center", justifyContent:"center" }}>
+      <X size={14} color="#ef4444" strokeWidth={2.5} />
+    </div>
+  );
 }
 
 function Comparison() {
@@ -850,7 +904,7 @@ function Comparison() {
       <div style={{ maxWidth:900, margin:"0 auto" }}>
         <Fade>
           <div style={{ textAlign:"center", marginBottom:48 }}>
-            <SectionLabel>Why Choose Us</SectionLabel>
+            <SectionLabel>The honest comparison</SectionLabel>
             <H2 style={{ maxWidth:560, margin:"0 auto 0" }}>
               Why operators choose us over the alternatives.
             </H2>
@@ -860,7 +914,7 @@ function Comparison() {
           <div style={{ background:CREAM, border:`1px solid ${LINE}`, borderRadius:20, overflow:"hidden" }}>
             <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr", borderBottom:`1px solid ${LINE}` }}>
               <div style={{ padding:"16px 20px" }} />
-              {(["In-house","Freelancer","Jobs Done Labs"] as string[]).map((h, i) => (
+              {(["In-house hire","Freelancer","Jobs Done Labs"] as string[]).map((h, i) => (
                 <div key={h} style={{ padding:"16px 20px", textAlign:"center",
                   background:i===2?`${ACCENT}0D`:"transparent",
                   borderLeft:`1px solid ${LINE}` }}>
@@ -876,7 +930,7 @@ function Comparison() {
                 <div style={{ padding:"15px 20px" }}>
                   <span style={{ fontSize:14.5, fontWeight:500, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>{row.feature}</span>
                 </div>
-                {([row.inhouse, row.freelance, row.jdl] as (boolean|null)[]).map((v, ci) => (
+                {([row.inhouse, row.freelance, row.jdl] as boolean[]).map((v, ci) => (
                   <div key={ci} style={{ padding:"15px 20px", display:"flex", alignItems:"center", justifyContent:"center",
                     background:ci===2?`${ACCENT}07`:"transparent", borderLeft:`1px solid ${LINE}` }}>
                     <TickOrX val={v} />
@@ -891,10 +945,10 @@ function Comparison() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Guarantee                                    */
-/* ───────────────────────────────────────────── */
-function Guarantee({ onBook }: { onBook:()=>void }) {
+/* ───────────────────────────────────── */
+/*  Guarantee                           */
+/* ───────────────────────────────────── */
+function Guarantee() {
   return (
     <section style={{ background:ACCENT, padding:"96px 24px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
@@ -907,28 +961,39 @@ function Guarantee({ onBook }: { onBook:()=>void }) {
                   padding:4, border:"2px solid rgba(255,255,255,.3)" }}>
                   <img src="/ryne.jpg" alt="Ryne Bandolik — Founder" style={{ width:"100%", height:"100%", borderRadius:"50%", objectFit:"cover", objectPosition:"top" }} />
                 </div>
+                {/* Round dark $30K GUARANTEED badge */}
                 <div style={{ position:"absolute", bottom:-10, right:-10 }}>
-                  <StampBadge size={72} />
+                  <StampBadge size={72} dark />
                 </div>
               </div>
-              <div style={{ background:"rgba(255,255,255,.12)", backdropFilter:"blur(8px)", border:"1px solid rgba(255,255,255,.2)", borderRadius:18, padding:"20px 22px", maxWidth:320 }}>
+              <div style={{ background:"rgba(255,255,255,.12)", backdropFilter:"blur(8px)", border:"1px solid rgba(255,255,255,.2)", borderRadius:18, padding:"20px 22px", maxWidth:340 }}>
                 <p style={{ color:"rgba(255,255,255,.82)", fontSize:14.5, lineHeight:1.65, marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif", fontStyle:"italic" }}>
-                  "If we can't find your $30K, you pay nothing. I put my name on every engagement."
+                  "I put my own fee on the line because I ran this on my own operation and recovered $200K doing it. If it works there, I'll prove it works for you."
                 </p>
-                <div className="caveat" style={{ fontSize:24, color:"#fff", lineHeight:1, marginBottom:2 }}>Ryne Bandolik</div>
-                <div style={{ fontSize:12, color:"rgba(255,255,255,.62)", fontFamily:"'Hanken Grotesk',sans-serif" }}>Founder, Jobs Done Labs</div>
+                <div style={{ marginBottom:14 }}>
+                  <div className="caveat" style={{ fontSize:24, color:"#fff", lineHeight:1.1 }}>Ryne Bandolik</div>
+                  <div style={{ fontSize:12, color:"rgba(255,255,255,.62)", fontFamily:"'Hanken Grotesk',sans-serif" }}>Jobs Done Labs</div>
+                </div>
+                <div style={{ display:"flex", alignItems:"center", gap:10, paddingTop:12, borderTop:"1px solid rgba(255,255,255,.18)" }}>
+                  <span style={{ fontSize:12.5, fontWeight:700, color:"rgba(255,255,255,.9)", fontFamily:"'Hanken Grotesk',sans-serif" }}>40+ Companies</span>
+                  <span style={{ fontSize:12.5, color:"rgba(255,255,255,.4)", fontFamily:"'Hanken Grotesk',sans-serif" }}>·</span>
+                  <span style={{ fontSize:12.5, fontWeight:700, color:"rgba(255,255,255,.9)", fontFamily:"'Hanken Grotesk',sans-serif" }}>$0 Your risk</span>
+                  <div style={{ display:"inline-flex", alignItems:"center", gap:4, background:"rgba(255,255,255,.1)", border:"1px solid rgba(255,255,255,.18)", borderRadius:100, padding:"2px 8px", marginLeft:"auto" }}>
+                    <span style={{ fontSize:11, fontWeight:700, letterSpacing:"0.06em", color:"rgba(255,255,255,.7)", fontFamily:"'Hanken Grotesk',sans-serif" }}>PERSONALLY BACKED</span>
+                  </div>
+                </div>
               </div>
             </div>
           </Fade>
           <Fade delay={0.1}>
             <SectionLabel onDark>The Guarantee</SectionLabel>
             <H2 onDark style={{ maxWidth:500 }}>
-              Guaranteed results. Or you pay nothing.
+              Recover $30K in 90 days, or you pay nothing.
             </H2>
             <p style={{ color:"rgba(255,255,255,.8)", fontSize:16.5, lineHeight:1.7, marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              We've built this. We've proven it. We put our reputation behind every engagement. Here's exactly what we promise.
+              We put our entire fee on the line. Either we find and recover at least $30,000 in net profit for your business within 90 days — or you owe us nothing. That's how confident we are in the work.
             </p>
-            <div style={{ display:"flex", flexDirection:"column", gap:14, marginBottom:36 }}>
+            <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
               {GUARANTEE_ITEMS.map(item => (
                 <div key={item} style={{ display:"flex", alignItems:"flex-start", gap:12 }}>
                   <div style={{ width:24, height:24, borderRadius:"50%", background:"rgba(255,255,255,.18)", flex:"0 0 auto", display:"flex", alignItems:"center", justifyContent:"center" }}>
@@ -938,9 +1003,6 @@ function Guarantee({ onBook }: { onBook:()=>void }) {
                 </div>
               ))}
             </div>
-            <PrimaryBtn onClick={onBook} light>
-              Claim Your Guarantee <ArrowRight size={16} />
-            </PrimaryBtn>
           </Fade>
         </div>
       </div>
@@ -948,29 +1010,16 @@ function Guarantee({ onBook }: { onBook:()=>void }) {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Fit                                          */
-/* ───────────────────────────────────────────── */
-const FIT_FOR = [
-  "Service, logistics, or manufacturing doing $1M+ in revenue",
-  "Real operational volume — leads, jobs, trucks, or orders flowing daily",
-  "Losing time and money to manual work, but can't pinpoint exactly where",
-  "Want systems you own and control — not another tool you rent forever",
-];
-const FIT_NOT = [
-  "Pre-revenue businesses or under $1M in annual revenue",
-  "Looking for a cheap chatbot or a one-off automation task",
-  "Not willing to give us access to understand how your business runs",
-  "Looking for hype, theory, or strategy — not measurable results",
-];
-
+/* ───────────────────────────────────── */
+/*  Fit                                 */
+/* ───────────────────────────────────── */
 function Fit() {
   return (
     <section style={{ background:CREAM, padding:"96px 24px" }}>
       <div style={{ maxWidth:1000, margin:"0 auto" }}>
         <Fade>
           <div style={{ textAlign:"center", marginBottom:52 }}>
-            <SectionLabel>Is This a Fit?</SectionLabel>
+            <SectionLabel>Honest fit</SectionLabel>
             <H2 style={{ maxWidth:560, margin:"0 auto 0" }}>
               We're not for everyone. Here's the truth.
             </H2>
@@ -1019,40 +1068,32 @@ function Fit() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Pilot (replaces testimonials)                */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Pilot                               */
+/* ───────────────────────────────────── */
 function Pilot({ onBook }: { onBook:()=>void }) {
   return (
     <section style={{ background:CREAM2, padding:"96px 24px" }}>
       <div style={{ maxWidth:800, margin:"0 auto", textAlign:"center" }}>
         <Fade>
           <div style={{ background:INK2, border:"1px solid rgba(255,255,255,.08)", borderRadius:28, padding:"48px 36px", position:"relative", overflow:"hidden" }}>
-            <div style={{ position:"absolute", top:20, right:24 }}>
-              <div style={{ display:"inline-flex", alignItems:"center", gap:6, background:"rgba(52,211,153,.14)", border:"1px solid rgba(52,211,153,.26)", borderRadius:100, padding:"6px 12px" }}>
-                <span style={{ width:6, height:6, borderRadius:"50%", background:GREEN, boxShadow:`0 0 0 3px ${GREEN}22` }} />
-                <span style={{ fontSize:11.5, fontWeight:700, color:GREEN, letterSpacing:"0.08em", fontFamily:"'Hanken Grotesk',sans-serif" }}>ACCEPTING APPLICATIONS</span>
-              </div>
-            </div>
-            <SectionLabel onDark>Limited Availability</SectionLabel>
+            <SectionLabel onDark>Pilot program · 2026</SectionLabel>
             <H2 onDark style={{ maxWidth:560, margin:"0 auto 14px" }}>
-              We're building for 5 businesses right now.
+              We're building for 5 service businesses right now.
             </H2>
-            <p style={{ color:"rgba(244,239,227,.58)", fontSize:16, lineHeight:1.7, maxWidth:460, margin:"0 auto 36px", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              Each cohort is limited so we can deliver the results we guarantee. One seat per industry.
+            <p style={{ color:"rgba(244,239,227,.58)", fontSize:16, lineHeight:1.7, maxWidth:480, margin:"0 auto 36px", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              Instead of recycled testimonials, here's the truth: we're hands-on with our founding cohort as we speak. Full, numbers-backed case studies drop Q4 2026 — get in before they do.
             </p>
             <div style={{ display:"flex", flexWrap:"wrap", gap:10, justifyContent:"center", marginBottom:32 }}>
               {PILOT_SEATS.map(s => (
                 <div key={s.label} style={{ display:"flex", alignItems:"center", gap:8,
-                  background:s.filled?`${ACCENT}22`:"rgba(255,255,255,.05)",
-                  border:`1px solid ${s.filled?ACCENT+"44":"rgba(255,255,255,.1)"}`,
+                  background:"rgba(255,255,255,.05)",
+                  border:"1px solid rgba(255,255,255,.1)",
                   borderRadius:100, padding:"9px 16px" }}>
                   <span style={{ width:8, height:8, borderRadius:"50%",
-                    background:s.filled?ACCENT:"rgba(255,255,255,.25)",
-                    boxShadow:s.filled?`0 0 0 3px ${ACCENT}30`:"none",
+                    background:"rgba(255,255,255,.25)",
                     flex:"0 0 auto" }} />
-                  <span style={{ fontSize:13.5, fontWeight:600, color:s.filled?CREAM:"rgba(244,239,227,.48)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.label}</span>
-                  {s.filled && <span style={{ fontSize:10.5, fontWeight:700, color:ACCENT, letterSpacing:"0.05em", fontFamily:"'Hanken Grotesk',sans-serif" }}>FILLED</span>}
+                  <span style={{ fontSize:13.5, fontWeight:600, color:"rgba(244,239,227,.7)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.label}</span>
                 </div>
               ))}
             </div>
@@ -1061,7 +1102,7 @@ function Pilot({ onBook }: { onBook:()=>void }) {
             </div>
             <div>
               <PrimaryBtn onClick={onBook}>
-                Apply for the Next Cohort <ArrowRight size={16} />
+                Apply for the next cohort <ArrowRight size={16} />
               </PrimaryBtn>
             </div>
           </div>
@@ -1071,9 +1112,9 @@ function Pilot({ onBook }: { onBook:()=>void }) {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  FAQ                                          */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  FAQ                                 */
+/* ───────────────────────────────────── */
 function FAQ() {
   const [open, setOpen] = useState<number|null>(null);
   return (
@@ -1098,10 +1139,11 @@ function FAQ() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Final CTA                                    */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Final CTA                           */
+/* ───────────────────────────────────── */
 function FinalCTA({ onBook }: { onBook:()=>void }) {
+  const badges = ["$30K guarantee","90 days","Own your systems"];
   return (
     <section style={{ background:CREAM2, padding:"96px 24px" }}>
       <div style={{ maxWidth:1000, margin:"0 auto" }}>
@@ -1121,16 +1163,20 @@ function FinalCTA({ onBook }: { onBook:()=>void }) {
                 Find your $30K in 90 days. Or pay nothing.
               </H2>
               <p style={{ color:"rgba(244,239,227,.62)", fontSize:15.5, lineHeight:1.7, marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                Book a free Profit Recovery Audit. We'll map where your money is going and show you exactly how to get it back. No pitch, no obligation.
+                Book a free Profit Recovery Audit. We'll show you exactly where your profit is going — and how to recover it — no pitch, no pressure, no cost.
               </p>
               <PrimaryBtn onClick={onBook}>
-                Book Your Free Profit Recovery Audit <ArrowRight size={16} />
+                Book your free audit <ArrowRight size={16} />
               </PrimaryBtn>
-              <div style={{ display:"flex", alignItems:"center", gap:8, marginTop:16 }}>
-                <div style={{ display:"flex", gap:2 }}>
-                  {[1,2,3,4,5].map(s => <Star key={s} size={12} fill="#f59e0b" stroke="none" />)}
-                </div>
-                <span style={{ fontSize:13, color:"rgba(244,239,227,.4)", fontFamily:"'Hanken Grotesk',sans-serif" }}>Rated 5/5 by operators we've worked with</span>
+              <div style={{ display:"flex", flexWrap:"wrap", alignItems:"center", gap:16, marginTop:18 }}>
+                {badges.map(b => (
+                  <div key={b} style={{ display:"flex", alignItems:"center", gap:6 }}>
+                    <div style={{ width:18, height:18, borderRadius:"50%", background:`${GREEN}22`, display:"flex", alignItems:"center", justifyContent:"center", flex:"0 0 auto" }}>
+                      <Check size={10} color={GREEN} strokeWidth={3} />
+                    </div>
+                    <span style={{ fontSize:13, color:"rgba(244,239,227,.55)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{b}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -1140,12 +1186,12 @@ function FinalCTA({ onBook }: { onBook:()=>void }) {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Footer                                       */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Footer                              */
+/* ───────────────────────────────────── */
 function Footer() {
   const linkStyle: React.CSSProperties = { display:"block", fontSize:14, color:"rgba(244,239,227,.55)", textDecoration:"none", marginBottom:8, fontFamily:"'Hanken Grotesk',sans-serif" };
-  const hoverIn = (e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color = CREAM; };
+  const hoverIn  = (e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color = CREAM; };
   const hoverOut = (e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color = "rgba(244,239,227,.55)"; };
   return (
     <footer style={{ background:INK2, padding:"64px 24px 36px", borderTop:"1px solid rgba(255,255,255,.06)" }}>
@@ -1169,35 +1215,36 @@ function Footer() {
           </div>
           <div>
             <div style={{ fontSize:12, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:"rgba(244,239,227,.38)", marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif" }}>Services</div>
-            {["Lead & Quote Automation","Operations Command Center","Revenue Intelligence","Client Communication Stack"].map(s => (
+            {["Lead capture","Quoting & sales","Operations","Reporting"].map(s => (
               <a key={s} href="/#services" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>{s}</a>
             ))}
           </div>
           <div>
             <div style={{ fontSize:12, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:"rgba(244,239,227,.38)", marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif" }}>Industries</div>
-            {["Service Businesses","Logistics & Transportation","Manufacturing & Industrial"].map(s => (
-              <a key={s} href="/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>{s}</a>
+            {["Service businesses","Logistics & transportation","Manufacturing"].map(s => (
+              <a key={s} href="/#industries" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>{s}</a>
             ))}
           </div>
           <div>
             <div style={{ fontSize:12, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:"rgba(244,239,227,.38)", marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif" }}>Company</div>
-            {([["ROI Calculator","/roi-calculator"],["Contact","/contact"],["Privacy Policy","/privacy"],["Terms of Service","/terms"],["Opt-In Proof","/opt-in-proof"]] as [string,string][]).map(([label,href]) => (
-              <Link key={href} href={href} style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>{label}</Link>
-            ))}
+            <a href="#" onClick={e => { e.preventDefault(); document.dispatchEvent(new CustomEvent("open-booking")); }} style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Book a call</a>
+            <Link href="/contact" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Contact</Link>
+            <a href="/#faq" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>FAQ</a>
+            <a href="mailto:ryne@jobsdone.io" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>ryne@jobsdone.io</a>
           </div>
         </div>
         <div style={{ paddingTop:28, display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent:"space-between", gap:12 }}>
           <p style={{ fontSize:13, color:"rgba(244,239,227,.32)", fontFamily:"'Hanken Grotesk',sans-serif", margin:0 }}>
-            © 2026 Jobs Done Labs LLC. All rights reserved.
+            © 2026 Jobs Done Labs · All rights reserved.
           </p>
           <div style={{ display:"flex", gap:20 }}>
-            {([["Privacy Policy","/privacy"],["Terms of Service","/terms"],["ryne@jobsdone.io","mailto:ryne@jobsdone.io"]] as [string,string][]).map(([label,href]) => (
-              <a key={href} href={href}
+            {([["Privacy Policy","/privacy"],["Terms of Service","/terms"],["Opt-in proof","/opt-in-proof"]] as [string,string][]).map(([label,href]) => (
+              <Link key={href} href={href}
                 style={{ fontSize:13, color:"rgba(244,239,227,.32)", textDecoration:"none", fontFamily:"'Hanken Grotesk',sans-serif" }}
-                onMouseEnter={e => { e.currentTarget.style.color="rgba(244,239,227,.65)"; }}
-                onMouseLeave={e => { e.currentTarget.style.color="rgba(244,239,227,.32)"; }}>
+                onMouseEnter={(e:React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color="rgba(244,239,227,.65)"; }}
+                onMouseLeave={(e:React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color="rgba(244,239,227,.32)"; }}>
                 {label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -1206,20 +1253,25 @@ function Footer() {
   );
 }
 
-/* ───────────────────────────────────────────── */
-/*  Page                                         */
-/* ───────────────────────────────────────────── */
+/* ───────────────────────────────────── */
+/*  Page                                */
+/* ───────────────────────────────────── */
 export default function Home() {
   const [showBooking, setShowBooking] = useState(false);
   const open = () => setShowBooking(true);
 
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
+    const clickHandler = (e: MouseEvent) => {
       const el = (e.target as Element).closest('a[href="#book"]');
       if (el) { e.preventDefault(); setShowBooking(true); }
     };
-    document.addEventListener("click", handler);
-    return () => document.removeEventListener("click", handler);
+    const customHandler = () => setShowBooking(true);
+    document.addEventListener("click", clickHandler);
+    document.addEventListener("open-booking", customHandler);
+    return () => {
+      document.removeEventListener("click", clickHandler);
+      document.removeEventListener("open-booking", customHandler);
+    };
   }, []);
 
   return (
@@ -1230,13 +1282,13 @@ export default function Home() {
       <TrustStrip />
       <Problem />
       <Industries />
-      <FSO onBook={open} />
+      <FSO />
       <InlineCTA onBook={open} />
       <Services />
       <Process />
       <Results />
       <Comparison />
-      <Guarantee onBook={open} />
+      <Guarantee />
       <Fit />
       <Pilot onBook={open} />
       <FAQ />
