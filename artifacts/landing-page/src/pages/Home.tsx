@@ -649,7 +649,7 @@ function Problem() {
                 <h3 style={{ fontSize:17, fontWeight:700, color:CREAM, marginBottom:10, fontFamily:"'Hanken Grotesk',sans-serif", letterSpacing:"-0.01em" }}>{p.title}</h3>
                 <p style={{ fontSize:14.5, lineHeight:1.6, color:"rgba(244,239,227,.52)", marginBottom:18, fontFamily:"'Hanken Grotesk',sans-serif" }}>{p.body}</p>
                 <div style={{ display:"flex", alignItems:"center", gap:7 }}>
-                  <span style={{ color:"#f97316", fontSize:13, fontWeight:700, fontFamily:"'Hanken Grotesk',sans-serif" }}>▸ {p.cost}</span>
+                  <span style={{ color:ACCENT, fontSize:13, fontWeight:700, fontFamily:"'Hanken Grotesk',sans-serif" }}>▸ {p.cost}</span>
                 </div>
               </div>
             </Fade>
