@@ -1,7 +1,7 @@
 import { useState } from "react";
 import BookingModal from "@/components/BookingModal";
 import { Link } from "wouter";
-import { ArrowLeft, ArrowRight, Mail, Clock, MapPin, CheckCircle2, Loader2 } from "lucide-react";
+import { Mail, Clock, MapPin } from "lucide-react";
 
 const CREAM    = "#F4EFE3";
 const CREAM2   = "#EFE8D8";
@@ -11,270 +11,252 @@ const INK_SOFT = "#54596A";
 const LINE     = "rgba(11,13,18,.12)";
 const ACCENT   = "#1466FF";
 
-function Logo() {
+const HG = "'Hanken Grotesk',sans-serif";
+
+const fieldLabel: React.CSSProperties = {
+  display: "block",
+  fontSize: 13,
+  fontWeight: 800,
+  letterSpacing: "0.09em",
+  textTransform: "uppercase",
+  color: INK_SOFT,
+  fontFamily: HG,
+  marginBottom: 8,
+};
+
+const fieldInput: React.CSSProperties = {
+  width: "100%",
+  background: CREAM,
+  border: `1.5px solid ${LINE}`,
+  borderRadius: 12,
+  padding: "14px 16px",
+  fontSize: 16,
+  fontWeight: 500,
+  color: INK,
+  fontFamily: HG,
+  outline: "none",
+  boxSizing: "border-box",
+  transition: "border-color .15s",
+};
+
+function ContactChip({ icon, title, sub }: { icon: React.ReactNode; title: string; sub: string }) {
   return (
-    <div style={{ display:"flex", alignItems:"center", gap:10, userSelect:"none" }}>
-      <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
-        <path d="M18 7 H30 M20 7 V19 L11.5 38 Q10 41.5 13.8 41.5 H34.2 Q38 41.5 36.5 38 L28 19 V7"
-          stroke={ACCENT} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
-        <line x1="20.5" y1="25.5" x2="26" y2="30.5" stroke={ACCENT} strokeWidth="2" strokeLinecap="round"/>
-        <line x1="26" y1="30.5" x2="20.5" y2="35.5" stroke={ACCENT} strokeWidth="2" strokeLinecap="round"/>
-        <circle cx="20.5" cy="25.5" r="2.6" fill={ACCENT}/>
-        <circle cx="26.5" cy="30.5" r="2.6" fill={ACCENT}/>
-        <circle cx="20.5" cy="35.5" r="2.6" fill={ACCENT}/>
-      </svg>
-      <div style={{ display:"flex", flexDirection:"column", lineHeight:1 }}>
-        <span style={{ fontStyle:"italic", fontWeight:800, fontSize:17, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-          <span style={{ color:INK }}>JOBS</span><span style={{ color:ACCENT }}>DONE</span>
-        </span>
-        <span style={{ display:"flex", alignItems:"center", gap:"0.4em", marginTop:4, fontWeight:700, fontSize:5, letterSpacing:"0.42em", color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-          <span style={{ flex:1, height:1.5, background:"currentColor", opacity:0.5 }} />
-          <span style={{ paddingLeft:"0.42em" }}>LABS</span>
-          <span style={{ flex:1, height:1.5, background:"currentColor", opacity:0.5 }} />
-        </span>
+    <div style={{ display:"flex", alignItems:"flex-start", gap:14 }}>
+      <div style={{
+        width:46, height:46, borderRadius:12, background:INK,
+        display:"flex", alignItems:"center", justifyContent:"center",
+        flexShrink:0, color:ACCENT,
+      }}>
+        {icon}
+      </div>
+      <div>
+        <p style={{ fontSize:15, fontWeight:700, color:INK, fontFamily:HG, margin:0, lineHeight:1.3 }}>{title}</p>
+        <p style={{ fontSize:13.5, color:INK_SOFT, fontFamily:HG, margin:"3px 0 0" }}>{sub}</p>
       </div>
     </div>
   );
 }
 
-const inputStyle = {
-  width:"100%", padding:"12px 14px", borderRadius:8,
-  border:`1px solid ${LINE}`, background:CREAM, color:INK,
-  fontSize:14.5, fontFamily:"'Hanken Grotesk',sans-serif",
-  outline:"none", boxSizing:"border-box" as const,
-};
-
-const labelStyle = {
-  fontSize:11, fontWeight:700, letterSpacing:"0.1em",
-  textTransform:"uppercase" as const, color:INK_SOFT,
-  fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:6, display:"block",
-};
-
 export default function Contact() {
   const [showBooking, setShowBooking] = useState(false);
-  const [submitting, setSubmitting]   = useState(false);
-  const [submitted, setSubmitted]     = useState(false);
+  const [sent, setSent] = useState(false);
   const [form, setForm] = useState({
-    fullName:"", email:"", company:"",
-    industry:"", revenue:"", leaking:"",
+    fullName:"", email:"", company:"", industry:"", revenue:"", leaking:"",
   });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-    const { name, value } = e.target;
-    setForm(prev => ({ ...prev, [name]:value }));
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  async function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!form.fullName.trim() || !form.email.trim()) return;
-    setSubmitting(true);
-    await new Promise(r => setTimeout(r, 900));
-    setSubmitting(false);
-    setSubmitted(true);
+    setSent(true);
+  }
+
+  function focusBlue(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+    e.currentTarget.style.borderColor = ACCENT;
+  }
+  function blurLine(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+    e.currentTarget.style.borderColor = LINE;
   }
 
   return (
-    <div style={{ minHeight:"100vh", background:CREAM, color:INK,
-      fontFamily:"'Hanken Grotesk',sans-serif", display:"flex", flexDirection:"column" }}>
+    <div style={{ minHeight:"100vh", background:CREAM, color:INK, fontFamily:HG, display:"flex", flexDirection:"column" }}>
 
-      {/* Nav */}
-      <header style={{ position:"sticky", top:0, zIndex:50,
-        background:"rgba(244,239,227,.92)", backdropFilter:"blur(14px)",
-        borderBottom:`1px solid ${LINE}` }}>
-        <div style={{ maxWidth:1120, margin:"0 auto", padding:"0 24px",
-          height:60, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-          <Link href="/"><Logo /></Link>
-          <nav style={{ display:"flex", alignItems:"center", gap:28 }}>
-            {[["Services","/#services"],["Industries","/#industries"],["ROI Calculator","/roi-calculator"]].map(([label,href]) => (
-              <Link key={label} href={href}>
-                <span style={{ fontSize:14, fontWeight:600, color:INK_SOFT, cursor:"pointer",
-                  fontFamily:"'Hanken Grotesk',sans-serif", textDecoration:"none" }}
-                  onMouseEnter={e=>(e.currentTarget as HTMLElement).style.color=INK}
-                  onMouseLeave={e=>(e.currentTarget as HTMLElement).style.color=INK_SOFT}>
-                  {label}
-                </span>
-              </Link>
-            ))}
-            <button onClick={() => setShowBooking(true)}
-              style={{ background:ACCENT, color:"#fff", border:"none", borderRadius:50,
-                padding:"10px 22px", fontSize:14, fontWeight:700, cursor:"pointer",
-                fontFamily:"'Hanken Grotesk',sans-serif", boxShadow:`0 4px 16px -4px ${ACCENT}66` }}>
-              Book a Call
-            </button>
-          </nav>
-        </div>
-      </header>
-
-      <main style={{ maxWidth:1120, margin:"0 auto", padding:"40px 24px 80px", flex:1 }}>
+      <main style={{ maxWidth:1040, margin:"0 auto", padding:"48px 24px 80px", flex:1, width:"100%" }}>
 
         {/* Breadcrumb */}
-        <div style={{ marginBottom:44 }}>
+        <div style={{ marginBottom:52 }}>
           <Link href="/">
-            <span style={{ display:"inline-flex", alignItems:"center", gap:6, fontSize:13.5,
-              fontWeight:600, color:INK_SOFT, cursor:"pointer", textDecoration:"none" }}
+            <span style={{ display:"inline-flex", alignItems:"center", gap:6, fontSize:14,
+              fontWeight:600, color:INK_SOFT, cursor:"pointer", fontFamily:HG }}
               onMouseEnter={e=>(e.currentTarget as HTMLElement).style.color=INK}
               onMouseLeave={e=>(e.currentTarget as HTMLElement).style.color=INK_SOFT}>
-              <ArrowLeft size={14} /> Back to home
+              ← Back to home
             </span>
           </Link>
         </div>
 
-        {submitted ? (
-          <SuccessState name={form.fullName} onBook={() => setShowBooking(true)} />
-        ) : (
-          <div style={{ display:"grid", gridTemplateColumns:"1fr 1.4fr", gap:64, alignItems:"start" }}
-            className="contact-grid">
+        {/* Two-column grid */}
+        <div className="contact-grid"
+          style={{ display:"grid", gridTemplateColumns:"1fr 1.25fr", gap:56, alignItems:"start" }}>
 
-            {/* Left: info */}
-            <div>
-              <div style={{ display:"inline-flex", alignItems:"center", gap:7,
-                border:`1.5px solid ${ACCENT}`, borderRadius:50,
-                padding:"4px 12px", marginBottom:24 }}>
-                <span style={{ width:7, height:7, borderRadius:"50%", background:ACCENT, flexShrink:0 }} />
-                <span style={{ fontSize:11, fontWeight:700, letterSpacing:"0.1em",
-                  textTransform:"uppercase", color:ACCENT,
-                  fontFamily:"'Hanken Grotesk',sans-serif" }}>Contact</span>
-              </div>
-
-              <h1 className="anton" style={{ fontSize:"clamp(2rem,3.8vw,3rem)",
-                lineHeight:1.05, color:INK, marginBottom:20 }}>
-                Let's find your<br />$30K.
-              </h1>
-
-              <p style={{ fontSize:15.5, lineHeight:1.7, color:INK_SOFT, marginBottom:36,
-                fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                The fastest way to start is to book a free Profit Recovery Audit. Prefer to send a note first? Use the form and we'll get back within one business day.
-              </p>
-
-              {/* Info items */}
-              <div style={{ display:"flex", flexDirection:"column", gap:18 }}>
-                {[
-                  { icon:<Mail size={18}/>, title:"ryne@jobsdone.io", sub:"Email us anytime" },
-                  { icon:<Clock size={18}/>, title:"Mon–Fri · 9am–6pm", sub:"We reply within 1 business day" },
-                  { icon:<MapPin size={18}/>, title:"Remote-first", sub:"Serving operators across North America" },
-                ].map(item => (
-                  <div key={item.title} style={{ display:"flex", alignItems:"flex-start", gap:14 }}>
-                    <div style={{ width:44, height:44, borderRadius:10, background:INK,
-                      display:"flex", alignItems:"center", justifyContent:"center",
-                      flexShrink:0, color:"#fff" }}>
-                      {item.icon}
-                    </div>
-                    <div>
-                      <p style={{ fontSize:14.5, fontWeight:700, color:INK,
-                        fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:2 }}>{item.title}</p>
-                      <p style={{ fontSize:13, color:INK_SOFT,
-                        fontFamily:"'Hanken Grotesk',sans-serif" }}>{item.sub}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          {/* ── Left column ── */}
+          <div>
+            {/* Pill eyebrow */}
+            <div style={{ display:"inline-flex", alignItems:"center", gap:7,
+              border:`1.5px solid ${ACCENT}`, borderRadius:50,
+              padding:"5px 13px", marginBottom:22 }}>
+              <span style={{ width:7, height:7, borderRadius:"50%", background:ACCENT, flexShrink:0 }} />
+              <span style={{ fontSize:11, fontWeight:800, letterSpacing:"0.12em",
+                textTransform:"uppercase", color:ACCENT, fontFamily:HG }}>Contact</span>
             </div>
 
-            {/* Right: form card */}
-            <div style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:16,
-              padding:"36px 32px" }}>
-              <form onSubmit={handleSubmit} style={{ display:"flex", flexDirection:"column", gap:20 }}>
-                <div>
-                  <label style={labelStyle}>Full Name</label>
-                  <input name="fullName" type="text" placeholder="Jane Operator"
-                    value={form.fullName} onChange={handleChange} required
-                    style={inputStyle}
-                    onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
-                    onBlur={e=>(e.currentTarget.style.borderColor=LINE)} />
-                </div>
+            {/* Headline */}
+            <h2 className="anton" style={{ fontSize:"clamp(2rem,3.6vw,2.9rem)",
+              lineHeight:1.06, color:INK, marginBottom:20, marginTop:0 }}>
+              Let's find your $30K.
+            </h2>
 
-                <div>
-                  <label style={labelStyle}>Work Email</label>
-                  <input name="email" type="email" placeholder="jane@yourbusiness.com"
-                    value={form.email} onChange={handleChange} required
-                    style={inputStyle}
-                    onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
-                    onBlur={e=>(e.currentTarget.style.borderColor=LINE)} />
-                </div>
+            {/* Blurb */}
+            <p style={{ fontSize:18, lineHeight:1.68, color:INK_SOFT,
+              fontFamily:HG, maxWidth:420, marginBottom:40 }}>
+              The fastest way to start is to book a free Profit Recovery Audit. Prefer to send a note first? Use the form and we'll get back within one business day.
+            </p>
 
-                <div>
-                  <label style={labelStyle}>Company</label>
-                  <input name="company" type="text" placeholder="Your business"
-                    value={form.company} onChange={handleChange}
-                    style={inputStyle}
-                    onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
-                    onBlur={e=>(e.currentTarget.style.borderColor=LINE)} />
-                </div>
-
-                <div>
-                  <label style={labelStyle}>Industry</label>
-                  <select name="industry" value={form.industry} onChange={handleChange}
-                    style={{ ...inputStyle, appearance:"none" as const,
-                      backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2354596A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`,
-                      backgroundRepeat:"no-repeat", backgroundPosition:"right 14px center",
-                      paddingRight:36, cursor:"pointer" }}>
-                    <option value="">Select industry…</option>
-                    <option>Home service (HVAC, plumbing, etc.)</option>
-                    <option>Freight &amp; logistics</option>
-                    <option>Manufacturing</option>
-                    <option>Auto transport</option>
-                    <option>Food service distribution</option>
-                    <option>Wholesale &amp; supply</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label style={labelStyle}>Annual Revenue</label>
-                  <select name="revenue" value={form.revenue} onChange={handleChange}
-                    style={{ ...inputStyle, appearance:"none" as const,
-                      backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2354596A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`,
-                      backgroundRepeat:"no-repeat", backgroundPosition:"right 14px center",
-                      paddingRight:36, cursor:"pointer" }}>
-                    <option value="">Select range…</option>
-                    <option>$1M – $3M</option>
-                    <option>$3M – $5M</option>
-                    <option>$5M – $10M</option>
-                    <option>$10M – $25M</option>
-                    <option>$25M+</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label style={labelStyle}>What's leaking? <span style={{ fontWeight:400, textTransform:"none", fontSize:10 }}>(optional)</span></label>
-                  <textarea name="leaking" rows={4}
-                    placeholder="Tell us where you think profit is slipping away…"
-                    value={form.leaking} onChange={handleChange}
-                    style={{ ...inputStyle, resize:"vertical", lineHeight:1.6 }}
-                    onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
-                    onBlur={e=>(e.currentTarget.style.borderColor=LINE)} />
-                </div>
-
-                <button type="submit" disabled={submitting}
-                  style={{ width:"100%", padding:"15px", borderRadius:50, border:"none",
-                    background:ACCENT, color:"#fff", fontSize:15, fontWeight:700,
-                    cursor:submitting?"not-allowed":"pointer",
-                    fontFamily:"'Hanken Grotesk',sans-serif",
-                    display:"flex", alignItems:"center", justifyContent:"center", gap:8,
-                    opacity:submitting?.75:1, boxShadow:`0 6px 24px -6px ${ACCENT}88` }}>
-                  {submitting
-                    ? <><Loader2 size={16} style={{ animation:"spin 1s linear infinite" }} />Sending…</>
-                    : <>Send message <ArrowRight size={16} /></>}
-                </button>
-              </form>
+            {/* Contact chips */}
+            <div style={{ display:"flex", flexDirection:"column", gap:22 }}>
+              <ContactChip
+                icon={<Mail size={19} />}
+                title="ryne@jobsdone.io"
+                sub="Email us anytime"
+              />
+              <ContactChip
+                icon={<Clock size={19} />}
+                title="Mon–Fri · 9am–6pm"
+                sub="We reply within 1 business day"
+              />
+              <ContactChip
+                icon={<MapPin size={19} />}
+                title="Remote-first"
+                sub="Serving operators across North America"
+              />
             </div>
           </div>
-        )}
+
+          {/* ── Right column: form card ── */}
+          <div style={{
+            background: CREAM2,
+            border: `1.5px solid ${LINE}`,
+            borderRadius: 22,
+            padding: 38,
+          }}>
+            <form onSubmit={handleSubmit} style={{ display:"flex", flexDirection:"column", gap:20 }}>
+
+              {/* Full name */}
+              <div>
+                <label style={fieldLabel}>Full Name</label>
+                <input name="fullName" type="text" placeholder="Jane Operator"
+                  value={form.fullName} onChange={handleChange} required
+                  style={fieldInput} onFocus={focusBlue} onBlur={blurLine} />
+              </div>
+
+              {/* Work email */}
+              <div>
+                <label style={fieldLabel}>Work Email</label>
+                <input name="email" type="email" placeholder="jane@yourbusiness.com"
+                  value={form.email} onChange={handleChange} required
+                  style={fieldInput} onFocus={focusBlue} onBlur={blurLine} />
+              </div>
+
+              {/* Company */}
+              <div>
+                <label style={fieldLabel}>Company</label>
+                <input name="company" type="text" placeholder="Your business"
+                  value={form.company} onChange={handleChange}
+                  style={fieldInput} onFocus={focusBlue} onBlur={blurLine} />
+              </div>
+
+              {/* Industry */}
+              <div>
+                <label style={fieldLabel}>Industry</label>
+                <select name="industry" value={form.industry} onChange={handleChange}
+                  style={{ ...fieldInput,
+                    appearance:"none",
+                    backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2354596A' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`,
+                    backgroundRepeat:"no-repeat", backgroundPosition:"right 16px center",
+                    paddingRight:40, cursor:"pointer",
+                  }}
+                  onFocus={focusBlue} onBlur={blurLine}>
+                  <option value="">Select industry…</option>
+                  <option>Service businesses</option>
+                  <option>Logistics &amp; transportation</option>
+                  <option>Manufacturing &amp; industrial</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              {/* Annual revenue */}
+              <div>
+                <label style={fieldLabel}>Annual Revenue</label>
+                <select name="revenue" value={form.revenue} onChange={handleChange}
+                  style={{ ...fieldInput,
+                    appearance:"none",
+                    backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2354596A' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`,
+                    backgroundRepeat:"no-repeat", backgroundPosition:"right 16px center",
+                    paddingRight:40, cursor:"pointer",
+                  }}
+                  onFocus={focusBlue} onBlur={blurLine}>
+                  <option value="">Select range…</option>
+                  <option>$1M – $3M</option>
+                  <option>$3M – $10M</option>
+                  <option>$10M – $25M</option>
+                  <option>$25M+</option>
+                </select>
+              </div>
+
+              {/* What's leaking */}
+              <div>
+                <label style={fieldLabel}>
+                  What's Leaking?{" "}
+                  <span style={{ fontWeight:500, textTransform:"none", letterSpacing:0, fontSize:12 }}>(optional)</span>
+                </label>
+                <textarea name="leaking" rows={4}
+                  placeholder="Tell us where you think profit is slipping away…"
+                  value={form.leaking} onChange={handleChange}
+                  style={{ ...fieldInput, minHeight:120, resize:"vertical", lineHeight:1.6 }}
+                  onFocus={focusBlue} onBlur={blurLine} />
+              </div>
+
+              {/* Submit */}
+              <button type="submit" disabled={sent}
+                style={{
+                  width:"100%", padding:"16px", borderRadius:14,
+                  border:"none", background: sent ? "#2a7a2a" : ACCENT,
+                  color:"#fff", fontSize:16, fontWeight:800,
+                  cursor: sent ? "default" : "pointer",
+                  fontFamily:HG,
+                  transition:"background .3s",
+                  boxShadow: sent ? "none" : `0 6px 24px -6px ${ACCENT}88`,
+                }}>
+                {sent ? "Sent — we'll be in touch ✓" : "Send message →"}
+              </button>
+            </form>
+          </div>
+        </div>
       </main>
 
       {/* Footer */}
       <footer style={{ background:INK2, padding:"28px 24px" }}>
-        <div style={{ maxWidth:1120, margin:"0 auto", display:"flex",
+        <div style={{ maxWidth:1040, margin:"0 auto", display:"flex",
           alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:12 }}>
-          <p style={{ fontSize:13, color:"rgba(255,255,255,.35)",
-            fontFamily:"'Hanken Grotesk',sans-serif" }}>
+          <p style={{ fontSize:13, color:"rgba(255,255,255,.35)", fontFamily:HG }}>
             © 2026 Jobs Done Labs. All rights reserved.
           </p>
-          <div style={{ display:"flex", gap:20 }}>
+          <div style={{ display:"flex", gap:22 }}>
             {[["Privacy Policy","/privacy"],["Terms of Service","/terms"],["ROI Calculator","/roi-calculator"]].map(([label,href]) => (
               <Link key={label} href={href}>
-                <span style={{ fontSize:13, color:"rgba(255,255,255,.45)", cursor:"pointer",
-                  fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</span>
+                <span style={{ fontSize:13, color:"rgba(255,255,255,.45)", cursor:"pointer", fontFamily:HG }}>{label}</span>
               </Link>
             ))}
           </div>
@@ -282,37 +264,6 @@ export default function Contact() {
       </footer>
 
       <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
-    </div>
-  );
-}
-
-function SuccessState({ name, onBook }: { name:string; onBook:()=>void }) {
-  const first = name.split(" ")[0] || "there";
-  return (
-    <div style={{ display:"flex", flexDirection:"column", alignItems:"center",
-      textAlign:"center", padding:"64px 24px" }}>
-      <div style={{ width:64, height:64, borderRadius:"50%", background:`${ACCENT}15`,
-        display:"flex", alignItems:"center", justifyContent:"center", marginBottom:24 }}>
-        <CheckCircle2 size={32} style={{ color:ACCENT }} />
-      </div>
-      <h2 className="anton" style={{ fontSize:32, color:INK, marginBottom:12 }}>
-        Thanks, {first}!
-      </h2>
-      <p style={{ fontSize:16, lineHeight:1.68, color:INK_SOFT, maxWidth:380,
-        marginBottom:32, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-        We've got your message and will be in touch within one business day. Want to move faster?
-      </p>
-      <button onClick={onBook}
-        style={{ display:"inline-flex", alignItems:"center", gap:8,
-          fontWeight:700, fontSize:15, padding:"13px 28px", borderRadius:50,
-          background:ACCENT, color:"#fff", border:"none", cursor:"pointer",
-          boxShadow:`0 4px 16px -4px ${ACCENT}55`,
-          fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:16 }}>
-        Book your free audit <ArrowRight size={16} />
-      </button>
-      <Link href="/">
-        <span style={{ fontSize:13, color:INK_SOFT, cursor:"pointer" }}>← Back to home</span>
-      </Link>
     </div>
   );
 }
