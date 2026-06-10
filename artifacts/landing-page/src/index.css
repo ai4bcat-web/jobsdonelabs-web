@@ -125,6 +125,11 @@
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* ROI Calculator range inputs */
+.roi-range { -webkit-appearance:none; appearance:none; width:100%; height:8px; border-radius:6px; background:#F4EFE3; border:1.5px solid rgba(11,13,18,.12); outline:none; cursor:pointer; }
+.roi-range::-webkit-slider-thumb { -webkit-appearance:none; appearance:none; width:26px; height:26px; border-radius:50%; background:#1466FF; border:4px solid #F4EFE3; box-shadow:0 4px 12px -2px rgba(20,102,255,.6); cursor:pointer; }
+.roi-range::-moz-range-thumb { width:22px; height:22px; border-radius:50%; background:#1466FF; border:4px solid #F4EFE3; box-shadow:0 4px 12px -2px rgba(20,102,255,.6); cursor:pointer; }
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

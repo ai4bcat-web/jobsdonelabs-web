@@ -12,26 +12,31 @@ const INK_SOFT    = "#54596A";
 const LINE        = "rgba(11,13,18,.12)";
 
 
+function trackBg(value: number, min: number, max: number) {
+  const pct = ((value - min) / (max - min)) * 100;
+  return `linear-gradient(90deg, rgba(20,102,255,.55) ${pct}%, #F4EFE3 ${pct}%)`;
+}
+
 function Slider({ label, value, onChange, min, max, step=1, format }: {
   label:string; value:number; onChange:(v:number)=>void;
   min:number; max:number; step?:number; format:(v:number)=>string;
 }) {
-  const pct = ((value - min) / (max - min)) * 100;
   return (
-    <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+    <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-        <label style={{ fontSize:13.5, fontWeight:600, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</label>
-        <span style={{ fontSize:16, fontWeight:700, color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{format(value)}</span>
+        <label style={{ fontSize:14, fontWeight:600, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</label>
+        <span className="anton" style={{ fontSize:26, color:ACCENT, lineHeight:1 }}>{format(value)}</span>
       </div>
-      <div style={{ position:"relative", height:6, borderRadius:99, background:LINE }}>
-        <div style={{ position:"absolute", left:0, top:0, height:"100%", borderRadius:99, background:ACCENT, width:`${pct}%`, transition:"width .08s" }} />
-        <input type="range" min={min} max={max} step={step} value={value}
-          onChange={e => onChange(Number(e.target.value))}
-          style={{ position:"absolute", inset:0, width:"100%", opacity:0, cursor:"pointer", height:"100%", margin:0 }} />
-        <div style={{ position:"absolute", top:"50%", transform:"translateY(-50%)", width:16, height:16, borderRadius:"50%",
-          background:ACCENT, border:`2.5px solid ${CREAM}`, boxShadow:`0 0 0 1.5px ${ACCENT}`,
-          left:`calc(${pct}% - 8px)`, pointerEvents:"none", transition:"left .08s" }} />
-      </div>
+      <input
+        type="range" min={min} max={max} step={step} value={value}
+        className="roi-range"
+        style={{ background: trackBg(value, min, max) }}
+        onChange={e => {
+          const v = Number(e.target.value);
+          onChange(v);
+          (e.target as HTMLInputElement).style.background = trackBg(v, min, max);
+        }}
+      />
     </div>
   );
 }
@@ -93,12 +98,12 @@ export default function ROICalculator() {
         </div>
 
         {/* Two panels */}
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:24, alignItems:"start" }}
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:24, alignItems:"stretch" }}
           className="grid-roi-panels">
 
           {/* Left: sliders */}
           <div style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:16,
-            padding:"32px 28px", display:"flex", flexDirection:"column", gap:28 }}>
+            padding:"38px 32px", display:"flex", flexDirection:"column", gap:30 }}>
             <Slider label="Annual revenue" value={annualRevenue} onChange={setAnnualRevenue}
               min={200000} max={10000000} step={100000} format={fmtRevenue} />
             <Slider label="Leads per month" value={leadsPerMonth} onChange={setLeadsPerMonth}
@@ -112,53 +117,57 @@ export default function ROICalculator() {
           </div>
 
           {/* Right: results */}
-          <div style={{ background:INK2, borderRadius:16, padding:"36px 32px",
-            display:"flex", flexDirection:"column", gap:0 }}>
-            <p style={{ fontSize:11, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase",
-              color:"rgba(255,255,255,.45)", fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:10 }}>
-              Estimated annual recovery
-            </p>
-            <p style={{ fontFamily:"'Hanken Grotesk',sans-serif", fontSize:"clamp(2.6rem,4vw,3.6rem)",
-              fontWeight:900, color:"#fff", lineHeight:1, marginBottom:14 }}>
-              {fmtDollar(results.total)}
-            </p>
-            <p style={{ fontSize:14.5, lineHeight:1.6, color:"rgba(255,255,255,.55)",
-              fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:28 }}>
-              What our systems could put back on your bottom line in the first 12 months.
-            </p>
+          <div style={{ background:INK2, borderRadius:16, padding:"42px 36px",
+            display:"flex", flexDirection:"column" }}>
+            {/* Top section */}
+            <div style={{ flex:1 }}>
+              <p style={{ fontSize:11, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase",
+                color:"rgba(255,255,255,.45)", fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:12 }}>
+                Estimated annual recovery
+              </p>
+              <p className="anton" style={{ fontSize:80, color:"#fff", lineHeight:1, marginBottom:14 }}>
+                {fmtDollar(results.total)}
+              </p>
+              <p style={{ fontSize:14.5, lineHeight:1.6, color:"rgba(255,255,255,.55)",
+                fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:28 }}>
+                What our systems could put back on your bottom line in the first 12 months.
+              </p>
 
-            {/* Line items */}
-            <div style={{ display:"flex", flexDirection:"column", gap:0,
-              borderTop:"1px solid rgba(255,255,255,.1)", marginBottom:28 }}>
-              {[
-                { label:"Recovered lost leads",        value:results.leadRecovery },
-                { label:"Reclaimed admin time",        value:results.adminRecovery },
-                { label:"Faster cash & efficiency",    value:results.efficiencyGain },
-              ].map(item => (
-                <div key={item.label} style={{ display:"flex", justifyContent:"space-between",
-                  alignItems:"center", padding:"13px 0",
-                  borderBottom:"1px solid rgba(255,255,255,.08)" }}>
-                  <span style={{ fontSize:14, color:"rgba(255,255,255,.62)",
-                    fontFamily:"'Hanken Grotesk',sans-serif" }}>{item.label}</span>
-                  <span style={{ fontSize:14, fontWeight:700, color:"rgba(255,255,255,.9)",
-                    fontFamily:"'Hanken Grotesk',sans-serif" }}>{fmtDollar(item.value)}</span>
-                </div>
-              ))}
+              {/* Line items */}
+              <div style={{ display:"flex", flexDirection:"column",
+                borderTop:"1px solid rgba(255,255,255,.12)", gap:0, marginBottom:28 }}>
+                {[
+                  { label:"Recovered lost leads",     value:results.leadRecovery },
+                  { label:"Reclaimed admin time",     value:results.adminRecovery },
+                  { label:"Faster cash & efficiency", value:results.efficiencyGain },
+                ].map(item => (
+                  <div key={item.label} style={{ display:"flex", justifyContent:"space-between",
+                    alignItems:"center", padding:"14px 0",
+                    borderBottom:"1px solid rgba(255,255,255,.08)" }}>
+                    <span style={{ fontSize:14, color:"rgba(255,255,255,.62)",
+                      fontFamily:"'Hanken Grotesk',sans-serif" }}>{item.label}</span>
+                    <span style={{ fontSize:14, fontWeight:700, color:"rgba(255,255,255,.9)",
+                      fontFamily:"'Hanken Grotesk',sans-serif" }}>{fmtDollar(item.value)}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* CTA */}
-            <button onClick={() => setShowBooking(true)}
-              style={{ width:"100%", padding:"16px", borderRadius:50, border:"none",
-                background:ACCENT, color:"#fff", fontSize:15, fontWeight:700,
-                cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif",
-                display:"flex", alignItems:"center", justifyContent:"center", gap:8,
-                marginBottom:14, boxShadow:`0 6px 24px -6px ${ACCENT}88` }}>
-              Book your free audit <ArrowRight size={16} />
-            </button>
-            <p style={{ fontSize:12, color:"rgba(255,255,255,.32)", textAlign:"center",
-              fontFamily:"'Hanken Grotesk',sans-serif", lineHeight:1.5 }}>
-              Estimate only. The free audit gives you a precise, line-item recovery number.
-            </p>
+            {/* CTA pinned to bottom */}
+            <div>
+              <button onClick={() => setShowBooking(true)}
+                style={{ width:"100%", padding:"16px", borderRadius:50, border:"none",
+                  background:ACCENT, color:"#fff", fontSize:15, fontWeight:700,
+                  cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif",
+                  display:"flex", alignItems:"center", justifyContent:"center", gap:8,
+                  marginBottom:14, boxShadow:`0 6px 24px -6px ${ACCENT}88` }}>
+                Book your free audit <ArrowRight size={16} />
+              </button>
+              <p style={{ fontSize:12, color:"rgba(255,255,255,.32)", textAlign:"center",
+                fontFamily:"'Hanken Grotesk',sans-serif", lineHeight:1.5 }}>
+                Estimate only. The free audit gives you a precise, line-item recovery number.
+              </p>
+            </div>
           </div>
         </div>
       </main>
