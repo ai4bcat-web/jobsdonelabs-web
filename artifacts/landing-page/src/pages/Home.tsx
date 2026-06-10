@@ -562,7 +562,7 @@ function Hero({ onBook }: { onBook:()=>void }) {
               </p>
               <p style={{ fontSize:16, lineHeight:1.68, color:INK_SOFT, maxWidth:460,
                 marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                If you're doing $1M+ in service, logistics, or manufacturing, you're leaking profit every week — to leads that go cold, jobs that slip, and work that should run itself. We find that money and recover it in 90 days, guaranteed.
+                You're a $1M+ operator in service, logistics, or manufacturing, and profit slips away every week — cold leads, dropped jobs, work that should run itself. Custom AI agents, automation, and a live dashboard find it and recover it. 90 days, or you don't pay.
               </p>
               <div style={{ display:"flex", flexWrap:"wrap", gap:12, marginBottom:28 }}>
                 <PrimaryBtn onClick={onBook}>
