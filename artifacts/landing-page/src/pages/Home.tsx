@@ -1122,8 +1122,10 @@ function FinalCTA({ onBook }: { onBook:()=>void }) {
               <img src="/ryne.jpg" alt="Ryne Bandolik" style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", objectPosition:"top" }} />
               <div style={{ position:"absolute", inset:0, background:"linear-gradient(to right,transparent 50%,rgba(11,13,18,.92))" }} />
               <div style={{ position:"absolute", bottom:22, left:20 }}>
-                <div className="caveat" style={{ fontSize:24, color:"#fff", lineHeight:1 }}>Ryne Bandolik</div>
-                <div style={{ fontSize:12, color:"rgba(255,255,255,.55)", fontFamily:"'Hanken Grotesk',sans-serif" }}>Founder, Jobs Done Labs</div>
+                <div className="caveat" style={{ fontSize:24, color:"#fff", lineHeight:1,
+                  textShadow:"0 1px 8px rgba(0,0,0,.9), 0 0 2px rgba(0,0,0,1)" }}>Ryne Bandolik</div>
+                <div style={{ fontSize:12, color:"rgba(255,255,255,.85)", fontFamily:"'Hanken Grotesk',sans-serif",
+                  textShadow:"0 1px 6px rgba(0,0,0,.95), 0 0 2px rgba(0,0,0,1)" }}>Founder, Jobs Done Labs</div>
               </div>
             </div>
             <div style={{ flex:1, minWidth:0, padding:"44px 40px" }}>
