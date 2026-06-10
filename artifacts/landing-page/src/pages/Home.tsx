@@ -81,46 +81,221 @@ function StampBadge({ size = 104, dark = false }: { size?: number; dark?: boolea
 /* ───────────────────────────────────── */
 /*  VSL Player                          */
 /* ───────────────────────────────────── */
-function VSL() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [muted, setMuted] = useState(true);
+function fmtTime(s: number) {
+  if (!isFinite(s)) return "0:00";
+  const m = Math.floor(s / 60);
+  const sec = Math.floor(s % 60);
+  return `${m}:${sec.toString().padStart(2,"0")}`;
+}
 
-  function unmuteAndPlay() {
-    const v = videoRef.current;
-    if (!v) return;
-    v.muted = false;
-    v.play().catch(() => {});
-    setMuted(false);
+function VSL() {
+  const videoRef   = useRef<HTMLVideoElement>(null);
+  const barRef     = useRef<HTMLDivElement>(null);
+  const hideTimer  = useRef<ReturnType<typeof setTimeout>>();
+
+  const [playing,   setPlaying]   = useState(false);
+  const [muted,     setMuted]     = useState(true);
+  const [volume,    setVolume]    = useState(1);
+  const [current,   setCurrent]   = useState(0);
+  const [duration,  setDuration]  = useState(0);
+  const [showCtrl,  setShowCtrl]  = useState(true);
+  const [scrubbing, setScrubbing] = useState(false);
+  const [ready,     setReady]     = useState(false);
+
+  /* Auto-hide controls */
+  function revealControls() {
+    setShowCtrl(true);
+    clearTimeout(hideTimer.current);
+    if (playing) hideTimer.current = setTimeout(() => setShowCtrl(false), 2800);
   }
 
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const onTime   = () => setCurrent(v.currentTime);
+    const onMeta   = () => { setDuration(v.duration); setReady(true); };
+    const onPlay   = () => { setPlaying(true);  revealControls(); };
+    const onPause  = () => { setPlaying(false); setShowCtrl(true); clearTimeout(hideTimer.current); };
+    const onEnded  = () => { setPlaying(false); setShowCtrl(true); setCurrent(0); v.currentTime = 0; };
+    v.addEventListener("timeupdate",   onTime);
+    v.addEventListener("loadedmetadata", onMeta);
+    v.addEventListener("play",  onPlay);
+    v.addEventListener("pause", onPause);
+    v.addEventListener("ended", onEnded);
+    /* Try autoplay muted */
+    v.muted = true;
+    v.play().then(() => setPlaying(true)).catch(() => { setPlaying(false); setShowCtrl(true); });
+    return () => {
+      v.removeEventListener("timeupdate",     onTime);
+      v.removeEventListener("loadedmetadata", onMeta);
+      v.removeEventListener("play",  onPlay);
+      v.removeEventListener("pause", onPause);
+      v.removeEventListener("ended", onEnded);
+      clearTimeout(hideTimer.current);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function togglePlay() {
+    const v = videoRef.current; if (!v) return;
+    if (v.paused) v.play(); else v.pause();
+    revealControls();
+  }
+
+  function toggleMute() {
+    const v = videoRef.current; if (!v) return;
+    v.muted = !v.muted;
+    setMuted(v.muted);
+    revealControls();
+  }
+
+  function seekTo(e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) {
+    const v = videoRef.current; const bar = barRef.current;
+    if (!v || !bar || !duration) return;
+    const rect  = bar.getBoundingClientRect();
+    const clientX = "touches" in e ? e.touches[0].clientX : (e as React.MouseEvent).clientX;
+    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    v.currentTime = ratio * duration;
+    setCurrent(v.currentTime);
+  }
+
+  function onVolumeChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const v = videoRef.current; if (!v) return;
+    const val = parseFloat(e.target.value);
+    v.volume = val; v.muted = val === 0;
+    setVolume(val); setMuted(val === 0);
+  }
+
+  function requestFullscreen() {
+    const v = videoRef.current; if (!v) return;
+    if (v.requestFullscreen) v.requestFullscreen();
+  }
+
+  const pct = duration ? (current / duration) * 100 : 0;
+
   return (
-    <div style={{ width:"100%", borderRadius:12, overflow:"hidden", position:"relative",
-      boxShadow:"0 24px 64px -16px rgba(0,0,0,.28)", background:"#000", aspectRatio:"16/9" }}>
+    <div
+      onMouseMove={revealControls}
+      onMouseLeave={() => { if (playing) setShowCtrl(false); }}
+      onTouchStart={revealControls}
+      style={{ width:"100%", borderRadius:12, overflow:"hidden", position:"relative",
+        boxShadow:"0 24px 64px -16px rgba(0,0,0,.38)", background:"#000",
+        aspectRatio:"16/9", cursor:"pointer" }}>
+
       <video
         ref={videoRef}
         src="/hero.mp4"
-        autoPlay
-        muted
         playsInline
-        style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", display:"block" }}
+        preload="metadata"
+        onClick={togglePlay}
+        style={{ position:"absolute", inset:0, width:"100%", height:"100%",
+          objectFit:"cover", display:"block" }}
       />
-      {muted && (
-        <button onClick={unmuteAndPlay}
-          style={{ position:"absolute", inset:0, zIndex:4, border:"none", cursor:"pointer",
-            padding:"18px 20px", background:"linear-gradient(0deg,rgba(0,0,0,.38),transparent 44%)",
-            display:"flex", alignItems:"flex-end", justifyContent:"flex-start" }}>
-          <span style={{ display:"inline-flex", alignItems:"center", gap:9,
-            background:"rgba(10,14,22,.80)", backdropFilter:"blur(6px)",
-            color:"#fff", fontSize:14, fontWeight:700, letterSpacing:"-0.01em",
-            padding:"10px 16px", borderRadius:6,
-            boxShadow:"0 8px 22px -6px rgba(0,0,0,.5)", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style={{ color:ACCENT, flex:"0 0 auto" }}>
-              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8v8a4.5 4.5 0 002.5-4zM14 3v2.06a7 7 0 010 13.88V21a9 9 0 000-18z" />
-            </svg>
-            Watch the 4-min breakdown
-            <span style={{ fontSize:12, fontWeight:600, color:"rgba(255,255,255,.55)" }}>· Tap for sound</span>
+
+      {/* Big centre play/pause button */}
+      <div onClick={togglePlay}
+        style={{ position:"absolute", inset:0, zIndex:3, display:"flex",
+          alignItems:"center", justifyContent:"center",
+          opacity: (!playing || showCtrl) ? 1 : 0,
+          transition:"opacity .22s", pointerEvents: showCtrl || !playing ? "auto" : "none" }}>
+        <div style={{ width:64, height:64, borderRadius:"50%",
+          background:"rgba(0,0,0,.54)", backdropFilter:"blur(6px)",
+          display:"flex", alignItems:"center", justifyContent:"center",
+          transition:"transform .15s", boxShadow:"0 4px 24px rgba(0,0,0,.4)" }}
+          onMouseEnter={e=>(e.currentTarget as HTMLElement).style.transform="scale(1.08)"}
+          onMouseLeave={e=>(e.currentTarget as HTMLElement).style.transform="scale(1)"}>
+          {playing
+            ? <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            : <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M8 5v14l11-7z"/></svg>}
+        </div>
+      </div>
+
+      {/* Bottom controls bar */}
+      <div style={{ position:"absolute", bottom:0, left:0, right:0, zIndex:4,
+        background:"linear-gradient(0deg,rgba(0,0,0,.72) 0%,transparent 100%)",
+        padding:"20px 14px 12px",
+        opacity:showCtrl || !playing ? 1 : 0, transition:"opacity .25s",
+        pointerEvents:showCtrl || !playing ? "auto" : "none" }}>
+
+        {/* Progress bar */}
+        <div ref={barRef}
+          onClick={seekTo}
+          onMouseDown={() => setScrubbing(true)}
+          onMouseUp={() => setScrubbing(false)}
+          style={{ width:"100%", height:4, background:"rgba(255,255,255,.25)",
+            borderRadius:4, marginBottom:10, cursor:"pointer", position:"relative" }}>
+          <div style={{ height:"100%", borderRadius:4, background:ACCENT,
+            width:`${pct}%`, transition:scrubbing?"none":"width .1s" }} />
+          {/* Scrub handle */}
+          <div style={{ position:"absolute", top:"50%", left:`${pct}%`,
+            transform:"translate(-50%,-50%)", width:12, height:12,
+            borderRadius:"50%", background:"#fff",
+            opacity:showCtrl ? 1 : 0, transition:"opacity .2s",
+            boxShadow:"0 1px 4px rgba(0,0,0,.5)" }} />
+        </div>
+
+        {/* Buttons row */}
+        <div style={{ display:"flex", alignItems:"center", gap:10 }}>
+          {/* Play/pause */}
+          <button onClick={togglePlay}
+            style={{ background:"none", border:"none", cursor:"pointer", padding:0,
+              color:"#fff", display:"flex", lineHeight:1 }}>
+            {playing
+              ? <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+              : <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M8 5v14l11-7z"/></svg>}
+          </button>
+
+          {/* Mute / volume */}
+          <button onClick={toggleMute}
+            style={{ background:"none", border:"none", cursor:"pointer", padding:0,
+              color:"#fff", display:"flex", lineHeight:1 }}>
+            {muted || volume === 0
+              ? <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M16.5 12A4.5 4.5 0 0014 7.97V10.2l2.45 2.45c.05-.2.05-.43.05-.65zM19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zm-13.07-9L4.5 4.43 7.5 7.44 3 7.5v9h4l5 5v-6.94l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06a8.99 8.99 0 003.69-1.81L19.73 21 21 19.73l-9-9-4.5-4.5L4.27 4.5 5.93 3 21 18.07l-1.27 1.26L4.93 3 3 4.93 5.93 3z"/></svg>
+              : <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77 0-4.28-2.99-7.86-7-8.77z"/></svg>}
+          </button>
+          <input type="range" min={0} max={1} step={0.05}
+            value={muted ? 0 : volume} onChange={onVolumeChange}
+            style={{ width:64, accentColor:ACCENT, cursor:"pointer" }} />
+
+          {/* Time */}
+          <span style={{ fontSize:12, color:"rgba(255,255,255,.8)", fontFamily:"'Hanken Grotesk',sans-serif",
+            marginLeft:2, letterSpacing:"0.02em" }}>
+            {fmtTime(current)}{duration ? ` / ${fmtTime(duration)}` : ""}
           </span>
-        </button>
+
+          {/* Muted badge */}
+          {muted && playing && (
+            <span onClick={toggleMute} style={{ fontSize:11, fontWeight:700,
+              background:"rgba(255,255,255,.15)", borderRadius:4,
+              padding:"2px 7px", color:"rgba(255,255,255,.7)",
+              fontFamily:"'Hanken Grotesk',sans-serif", cursor:"pointer",
+              letterSpacing:"0.04em" }}>MUTED · tap to unmute</span>
+          )}
+
+          {/* Spacer */}
+          <div style={{ flex:1 }} />
+
+          {/* Fullscreen */}
+          <button onClick={requestFullscreen}
+            style={{ background:"none", border:"none", cursor:"pointer", padding:0,
+              color:"#fff", display:"flex", lineHeight:1 }}>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff">
+              <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Not-ready overlay */}
+      {!ready && (
+        <div style={{ position:"absolute", inset:0, zIndex:5, background:"#0A0E18",
+          display:"flex", alignItems:"center", justifyContent:"center" }}>
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="none"
+            style={{ animation:"spin 1s linear infinite", opacity:.5 }}>
+            <circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,.2)" strokeWidth="3"/>
+            <path d="M12 2a10 10 0 0 1 10 10" stroke="#fff" strokeWidth="3" strokeLinecap="round"/>
+          </svg>
+        </div>
       )}
     </div>
   );
