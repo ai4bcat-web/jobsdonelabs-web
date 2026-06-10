@@ -1174,7 +1174,11 @@ function Footer() {
               Recover $30K in 90 days with custom automation systems — or you pay nothing.
             </p>
             <div style={{ display:"flex", gap:10, marginTop:18 }}>
-              {([[Linkedin,"#"],[Youtube,"#"],[Twitter,"#"]] as [typeof Linkedin,string][]).map(([Icon,href],i) => (
+              {([
+                [Linkedin,   "https://www.linkedin.com/in/rynebandolik/"],
+                [Youtube,    "https://www.youtube.com/@jobsdonelabs"],
+                [Twitter,    "https://x.com/Ryne_Stone"],
+              ] as [typeof Linkedin, string][]).map(([Icon, href], i) => (
                 <a key={i} href={href} target="_blank" rel="noopener noreferrer"
                   style={{ width:34, height:34, borderRadius:6, background:"rgba(255,255,255,.07)", display:"flex", alignItems:"center", justifyContent:"center", color:"rgba(244,239,227,.5)", textDecoration:"none" }}
                   onMouseEnter={e => { e.currentTarget.style.background="rgba(255,255,255,.12)"; }}
@@ -1182,6 +1186,17 @@ function Footer() {
                   <Icon size={15} />
                 </a>
               ))}
+              {/* Instagram */}
+              <a href="https://www.instagram.com/jobsdonelabs.ai/" target="_blank" rel="noopener noreferrer"
+                style={{ width:34, height:34, borderRadius:6, background:"rgba(255,255,255,.07)", display:"flex", alignItems:"center", justifyContent:"center", color:"rgba(244,239,227,.5)", textDecoration:"none" }}
+                onMouseEnter={e => { e.currentTarget.style.background="rgba(255,255,255,.12)"; }}
+                onMouseLeave={e => { e.currentTarget.style.background="rgba(255,255,255,.07)"; }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </a>
             </div>
           </div>
           <div>
