@@ -86,7 +86,7 @@ function VSL() {
     <div style={{ width:"100%", borderRadius:12, overflow:"hidden",
       boxShadow:"0 24px 64px -16px rgba(0,0,0,.28)" }}
       dangerouslySetInnerHTML={{ __html:
-        `<wistia-player media-id="aqq109griy" aspect="1.7777777777777777"></wistia-player>`
+        `<wistia-player media-id="aqq109griy" aspect="1.7777777777777777" autoplay muted></wistia-player>`
       }}
     />
   );
