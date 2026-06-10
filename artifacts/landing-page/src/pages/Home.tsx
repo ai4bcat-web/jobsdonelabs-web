@@ -593,9 +593,6 @@ function Hero({ onBook }: { onBook:()=>void }) {
           {/* Right: video */}
           <Fade delay={0.12}>
             <div style={{ position:"relative" }}>
-              <div style={{ position:"absolute", top:-36, right:-36, zIndex:10, transform:"rotate(14deg)" }}>
-                <StampBadge size={130} dark />
-              </div>
               <VSL />
             </div>
           </Fade>
