@@ -127,8 +127,15 @@
   to { transform: rotate(360deg); }
 }
 
+.grid-hero .hero-video { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+.grid-hero .hero-top   { grid-column: 1; grid-row: 1; }
+.grid-hero .hero-bottom { grid-column: 1; grid-row: 2; }
+
 @media (max-width: 768px) {
-  .grid-hero { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .grid-hero { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .grid-hero .hero-top    { grid-column: 1 !important; grid-row: unset !important; order: 1; }
+  .grid-hero .hero-video  { grid-column: 1 !important; grid-row: unset !important; order: 2; }
+  .grid-hero .hero-bottom { grid-column: 1 !important; grid-row: unset !important; order: 3; padding-top: 0 !important; }
   .grid-roi-panels { grid-template-columns: 1fr !important; }
 }
 .sg { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
