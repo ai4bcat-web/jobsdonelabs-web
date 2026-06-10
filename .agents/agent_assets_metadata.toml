@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "TqTd4qljEfGvLpfrm9reY"
@@ -24,3 +23,9 @@ id = "R3VmGQ5cli7BPcgEStSj-"
 uri = "file://artifacts/landing-page/public/testimonial-3.png"
 type = "image"
 title = "Headshot of owner"
+
+[[outputs]]
+id = "lW09_TR8-a6M1mIB_X6vl"
+uri = "file://artifacts/landing-page/public/og-image.png"
+type = "image"
+title = "Facebook / Social Preview Image (1200×630)"
