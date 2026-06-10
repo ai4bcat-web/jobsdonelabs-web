@@ -83,17 +83,13 @@ function StampBadge({ size = 104, dark = false }: { size?: number; dark?: boolea
 /* ───────────────────────────────────── */
 function VSL() {
   useEffect(() => {
-    // Wistia JS API — fires .play() the moment the player is initialised.
-    // This is the most reliable autoplay trigger; the HTML attribute alone
-    // can be ignored by some browsers before any user gesture.
-    (window as any)._wq = (window as any)._wq || [];
-    (window as any)._wq.push({
-      id: "aqq109griy",
-      options: { autoPlay: true, volume: 0, playsinline: true },
-      onReady(video: any) {
-        video.play();
-      },
-    });
+    // wistia-player custom element uses wistiaOptions (not the legacy _wq API)
+    (window as any).wistiaOptions = {
+      ...((window as any).wistiaOptions || {}),
+      autoPlay: true,
+      volume: 0,
+      playsinline: true,
+    };
   }, []);
 
   return (
@@ -314,10 +310,13 @@ function Fade({ children, delay=0, className="" }: { children:React.ReactNode; d
 
 function SectionLabel({ children, onDark=false }: { children:React.ReactNode; onDark?:boolean }) {
   return (
-    <div style={{ display:"inline-flex", alignItems:"center", gap:8, marginBottom:16 }}>
-      <span style={{ width:26, height:2, background:ACCENT, borderRadius:2, flex:"0 0 auto" }} />
-      <span style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase",
-        color:onDark?"rgba(244,239,227,.6)":ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+    <div style={{ display:"inline-flex", marginBottom:16 }}>
+      <span style={{ fontSize:11, fontWeight:800, letterSpacing:"0.12em", textTransform:"uppercase",
+        fontFamily:"'Hanken Grotesk',sans-serif",
+        background: onDark ? ACCENT : ACCENT,
+        color: "#fff",
+        padding:"5px 11px",
+        borderRadius:0 }}>
         {children}
       </span>
     </div>
@@ -526,9 +525,9 @@ function Hero({ onBook }: { onBook:()=>void }) {
           {/* Left column */}
           <Fade>
             <div>
-              <div style={{ display:"inline-flex", alignItems:"center", gap:7,
-                background:INK, borderRadius:3, padding:"6px 13px", marginBottom:20 }}>
-                <span style={{ fontSize:10, fontWeight:700, letterSpacing:"0.12em",
+              <div style={{ display:"inline-flex", alignItems:"center",
+                background:INK, borderRadius:0, padding:"5px 11px", marginBottom:20 }}>
+                <span style={{ fontSize:10, fontWeight:800, letterSpacing:"0.12em",
                   textTransform:"uppercase", color:CREAM,
                   fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
               </div>

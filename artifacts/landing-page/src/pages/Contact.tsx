@@ -103,13 +103,11 @@ export default function Contact() {
 
           {/* ── Left column ── */}
           <div>
-            {/* Pill eyebrow */}
-            <div style={{ display:"inline-flex", alignItems:"center", gap:7,
-              border:`1.5px solid ${ACCENT}`, borderRadius:50,
-              padding:"5px 13px", marginBottom:22 }}>
-              <span style={{ width:7, height:7, borderRadius:"50%", background:ACCENT, flexShrink:0 }} />
+            {/* Square eyebrow */}
+            <div style={{ display:"inline-flex", marginBottom:22 }}>
               <span style={{ fontSize:11, fontWeight:800, letterSpacing:"0.12em",
-                textTransform:"uppercase", color:ACCENT, fontFamily:HG }}>Contact</span>
+                textTransform:"uppercase", color:"#fff", background:ACCENT,
+                padding:"5px 11px", borderRadius:0, fontFamily:HG }}>Contact</span>
             </div>
 
             {/* Headline */}
