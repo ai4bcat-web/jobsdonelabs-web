@@ -82,6 +82,20 @@ function StampBadge({ size = 104, dark = false }: { size?: number; dark?: boolea
 /*  VSL — Wistia embed                  */
 /* ───────────────────────────────────── */
 function VSL() {
+  useEffect(() => {
+    // Wistia JS API — fires .play() the moment the player is initialised.
+    // This is the most reliable autoplay trigger; the HTML attribute alone
+    // can be ignored by some browsers before any user gesture.
+    (window as any)._wq = (window as any)._wq || [];
+    (window as any)._wq.push({
+      id: "aqq109griy",
+      options: { autoPlay: true, volume: 0, playsinline: true },
+      onReady(video: any) {
+        video.play();
+      },
+    });
+  }, []);
+
   return (
     <div style={{ width:"100%", borderRadius:12, overflow:"hidden",
       boxShadow:"0 24px 64px -16px rgba(0,0,0,.28)" }}
