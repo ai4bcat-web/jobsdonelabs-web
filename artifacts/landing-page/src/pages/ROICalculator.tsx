@@ -11,31 +11,6 @@ const INK2        = "#11131B";
 const INK_SOFT    = "#54596A";
 const LINE        = "rgba(11,13,18,.12)";
 
-function Logo() {
-  return (
-    <div style={{ display:"flex", alignItems:"center", gap:10, userSelect:"none" }}>
-      <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
-        <path d="M18 7 H30 M20 7 V19 L11.5 38 Q10 41.5 13.8 41.5 H34.2 Q38 41.5 36.5 38 L28 19 V7"
-          stroke={ACCENT} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
-        <line x1="20.5" y1="25.5" x2="26" y2="30.5" stroke={ACCENT} strokeWidth="2" strokeLinecap="round"/>
-        <line x1="26" y1="30.5" x2="20.5" y2="35.5" stroke={ACCENT} strokeWidth="2" strokeLinecap="round"/>
-        <circle cx="20.5" cy="25.5" r="2.6" fill={ACCENT}/>
-        <circle cx="26.5" cy="30.5" r="2.6" fill={ACCENT}/>
-        <circle cx="20.5" cy="35.5" r="2.6" fill={ACCENT}/>
-      </svg>
-      <div style={{ display:"flex", flexDirection:"column", lineHeight:1 }}>
-        <span style={{ fontStyle:"italic", fontWeight:800, fontSize:17, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-          <span style={{ color:INK }}>JOBS</span><span style={{ color:ACCENT }}>DONE</span>
-        </span>
-        <span style={{ display:"flex", alignItems:"center", gap:"0.4em", marginTop:4, fontWeight:700, fontSize:5, letterSpacing:"0.42em", color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-          <span style={{ flex:1, height:1.5, background:"currentColor", opacity:0.5 }} />
-          <span style={{ paddingLeft:"0.42em" }}>LABS</span>
-          <span style={{ flex:1, height:1.5, background:"currentColor", opacity:0.5 }} />
-        </span>
-      </div>
-    </div>
-  );
-}
 
 function Slider({ label, value, onChange, min, max, step=1, format }: {
   label:string; value:number; onChange:(v:number)=>void;
@@ -86,32 +61,7 @@ export default function ROICalculator() {
   return (
     <div style={{ minHeight:"100vh", background:CREAM, color:INK, fontFamily:"'Hanken Grotesk',sans-serif", display:"flex", flexDirection:"column" }}>
 
-      {/* Nav */}
-      <header style={{ position:"sticky", top:0, zIndex:50, background:"rgba(244,239,227,.92)", backdropFilter:"blur(14px)", borderBottom:`1px solid ${LINE}` }}>
-        <div style={{ maxWidth:1120, margin:"0 auto", padding:"0 24px", height:60, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-          <Link href="/"><Logo /></Link>
-          <nav style={{ display:"flex", alignItems:"center", gap:28 }}>
-            {["Services","Industries","FAQ"].map(l => (
-              <Link key={l} href={`/#${l.toLowerCase()}`}>
-                <span style={{ fontSize:14, fontWeight:600, color:INK_SOFT, cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif",
-                  textDecoration:"none", transition:"color .15s" }}
-                  onMouseEnter={e=>(e.currentTarget as HTMLElement).style.color=INK}
-                  onMouseLeave={e=>(e.currentTarget as HTMLElement).style.color=INK_SOFT}>
-                  {l}
-                </span>
-              </Link>
-            ))}
-            <button onClick={() => setShowBooking(true)}
-              style={{ background:ACCENT, color:"#fff", border:"none", borderRadius:50,
-                padding:"10px 22px", fontSize:14, fontWeight:700, cursor:"pointer",
-                fontFamily:"'Hanken Grotesk',sans-serif", boxShadow:`0 4px 16px -4px ${ACCENT}66` }}>
-              Book a Call
-            </button>
-          </nav>
-        </div>
-      </header>
-
-      <main style={{ maxWidth:1120, margin:"0 auto", padding:"48px 24px 80px", flex:1 }}>
+      <main style={{ maxWidth:900, margin:"0 auto", padding:"48px 24px 80px", flex:1, width:"100%" }}>
 
         {/* Breadcrumb */}
         <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:40 }}>
