@@ -1,200 +1,282 @@
 import { useState } from "react";
 import BookingModal from "@/components/BookingModal";
 import { Link } from "wouter";
-import { CheckCircle2, ArrowRight, Loader2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Mail, Clock, MapPin, CheckCircle2, Loader2 } from "lucide-react";
 
 const CREAM    = "#F4EFE3";
 const CREAM2   = "#EFE8D8";
 const INK      = "#0B0D12";
+const INK2     = "#11131B";
 const INK_SOFT = "#54596A";
 const LINE     = "rgba(11,13,18,.12)";
 const ACCENT   = "#1466FF";
 
-function SubLogo() {
+function Logo() {
   return (
-    <Link href="/">
-      <div style={{ display:"flex", alignItems:"center", gap:10, cursor:"pointer", userSelect:"none", textDecoration:"none" }}>
-        <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
-          <path d="M18 7 H30 M20 7 V19 L11.5 38 Q10 41.5 13.8 41.5 H34.2 Q38 41.5 36.5 38 L28 19 V7"
-            stroke={ACCENT} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
-          <line x1="20.5" y1="25.5" x2="26" y2="30.5" stroke={ACCENT} strokeWidth="2" strokeLinecap="round"/>
-          <line x1="26" y1="30.5" x2="20.5" y2="35.5" stroke={ACCENT} strokeWidth="2" strokeLinecap="round"/>
-          <circle cx="20.5" cy="25.5" r="2.6" fill={ACCENT}/>
-          <circle cx="26.5" cy="30.5" r="2.6" fill={ACCENT}/>
-          <circle cx="20.5" cy="35.5" r="2.6" fill={ACCENT}/>
-        </svg>
-        <div style={{ display:"flex", flexDirection:"column", lineHeight:1 }}>
-          <span style={{ fontStyle:"italic", fontWeight:800, fontSize:16, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-            <span style={{ color:INK }}>JOBS</span><span style={{ color:ACCENT }}>DONE</span>
-          </span>
-          <span style={{ fontSize:5, fontWeight:700, letterSpacing:"0.42em", color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif", marginTop:3 }}>LABS</span>
-        </div>
+    <div style={{ display:"flex", alignItems:"center", gap:10, userSelect:"none" }}>
+      <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
+        <path d="M18 7 H30 M20 7 V19 L11.5 38 Q10 41.5 13.8 41.5 H34.2 Q38 41.5 36.5 38 L28 19 V7"
+          stroke={ACCENT} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
+        <line x1="20.5" y1="25.5" x2="26" y2="30.5" stroke={ACCENT} strokeWidth="2" strokeLinecap="round"/>
+        <line x1="26" y1="30.5" x2="20.5" y2="35.5" stroke={ACCENT} strokeWidth="2" strokeLinecap="round"/>
+        <circle cx="20.5" cy="25.5" r="2.6" fill={ACCENT}/>
+        <circle cx="26.5" cy="30.5" r="2.6" fill={ACCENT}/>
+        <circle cx="20.5" cy="35.5" r="2.6" fill={ACCENT}/>
+      </svg>
+      <div style={{ display:"flex", flexDirection:"column", lineHeight:1 }}>
+        <span style={{ fontStyle:"italic", fontWeight:800, fontSize:17, letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+          <span style={{ color:INK }}>JOBS</span><span style={{ color:ACCENT }}>DONE</span>
+        </span>
+        <span style={{ display:"flex", alignItems:"center", gap:"0.4em", marginTop:4, fontWeight:700, fontSize:5, letterSpacing:"0.42em", color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+          <span style={{ flex:1, height:1.5, background:"currentColor", opacity:0.5 }} />
+          <span style={{ paddingLeft:"0.42em" }}>LABS</span>
+          <span style={{ flex:1, height:1.5, background:"currentColor", opacity:0.5 }} />
+        </span>
       </div>
-    </Link>
+    </div>
   );
 }
 
-interface FormState { fullName:string; email:string; phone:string; smsConsent:boolean; }
-interface Errors    { fullName?:string; email?:string; phone?:string; smsConsent?:string; }
+const inputStyle = {
+  width:"100%", padding:"12px 14px", borderRadius:8,
+  border:`1px solid ${LINE}`, background:CREAM, color:INK,
+  fontSize:14.5, fontFamily:"'Hanken Grotesk',sans-serif",
+  outline:"none", boxSizing:"border-box" as const,
+};
 
-function validate(form:FormState):Errors {
-  const errors:Errors = {};
-  if (!form.fullName.trim()) errors.fullName="Full name is required.";
-  if (!form.email.trim()) {
-    errors.email="Email is required.";
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-    errors.email="Please enter a valid email address.";
-  }
-  if (!form.phone.trim()) {
-    errors.phone="Phone number is required.";
-  } else if (!/^\+?[\d\s\-().]{7,}$/.test(form.phone)) {
-    errors.phone="Please enter a valid phone number.";
-  }
-  return errors;
-}
+const labelStyle = {
+  fontSize:11, fontWeight:700, letterSpacing:"0.1em",
+  textTransform:"uppercase" as const, color:INK_SOFT,
+  fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:6, display:"block",
+};
 
 export default function Contact() {
-  const [form, setForm]           = useState<FormState>({ fullName:"", email:"", phone:"", smsConsent:false });
-  const [errors, setErrors]       = useState<Errors>({});
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted]  = useState(false);
   const [showBooking, setShowBooking] = useState(false);
+  const [submitting, setSubmitting]   = useState(false);
+  const [submitted, setSubmitted]     = useState(false);
+  const [form, setForm] = useState({
+    fullName:"", email:"", company:"",
+    industry:"", revenue:"", leaking:"",
+  });
 
-  function handleChange(e:React.ChangeEvent<HTMLInputElement>) {
-    const { name, value, type, checked } = e.target;
-    setForm(prev => ({ ...prev, [name]:type==="checkbox"?checked:value }));
-    if (errors[name as keyof Errors]) setErrors(prev => ({ ...prev, [name]:undefined }));
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+    const { name, value } = e.target;
+    setForm(prev => ({ ...prev, [name]:value }));
   }
 
-  async function handleSubmit(e:React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const errs = validate(form);
-    if (Object.keys(errs).length>0) { setErrors(errs); return; }
+    if (!form.fullName.trim() || !form.email.trim()) return;
     setSubmitting(true);
-    await new Promise(r=>setTimeout(r,900));
+    await new Promise(r => setTimeout(r, 900));
     setSubmitting(false);
     setSubmitted(true);
   }
 
   return (
-    <div style={{ background:CREAM2, minHeight:"100vh", color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-      <nav className="sticky top-0 z-50 px-6 py-4 flex items-center justify-between"
-        style={{ background:"rgba(244,239,227,.88)", backdropFilter:"blur(14px)", borderBottom:`1px solid ${LINE}` }}>
-        <SubLogo />
-        <div className="flex items-center gap-6" style={{ fontSize:13 }}>
-          <Link href="/" style={{ color:INK_SOFT, textDecoration:"none", fontWeight:500 }}>Home</Link>
-          <Link href="/terms" style={{ color:INK_SOFT, textDecoration:"none", fontWeight:500 }}>Terms</Link>
-          <Link href="/privacy" style={{ color:INK_SOFT, textDecoration:"none", fontWeight:500 }}>Privacy</Link>
-          <button onClick={() => setShowBooking(true)}
-            style={{ fontSize:13, fontWeight:700, padding:"7px 16px", borderRadius:100, background:ACCENT, color:"#fff", border:"none", cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-            Book a Call
-          </button>
+    <div style={{ minHeight:"100vh", background:CREAM, color:INK,
+      fontFamily:"'Hanken Grotesk',sans-serif", display:"flex", flexDirection:"column" }}>
+
+      {/* Nav */}
+      <header style={{ position:"sticky", top:0, zIndex:50,
+        background:"rgba(244,239,227,.92)", backdropFilter:"blur(14px)",
+        borderBottom:`1px solid ${LINE}` }}>
+        <div style={{ maxWidth:1120, margin:"0 auto", padding:"0 24px",
+          height:60, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+          <Link href="/"><Logo /></Link>
+          <nav style={{ display:"flex", alignItems:"center", gap:28 }}>
+            {[["Services","/#services"],["Industries","/#industries"],["ROI Calculator","/roi-calculator"]].map(([label,href]) => (
+              <Link key={label} href={href}>
+                <span style={{ fontSize:14, fontWeight:600, color:INK_SOFT, cursor:"pointer",
+                  fontFamily:"'Hanken Grotesk',sans-serif", textDecoration:"none" }}
+                  onMouseEnter={e=>(e.currentTarget as HTMLElement).style.color=INK}
+                  onMouseLeave={e=>(e.currentTarget as HTMLElement).style.color=INK_SOFT}>
+                  {label}
+                </span>
+              </Link>
+            ))}
+            <button onClick={() => setShowBooking(true)}
+              style={{ background:ACCENT, color:"#fff", border:"none", borderRadius:50,
+                padding:"10px 22px", fontSize:14, fontWeight:700, cursor:"pointer",
+                fontFamily:"'Hanken Grotesk',sans-serif", boxShadow:`0 4px 16px -4px ${ACCENT}66` }}>
+              Book a Call
+            </button>
+          </nav>
         </div>
-      </nav>
+      </header>
 
-      <main className="max-w-lg mx-auto px-6 py-16">
+      <main style={{ maxWidth:1120, margin:"0 auto", padding:"40px 24px 80px", flex:1 }}>
+
+        {/* Breadcrumb */}
+        <div style={{ marginBottom:44 }}>
+          <Link href="/">
+            <span style={{ display:"inline-flex", alignItems:"center", gap:6, fontSize:13.5,
+              fontWeight:600, color:INK_SOFT, cursor:"pointer", textDecoration:"none" }}
+              onMouseEnter={e=>(e.currentTarget as HTMLElement).style.color=INK}
+              onMouseLeave={e=>(e.currentTarget as HTMLElement).style.color=INK_SOFT}>
+              <ArrowLeft size={14} /> Back to home
+            </span>
+          </Link>
+        </div>
+
         {submitted ? (
-          <SuccessState name={form.fullName} onOpenBooking={() => setShowBooking(true)} />
+          <SuccessState name={form.fullName} onBook={() => setShowBooking(true)} />
         ) : (
-          <>
-            <div className="mb-10">
-              <p style={{ fontSize:12, fontWeight:700, letterSpacing:"0.15em", textTransform:"uppercase", color:ACCENT, marginBottom:12, fontFamily:"'Hanken Grotesk',sans-serif" }}>Get in Touch</p>
-              <h1 className="anton" style={{ fontSize:"clamp(1.9rem,4vw,2.4rem)", color:INK, letterSpacing:"-0.01em", lineHeight:1.1, marginBottom:10 }}>
-                Contact information
-              </h1>
-              <p style={{ color:INK_SOFT, fontSize:15, lineHeight:1.65, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                Answer these quick questions so we can see if you qualify. Takes under 60 seconds.
-              </p>
-            </div>
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1.4fr", gap:64, alignItems:"start" }}
+            className="contact-grid">
 
-            <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
-              <Field label="Full name" error={errors.fullName}>
-                <input name="fullName" type="text" autoComplete="name" placeholder="Enter your answer."
-                  value={form.fullName} onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl text-[15px] outline-none transition-all"
-                  style={{ background:CREAM, border:`1px solid ${errors.fullName?"#ef4444":LINE}`, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}
-                  onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
-                  onBlur={e=>(e.currentTarget.style.borderColor=errors.fullName?"#ef4444":LINE)} />
-              </Field>
-
-              <Field label="Email" error={errors.email} hint="Jobsdone Inc. may contact you to follow up.">
-                <input name="email" type="email" autoComplete="email" placeholder="Enter your answer."
-                  value={form.email} onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl text-[15px] outline-none transition-all"
-                  style={{ background:CREAM, border:`1px solid ${errors.email?"#ef4444":LINE}`, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}
-                  onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
-                  onBlur={e=>(e.currentTarget.style.borderColor=errors.email?"#ef4444":LINE)} />
-              </Field>
-
-              <Field label="Phone number" error={errors.phone} hint="Jobsdone Inc. may contact you to follow up.">
-                <input name="phone" type="tel" autoComplete="tel" placeholder="Enter your answer."
-                  value={form.phone} onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl text-[15px] outline-none transition-all"
-                  style={{ background:CREAM, border:`1px solid ${errors.phone?"#ef4444":LINE}`, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}
-                  onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
-                  onBlur={e=>(e.currentTarget.style.borderColor=errors.phone?"#ef4444":LINE)} />
-              </Field>
-
-              <div className="pt-2 pb-1">
-                <div style={{ borderTop:`1px solid ${LINE}` }} />
+            {/* Left: info */}
+            <div>
+              <div style={{ display:"inline-flex", alignItems:"center", gap:7,
+                border:`1.5px solid ${ACCENT}`, borderRadius:50,
+                padding:"4px 12px", marginBottom:24 }}>
+                <span style={{ width:7, height:7, borderRadius:"50%", background:ACCENT, flexShrink:0 }} />
+                <span style={{ fontSize:11, fontWeight:700, letterSpacing:"0.1em",
+                  textTransform:"uppercase", color:ACCENT,
+                  fontFamily:"'Hanken Grotesk',sans-serif" }}>Contact</span>
               </div>
 
-              <div className="flex flex-col gap-4">
-                <div>
-                  <p style={{ fontWeight:600, fontSize:15, marginBottom:8, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>Consent to Contact</p>
-                  <p style={{ fontSize:13, lineHeight:1.65, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                    By submitting this form and providing your phone number, you agree to receive SMS messages from Jobsdone Inc. about your inquiry. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. View our{" "}
-                    <Link href="/privacy" style={{ color:ACCENT }}>Privacy Policy</Link> and{" "}
-                    <Link href="/terms" style={{ color:ACCENT }}>Terms</Link>.
-                  </p>
-                </div>
-                <label className="flex gap-3 cursor-pointer p-4 rounded-xl transition-colors"
-                  style={{ background:CREAM, border:`1px solid ${LINE}` }}>
-                  <div className="flex-shrink-0 mt-0.5">
-                    <input name="smsConsent" type="checkbox" checked={form.smsConsent} onChange={handleChange} className="sr-only" />
-                    <div className="w-5 h-5 rounded flex items-center justify-center transition-all"
-                      style={{ background:form.smsConsent?ACCENT:"transparent", border:`2px solid ${form.smsConsent?ACCENT:INK_SOFT}` }}>
-                      {form.smsConsent && (
-                        <svg width="11" height="8" viewBox="0 0 11 8" fill="none">
-                          <path d="M1 4L4 7L10 1" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      )}
+              <h1 className="anton" style={{ fontSize:"clamp(2rem,3.8vw,3rem)",
+                lineHeight:1.05, color:INK, marginBottom:20 }}>
+                Let's find your<br />$30K.
+              </h1>
+
+              <p style={{ fontSize:15.5, lineHeight:1.7, color:INK_SOFT, marginBottom:36,
+                fontFamily:"'Hanken Grotesk',sans-serif" }}>
+                The fastest way to start is to book a free Profit Recovery Audit. Prefer to send a note first? Use the form and we'll get back within one business day.
+              </p>
+
+              {/* Info items */}
+              <div style={{ display:"flex", flexDirection:"column", gap:18 }}>
+                {[
+                  { icon:<Mail size={18}/>, title:"ryne@jobsdone.io", sub:"Email us anytime" },
+                  { icon:<Clock size={18}/>, title:"Mon–Fri · 9am–6pm", sub:"We reply within 1 business day" },
+                  { icon:<MapPin size={18}/>, title:"Remote-first", sub:"Serving operators across North America" },
+                ].map(item => (
+                  <div key={item.title} style={{ display:"flex", alignItems:"flex-start", gap:14 }}>
+                    <div style={{ width:44, height:44, borderRadius:10, background:INK,
+                      display:"flex", alignItems:"center", justifyContent:"center",
+                      flexShrink:0, color:"#fff" }}>
+                      {item.icon}
+                    </div>
+                    <div>
+                      <p style={{ fontSize:14.5, fontWeight:700, color:INK,
+                        fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:2 }}>{item.title}</p>
+                      <p style={{ fontSize:13, color:INK_SOFT,
+                        fontFamily:"'Hanken Grotesk',sans-serif" }}>{item.sub}</p>
                     </div>
                   </div>
-                  <p style={{ fontSize:13, lineHeight:1.65, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                    I agree to receive marketing and informational text messages from Jobsdone Inc at the phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help. View our{" "}
-                    <Link href="/privacy" style={{ color:ACCENT }}>Privacy Policy</Link> and{" "}
-                    <Link href="/terms" style={{ color:ACCENT }}>Terms of Service</Link>.
-                  </p>
-                </label>
+                ))}
               </div>
+            </div>
 
-              <button type="submit" disabled={submitting}
-                className="w-full text-[15px] py-3.5 rounded-xl flex items-center justify-center gap-2 transition-opacity mt-2"
-                style={{ background:ACCENT, color:"#fff", fontWeight:700, opacity:submitting?.7:1, border:"none", cursor:"pointer",
-                  boxShadow:`0 4px 16px -4px ${ACCENT}55`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                {submitting ? <><Loader2 className="w-4 h-4 animate-spin"/>Submitting…</> : <>Submit <ArrowRight className="w-4 h-4"/></>}
-              </button>
+            {/* Right: form card */}
+            <div style={{ background:CREAM2, border:`1px solid ${LINE}`, borderRadius:16,
+              padding:"36px 32px" }}>
+              <form onSubmit={handleSubmit} style={{ display:"flex", flexDirection:"column", gap:20 }}>
+                <div>
+                  <label style={labelStyle}>Full Name</label>
+                  <input name="fullName" type="text" placeholder="Jane Operator"
+                    value={form.fullName} onChange={handleChange} required
+                    style={inputStyle}
+                    onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
+                    onBlur={e=>(e.currentTarget.style.borderColor=LINE)} />
+                </div>
 
-              <p className="text-center" style={{ fontSize:12, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                By clicking Submit, you agree to send your info to Jobsdone Inc. who agrees to use it according to their{" "}
-                <Link href="/privacy" style={{ color:ACCENT }}>privacy policy</Link>.
-              </p>
-            </form>
-          </>
+                <div>
+                  <label style={labelStyle}>Work Email</label>
+                  <input name="email" type="email" placeholder="jane@yourbusiness.com"
+                    value={form.email} onChange={handleChange} required
+                    style={inputStyle}
+                    onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
+                    onBlur={e=>(e.currentTarget.style.borderColor=LINE)} />
+                </div>
+
+                <div>
+                  <label style={labelStyle}>Company</label>
+                  <input name="company" type="text" placeholder="Your business"
+                    value={form.company} onChange={handleChange}
+                    style={inputStyle}
+                    onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
+                    onBlur={e=>(e.currentTarget.style.borderColor=LINE)} />
+                </div>
+
+                <div>
+                  <label style={labelStyle}>Industry</label>
+                  <select name="industry" value={form.industry} onChange={handleChange}
+                    style={{ ...inputStyle, appearance:"none" as const,
+                      backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2354596A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`,
+                      backgroundRepeat:"no-repeat", backgroundPosition:"right 14px center",
+                      paddingRight:36, cursor:"pointer" }}>
+                    <option value="">Select industry…</option>
+                    <option>Home service (HVAC, plumbing, etc.)</option>
+                    <option>Freight &amp; logistics</option>
+                    <option>Manufacturing</option>
+                    <option>Auto transport</option>
+                    <option>Food service distribution</option>
+                    <option>Wholesale &amp; supply</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label style={labelStyle}>Annual Revenue</label>
+                  <select name="revenue" value={form.revenue} onChange={handleChange}
+                    style={{ ...inputStyle, appearance:"none" as const,
+                      backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2354596A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`,
+                      backgroundRepeat:"no-repeat", backgroundPosition:"right 14px center",
+                      paddingRight:36, cursor:"pointer" }}>
+                    <option value="">Select range…</option>
+                    <option>$1M – $3M</option>
+                    <option>$3M – $5M</option>
+                    <option>$5M – $10M</option>
+                    <option>$10M – $25M</option>
+                    <option>$25M+</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label style={labelStyle}>What's leaking? <span style={{ fontWeight:400, textTransform:"none", fontSize:10 }}>(optional)</span></label>
+                  <textarea name="leaking" rows={4}
+                    placeholder="Tell us where you think profit is slipping away…"
+                    value={form.leaking} onChange={handleChange}
+                    style={{ ...inputStyle, resize:"vertical", lineHeight:1.6 }}
+                    onFocus={e=>(e.currentTarget.style.borderColor=ACCENT)}
+                    onBlur={e=>(e.currentTarget.style.borderColor=LINE)} />
+                </div>
+
+                <button type="submit" disabled={submitting}
+                  style={{ width:"100%", padding:"15px", borderRadius:50, border:"none",
+                    background:ACCENT, color:"#fff", fontSize:15, fontWeight:700,
+                    cursor:submitting?"not-allowed":"pointer",
+                    fontFamily:"'Hanken Grotesk',sans-serif",
+                    display:"flex", alignItems:"center", justifyContent:"center", gap:8,
+                    opacity:submitting?.75:1, boxShadow:`0 6px 24px -6px ${ACCENT}88` }}>
+                  {submitting
+                    ? <><Loader2 size={16} style={{ animation:"spin 1s linear infinite" }} />Sending…</>
+                    : <>Send message <ArrowRight size={16} /></>}
+                </button>
+              </form>
+            </div>
+          </div>
         )}
       </main>
 
-      <footer className="py-8 px-6" style={{ borderTop:`1px solid ${LINE}` }}>
-        <div className="max-w-lg mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-          <div style={{ fontSize:13, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-            <p style={{ fontWeight:600, marginBottom:2, color:INK }}>Jobsdone Inc.</p>
-            <p>414 N River Rd, Fox River Grove, IL 60021</p>
-            <p><a href="mailto:ryne@jobsdone.io" style={{ color:ACCENT }}>ryne@jobsdone.io</a></p>
-          </div>
-          <div className="flex gap-4" style={{ fontSize:13 }}>
-            <Link href="/terms" style={{ color:INK_SOFT, textDecoration:"none" }}>Terms</Link>
-            <Link href="/privacy" style={{ color:INK_SOFT, textDecoration:"none" }}>Privacy</Link>
+      {/* Footer */}
+      <footer style={{ background:INK2, padding:"28px 24px" }}>
+        <div style={{ maxWidth:1120, margin:"0 auto", display:"flex",
+          alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:12 }}>
+          <p style={{ fontSize:13, color:"rgba(255,255,255,.35)",
+            fontFamily:"'Hanken Grotesk',sans-serif" }}>
+            © 2026 Jobs Done Labs. All rights reserved.
+          </p>
+          <div style={{ display:"flex", gap:20 }}>
+            {[["Privacy Policy","/privacy"],["Terms of Service","/terms"],["ROI Calculator","/roi-calculator"]].map(([label,href]) => (
+              <Link key={label} href={href}>
+                <span style={{ fontSize:13, color:"rgba(255,255,255,.45)", cursor:"pointer",
+                  fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </footer>
@@ -204,34 +286,33 @@ export default function Contact() {
   );
 }
 
-function Field({ label, error, hint, children }: { label:string; error?:string; hint?:string; children:React.ReactNode }) {
+function SuccessState({ name, onBook }: { name:string; onBook:()=>void }) {
+  const first = name.split(" ")[0] || "there";
   return (
-    <div className="flex flex-col gap-1.5">
-      <label style={{ fontSize:13, fontWeight:600, color:INK, fontFamily:"'Hanken Grotesk',sans-serif" }}>{label}</label>
-      {children}
-      {hint && !error && <p style={{ fontSize:12, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{hint}</p>}
-      {error && <p style={{ fontSize:12, color:"#ef4444", fontFamily:"'Hanken Grotesk',sans-serif" }}>{error}</p>}
-    </div>
-  );
-}
-
-function SuccessState({ name, onOpenBooking }: { name:string; onOpenBooking:()=>void }) {
-  const firstName = name.split(" ")[0];
-  return (
-    <div className="flex flex-col items-center text-center py-10">
-      <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ background:`${ACCENT}15` }}>
-        <CheckCircle2 className="w-8 h-8" style={{ color:ACCENT }} />
+    <div style={{ display:"flex", flexDirection:"column", alignItems:"center",
+      textAlign:"center", padding:"64px 24px" }}>
+      <div style={{ width:64, height:64, borderRadius:"50%", background:`${ACCENT}15`,
+        display:"flex", alignItems:"center", justifyContent:"center", marginBottom:24 }}>
+        <CheckCircle2 size={32} style={{ color:ACCENT }} />
       </div>
-      <h2 className="anton" style={{ fontSize:28, color:INK, letterSpacing:"-0.01em", marginBottom:10 }}>Thanks, {firstName}!</h2>
-      <p style={{ fontSize:15, lineHeight:1.65, marginBottom:28, maxWidth:360, color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-        We've received your info and will be in touch shortly. In the meantime, you can book your audit call directly.
+      <h2 className="anton" style={{ fontSize:32, color:INK, marginBottom:12 }}>
+        Thanks, {first}!
+      </h2>
+      <p style={{ fontSize:16, lineHeight:1.68, color:INK_SOFT, maxWidth:380,
+        marginBottom:32, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+        We've got your message and will be in touch within one business day. Want to move faster?
       </p>
-      <button onClick={onOpenBooking}
-        className="inline-flex items-center gap-2 transition-opacity hover:opacity-90"
-        style={{ fontWeight:700, fontSize:15, padding:"12px 24px", borderRadius:100, background:ACCENT, color:"#fff", border:"none", cursor:"pointer", boxShadow:`0 4px 16px -4px ${ACCENT}55`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-        Book Your Audit Call <ArrowRight className="w-4 h-4" />
+      <button onClick={onBook}
+        style={{ display:"inline-flex", alignItems:"center", gap:8,
+          fontWeight:700, fontSize:15, padding:"13px 28px", borderRadius:50,
+          background:ACCENT, color:"#fff", border:"none", cursor:"pointer",
+          boxShadow:`0 4px 16px -4px ${ACCENT}55`,
+          fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:16 }}>
+        Book your free audit <ArrowRight size={16} />
       </button>
-      <Link href="/" style={{ marginTop:16, fontSize:13, color:INK_SOFT, textDecoration:"none", display:"block" }}>← Back to home</Link>
+      <Link href="/">
+        <span style={{ fontSize:13, color:INK_SOFT, cursor:"pointer" }}>← Back to home</span>
+      </Link>
     </div>
   );
 }
