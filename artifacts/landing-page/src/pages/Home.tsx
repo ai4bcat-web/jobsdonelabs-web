@@ -430,7 +430,7 @@ function ExitIntentPopup({ onOpen }: { onOpen:()=>void }) {
           </button>
           <div style={{ fontSize:11.5, fontWeight:700, letterSpacing:"0.1em", color:ACCENT, marginBottom:10, fontFamily:"'Hanken Grotesk',sans-serif" }}>Wait — before you go</div>
           <h3 className="anton" style={{ fontSize:26, color:INK, lineHeight:1.1, marginBottom:10 }}>Know your profit leak number?</h3>
-          <p style={{ color:INK_SOFT, fontSize:14.5, lineHeight:1.6, marginBottom:22, fontFamily:"'Hanken Grotesk',sans-serif" }}>Most operators don't. A free 45-minute audit tells you exactly where money is leaving your business — no pitch, no obligation.</p>
+          <p style={{ color:INK_SOFT, fontSize:14.5, lineHeight:1.6, marginBottom:22, fontFamily:"'Hanken Grotesk',sans-serif" }}>Most operators don't. A free 15-minute audit tells you exactly where money is leaving your business — no pitch, no obligation.</p>
           <PrimaryBtn onClick={() => { setShow(false); onOpen(); }}>
             Book your free audit <ArrowRight size={16} />
           </PrimaryBtn>
