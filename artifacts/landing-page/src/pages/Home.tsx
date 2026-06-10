@@ -538,11 +538,11 @@ function Hero({ onBook }: { onBook:()=>void }) {
   return (
     <section style={{ background:CREAM, padding:"72px 24px 88px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1.18fr", columnGap:"56px", rowGap:0, alignItems:"center" }}
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1.18fr", gap:"56px", alignItems:"center" }}
           className="grid-hero">
-          {/* Top-left: eyebrow + H1 + italic */}
+          {/* Left column */}
           <Fade>
-            <div className="hero-top">
+            <div>
               <div style={{ display:"inline-flex", alignItems:"center", gap:7,
                 background:INK, borderRadius:3, padding:"6px 13px", marginBottom:20 }}>
                 <span style={{ fontSize:10, fontWeight:700, letterSpacing:"0.12em",
@@ -557,20 +557,13 @@ function Hero({ onBook }: { onBook:()=>void }) {
                 {" "}hiding in<br />your operations.
               </h1>
               <p className="anton" style={{ fontSize:"clamp(1.25rem,2.2vw,1.6rem)", color:INK,
-                marginBottom:0, fontStyle:"italic" }}>
+                marginBottom:20, fontStyle:"italic" }}>
                 In 90 days or you don't pay.
               </p>
-            </div>
-          </Fade>
-          {/* Right: video — spans both rows on desktop */}
-          <Fade delay={0.12}>
-            <div className="hero-video" style={{ position:"relative" }}>
-              <VSL />
-            </div>
-          </Fade>
-          {/* Bottom-left: body + CTA + social proof */}
-          <Fade delay={0.06}>
-            <div className="hero-bottom" style={{ paddingTop:20 }}>
+              {/* Video shown only on mobile, between headline and body */}
+              <div className="hero-mobile-video" style={{ marginBottom:20 }}>
+                <VSL />
+              </div>
               <p style={{ fontSize:16, lineHeight:1.68, color:INK_SOFT, maxWidth:460,
                 marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
                 You're a $1M+ operator in service, logistics, or manufacturing, and profit slips away every week — cold leads, dropped jobs, work that should run itself. Custom AI agents, automation, and a live dashboard find it and recover it. 90 days, or you don't pay.
@@ -600,6 +593,10 @@ function Hero({ onBook }: { onBook:()=>void }) {
                 </div>
               </div>
             </div>
+          </Fade>
+          {/* Right column: video shown only on desktop */}
+          <Fade delay={0.12} className="hero-desktop-video">
+            <VSL />
           </Fade>
         </div>
       </div>
