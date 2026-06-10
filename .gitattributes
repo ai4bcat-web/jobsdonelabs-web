@@ -1,0 +1,2 @@
+artifacts/landing-page/public/hero.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/copy_2AF96868-CEC5-4211-8971-461D5110169D_1781056328784.MOV filter=lfs diff=lfs merge=lfs -text

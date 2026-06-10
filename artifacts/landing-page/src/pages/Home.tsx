@@ -81,44 +81,47 @@ function StampBadge({ size = 104, dark = false }: { size?: number; dark?: boolea
 /* ───────────────────────────────────── */
 /*  VSL Player                          */
 /* ───────────────────────────────────── */
-function VSL({ videoId = "FP_yxHX9Zvc" }: { videoId?: string }) {
-  const [sound, setSound] = useState(false);
-  const src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${sound?0:1}&rel=0&playsinline=1&modestbranding=1`;
+function VSL() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
+
+  function unmuteAndPlay() {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = false;
+    v.play().catch(() => {});
+    setMuted(false);
+  }
+
   return (
-    <div style={{ width:"100%", borderRadius:12, overflow:"hidden", background:"#0A0E16", position:"relative", boxShadow:"0 24px 64px -16px rgba(0,0,0,.28)" }}>
-      <div style={{ position:"absolute", inset:0, zIndex:0,
-        background:"radial-gradient(70% 90% at 50% 25%,rgba(20,102,255,.28),transparent 60%)" }} />
-      <div style={{ position:"relative", zIndex:1, aspectRatio:"16/9", width:"100%",
-        background:"linear-gradient(135deg,#0E1422 0%,#0A101C 55%,#0B1730 100%)",
-        display:"flex", alignItems:"center", justifyContent:"center" }}>
-        <div style={{ position:"absolute", inset:0,
-          backgroundImage:"linear-gradient(rgba(255,255,255,.042) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.042) 1px,transparent 1px)",
-          backgroundSize:"46px 46px",
-          maskImage:"radial-gradient(68% 68% at 50% 44%,#000,transparent)" }} />
-        <iframe key={sound?"snd":"mut"}
-          style={{ position:"absolute", inset:0, width:"100%", height:"100%", border:0, zIndex:3 }}
-          src={src} title="Jobs Done Labs — Profit Recovery"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen />
-        {!sound && (
-          <button onClick={() => setSound(true)}
-            style={{ position:"absolute", inset:0, zIndex:4, border:"none", cursor:"pointer", padding:"18px 20px",
-              background:"linear-gradient(0deg,rgba(0,0,0,.36),transparent 44%)",
-              display:"flex", alignItems:"flex-end", justifyContent:"flex-start" }}>
-            <span style={{ display:"inline-flex", alignItems:"center", gap:9,
-              background:"rgba(10,14,22,.78)", backdropFilter:"blur(6px)",
-              color:"#fff", fontSize:14, fontWeight:700, letterSpacing:"-0.01em",
-              padding:"10px 16px", borderRadius:6,
-              boxShadow:"0 8px 22px -6px rgba(0,0,0,.5)", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style={{ color:ACCENT, flex:"0 0 auto" }}>
-                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8v8a4.5 4.5 0 002.5-4zM14 3v2.06a7 7 0 010 13.88V21a9 9 0 000-18z" />
-              </svg>
-              Watch the 4-min breakdown
-              <span style={{ fontSize:12, fontWeight:600, color:"rgba(255,255,255,.55)" }}>· Tap for sound</span>
-            </span>
-          </button>
-        )}
-      </div>
+    <div style={{ width:"100%", borderRadius:12, overflow:"hidden", position:"relative",
+      boxShadow:"0 24px 64px -16px rgba(0,0,0,.28)", background:"#000", aspectRatio:"16/9" }}>
+      <video
+        ref={videoRef}
+        src="/hero.mp4"
+        autoPlay
+        muted
+        playsInline
+        style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", display:"block" }}
+      />
+      {muted && (
+        <button onClick={unmuteAndPlay}
+          style={{ position:"absolute", inset:0, zIndex:4, border:"none", cursor:"pointer",
+            padding:"18px 20px", background:"linear-gradient(0deg,rgba(0,0,0,.38),transparent 44%)",
+            display:"flex", alignItems:"flex-end", justifyContent:"flex-start" }}>
+          <span style={{ display:"inline-flex", alignItems:"center", gap:9,
+            background:"rgba(10,14,22,.80)", backdropFilter:"blur(6px)",
+            color:"#fff", fontSize:14, fontWeight:700, letterSpacing:"-0.01em",
+            padding:"10px 16px", borderRadius:6,
+            boxShadow:"0 8px 22px -6px rgba(0,0,0,.5)", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style={{ color:ACCENT, flex:"0 0 auto" }}>
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8v8a4.5 4.5 0 002.5-4zM14 3v2.06a7 7 0 010 13.88V21a9 9 0 000-18z" />
+            </svg>
+            Watch the 4-min breakdown
+            <span style={{ fontSize:12, fontWeight:600, color:"rgba(255,255,255,.55)" }}>· Tap for sound</span>
+          </span>
+        </button>
+      )}
     </div>
   );
 }
