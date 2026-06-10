@@ -451,7 +451,7 @@ function LPNav({ onBook }: { onBook:()=>void }) {
         </div>
         <div style={{ display:"flex", alignItems:"center", gap:12 }}>
           {/* Ghost "Free AI Course" link */}
-          <a href="/ai-course" className="hidden md:inline"
+          <a href="https://course-ai-platform.replit.app/" target="_blank" rel="noopener noreferrer" className="hidden md:inline"
             style={{ fontSize:14, fontWeight:600, color:ACCENT, textDecoration:"none", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif", opacity:.85 }}
             onMouseEnter={e => { e.currentTarget.style.opacity="1"; }}
             onMouseLeave={e => { e.currentTarget.style.opacity=".85"; }}>
@@ -485,7 +485,7 @@ function LPNav({ onBook }: { onBook:()=>void }) {
                 </a>
               )
             ))}
-            <a href="/ai-course" onClick={() => setMenu(false)}
+            <a href="https://course-ai-platform.replit.app/" target="_blank" rel="noopener noreferrer" onClick={() => setMenu(false)}
               style={{ display:"block", padding:"14px 24px", fontSize:16, fontWeight:600, color:ACCENT,
                 textDecoration:"none", borderBottom:`1px solid ${LINE}`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
               Free AI Course
