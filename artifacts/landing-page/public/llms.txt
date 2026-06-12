@@ -1,0 +1,14 @@
+# Jobs Done Labs
+
+> Jobs Done Labs builds custom automation systems for small and mid-size businesses, focused on recovering $30K+ in lost revenue or wasted operations cost within 90 days.
+
+## What we do
+- Custom business automation systems (workflow automation, AI agents, integrations)
+- Revenue-recovery audits: find where money leaks in ops, then automate the fix
+- Built and operated by Ryne Bandolik (BCAT portfolio: logistics, cartage, fitness)
+
+## Key pages
+- [Home](https://www.jobsdonelabs.ai/): offer, process, case studies, and booking link
+
+## Contact
+- Website: https://www.jobsdonelabs.ai
