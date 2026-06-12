@@ -1188,11 +1188,11 @@ function Footer() {
             </p>
             <div style={{ display:"flex", gap:10, marginTop:18 }}>
               {([
-                [Linkedin,   "https://www.linkedin.com/in/rynebandolik/"],
-                [Youtube,    "https://www.youtube.com/@jobsdonelabs"],
-                [Twitter,    "https://x.com/Ryne_Stone"],
-              ] as [typeof Linkedin, string][]).map(([Icon, href], i) => (
-                <a key={i} href={href} target="_blank" rel="noopener noreferrer"
+                [Linkedin, "https://www.linkedin.com/in/rynebandolik/", "Jobs Done Labs on LinkedIn"],
+                [Youtube,  "https://www.youtube.com/@jobsdonelabs",     "Jobs Done Labs on YouTube"],
+                [Twitter,  "https://x.com/Ryne_Stone",                  "Ryne Bandolik on X (Twitter)"],
+              ] as [typeof Linkedin, string, string][]).map(([Icon, href, label], i) => (
+                <a key={i} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
                   style={{ width:34, height:34, borderRadius:6, background:"rgba(255,255,255,.07)", display:"flex", alignItems:"center", justifyContent:"center", color:"rgba(244,239,227,.5)", textDecoration:"none" }}
                   onMouseEnter={e => { e.currentTarget.style.background="rgba(255,255,255,.12)"; }}
                   onMouseLeave={e => { e.currentTarget.style.background="rgba(255,255,255,.07)"; }}>
@@ -1201,10 +1201,11 @@ function Footer() {
               ))}
               {/* Instagram */}
               <a href="https://www.instagram.com/jobsdonelabs.ai/" target="_blank" rel="noopener noreferrer"
+                aria-label="Jobs Done Labs on Instagram"
                 style={{ width:34, height:34, borderRadius:6, background:"rgba(255,255,255,.07)", display:"flex", alignItems:"center", justifyContent:"center", color:"rgba(244,239,227,.5)", textDecoration:"none" }}
                 onMouseEnter={e => { e.currentTarget.style.background="rgba(255,255,255,.12)"; }}
                 onMouseLeave={e => { e.currentTarget.style.background="rgba(255,255,255,.07)"; }}>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                   <circle cx="12" cy="12" r="4"/>
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>

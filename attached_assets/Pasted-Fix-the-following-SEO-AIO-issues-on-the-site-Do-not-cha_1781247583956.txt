@@ -1,0 +1,27 @@
+Fix the following SEO/AIO issues on the site. Do not change any visual design, copy positioning, or layout — these are head-tag, markup, and rendering fixes only.
+1. Title tag — shorten to under 60 characters. Replace the current title with:
+
+Jobs Done Labs | Recover $30K in 90 Days, Guaranteed
+
+(53 chars — keeps the hook, drops the part Google truncates anyway.)
+2. Meta description — shorten to under 160 characters. Replace with:
+
+We build custom automation systems that recover $30K+ in net profit for service, logistics, and manufacturing businesses in 90 days — or you pay nothing.
+
+(~154 chars.) Update the og:description and twitter:description to match.
+3. Add exactly one H1. The page currently renders zero H1 elements. Make the main hero headline an <h1> tag (style it identically to how it looks now — change the tag, not the appearance). Verify no other element on the page uses <h1>; demote any others to <h2>. All section headings below the hero should be <h2>, with <h3> nested under them. Confirm by inspecting the rendered DOM that exactly one H1 exists.
+4. Alt text on all images. There is at least one image missing alt text. Add descriptive alt attributes to every <img> (and meaningful aria-labels on any background-image divs that convey content). For the logo: alt="Jobs Done Labs logo". For any screenshot/diagram: describe what it shows, e.g. alt="Dashboard showing automated profit recovery metrics". Decorative-only images get alt="".
+5. Expand JSON-LD structured data. There is currently one JSON-LD block. Add these schemas in a single <script type="application/ld+json"> (or separate blocks, either is fine):
+
+ProfessionalService — name: Jobs Done Labs, url: https://www.jobsdonelabs.ai, description matching the new meta description, areaServed: US, serviceType: "Business process automation", founder: Ryne Bandolik
+Organization — name, url, logo URL, sameAs array with our LinkedIn/Instagram/TikTok profile URLs
+FAQPage — if the site has an FAQ section, mark it up; if it doesn't, add a short FAQ section near the bottom with 4–5 real questions ("What does the $30K guarantee mean?", "What kinds of businesses do you work with?", "How long does implementation take?", "What does it cost?") and mark those up as FAQPage schema.
+
+6. CRITICAL — make content visible in the raw HTML. The site currently ships ~5KB of HTML with no body content; everything renders via JavaScript. AI crawlers (ChatGPT, Perplexity, Claude) mostly do not execute JavaScript, so they currently see an empty page. Fix using whichever fits the stack:
+
+Best: prerender/SSG the marketing pages so the full HTML (H1, hero copy, services, FAQ) is served statically — e.g., vite-plugin-prerender or equivalent for this framework.
+Minimum acceptable: place the H1, hero paragraph, and core service descriptions directly in the static index.html inside the root div as server-delivered HTML that React then hydrates over.
+
+Verify the fix with curl https://www.jobsdonelabs.ai — the H1 text and hero copy must appear in the raw response.
+
+7. Verify after changes: title ≤60 chars, meta description ≤160 chars, exactly one H1 in rendered DOM, zero images without alt, 3+ JSON-LD schemas validating at schema.org's validator, and page content visible via curl.
