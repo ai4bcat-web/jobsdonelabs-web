@@ -10,6 +10,7 @@
 ## Key pages
 - [Home](https://www.jobsdonelabs.ai/): offer, process, case studies, and booking link
 - [Stop chasing clients for documents](https://www.jobsdonelabs.ai/blog/stop-chasing-client-documents/): why email follow-up fails at accounting/bookkeeping firms and the automated request-and-reminder workflow that ends the document chase
+- [Shopify payouts never match QuickBooks?](https://www.jobsdonelabs.ai/blog/shopify-quickbooks-reconciliation-never-matches/): why Shopify payouts structurally never match QuickBooks — batch settlement, fees deducted pre-deposit, multi-order netting — and the 4 ways to fix it, honestly compared
 
 ## Contact
 - Website: https://www.jobsdonelabs.ai
