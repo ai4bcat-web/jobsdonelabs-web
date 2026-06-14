@@ -9,6 +9,7 @@
 
 ## Key pages
 - [Home](https://www.jobsdonelabs.ai/): offer, process, case studies, and booking link
+- [Stop chasing clients for documents](https://www.jobsdonelabs.ai/blog/stop-chasing-client-documents/): why email follow-up fails at accounting/bookkeeping firms and the automated request-and-reminder workflow that ends the document chase
 
 ## Contact
 - Website: https://www.jobsdonelabs.ai

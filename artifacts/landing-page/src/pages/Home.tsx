@@ -265,6 +265,12 @@ const FAQ_ITEMS = [
     a:"Pricing depends on the scope we uncover in your audit. We've worked with businesses from $50K to $120K engagements. But here's what matters: every engagement is priced against a hard ROI target. If the math doesn't work for you, we won't sell you." },
   { q:"What happens on the free audit call?",
     a:"It's 45 minutes. We map your current ops — lead flow, quoting process, scheduling, reporting — and identify where the biggest leaks are. At the end, you get a rough number: what we think we can recover and how. No pitch, no pressure. You keep the map either way." },
+  { q:"How long does it take to see results?",
+    a:"The full engagement runs 90 days, but you don't wait until day 90 to see movement. The first systems — usually lead capture and instant response — go live within the first few weeks, and recovered revenue starts showing up as soon as they do. We sequence builds by ROI, fastest payback first." },
+  { q:"What industries do you work with?",
+    a:"Service, logistics, and manufacturing operators: HVAC and plumbing, freight and logistics, auto transport, food service distribution, home services, wholesale and supply, field services, and manufacturers. If your business runs on leads, quotes, jobs, trucks, or orders moving daily, the model fits." },
+  { q:"How is the $30K guarantee actually measured?",
+    a:"Against your own numbers, not ours. During the audit we baseline the metrics the systems will move — response times, quote-to-close rate, jobs scheduled, hours of manual work. After the systems go live, we track the same metrics and translate the delta into net profit recovered. If the documented recovery doesn't reach $30K within 90 days, you pay nothing." },
 ];
 
 const MARQUEE_ITEMS = [
@@ -1230,6 +1236,7 @@ function Footer() {
             <a href="#" onClick={e => { e.preventDefault(); document.dispatchEvent(new CustomEvent("open-booking")); }} style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Book a call</a>
             <Link href="/contact" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Contact</Link>
             <a href="/#faq" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>FAQ</a>
+            <a href="/blog/stop-chasing-client-documents/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Stop chasing client documents</a>
             <a href="mailto:ryne@jobsdone.io" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>ryne@jobsdone.io</a>
           </div>
         </div>

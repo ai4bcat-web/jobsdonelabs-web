@@ -74,11 +74,12 @@ router.post("/github-webhook", async (req: Request, res: Response) => {
     : process.cwd();
 
   try {
-    // -X theirs: auto-resolve conflicts by preferring the remote (GitHub) version.
-    // This prevents merge conflict markers from appearing in files when both
-    // Replit and GitHub have edits to the same file.
+    // -X ours: auto-resolve conflicts by preferring the local (Replit) version.
+    // New files from GitHub (blog posts, etc.) are always brought in since they
+    // have no conflict. For files edited on both sides (e.g. index.html with
+    // SEO improvements), Replit's version is preserved.
     const { stdout, stderr } = await execAsync(
-      "git pull -X theirs",
+      "git pull -X ours",
       { cwd: workspaceRoot },
     );
     logger.info({ stdout, stderr }, "git pull completed");
