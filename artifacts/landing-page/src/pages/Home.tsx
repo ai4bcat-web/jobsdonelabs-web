@@ -434,6 +434,7 @@ const NAV_LINKS: [string,string][] = [
   ["/#results","Results"],
   ["/#faq","FAQ"],
   ["/blog/","Blog"],
+  ["/case-study/logistics-200k-profit","Case Study"],
   ["/roi-calculator","ROI Calculator"],
   ["/contact","Contact"],
 ];
@@ -452,7 +453,7 @@ function LPNav({ onBook }: { onBook:()=>void }) {
         {/* Desktop links */}
         <div className="hidden md:flex" style={{ alignItems:"center", gap:22 }}>
           {NAV_LINKS.map(([href,label]) => (
-            href.startsWith("/") && !href.startsWith("/#") && !href.startsWith("/blog") ? (
+            href.startsWith("/") && !href.startsWith("/#") && !href.startsWith("/blog") && !href.startsWith("/case-study") ? (
               <Link key={href} href={href}
                 style={{ fontSize:14, fontWeight:600, color:INK_SOFT, textDecoration:"none", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}
                 onMouseEnter={(e:React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color=INK; }}
@@ -491,7 +492,7 @@ function LPNav({ onBook }: { onBook:()=>void }) {
           <motion.div initial={{ height:0, opacity:0 }} animate={{ height:"auto", opacity:1 }} exit={{ height:0, opacity:0 }}
             style={{ overflow:"hidden", borderTop:`1px solid ${LINE}`, background:CREAM }}>
             {NAV_LINKS.map(([href,label]) => (
-              href.startsWith("/") && !href.startsWith("/#") && !href.startsWith("/blog") ? (
+              href.startsWith("/") && !href.startsWith("/#") && !href.startsWith("/blog") && !href.startsWith("/case-study") ? (
                 <Link key={href} href={href} onClick={() => setMenu(false)}
                   style={{ display:"block", padding:"14px 24px", fontSize:16, fontWeight:600, color:INK,
                     textDecoration:"none", borderBottom:`1px solid ${LINE}`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
@@ -1240,6 +1241,7 @@ function Footer() {
             <a href="/blog/stop-chasing-client-documents/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Stop chasing client documents</a>
             <a href="/blog/shopify-quickbooks-reconciliation-never-matches/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Shopify-QuickBooks reconciliation</a>
             <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Fuel receipts &amp; expense tracking</a>
+            <a href="/case-study/logistics-200k-profit/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Case study: $200K logistics profit</a>
             <a href="mailto:ryne@jobsdone.io" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>ryne@jobsdone.io</a>
           </div>
         </div>

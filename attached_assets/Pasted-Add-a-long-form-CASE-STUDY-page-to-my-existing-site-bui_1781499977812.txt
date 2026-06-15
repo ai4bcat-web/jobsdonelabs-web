@@ -1,0 +1,96 @@
+Add a long-form CASE STUDY page to my existing site, built from the PDF I've
+uploaded to this project (JobsDone_x_BCAT_Logistics_Case_Study.pdf). Read that
+PDF and use it as the source of truth for ALL copy and numbers. Do not invent,
+round, or alter any figure. Preserve my wording and voice — do not rewrite it.
+
+Work within the existing codebase. Match the current design system, header,
+footer, and nav. Reuse the Byline, StatCallout, and JSON-LD schema components
+from the blog. The page MUST render its full text content in server-side HTML
+(same as the blog and homepage) — after building, verify the text is present in
+the raw HTML response (view-source/curl), not injected client-side.
+
+ROUTE: /case-study/logistics-200k-profit  (add a link to the nav and footer)
+
+PAGE STRUCTURE (top to bottom):
+
+1. H1: "How One Logistics Group Created $200K in Net New Profit"
+   Subhead: it's a real multi-company transportation group (BCAT Logistics —
+   freight brokerage, Ivan Cartage — Amazon DSP, Best Care Auto — vehicle
+   transport), 2025 operating year.
+
+2. Byline component: Ryne Bandolik, operator credential line, publishDate +
+   dateModified. Link to the author page.
+
+3. RESULTS SUMMARY callout at the very top, before narrative — the most-
+   extracted block, lead with the answer:
+   $200K+ net new profit · +120 bps gross margin lift · $3.78M active pipeline ·
+   $12.51M group revenue. One sentence: a business that runs on data, not
+   instinct, without added headcount.
+
+4. "THE FIVE PROFIT LEAKS" overview, then a MEASURED OUTCOMES table (pull exact
+   rows from the PDF): Net New Profit $200,000; Conservative Floor $120,000;
+   BCAT Gross Margin 15.2%→16.4%; Ivan True Profit 5.2%→6.1%; Blended ROAS 3.1x;
+   Wasted Ad Spend Reclaimed $11,800/yr; Meetings/mo 28; Email Reply 8.4% vs
+   3–5%; Combined Pipeline $3,780,000; Group Revenue $12,511,000.
+
+5. Brief ARCHITECTURE section: one platform across the three companies, six
+   autonomous agents (QuoteAgent, FinanceAgent, MarketingAgent, SalesAgent,
+   TrackTraceAgent, CoordinatorAgent). Keep it short.
+
+6. FIVE LEVER <section>s. For EACH: an H2 with the lever's benefit headline;
+   immediately a 2–3 sentence DIRECT ANSWER (result + how) before any detail; a
+   StatCallout with the headline number; then the supporting detail and any
+   table/breakdown from the PDF. Keep paragraphs to 2–3 sentences. The five
+   levers and their headline numbers (verify against PDF):
+     L1 Spot Quote Engine — $60K (conservative $30K); win rate 20%→28%.
+     L2 Daily Per-Truck P&L — $25K; +90 bps; Ivan true profit 5.2%→6.1%.
+     L3 Tool Consolidation & Headcount Leverage — $80K ($40K software replaced
+        + $40K avoided admin hire); 33–43 hrs/week reclaimed.
+     L4 Automated Outreach + Client Nurture — $20K ($7K new logos + $13K
+        existing-client expansion); open 42.3% / reply 8.4%.
+     L5 Track & Trace → OTD → Rate Power — $15K ($8K premiums + $3K claims +
+        $4K core-carrier win); OTD 91.4%→96.2%.
+   Include each lever's "where the money comes from" breakdown table from the PDF.
+
+7. BONUS LEVERS section: the seven quick-win mechanics as a grid (detention/
+   accessorial, carrier scorecarding, backhaul/deadhead, customer credit
+   monitoring, fuel surcharge, lane profitability ranking, claims automation),
+   each with its range. Note the stack effect: +$40K–$95K/yr.
+
+8. "THE NUMBERS" recap: a clean stat grid of the headline metrics (reuse from
+   the PDF's numbers page).
+
+9. FAQ section (drives FAQPage schema) — build 5–6 self-contained Q&As from the
+   operator questions in the PDF, including its four diagnostic questions:
+   win rate + response time; which trucks made/lost money this week; which
+   existing customers are giving lanes to competitors; OTD by lane + who pays a
+   premium. Answer each in 2–4 sentences using the study's findings.
+
+10. CTA section: "Your business has the same five leaks." Link to /contact (do
+    NOT hardcode an email) and reference the $30K-in-90-days guarantee on the
+    homepage.
+
+VISUALS:
+- Recreate the metric-tile rows (the dashboard stat grids) as clean STATIC HTML
+  stat panels using the existing design tokens — the numbers must be real text,
+  not images (so they're crawlable/extractable).
+- Trend/bar charts (win-rate trend, OTD trend, margin-by-truck) are optional:
+  render as simple static SVG or omit. Never let chart rendering block the text
+  from being in the HTML. No heavy client JS.
+
+STRUCTURED DATA (JSON-LD):
+- Article schema (headline, description, datePublished, dateModified, author as
+  Person → author page, publisher Organization with logo, image, mainEntityOfPage).
+- FAQPage schema generated from the FAQ section.
+- Validate against schema.org structure.
+
+SEO BASICS: page <title>, meta description, canonical, og:type=article, include
+this URL in sitemap.xml.
+
+INTERNAL LINKING: link the relevant lever sections to related blog posts where
+they exist (e.g. the per-truck/fuel lever → the fuel-receipts post). Add 2–3 such
+links.
+
+When done: tell me the exact file(s) created, confirm the text renders in
+server-side HTML, confirm FAQPage schema is emitting, and flag the contact
+address you used so I can verify it.
