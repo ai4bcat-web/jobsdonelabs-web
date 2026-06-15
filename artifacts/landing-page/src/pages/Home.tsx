@@ -540,10 +540,10 @@ function Hero({ onBook }: { onBook:()=>void }) {
               </div>
               <h1 className="anton" style={{ fontSize:"clamp(1.8rem,3.4vw,2.7rem)", lineHeight:1.08,
                 color:INK, marginBottom:8 }}>
-                We find the{" "}
+                We add{" "}
                 <span style={{ background:ACCENT, color:"#fff",
                   padding:"0.02em 0.14em 0.07em", borderRadius:4, display:"inline" }}>$30K</span>
-                {" "}hiding in<br />your operations.
+                {" "}to your business.
               </h1>
               <p className="anton" style={{ fontSize:"clamp(1.25rem,2.2vw,1.6rem)", color:INK,
                 marginBottom:20, fontStyle:"italic" }}>
