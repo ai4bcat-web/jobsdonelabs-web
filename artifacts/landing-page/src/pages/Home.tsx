@@ -433,6 +433,7 @@ const NAV_LINKS: [string,string][] = [
   ["/#industries","Industries"],
   ["/#results","Results"],
   ["/#faq","FAQ"],
+  ["/blog/","Blog"],
   ["/roi-calculator","ROI Calculator"],
   ["/contact","Contact"],
 ];
