@@ -20,11 +20,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "headline": "Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop",
     "description": "Why email follow-up fails at accounting and bookkeeping firms, and the 3-layer fix — better process, client portals, and automated request-and-reminder workflows — that ends the document chase.",
     "image": "https://www.jobsdonelabs.ai/og-image.png",
-    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Jobs Done Labs",
@@ -32,7 +39,7 @@
       "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
     },
     "datePublished": "2026-06-12",
-    "dateModified": "2026-06-12",
+    "dateModified": "2026-06-15",
     "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/stop-chasing-client-documents/"
   }
   </script>
@@ -70,7 +77,8 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/stop-chasing-client-documents/" }
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Chasing Clients for Documents Is Eating Your Billable Hours", "item": "https://www.jobsdonelabs.ai/blog/stop-chasing-client-documents/" }
     ]
   }
   </script>
@@ -87,17 +95,28 @@
     nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
     .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
     h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
-    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:40px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:24px; }
+    .byline a { color:rgba(23,21,19,.55); text-decoration:none; border-bottom:1px solid rgba(23,21,19,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
     h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
     h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
     p { margin-bottom:16px; font-size:17px; }
     ul, ol { margin:0 0 16px 22px; }
     li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
     .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
     .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
     .cta-box h2 { color:var(--cream); margin-top:0; }
     .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
     .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid rgba(23,21,19,.12); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
     a { color:var(--accent-deep); }
     footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
     footer a { color:inherit; }
@@ -112,7 +131,12 @@
     <article>
       <span class="kicker">Accounting &amp; Bookkeeping Firms</span>
       <h1>Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop</h1>
-      <p class="byline">By Ryne Bandolik · Jobs Done Labs · June 12, 2026</p>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · June 12, 2026 · <span style="color:rgba(23,21,19,.4)">Updated June 2026</span></p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">Your firm is losing five-figure value annually to document chasing — not because of difficult clients, but because one-off email follow-up is structurally broken. The fix is a 3-layer system: a standing checklist per engagement type, a client portal so clients can see what's outstanding, and automated request-and-reminder workflows that run the follow-up without any staff involvement. The right system means no one at your firm writes another "just following up" email.</p>
+      </div>
 
       <p>Ask any firm owner where the week goes and the same answer comes back: chasing clients for documents. The engagement is signed, the work is scoped — and then everything stalls while you send the third "just following up on those bank statements" email. Solo practitioners and small-firm owners routinely describe losing several hours a week to the chase, and during busy season it gets worse, not better.</p>
 
@@ -170,6 +194,20 @@
         <p>The workflow has to meet clients where they are: a plain link they can open on a phone, drag-and-drop or photo upload, and no account or password to remember. Clients who prefer email can simply reply with attachments and the system files them against the checklist. If a tool requires your clients to learn software, they won't use it — so the right fix doesn't.</p>
       </section>
 
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/shopify-quickbooks-reconciliation-never-matches/">
+            <span class="cat">Retail &amp; E-Commerce Operations</span>
+            <span class="title">Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It, Honestly)</span>
+          </a>
+          <a class="related-card" href="/blog/trucking-fuel-receipts-expense-tracking-fix/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <span class="title">You're Still Keeping Fuel Receipts in a Shoe Box — Here's How to Actually Fix It</span>
+          </a>
+        </div>
+      </div>
+
       <div class="cta-box">
         <h2>Find out where your firm's hours are leaking</h2>
         <p>Book a free 15-minute audit. We'll map where your team's time goes — document chasing, data re-entry, follow-up — and show you what an automated workflow would recover. No pitch, no pressure. You keep the map either way.</p>
@@ -178,7 +216,7 @@
     </article>
   </main>
   <footer>
-    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
   </footer>
 </body>
 </html>

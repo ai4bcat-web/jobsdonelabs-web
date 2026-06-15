@@ -20,11 +20,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "headline": "Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It, Honestly)",
     "description": "Every e-commerce owner hits the wall: Shopify says one number, QuickBooks shows another, and your bank has neither. Here's why this happens structurally — batch settlement, fees deducted pre-deposit, multi-order netting — and the 4 ways to fix it, honestly compared.",
     "image": "https://www.jobsdonelabs.ai/og-image.png",
-    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Jobs Done Labs",
@@ -32,7 +39,7 @@
       "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
     },
     "datePublished": "2026-06-13",
-    "dateModified": "2026-06-13",
+    "dateModified": "2026-06-15",
     "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/shopify-quickbooks-reconciliation-never-matches/"
   }
   </script>
@@ -70,7 +77,8 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/shopify-quickbooks-reconciliation-never-matches/" }
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It, Honestly)", "item": "https://www.jobsdonelabs.ai/blog/shopify-quickbooks-reconciliation-never-matches/" }
     ]
   }
   </script>
@@ -87,12 +95,16 @@
     nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
     .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
     h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
-    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:40px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:24px; }
+    .byline a { color:rgba(23,21,19,.55); text-decoration:none; border-bottom:1px solid rgba(23,21,19,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
     h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
     h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
     p { margin-bottom:16px; font-size:17px; }
     ul, ol { margin:0 0 16px 22px; }
     li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
     .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
     .decision-table { width:100%; border-collapse:collapse; margin:24px 0; font-size:15px; }
     .decision-table th { background:var(--ink); color:var(--cream); padding:10px 12px; text-align:left; font-weight:700; }
@@ -102,6 +114,13 @@
     .cta-box h2 { color:var(--cream); margin-top:0; }
     .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
     .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid rgba(23,21,19,.12); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
     a { color:var(--accent-deep); }
     footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
     footer a { color:inherit; }
@@ -116,7 +135,12 @@
     <article>
       <span class="kicker">Retail &amp; E-Commerce Operations</span>
       <h1>Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It, Honestly)</h1>
-      <p class="byline">By Ryne Bandolik · Jobs Done Labs · June 13, 2026</p>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · June 13, 2026 · <span style="color:rgba(23,21,19,.4)">Updated June 2026</span></p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">Shopify and QuickBooks won't reconcile on their own because they're built on incompatible models — Shopify nets fees, refunds, and multiple orders into a single deposit that QuickBooks can't decode without help. The fix depends on your volume: spreadsheets work under 50 orders/month, A2X or Webgility handle most growing stores, and custom automation is right for multi-channel or high-volume sellers. Every option in this guide costs less per month than a single hour of manual reconciliation time.</p>
+      </div>
 
       <p>It's the moment every e-commerce owner hits. You pull up Shopify: $4,231.47 in payouts this cycle. You open QuickBooks: the deposit shows $3,897.12. Your bank statement? A third number entirely. You stare at three screens, none of them agree, and somewhere in the gap is two hours of your life you're never getting back.</p>
 
@@ -234,6 +258,20 @@
         <h3>What about Amazon, Walmart, and Etsy — can one system reconcile all my sales channels?</h3>
         <p>Yes, and multi-channel reconciliation is where automation stops being a convenience and becomes essential. Each marketplace has its own settlement format, fee structure, and payout schedule. Integration tools like A2X and Webgility support multiple channels. Custom automation can unify them into a single reconciliation workflow — pulling payouts from each channel, normalizing the formats, posting clean entries to QuickBooks, and flagging only the exceptions for human review. For multi-channel sellers, this is often the single highest-ROI automation we build.</p>
       </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/stop-chasing-client-documents/">
+            <span class="cat">Accounting &amp; Bookkeeping Firms</span>
+            <span class="title">Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop</span>
+          </a>
+          <a class="related-card" href="/blog/trucking-fuel-receipts-expense-tracking-fix/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <span class="title">You're Still Keeping Fuel Receipts in a Shoe Box — Here's How to Actually Fix It</span>
+          </a>
+        </div>
+      </div>
 
       <div class="cta-box">
         <h2>Find out what your reconciliation is really costing you</h2>
