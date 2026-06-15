@@ -536,7 +536,7 @@ function Hero({ onBook }: { onBook:()=>void }) {
                 background:INK, borderRadius:0, padding:"5px 11px", marginBottom:20 }}>
                 <span style={{ fontSize:10, fontWeight:800, letterSpacing:"0.12em",
                   textTransform:"uppercase", color:CREAM,
-                  fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
+                  fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ A business that works without you is a business you can sell</span>
               </div>
               <h1 className="anton" style={{ fontSize:"clamp(1.8rem,3.4vw,2.7rem)", lineHeight:1.08,
                 color:INK, marginBottom:8 }}>
