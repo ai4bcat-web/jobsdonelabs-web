@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're a GC, Not a Filing Clerk — How to Tame Subcontractor Paperwork Without Another Platform | Jobs Done Labs</title>
+  <meta name="description" content="'We're meant to be building things, but I feel like a bloody filing clerk.' If you're a small GC buried in COIs, W-9s, lien waivers, and contracts across 5-20 subs, here's the 3-tier system that actually works — from free Google Drive folders to full automation that auto-verifies insurance before it expires." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/" />
+  <meta property="og:title" content="You're a GC, Not a Filing Clerk — How to Tame Subcontractor Paperwork Without Another Platform" />
+  <meta property="og:description" content="What every GC actually needs (W-9, COI, contract, lien waiver, scope of work), what happens when each is missing, and the 3-tier system to stop being buried in subcontractor compliance paperwork." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="You're a GC, Not a Filing Clerk — Tame Subcontractor Paperwork Without Another Platform" />
+  <meta name="twitter:description" content="The 5 documents every GC actually needs, what happens when each is missing, and the 3-tier compliance system that works from your phone — not another SaaS login." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "You're a GC, Not a Filing Clerk — How to Tame Subcontractor Paperwork Without Another Platform",
+    "description": "Small GCs managing 5-20 subcontractors are drowning in compliance paperwork: COIs that expire mid-job, W-9s that never arrive, lien waivers that go unsigned. This guide covers the 5 documents every GC actually needs, real horror stories when each is missing, and a 3-tier system from free Google Drive folders to full automation that auto-verifies insurance before it lapses.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-06-15",
+    "dateModified": "2026-06-15",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I require subcontractors to use a compliance platform?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can, and many GCs include platform access in their subcontractor agreements. The problem isn't legality — it's enforcement. If you're a small GC managing 5-20 subs, your leverage varies dramatically: the roofer who does 60% of your work will install whatever app you ask; the electrician you use twice a year on small jobs might ignore you for weeks. The smart approach is a two-track system: for your core subs (60%+ of work), require platform compliance in the contract. For occasional subs, accept documents via email and use automation to extract and track key dates from the attachments — so you still get compliance visibility without requiring anyone to create a login. The automation layer (Tier 3 in this guide) is designed to work with email attachments specifically so you never need to say 'install this app' to a sub you use twice a year." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if a subcontractor refuses to provide a COI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Never let a sub start work without a valid COI naming you as additional insured. A sub who 'doesn't have it yet' or 'will get it next week' is a sub whose insurance you cannot verify — and if they cause damage on your job, your general liability policy may not cover it because the sub wasn't properly insured. The refusal is almost never malice; it's usually that they let their policy lapse and are embarrassed, or their agent is slow. Give them a firm deadline with clear consequences: 'I need a valid COI by Friday or I can't have you start on the Miller project Monday.' Then hold the line. One GC I know now makes COI submission part of the bid acceptance: no COI, no contract. It cost him a couple of reluctant subs in year one and saved him from a $140K uncovered claim in year two." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do I need to keep subcontractor paperwork after a job is done?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The short answer is 7 years, but it depends on which document and which state you're in. IRS guidelines: keep tax-related documents (W-9s, 1099s, payment records) for at least 3 years from the date you filed the return — but go back 6 years if there's a substantial understatement of income. For construction specifically: lien waivers should be kept for the duration of your state's mechanics lien statute (typically 1-2 years after project completion) PLUS your state's statute of limitations for contract claims (often 4-6 years). COIs and certificates of insurance: keep for the full statute of repose in your state — in some states that's 10 years for construction defect claims. The safest rule: 7 years minimum for everything, organized by job, stored digitally. A Google Drive folder structure per job with subfolders for each document type costs nothing and takes 10 minutes to set up at project start." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does my general liability insurance actually cover me if a subcontractor's COI lapses mid-job?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Maybe. And 'maybe' is a terrifying answer when you're looking at a six-figure claim. Most commercial general liability policies exclude damage caused by subcontractors UNLESS you've collected valid COIs naming you as additional insured AND those COIs are current at the time of the loss. If your sub's policy lapsed in month 2 of a 6-month project and the damage happened in month 4, your carrier will deny the claim — and you're personally on the hook. This is why the 30/14/7-day expiration reminder system matters: you need to know a COI is expiring BEFORE it expires, not after. The GC I mentioned earlier learned this the hard way: a roofer's COI expired 3 weeks before a water damage claim, the GC's carrier denied coverage, and the $140K came out of the GC's company — because nobody was tracking expiration dates." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does automating subcontractor paperwork actually cost vs doing it manually?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Manual: a GC or office manager spending 4-8 hours per week chasing COIs, filing W-9s, tracking lien waivers, and answering 'do we have the insurance cert for X?' — at a blended cost of $35-55/hour, that's $560-1,760/month in labor that produces zero billable work. Buildertrend or Procore: $300-900/month, but only helps if your subs actually log in and upload — and most won't. Custom automation (Tier 3): built as part of a broader ops automation engagement, scoped to your exact sub count and document volume. The automation cost is typically recovered within 2-3 months from the time saved, and the risk reduction — avoiding one uncovered claim — can pay for the entire build many times over. Jobs Done Labs scopes every build against a hard ROI target, and our engagements are covered by the $30K-recovered-in-90-days guarantee: if documented recovery doesn't reach $30K, you pay nothing." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:40px; }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    a { color:var(--accent-deep); }
+    .comparison { margin:28px 0; }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <span class="kicker">Construction &amp; Trades</span>
+      <h1>You're a GC, Not a Filing Clerk — How to Tame Subcontractor Paperwork Without Another Platform</h1>
+      <p class="byline">By Ryne Bandolik · Jobs Done Labs · June 15, 2026</p>
+
+      <p>"We're meant to be building things, but I feel like a bloody filing clerk."</p>
+
+      <p>That's a real Reddit post from r/ConstructionManagers, and if you're a small GC managing 5-20 subs across 3-8 active jobs, you don't need me to explain why it resonates. The COI that's in someone's email inbox but not in your folder. The W-9 the sub promised "next week" three weeks ago. The lien waiver that disappeared somewhere between the final walkthrough and your bookkeeper's desk. The expired insurance certificate you discover at 10pm, three weeks after it lapsed, while prepping for a morning inspection.</p>
+
+      <p>You got into this business to build things. Instead, you're a full-time compliance administrator for 20 different companies, each with their own insurance agent, their own version of "I'll get that to you," and their own ability to put your entire business at risk with one expired piece of paper.</p>
+
+      <h2>The 5 documents every GC actually needs (and what happens when each is missing)</h2>
+
+      <p>Before you pick a system, know what you're tracking. Every subcontractor relationship requires exactly five documents, and each one protects you from a different disaster.</p>
+
+      <h3>1. W-9 — Request for Taxpayer Identification Number</h3>
+      <p><strong>Why you need it:</strong> Without a W-9, you can't legally pay the sub — or rather, you technically can, but you're required to withhold 24% for backup withholding if the IRS asks for documentation you don't have. At year-end, no W-9 means no 1099-NEC, which means the IRS treats that entire subcontractor payment as unreported income to the sub — and unreported expense documentation for you. It's the first thing an auditor asks for.</p>
+      <p><strong>What happens when it's missing:</strong> A GC I know got audited year 3 of his business. The IRS disallowed $87K in subcontractor deductions because he couldn't produce W-9s for four subs who had since gone out of business. He paid back taxes, penalties, and interest on money he'd already spent — because the paper trail started and stopped with a handshake.</p>
+
+      <h3>2. Certificate of Insurance (COI) — with Additional Insured Endorsement</h3>
+      <p><strong>Why you need it:</strong> This is the one document that stands between you and personal liability. A COI proves the sub carries general liability insurance (and workers' comp, if required) with limits adequate for the scope of work. Critically, it must name you as <strong>additional insured</strong> and include a <strong>waiver of subrogation</strong> — without those two magic phrases, the sub's insurance protects the sub, not you.</p>
+      <p><strong>What happens when it's missing or expired:</strong> The roofer's COI lapsed three weeks before a water damage claim. The GC's carrier denied coverage because the sub wasn't properly insured at the time of loss. The $140K settlement came directly out of the GC's company — not because the GC did anything wrong, but because nobody was tracking expiration dates. Three weeks. One expired document. One company's entire profit for the year, gone.</p>
+
+      <h3>3. Signed Contract / Scope of Work</h3>
+      <p><strong>Why you need it:</strong> A signed scope of work is your only defense against "that wasn't in my bid" disputes. It defines exactly what the sub is delivering, at what price, by what date, under what conditions. Without it, every change becomes a negotiation, every delay becomes a blame game, and every dispute becomes he-said-she-said.</p>
+      <p><strong>What happens when it's missing:</strong> You agree on $28K for the full MEP rough-in. Halfway through, the sub says "plumbing was $28K — electrical is extra." You know you discussed "full MEP rough-in" but your email just says "ok sounds good." That's a $19K change order you're eating because you didn't have a two-page scope document that listed every trade and every exclusion. The profit on that job is now negative.</p>
+
+      <h3>4. Lien Waiver — Conditional and Unconditional</h3>
+      <p><strong>Why you need it:</strong> A lien waiver is the subcontractor's sworn statement that they've been paid and waive their right to file a mechanics lien against the property. Most states require a specific statutory form. A conditional waiver says "I waive lien rights for work through [date] once this check clears." An unconditional waiver says "I've been paid in full through [date] and waive all lien rights through that date." You need a conditional waiver with every progress payment and an unconditional final waiver at project close.</p>
+      <p><strong>What happens when it's missing:</strong> The homeowner refinances six months after move-in. The title search finds a mechanics lien from your drywall sub who says he was never paid — except he was, in cash, and you have no waiver to prove it. The homeowner can't close. Their attorney calls you. Your attorney costs $400/hour to fix a problem that a two-page form would have prevented. And that drywall sub? He changed his phone number. Good luck.</p>
+
+      <h3>5. Safety Certifications &amp; Training Records</h3>
+      <p><strong>Why you need it:</strong> OSHA doesn't just fine the sub — they can fine the GC and the property owner for safety violations committed by any worker on site. If your sub's crew isn't properly trained and certified for the work they're performing, and an OSHA inspector shows up, the citation has your company's name on it.</p>
+      <p><strong>What happens when it's missing:</strong> An unlicensed forklift operator on your sub's crew tips a load of trusses. No one is hurt — but the incident triggers an OSHA inspection. The inspector asks for training records. Your sub can't produce them. The $12K citation names both companies. Your Experience Modification Rate (EMR) goes up, your workers' comp premium follows, and the whole thing could have been avoided by verifying one training card before the sub stepped on site.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The compliance timeline that actually works:</strong> Collect W-9 and COI <em>before</em> the sub starts work — not "by Friday." Verify coverage limits match the scope. Re-verify COIs quarterly (most commercial policies renew annually, so expiration dates are scattered across the calendar). Retain everything for 7 years minimum — not because the IRS requires it, but because construction defect claims can surface years after completion, and the statute of repose in some states is a full decade.</p>
+      </div>
+
+      <h2>The 3-tier system: pick based on your sub count and tech comfort</h2>
+
+      <p>There is no single right answer. The right answer is the one you'll actually use — not the one your insurance agent recommends, not the one the Buildertrend sales rep demoed, not the one your CPA wishes you'd adopt. Here are the three tiers, honestly compared.</p>
+
+      <h3>Tier 1 — Free: Google Drive folder structure + phone scanner + calendar reminders</h3>
+      <p>This is the "stop being the filing clerk this week" tier. You need nothing but a free Google account and your phone.</p>
+      <ol>
+        <li><strong>Create a Google Drive folder per job.</strong> Inside it, create subfolders: <code>1-W9s</code>, <code>2-COIs</code>, <code>3-Contracts</code>, <code>4-Lien-Waivers</code>, <code>5-Safety-Certs</code>. Number them so they sort in the order you actually need them.</li>
+        <li><strong>Create a per-job tracking sheet.</strong> One Google Sheet per active job. Columns: Sub Name, Trade, W-9 (Y/N), COI Received, COI Expires, COI Limits OK?, Contract Signed, Last Lien Waiver Date, Notes. Color-code the COI Expires column: yellow at 30 days, red at 7 days, bold red at expired. Check it every Monday morning.</li>
+        <li><strong>Use your phone scanner for every incoming document.</strong> Adobe Scan, iPhone Notes scanner, Google Drive scanner — they all work. Photograph the document the moment you receive it. Name it consistently: <code>SubName-COI-2026-06-15.pdf</code>. Drop it in the right folder immediately — not "later tonight."</li>
+        <li><strong>Set Google Calendar reminders for every COI expiration.</strong> When a COI comes in, immediately create a calendar event on the expiration date with a notification 30 days before, 14 days before, and 7 days before. This is the single highest-leverage habit in the whole system. One missed COI renewal can cost you more than every other mistake combined.</li>
+      </ol>
+      <p><strong>Good enough for:</strong> GCs with 2-5 active jobs and under 15 active subs. The entire system takes 15 minutes to set up per job and 10 minutes per week to maintain. <strong>Not good enough for:</strong> anyone running 6+ jobs simultaneously or managing 20+ subs — the calendar management alone becomes a part-time job, and "I forgot to create the reminder" is how the $140K claim happened.</p>
+
+      <h3>Tier 2 — Automation-lite: Zapier/Make workflows that watch your email</h3>
+      <p>This tier automates the most repetitive part: receiving documents and extracting the data that matters. No platform, no sub login required — just your existing email plus a free automation account.</p>
+      <ol>
+        <li><strong>Set up an email forwarding rule.</strong> Any email from a sub with an attachment containing "COI" or "certificate" in the subject line gets forwarded to a designated folder or label.</li>
+        <li><strong>Zapier/Make watches that folder.</strong> When a new email arrives, the automation: (a) saves the attachment to Google Drive in the correct job folder, (b) extracts key data — sub name, policy dates, coverage limits — using PDF parsing (or OCR for image attachments), (c) logs the data to your tracking sheet, (d) creates the calendar reminder for expiration.</li>
+        <li><strong>Weekly summary email.</strong> Every Monday morning, you get an automated email: "3 COIs expiring in the next 30 days. 1 W-9 still missing (Joe's Electric — requested 3 times). 2 lien waivers due this week." You spend 5 minutes acting on exceptions instead of 2 hours hunting through folders.</li>
+      </ol>
+      <p><strong>Good enough for:</strong> GCs with 3-8 active jobs, 15-40 subs, and an office manager or admin who can set up the initial Zapier/Make workflows (2-3 hours, one-time). <strong>Not good enough for:</strong> GCs who want full automation — the Zapier tier still requires someone to verify coverage limits manually and chase down subs who ignore email requests.</p>
+
+      <h3>Tier 3 — Full automation: what Jobs Done Labs builds</h3>
+      <p>This is where compliance becomes invisible. You onboard a new sub, and the system handles everything else — forever, for every job, for every document.</p>
+      <p>The workflow:</p>
+      <ul>
+        <li><strong>New sub onboarding form</strong> — you or your PM fills out one form: sub name, trade, email, phone, job assignment. That's it.</li>
+        <li><strong>Auto-request engine</strong> — the system emails the sub immediately: "Welcome to the Miller project. Please provide: (1) W-9, (2) Certificate of Insurance naming [Your Company] as additional insured with waiver of subrogation, minimum $1M/$2M limits. Upload here or reply to this email." Follow-up reminders go out automatically at day 3, day 7, and day 14 if no response.</li>
+        <li><strong>Auto-verify &amp; log</strong> — when the sub replies with attachments, PDF parsing extracts: policy number, effective date, expiration date, coverage limits, additional insured language, waiver of subrogation. The system checks: is the policy current? Are limits adequate? Is your company named as additional insured? If anything fails, it flags the exception and emails you immediately. If everything passes, it logs the COI and creates the 30/14/7-day expiration reminders.</li>
+        <li><strong>Status dashboard</strong> — one screen showing every sub, every job, every document status: green = compliant, yellow = expiring within 30 days, red = expired or missing. Click any sub to see the full document history. No hunting. No "let me check my email." No 10pm panic.</li>
+        <li><strong>Auto-escalation</strong> — if a sub hasn't provided a renewed COI by 7 days before expiration, the system texts them. At 3 days before, it texts you: "Joe's Roofing COI expires Friday. No response to 3 emails and 1 text. Want to escalate to a phone call?"</li>
+      </ul>
+      <p><strong>Good enough for:</strong> GCs with 5+ active jobs, 20+ active subs, and no desire to ever think about subcontractor paperwork again. <strong>Built as part of:</strong> a broader ops automation engagement — Jobs Done Labs maps your exact sub onboarding and compliance flow during a free audit and builds the automation that makes Tier 3 real.</p>
+
+      <div class="comparison">
+        <h2>Comparison at a glance</h2>
+        <table>
+          <tr>
+            <th></th>
+            <th>Tier 1<br>Google Drive</th>
+            <th>Tier 2<br>Zapier/Make</th>
+            <th>Tier 3<br>Automated</th>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td>$0</td>
+            <td>$0-30/month</td>
+            <td>Built to scope</td>
+          </tr>
+          <tr>
+            <td>Setup time</td>
+            <td>15 min per job</td>
+            <td>2-3 hours, one-time</td>
+            <td>2-4 weeks</td>
+          </tr>
+          <tr>
+            <td>Weekly time</td>
+            <td>10-15 min</td>
+            <td>5 min (exceptions only)</td>
+            <td>0 min (alerts only)</td>
+          </tr>
+          <tr>
+            <td>Sub login required?</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Auto-verify COI limits?</td>
+            <td>No — manual check</td>
+            <td>Partial — OCR extracts, human verifies</td>
+            <td>Yes — fully automated</td>
+          </tr>
+          <tr>
+            <td>Expiration reminders?</td>
+            <td>Manual calendar events</td>
+            <td>Automated</td>
+            <td>Automated + escalation</td>
+          </tr>
+          <tr>
+            <td>Best for</td>
+            <td>2-5 jobs, &lt;15 subs</td>
+            <td>3-8 jobs, 15-40 subs</td>
+            <td>5+ jobs, 20+ subs</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Why Buildertrend and Procore won't solve this for most small GCs:</strong> Both platforms cost $300-900/month and require subs to create logins and upload documents. If your subs won't use it — and most won't, especially the small trades you use occasionally — you paid for a compliance system that only works for 40% of your subs. The automation layer (Tier 3) costs less to run and works the way you already work: email and text. No sub login. No platform adoption campaign. No "but I can't figure out the app" phone calls.</p>
+      </div>
+
+      <h2>What the compliance dashboard actually shows</h2>
+      <p>At Tier 3, you open one screen and see, for every job and every sub:</p>
+      <ul>
+        <li>Document status at a glance — green/yellow/red for W-9, COI, contract, lien waiver, safety certs.</li>
+        <li>Upcoming COI expirations in the next 30/14/7 days — with the sub's contact info one click away.</li>
+        <li>Missing documents flagged with "last requested" date and number of reminders sent — so you know who's ignoring you.</li>
+        <li>Complete document history — every COI renewal, every lien waiver, every contract revision, stored and searchable by sub, by job, by date.</li>
+        <li>Audit-ready export — if your insurer, a homeowner, or the IRS asks for documentation, you export one folder per job in 30 seconds.</li>
+      </ul>
+
+      <h2>Monday morning setup checklist: stop being the filing clerk this week</h2>
+      <div class="checklist">
+        <h3>5 things to do before your first job walkthrough Monday</h3>
+        <ol>
+          <li><strong>Create the 5-folder structure for every active job.</strong> Google Drive: Job Name → {1-W9s, 2-COIs, 3-Contracts, 4-Lien-Waivers, 5-Safety-Certs}. 15 minutes total.</li>
+          <li><strong>Build the tracking sheet.</strong> One Google Sheet, one tab per job, the columns listed in Tier 1. Fill in every sub you're currently working with. Mark what you have and what's missing. The first time you do this, it's going to be alarming how many red cells you see. That's the point.</li>
+          <li><strong>Audit your COIs right now.</strong> Pull every COI you have on file. Check: is it current? Are you named as additional insured? Is there a waiver of subrogation? Are the limits adequate for the scope of work? For any that fail, email the sub today: "I need an updated COI by Friday."</li>
+          <li><strong>Create calendar reminders for every expiration date.</strong> Every COI you just audited — create a Google Calendar event on its expiration date with 30/14/7-day advance notifications. This takes 2 minutes per sub and will save you more grief than anything else on this list.</li>
+          <li><strong>Make COI submission a condition of contract acceptance.</strong> Starting with the next sub you hire: no valid COI, no signed contract, no start date. Tell them upfront, in writing. You'll lose one or two reluctant subs in the short term and protect your company from a catastrophic uncovered claim in the long term.</li>
+        </ol>
+        <p style="font-size:15px; color:rgba(23,21,19,.55); margin:16px 0 0">That's it. The whole system, Tier 1, running by end of day Monday. You're no longer the filing clerk.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>Can I require subcontractors to use a compliance platform?</h3>
+        <p>You can, and many GCs include platform access in their subcontractor agreements. The problem isn't legality — it's enforcement. If you're a small GC managing 5-20 subs, your leverage varies dramatically: the roofer who does 60% of your work will install whatever app you ask; the electrician you use twice a year on small jobs might ignore you for weeks. The smart approach is a two-track system: for your core subs (60%+ of work), require platform compliance in the contract. For occasional subs, accept documents via email and use automation to extract and track key dates from the attachments — so you still get compliance visibility without requiring anyone to create a login. The automation layer (Tier 3 in this guide) is designed to work with email attachments specifically so you never need to say "install this app" to a sub you use twice a year.</p>
+
+        <h3>What if a subcontractor refuses to provide a COI?</h3>
+        <p>Never let a sub start work without a valid COI naming you as additional insured. A sub who "doesn't have it yet" or "will get it next week" is a sub whose insurance you cannot verify — and if they cause damage on your job, your general liability policy may not cover it because the sub wasn't properly insured. The refusal is almost never malice; it's usually that they let their policy lapse and are embarrassed, or their agent is slow. Give them a firm deadline with clear consequences: "I need a valid COI by Friday or I can't have you start on the Miller project Monday." Then hold the line. One GC I know now makes COI submission part of the bid acceptance: no COI, no contract. It cost him a couple of reluctant subs in year one and saved him from a $140K uncovered claim in year two.</p>
+
+        <h3>How long do I need to keep subcontractor paperwork after a job is done?</h3>
+        <p>The short answer is 7 years — but it depends on which document and which state you're in. IRS guidelines: keep tax-related documents (W-9s, 1099s, payment records) for at least 3 years from the date you filed the return, going back 6 years if there's a substantial understatement of income. For construction specifically: lien waivers should be kept for the duration of your state's mechanics lien statute (typically 1-2 years after project completion) plus your state's statute of limitations for contract claims (often 4-6 years). COIs and certificates of insurance: keep for the full statute of repose in your state — in some states that's 10 years for construction defect claims. The safest rule: 7 years minimum for everything, organized by job, stored digitally. A Google Drive folder structure per job with subfolders for each document type costs nothing and takes 10 minutes to set up at project start.</p>
+
+        <h3>Does my general liability insurance actually cover me if a subcontractor's COI lapses mid-job?</h3>
+        <p>Maybe. And "maybe" is a terrifying answer when you're looking at a six-figure claim. Most commercial general liability policies exclude damage caused by subcontractors UNLESS you've collected valid COIs naming you as additional insured AND those COIs are current at the time of the loss. If your sub's policy lapsed in month 2 of a 6-month project and the damage happened in month 4, your carrier will deny the claim — and you're personally on the hook. This is why the 30/14/7-day expiration reminder system matters: you need to know a COI is expiring BEFORE it expires, not after. The GC I mentioned earlier learned this the hard way: a roofer's COI expired 3 weeks before a water damage claim, the GC's carrier denied coverage, and the $140K came out of the GC's company — because nobody was tracking expiration dates.</p>
+
+        <h3>How much does automating subcontractor paperwork actually cost vs doing it manually?</h3>
+        <p>Manual: a GC or office manager spending 4-8 hours per week chasing COIs, filing W-9s, tracking lien waivers, and answering "do we have the insurance cert for X?" — at a blended cost of $35-55/hour, that's $560-1,760/month in labor that produces zero billable work. Buildertrend or Procore: $300-900/month, but only helps if your subs actually log in and upload — and most won't. Custom automation (Tier 3): built as part of a broader ops automation engagement, scoped to your exact sub count and document volume. The automation cost is typically recovered within 2-3 months from the time saved, and the risk reduction — avoiding one uncovered claim — can pay for the entire build many times over. Jobs Done Labs scopes every build against a hard ROI target, and our engagements are covered by the <a href="/#guarantee">$30K-recovered-in-90-days guarantee</a>: if documented recovery doesn't reach $30K, you pay nothing.</p>
+      </section>
+
+      <div class="cta-box">
+        <h2>Find out how many hours your back office is burning on subcontractor paperwork</h2>
+        <p>Book a free 15-minute audit. We'll map your exact sub onboarding and compliance flow — what you're tracking now, where the hours go, and what full automation would recover. No pitch, no pressure. You keep the map either way.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
+  </footer>
+</body>
+</html>
