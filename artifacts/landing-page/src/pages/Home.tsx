@@ -1242,6 +1242,7 @@ function Footer() {
             <a href="/blog/shopify-quickbooks-reconciliation-never-matches/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Shopify-QuickBooks reconciliation</a>
             <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Fuel receipts &amp; expense tracking</a>
             <a href="/case-study/logistics-200k-profit/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Case study: $200K logistics profit</a>
+            <a href="/about/ryne-bandolik/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>About Ryne Bandolik</a>
             <a href="mailto:ryne@jobsdone.io" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>ryne@jobsdone.io</a>
           </div>
         </div>

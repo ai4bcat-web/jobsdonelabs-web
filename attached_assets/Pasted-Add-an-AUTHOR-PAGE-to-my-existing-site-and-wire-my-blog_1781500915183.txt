@@ -1,0 +1,68 @@
+Add an AUTHOR PAGE to my existing site and wire my blog bylines to it. Work
+within the current codebase, match the existing design system, header, footer,
+and page patterns. The page MUST render its content AND its JSON-LD in
+server-side HTML (verify the text and the schema are present in the raw HTML
+response via view-source/curl, not injected client-side).
+
+ROUTE: /about/ryne-bandolik   (add a link in the footer; add to nav if there's
+room)
+
+PAGE CONTENT (use this bio; keep my voice, don't embellish):
+---
+# Ryne Bandolik
+Founder, JobsDone Labs
+
+Ryne Bandolik is the founder of JobsDone Labs, where he builds custom AI
+automation systems for service, logistics, and manufacturing operators. He works
+from the operator's seat, not the consultant's chair: he owns and runs a
+multi-company transportation group — BCAT Logistics (freight brokerage), Ivan
+Cartage (Amazon DSP carrier), and Best Care Auto (vehicle transport) — and builds
+the same systems in his own businesses before recommending them to anyone else.
+
+The $200K-in-net-new-profit command center documented on this site wasn't built
+for a client. He built it across his own three companies, then turned the
+playbook into JobsDone Labs. That's the premise: automation designed by someone
+who has to live with the P&L it produces.
+
+[OPTIONAL — Ryne to add: 1-2 lines of prior career background if desired.]
+---
+Include a small headshot if an image asset exists; otherwise leave a clearly
+marked image slot. Add a short CTA linking to /contact.
+
+PERSON SCHEMA (JSON-LD in the page <head>):
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ryne Bandolik",
+  "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik",
+  "jobTitle": "Founder",
+  "worksFor": { "@type": "Organization", "name": "JobsDone Labs",
+                "url": "https://www.jobsdonelabs.ai/" },
+  "description": "Founder of JobsDone Labs and operator of a multi-company
+                  transportation group; builds AI automation for service,
+                  logistics, and manufacturing businesses.",
+  "sameAs": [
+    "[YOUR LINKEDIN URL]"
+  ]
+}
+- Put the real LinkedIn URL in the sameAs array (I'll provide it). Leave the
+  array structured so I can add more profiles (company LinkedIn, etc.) later.
+- Validate the JSON-LD against schema.org structure.
+
+WIRE THE BYLINES (this is the key part — do it at the template level so it
+applies to existing AND future auto-generated posts):
+- Make the blog post byline ("By Ryne Bandolik ...") a LINK to
+  /about/ryne-bandolik.
+- In each post's BlogPosting JSON-LD, set the author to a Person with
+  name "Ryne Bandolik" and url "https://www.jobsdonelabs.ai/about/ryne-bandolik"
+  so the byline and the schema point to the same entity. If BlogPosting schema
+  doesn't exist yet, add it minimally with that author reference.
+
+SEO BASICS: page <title>, meta description, canonical, and include
+/about/ryne-bandolik in sitemap.xml.
+
+WHEN DONE, report:
+1. The exact files created/modified.
+2. Confirm the Person schema (with sameAs) is in the page's server-rendered HTML.
+3. Confirm the blog bylines now link to the author page.
+4. Paste the rendered JSON-LD back to me so I can verify the sameAs is correct.
