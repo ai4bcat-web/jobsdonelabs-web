@@ -452,7 +452,7 @@ function LPNav({ onBook }: { onBook:()=>void }) {
         {/* Desktop links */}
         <div className="hidden md:flex" style={{ alignItems:"center", gap:22 }}>
           {NAV_LINKS.map(([href,label]) => (
-            href.startsWith("/") && !href.startsWith("/#") ? (
+            href.startsWith("/") && !href.startsWith("/#") && !href.startsWith("/blog") ? (
               <Link key={href} href={href}
                 style={{ fontSize:14, fontWeight:600, color:INK_SOFT, textDecoration:"none", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}
                 onMouseEnter={(e:React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color=INK; }}
@@ -491,7 +491,7 @@ function LPNav({ onBook }: { onBook:()=>void }) {
           <motion.div initial={{ height:0, opacity:0 }} animate={{ height:"auto", opacity:1 }} exit={{ height:0, opacity:0 }}
             style={{ overflow:"hidden", borderTop:`1px solid ${LINE}`, background:CREAM }}>
             {NAV_LINKS.map(([href,label]) => (
-              href.startsWith("/") && !href.startsWith("/#") ? (
+              href.startsWith("/") && !href.startsWith("/#") && !href.startsWith("/blog") ? (
                 <Link key={href} href={href} onClick={() => setMenu(false)}
                   style={{ display:"block", padding:"14px 24px", fontSize:16, fontWeight:600, color:INK,
                     textDecoration:"none", borderBottom:`1px solid ${LINE}`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
