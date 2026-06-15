@@ -27,8 +27,16 @@ from = "/blog/"
 to = "/blog/index.html"
 
 [[services.production.rewrites]]
-from = "/blog/:slug/"
-to = "/blog/:slug/index.html"
+from = "/blog/stop-chasing-client-documents/"
+to = "/blog/stop-chasing-client-documents/index.html"
+
+[[services.production.rewrites]]
+from = "/blog/shopify-quickbooks-reconciliation-never-matches/"
+to = "/blog/shopify-quickbooks-reconciliation-never-matches/index.html"
+
+[[services.production.rewrites]]
+from = "/blog/trucking-fuel-receipts-expense-tracking-fix/"
+to = "/blog/trucking-fuel-receipts-expense-tracking-fix/index.html"
 
 [[services.production.rewrites]]
 from = "/*"
