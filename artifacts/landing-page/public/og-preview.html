@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    .card {
+      width: 1200px;
+      height: 630px;
+      background: #EDE8D8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 64px 0 72px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      max-width: 700px;
+      flex: 1;
+    }
+
+    .logo {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border: 2.5px solid #2563EB;
+      border-radius: 999px;
+      padding: 8px 20px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #2563EB;
+      letter-spacing: -0.01em;
+      align-self: flex-start;
+      background: rgba(37, 99, 235, 0.07);
+    }
+
+    .headline {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.05;
+      color: #0F0F0F;
+      letter-spacing: -0.035em;
+      white-space: nowrap;
+    }
+
+    .headline .highlight {
+      color: #2563EB;
+    }
+
+    .subtext {
+      font-size: 21px;
+      font-weight: 400;
+      color: #3D3D3D;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+    }
+
+    .right {
+      flex-shrink: 0;
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      margin-right: -20px;
+    }
+
+    .ryne {
+      height: 618px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      object-position: bottom center;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="left">
+      <img src="/logo.png" alt="Jobs Done Labs" class="logo" />
+      <div class="badge">$2M+ in new revenue created for clients</div>
+      <div class="headline">We add <span class="highlight">$30K</span> to your business</div>
+      <p class="subtext">Custom AI agents &amp; automation that grow revenue<br>while cutting software and payroll spend.</p>
+    </div>
+    <div class="right">
+      <img src="/ryne-nobg.png" alt="Ryne Bandolik" class="ryne" />
+    </div>
+  </div>
+</body>
+</html>
