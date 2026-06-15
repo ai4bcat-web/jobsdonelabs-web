@@ -1,0 +1,45 @@
+My blog (/blog) is auto-generated and already in good shape: posts are
+server-rendered, bylined, dated, categorized, with question-headed sections, an
+FAQ block, and comparison tables. DO NOT change the writing, the voice, or the
+content-generation pipeline's output. Make surgical SEO/AIO upgrades at the
+POST TEMPLATE / LAYOUT and GENERATOR level, so every existing AND future
+auto-generated post inherits them. Then validate.
+
+1. STRUCTURED DATA (highest priority — verify first, this may already exist):
+   Check whether each blog post emits JSON-LD. If it does, extend it; if not,
+   add it to the post layout so it's generated for every post:
+   - BlogPosting schema: headline, description, datePublished, dateModified,
+     image, mainEntityOfPage, author (Person, with name + url to the author
+     page below), publisher (Organization with name + logo).
+   - FAQPage schema: built AUTOMATICALLY from each post's existing FAQ section
+     (the question H3s + their answer paragraphs). Don't hand-author it — parse
+     it from the rendered FAQ block so future posts get it free.
+   Validate the output against schema.org / Google Rich Results structure.
+
+2. AUTHOR PAGE + PERSON SCHEMA:
+   Create an author page (e.g. /about/ryne-bandolik) with a real operator bio.
+   Link every post byline to it. Add Person schema (name, jobTitle, worksFor,
+   sameAs → LinkedIn URL). Reference this Person as the author in every
+   BlogPosting schema above.
+
+3. DATEMODIFIED:
+   Add an updated-date field to the post data model, render it near the byline
+   ("Updated June 2026"), and feed it into dateModified in the schema.
+
+4. INTERNAL LINKING (topical clusters):
+   In the post template, auto-append a "Related posts" section linking 2-3 other
+   posts sharing the same category or tags. This should generate automatically.
+
+5. OPTIONAL — answer-summary block:
+   If the post data model has (or can have) a one-paragraph summary field, render
+   it as a "key takeaways" callout near the top, ABOVE the existing narrative
+   intro — short, 2-3 sentences, leading with the direct answer. Do not remove or
+   rewrite the existing intro. If no summary field exists, skip this.
+
+6. CRAWLER ACCESS (verify, fix if needed):
+   - robots.txt explicitly allows GPTBot, OAI-SearchBot, PerplexityBot,
+     ClaudeBot, and Googlebot (named user-agents, Allow: /).
+   - sitemap.xml includes the blog index and EVERY post URL.
+
+When done, tell me: what schema already existed vs. what you added, and confirm
+the FAQPage schema is being generated from the FAQ section automatically.
