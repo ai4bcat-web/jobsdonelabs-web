@@ -74,9 +74,14 @@ router.post("/github-webhook", async (req: Request, res: Response) => {
     : process.cwd();
 
   try {
-    const { stdout, stderr } = await execAsync("git pull", {
-      cwd: workspaceRoot,
-    });
+    // -X ours: auto-resolve conflicts by preferring the local (Replit) version.
+    // New files from GitHub (blog posts, etc.) are always brought in since they
+    // have no conflict. For files edited on both sides (e.g. index.html with
+    // SEO improvements), Replit's version is preserved.
+    const { stdout, stderr } = await execAsync(
+      "git pull -X ours",
+      { cwd: workspaceRoot },
+    );
     logger.info({ stdout, stderr }, "git pull completed");
   } catch (err) {
     logger.error({ err }, "git pull failed");

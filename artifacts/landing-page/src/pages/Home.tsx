@@ -433,6 +433,8 @@ const NAV_LINKS: [string,string][] = [
   ["/#industries","Industries"],
   ["/#results","Results"],
   ["/#faq","FAQ"],
+  ["/blog/","Blog"],
+  ["/case-study/logistics-200k-profit","Case Study"],
   ["/roi-calculator","ROI Calculator"],
   ["/contact","Contact"],
 ];
@@ -451,7 +453,7 @@ function LPNav({ onBook }: { onBook:()=>void }) {
         {/* Desktop links */}
         <div className="hidden md:flex" style={{ alignItems:"center", gap:22 }}>
           {NAV_LINKS.map(([href,label]) => (
-            href.startsWith("/") && !href.startsWith("/#") ? (
+            href.startsWith("/") && !href.startsWith("/#") && !href.startsWith("/blog") && !href.startsWith("/case-study") ? (
               <Link key={href} href={href}
                 style={{ fontSize:14, fontWeight:600, color:INK_SOFT, textDecoration:"none", letterSpacing:"-0.01em", fontFamily:"'Hanken Grotesk',sans-serif" }}
                 onMouseEnter={(e:React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color=INK; }}
@@ -490,7 +492,7 @@ function LPNav({ onBook }: { onBook:()=>void }) {
           <motion.div initial={{ height:0, opacity:0 }} animate={{ height:"auto", opacity:1 }} exit={{ height:0, opacity:0 }}
             style={{ overflow:"hidden", borderTop:`1px solid ${LINE}`, background:CREAM }}>
             {NAV_LINKS.map(([href,label]) => (
-              href.startsWith("/") && !href.startsWith("/#") ? (
+              href.startsWith("/") && !href.startsWith("/#") && !href.startsWith("/blog") && !href.startsWith("/case-study") ? (
                 <Link key={href} href={href} onClick={() => setMenu(false)}
                   style={{ display:"block", padding:"14px 24px", fontSize:16, fontWeight:600, color:INK,
                     textDecoration:"none", borderBottom:`1px solid ${LINE}`, fontFamily:"'Hanken Grotesk',sans-serif" }}>
@@ -535,14 +537,14 @@ function Hero({ onBook }: { onBook:()=>void }) {
                 background:INK, borderRadius:0, padding:"5px 11px", marginBottom:20 }}>
                 <span style={{ fontSize:10, fontWeight:800, letterSpacing:"0.12em",
                   textTransform:"uppercase", color:CREAM,
-                  fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ Profit recovery, guaranteed</span>
+                  fontFamily:"'Hanken Grotesk',sans-serif" }}>⚡ A business that works without you is a business you can sell</span>
               </div>
               <h1 className="anton" style={{ fontSize:"clamp(1.8rem,3.4vw,2.7rem)", lineHeight:1.08,
                 color:INK, marginBottom:8 }}>
-                We find the{" "}
+                We add{" "}
                 <span style={{ background:ACCENT, color:"#fff",
                   padding:"0.02em 0.14em 0.07em", borderRadius:4, display:"inline" }}>$30K</span>
-                {" "}hiding in<br />your operations.
+                {" "}to your business.
               </h1>
               <p className="anton" style={{ fontSize:"clamp(1.25rem,2.2vw,1.6rem)", color:INK,
                 marginBottom:20, fontStyle:"italic" }}>
@@ -1194,11 +1196,11 @@ function Footer() {
             </p>
             <div style={{ display:"flex", gap:10, marginTop:18 }}>
               {([
-                [Linkedin,   "https://www.linkedin.com/in/rynebandolik/"],
-                [Youtube,    "https://www.youtube.com/@jobsdonelabs"],
-                [Twitter,    "https://x.com/Ryne_Stone"],
-              ] as [typeof Linkedin, string][]).map(([Icon, href], i) => (
-                <a key={i} href={href} target="_blank" rel="noopener noreferrer"
+                [Linkedin, "https://www.linkedin.com/in/rynebandolik/", "Jobs Done Labs on LinkedIn"],
+                [Youtube,  "https://www.youtube.com/@jobsdonelabs",     "Jobs Done Labs on YouTube"],
+                [Twitter,  "https://x.com/Ryne_Stone",                  "Ryne Bandolik on X (Twitter)"],
+              ] as [typeof Linkedin, string, string][]).map(([Icon, href, label], i) => (
+                <a key={i} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
                   style={{ width:34, height:34, borderRadius:6, background:"rgba(255,255,255,.07)", display:"flex", alignItems:"center", justifyContent:"center", color:"rgba(244,239,227,.5)", textDecoration:"none" }}
                   onMouseEnter={e => { e.currentTarget.style.background="rgba(255,255,255,.12)"; }}
                   onMouseLeave={e => { e.currentTarget.style.background="rgba(255,255,255,.07)"; }}>
@@ -1207,10 +1209,11 @@ function Footer() {
               ))}
               {/* Instagram */}
               <a href="https://www.instagram.com/jobsdonelabs.ai/" target="_blank" rel="noopener noreferrer"
+                aria-label="Jobs Done Labs on Instagram"
                 style={{ width:34, height:34, borderRadius:6, background:"rgba(255,255,255,.07)", display:"flex", alignItems:"center", justifyContent:"center", color:"rgba(244,239,227,.5)", textDecoration:"none" }}
                 onMouseEnter={e => { e.currentTarget.style.background="rgba(255,255,255,.12)"; }}
                 onMouseLeave={e => { e.currentTarget.style.background="rgba(255,255,255,.07)"; }}>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                   <circle cx="12" cy="12" r="4"/>
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
@@ -1240,9 +1243,11 @@ function Footer() {
             <a href="/blog/contractor-job-costing-system-field-to-office/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Job costing from the jobsite</a>
             <a href="/blog/small-manufacturing-production-scheduling-guide/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Production scheduling after the whiteboard</a>
             <a href="/blog/small-manufacturer-inventory-management-system/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Closing the inventory gap</a>
-            <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Fuel receipts & expense tracking</a>
+            <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Fuel receipts &amp; expense tracking</a>
             <a href="/blog/shopify-quickbooks-reconciliation-never-matches/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Shopify-QuickBooks reconciliation</a>
             <a href="/blog/stop-chasing-client-documents/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Stop chasing client documents</a>
+            <a href="/case-study/logistics-200k-profit/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Case study: $200K logistics profit</a>
+            <a href="/about/ryne-bandolik/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>About Ryne Bandolik</a>
             <a href="mailto:ryne@jobsdone.io" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>ryne@jobsdone.io</a>
           </div>
         </div>
