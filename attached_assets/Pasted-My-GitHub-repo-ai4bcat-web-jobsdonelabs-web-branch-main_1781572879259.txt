@@ -1,0 +1,33 @@
+My GitHub repo ai4bcat-web/jobsdonelabs-web (branch main) has new commits that aren't in this workspace: 5 blog posts and a 
+  ▎ Plausible Analytics script. This workspace has pages that aren't on GitHub yet: the /case-study/logistics-200k-profit/ and 
+  ▎ /about/ryne-bandolik/ pages and a recent heading change. I need to merge both directions so nothing is lost, then deploy.
+  ▎
+  ▎ Please do this in the Shell, carefully:
+  ▎
+  ▎ 1. First snapshot my current workspace so nothing is lost:
+  ▎ git add -A && git commit -m "snapshot: case-study, about, heading"
+  ▎ git push origin HEAD:replit-live
+  ▎ 2. Now merge the GitHub main into this workspace:
+  ▎ git fetch origin
+  ▎ git merge origin/main --no-edit
+  ▎ 3. If there are merge conflicts, resolve them by keeping BOTH sides (a union), never deleting content:
+  ▎   - artifacts/landing-page/public/sitemap.xml — keep every <url> entry from both versions (home, /blog/, stop-chasing, shopify,
+  ▎ trucking, subcontractor, contractor-estimate-time-management, contractor-job-costing-system-field-to-office, 
+  ▎ small-manufacturing-production-scheduling-guide, small-manufacturer-inventory-management-system, 
+  ▎ case-study/logistics-200k-profit, about/ryne-bandolik). No duplicates.
+  ▎   - artifacts/landing-page/public/llms.txt — keep all blog links from both versions.
+  ▎   - artifacts/landing-page/src/pages/Home.tsx — keep all footer blog links from both versions.
+  ▎   - For any other conflict, keep both sides' additions.
+  ▎ 4. Confirm these new post folders exist (from GitHub) and each contains an index.html:
+  ▎ artifacts/landing-page/public/blog/contractor-estimate-time-management/, .../contractor-job-costing-system-field-to-office/, 
+  ▎ .../small-manufacturing-production-scheduling-guide/, .../small-manufacturer-inventory-management-system/, 
+  ▎ .../subcontractor-paperwork-management-system-gc/
+  ▎ 5. Verify the Plausible script <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script> is
+  ▎ in the <head> of index.html and of every public/blog/*/index.html. Add it to any page missing it.
+  ▎ 6. Build to make sure nothing is broken, then commit and push:
+  ▎ pnpm install && pnpm --filter @workspace/landing-page run build
+  ▎ git add -A && git commit -m "merge: GitHub blog posts + Plausible with workspace pages"
+  ▎ git push origin main
+  ▎ 7. Then redeploy the Autoscale deployment.
+  ▎
+  ▎ After this, tell me how many files changed and confirm the 5 blog post URLs return 200 and the sitemap lists all 12 URLs.
