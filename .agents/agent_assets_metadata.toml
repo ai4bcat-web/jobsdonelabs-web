@@ -24,6 +24,54 @@ uri = "file://artifacts/landing-page/public/testimonial-3.png"
 type = "image"
 title = "Headshot of owner"
 
+[[generated]]
+id = "QdcWZn2Y8wK3w_m59BF7_"
+uri = "file://artifacts/landing-page/public/blog/contractor-estimate-time-management/og.png"
+type = "image"
+title = "contractor estimate time management og"
+
+[[generated]]
+id = "wYkn3ogG5cWERuOxweMHp"
+uri = "file://artifacts/landing-page/public/blog/contractor-job-costing-system-field-to-office/og.png"
+type = "image"
+title = "contractor job costing field office og"
+
+[[generated]]
+id = "WmBEqXDMedG7ni6aSECZR"
+uri = "file://artifacts/landing-page/public/blog/shopify-quickbooks-reconciliation-never-matches/og.png"
+type = "image"
+title = "shopify quickbooks reconciliation og"
+
+[[generated]]
+id = "rWeVP_dZ_dUZsX9GK8x9q"
+uri = "file://artifacts/landing-page/public/blog/small-manufacturer-inventory-management-system/og.png"
+type = "image"
+title = "manufacturer inventory management og"
+
+[[generated]]
+id = "_egYHweimhhobzXplSNvE"
+uri = "file://artifacts/landing-page/public/blog/small-manufacturing-production-scheduling-guide/og.png"
+type = "image"
+title = "manufacturing production scheduling og"
+
+[[generated]]
+id = "0r7Jtdi2LZSAymvAkxHVW"
+uri = "file://artifacts/landing-page/public/blog/stop-chasing-client-documents/og.png"
+type = "image"
+title = "stop chasing client documents og"
+
+[[generated]]
+id = "l8Eogy3sDV03Z1Ls7HhB7"
+uri = "file://artifacts/landing-page/public/blog/subcontractor-paperwork-management-system-gc/og.png"
+type = "image"
+title = "subcontractor paperwork management gc og"
+
+[[generated]]
+id = "AbuvjCJekEKV-jBWrrK_R"
+uri = "file://artifacts/landing-page/public/blog/trucking-fuel-receipts-expense-tracking-fix/og.png"
+type = "image"
+title = "trucking fuel receipts expense tracking og"
+
 [[outputs]]
 id = "lW09_TR8-a6M1mIB_X6vl"
 uri = "file://artifacts/landing-page/public/og-image.png"
