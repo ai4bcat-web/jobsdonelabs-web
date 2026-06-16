@@ -38,3 +38,8 @@ externalPort = 3000
 [[ports]]
 localPort = 18083
 externalPort = 80
+
+[userenv]
+
+[userenv.shared]
+INDEXNOW_KEY = "aa3c656f122419868fa93e8a6464386a"
