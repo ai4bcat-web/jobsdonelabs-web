@@ -3,4 +3,3 @@ set -e
 pnpm install --frozen-lockfile
 pnpm --filter db push
 pnpm --filter @workspace/scripts run update-sitemap
-pnpm --filter @workspace/scripts run ping-sitemap
