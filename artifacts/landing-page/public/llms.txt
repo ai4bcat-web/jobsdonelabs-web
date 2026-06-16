@@ -11,6 +11,12 @@
 - [Home](https://www.jobsdonelabs.ai/): offer, process, case studies, and booking link
 - [Stop chasing clients for documents](https://www.jobsdonelabs.ai/blog/stop-chasing-client-documents/): why email follow-up fails at accounting/bookkeeping firms and the automated request-and-reminder workflow that ends the document chase
 - [Shopify payouts never match QuickBooks?](https://www.jobsdonelabs.ai/blog/shopify-quickbooks-reconciliation-never-matches/): why Shopify payouts structurally never match QuickBooks — batch settlement, fees deducted pre-deposit, multi-order netting — and the 4 ways to fix it, honestly compared
+- [Fuel receipts & expense tracking for trucking](https://www.jobsdonelabs.ai/blog/trucking-fuel-receipts-expense-tracking-fix/): what the IRS and IFTA actually require, a 3-tier system that works from the truck cab, and a Friday-afternoon checklist to stop being the person with a shoe box of receipts
+- [Subcontractor paperwork for small GCs](https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/): the 5 documents every GC must collect (W-9, COI, contract, lien waiver, safety cert), what happens when each is missing, and a 3-tier system to tame it without buying another platform
+- [The real fix for the contractor estimate time drain](https://www.jobsdonelabs.ai/blog/contractor-estimate-time-management/): why charging for estimates isn't the first answer — the pre-qualification funnel and 3-tier estimate system that cut 500+ unpaid hours a year and raise close rates
+- [A job-costing system that works from the jobsite](https://www.jobsdonelabs.ai/blog/contractor-job-costing-system-field-to-office/): why QuickBooks job costing fails small contractors, the 4 numbers that prove a job's profit, and a 3-tier field-to-office system your crew will actually use
+- [What comes after the whiteboard production schedule](https://www.jobsdonelabs.ai/blog/small-manufacturing-production-scheduling-guide/): the signs a small manufacturer has outgrown spreadsheet/whiteboard scheduling, the 4 components every system needs, and an honest spreadsheet → MRP → ERP migration path
+- [Closing the inventory spreadsheet gap](https://www.jobsdonelabs.ai/blog/small-manufacturer-inventory-management-system/): the 5 reasons counts drift, the minimum viable inventory system (owner, cycle counts, bin locations, reorder triggers), and an automation ladder from Sheets to custom glue
 
 ## Contact
 - Website: https://www.jobsdonelabs.ai

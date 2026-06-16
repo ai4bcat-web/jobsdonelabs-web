@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Inventory Spreadsheet Says 500. The Shelf Has 350. Here's How to Close the Gap | Jobs Done Labs</title>
+  <meta name="description" content="Inventory spreadsheets always drift. Here are the 5 reasons counts go wrong, the minimum viable inventory system for a small manufacturer, and an honest automation ladder from Google Sheets to a custom build." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/small-manufacturer-inventory-management-system/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/small-manufacturer-inventory-management-system/" />
+  <meta property="og:title" content="Your Inventory Spreadsheet Says 500. The Shelf Has 350. Here's How to Close the Gap" />
+  <meta property="og:description" content="Why inventory spreadsheets always drift, the minimum viable system that actually holds, and an honest automation ladder from Sheets to barcode to custom glue." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Your Inventory Spreadsheet Says 500. The Shelf Has 350." />
+  <meta name="twitter:description" content="The 5 reasons inventory counts drift, the minimum viable system to fix it, and an honest automation ladder for small manufacturers." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your Inventory Spreadsheet Says 500. The Shelf Has 350. Here's How to Close the Gap",
+    "description": "Why inventory spreadsheets always drift for small manufacturers, the five failure modes behind wrong counts, a minimum viable inventory system, and an honest automation ladder from Google Sheets to a custom build.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-06-15",
+    "dateModified": "2026-06-15",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/small-manufacturer-inventory-management-system/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is my inventory spreadsheet always wrong?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Inventory spreadsheets drift for five predictable reasons: late entry (a part gets used or received but isn't logged until hours or days later), wrong unit (someone records boxes when the sheet tracks pieces), location blindness (the sheet knows the quantity but not where it physically is, so people can't find it and assume it's gone), no cycle counting (errors never get caught and compound), and invisible work-in-progress (material that's been pulled into production still shows as on-hand). The common thread is that the spreadsheet depends on every human entering every movement perfectly and immediately — which never happens. The fix isn't a better spreadsheet formula; it's reducing how much depends on flawless manual entry." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the minimum viable inventory system for a small manufacturer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Four habits, no new software required. First, one person owns counts — not 'everyone updates the sheet,' which is why it drifts. Second, weekly cycle counts on your top 20 items, since about 20% of your SKUs usually represent 80% of your value; you don't need to count everything, just what matters. Third, bin locations in the sheet (aisle-rack-shelf) so people can actually find stock instead of assuming it's out. Fourth, minimum-stock triggers with color — red means order now. That's a system that holds in plain Google Sheets, and it fixes most of the drift before you spend a dollar on tools." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is cycle counting and why does it beat an annual count?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Cycle counting means counting a small subset of inventory on a regular rhythm — say your top 20 items every week — instead of shutting down once a year to count everything. It beats the annual count for two reasons: errors get caught while they're small and traceable, instead of compounding for twelve months, and you never have to halt production for a full physical inventory. Focus the rotation on high-value and fast-moving items using ABC logic (the roughly 20% of SKUs that drive 80% of value), and your counts stay accurate where accuracy actually matters to cash and production." }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I move from a spreadsheet to inventory software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Move when manual entry has become the bottleneck despite good habits — when even a disciplined weekly cycle count can't keep up with transaction volume, or when stockouts and overstock are costing you real money every month. The next rung is usually a barcode-driven app like Sortly or inFlow at $50–100/month, which removes the hand-entry that causes most drift. Below that volume, a well-run spreadsheet with an owner, cycle counts, locations, and reorder triggers is genuinely fine and far cheaper. Don't buy a warehouse management system to fix a discipline problem — fix the discipline first, then automate what's left." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can automation keep inventory accurate without a full WMS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You connect the moments inventory changes to the record automatically, instead of relying on someone to remember to type it. A typical build: a receiving form or scan updates on-hand the instant material arrives; starting a production run auto-deducts the materials it consumes and tracks work-in-progress; and when an item hits its minimum, the system drafts a purchase order for approval. It works alongside your existing QuickBooks and spreadsheets rather than replacing them. Jobs Done Labs builds this glue during a free audit — we map where your counts drift and automate those exact points, covered by the $30K-recovered-in-90-days guarantee. If documented recovery doesn't reach $30K, you pay nothing." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/small-manufacturer-inventory-management-system/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:40px; }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    a { color:var(--accent-deep); }
+    .comparison { margin:28px 0; }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <span class="kicker">Manufacturing &amp; Industrial</span>
+      <h1>Your Inventory Spreadsheet Says 500. The Shelf Has 350.</h1>
+      <p class="byline">By Ryne Bandolik · Jobs Done Labs · June 15, 2026</p>
+
+      <p>The spreadsheet says you have 500 units of raw material X. You walk to the shelf and count 350. Production was supposed to start this morning, and now it can't — because you ran out of something your own records swore was in stock. If you've lived this, you know the feeling isn't confusion. It's betrayal. The sheet lied to you, and it's been lying for a while.</p>
+
+      <p>Search this problem and you'll find two kinds of pages: an hour-long YouTube video on building a fancier Excel template, and inventory-software vendors telling you to buy their $200–500/month platform. The desperation in those YouTube comments is real — people are willing to watch a 60-minute tutorial to make a spreadsheet that won't betray them. The truth is in between: most inventory drift is a discipline problem, not a software problem, and you can fix the bulk of it this week for free.</p>
+
+      <h2>The 5 reasons your counts drift</h2>
+      <p>Inventory spreadsheets don't fail randomly. They fail in five specific, predictable ways:</p>
+      <ul>
+        <li><strong>Late entry.</strong> Material gets used or received, but the log happens hours or days later — if at all. Every delay is a window where the sheet is wrong.</li>
+        <li><strong>Wrong unit.</strong> Someone records boxes when the sheet tracks pieces, or feet when it tracks linear yards. One unit mismatch poisons the count.</li>
+        <li><strong>Location blindness.</strong> The sheet knows <em>how many</em>, not <em>where</em>. People can't find stock, assume it's gone, and order more — now you have a count error and an overstock.</li>
+        <li><strong>No cycle counting.</strong> Errors are never caught, so they compound silently until the annual count reveals a number nobody can explain.</li>
+        <li><strong>Invisible WIP.</strong> Material pulled into production still shows as on-hand. The shelf is empty; the sheet hasn't noticed the job started.</li>
+      </ul>
+      <div class="callout">
+        <p style="margin:0"><strong>The reframe:</strong> every one of these is a manual-entry failure, not a formula failure. The spreadsheet assumes every person logs every movement perfectly and instantly. They don't, and they never will. The fix is to reduce how much accuracy depends on flawless human entry — first with discipline, then with automation.</p>
+      </div>
+
+      <h2>The minimum viable inventory system</h2>
+      <p>Four habits. No new software. This alone closes most of the gap:</p>
+      <ol>
+        <li><strong>One person owns counts.</strong> Not "everyone updates the sheet" — that's <em>why</em> it drifts. One owner, accountable for accuracy, with the authority to set the process.</li>
+        <li><strong>Weekly cycle counts on the top 20 items.</strong> About 20% of your SKUs usually drive 80% of your value (ABC logic). Count those every week. You don't need to count everything — just what matters to cash and production.</li>
+        <li><strong>Bin locations in the sheet.</strong> Aisle-rack-shelf, dead simple. When people can find stock, they stop assuming it's gone and re-ordering phantom shortages.</li>
+        <li><strong>Minimum-stock triggers with color.</strong> A reorder point per item; conditional formatting turns the row red at the threshold. Red means order now — no judgment call, no forgotten part.</li>
+      </ol>
+
+      <h2>The automation ladder</h2>
+
+      <h3>Rung 1 — Disciplined Google Sheets (free)</h3>
+      <p>The four habits above, in a plain shared sheet with an owner, ABC cycle-count rotation, bin locations, and color-coded reorder points. Most shops never actually try the disciplined version before reaching for software — do this first and measure the drift after a month.</p>
+
+      <h3>Rung 2 — Sheets + Google Forms for receiving/shipping ($0)</h3>
+      <p>Replace freehand edits with a structured form. Receiving and pulling stock happens through a Google Form on a phone or tablet at the dock; entries timestamp automatically into the sheet. You've removed the "I'll log it later" gap — the most common source of late-entry drift — without spending anything.</p>
+
+      <h3>Rung 3 — Barcode app ($50–100/month)</h3>
+      <p>Tools like Sortly or inFlow let you scan items in and out. Scanning kills wrong-unit and late-entry errors because the count updates at the moment of movement, not from memory. The right rung when transaction volume has outgrown forms but you don't need a full WMS.</p>
+
+      <h3>Rung 4 — Custom glue (built to scope)</h3>
+      <p>Connect the moments inventory changes to your records automatically: a receiving scan updates on-hand instantly; starting a production run auto-deducts materials and tracks WIP; hitting a minimum drafts a purchase order for approval. It runs alongside QuickBooks and your existing tools rather than replacing them — automating the exact points where your counts drift today.</p>
+
+      <div class="comparison">
+        <h2>Comparison at a glance</h2>
+        <table>
+          <tr>
+            <th></th>
+            <th>Disciplined<br>Sheets</th>
+            <th>Sheets +<br>Forms</th>
+            <th>Barcode<br>app</th>
+            <th>Custom<br>glue</th>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td>$0</td>
+            <td>$0</td>
+            <td>$50–100/mo</td>
+            <td>Built to scope</td>
+          </tr>
+          <tr>
+            <td>Kills late entry</td>
+            <td>Partial</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Kills wrong unit</td>
+            <td>No</td>
+            <td>Partial</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Tracks WIP</td>
+            <td>Manual</td>
+            <td>Manual</td>
+            <td>Partial</td>
+            <td>Automatic</td>
+          </tr>
+          <tr>
+            <td>Auto-reorder</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Alerts</td>
+            <td>Drafts PO</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Do this week: close the gap</h2>
+      <div class="checklist">
+        <h3>5 moves to stop the drift</h3>
+        <ol>
+          <li><strong>Name one count owner.</strong> One person, accountable. Tell the team edits go through them or through a form — not freehand.</li>
+          <li><strong>Find your top 20 by value.</strong> Quantity × unit cost, sorted descending. Those are your weekly cycle-count list.</li>
+          <li><strong>Add bin locations.</strong> Walk the floor, label aisle-rack-shelf, put it in the sheet. Findable stock stops phantom reorders.</li>
+          <li><strong>Set reorder points + red formatting.</strong> A minimum per item; conditional formatting turns the row red when it's time to buy.</li>
+          <li><strong>Run one cycle count Friday.</strong> Count the top 20, compare to the sheet, log the variance. That variance number is the lie you've been producing from — and the baseline you'll improve.</li>
+        </ol>
+        <p style="font-size:15px; color:rgba(23,21,19,.55); margin:16px 0 0">Rung 1, running by Friday, before you price a single piece of software.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>Why is my inventory spreadsheet always wrong?</h3>
+        <p>Inventory spreadsheets drift for five predictable reasons: late entry (a part gets used or received but isn't logged until hours or days later), wrong unit (someone records boxes when the sheet tracks pieces), location blindness (the sheet knows the quantity but not where it physically is, so people can't find it and assume it's gone), no cycle counting (errors never get caught and compound), and invisible work-in-progress (material that's been pulled into production still shows as on-hand). The common thread is that the spreadsheet depends on every human entering every movement perfectly and immediately — which never happens. The fix isn't a better spreadsheet formula; it's reducing how much depends on flawless manual entry.</p>
+        <h3>What's the minimum viable inventory system for a small manufacturer?</h3>
+        <p>Four habits, no new software required. First, one person owns counts — not "everyone updates the sheet," which is why it drifts. Second, weekly cycle counts on your top 20 items, since about 20% of your SKUs usually represent 80% of your value; you don't need to count everything, just what matters. Third, bin locations in the sheet (aisle-rack-shelf) so people can actually find stock instead of assuming it's out. Fourth, minimum-stock triggers with color — red means order now. That's a system that holds in plain Google Sheets, and it fixes most of the drift before you spend a dollar on tools.</p>
+        <h3>What is cycle counting and why does it beat an annual count?</h3>
+        <p>Cycle counting means counting a small subset of inventory on a regular rhythm — say your top 20 items every week — instead of shutting down once a year to count everything. It beats the annual count for two reasons: errors get caught while they're small and traceable, instead of compounding for twelve months, and you never have to halt production for a full physical inventory. Focus the rotation on high-value and fast-moving items using ABC logic (the roughly 20% of SKUs that drive 80% of value), and your counts stay accurate where accuracy actually matters to cash and production.</p>
+        <h3>When should I move from a spreadsheet to inventory software?</h3>
+        <p>Move when manual entry has become the bottleneck despite good habits — when even a disciplined weekly cycle count can't keep up with transaction volume, or when stockouts and overstock are costing you real money every month. The next rung is usually a barcode-driven app like Sortly or inFlow at $50–100/month, which removes the hand-entry that causes most drift. Below that volume, a well-run spreadsheet with an owner, cycle counts, locations, and reorder triggers is genuinely fine and far cheaper. Don't buy a warehouse management system to fix a discipline problem — fix the discipline first, then automate what's left.</p>
+        <h3>How can automation keep inventory accurate without a full WMS?</h3>
+        <p>You connect the moments inventory changes to the record automatically, instead of relying on someone to remember to type it. A typical build: a receiving form or scan updates on-hand the instant material arrives; starting a production run auto-deducts the materials it consumes and tracks work-in-progress; and when an item hits its minimum, the system drafts a purchase order for approval. It works alongside your existing QuickBooks and spreadsheets rather than replacing them. Jobs Done Labs builds this glue during a free audit — we map where your counts drift and automate those exact points, covered by the <a href="/#guarantee">$30K-recovered-in-90-days guarantee</a>. If documented recovery doesn't reach $30K, you pay nothing.</p>
+      </section>
+
+      <p style="font-size:15px; color:rgba(23,21,19,.6); margin-top:40px">Related reading: <a href="/blog/small-manufacturing-production-scheduling-guide/">what comes after your whiteboard production schedule breaks</a>.</p>
+
+      <div class="cta-box">
+        <h2>Find out what inventory drift is costing you in stockouts and overstock</h2>
+        <p>Book a free 15-minute audit. We'll map where your counts go wrong — receiving, WIP, reorder — and what automation would recover, working with the tools you already have. No pitch, no pressure. You keep the map either way.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
+  </footer>
+</body>
+</html>
