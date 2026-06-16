@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Whiteboard Production Schedule Broke the Day You Hit 20 Orders — What Actually Comes Next | Jobs Done Labs</title>
+  <meta name="description" content="A whiteboard and a spreadsheet run a small shop fine — until they don't. Here are the signs you've outgrown manual scheduling, the 4-part framework every system needs, and an honest migration path from spreadsheet to MRP to ERP." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/small-manufacturing-production-scheduling-guide/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/small-manufacturing-production-scheduling-guide/" />
+  <meta property="og:title" content="Your Whiteboard Production Schedule Broke the Day You Hit 20 Orders — What Actually Comes Next" />
+  <meta property="og:description" content="The honest migration path for small manufacturers outgrowing Excel and the whiteboard: when spreadsheets break, what lightweight MRP fixes, and when ERP is actually worth it." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Your Whiteboard Production Schedule Broke the Day You Hit 20 Orders" />
+  <meta name="twitter:description" content="Signs you've outgrown manual scheduling, the 4-part framework every system needs, and a brutally honest spreadsheet → MRP → ERP migration path." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your Whiteboard Production Schedule Broke the Day You Hit 20 Orders — What Actually Comes Next",
+    "description": "A practical, vendor-neutral guide for small manufacturers outgrowing spreadsheet and whiteboard scheduling: the signs you've outgrown manual planning, the four components every scheduling system needs, and an honest migration path from spreadsheet to lightweight MRP to full ERP.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-06-15",
+    "dateModified": "2026-06-15",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/small-manufacturing-production-scheduling-guide/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When does a spreadsheet actually break for production scheduling?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A spreadsheet is genuinely the right tool while one person can hold the whole schedule in their head and update it in a few minutes a day — roughly under 15 employees and under 30 active orders. It starts to break when changes ripple faster than you can re-enter them: a late material pushes one job, which collides with another, and the sheet no longer reflects reality by mid-morning. The hard signals are late deliveries climbing past 10%, a daily 'where's that order?' scramble, and the schedule living in one person's head so nothing moves when they're out. At that point you haven't outgrown spreadsheets because they're bad — you've outgrown them because change has outpaced manual re-entry." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the smallest step up from a whiteboard and Excel?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Don't jump to an ERP. The smallest real upgrade is a better-structured shared spreadsheet plus an automation layer: a kanban-style board in Google Sheets with conditional formatting that turns overdue jobs red, a shared read-only view the shop floor can see, and a couple of automations that push updates instead of relying on someone retyping the whiteboard. If that's still not enough, the next rung is lightweight MRP — Katana, MRPeasy, Craftybase, or Odoo — at roughly $100–300/month, not a $30,000 ERP. The mistake is skipping these rungs and buying enterprise software for a problem two rungs down the ladder." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there anything between Excel and a $50,000 ERP?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — and it's where most small manufacturers should live for years. Lightweight MRP/production tools (Katana, MRPeasy, Craftybase, Odoo, Fishbowl) run $100–400/month and handle work orders, capacity, materials, and due dates without an enterprise implementation. Above that, an automation/integration layer can connect the tools you already use — QuickBooks, your spreadsheet schedule, your order intake — so they talk to each other instead of forcing you onto one monolithic platform. A full ERP only earns its cost once you have 50+ employees, a dedicated scheduler, and complexity that genuinely requires it." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my shop floor workers aren't computer literate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Design the system so the shop floor consumes information rather than enters it. A big shared screen showing today's run order, color-coded and auto-updated, asks nothing of the operators — they read it, they don't feed it. Where input is needed, keep it to one tap: a 'done' button on a tablet at the station, or a scanned barcode at job completion. The data entry that requires literacy and judgment stays with the scheduler or happens automatically. Most failed rollouts fail because they asked machinists to become data-entry clerks; the ones that stick make the screen do the work." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can automation help without replacing my whole system?",
+        "acceptedAnswer": { "@type": "Answer", "text": "That's usually the highest-ROI move for a small shop. Instead of ripping out your tools, an integration layer connects them: your QuickBooks orders flow into an auto-generated Gantt or board, the shop floor screen updates when materials are received, and the scheduler gets notified the moment a job is at risk — all without changing the software your team already knows. Jobs Done Labs builds exactly this kind of glue during a free audit: we map your current scheduling flow and automate the parts that break, covered by the $30K-recovered-in-90-days guarantee. If documented recovery doesn't reach $30K, you pay nothing." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/small-manufacturing-production-scheduling-guide/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:40px; }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    a { color:var(--accent-deep); }
+    .comparison { margin:28px 0; }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <span class="kicker">Manufacturing &amp; Industrial</span>
+      <h1>Your Whiteboard Production Schedule Broke the Day You Hit 20 Orders</h1>
+      <p class="byline">By Ryne Bandolik · Jobs Done Labs · June 15, 2026</p>
+
+      <p>"Started as a product guy, now I'm drowning in production scheduling." The owner who posted that on r/manufacturing was running 1,000-unit batches across six production stages and 50-plus SKU variations — off a whiteboard and a spreadsheet. The replies were the usual chorus: "we use JobBoss," "look into Tulip," "get an ERP sooner rather than later." Five different answers, none of them his, all of them selling something.</p>
+
+      <p>Here's what almost no one will tell you straight: a whiteboard and a spreadsheet are <em>genuinely the right tools</em> for a small shop. Even the production-software vendors admit it — for a shop running 10–30 work orders a week, Excel is the correct answer, and there's no point installing a $30,000 ERP for a problem a spreadsheet can solve. The question isn't "is my spreadsheet bad?" It's "have I actually outgrown it — and if so, what's the <em>next</em> rung, not the top of the ladder?"</p>
+
+      <h2>The signs you've actually outgrown manual scheduling</h2>
+      <p>Don't migrate on vibes. Migrate on signals. You've outgrown the whiteboard when:</p>
+      <ul>
+        <li><strong>Late deliveries cross ~10%.</strong> One slip used to be recoverable. Now a late material pushes a job that collides with two others, and you can't re-plan fast enough to stop the cascade.</li>
+        <li><strong>"Where's that order?" is a daily question.</strong> Production lives on the floor in real time, but the schedule only updates at the next stand-up — so for most of the day, nobody actually knows what's done.</li>
+        <li><strong>One person <em>is</em> the schedule.</strong> When the owner or production manager is out, scheduling stops. The system is a human, and that human is the bottleneck and the single point of failure.</li>
+        <li><strong>Changeovers and exceptions live in your head.</strong> "Run X before Y because of the setup" is tribal knowledge, not on the board — so nobody else can sequence the floor.</li>
+      </ul>
+      <div class="callout">
+        <p style="margin:0"><strong>The reframe:</strong> you don't outgrow spreadsheets because they're bad. You outgrow them because <em>change outpaces manual re-entry</em>. The fix isn't necessarily new software — it's removing the manual re-entry, which can mean a better spreadsheet, a lightweight tool, or automation that keeps your existing tools in sync.</p>
+      </div>
+
+      <h2>The 4 components every scheduling system needs</h2>
+      <p>Before you evaluate any tool, know what a real schedule must account for. Whether it's a whiteboard or an ERP, these four are non-negotiable:</p>
+      <ol>
+        <li><strong>Capacity.</strong> How much each machine, station, or person can actually produce in a given window. Schedule past capacity and every date is fiction.</li>
+        <li><strong>Materials availability.</strong> You can't run a job whose materials haven't landed. The schedule must know what's on hand and what's inbound.</li>
+        <li><strong>Due dates.</strong> Customer promise dates, working backward — so you sequence by what's actually owed when, not by what's loudest.</li>
+        <li><strong>Changeover time.</strong> The setup cost of switching between jobs. Ignore it and your "efficient" schedule loses hours to teardown and re-setup.</li>
+      </ol>
+
+      <h2>The honest migration path</h2>
+
+      <h3>Rung 1 — Upgrade the spreadsheet (free)</h3>
+      <p>Most shops can buy another year or two here. Build a kanban board in Google Sheets with columns by production stage; conditional formatting that turns overdue jobs red; a shared, read-only view the shop floor can see on a screen; and the four components above as actual columns (capacity, materials-ready flag, due date, changeover group). It's still manual — but structured and visible beats a smudged whiteboard.</p>
+
+      <h3>Rung 2 — Lightweight MRP ($100–300/month)</h3>
+      <p>When the spreadsheet's manual re-entry is the bottleneck, step up to a purpose-built tool — Katana, MRPeasy, Craftybase, or Odoo. These handle work orders, capacity, materials, and due dates without an enterprise implementation. You keep your accounting and CRM; the MRP owns production. This is where most small manufacturers should live for years.</p>
+
+      <h3>Rung 3 — Automation/integration glue (built to scope)</h3>
+      <p>Often the highest-ROI move, and it can sit alongside Rung 1 or 2 rather than replacing anything. Instead of forcing everything onto one monolithic platform, connect what you already run: QuickBooks orders auto-populate a Gantt or board, the floor screen updates when materials are received, and the scheduler is pinged the moment a job is at risk. Your team keeps the tools they know; the integrations do the re-entry that used to eat your mornings.</p>
+
+      <h3>Rung 4 — Full ERP (when you've truly earned it)</h3>
+      <p>JobBoss, Plex, SAP Business One — real power, real cost, real implementation. Worth it once you have 50+ employees, a dedicated scheduler, and complexity that genuinely requires a single system of record. Below that, an ERP is usually a six-figure answer to a four-figure problem.</p>
+
+      <div class="comparison">
+        <h2>Decision guide</h2>
+        <table>
+          <tr>
+            <th>Your situation</th>
+            <th>Right rung</th>
+            <th>Typical cost</th>
+          </tr>
+          <tr>
+            <td>&lt; 15 employees, &lt; 30 active orders</td>
+            <td>Upgrade the spreadsheet</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>15–50 employees, 30–200 active orders</td>
+            <td>Lightweight MRP</td>
+            <td>$100–400/mo</td>
+          </tr>
+          <tr>
+            <td>Right tools, but they don't talk</td>
+            <td>Automation glue</td>
+            <td>Built to scope</td>
+          </tr>
+          <tr>
+            <td>50+ employees, dedicated scheduler</td>
+            <td>Full ERP (+ integration)</td>
+            <td>$30K+ </td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Do this week: make the call on evidence</h2>
+      <div class="checklist">
+        <h3>5 moves before you spend a dollar on software</h3>
+        <ol>
+          <li><strong>Measure your real late-delivery rate.</strong> Last 30 jobs: how many shipped on the promised date? Under 10% late, your spreadsheet probably still fits.</li>
+          <li><strong>Time the "where's that order?" tax.</strong> For one week, count how often someone walks the floor to answer it. That's your visibility gap, quantified.</li>
+          <li><strong>Add the four components as columns.</strong> Rebuild this week's schedule in Sheets with capacity, materials-ready, due date, and changeover group. See how much your current board was hiding.</li>
+          <li><strong>Put the schedule on a screen.</strong> A shared, color-coded, read-only view on a monitor the floor can see. Often this alone kills the daily scramble.</li>
+          <li><strong>List what doesn't talk to what.</strong> Orders, schedule, materials, accounting — draw the arrows that are currently a human retyping. Those arrows are your automation shortlist.</li>
+        </ol>
+        <p style="font-size:15px; color:rgba(23,21,19,.55); margin:16px 0 0">Now you're migrating on evidence, not on a Reddit thread or a vendor demo.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>When does a spreadsheet actually break for production scheduling?</h3>
+        <p>A spreadsheet is genuinely the right tool while one person can hold the whole schedule in their head and update it in a few minutes a day — roughly under 15 employees and under 30 active orders. It starts to break when changes ripple faster than you can re-enter them: a late material pushes one job, which collides with another, and the sheet no longer reflects reality by mid-morning. The hard signals are late deliveries climbing past 10%, a daily "where's that order?" scramble, and the schedule living in one person's head so nothing moves when they're out. At that point you haven't outgrown spreadsheets because they're bad — you've outgrown them because change has outpaced manual re-entry.</p>
+        <h3>What's the smallest step up from a whiteboard and Excel?</h3>
+        <p>Don't jump to an ERP. The smallest real upgrade is a better-structured shared spreadsheet plus an automation layer: a kanban-style board in Google Sheets with conditional formatting that turns overdue jobs red, a shared read-only view the shop floor can see, and a couple of automations that push updates instead of relying on someone retyping the whiteboard. If that's still not enough, the next rung is lightweight MRP — Katana, MRPeasy, Craftybase, or Odoo — at roughly $100–300/month, not a $30,000 ERP. The mistake is skipping these rungs and buying enterprise software for a problem two rungs down the ladder.</p>
+        <h3>Is there anything between Excel and a $50,000 ERP?</h3>
+        <p>Yes — and it's where most small manufacturers should live for years. Lightweight MRP/production tools (Katana, MRPeasy, Craftybase, Odoo, Fishbowl) run $100–400/month and handle work orders, capacity, materials, and due dates without an enterprise implementation. Above that, an automation/integration layer can connect the tools you already use — QuickBooks, your spreadsheet schedule, your order intake — so they talk to each other instead of forcing you onto one monolithic platform. A full ERP only earns its cost once you have 50+ employees, a dedicated scheduler, and complexity that genuinely requires it.</p>
+        <h3>What if my shop floor workers aren't computer literate?</h3>
+        <p>Design the system so the shop floor consumes information rather than enters it. A big shared screen showing today's run order, color-coded and auto-updated, asks nothing of the operators — they read it, they don't feed it. Where input is needed, keep it to one tap: a "done" button on a tablet at the station, or a scanned barcode at job completion. The data entry that requires literacy and judgment stays with the scheduler or happens automatically. Most failed rollouts fail because they asked machinists to become data-entry clerks; the ones that stick make the screen do the work.</p>
+        <h3>Can automation help without replacing my whole system?</h3>
+        <p>That's usually the highest-ROI move for a small shop. Instead of ripping out your tools, an integration layer connects them: your QuickBooks orders flow into an auto-generated Gantt or board, the shop floor screen updates when materials are received, and the scheduler gets notified the moment a job is at risk — all without changing the software your team already knows. Jobs Done Labs builds exactly this kind of glue during a free audit: we map your current scheduling flow and automate the parts that break, covered by the <a href="/#guarantee">$30K-recovered-in-90-days guarantee</a>. If documented recovery doesn't reach $30K, you pay nothing.</p>
+      </section>
+
+      <p style="font-size:15px; color:rgba(23,21,19,.6); margin-top:40px">Related reading: <a href="/blog/small-manufacturer-inventory-management-system/">when your inventory spreadsheet says 500 and the shelf has 350</a>.</p>
+
+      <div class="cta-box">
+        <h2>Find out which scheduling handoffs are costing you delivery dates</h2>
+        <p>Book a free 15-minute audit. We'll map how your schedule moves from order to floor today, where it breaks, and what automation would recover — without forcing you onto a platform you don't need. No pitch, no pressure. You keep the map either way.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
+  </footer>
+</body>
+</html>

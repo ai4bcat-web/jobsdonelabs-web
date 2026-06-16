@@ -1238,11 +1238,14 @@ function Footer() {
             <a href="#" onClick={e => { e.preventDefault(); document.dispatchEvent(new CustomEvent("open-booking")); }} style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Book a call</a>
             <Link href="/contact" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Contact</Link>
             <a href="/#faq" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>FAQ</a>
-            <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Fuel receipts & expense tracking</a>
+            <a href="/blog/subcontractor-paperwork-management-system-gc/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Subcontractor paperwork system</a>
+            <a href="/blog/contractor-estimate-time-management/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>The estimate time-drain fix</a>
+            <a href="/blog/contractor-job-costing-system-field-to-office/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Job costing from the jobsite</a>
+            <a href="/blog/small-manufacturing-production-scheduling-guide/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Production scheduling after the whiteboard</a>
+            <a href="/blog/small-manufacturer-inventory-management-system/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Closing the inventory gap</a>
+            <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Fuel receipts &amp; expense tracking</a>
             <a href="/blog/shopify-quickbooks-reconciliation-never-matches/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Shopify-QuickBooks reconciliation</a>
             <a href="/blog/stop-chasing-client-documents/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Stop chasing client documents</a>
-            <a href="/blog/shopify-quickbooks-reconciliation-never-matches/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Shopify-QuickBooks reconciliation</a>
-            <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Fuel receipts &amp; expense tracking</a>
             <a href="/case-study/logistics-200k-profit/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Case study: $200K logistics profit</a>
             <a href="/about/ryne-bandolik/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>About Ryne Bandolik</a>
             <a href="mailto:ryne@jobsdone.io" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>ryne@jobsdone.io</a>
