@@ -825,6 +825,45 @@ function Process() {
 }
 
 /* ───────────────────────────────────── */
+/*  Testimonials                        */
+/* ───────────────────────────────────── */
+function Testimonials() {
+  return (
+    <section style={{ background:CREAM, padding:"96px 24px" }}>
+      <div style={{ maxWidth:860, margin:"0 auto" }}>
+        <Fade>
+          <div style={{ textAlign:"center", marginBottom:48 }}>
+            <SectionLabel>From the field</SectionLabel>
+            <H2 style={{ maxWidth:520, margin:"0 auto 16px" }}>
+              Real operators. Real results.
+            </H2>
+            <p style={{ fontSize:17, color:INK_SOFT, lineHeight:1.65, maxWidth:480, margin:"0 auto", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              Hear directly from business owners who've been through the process.
+            </p>
+          </div>
+        </Fade>
+        <Fade delay={0.1}>
+          <div style={{
+            position:"relative", width:"100%", paddingTop:"56.25%",
+            borderRadius:12, overflow:"hidden",
+            boxShadow:"0 24px 64px rgba(11,13,18,.14)",
+            border:`1px solid ${LINE}`,
+          }}>
+            <iframe
+              style={{ position:"absolute", inset:0, width:"100%", height:"100%", border:0 }}
+              src="https://www.youtube.com/embed/3Dn3gyc9kUY"
+              title="Client testimonial"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </Fade>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────────────── */
 /*  Results / Case Study                */
 /* ───────────────────────────────────── */
 function Results() {
@@ -1304,6 +1343,7 @@ export default function Home() {
       <InlineCTA onBook={open} />
       <Services />
       <Process />
+      <Testimonials />
       <Results />
       <Comparison />
       <Guarantee />
