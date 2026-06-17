@@ -7,6 +7,7 @@
     "hello": "tsx ./src/hello.ts",
     "update-sitemap": "tsx ./src/update-sitemap.ts",
     "ping-sitemap": "tsx ./src/ping-sitemap.ts",
+    "check-og-tags": "tsx ./src/check-og-tags.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {
