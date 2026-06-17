@@ -201,6 +201,9 @@ const INDUSTRIES = [
   { title:"Manufacturing & Industrial",
     body:"Shops, fabricators, and production teams running on whiteboards, spreadsheets, and zero real-time visibility on the floor.",
     tags:["RFQ automation","Job costing","Production tracking"] },
+  { title:"Mortgage & Lending",
+    body:"Brokerages and lending teams where files stall on someone's desk — the AI processor that runs intake to close-ready, detects missing docs, chases borrowers, coordinates appraisal/title/insurance, and clears conditions automatically.",
+    tags:["Missing doc detection","Borrower chasing","Condition clearing"] },
 ];
 
 const SERVICES = [
@@ -667,7 +670,7 @@ function Industries() {
             </p>
           </div>
         </Fade>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {INDUSTRIES.map((ind, i) => (
             <Fade key={ind.title} delay={i*0.08}>
               <div style={{ background:CREAM, border:`1px solid ${LINE}`, borderRadius:12, padding:"28px 26px", height:"100%" }}>
