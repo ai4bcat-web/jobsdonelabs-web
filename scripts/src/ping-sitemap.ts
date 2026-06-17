@@ -18,6 +18,7 @@
  *   • Key file must be live at: https://www.jobsdonelabs.ai/<INDEXNOW_KEY>.txt
  *   • The file content must equal the key itself (already in place).
  *   • Register the key once in Bing Webmaster Tools to confirm ownership.
+ *     See docs/bing-webmaster-tools.md for the step-by-step setup guide.
  */
 
 const SITEMAP_URL = "https://www.jobsdonelabs.ai/sitemap.xml";

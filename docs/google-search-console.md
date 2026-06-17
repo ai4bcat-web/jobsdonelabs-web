@@ -57,8 +57,10 @@ After submitting:
 
 ---
 
-## Optional: IndexNow (instant indexing for Bing/Yandex)
+## IndexNow (instant indexing for Bing/Yandex)
 
-IndexNow lets you push a URL to Bing and Yandex the moment it's published — no waiting
-for a crawl. It requires a free API key from [Bing Webmaster Tools](https://www.bing.com/webmasters/).
-See `scripts/src/ping-sitemap.ts` for a starting point if you want to add this later.
+IndexNow is already active — on every deploy `scripts/src/ping-sitemap.ts` pushes all
+sitemap URLs to Bing and Yandex for instant re-indexing.
+
+To see submitted URLs in the Bing dashboard, complete the one-time site registration in
+Bing Webmaster Tools. See `docs/bing-webmaster-tools.md` for the step-by-step guide.
