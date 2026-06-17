@@ -1339,11 +1339,11 @@ export default function Home() {
       <TrustStrip />
       <Problem />
       <Industries />
+      <Testimonials />
       <FSO />
       <InlineCTA onBook={open} />
       <Services />
       <Process />
-      <Testimonials />
       <Results />
       <Comparison />
       <Guarantee />
