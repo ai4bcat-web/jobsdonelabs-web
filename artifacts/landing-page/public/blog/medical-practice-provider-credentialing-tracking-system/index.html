@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your New Provider Can't Bill for 5 Months and You're Losing $30K/Month — A Credentialing Tracking System for Practices Without a Credentialing Department | Jobs Done Labs</title>
+  <meta name="description" content="Growing medical practices lose $30K+ per new provider in unbillable time while credentialing applications sit in payer queues for 90-150 days. Here's the 3-tier system — free to full automation — that gives you visibility into every application across every payer." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/medical-practice-provider-credentialing-tracking-system/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/medical-practice-provider-credentialing-tracking-system/" />
+  <meta property="og:title" content="Your New Provider Can't Bill for 5 Months and You're Losing $30K/Month — A Credentialing Tracking System" />
+  <meta property="og:description" content="Growing medical practices lose $30K+ per new provider in unbillable time while credentialing applications sit in payer queues. The 3-tier system that fixes it." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Your New Provider Can't Bill for 5 Months — A Credentialing Tracking System" />
+  <meta name="twitter:description" content="The 3-tier system — free spreadsheet to full automation — for tracking credentialing applications across 15+ payers without a dedicated credentialing department." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your New Provider Can't Bill for 5 Months and You're Losing $30K/Month — A Credentialing Tracking System for Practices Without a Credentialing Department",
+    "description": "Growing medical practices lose $30K+ per new provider in unbillable time while credentialing applications sit in payer queues for 90-150 days. Here's the 3-tier system — free to full automation — that gives you visibility into every application across every payer.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-06-17",
+    "dateModified": "2026-06-17",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/medical-practice-provider-credentialing-tracking-system/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does credentialing actually take per payer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Plan on 90–150 days per payer for initial credentialing. Commercial payers (UnitedHealthcare, Aetna, Cigna, BCBS) average 90–120 days. Medicare takes 60–90 days if the application is clean. Medicaid varies by state — 60–180 days is common. The bottleneck is rarely the application itself; it's the payer's internal review queue. A complete, error-free application submitted with all supporting documents (license, DEA, malpractice, CAQH profile attested within 30 days) can land at the faster end. Missing documents, CAQH profile errors, or incomplete work histories can add 30–60 days to any timeline. Re-credentialing (every 2–3 years) is faster — typically 45–90 days — but only if you catch the deadline before it passes." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between credentialing and contracting?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Credentialing verifies that a provider IS who they say they are — education, training, license, malpractice history, board certifications. It answers 'is this person qualified to practice?' Contracting is the business agreement that comes after: negotiated rates, fee schedules, and the legal contract that allows you to submit claims and get paid. Credentialing approval does NOT mean you're contracted. A provider can be fully credentialed with a payer for months while the contracting department still hasn't sent the agreement. Timeline: credentialing (90–150 days) → credentialing committee approval → contracting (30–90 additional days) → loaded into payer system → effective date → you can finally bill. Many practices track credentialing but forget to track the contracting gap, losing another 1–2 months of billable time." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I credential a provider with 15 payers simultaneously or should I stagger?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Submit to all payers simultaneously — do NOT stagger. Every payer runs on their own clock, and waiting for one to finish before starting the next adds months to your timeline. The risk of simultaneous submission (keeping 15 applications accurate and updated) is exactly what the tracking system described in this guide solves. Submit everything at once, then use the master tracker to manage follow-ups, document requests, and status checks across all payers from a single view. The one exception: if you're credentialing with a payer that requires another payer's approval first (rare, but some state Medicaid programs want to see Medicare approval), submit those sequentially." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I miss a CAQH re-attestation deadline?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Your CAQH profile goes inactive. Within 1–3 business days, every payer that relies on CAQH for credentialing verification will flag the provider's status. Claims begin denying with 'provider not credentialed' or 'provider inactive' codes. Revenue stops. Re-attesting reactivates the profile, but the damage cascades: each payer must re-verify the reactivated profile (2–4 weeks), previously approved claims during the inactive window may be retroactively denied and require resubmission, and some payers treat a lapsed CAQH as a credentialing gap that triggers a full re-credentialing cycle (90–120 days). A single missed 120-day CAQH deadline can cost a 2-provider practice $16K–$30K in denied claims and recovery effort. Set calendar reminders at 110 days (10-day buffer), not 120." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need credentialing for telehealth-only providers?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — telehealth-only providers need the same credentialing as in-person providers for every payer they'll bill. The application process is identical (CAQH profile, license verification, DEA if prescribing, malpractice coverage). Some payers have telehealth-specific provider enrollment forms, and a few states require a separate telehealth registration in addition to standard credentialing. The one advantage for telehealth-only providers: you can credential with payers in multiple states simultaneously since there's no physical location constraint. But the timeline per payer is the same 90–150 days, so start early." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it worth hiring a credentialing specialist vs outsourcing to a CVO?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For a practice credentialing 1–3 new providers per year: no — a credentialed specialist salary ($50K–$65K) doesn't justify the volume. Use the tier-1 or tier-2 system in this guide and handle it internally at 5–10 hours per week during active credentialing periods. For a practice adding 4+ providers per year OR managing 20+ providers' re-credentialing cycles: a credentialing specialist (or half-time role) pays for itself by preventing even one missed re-credentialing deadline. A credentialing verification organization (CVO) charges $200–$500 per provider per payer for initial credentialing. At 15 payers per provider, that's $3,000–$7,500 per provider. CVOs make sense if you have zero internal bandwidth and are adding providers rapidly — but the cost is significant. The middle path: handle initial credentialing yourself with the systems in this guide, and outsource only the follow-up and status-checking to a virtual assistant trained on payer portals ($15–$25/hour)." }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --line:rgba(11,13,18,.1); --muted:rgba(11,13,18,.55); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.72; -webkit-font-smoothing:antialiased; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:860px; margin:0 auto; border-bottom:1px solid var(--line); }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--ink); color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; padding:10px 20px; border-radius:50px; }
+    article { max-width:760px; margin:0 auto; padding:64px 24px 96px; }
+    .breadcrumb { font-size:13px; color:var(--muted); margin-bottom:40px; }
+    .breadcrumb a { color:var(--accent); text-decoration:none; }
+    .breadcrumb a:hover { text-decoration:underline; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,4.5vw,3rem); line-height:1.08; letter-spacing:-0.01em; margin-bottom:16px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:48px; }
+    .byline strong { color:var(--ink); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:56px 0 16px; color:var(--ink); letter-spacing:-0.005em; }
+    h3 { font-family:'Anton',sans-serif; font-size:clamp(1.1rem,2.2vw,1.35rem); line-height:1.2; margin:36px 0 10px; color:var(--ink); letter-spacing:-0.005em; }
+    p { margin-bottom:18px; font-size:17px; }
+    ul, ol { margin:0 0 24px 24px; font-size:17px; }
+    li { margin-bottom:8px; padding-left:4px; }
+    strong { font-weight:700; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:24px 28px; margin:32px 0; font-size:16px; border-radius:0 6px 6px 0; }
+    .callout strong { display:block; margin-bottom:6px; font-family:'Anton',sans-serif; font-size:18px; letter-spacing:-0.005em; }
+    .tier-box { background:#fff; padding:28px 32px; margin:24px 0; border-radius:6px; border:1px solid var(--line); }
+    .tier-box h3 { margin-top:0; display:flex; align-items:center; gap:10px; }
+    .tier-badge { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; padding:3px 10px; border-radius:50px; text-transform:uppercase; letter-spacing:.08em; }
+    .tier-badge.free { background:#2E7D32; }
+    .tier-badge.mid { background:#E65100; }
+    .tier-badge.full { background:var(--ink); }
+    table { width:100%; border-collapse:collapse; margin:28px 0; font-size:15px; }
+    th, td { text-align:left; padding:12px 16px; border-bottom:1px solid var(--line); }
+    th { font-family:'Anton',sans-serif; font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); font-weight:400; }
+    .faq-section { margin-top:56px; }
+    .faq-item { margin-bottom:28px; }
+    .faq-item h4 { font-size:17px; font-weight:700; margin-bottom:6px; color:var(--ink); }
+    .faq-item p { font-size:16px; color:rgba(11,13,18,.7); }
+    .cta-block { background:var(--ink); color:var(--cream); padding:40px 44px; margin:56px 0 32px; border-radius:8px; text-align:center; }
+    .cta-block h3 { color:var(--cream); font-size:clamp(1.2rem,2.5vw,1.6rem); margin-bottom:12px; }
+    .cta-block p { color:rgba(244,239,227,.75); font-size:16px; margin-bottom:24px; }
+    .cta-block a.cta-btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:16px; padding:14px 36px; border-radius:50px; }
+    footer { text-align:center; font-size:13px; color:var(--muted); padding:32px 24px 48px; border-top:1px solid var(--line); max-width:860px; margin:0 auto; }
+    footer a { color:var(--accent); text-decoration:none; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <article>
+    <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Provider Credentialing Tracking System</div>
+
+    <h1>Your New Provider Can't Bill for 5 Months and You're Losing $30K/Month — A Credentialing Tracking System for Practices Without a Credentialing Department</h1>
+    <p class="byline"><strong>Ryne Bandolik</strong> · June 17, 2026 · 9 min read</p>
+
+    <p>"Hi, it's Dr. Chen. I've been here six weeks and I still can't see patients because my Medicare credentialing hasn't come through. What's going on?"</p>
+    <p>If you run a growing private practice, you know this call. You've probably gotten it more than once. The provider is on payroll. Patients are on the schedule. And you're hemorrhaging $6,000–$10,000 a month in unbillable provider time while an application sits in a payer queue.</p>
+    <p>You're not alone. Multiple Reddit communities — r/PrivatePracticeDocs, r/socialwork, r/therapists, r/PMHNP — are full of the same question: "Is credentialing supposed to take this long, or am I doing something wrong?"</p>
+    <p>The answer: it takes this long. 90–150 days per payer is normal. But what's NOT normal — and what's costing you real money — is having zero visibility into where those applications are and which deadlines are about to blow up your revenue.</p>
+
+    <div class="callout">
+      <strong>The math of credentialing delays</strong>
+      1 new provider × $8,000/month average collections × 5 months credentialing = <strong>$40,000 in unrecoverable revenue</strong>. Per provider. For a 3-provider practice hiring just one new provider a year, that's a recurring annual loss. And it gets worse: a missed CAQH re-attestation (required every 120 days) → profile inactive → ALL claims from that provider deny → 2–4 weeks to fix → $16K in denied claims for a 2-provider practice. Total annual exposure for a 5-provider practice: well into six figures.
+    </div>
+
+    <h2>Why credentialing breaks without a system</h2>
+
+    <p>The problem isn't the credentialing process itself — it's that nobody designed a tracking system for it. Five things go wrong, repeatedly:</p>
+
+    <ol>
+      <li><strong>Nobody owns it.</strong> Credentialing falls to the office manager, who also handles billing, HR, patient complaints, supply ordering, and 8 other jobs. It gets attention when someone screams, not when it needs attention.</li>
+      <li><strong>Every payer has a different portal.</strong> UnitedHealthcare uses one login. BCBS another. Aetna another. Cigna another. Medicare another. There is no single view of "where are we with Dr. Smith across all 15 payers?"</li>
+      <li><strong>CAQH re-attestation reminders go to the provider's personal email.</strong> The provider doesn't know what CAQH is and ignores it. You don't see the reminder. Profile goes inactive. Revenue stops.</li>
+      <li><strong>Required documents change mid-process.</strong> License expires. DEA renews. Malpractice carrier changes. The application that was complete 3 months ago is now incomplete — and nobody knows until the payer sends a vague "additional information needed" letter that sits in a stack for two weeks.</li>
+      <li><strong>Payer follow-up is a black art.</strong> Call provider relations. Navigate the phone tree. Get transferred twice. Leave a voicemail. Wait. Repeat. A single follow-up cycle consumes 20–30 minutes per payer, per provider.</li>
+    </ol>
+
+    <div class="callout">
+      <strong>The real cost per missed deadline</strong>
+      A 5-provider practice has roughly 75 payer relationships to manage (15 payers × 5 providers). Re-credentialing happens every 2–3 years per payer. CAQH re-attestation every 120 days. That's 75+ credentialing events to track annually — with <strong>zero dedicated staff</strong> in most practices.
+    </div>
+
+    <h2>The 3-tier system to reclaim control</h2>
+
+    <p>You don't need to hire a $55K credentialing specialist. You don't need hospital-priced credentialing software ($400–$800/month). You need a system that gives you visibility. Here's how to build it, from free to full automation.</p>
+
+    <div class="tier-box">
+      <h3><span class="tier-badge free">Tier 1 &mdash; Free</span></h3>
+      <h4 style="margin-top:6px; font-weight:700;">Master Credentialing Google Sheet</h4>
+      <p><strong>Three tabs. Three hours to set up. 30 minutes a week to maintain.</strong></p>
+      <p><strong>Tab 1 — "Initial Apps":</strong> Columns for provider name, payer, application date, CAQH ID, expected approval date, status (not-started, docs-gathering, submitted, in-review, pending-docs, approved, contracted), last follow-up date, follow-up notes, days since submission. Conditional formatting: red if >90 days without movement, yellow if >60 days.</p>
+      <p><strong>Tab 2 — "Re-Credentialing":</strong> Columns for provider, payer, original credentialing date, re-credentialing due date, CAQH re-attestation due date, status. Conditional formatting: red if within 30 days of deadline, yellow if within 60 days.</p>
+      <p><strong>Tab 3 — "Provider Docs":</strong> License #, expiration date. DEA #, expiration. Malpractice carrier, policy #, expiration. CAQH ID. CAQH last attested. Set calendar reminders 30, 14, and 7 days before each expiration.</p>
+      <p>This sheet replaces the sticky notes and mental tracking that most practices rely on. It won't automate follow-ups, but it will tell you — immediately — which application has been sitting in "submitted" for 87 days without a status check.</p>
+    </div>
+
+    <div class="tier-box">
+      <h3><span class="tier-badge mid">Tier 2 &mdash; Automation-lite</span></h3>
+      <h4 style="margin-top:6px; font-weight:700;">Google Sheets + Apps Script + Calendar</h4>
+      <p><strong>One day to set up. Five minutes per follow-up (down from 20).</strong></p>
+      <p>A Google Apps Script that reads the credentialing sheet daily and auto-emails the office manager when:</p>
+      <ul>
+        <li>An application has been in "submitted" or "in-review" status for 30+ days with no follow-up logged.</li>
+        <li>A document expiration (license, DEA, malpractice) is within 45 days.</li>
+        <li>CAQH re-attestation is due within 14 days.</li>
+      </ul>
+      <p>Pre-built follow-up email templates for each major payer — auto-populated from sheet data with provider NPI, application reference number, and date submitted. One click to customize and send. The script runs automatically; you only act when you get an alert.</p>
+    </div>
+
+    <div class="tier-box">
+      <h3><span class="tier-badge full">Tier 3 &mdash; Full automation</span></h3>
+      <h4 style="margin-top:6px; font-weight:700;">What Jobs Done Labs builds</h4>
+      <p><strong>Single dashboard. Every provider × every payer. Color-coded. Auto-follow-up.</strong></p>
+      <p>One screen showing the full credentialing lifecycle:</p>
+      <ul>
+        <li><strong>Green:</strong> Active and current. Provider is credentialed, CAQH attested within 90 days, no documents expiring.</li>
+        <li><strong>Yellow:</strong> In-process, <60 days. Application submitted, follow-up logged.</li>
+        <li><strong>Orange:</strong> In-process, 60–90 days or document expiring within 30 days. Needs attention.</li>
+        <li><strong>Red:</strong> Stalled (>90 days), expired, or revenue at risk.</li>
+      </ul>
+      <p><strong>Auto-follow-up engine:</strong> Automated email to payer rep at day 30 — portal status check at day 45 — reminder to call at day 60. Auto-detect CAQH re-attestation approaching by polling CAQH status weekly. One-click re-credentialing packet generation: pulls current credentials from CAQH, pre-fills all payer-specific forms, generates cover sheet with provider info.</p>
+      <p><strong>Provider onboarding checklist:</strong> Tracks required documents, signatures, and timeline milestones from offer letter to first billable visit. Bonus: alerts when a payer quietly adds a new credentialing requirement (happens 2–3 times per year per payer — and nobody tells you).</p>
+    </div>
+
+    <h2>How the options compare</h2>
+
+    <table>
+      <thead>
+        <tr><th>Approach</th><th>Setup time</th><th>Monthly cost</th><th>Visibility</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sticky notes + memory</td>
+          <td>Zero</td>
+          <td>$0</td>
+          <td>None</td>
+          <td>Nobody. This is what you're escaping.</td>
+        </tr>
+        <tr>
+          <td>Tier 1: Google Sheet tracker</td>
+          <td>3 hours</td>
+          <td>$0</td>
+          <td>Manual, in one place</td>
+          <td>1–3 providers, 5–10 payers each</td>
+        </tr>
+        <tr>
+          <td>Tier 2: Sheet + Apps Script</td>
+          <td>1 day</td>
+          <td>$0</td>
+          <td>Auto-alerts for deadlines</td>
+          <td>2–5 providers, expanding practice</td>
+        </tr>
+        <tr>
+          <td>CAQH ProView alone</td>
+          <td>Per-provider setup</td>
+          <td>$0 (included by payers)</td>
+          <td>Profile only — no tracking</td>
+          <td>Everyone must use this. Not enough alone.</td>
+        </tr>
+        <tr>
+          <td>Modio / VerityStream software</td>
+          <td>2–4 weeks</td>
+          <td>$400–$800/mo</td>
+          <td>Full, but priced for hospitals</td>
+          <td>10+ providers with dedicated staff</td>
+        </tr>
+        <tr>
+          <td>Tier 3: Jobs Done Labs custom</td>
+          <td>2–4 weeks</td>
+          <td>$200/mo maintenance</td>
+          <td>Full dashboard + auto-follow-up</td>
+          <td>3–15 providers, serious about growth</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The tier-3 custom build costs $2K–$5K one-time. That's less than the revenue lost from <strong>one missed re-credentialing deadline</strong>. And the $200/month maintenance is a rounding error compared to the $30K+ you're losing every time a new provider sits idle for 5 months.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq-section">
+      <div class="faq-item">
+        <h4>How long does credentialing actually take per payer?</h4>
+        <p>Plan on 90–150 days per payer. Commercial payers (UnitedHealthcare, Aetna, Cigna, BCBS) average 90–120 days. Medicare takes 60–90 days if clean. Medicaid varies by state — 60–180 days. A complete, error-free application with CAQH attested within 30 days lands at the faster end. Missing documents or CAQH errors add 30–60 days. Re-credentialing is faster (45–90 days) but only if you catch it before the deadline.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What's the difference between credentialing and contracting?</h4>
+        <p>Credentialing verifies the provider IS qualified. Contracting is the business deal that comes after — rates, fee schedules, and the legal agreement that lets you bill. Credentialing approval ≠ being contracted. Timeline: credentialing (90–150 days) → committee approval → contracting (30–90 days) → effective date. Many practices track credentialing but forget the contracting gap, losing another 1–2 months.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I credential with 15 payers at once or should I stagger?</h4>
+        <p>Submit simultaneously — do NOT stagger. Every payer runs on their own clock. Waiting for one before starting the next adds months. The risk of tracking 15 simultaneous applications is exactly what the system above solves. The one exception: if a payer requires another's approval first (rare), submit those sequentially.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What happens if I miss a CAQH re-attestation deadline?</h4>
+        <p>Profile goes inactive. Within days, claims deny with "provider not credentialed" codes. Revenue stops. Re-attesting reactivates the profile, but every payer re-verifies (2–4 weeks), previously approved claims during the gap may be retroactively denied, and some payers treat it as a full re-credentialing cycle (90–120 days). One missed CAQH deadline = $16K–$30K in denied claims for a 2-provider practice. Set reminders at 110 days, not 120.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do I need credentialing for telehealth-only providers?</h4>
+        <p>Yes — same process and timeline as in-person providers for every payer you'll bill. Some payers have telehealth-specific enrollment forms, and a few states require separate telehealth registration. The advantage: you can credential in multiple states simultaneously since there's no physical location constraint.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Is it worth hiring a credentialing specialist vs outsourcing to a CVO?</h4>
+        <p>For 1–3 new providers/year: no — a $50K–$65K salary doesn't justify the volume. Use tier 1 or 2. For 4+ providers/year or 20+ providers' re-credentialing: a specialist pays for itself by preventing even one missed deadline. CVOs charge $200–$500/provider/payer — $3K–$7.5K per provider at 15 payers. Use them only if you have zero internal bandwidth. The middle path: handle credentialing yourself with the systems above, outsource follow-ups to a trained VA ($15–$25/hour).</p>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <h3>Free credentialing workflow audit</h3>
+      <p>We'll map your current credentialing process across every provider and payer, identify the 3 biggest revenue-leakage points, and give you a 1-page blueprint for a tracking system that catches every deadline — free, 15 minutes, no obligation.</p>
+      <a class="cta-btn" href="/contact">Book your audit →</a>
+    </div>
+  </article>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
