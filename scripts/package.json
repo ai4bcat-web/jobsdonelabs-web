@@ -8,10 +8,15 @@
     "update-sitemap": "tsx ./src/update-sitemap.ts",
     "ping-sitemap": "tsx ./src/ping-sitemap.ts",
     "check-og-tags": "tsx ./src/check-og-tags.ts",
+    "gen-og": "tsx ./src/gen-og.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {
     "@types/node": "catalog:",
     "tsx": "catalog:"
+  },
+  "dependencies": {
+    "@fontsource/anton": "^5.2.7",
+    "@resvg/resvg-js": "^2.6.2"
   }
 }
