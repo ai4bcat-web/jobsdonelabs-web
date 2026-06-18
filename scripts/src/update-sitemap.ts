@@ -66,17 +66,31 @@ const sitemap = readFileSync(SITEMAP_PATH, "utf-8");
 const parts = sitemap.split(/(<url>[\s\S]*?<\/url>)/g);
 
 const existingSlugs = new Set<string>();
+let removedCount = 0;
+
+// Matches a blog-post <loc> like https://www.jobsdonelabs.ai/blog/<slug>/
+// The blog index (/blog/) has an empty capture group and is intentionally excluded.
+const BLOG_POST_LOC_RE = new RegExp(
+  `<loc>${BASE_URL.replace(".", "\\.")}/blog/([^/]+)/</loc>`
+);
 
 for (let i = 0; i < parts.length; i++) {
   const part = parts[i];
   if (!part.startsWith("<url>")) continue;
 
-  for (const [slug, date] of blogDates) {
-    const loc = `${BASE_URL}/blog/${slug}/`;
-    if (part.includes(`<loc>${loc}</loc>`)) {
-      existingSlugs.add(slug);
-      parts[i] = setLastmod(part, loc, date);
-      break;
+  const blogMatch = part.match(BLOG_POST_LOC_RE);
+  if (blogMatch) {
+    const slugInSitemap = blogMatch[1];
+    if (blogDates.has(slugInSitemap)) {
+      // Slug still exists on disk — update lastmod as before.
+      existingSlugs.add(slugInSitemap);
+      const loc = `${BASE_URL}/blog/${slugInSitemap}/`;
+      parts[i] = setLastmod(part, loc, blogDates.get(slugInSitemap)!);
+    } else {
+      // Slug no longer exists on disk — remove the entry.
+      console.log(`[update-sitemap]   removing stale entry: /blog/${slugInSitemap}/`);
+      parts[i] = "";
+      removedCount++;
     }
   }
 }
@@ -107,7 +121,6 @@ writeFileSync(SITEMAP_PATH, updated, "utf-8");
 
 console.log(
   `[update-sitemap] ✓ sitemap.xml updated — ${blogDates.size} blog post(s) processed` +
-    (newEntries.length > 0
-      ? `, ${newEntries.length} new entry added`
-      : "")
+    (newEntries.length > 0 ? `, ${newEntries.length} new entry added` : "") +
+    (removedCount > 0 ? `, ${removedCount} stale entry removed` : "")
 );
