@@ -1,12 +1,15 @@
 /**
- * Auto-updates <lastmod> dates in sitemap.xml for all blog posts.
+ * Auto-updates <lastmod> dates in sitemap.xml for all pages.
  *
  * For each public/blog/*\/index.html file:
  *   1. Reads `dateModified` (or `datePublished`) from the JSON-LD <script> block.
  *   2. Falls back to the file's filesystem mtime if neither is found.
  *   3. Splits sitemap.xml into isolated <url>…</url> segments and updates only
- *      the segment whose <loc> matches the blog post — no cross-block regex bleed.
+ *      the segment whose <loc> matches the page — no cross-block regex bleed.
  *   4. Inserts a new <url> entry for any blog post not yet in the sitemap.
+ *
+ * Non-blog pages (homepage, blog index, case study, about) are also refreshed
+ * using the same date-extraction logic via the NON_BLOG_PAGES map below.
  *
  * Run automatically via scripts/post-merge.sh before the sitemap ping.
  */
@@ -24,6 +27,29 @@ const SITEMAP_PATH = join(
 );
 const BLOG_DIR = join(REPO_ROOT, "artifacts/landing-page/public/blog");
 const BASE_URL = "https://www.jobsdonelabs.ai";
+
+/**
+ * Maps each non-blog sitemap URL to its corresponding HTML file path
+ * (relative to REPO_ROOT). Add new pages here to keep them auto-dated.
+ */
+const NON_BLOG_PAGES: Array<{ url: string; file: string }> = [
+  {
+    url: `${BASE_URL}/`,
+    file: "artifacts/landing-page/index.html",
+  },
+  {
+    url: `${BASE_URL}/blog/`,
+    file: "artifacts/landing-page/public/blog/index.html",
+  },
+  {
+    url: `${BASE_URL}/case-study/logistics-200k-profit/`,
+    file: "artifacts/landing-page/public/case-study/logistics-200k-profit/index.html",
+  },
+  {
+    url: `${BASE_URL}/about/ryne-bandolik/`,
+    file: "artifacts/landing-page/public/about/ryne-bandolik/index.html",
+  },
+];
 
 function extractDate(html: string, filePath: string): string {
   const modMatch = html.match(/"dateModified"\s*:\s*"(\d{4}-\d{2}-\d{2})"/);
@@ -74,6 +100,17 @@ const BLOG_POST_LOC_RE = new RegExp(
   `<loc>${BASE_URL.replace(".", "\\.")}/blog/([^/]+)/</loc>`
 );
 
+// Build a lookup from URL → date for non-blog pages so we can update them
+// in a single pass over the parts array alongside blog-post updates.
+const nonBlogDates = new Map<string, string>();
+for (const { url, file } of NON_BLOG_PAGES) {
+  const filePath = join(REPO_ROOT, file);
+  const html = readFileSync(filePath, "utf-8");
+  const date = extractDate(html, filePath);
+  nonBlogDates.set(url, date);
+  console.log(`[update-sitemap]   ${url}: ${date}`);
+}
+
 for (let i = 0; i < parts.length; i++) {
   const part = parts[i];
   if (!part.startsWith("<url>")) continue;
@@ -91,6 +128,15 @@ for (let i = 0; i < parts.length; i++) {
       console.log(`[update-sitemap]   removing stale entry: /blog/${slugInSitemap}/`);
       parts[i] = "";
       removedCount++;
+    }
+    continue;
+  }
+
+  // Check whether this block matches a non-blog page.
+  for (const [url, date] of nonBlogDates) {
+    if (part.includes(`<loc>${url}</loc>`)) {
+      parts[i] = setLastmod(part, url, date);
+      break;
     }
   }
 }
@@ -120,7 +166,7 @@ if (newEntries.length > 0) {
 writeFileSync(SITEMAP_PATH, updated, "utf-8");
 
 console.log(
-  `[update-sitemap] ✓ sitemap.xml updated — ${blogDates.size} blog post(s) processed` +
+  `[update-sitemap] ✓ sitemap.xml updated — ${blogDates.size} blog post(s) and ${nonBlogDates.size} non-blog page(s) processed` +
     (newEntries.length > 0 ? `, ${newEntries.length} new entry added` : "") +
     (removedCount > 0 ? `, ${removedCount} stale entry removed` : "")
 );
