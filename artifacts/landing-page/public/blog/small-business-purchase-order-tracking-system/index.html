@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're Tracking 50 Purchase Orders in WhatsApp and a Spreadsheet Nobody Updates — Here's the PO Tracking System That Tells You What's Arriving This Week in 5 Minutes | Jobs Done Labs</title>
+  <meta name="description" content="Small product businesses lose $50K/year in missed sales and rush-order premiums because they track POs across WhatsApp, email, and a spreadsheet from 2023. Here's the 3-tier system — free spreadsheet to full automation — that gives you a single view of every open purchase order." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/small-business-purchase-order-tracking-system/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/small-business-purchase-order-tracking-system/" />
+  <meta property="og:title" content="You're Tracking 50 Purchase Orders in WhatsApp and a Spreadsheet Nobody Updates — A PO Tracking System" />
+  <meta property="og:description" content="The 3-tier system — free Google Sheets to full automation — for tracking purchase orders across 10+ suppliers without losing $50K/year to stockouts and rush orders." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tracking 50 Purchase Orders in WhatsApp? A PO Tracking System That Actually Works" />
+  <meta name="twitter:description" content="The 3-tier system for tracking purchase orders across suppliers — free spreadsheet to full automation." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "You're Tracking 50 Purchase Orders in WhatsApp and a Spreadsheet Nobody Updates — Here's the PO Tracking System That Tells You What's Arriving This Week in 5 Minutes",
+    "description": "Small product businesses lose $50K/year in missed sales and rush-order premiums because they track POs across WhatsApp, email, and a spreadsheet from 2023. Here's the 3-tier system — free to full automation — that gives you a single view of every open purchase order.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/small-business-purchase-order-tracking-system/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What PO numbering system should I use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Use the format PO-YYYY-NNN — e.g. PO-2026-042 for your 42nd PO of 2026. This is clean, sortable, and searchable. Avoid supplier-prefixed schemes (ACME-001, BETA-001) because they create conflicts when you change suppliers or when two suppliers ship on the same order. Avoid date-only schemes (06182026-01) because they're unreadable in WhatsApp and email subject lines. The year prefix is critical: after 12 months, you'll have hundreds of POs and being able to filter by year saves hours. Don't restart numbering each year — sequential across the company lifetime. If you're starting mid-year, pick up from your last existing PO number or start at PO-2026-001." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle partial shipments in my tracker?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A single PO can arrive in 2–4 partial shipments over several weeks. Don't create separate PO numbers for each shipment — that breaks the audit trail. Instead, add a 'Shipments' sub-table or use a separate 'Shipments Received' tab in your tracker: Shipment Date | PO # | Items Received | Qty Received | Carrier | Tracking # | Condition on Arrival | Notes. The PO status stays 'Partially Received' until the last shipment arrives, then moves to 'Received'. In your master PO row, add a 'Qty Received' column and a 'Qty Remaining' calculated column (=Qty Ordered − Qty Received). Conditional formatting: yellow when partially received, green when Qty Remaining = 0. The real risk with partials is paying the full invoice after receiving only half the shipment — always match the invoice against actual received quantities before approving payment." }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I stop using a spreadsheet and switch to software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The spreadsheet breaks at roughly 200 open POs or 3+ people updating it. Before that threshold, a well-structured Google Sheets tracker with the discipline of 'update within 24 hours of any change' works fine — and it costs $0. Signs you've outgrown it: (a) you're spending more than 2 hours/week hunting for PO status across email, WhatsApp, and the sheet, (b) supplier lead times are slipping and you're discovering it through stockouts, not the tracker, (c) two people have updated the same row with conflicting info, (d) you can't answer 'what's arriving this week?' without opening 4 different apps. At that point, you have three options: add Google Apps Script automation to the sheet (Tier 2 in this guide, $0/month, 1 day to set up), buy dedicated PO software like Precoro or Procurify ($300–600/month, 2–4 week implementation), or build a custom PO command center with Jobs Done Labs ($2K–4K one-time, $200/month maintenance — single dashboard, supplier portal integrations, auto-alerts, invoice matching). The right choice depends on your order volume and whether you have the in-house bandwidth to implement software." }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --line:rgba(11,13,18,.1); --muted:rgba(11,13,18,.55); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.72; -webkit-font-smoothing:antialiased; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:860px; margin:0 auto; border-bottom:1px solid var(--line); }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--ink); color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; padding:10px 20px; border-radius:50px; }
+    article { max-width:760px; margin:0 auto; padding:64px 24px 96px; }
+    .breadcrumb { font-size:13px; color:var(--muted); margin-bottom:40px; }
+    .breadcrumb a { color:var(--accent); text-decoration:none; }
+    .breadcrumb a:hover { text-decoration:underline; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,4.5vw,3rem); line-height:1.08; letter-spacing:-0.01em; margin-bottom:16px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:48px; }
+    .byline strong { color:var(--ink); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:56px 0 16px; color:var(--ink); letter-spacing:-0.005em; }
+    h3 { font-family:'Anton',sans-serif; font-size:clamp(1.1rem,2.2vw,1.35rem); line-height:1.2; margin:36px 0 10px; color:var(--ink); letter-spacing:-0.005em; }
+    p { margin-bottom:18px; font-size:17px; }
+    ul, ol { margin:0 0 24px 24px; font-size:17px; }
+    li { margin-bottom:8px; padding-left:4px; }
+    strong { font-weight:700; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:24px 28px; margin:32px 0; font-size:16px; border-radius:0 6px 6px 0; }
+    .callout strong { display:block; margin-bottom:6px; font-family:'Anton',sans-serif; font-size:18px; letter-spacing:-0.005em; }
+    .tier-box { background:#fff; padding:28px 32px; margin:24px 0; border-radius:6px; border:1px solid var(--line); }
+    .tier-box h3 { margin-top:0; display:flex; align-items:center; gap:10px; }
+    .tier-badge { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; padding:3px 10px; border-radius:50px; text-transform:uppercase; letter-spacing:.08em; }
+    .tier-badge.free { background:#2E7D32; }
+    .tier-badge.mid { background:#E65100; }
+    .tier-badge.full { background:var(--ink); }
+    table { width:100%; border-collapse:collapse; margin:28px 0; font-size:15px; }
+    th, td { text-align:left; padding:12px 16px; border-bottom:1px solid var(--line); }
+    th { font-family:'Anton',sans-serif; font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); font-weight:400; }
+    .faq-section { margin-top:56px; }
+    .faq-item { margin-bottom:28px; }
+    .faq-item h4 { font-size:17px; font-weight:700; margin-bottom:6px; color:var(--ink); }
+    .faq-item p { font-size:16px; color:rgba(11,13,18,.7); }
+    .cta-block { background:var(--ink); color:var(--cream); padding:40px 44px; margin:56px 0 32px; border-radius:8px; text-align:center; }
+    .cta-block h3 { color:var(--cream); font-size:clamp(1.2rem,2.5vw,1.6rem); margin-bottom:12px; }
+    .cta-block p { color:rgba(244,239,227,.75); font-size:16px; margin-bottom:24px; }
+    .cta-block a.cta-btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:16px; padding:14px 36px; border-radius:50px; }
+    footer { text-align:center; font-size:13px; color:var(--muted); padding:32px 24px 48px; border-top:1px solid var(--line); max-width:860px; margin:0 auto; }
+    footer a { color:var(--accent); text-decoration:none; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <article>
+    <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; PO Tracking System</div>
+
+    <h1>You're Tracking 50 Purchase Orders in WhatsApp and a Spreadsheet Nobody Updates — Here's the PO Tracking System That Tells You What's Arriving This Week in 5 Minutes</h1>
+    <p class="byline"><strong>Ryne Bandolik</strong> · June 18, 2026 · 10 min read</p>
+
+    <p>It's Monday morning. You open Shopify and see an order for SKU-284 — the blue one that sells 15 units a week. Your inventory says 3 left. You're pretty sure you ordered more three weeks ago from the supplier in Shenzhen. You search your email for "PO-2847." Six results. Four different conversations. One email from May 28 says "shipped!" Another from June 2 says "delayed 2 weeks." You don't know which one is current. You open WhatsApp — 47 unread messages across 6 supplier chats. Somewhere in there is the tracking number you need.</p>
+
+    <p>This isn't a hypothetical. On Reddit's r/procurement, operators running $500K–$3M product businesses admit they track 30–100 open POs across WhatsApp groups, email threads, and "a spreadsheet that nobody updates." They're not bad operators. They're operators who outgrew their systems at around $500K and nobody told them there's a better way.</p>
+
+    <div class="callout">
+      <strong>The real cost of not having a PO system</strong>
+      <strong>Missed sales:</strong> A 3-day stockout on a $35 product that sells 10 units/day = $1,050 in unrecoverable revenue. Two stockouts/month = $25,200/year. <strong>Rush-order premiums:</strong> 15–30% higher unit cost + air freight ($200 vs $20 ocean) = $500–$2,000 per emergency reorder. <strong>Wasted labor:</strong> 3 hours/week hunting for PO status across email, WhatsApp, and spreadsheets = 150 hours/year. At $40/hr = $6,000/year in detective work. <strong>Total annual cost:</strong> easily $50,000 for a $1M product business — and that's before counting the supplier relationships damaged by your 5th "where's my order?" email.
+    </div>
+
+    <h2>Why spreadsheets break at 30+ POs</h2>
+
+    <p>Most product businesses cross the spreadsheet-breaking threshold at around $500K in revenue. Before that, 10–15 open POs are manageable in a single Excel file. After that, five things go wrong:</p>
+
+    <ol>
+      <li><strong>No single source of truth.</strong> Updates come from email ("shipped!"), WhatsApp ("delayed 2 weeks"), supplier portals, and phone calls. The spreadsheet is the last to know — and often 2 weeks out of date.</li>
+      <li><strong>Formatting chaos.</strong> The spreadsheet was started by the founder in 2023. Three team members have added their own columns, color codes, and status nomenclature. "SHIPPED??" and "shipped?" mean different things. One person uses green for "received" and another uses green for "ordered."</li>
+      <li><strong>No proactive alerts.</strong> You don't know a PO is overdue until you go looking. And you only go looking when a customer asks why their order hasn't shipped and you realize the inventory never arrived.</li>
+      <li><strong>Supplier communication is siloed.</strong> The shipping notice is in Gmail. The commercial invoice is a PDF in WhatsApp. The packing slip is in the box. Three documents, three locations, zero cross-referencing.</li>
+      <li><strong>Payment timing is disconnected from receiving.</strong> The invoice arrives by email, gets forwarded to "pay this" without checking whether the shipment actually arrived — or arrived complete. You discover you paid for 500 units when 320 arrived three weeks later when someone finally opens the box.</li>
+    </ol>
+
+    <div class="callout">
+      <strong>The WhatsApp problem</strong>
+      Suppliers in China, Vietnam, India, and Turkey default to WhatsApp for everything — order confirmations, production updates, shipping notices, invoices, photos of finished goods. It's fast and it works. But searching WhatsApp for "PO-2847" returns 47 results from 6 different conversations across 8 weeks of messages. WhatsApp is a communication channel, not a tracking system. The fix isn't to move suppliers off WhatsApp — it's to give yourself a system that captures what WhatsApp tells you.
+    </div>
+
+    <h2>The 3-tier PO tracking system</h2>
+
+    <p>You don't need $500/month procurement software. You don't need to move your suppliers to a vendor portal they'll never log into. You need a system that gives you a single view of every open PO and tells you what's arriving this week. Here's how to build it.</p>
+
+    <div class="tier-box">
+      <h3><span class="tier-badge free">Tier 1 — Free</span></h3>
+      <h4 style="margin-top:6px; font-weight:700;">Google Sheets Master PO Tracker</h4>
+      <p><strong>Three hours to set up. 30 minutes a week to maintain. $0/month.</strong></p>
+      <p>Create ONE spreadsheet with these four tabs:</p>
+      <p><strong>Tab 1 — "Open POs":</strong> PO # | Date Created | Supplier | Items Ordered | Qty | Unit Cost | Total | Expected Ship Date | Actual Ship Date | Carrier | Tracking # | Expected Arrival | Actual Arrival | Status | Notes. Status values: Draft, Sent, Acknowledged, In Production, Shipped, In Transit, Received, Inspected, Approved, Paid. Conditional formatting: red if Expected Arrival is past due and Status ≠ Received; yellow if Expected Arrival is within 7 days; green if Status = Received and Inspected.</p>
+      <p><strong>Tab 2 — "Supplier Directory":</strong> Supplier Name | Contact Name | Email | WhatsApp | Payment Terms | Standard Lead Time (days) | Minimum Order | Last Order Date | Notes. When a supplier changes their WhatsApp number, update it ONCE here.</p>
+      <p><strong>Tab 3 — "This Week":</strong> A FILTER view of Tab 1 where Expected Arrival is within the next 7 days AND Status ≠ Received. Print this every Monday morning or pin it as a browser tab.</p>
+      <p><strong>Tab 4 — "Overdue":</strong> FILTER view where Expected Arrival < TODAY and Status ≠ Received. Review every Monday and Wednesday. This is your escalation list.</p>
+      <p>The key discipline that makes this work: <strong>Status must be updated within 24 hours of any change. No exceptions.</strong> If a supplier emails "shipped!" — the spreadsheet gets updated TODAY. This one rule is the difference between a PO system and a PO graveyard.</p>
+    </div>
+
+    <div class="tier-box">
+      <h3><span class="tier-badge mid">Tier 2 — Automation-lite</span></h3>
+      <h4 style="margin-top:6px; font-weight:700;">Google Sheets + Apps Script + Gmail</h4>
+      <p><strong>One day to set up. $0/month. 5 minutes/day to review the digest.</strong></p>
+      <p>A Google Apps Script that runs daily at 7am:</p>
+      <ul>
+        <li>Scans Gmail for shipping notifications from known suppliers (by sender email patterns you define).</li>
+        <li>Extracts PO reference, tracking #, and estimated delivery from the email body using regex patterns.</li>
+        <li>Auto-updates the corresponding row in "Open POs" tab — Actual Ship Date, Carrier, Tracking #, Status → "Shipped" or "In Transit."</li>
+        <li>If no matching PO found (new tracking without a known PO), adds to an "Unmatched Tracking" tab for your review.</li>
+        <li>Generates a daily digest email:</li>
+      </ul>
+      <p style="background:#F7F5F0; padding:16px 20px; border-radius:4px; font-size:15px; font-family:monospace; line-height:1.5; white-space:pre-wrap;">Good morning. Here's your PO status for June 18:
+
+✅ 2 POs shipped in the last 24 hours
+📦 3 POs arriving this week:
+   Wed: PO-2891 from Acme Corp (2 boxes, 150 units)
+   Thu: PO-2887 from BetaSupply (1 pallet)
+   Fri: PO-2901 from GammaCorp (500 units)
+⚠️ 1 PO overdue: PO-2847 from DeltaMfg (was due 6/13 — 5 days late, last update from supplier: "will ship next week")
+💰 4 invoices due this week ($18,200 total)</p>
+      <p>Supplier communication templates you can copy-paste:</p>
+      <p><strong>PO acknowledgment request:</strong> "Hi [Name], confirming receipt of PO-[#] for [qty] units of [product]. Please confirm ship date by [date]. Our PO tracker reference is PO-[#] — please include this in all correspondence. Thanks!"</p>
+      <p><strong>Status check (7 days before expected ship):</strong> "Hi [Name], checking in on PO-[#] scheduled to ship [date]. Please confirm status and updated ETA. Thanks!"</p>
+      <p><strong>Overdue escalation (3 days past expected ship):</strong> "Hi [Name], PO-[#] was scheduled to ship [date] and we haven't received tracking. This is now impacting our inventory availability. Please provide updated ETA and tracking by end of day. If there's an issue, let's solve it — happy to discuss partial shipments or alternatives."</p>
+    </div>
+
+    <div class="tier-box">
+      <h3><span class="tier-badge full">Tier 3 — Full automation</span></h3>
+      <h4 style="margin-top:6px; font-weight:700;">What Jobs Done Labs builds</h4>
+      <p><strong>Single dashboard. Every PO from every supplier. Color-coded. Auto-alerts. $2K–4K one-time.</strong></p>
+      <p>One screen showing every open PO across every supplier:</p>
+      <ul>
+        <li><strong>Green:</strong> On track — expected arrival confirmed, tracking active.</li>
+        <li><strong>Yellow:</strong> Approaching ship date — supplier hasn't confirmed yet.</li>
+        <li><strong>Red:</strong> Overdue — past expected arrival, no update from supplier.</li>
+        <li><strong>Gray:</strong> Received and inspected — closed.</li>
+      </ul>
+      <p><strong>Auto-follow-up engine:</strong> PO acknowledgment reminder at day 2 — status check at 7 days before expected ship — overdue alert at 3 days past expected ship — escalation to supplier management at 10 days overdue.</p>
+      <p><strong>Invoice matching:</strong> Auto-compare supplier invoice vs PO vs actual received quantities. Flag discrepancies before payment. "Invoice says $12,400 for 500 units. PO says $12,400 for 500 units. But we only received 380 — hold payment until discrepancy resolved."</p>
+      <p><strong>Cash flow forecasting:</strong> "You have $24,800 in POs expected to arrive next month. Your projected cash balance on those dates is $31,000. You're clear — with $6,200 headroom."</p>
+      <p><strong>Supplier performance tracking:</strong> On-time delivery %, quality acceptance rate, average lead time accuracy (actual vs promised). Use this data to negotiate better terms with reliable suppliers and put underperformers on notice with real numbers.</p>
+    </div>
+
+    <h2>How the options compare</h2>
+
+    <table>
+      <thead>
+        <tr><th>Approach</th><th>Setup time</th><th>Monthly cost</th><th>Alerts</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>WhatsApp + chaos</td>
+          <td>0 (already happening)</td>
+          <td>$0</td>
+          <td>None</td>
+          <td>Nobody. This is what you're escaping.</td>
+        </tr>
+        <tr>
+          <td>Tier 1: Google Sheets Master</td>
+          <td>3 hours</td>
+          <td>$0</td>
+          <td>Manual (weekly review)</td>
+          <td>10–50 open POs, 1–2 people</td>
+        </tr>
+        <tr>
+          <td>Tier 2: Sheets + Apps Script</td>
+          <td>1 day</td>
+          <td>$0</td>
+          <td>Daily email digest</td>
+          <td>30–100 open POs, 2–3 people</td>
+        </tr>
+        <tr>
+          <td>Precoro / Procurify</td>
+          <td>2–4 weeks</td>
+          <td>$300–600</td>
+          <td>Yes</td>
+          <td>100+ POs, dedicated procurement team</td>
+        </tr>
+        <tr>
+          <td>Tier 3: Jobs Done Labs custom</td>
+          <td>2–4 weeks</td>
+          <td>$200 maintenance</td>
+          <td>Full dashboard + auto-alerts</td>
+          <td>50–500 POs, growth-stage operators</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The Tier 3 custom build costs $2K–4K one-time. That's paid for by preventing two rush-order emergencies and a single major stockout — events that happen 2–3 times per year in businesses tracking POs across WhatsApp.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq-section">
+      <div class="faq-item">
+        <h4>What PO numbering system should I use?</h4>
+        <p>Use the format PO-YYYY-NNN — e.g. PO-2026-042 for your 42nd PO of 2026. Clean, sortable, searchable. Avoid supplier-prefixed schemes (ACME-001, BETA-001) — they create conflicts when you change suppliers. Avoid date-only schemes (06182026-01) — they're unreadable. Don't restart numbering each year; sequential across the company lifetime. If you're starting mid-year, pick up from your last existing PO or start at PO-2026-001.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I get suppliers to actually acknowledge my POs?</h4>
+        <p>Most suppliers ignore POs because they receive them as casual emails with no structure. Fix: (1) Send the PO as a PDF attachment — it signals "this is a real order, not a conversation." (2) Include a 48-hour acknowledgment deadline in the email body: "Please confirm receipt and ship date by [date+2 days]." (3) If no response in 48 hours, follow up with the escalation template above. (4) For repeat offenders, add acknowledgment terms to your supplier agreement: "Orders not acknowledged within 3 business days may be subject to cancellation." Suppliers who consistently fail to acknowledge POs are the same suppliers who miss ship dates — the acknowledgment rate IS a leading indicator of reliability.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I handle partial shipments in my tracker?</h4>
+        <p>A single PO can arrive in 2–4 partial shipments over several weeks. Don't create separate PO numbers for each — that breaks the audit trail. Instead, add a "Qty Received" column and a "Qty Remaining" calculated column. PO status stays "Partially Received" until the last shipment arrives. Add a "Shipments" sub-table or separate tab with Shipment Date | PO # | Items | Qty | Carrier | Tracking # | Condition. The real risk: paying the full invoice after receiving only half the shipment. Always match invoice against actual received quantities before approving payment.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Should I pay before or after receiving the shipment?</h4>
+        <p>After receiving and inspecting — whenever possible. For new suppliers or suppliers with inconsistent quality: 30% deposit with PO, 70% after receiving and inspection. For established suppliers with perfect track records: Net 30 from receipt is standard. Never pay 100% upfront for a first order from a new supplier — no matter how urgent. If you must pay before receiving (common with overseas suppliers), tie payment to the bill of lading or shipping confirmation, not the PO — at least you know the goods left the factory. And always inspect within 48 hours of arrival so you can dispute before the payment window closes.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What if my supplier doesn't give me tracking?</h4>
+        <p>This is more common than you'd think with overseas suppliers who use freight forwarders. The PO tracker still works: update Status to "Shipped" on the supplier's confirmed ship date and set Expected Arrival = Ship Date + standard transit time for that lane (e.g., ocean freight China → US West Coast = 14–21 days port-to-port + 5–7 days to your door). When the shipment arrives, backfill the Actual Arrival date. Over time, you'll build accurate lead time data per supplier — which is actually more useful for planning than tracking numbers. But make tracking numbers a requirement in your supplier agreement: it costs them nothing and dramatically reduces your "where is it?" anxiety.</p>
+      </div>
+      <div class="faq-item">
+        <h4>When should I stop using a spreadsheet and switch to software?</h4>
+        <p>The spreadsheet breaks at roughly 200 open POs or 3+ people updating it. Signs you've outgrown it: spending 2+ hours/week hunting for status, discovering supplier delays through stockouts instead of the tracker, two people updating the same row with conflicting info, or you can't answer "what's arriving this week?" without opening 4 different apps. At that point, you have three options: add Google Apps Script automation (Tier 2, $0/month), buy dedicated PO software ($300–600/month), or build a custom command center with Jobs Done Labs ($2K–4K one-time). The right choice depends on order volume and whether you have bandwidth to implement software. Most businesses under $3M/year do fine with Tier 2.</p>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <h3>Free PO workflow audit</h3>
+      <p>We'll map your current PO process across every supplier, identify the 3 biggest revenue-leakage points (late shipments, stockouts, rush-order premiums), and give you a 1-page blueprint plus the Google Sheets Master PO Tracker template — free, 15 minutes, no obligation.</p>
+      <a class="cta-btn" href="/contact">Book your audit →</a>
+    </div>
+  </article>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
