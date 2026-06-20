@@ -9,7 +9,9 @@
 
 ## Key pages
 - [Home](https://www.jobsdonelabs.ai/): offer, process, case studies, and booking link
+- [Your Techs Made 15 Second Trips Last Month and It Cost You $1,500](https://www.jobsdonelabs.ai/blog/truck-inventory-second-trip-prevention/): why second trips burn $500-1,500/month per home service shop and the 3-part $0 truck inventory system (morning checklist, QR bin scan, nightly reconciliation) that stops it using free tools
 - [Stop chasing clients for documents](https://www.jobsdonelabs.ai/blog/stop-chasing-client-documents/): why email follow-up fails at accounting/bookkeeping firms and the automated request-and-reminder workflow that ends the document chase
+- [You're Losing $200,000 a Year in Unpaid Detention](https://www.jobsdonelabs.ai/blog/trucking-detention-pay-tracking-system/): the 4-step detention tracking system that gets small carriers paid — auto-capture timestamps, auto-generate invoices, auto-deliver to brokers, auto-track payment status
 - [Shopify payouts never match QuickBooks?](https://www.jobsdonelabs.ai/blog/shopify-quickbooks-reconciliation-never-matches/): why Shopify payouts structurally never match QuickBooks — batch settlement, fees deducted pre-deposit, multi-order netting — and the 4 ways to fix it, honestly compared
 - [Fuel receipts & expense tracking for trucking](https://www.jobsdonelabs.ai/blog/trucking-fuel-receipts-expense-tracking-fix/): what the IRS and IFTA actually require, a 3-tier system that works from the truck cab, and a Friday-afternoon checklist to stop being the person with a shoe box of receipts
 - [Subcontractor paperwork for small GCs](https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/): the 5 documents every GC must collect (W-9, COI, contract, lien waiver, safety cert), what happens when each is missing, and a 3-tier system to tame it without buying another platform

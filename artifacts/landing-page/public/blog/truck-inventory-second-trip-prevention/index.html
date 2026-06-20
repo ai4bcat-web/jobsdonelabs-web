@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix | Jobs Done Labs</title>
+  <meta name="description" content="A 5-tech home service shop averages 3-5 second trips per tech per month because parts aren't on the truck — costing $1,500-$2,250/month in pure waste. Here's the 3-part truck inventory system (morning checklist, QR bin scan, nightly reconciliation) that stops it for $0/month." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/truck-inventory-second-trip-prevention/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/truck-inventory-second-trip-prevention/" />
+  <meta property="og:title" content="Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix" />
+  <meta property="og:description" content="Why 'the truck is stocked' is a lie that costs $50-150 per second trip and $500-1,500/month per 5-tech shop. The 3-part $0 inventory system that stops it." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix" />
+  <meta name="twitter:description" content="The 3-part truck inventory system (morning checklist, QR bin scan, nightly reconciliation) that stops second trips for $0/month." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Truck Inventory System That Stops It",
+    "description": "A 5-tech HVAC, plumbing, or electrical shop averages 3-5 second trips per tech per month because critical parts aren't on the truck — costing $50-150 per wasted trip and $500-1,500/month in pure operational waste. The root cause is truck inventory that nobody tracks systematically. This guide covers the math, the 3 failure points that cause second trips, and a 3-part system (morning load-out checklist, QR code bin scan, nightly reconciliation) that stops second trips using free tools — Google Forms, Sheets, and a free QR scanner app. Total cost: $0/month. No inventory software required.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-06-20",
+    "dateModified": "2026-06-20",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/truck-inventory-second-trip-prevention/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do second trips actually cost a home service business?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For a 5-tech HVAC, plumbing, or electrical shop averaging 3 second trips per tech per month at $100 per trip (1 hour of labor + fuel + customer goodwill), the math is: 5 techs × 3 trips × $100 × 12 months = $18,000/year in pure waste. A 10-tech shop burns $36,000/year. Every second trip where a tech drives back to the shop or supplier for a part is an hour of completely unbillable time — the customer isn't paying for it, and the tech isn't generating revenue. The root cause is almost never 'the tech forgot' — it's that truck inventory isn't tracked systematically, so nobody knows which parts are low until the tech reaches for one that isn't there." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the $0 truck inventory system work without buying inventory management software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The system has three parts, all using free tools. Part 1 — Morning Load-Out Checklist: each tech fills out a 3-minute Google Form on their phone listing the 20-30 critical SKUs they checked on the truck that morning. Part 2 — QR Code Bin Scan: print QR codes for your top 50 SKUs, stick them on truck bins, and techs scan when they pull the last one using a free QR scanner app — this auto-triggers a restock alert. Part 3 — Nightly Reconciliation: Google Sheets auto-calculates morning check-out minus scans during the day equals what's left on each truck, flagging anything below reorder point. The shop manager reviews in 5 minutes instead of walking each truck. Total cost: $0/month. You don't need $200-400/month inventory software — you need a repeatable system that takes 3 minutes per tech per day." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my techs won't adopt a new system — how do you make a 3-minute checklist stick?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Three things make the habit stick. First, tie it to what techs already do: clock out. The checklist becomes the last thing they touch before leaving — not an extra task, just part of the exit routine. Second, show them the math: 'the 3 minutes you spend on this checklist prevents the angry callback from the customer whose repair you couldn't finish because the part wasn't on the truck — and that callback is YOUR problem, not the shop manager's.' Third, make the checklist faster than the alternative: walking back to the shop for a part takes 30-60 minutes. Checking a form takes 3 minutes. Techs do what's faster. You don't need compliance — you need to make the right thing the easy thing." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Your Techs Made 15 Second Trips Last Month and It Cost You $1,500", "item": "https://www.jobsdonelabs.ai/blog/truck-inventory-second-trip-prevention/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#1466FF; --accent-deep:#0D4FCC; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:24px; }
+    .byline a { color:rgba(23,21,19,.55); text-decoration:none; border-bottom:1px solid rgba(23,21,19,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid rgba(23,21,19,.12); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    a { color:var(--accent-deep); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <span class="kicker">Home Services &amp; Trades</span>
+      <h1>Your Techs Made 15 Second Trips Last Month and It Cost You $1,500</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · June 20, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A 5-tech HVAC, plumbing, or electrical shop averages 3-5 second trips per tech per month — each one costing $50-150 in wasted labor, fuel, and customer frustration. Multiply that across your team and you're burning $500-1,500/month on trips that should never happen. The root cause isn't lazy techs or bad planning — it's truck inventory that nobody tracks systematically. Techs grab parts ad hoc in the morning, nobody logs what was used during the day, and the shop reorders when shelves look empty instead of when data says reorder. This guide gives you the 3-part system — morning load-out checklist, QR code bin scan, nightly reconciliation — that stops second trips for $0/month using Google Forms, Sheets, and a free QR scanner app. No inventory software required.</p>
+      </div>
+
+      <p>A tech pulls up to a job at 9:15 AM. The work order says "replace zone valve, 3/4-inch sweat." The tech walks to the truck, flips through the parts bins, and... the exact 3/4-inch sweat zone valve that was supposed to be restocked last week isn't there. The tech calls the shop. The shop manager checks the shelf — empty. The nearest supply house is 28 minutes away. The tech drives 28 minutes there, 28 minutes back, and finishes the job at 11:45 instead of 10:30. The customer has been waiting all morning. The tech's next job gets pushed to after lunch. And that 75-minute round trip? Completely unbillable. The customer isn't paying for it. The tech's wages still clock. The fuel still burns. And the job that should have taken 75 minutes took three hours.</p>
+
+      <p>Nobody tracks how often this happens. Ask any home service owner and they'll say "maybe once or twice a month." The actual number is 3-5 times per tech per month — because a second trip doesn't just mean "drove back to the shop." It also means the tech improvised with the wrong part (call-back next week), borrowed from another tech's truck (now that tech is short), or spent 20 minutes on the phone finding a nearby supply house that has the part in stock (still unbillable, just shorter).</p>
+
+      <p>You're not bad at inventory. You're trying to run a 200-SKU parts supply chain across 5-10 mobile warehouses with zero visibility into what's on each one at any given moment. That's the problem this guide actually fixes.</p>
+
+      <h2>The Math Nobody Does</h2>
+      <p>Let's put a number on what you're actually losing. Use this formula for your own shop:</p>
+
+      <div class="callout">
+        <p style="margin:0; font-family:'Anton',sans-serif; font-size:1.3rem; line-height:1.3;">Techs × Avg Second Trips/Month × $100/Trip × 12 Months = Annual Loss</p>
+      </div>
+
+      <ul>
+        <li><strong>5-tech shop:</strong> 5 × 3 × $100 × 12 = <strong>$18,000/year</strong> burned</li>
+        <li><strong>10-tech shop:</strong> 10 × 4 × $100 × 12 = <strong>$48,000/year</strong> burned</li>
+        <li><strong>20-tech shop:</strong> 20 × 4 × $100 × 12 = <strong>$96,000/year</strong> burned</li>
+      </ul>
+
+      <p>At $100 per trip, these are conservative numbers. The real cost per second trip is higher when you factor in: the customer who cancels because the job took twice as long as quoted, the callback next week because the tech used a "close enough" part that failed, the overtime paid to the tech who's now three hours behind schedule, and the review that says "took all day to fix a simple valve — wouldn't use again."</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The real wake-up call:</strong> Cutting second trips from 3/month to 1/month per tech saves a 5-tech shop $12,000/year — enough to hire a part-time warehouse helper whose entire job is keeping trucks stocked. Or put another way: the waste from second trips would pay for a full-time parts runner, and you'd still have $6,000 left over.</p>
+      </div>
+
+      <h2>Why "The Truck Is Stocked" Is a Lie</h2>
+      <p>Truck inventory fails at three specific points. Every home service shop breaks at least one of them — most break all three.</p>
+
+      <h3>Failure Point 1: Morning ad-hoc grab</h3>
+      <p>At 6:45 AM, the tech walks through the shop on the way to the truck. They grab a handful of commonly-used parts off the shelf — a couple of zone valves, some copper fittings, a roll of solder. Nobody logs what was taken. Nobody checks whether the shelf now has zero zone valves left. The next tech grabs from the same shelf an hour later and finds it empty. They assume "someone will restock" and roll out. Now two trucks are short on the same part, and nobody knows until the first tech reaches for one at 10:30 AM.</p>
+
+      <h3>Failure Point 2: Usage during the day</h3>
+      <p>The tech uses 4 parts on 3 different jobs. They don't log any of it — they're focused on getting to the next job. At the end of a 10-hour day with 6 stops, they can't remember what they used on stop 2 vs stop 4. The parts just... disappeared from the truck. The shop manager only discovers the shortage when they do a physical count on Saturday morning — by which point 5 more second trips have already happened.</p>
+
+      <h3>Failure Point 3: Shelf-level reordering</h3>
+      <p>The shop manager walks past the parts shelf, sees it looks low, and places a restock order. This is inventory management by eyeball. The problem: shelf appearance tells you what's on the shelf, not what's on the trucks. A shelf can look full while 5 trucks are each missing the same critical part — because the shelf is full of parts nobody is using and the high-demand SKUs are all out on trucks, unaccounted for. When the reorder happens based on what the shelf looks like, not what the data says, you're always restocking the wrong things.</p>
+
+      <h2>The $0 System That Actually Works</h2>
+      <p>Every inventory software vendor on page 1 wants to sell you a $200-400/month platform that tracks truck stock — and for a 50-truck fleet, that might pencil out. For a 5-15 tech shop, it's overkill. You don't need software. You need a repeatable 3-part process that takes 3 minutes per tech per day and gives the shop manager total visibility into what's on every truck.</p>
+
+      <h3>Part 1: Morning Load-Out Checklist (3 minutes)</h3>
+      <p>Create a Google Form with the 20-30 critical SKUs your techs use most — the parts where running out means a guaranteed second trip. Zone valves, contactors, capacitors, TXV valves, common circuit boards, specific fittings your work requires. Each morning, before the tech pulls out of the lot, they open the form on their phone and check off each item: "on truck" or "need restock."</p>
+
+      <p>The form takes 3 minutes — less time than walking back to the shop when they realize they're short at the jobsite. Form responses feed directly into a Google Sheet. The shop manager opens one tab and sees every truck's status at 7:15 AM. If three trucks all flagged low on 3/4-inch sweat zone valves, the manager knows to restock before the first tech calls from a jobsite at 10:30.</p>
+
+      <h3>Part 2: QR Code Bin Scan (5 seconds per use)</h3>
+      <p>Print QR codes for your top 50 SKUs. Each QR code links to a Google Form pre-filled with that SKU number and part name. Stick the QR code on the bin in the truck. When a tech pulls the last one of a part, they scan the QR code with their phone (any free QR scanner app works), the form auto-submits a "low stock" alert, and the shop manager gets notified immediately. The tech doesn't type anything. They don't remember to tell anyone. The scan does the work.</p>
+
+      <p>This is the single highest-leverage change in the system. It converts "I thought we had one more" into a real-time data point that triggers a restock before the next tech needs that part. Total cost: $0. You print QR codes on a label maker you already own. The free Google Form handles the submission. The only behavior change is "scan when you take the last one" — which techs adopt because it's faster than writing a note, texting the shop, or driving back for the part.</p>
+
+      <h3>Part 3: Nightly Reconciliation (5 minutes for the shop manager)</h3>
+      <p>At 5:00 PM, the Google Sheet auto-calculates:</p>
+      <ul>
+        <li><strong>Morning check-out:</strong> what each tech said they had at 7:00 AM</li>
+        <li><strong>Minus scans during the day:</strong> any "last one used" QR scans</li>
+        <li><strong>Equals:</strong> estimated remaining stock on each truck</li>
+      </ul>
+
+      <p>Anything below reorder point gets flagged in red. The shop manager reviews in 5 minutes — instead of walking 5 trucks to do a physical count, which takes 30-45 minutes and only happens once a week (if that). The flagged items become the morning restock list. When the techs arrive at 6:45 AM the next day, the parts they need are already on the shelf — because the system caught the shortage at 5:00 PM yesterday, not at 10:30 AM today.</p>
+
+      <h2>The "No Software" Tech Stack</h2>
+      <p>Here's what you actually need — and what it costs:</p>
+
+      <div class="comparison">
+        <table>
+          <tr>
+            <th>Component</th>
+            <th>Tool</th>
+            <th>Monthly Cost</th>
+          </tr>
+          <tr>
+            <td>Morning checklist</td>
+            <td>Google Forms (mobile-friendly, auto-feeds Sheets)</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>QR code generation</td>
+            <td>Free QR code generator (QR Code Monkey, qr-code-generator.com)</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>QR code scanning</td>
+            <td>Any free QR scanner app (iPhone Camera app scans QR natively)</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>Inventory dashboard</td>
+            <td>Google Sheets with conditional formatting</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>Low-stock alerts</td>
+            <td>Google Sheets notification rule (email when cell changes)</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>QR code labels</td>
+            <td>Label maker you already own (Brother, Dymo, etc.)</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td></td>
+            <td><strong>$0/month</strong></td>
+          </tr>
+        </table>
+      </div>
+
+      <p>Setup time: 2 hours. One hour to build the Google Form and Sheet. Thirty minutes to generate and print QR codes. Thirty minutes to walk the team through the morning checklist and QR scan process. That's it. You've gone from "we hope the truck is stocked" to a system that tells you — in real time — exactly what's on every truck and what needs restocking before the next tech rolls out.</p>
+
+      <h2>The "But My Techs Won't Do It" Section</h2>
+      <p>Every ops manager reading this is thinking the same thing: "my guys won't scan a QR code. They won't fill out a form. I've tried checklists before." Fair objection. Here's why this one sticks:</p>
+
+      <p><strong>Tie it to what they already do.</strong> The morning checklist becomes part of clocking in — the last thing they touch before the truck moves. Not an extra task, just part of the exit routine. The QR scan replaces the text message they already send: "hey I'm out of zone valves." Scanning is faster than typing. Techs do what's faster.</p>
+
+      <p><strong>Show them the math — their math.</strong> "Every second trip is 60 minutes of your day that you can't bill. That's $30-50 out of your paycheck if you're on commission, or an extra hour of unpaid windshield time if you're hourly. The 3 minutes you spend on this checklist prevents the callback from the customer who's been waiting since 8 AM and is now yelling at YOU, not the shop manager."</p>
+
+      <p><strong>Don't ask for perfection — ask for the top 20 parts.</strong> Don't try to track all 200 SKUs. Start with the 20 parts that cause 80% of second trips. If a tech scans the top 20 and skips the rest, the system still catches the expensive misses. Once the habit forms, expand the list.</p>
+
+      <p><strong>Reward the behavior once.</strong> First month: buy lunch for any tech who completes the checklist 90%+ of mornings. $12 in burritos saves $1,500 in second trips. The habit is worth a lot more than the incentive.</p>
+
+      <h2>What If You Want It Built For You?</h2>
+      <p>The above system works for a shop manager who's comfortable building Google Forms and printing labels. If your manager's time is better spent running jobs — and it almost certainly is — we build the entire 3-part system for your specific trucks, parts, and workflow.</p>
+      <p>Our approach: we audit your current inventory process, map your top 50 SKUs and truck layouts, build the system end-to-end (Forms → QR codes → Sheets dashboard → alerts), and train your team on the morning routine. The cost is scoped per engagement against a hard ROI target — and every build is covered by our $30K-recovered-in-90-days guarantee. If documented recovery doesn't reach $30K, you pay nothing.</p>
+
+      <h2>Friday Afternoon Setup Checklist: Stop the Second Trips This Week</h2>
+      <div class="checklist">
+        <h3>4 things to do before your techs roll on Monday</h3>
+        <ol>
+          <li><strong>Count your second trips.</strong> Pull last month's work orders. For every job that took 2+ hours longer than quoted, check: was a part missing? Count how many. Multiply by $100. That's your monthly waste number. Write it on the whiteboard in the shop. Everyone needs to see it.</li>
+          <li><strong>List your top 20 second-trip-causing parts.</strong> Not all 200 SKUs — just the 20 where running out means a guaranteed return trip. Zone valves, contactors, capacitors, TXVs, specific fittings. These are the only parts you track in week one.</li>
+          <li><strong>Build the morning checklist Google Form.</strong> 20 checkboxes. "On truck / Need restock." Share the link with every tech's phone. Takes 30 minutes to build. Test it tomorrow morning.</li>
+          <li><strong>Print QR codes for the top 20 parts.</strong> Generate free QR codes. Print on label maker. Stick on bins. Tell techs: "scan when you take the last one." That's the entire training. Five seconds of behavior change.</li>
+        </ol>
+        <p style="font-size:15px; color:rgba(23,21,19,.55); margin:16px 0 0">That's it. You've gone from "we hope the truck is stocked" to a system that tells you — every morning and every evening — exactly what's on every truck. The first second trip this system prevents pays for the 2 hours you spent setting it up. Every one after that is pure margin recovery.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>How much do second trips actually cost a home service business?</h3>
+        <p>For a 5-tech HVAC, plumbing, or electrical shop averaging 3 second trips per tech per month at $100 per trip (1 hour of labor + fuel + customer goodwill), the math is: 5 techs × 3 trips × $100 × 12 months = $18,000/year in pure waste. A 10-tech shop burns $36,000/year. Every second trip where a tech drives back to the shop or supplier for a part is an hour of completely unbillable time — the customer isn't paying for it, and the tech isn't generating revenue. The root cause is almost never 'the tech forgot' — it's that truck inventory isn't tracked systematically, so nobody knows which parts are low until the tech reaches for one that isn't there.</p>
+        <h3>How does the $0 truck inventory system work without buying inventory management software?</h3>
+        <p>The system has three parts, all using free tools. Part 1 — Morning Load-Out Checklist: each tech fills out a 3-minute Google Form on their phone listing the 20-30 critical SKUs they checked on the truck that morning. Part 2 — QR Code Bin Scan: print QR codes for your top 50 SKUs, stick them on truck bins, and techs scan when they pull the last one using a free QR scanner app — this auto-triggers a restock alert. Part 3 — Nightly Reconciliation: Google Sheets auto-calculates morning check-out minus scans during the day equals what's left on each truck, flagging anything below reorder point. The shop manager reviews in 5 minutes instead of walking each truck. Total cost: $0/month. You don't need $200-400/month inventory software — you need a repeatable system that takes 3 minutes per tech per day.</p>
+        <h3>What if my techs won't adopt a new system — how do you make a 3-minute checklist stick?</h3>
+        <p>Three things make the habit stick. First, tie it to what techs already do: clock out. The checklist becomes the last thing they touch before leaving — not an extra task, just part of the exit routine. Second, show them the math: 'the 3 minutes you spend on this checklist prevents the angry callback from the customer whose repair you couldn't finish because the part wasn't on the truck — and that callback is YOUR problem, not the shop manager's.' Third, make the checklist faster than the alternative: walking back to the shop for a part takes 30-60 minutes. Checking a form takes 3 minutes. Techs do what's faster. You don't need compliance — you need to make the right thing the easy thing.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/contractor-estimate-time-management/">
+            <span class="cat">Home Services &amp; Trades</span>
+            <span class="title">The Real Fix for the Contractor Estimate Time Drain</span>
+          </a>
+          <a class="related-card" href="/blog/contractor-job-costing-system-field-to-office/">
+            <span class="cat">Home Services &amp; Trades</span>
+            <span class="title">A Job-Costing System That Works From the Jobsite</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Stop burning $1,500/month on second trips</h2>
+        <p>Book a free 30-minute automation audit. We'll map your truck inventory workflow end-to-end — from morning load-out to nightly restock — and show you exactly where the second trips are happening and what they're costing you. No pitch, no pressure. You keep the map either way.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
