@@ -11,21 +11,24 @@ the Bing Webmaster Tools "IndexNow" dashboard report.
 
 ---
 
-## What has been verified (2026-06-17)
+## What has been verified (2026-06-22)
 
 | Check | Status |
 |---|---|
 | Key file live: `GET https://www.jobsdonelabs.ai/aa3c656f122419868fa93e8a6464386a.txt` | ✓ HTTP 200 |
 | File content equals the key (`aa3c656f122419868fa93e8a6464386a`) | ✓ exact match |
-| Live IndexNow API test ping → `POST https://api.indexnow.org/indexnow` | ✓ HTTP 202 |
+| `INDEXNOW_KEY` secret configured in Replit | ✓ set |
+| Live IndexNow API test ping → `POST https://api.indexnow.org/indexnow` | ✓ HTTP 200 (12 URLs accepted) |
 | IndexNow ping fires on every deploy | ✓ wired in post-merge.sh |
+| Bing Webmaster Tools: site registered as verified property | ⚠ manual step required |
+| Bing Webmaster Tools: IndexNow report shows Submitted/Processed URLs | ⚠ confirm after registration |
 
-HTTP 202 from the IndexNow API confirms Bing reached the key file, validated it, and
-queued the submission. The key and key-file are fully functional.
+HTTP 200 from the IndexNow API confirms Bing's endpoint accepted all 12 submitted URLs.
+This proves the key file, key value, and submission payload are all correct.
 
-**Remaining manual step:** register `www.jobsdonelabs.ai` as a verified property inside
-the Bing Webmaster Tools dashboard so submissions appear in the IndexNow report.
-See the steps below.
+**To complete dashboard-level verification:** register `www.jobsdonelabs.ai` as a
+verified property in Bing Webmaster Tools so that accepted submissions appear in the
+IndexNow report. See the steps below.
 
 ---
 
