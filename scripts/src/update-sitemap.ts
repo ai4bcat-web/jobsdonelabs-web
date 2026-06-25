@@ -133,11 +133,23 @@ for (let i = 0; i < parts.length; i++) {
   }
 
   // Check whether this block matches a non-blog page.
+  let matchedNonBlog = false;
   for (const [url, date] of nonBlogDates) {
     if (part.includes(`<loc>${url}</loc>`)) {
       parts[i] = setLastmod(part, url, date);
+      matchedNonBlog = true;
       break;
     }
+  }
+
+  if (!matchedNonBlog) {
+    // Extract the <loc> value for a helpful warning message.
+    const locMatch = part.match(/<loc>([^<]+)<\/loc>/);
+    const loc = locMatch ? locMatch[1] : "(unknown loc)";
+    console.warn(
+      `[update-sitemap] ⚠ WARNING: sitemap URL not in NON_BLOG_PAGES and not a blog post — lastmod will not be updated: ${loc}\n` +
+        `  Add an entry for this URL to the NON_BLOG_PAGES array in scripts/src/update-sitemap.ts`
+    );
   }
 }
 
