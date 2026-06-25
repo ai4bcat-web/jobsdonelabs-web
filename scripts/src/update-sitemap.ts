@@ -159,6 +159,10 @@ for (const [slug, date] of blogDates) {
 }
 
 let updated = parts.join("");
+// Remove blank lines left behind when a <url> block is deleted (parts[i] = "").
+// The separator text on either side of the removed block remains, producing
+// two adjacent whitespace-only lines. Collapse ≥3 consecutive newlines to 2.
+updated = updated.replace(/(\n[ \t]*){3,}/g, "\n\n");
 if (newEntries.length > 0) {
   updated = updated.replace("</urlset>", newEntries.join("\n") + "\n</urlset>");
 }
