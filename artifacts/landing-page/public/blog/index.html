@@ -3,41 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Jobs Done Labs</title>
-  <meta name="description" content="Practical guides on business automation, operations recovery, and how service businesses stop leaking profit." />
+  <title>Blog | Jobs Done Labs — Practical Guides on Business Automation &amp; Profit Recovery</title>
+  <meta name="description" content="Free practical guides and systems for service businesses, logistics, manufacturing, and more. No software pitches — just processes and templates that work, starting at $0." />
   <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/" />
   <meta property="og:title" content="Blog | Jobs Done Labs" />
-  <meta property="og:description" content="Practical guides on business automation, operations recovery, and how service businesses stop leaking profit." />
+  <meta property="og:description" content="Free practical guides and systems for service businesses — starting at $0." />
   <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
   <meta property="og:site_name" content="Jobs Done Labs" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blog | Jobs Done Labs" />
-  <meta name="twitter:description" content="Practical guides on business automation and operations recovery." />
+  <meta name="twitter:description" content="Free practical guides and systems for service businesses — starting at $0." />
   <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
   <style>
-    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --line:rgba(11,13,18,.1); }
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --line:rgba(11,13,18,.1); --muted:rgba(11,13,18,.45); }
     * { box-sizing:border-box; margin:0; padding:0; }
     body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
     nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; border-bottom:1px solid var(--line); }
     nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
     nav.top a.cta { background:var(--ink); color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; padding:10px 20px; border-radius:50px; }
-    .wrap { max-width:860px; margin:0 auto; padding:64px 24px 96px; }
-    h1 { font-family:'Anton',sans-serif; font-size:clamp(2.4rem,5vw,3.6rem); line-height:1.05; letter-spacing:-0.01em; margin-bottom:12px; }
-    .subtitle { font-size:18px; color:rgba(11,13,18,.5); margin-bottom:56px; }
+    .wrap { max-width:900px; margin:0 auto; padding:64px 24px 96px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2.4rem,5vw,3.6rem); line-height:1.05; letter-spacing:-0.01em; margin-bottom:8px; }
+    .subtitle { font-size:18px; color:var(--muted); margin-bottom:48px; max-width:520px; }
+
+    /* Featured section */
+    .featured-section { margin-bottom:64px; }
+    .featured-label { font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
+    .featured-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .featured-card { display:block; text-decoration:none; color:inherit; background:#fff; padding:36px 40px; transition:background .15s; border-radius:6px; border-left:4px solid var(--accent); }
+    .featured-card:hover { background:#EFE8D8; }
+    .featured-card .post-tag { display:inline-block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .featured-card .post-title { font-family:'Anton',sans-serif; font-size:1.25rem; line-height:1.15; margin-bottom:10px; }
+    .featured-card .post-desc { font-size:15px; color:rgba(11,13,18,.55); line-height:1.55; }
+    .featured-card .post-meta { font-size:12px; color:rgba(11,13,18,.35); margin-top:12px; }
+
+    /* Industry sections */
+    .industry-section { margin-bottom:56px; }
+    .industry-heading { font-family:'Anton',sans-serif; font-size:1.5rem; letter-spacing:-0.005em; margin-bottom:6px; display:flex; align-items:baseline; gap:12px; }
+    .industry-count { font-size:13px; font-weight:500; color:var(--muted); font-family:'Hanken Grotesk',system-ui,sans-serif; }
+    .industry-desc { font-size:14px; color:var(--muted); margin-bottom:18px; }
     .post-grid { display:flex; flex-direction:column; gap:2px; }
-    .post-card { display:block; text-decoration:none; color:inherit; background:#fff; padding:32px 36px; transition:background .15s; border-radius:4px; }
+    .post-card { display:block; text-decoration:none; color:inherit; background:#fff; padding:24px 32px; transition:background .15s; border-radius:4px; }
     .post-card:hover { background:#EFE8D8; }
-    .post-tag { display:inline-block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
-    .post-title { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.1; margin-bottom:10px; }
-    .post-desc { font-size:16px; color:rgba(11,13,18,.6); margin-bottom:14px; }
-    .post-meta { font-size:13px; color:rgba(11,13,18,.38); }
-    .post-arrow { float:right; font-size:20px; color:var(--accent); margin-top:-2px; }
+    .post-card .post-title { font-family:'Anton',sans-serif; font-size:1.15rem; line-height:1.15; margin-bottom:6px; }
+    .post-card .post-desc { font-size:14px; color:rgba(11,13,18,.5); line-height:1.5; }
+    .post-arrow { float:right; font-size:18px; color:var(--accent); margin-top:-2px; }
+
+    /* Responsive */
+    @media (max-width:640px) {
+      .featured-grid { grid-template-columns:1fr; }
+      .post-card, .featured-card { padding:24px; }
+      .featured-card .post-title { font-size:1.1rem; }
+    }
+
     footer { text-align:center; font-size:13px; color:rgba(11,13,18,.35); padding:32px 24px; border-top:1px solid var(--line); margin-top:40px; }
     footer a { color:inherit; }
   </style>
@@ -50,82 +73,157 @@
   </nav>
   <main class="wrap">
     <h1>Blog</h1>
-    <p class="subtitle">Practical guides on automation, operations recovery, and stopping profit leaks.</p>
-    <div class="post-grid">
-      <a class="post-card" href="/blog/truck-fleet-maintenance-tracking-system/">
-        <span class="post-arrow">→</span>
-        <span class="post-tag">Logistics &amp; Trucking</span>
-        <div class="post-title">Your Fleet Maintenance 'System' Is Two Spreadsheets, a Whiteboard, and Drivers Who Text You at 2 AM — The 5-Level System That Prevents $24K Engine Rebuilds (Level 1 Costs $0)</div>
-        <p class="post-desc">A missed oil change cost one fleet $31,700. The 5-level fleet maintenance maturity model — from free spreadsheet to full automation — built specifically for small trucking fleets.</p>
-        <span class="post-meta">Ryne Bandolik · June 25, 2026</span>
-      </a>
-      <a class="post-card" href="/blog/ecommerce-manual-data-entry-silent-killer/">
-        <span class="post-arrow">→</span>
-        <span class="post-tag">Retail &amp; E-Commerce</span>
-        <div class="post-title">Manual Data Entry Is the Silent Killer of Your E-Commerce Business — The 5-Level System That Automates Inventory Sync (Starting at $0)</div>
-        <p class="post-desc">You're spending 15 hours a week copying inventory numbers between Shopify, Amazon, and Etsy. The 5-level maturity model — from batch-update protocol to full automation.</p>
-        <span class="post-meta">Ryne Bandolik · June 24, 2026</span>
-      </a>
-      <a class="post-card" href="/blog/truck-inventory-second-trip-prevention/">
-        <span class="post-arrow">→</span>
-        <span class="post-tag">Home Services &amp; Trades</span>
-        <div class="post-title">Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix</div>
-        <p class="post-desc">Why second trips burn $500-1,500/month per shop — and the 3-part $0 truck inventory system (morning checklist, QR bin scan, nightly reconciliation) that stops it.</p>
-        <span class="post-meta">Ryne Bandolik · June 20, 2026</span>
-      </a>
-      <a class="post-card" href="/blog/trucking-detention-pay-tracking-system/">
-        <span class="post-arrow">→</span>
-        <span class="post-tag">Logistics &amp; Trucking</span>
-        <div class="post-title">You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It</div>
-        <p class="post-desc">The 4-step system to auto-capture, invoice, deliver, and track detention pay — no $500/month TMS required.</p>
-        <span class="post-meta">Ryne Bandolik · June 19, 2026</span>
-      </a>
-      <a class="post-card" href="/blog/small-business-purchase-order-tracking-system/">
-        <span class="post-arrow">→</span>
-        <span class="post-tag">Product Businesses &amp; Supply Chain</span>
-        <div class="post-title">You're Tracking 50 Purchase Orders in WhatsApp and a Spreadsheet Nobody Updates — Here's a PO Tracking System That Actually Works</div>
-        <p class="post-desc">Why spreadsheets break at 30+ POs, the 5 ways PO tracking fails without a system, and the 3-tier tracker — free Google Sheets to full automation.</p>
-        <span class="post-meta">Ryne Bandolik · June 18, 2026</span>
-      </a>
-      <a class="post-card" href="/blog/medical-practice-provider-credentialing-tracking-system/">
-        <span class="post-arrow">→</span>
-        <span class="post-tag">Healthcare &amp; Medical Practices</span>
-        <div class="post-title">Your New Provider Can't Bill for 5 Months and You're Losing $30K/Month — A Credentialing Tracking System</div>
-        <p class="post-desc">Why credentialing takes 90–150 days per payer, the 5 ways it breaks without a system, and the 3-tier tracker — free to full automation.</p>
-        <span class="post-meta">Ryne Bandolik · June 17, 2026</span>
-      </a>
-      <a class="post-card" href="/blog/marketing-agency-client-reporting-automation-guide/">
-        <span class="post-arrow">→</span>
-        <span class="post-tag">Marketing Agencies</span>
-        <div class="post-title">Your Agency Spends 40+ Hours a Month Hand-Building Client Reports — Here's the Fix</div>
-        <p class="post-desc">Why every off-the-shelf reporting solution still feels broken — and the 3-tier system that cuts client reporting from 5 hours to 30 minutes.</p>
-        <span class="post-meta">Ryne Bandolik · June 16, 2026</span>
-      </a>
-      <a class="post-card" href="/blog/trucking-fuel-receipts-expense-tracking-fix/">
-        <span class="post-arrow">→</span>
-        <span class="post-tag">Logistics &amp; Trucking</span>
-        <div class="post-title">You're Still Keeping Fuel Receipts in a Shoe Box — Here's How to Actually Fix It</div>
-        <p class="post-desc">What the IRS actually requires, the 3-tier system that works from the truck cab, and a Friday-afternoon checklist to fix it this week.</p>
-        <span class="post-meta">Ryne Bandolik · June 14, 2026</span>
-      </a>
-      <a class="post-card" href="/blog/shopify-quickbooks-reconciliation-never-matches/">
-        <span class="post-arrow">→</span>
-        <span class="post-tag">Retail &amp; E-Commerce</span>
-        <div class="post-title">Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It, Honestly)</div>
-        <p class="post-desc">Why Shopify payouts structurally never match QuickBooks deposits — and the 4 ways to fix it, honestly compared.</p>
-        <span class="post-meta">Ryne Bandolik · June 13, 2026</span>
-      </a>
-      <a class="post-card" href="/blog/stop-chasing-client-documents/">
-        <span class="post-arrow">→</span>
-        <span class="post-tag">Accounting &amp; Bookkeeping</span>
-        <div class="post-title">Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop</div>
-        <p class="post-desc">Why email follow-up fails, and the 3-layer fix — process, portals, and automated request-and-reminder workflows — that ends the document chase.</p>
-        <span class="post-meta">Ryne Bandolik · June 12, 2026</span>
-      </a>
-    </div>
+    <p class="subtitle">Practical systems for operators who fix things, move things, and build things. No software pitches — just processes that work, starting at $0.</p>
+
+    <!-- Featured -->
+    <section class="featured-section">
+      <div class="featured-label">Start here</div>
+      <div class="featured-grid">
+        <a class="featured-card" href="/blog/truck-fleet-maintenance-tracking-system/">
+          <span class="post-tag">Logistics &amp; Trucking</span>
+          <div class="post-title">Your Fleet Maintenance 'System' Is Two Spreadsheets, a Whiteboard, and Drivers Who Text You at 2 AM</div>
+          <p class="post-desc">A missed oil change cost one fleet $31,700. The 5-level fleet maintenance maturity model — from free spreadsheet to full automation — built specifically for small trucking fleets.</p>
+          <span class="post-meta">June 25, 2026</span>
+        </a>
+        <a class="featured-card" href="/blog/ecommerce-manual-data-entry-silent-killer/">
+          <span class="post-tag">Retail &amp; E-Commerce</span>
+          <div class="post-title">Manual Data Entry Is the Silent Killer of Your E-Commerce Business</div>
+          <p class="post-desc">You're spending 15 hours a week copying inventory numbers between Shopify, Amazon, and Etsy. The 5-level maturity model — from batch-update protocol to full automation — starting at $0.</p>
+          <span class="post-meta">June 24, 2026</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Logistics & Trucking -->
+    <section class="industry-section">
+      <div class="industry-heading">Logistics &amp; Trucking <span class="industry-count">4 guides</span></div>
+      <p class="industry-desc">For fleet owners, dispatchers, and carriers who move freight and want to stop bleeding money on paperwork.</p>
+      <div class="post-grid">
+        <a class="post-card" href="/blog/trucking-detention-pay-tracking-system/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It</div>
+          <p class="post-desc">The 4-step system to auto-capture, invoice, and track detention pay — no $500/month TMS required.</p>
+        </a>
+        <a class="post-card" href="/blog/trucking-fuel-receipts-expense-tracking-fix/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">You're Still Keeping Fuel Receipts in a Shoe Box — Here's How to Actually Fix It</div>
+          <p class="post-desc">What the IRS actually requires, the 3-tier system that works from the truck cab, and a Friday-afternoon checklist.</p>
+        </a>
+        <a class="post-card" href="/blog/truck-fleet-maintenance-tracking-system/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">Your Fleet Maintenance 'System' Is Two Spreadsheets and a Whiteboard — The 5-Level Fix</div>
+          <p class="post-desc">A $24K engine rebuild from one missed PM. The maintenance tracking system built for small fleets — Level 1 costs $0.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Manufacturing -->
+    <section class="industry-section">
+      <div class="industry-heading">Manufacturing <span class="industry-count">4 guides</span></div>
+      <p class="industry-desc">For job shops, machine shops, and small manufacturers running production without an ERP.</p>
+      <div class="post-grid">
+        <a class="post-card" href="/blog/manufacturing-job-costing-without-erp/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">You're Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet System</div>
+          <p class="post-desc">40% of your jobs run over cost and you don't find out until the invoice goes out. The $0 job costing system — no ERP required.</p>
+        </a>
+        <a class="post-card" href="/blog/warehouse-pick-pack-error-reduction-system/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">Pick/Pack Errors Cost You $54,000 Last Year — The $0 Warehouse Accuracy System</div>
+          <p class="post-desc">270 errors/month at $20 each = $5,400 gone. Phone-camera + scale system that cuts errors in half — 1 hour to set up.</p>
+        </a>
+        <a class="post-card" href="/blog/small-manufacturing-production-scheduling-guide/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System</div>
+          <p class="post-desc">Why shop floor scheduling breaks without a system, and the 3-tier fix from shared calendar to automated dispatch.</p>
+        </a>
+        <a class="post-card" href="/blog/small-manufacturer-inventory-management-system/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">Your Raw Material Shelf Is a Guessing Game — A Free Inventory Management System for Small Shops</div>
+          <p class="post-desc">The reorder-point system that stops stockouts without an ERP. Free spreadsheet template included.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Home Services & Trades -->
+    <section class="industry-section">
+      <div class="industry-heading">Home Services &amp; Trades <span class="industry-count">3 guides</span></div>
+      <p class="industry-desc">For HVAC, plumbing, electrical, roofing, and general contractors running crews in the field.</p>
+      <div class="post-grid">
+        <a class="post-card" href="/blog/truck-inventory-second-trip-prevention/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix</div>
+          <p class="post-desc">Why second trips burn $500-1,500/month per shop — and the 3-part truck inventory system that stops it.</p>
+        </a>
+        <a class="post-card" href="/blog/contractor-job-costing-system-field-to-office/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">Your Field Crews Know Exactly How Much They Lost — 3 Weeks After the Job Closed</div>
+          <p class="post-desc">A field-to-office job costing system that shows you margin by Tuesday for jobs that finished Friday. No software required.</p>
+        </a>
+        <a class="post-card" href="/blog/contractor-estimate-time-management/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">You're Spending 12 Hours on Every Estimate and You Haven't Noticed It's Killing Your Close Rate</div>
+          <p class="post-desc">Why slow estimating loses deals — and the 3-tier system from template library to automated takeoff.</p>
+        </a>
+        <a class="post-card" href="/blog/subcontractor-paperwork-management-system-gc/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">You Have 18 Subs Emailing You Certificates and You Have No Idea Who's Expired</div>
+          <p class="post-desc">The paperwork management system that tracks COIs, W-9s, and contracts — no general contractor software required.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Professional Services -->
+    <section class="industry-section">
+      <div class="industry-heading">Professional Services <span class="industry-count">2 guides</span></div>
+      <p class="industry-desc">For accountants, agencies, consultants, and firms buried in client admin.</p>
+      <div class="post-grid">
+        <a class="post-card" href="/blog/marketing-agency-client-reporting-automation-guide/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">Your Agency Spends 40+ Hours a Month Hand-Building Client Reports — Here's the Fix</div>
+          <p class="post-desc">Why every off-the-shelf reporting solution still feels broken — and the 3-tier system that cuts reporting to 30 minutes.</p>
+        </a>
+        <a class="post-card" href="/blog/stop-chasing-client-documents/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop</div>
+          <p class="post-desc">Why email follow-up fails, and the 3-layer fix — process, portals, and automated request-and-reminder workflows.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Healthcare -->
+    <section class="industry-section">
+      <div class="industry-heading">Healthcare &amp; Medical Practices <span class="industry-count">1 guide</span></div>
+      <p class="industry-desc">For practice managers and healthcare administrators drowning in credentialing and payer enrollment.</p>
+      <div class="post-grid">
+        <a class="post-card" href="/blog/medical-practice-provider-credentialing-tracking-system/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">Your New Provider Can't Bill for 5 Months and You're Losing $30K/Month — A Credentialing System</div>
+          <p class="post-desc">Why credentialing takes 90–150 days per payer, the 5 ways it breaks without a system, and the 3-tier tracker — free to full automation.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Retail & E-Commerce -->
+    <section class="industry-section">
+      <div class="industry-heading">Retail &amp; E-Commerce <span class="industry-count">3 guides</span></div>
+      <p class="industry-desc">For online sellers, multi-channel brands, and product businesses losing money to manual ops.</p>
+      <div class="post-grid">
+        <a class="post-card" href="/blog/small-business-purchase-order-tracking-system/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">You're Tracking 50 Purchase Orders in WhatsApp and a Spreadsheet Nobody Updates</div>
+          <p class="post-desc">Why spreadsheets break at 30+ POs, the 5 ways PO tracking fails, and the 3-tier tracker — free Google Sheets to full automation.</p>
+        </a>
+        <a class="post-card" href="/blog/shopify-quickbooks-reconciliation-never-matches/">
+          <span class="post-arrow">→</span>
+          <div class="post-title">Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It, Honestly)</div>
+          <p class="post-desc">Why Shopify payouts structurally never match QuickBooks deposits — and the 4 ways to fix it, honestly compared.</p>
+        </a>
+      </div>
+    </section>
   </main>
   <footer>
-    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/industries/logistics/">Logistics</a> · <a href="/industries/manufacturing/">Manufacturing</a> · <a href="/contact">Contact</a>
   </footer>
 </body>
 </html>
