@@ -8,3 +8,51 @@
 export function collapseBlankLines(xml: string): string {
   return xml.replace(/(\n[ \t]*){3,}/g, "\n\n");
 }
+
+/**
+ * Scans the sitemap XML for <url> blocks whose <loc> is neither a known
+ * non-blog page nor a blog-post URL under baseUrl/blog/<slug>/.
+ *
+ * Returns the unrecognised <loc> values so the caller can emit warnings.
+ * This is a pure function with no side effects — all I/O happens in the caller.
+ *
+ * @param xml           Full sitemap XML string.
+ * @param knownNonBlog  Map of non-blog page URLs → lastmod strings (keys used only).
+ * @param baseUrl       Site root URL (e.g. "https://www.example.com").
+ * @returns             Array of <loc> strings that were not recognised.
+ */
+export function findUnregisteredSitemapUrls(
+  xml: string,
+  knownNonBlog: Map<string, string>,
+  baseUrl: string
+): string[] {
+  const parts = xml.split(/(<url>[\s\S]*?<\/url>)/g);
+  const escapedBase = baseUrl.replace(/\./g, "\\.");
+  const BLOG_POST_LOC_RE = new RegExp(
+    `<loc>${escapedBase}/blog/([^/]+)/</loc>`
+  );
+
+  const unregistered: string[] = [];
+  for (const part of parts) {
+    if (!part.startsWith("<url>")) continue;
+
+    // Blog-post blocks (including the blog index) are always expected.
+    if (BLOG_POST_LOC_RE.test(part)) continue;
+
+    // Check against every known non-blog URL.
+    let matched = false;
+    for (const url of knownNonBlog.keys()) {
+      if (part.includes(`<loc>${url}</loc>`)) {
+        matched = true;
+        break;
+      }
+    }
+
+    if (!matched) {
+      const locMatch = part.match(/<loc>([^<]+)<\/loc>/);
+      if (locMatch) unregistered.push(locMatch[1]);
+    }
+  }
+
+  return unregistered;
+}

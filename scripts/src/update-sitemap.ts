@@ -23,7 +23,7 @@ import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateSitemap } from "./sitemap-validator.js";
-import { collapseBlankLines } from "./sitemap-utils.js";
+import { collapseBlankLines, findUnregisteredSitemapUrls } from "./sitemap-utils.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "../..");
@@ -187,16 +187,13 @@ for (let i = 0; i < parts.length; i++) {
       break;
     }
   }
+}
 
-  if (!matchedNonBlog) {
-    // This sitemap URL is neither a known blog post nor a discoverable non-blog
-    // page — it may be stale or point to a file that no longer exists.
-    const locMatch = part.match(/<loc>([^<]+)<\/loc>/);
-    const loc = locMatch ? locMatch[1] : "(unknown loc)";
-    console.warn(
-      `[update-sitemap] ⚠ WARNING: sitemap URL not found on disk — lastmod will not be updated: ${loc}`
-    );
-  }
+// Warn about any sitemap URL that is neither a known non-blog page nor a blog post.
+for (const loc of findUnregisteredSitemapUrls(sitemap, nonBlogDates, BASE_URL)) {
+  console.warn(
+    `[update-sitemap] ⚠ WARNING: sitemap URL not found on disk — lastmod will not be updated: ${loc}`
+  );
 }
 
 const newEntries: string[] = [];

@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vitest";
 import { validateSitemap } from "./sitemap-validator.js";
-import { collapseBlankLines } from "./sitemap-utils.js";
+import { collapseBlankLines, findUnregisteredSitemapUrls } from "./sitemap-utils.js";
 
 const BASE = "https://www.example.com";
 
@@ -214,6 +214,83 @@ describe("validateSitemap — multiple simultaneous failures", () => {
     expect(err?.message).toMatch(/missing-page|missing/i);
     expect(err?.message).toMatch(/no-lastmod.*missing a valid <lastmod>/);
     expect(err?.message).toMatch(/Duplicate <loc>/);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// findUnregisteredSitemapUrls — detection of unknown sitemap pages
+// ---------------------------------------------------------------------------
+
+describe("findUnregisteredSitemapUrls — unregistered page detection", () => {
+  it("returns an empty array when every non-blog URL is known", () => {
+    const xml = sitemap(
+      urlBlock(`${BASE}/`),
+      urlBlock(`${BASE}/about/`)
+    );
+    const knownNonBlog = makeNonBlog(`${BASE}/`, `${BASE}/about/`);
+    expect(findUnregisteredSitemapUrls(xml, knownNonBlog, BASE)).toEqual([]);
+  });
+
+  it("returns the URL when the sitemap contains a page not in knownNonBlog", () => {
+    const xml = sitemap(
+      urlBlock(`${BASE}/`),
+      urlBlock(`${BASE}/ghost-page/`)
+    );
+    const knownNonBlog = makeNonBlog(`${BASE}/`);
+    const result = findUnregisteredSitemapUrls(xml, knownNonBlog, BASE);
+    expect(result).toContain(`${BASE}/ghost-page/`);
+    expect(result).toHaveLength(1);
+  });
+
+  it("returns all unknown URLs when multiple unregistered pages are present", () => {
+    const xml = sitemap(
+      urlBlock(`${BASE}/`),
+      urlBlock(`${BASE}/unknown-a/`),
+      urlBlock(`${BASE}/unknown-b/`)
+    );
+    const knownNonBlog = makeNonBlog(`${BASE}/`);
+    const result = findUnregisteredSitemapUrls(xml, knownNonBlog, BASE);
+    expect(result).toContain(`${BASE}/unknown-a/`);
+    expect(result).toContain(`${BASE}/unknown-b/`);
+    expect(result).toHaveLength(2);
+  });
+
+  it("does not flag blog-post URLs as unregistered", () => {
+    const xml = sitemap(
+      urlBlock(`${BASE}/`),
+      urlBlock(`${BASE}/blog/hello-world/`, "2024-01-01"),
+      urlBlock(`${BASE}/blog/another-post/`, "2024-06-15")
+    );
+    const knownNonBlog = makeNonBlog(`${BASE}/`);
+    expect(findUnregisteredSitemapUrls(xml, knownNonBlog, BASE)).toEqual([]);
+  });
+
+  it("does not flag the blog index URL (/blog/) as unregistered when it is known", () => {
+    const xml = sitemap(
+      urlBlock(`${BASE}/blog/`),
+      urlBlock(`${BASE}/blog/post-one/`, "2024-01-01")
+    );
+    const knownNonBlog = makeNonBlog(`${BASE}/blog/`);
+    expect(findUnregisteredSitemapUrls(xml, knownNonBlog, BASE)).toEqual([]);
+  });
+
+  it("emits a console.warn for each URL returned (integration check)", () => {
+    const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      const xml = sitemap(
+        urlBlock(`${BASE}/`),
+        urlBlock(`${BASE}/unlisted-page/`)
+      );
+      const knownNonBlog = makeNonBlog(`${BASE}/`);
+      const unregistered = findUnregisteredSitemapUrls(xml, knownNonBlog, BASE);
+      for (const loc of unregistered) {
+        console.warn(`[update-sitemap] ⚠ WARNING: sitemap URL not found on disk — lastmod will not be updated: ${loc}`);
+      }
+      expect(warnSpy).toHaveBeenCalledOnce();
+      expect(warnSpy.mock.calls[0][0]).toContain("unlisted-page");
+    } finally {
+      warnSpy.mockRestore();
+    }
   });
 });
 
