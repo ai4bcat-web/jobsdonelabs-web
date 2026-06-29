@@ -17,6 +17,7 @@
 import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { validateSitemap } from "./sitemap-validator.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "../..");
@@ -179,7 +180,7 @@ if (newEntries.length > 0) {
   updated = updated.replace("</urlset>", newEntries.join("\n") + "\n</urlset>");
 }
 
-validateSitemap(updated, nonBlogDates, blogDates);
+validateSitemap(updated, nonBlogDates, blogDates, BASE_URL);
 
 writeFileSync(SITEMAP_PATH, updated, "utf-8");
 
@@ -189,76 +190,3 @@ console.log(
     (removedCount > 0 ? `, ${removedCount} stale entry removed` : "")
 );
 
-/**
- * Validates the final sitemap XML string after it has been written to disk.
- * Throws a descriptive Error if any invariant is violated so the caller
- * (post-merge.sh) can abort before the sitemap ping fires.
- *
- * Checks performed:
- *  1. The document is at least minimally well-formed XML (urlset wrapper present).
- *  2. Every non-blog page URL is still present.
- *  3. Every blog entry has a <lastmod> in YYYY-MM-DD format.
- *  4. No <loc> value appears more than once (no duplicates).
- */
-function validateSitemap(
-  xml: string,
-  expectedNonBlog: Map<string, string>,
-  expectedBlog: Map<string, string>
-): void {
-  const errors: string[] = [];
-
-  // 1. Minimal well-formedness: must open and close with <urlset …> … </urlset>
-  if (!/<urlset[\s\S]*>/.test(xml) || !xml.includes("</urlset>")) {
-    errors.push("sitemap.xml is missing a valid <urlset> root element");
-  }
-
-  // Extract all <url> blocks for per-entry checks.
-  const urlBlocks = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map(
-    (m) => m[0]
-  );
-
-  // 2. All non-blog pages must still be present.
-  for (const url of expectedNonBlog.keys()) {
-    if (!xml.includes(`<loc>${url}</loc>`)) {
-      errors.push(`Non-blog entry missing from sitemap: <loc>${url}</loc>`);
-    }
-  }
-
-  // 3. Every blog entry must have a <lastmod> in YYYY-MM-DD format.
-  const LASTMOD_RE = /<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/;
-  const BLOG_POST_LOC_RE_LOCAL = new RegExp(
-    `<loc>${BASE_URL.replace(".", "\\.")}/blog/([^/]+)/</loc>`
-  );
-  for (const block of urlBlocks) {
-    const blogMatch = block.match(BLOG_POST_LOC_RE_LOCAL);
-    if (!blogMatch) continue; // non-blog block; skip lastmod check
-    const slug = blogMatch[1];
-    if (slug === "") continue; // blog index — not a post
-    if (!LASTMOD_RE.test(block)) {
-      errors.push(
-        `Blog entry /blog/${slug}/ is missing a valid <lastmod> (YYYY-MM-DD)`
-      );
-    }
-  }
-
-  // 4. No duplicate <loc> values.
-  const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  const seen = new Set<string>();
-  for (const loc of locs) {
-    if (seen.has(loc)) {
-      errors.push(`Duplicate <loc> in sitemap: ${loc}`);
-    }
-    seen.add(loc);
-  }
-
-  if (errors.length > 0) {
-    throw new Error(
-      `[update-sitemap] sitemap.xml validation failed:\n` +
-        errors.map((e) => `  • ${e}`).join("\n")
-    );
-  }
-
-  console.log(
-    `[update-sitemap] ✓ validation passed — ${urlBlocks.length} <url> entries, no duplicates, all lastmod dates valid`
-  );
-}
