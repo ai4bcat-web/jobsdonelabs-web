@@ -4,6 +4,10 @@ pnpm install --frozen-lockfile
 pnpm --filter db push
 pnpm --filter @workspace/scripts run update-sitemap
 
+# Inject og:image:width / og:image:height / og:image:type into any new posts
+# that arrived without them (tags are required for correct social previews)
+pnpm --filter @workspace/scripts run inject-og-dimensions
+
 # Generate OG images for any new posts that are missing one
 pnpm --filter @workspace/scripts run gen-og --missing
 

@@ -5,11 +5,14 @@
  *   - og:title
  *   - og:description
  *   - og:image
+ *   - og:image:width  (must be a positive integer)
+ *   - og:image:height (must be a positive integer)
+ *   - og:image:type   (must be "image/png")
  *   - meta name="description"
  *   - link rel="canonical"
  *
- * Exits non-zero if any file is missing or has an empty value for a required tag,
- * so it can be wired into the publish workflow.
+ * Exits non-zero if any file is missing, empty, or has an invalid value for a
+ * required tag, so it can be wired into the publish workflow.
  */
 
 import { readFileSync, readdirSync } from "node:fs";
@@ -23,7 +26,25 @@ const BLOG_DIR = join(REPO_ROOT, "artifacts/landing-page/public/blog");
 type TagCheck = {
   label: string;
   pattern: RegExp;
+  validate?: (value: string) => string | null;
 };
+
+function positiveInteger(value: string): string | null {
+  const n = Number(value.trim());
+  if (!Number.isInteger(n) || n <= 0) {
+    return `expected a positive integer, got "${value}"`;
+  }
+  return null;
+}
+
+function exactValue(expected: string): (value: string) => string | null {
+  return (value: string) => {
+    if (value.trim() !== expected) {
+      return `expected "${expected}", got "${value}"`;
+    }
+    return null;
+  };
+}
 
 const REQUIRED_TAGS: TagCheck[] = [
   {
@@ -39,6 +60,21 @@ const REQUIRED_TAGS: TagCheck[] = [
     pattern: /<meta\s+property="og:image"\s+content="([^"]*)"/i,
   },
   {
+    label: "og:image:width",
+    pattern: /<meta\s+property="og:image:width"\s+content="([^"]*)"/i,
+    validate: positiveInteger,
+  },
+  {
+    label: "og:image:height",
+    pattern: /<meta\s+property="og:image:height"\s+content="([^"]*)"/i,
+    validate: positiveInteger,
+  },
+  {
+    label: "og:image:type",
+    pattern: /<meta\s+property="og:image:type"\s+content="([^"]*)"/i,
+    validate: exactValue("image/png"),
+  },
+  {
     label: 'meta name="description"',
     pattern: /<meta\s+name="description"\s+content="([^"]*)"/i,
   },
@@ -52,12 +88,17 @@ function checkFile(filePath: string): string[] {
   const html = readFileSync(filePath, "utf-8");
   const failures: string[] = [];
 
-  for (const { label, pattern } of REQUIRED_TAGS) {
+  for (const { label, pattern, validate } of REQUIRED_TAGS) {
     const match = html.match(pattern);
     if (!match) {
       failures.push(`missing ${label}`);
     } else if (match[1].trim() === "") {
       failures.push(`empty ${label}`);
+    } else if (validate) {
+      const validationError = validate(match[1]);
+      if (validationError) {
+        failures.push(`invalid ${label}: ${validationError}`);
+      }
     }
   }
 
