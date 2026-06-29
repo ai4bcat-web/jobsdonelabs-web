@@ -107,7 +107,7 @@ function buildSvg(title: string, description: string): string {
     .map(
       (line, i) =>
         `<text x="${PAD_X}" y="${startY + i * LINE_HEIGHT_TITLE}" ` +
-        `font-family="DejaVu Sans" font-weight="bold" font-size="${TITLE_FONT_SIZE}" ` +
+        `font-family="Anton" font-size="${TITLE_FONT_SIZE}" ` +
         `fill="${BRAND_CREAM}" xml:space="preserve">${escapeXml(line)}</text>`,
     )
     .join("\n  ");
@@ -116,7 +116,7 @@ function buildSvg(title: string, description: string): string {
     startY + clippedLines.length * LINE_HEIGHT_TITLE + DESC_FONT_SIZE + 12;
   const truncDesc = truncateDescription(description, 120);
   const descSvg = description
-    ? `<text x="${PAD_X}" y="${descY}" font-family="DejaVu Sans" font-size="${DESC_FONT_SIZE}" ` +
+    ? `<text x="${PAD_X}" y="${descY}" font-family="Hanken Grotesk" font-size="${DESC_FONT_SIZE}" ` +
       `fill="${BRAND_CREAM_DIM}" xml:space="preserve">${escapeXml(truncDesc)}</text>`
     : "";
 
@@ -145,7 +145,7 @@ function buildSvg(title: string, description: string): string {
   <rect x="${accentX}" y="${accentY}" width="${STRIPE_W}" height="${accentH}" fill="${BRAND_ACCENT}"/>
 
   <!-- brand label -->
-  <text x="${PAD_X + ACCENT_OFFSET}" y="${PAD_Y_TOP}" font-family="DejaVu Sans" font-weight="bold"
+  <text x="${PAD_X + ACCENT_OFFSET}" y="${PAD_Y_TOP}" font-family="Hanken Grotesk" font-weight="bold"
         font-size="${LABEL_FONT_SIZE}" fill="${BRAND_ACCENT}" letter-spacing="3"
         xml:space="preserve">JOBS DONE LABS</text>
 
@@ -156,7 +156,7 @@ function buildSvg(title: string, description: string): string {
   ${descSvg}
 
   <!-- bottom url -->
-  <text x="${PAD_X + ACCENT_OFFSET}" y="${H - 34}" font-family="DejaVu Sans" font-size="18"
+  <text x="${PAD_X + ACCENT_OFFSET}" y="${H - 34}" font-family="Hanken Grotesk" font-size="18"
         fill="rgba(244,239,227,0.35)" xml:space="preserve">jobsdonelabs.ai</text>
 </svg>`;
 }
@@ -177,6 +177,9 @@ function generateForSlug(slug: string): void {
   const svg = buildSvg(title, description);
 
   const fontFiles = [
+    join(FONT_DIR, "Anton-Regular.ttf"),
+    join(FONT_DIR, "HankenGrotesk-Regular.ttf"),
+    join(FONT_DIR, "HankenGrotesk-Bold.ttf"),
     join(FONT_DIR, "DejaVuSans-Bold.ttf"),
     join(FONT_DIR, "DejaVuSans.ttf"),
   ].filter(existsSync);
@@ -185,7 +188,7 @@ function generateForSlug(slug: string): void {
     font: {
       fontFiles,
       loadSystemFonts: false,
-      defaultFontFamily: "DejaVu Sans",
+      defaultFontFamily: "Anton",
     },
     fitTo: { mode: "width", value: W },
   });
