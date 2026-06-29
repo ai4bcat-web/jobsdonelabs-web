@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It | Jobs Done Labs</title>
+  <meta name="description" content="Most small trucking carriers lose $25-100/hour in detention fees they never collect — because tracking is manual, brokers dispute timestamps, and nobody follows up at 90 days. Here's the 4-step system to get paid without buying another TMS." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-detention-pay-tracking-system/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-detention-pay-tracking-system/" />
+  <meta property="og:title" content="You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It" />
+  <meta property="og:description" content="Why manual detention tracking fails, the 4-step system that automates it without a $500/month TMS, and how to recover $100K+/year in detention fees you're already owed." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It" />
+  <meta name="twitter:description" content="The 4-step detention tracking system that gets small carriers paid — no TMS required." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It — Here's the 4-Step System to Get Paid Without Buying Another TMS",
+    "description": "Most small trucking carriers (5-50 trucks) lose $25-100/hour in detention fees they never collect — because tracking is manual, brokers dispute timestamps, and nobody follows up at 90 days. This guide covers the math of what you're really losing, the 4 failure points in manual detention tracking, and a 4-step automation system that captures timestamps, generates invoices, delivers them to brokers, and tracks payment status — no $500/month TMS required.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-06-19",
+    "dateModified": "2026-06-19",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/trucking-detention-pay-tracking-system/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much detention pay are small carriers actually losing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For a 20-truck fleet averaging 3 detention events per truck per week at $75/hour with only 50% successfully collected, the math is stark: 20 trucks × 3 detentions × $75 × 52 weeks × 0.5 uncollected = $117,000/year in lost detention revenue. Even a 10-truck fleet loses roughly $58,500/year. The average small carrier recovers only 40% of detention fees owed because manual tracking — driver calls dispatcher, dispatcher emails broker, broker disputes timestamps, nobody follows up at 90 days — breaks at every link in the chain. Recovering just 1 extra detention invoice per truck per week at $75 × 50 trucks × 52 weeks = $195,000/year in additional revenue." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the 4-step detention tracking system work without buying a TMS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Step 1: Auto-capture arrival and departure timestamps using your ELD's geofence data — no manual driver input. Step 2: Auto-generate a detention invoice with the correct rate ($25-100/hr based on equipment type), auto-calculated hours, and BOL/POD attached. Step 3: Auto-deliver the invoice to the broker via email with delivery tracking. Step 4: Auto-track payment status on a simple dashboard showing invoiced / acknowledged / disputed / paid, flagging anything past 45 days. The tech stack: Google Sheets + automation platform + Gmail + your ELD API. Total cost: $0-30/month. Setup time: 2-4 hours. You don't need a $500/month TMS — you need a repeatable system for the 4 steps every TMS vendor has spent years making complicated." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to set up an automated detention tracking system and what's the ROI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A lightweight Excel + email template system can be set up in an afternoon — create a timestamp log, an invoice template with auto-calculated detention hours, and a weekly payment tracking sheet. The full automated system (ELD geofence → auto-invoice → broker email → payment dashboard) takes 2-4 weeks to build and integrate, depending on your ELD provider and broker volume. ROI is immediate: the first recovered detention invoice — typically $150-400 for a single event — covers the setup cost. For a 20-truck fleet, recovering from 50% to 80% collection rate on detention adds roughly $70,000/year to the bottom line. Jobs Done Labs prices every build against a hard ROI target, and our engagements are covered by the $30K-recovered-in-90-days guarantee: if documented recovery doesn't reach $30K, you pay nothing." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It", "item": "https://www.jobsdonelabs.ai/blog/trucking-detention-pay-tracking-system/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:24px; }
+    .byline a { color:rgba(23,21,19,.55); text-decoration:none; border-bottom:1px solid rgba(23,21,19,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid rgba(23,21,19,.12); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    a { color:var(--accent-deep); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <span class="kicker">Logistics &amp; Trucking</span>
+      <h1>You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · June 19, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">Small carriers recover only about 40% of detention fees they're owed — not because brokers refuse to pay, but because manual tracking breaks at every link in the chain. Drivers forget to note arrival times, dispatchers forget to email the broker, brokers dispute the timestamps, and nobody follows up at 90 days. The math for a 20-truck fleet: 20 trucks × 3 detentions/week × $75 × 52 weeks × 50% uncollected = $117,000/year in lost revenue. This guide gives you the 4-step system — auto-capture timestamps, auto-generate invoices, auto-deliver to brokers, auto-track payment status — that costs $0-30/month to run and takes 2-4 hours to set up. No $500/month TMS required.</p>
+      </div>
+
+      <p>A driver sits at a dock for three hours past the free window. The receiver won't sign until the load is fully unloaded. The dispatcher is juggling five other trucks and forgets to note the arrival time. By the time anyone thinks to send a detention invoice to the broker — two weeks later — the broker disputes the timestamps, asks for proof nobody recorded, and the invoice dies in an email thread. The carrier eats $225 in unpaid detention. Multiply that by 3 times per truck per week, across 20 trucks, for 52 weeks, and you've got a six-figure hole in your P&amp;L that never shows up as a line item — because it was never invoiced in the first place.</p>
+
+      <p>This isn't a hypothetical. Talk to any dispatcher at a small fleet and they'll tell you the same thing: "We bill what we remember." What they remember is maybe half. The other half is lost to manual processes that were never designed for the volume modern carriers run.</p>
+
+      <p>You're not bad at billing. You're trying to run a 4-step invoicing system through phone calls, sticky notes, and an inbox with 1,400 unread emails. That's the problem this guide actually fixes.</p>
+
+      <h2>The Math You've Been Avoiding</h2>
+      <p>Let's put a number on what you're actually losing. Use this formula for your own fleet:</p>
+
+      <div class="callout">
+        <p style="margin:0; font-family:'Anton',sans-serif; font-size:1.3rem; line-height:1.3;">Trucks × Avg Detentions/Week × $75/hour × 52 Weeks × % Uncollected = Annual Loss</p>
+      </div>
+
+      <ul>
+        <li><strong>5-truck fleet:</strong> 5 × 2 × $75 × 52 × 0.5 = <strong>$19,500/year</strong> lost</li>
+        <li><strong>20-truck fleet:</strong> 20 × 3 × $75 × 52 × 0.5 = <strong>$117,000/year</strong> lost</li>
+        <li><strong>50-truck fleet:</strong> 50 × 3 × $75 × 52 × 0.5 = <strong>$292,500/year</strong> lost</li>
+      </ul>
+
+      <p>Torque TMS's own data puts manual detention recovery at 40%. That means 60% is never collected — not because it's not owed, but because nobody had the system to capture it. The industry assumes 2-4 hours of detention per load is "just part of the job." It's not. It's unbilled revenue sitting at docks across America, and the only reason it's not on your income statement is that nobody wrote the invoice.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The real wake-up call:</strong> Recovering just 1 extra detention invoice per truck per week — one additional invoice, above whatever you're collecting now — at $75 × 50 trucks × 52 weeks = $195,000/year. Even at a conservative 50% collection rate on those incremental invoices, that's $97,500/year in new revenue from work your trucks are already doing. You don't need more loads. You need to bill for the time you're already spending at the dock.</p>
+      </div>
+
+      <h2>Why Manual Tracking Fails Every Time</h2>
+      <p>Detention billing is a 4-link chain. Every carrier that does it manually breaks at least one of these links on every load:</p>
+
+      <h3>Failure Point 1: Timestamp capture</h3>
+      <p>The driver arrives at the dock at 07:15. The appointment was for 07:00. The receiver says "back into door 14 — we'll get to you." The driver should note the arrival time. Instead, they're backing a 53-foot trailer into a tight dock in the rain while the dispatcher calls about the next load. Nobody records the arrival time. No arrival time = no detention clock = no invoice.</p>
+
+      <h3>Failure Point 2: Invoice generation</h3>
+      <p>The driver eventually gets unloaded at 11:30 — 4 hours and 15 minutes past the 2-hour free window. The dispatcher needs to: look up the rate con to find the detention rate (if it's even listed), calculate billable hours (2.25 hours at $75/hour), find the BOL and POD, create an invoice, and attach supporting documents. This takes 15-20 minutes per event. At 3 events per truck per week across 20 trucks, that's 15 hours of dispatcher time per week — time that should be spent booking loads.</p>
+
+      <h3>Failure Point 3: Broker delivery and follow-up</h3>
+      <p>The dispatcher emails the invoice to broker_accounts@bigbroker.com. Two weeks later, nobody has responded. The dispatcher has 47 other emails to handle and forgets. The broker's AP team says they never received it (or it went to spam, or they need a different format, or they want the original BOL in PDF not a photo). Without automated delivery tracking — was it opened? did anyone reply? — every unpaid invoice becomes a separate investigation.</p>
+
+      <h3>Failure Point 4: Payment tracking and 90-day follow-up</h3>
+      <p>Broker payment terms on detention are notoriously slow — 60-90 days is standard. By the time the payment window arrives, the original dispatcher might have quit, the email thread is buried, and nobody remembers which invoices are still open. The carrier checks their bank balance at month-end and hopes the number looks right. Most detention invoices that survive all three previous failure points die here — at the follow-up nobody does.</p>
+
+      <h2>The 4-Step System That Actually Gets You Paid</h2>
+      <p>Every TMS vendor on page 1 of Google sells the same thing: a $200-500/month platform that does detention tracking as a side feature buried in a suite of tools you'll never use. You don't need another SaaS subscription. You need a repeatable 4-step process that runs whether or not someone remembers to do it.</p>
+
+      <h3>Step 1: Auto-Capture Timestamps — No Manual Driver Input Required</h3>
+      <p>Your ELD already knows when your truck arrived at the consignee and when it left. Most ELD platforms — Samsara, Motive (KeepTruckin), Geotab, Omnitracs — record geofence entry/exit events. This data is the single source of truth that brokers cannot dispute: the truck's GPS coordinates show it was at the dock from 07:15 to 11:30.</p>
+
+      <p>The setup: configure your ELD to export geofence events for known customer locations. If your ELD has an API (most do), pull arrival and departure events into a Google Sheet automatically. If it doesn't, a manual weekly export takes 10 minutes. Either way, you now have timestamps that a broker can't argue with — because the data came from the truck, not from a driver's memory.</p>
+
+      <h3>Step 2: Auto-Generate the Detention Invoice</h3>
+      <p>Once you have arrival and departure timestamps, the invoice writes itself:</p>
+      <ol>
+        <li><strong>Look up the detention rate</strong> from the rate confirmation. Most rate cons specify $25-100/hour based on equipment type (van, reefer, flatbed). Build a simple lookup table by broker or lane.</li>
+        <li><strong>Calculate billable hours:</strong> (Departure − Arrival) − Free Window (typically 2 hours). Round up to the nearest 15 minutes.</li>
+        <li><strong>Generate the invoice:</strong> Date, load number, broker, detention rate × hours, total. Attach the BOL and POD. Use a Google Docs template or a simple automation that populates a PDF.</li>
+      </ol>
+
+      <p>This step — the one your dispatcher currently spends 15-20 minutes per event on — becomes instant. The data flows from ELD → timestamp log → rate lookup → invoice. A human reviews before sending, which takes 90 seconds instead of 20 minutes.</p>
+
+      <h3>Step 3: Auto-Deliver to Broker — With Tracking</h3>
+      <p>Email the invoice to the broker's AP contact (pulled from the rate con or a broker contact list you maintain once). Here's what makes this step work: use an email tool that tracks whether the email was opened and whether anyone replied. If no response in 7 days, auto-send a polite follow-up. If still no response in 14 days, flag it for a phone call.</p>
+
+      <p>The automation doesn't replace the relationship — it handles the 90% of detention invoices that should be routine so your dispatcher can focus their phone calls on the 10% that actually need a conversation.</p>
+
+      <h3>Step 4: Auto-Track Payment Status — Stop Checking the Bank Balance and Hoping</h3>
+      <p>Build a simple dashboard (Google Sheets is enough) with four columns per invoice:</p>
+      <ul>
+        <li><strong>Invoiced:</strong> Date sent, amount, broker, load number</li>
+        <li><strong>Acknowledged:</strong> Broker confirmed receipt (or opened the email)</li>
+        <li><strong>Disputed:</strong> Broker pushed back — flag for dispatcher review</li>
+        <li><strong>Paid:</strong> Date received, amount, any difference from invoiced</li>
+      </ul>
+
+      <p>Anything in "Invoiced" status past 45 days gets flagged automatically. Anything in "Acknowledged" past 60 days gets flagged. This is the step that recovers the $97,500/year: not invoicing more, but following up on what you already invoiced.</p>
+
+      <h2>The "No TMS" Tech Stack</h2>
+      <p>Here's what you actually need — and what it costs:</p>
+
+      <div class="comparison">
+        <table>
+          <tr>
+            <th>Component</th>
+            <th>Tool</th>
+            <th>Monthly Cost</th>
+          </tr>
+          <tr>
+            <td>Timestamp capture</td>
+            <td>Your existing ELD (geofence data)</td>
+            <td>$0 (already paying for ELD)</td>
+          </tr>
+          <tr>
+            <td>Data pipeline</td>
+            <td>Google Sheets + Google Apps Script (or Make/Zapier)</td>
+            <td>$0-30/month</td>
+          </tr>
+          <tr>
+            <td>Invoice generation</td>
+            <td>Google Docs template auto-populated from Sheets</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>Email delivery + tracking</td>
+            <td>Gmail + mail merge tool or automation</td>
+            <td>$0-10/month</td>
+          </tr>
+          <tr>
+            <td>Payment dashboard</td>
+            <td>Google Sheets with conditional formatting</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td></td>
+            <td><strong>$0-40/month</strong></td>
+          </tr>
+        </table>
+      </div>
+
+      <p>Setup time: 2-4 hours to build the Sheets + template pipeline. A full automation with ELD API integration takes 2-4 weeks to build and test — but the manual pipeline works today and captures revenue while the automation is being built.</p>
+
+      <h2>What If You Want It Built For You?</h2>
+      <p>The above system works for a dispatcher who is comfortable building Google Sheets automations and writing a few email templates. If your dispatcher's time is better spent booking loads — and it almost certainly is — we build the entire 4-step system for you.</p>
+      <p>Our approach: we audit your current detention process, map your broker payment terms and ELD data structure, build the system end-to-end (ELD → timestamp log → auto-invoice → broker email → payment dashboard), and train your team on it. The cost is scoped per engagement against a hard ROI target — and every build is covered by our $30K-recovered-in-90-days guarantee. If documented recovery doesn't reach $30K, you pay nothing.</p>
+
+      <h2>Friday Morning Setup Checklist: Start Recovering Detention This Week</h2>
+      <div class="checklist">
+        <h3>4 things to do before your trucks roll on Monday</h3>
+        <ol>
+          <li><strong>Pull one week of ELD geofence data.</strong> Export arrival and departure events for your top 5 customer locations. Count how many detention events should have been billed. The gap between events and invoices is the money you're leaving at the dock.</li>
+          <li><strong>Build a timestamp log.</strong> Simple Google Sheet: Date | Truck | Customer | Arrival | Departure | Free Window | Billable Hours | Rate/Hour | Amount | Invoiced? | Paid?. Populate it with last week's data. You now have a system.</li>
+          <li><strong>Create one detention invoice template.</strong> Google Docs: your logo, load details, detention rate, hours, total, BOL/POD attachment area. Save it. Next detention event, it takes 3 minutes to fill out instead of 20.</li>
+          <li><strong>Audit your last 90 days of detention invoices.</strong> Pull every detention invoice you sent in the last quarter. Check which ones were paid, which were disputed, and which just… disappeared. The ones that disappeared are your recovery target for this month.</li>
+        </ol>
+        <p style="font-size:15px; color:rgba(23,21,19,.55); margin:16px 0 0">That's it. You've gone from "we bill what we remember" to a system that captures, invoices, and tracks every detention event. The first recovered invoice pays for the time you spent setting it up.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>How much detention pay are small carriers actually losing?</h3>
+        <p>For a 20-truck fleet averaging 3 detention events per truck per week at $75/hour with only 50% successfully collected, the math is stark: 20 trucks × 3 detentions × $75 × 52 weeks × 0.5 uncollected = $117,000/year in lost detention revenue. Even a 10-truck fleet loses roughly $58,500/year. The average small carrier recovers only 40% of detention fees owed because manual tracking — driver calls dispatcher, dispatcher emails broker, broker disputes timestamps, nobody follows up at 90 days — breaks at every link in the chain. Recovering just 1 extra detention invoice per truck per week at $75 × 50 trucks × 52 weeks = $195,000/year in additional revenue.</p>
+        <h3>How does the 4-step detention tracking system work without buying a TMS?</h3>
+        <p>Step 1: Auto-capture arrival and departure timestamps using your ELD's geofence data — no manual driver input. Step 2: Auto-generate a detention invoice with the correct rate ($25-100/hr based on equipment type), auto-calculated hours, and BOL/POD attached. Step 3: Auto-deliver the invoice to the broker via email with delivery tracking. Step 4: Auto-track payment status on a simple dashboard showing invoiced / acknowledged / disputed / paid, flagging anything past 45 days. The tech stack: Google Sheets + automation platform + Gmail + your ELD API. Total cost: $0-30/month. You don't need a $500/month TMS — you need a repeatable system for the 4 steps every TMS vendor has spent years making complicated.</p>
+        <h3>How long does it take to set up an automated detention tracking system and what's the ROI?</h3>
+        <p>A lightweight spreadsheet + email template system can be set up in an afternoon — create a timestamp log, an invoice template, and a weekly payment tracking sheet. The full automated system (ELD geofence → auto-invoice → broker email → payment dashboard) takes 2-4 weeks to build and integrate, depending on your ELD provider and broker volume. ROI is immediate: the first recovered detention invoice — typically $150-400 for a single event — covers the setup cost. For a 20-truck fleet, improving from 50% to 80% collection rate on detention adds roughly $70,000/year to the bottom line. Jobs Done Labs prices every build against a hard ROI target, and our engagements are covered by the $30K-recovered-in-90-days guarantee: if documented recovery doesn't reach $30K, you pay nothing.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/trucking-fuel-receipts-expense-tracking-fix/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <span class="title">You're Still Keeping Fuel Receipts in a Shoe Box — Here's How to Actually Fix It</span>
+          </a>
+          <a class="related-card" href="/case-study/logistics-200k-profit/">
+            <span class="cat">Case Study</span>
+            <span class="title">How One Logistics Company Recovered $200K in Year-One Profit</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Stop leaving detention pay at the dock</h2>
+        <p>Book a free 30-minute automation audit. We'll map your detention workflow end-to-end — from ELD timestamps to broker payment — and show you exactly where the money is leaking. No pitch, no pressure. You keep the map either way.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+    
+<section class="related-reading">
+<h2>Related reading</h2>
+<p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+<ul style="list-style:none;padding:0;margin:0">
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/truck-fleet-maintenance-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Fleet Maintenance 'System' Is Two Spreadsheets, a Whiteboard, and Drivers Who Text You at 2 ...</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Still Keeping Fuel Receipts in a Shoe Box — Here's How to Actually Fix It</a>
+  </li>
+</ul>
+</section>
+
+</article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
