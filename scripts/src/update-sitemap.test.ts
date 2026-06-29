@@ -1,6 +1,10 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { tmpdir } from "node:os";
 import { validateSitemap } from "./sitemap-validator.js";
 import { collapseBlankLines, findUnregisteredSitemapUrls } from "./sitemap-utils.js";
+import { runUpdateSitemap } from "./update-sitemap.js";
 
 const BASE = "https://www.example.com";
 
@@ -370,5 +374,219 @@ describe("collapseBlankLines — blank-line cleanup after entry removal", () => 
     expect(result).not.toMatch(/\n\n\n/);
     expect(result).toContain("a");
     expect(result).toContain("b");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// runUpdateSitemap — end-to-end integration tests
+// ---------------------------------------------------------------------------
+
+/**
+ * Exercise the full update-sitemap pipeline (file I/O, blog-date extraction,
+ * entry insertion/removal, and the final validateSitemap call) against
+ * minimal fixture directories in a temp folder.
+ */
+describe("runUpdateSitemap — end-to-end integration", () => {
+  let tmpDir: string;
+
+  afterEach(() => {
+    if (tmpDir) rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  function setup(): { publicDir: string; blogDir: string; sitemapPath: string } {
+    tmpDir = mkdtempSync(join(tmpdir(), "sitemap-test-"));
+    const publicDir = join(tmpDir, "public");
+    const blogDir = join(publicDir, "blog");
+    mkdirSync(blogDir, { recursive: true });
+    return { publicDir, blogDir, sitemapPath: join(publicDir, "sitemap.xml") };
+  }
+
+  function blogHtml(dateModified?: string, datePublished?: string): string {
+    const fields: string[] = [];
+    if (dateModified) fields.push(`"dateModified": "${dateModified}"`);
+    if (datePublished) fields.push(`"datePublished": "${datePublished}"`);
+    const ld = `{ "@type": "Article"${fields.length ? ", " + fields.join(", ") : ""} }`;
+    return `<html><head><script type="application/ld+json">${ld}</script></head><body></body></html>`;
+  }
+
+  function pageHtml(): string {
+    return `<html><head></head><body></body></html>`;
+  }
+
+  const IBASE = "https://www.example.com";
+
+  function makeSitemap(...blocks: string[]): string {
+    return [
+      `<?xml version="1.0" encoding="UTF-8"?>`,
+      `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
+      ...blocks,
+      `</urlset>`,
+    ].join("\n");
+  }
+
+  function urlBlock(loc: string, lastmod?: string): string {
+    return [
+      "  <url>",
+      `    <loc>${loc}</loc>`,
+      lastmod ? `    <lastmod>${lastmod}</lastmod>` : "",
+      "  </url>",
+    ]
+      .filter(Boolean)
+      .join("\n");
+  }
+
+  it("updates lastmod for an existing blog post using dateModified from JSON-LD", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+    mkdirSync(join(blogDir, "hello-world"));
+    writeFileSync(join(blogDir, "hello-world", "index.html"), blogHtml("2024-03-15"));
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/hello-world/`, "2024-01-01")
+      )
+    );
+
+    runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir });
+
+    const result = readFileSync(sitemapPath, "utf-8");
+    expect(result).toContain("<lastmod>2024-03-15</lastmod>");
+    expect(result).toContain(`<loc>${IBASE}/blog/hello-world/</loc>`);
+  });
+
+  it("falls back to datePublished when dateModified is absent", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+    mkdirSync(join(blogDir, "pub-only"));
+    writeFileSync(join(blogDir, "pub-only", "index.html"), blogHtml(undefined, "2024-06-01"));
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/pub-only/`, "2024-01-01")
+      )
+    );
+
+    runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir });
+
+    const result = readFileSync(sitemapPath, "utf-8");
+    expect(result).toContain("<lastmod>2024-06-01</lastmod>");
+  });
+
+  it("inserts a new <url> entry for a blog post not yet in the sitemap", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+    mkdirSync(join(blogDir, "brand-new-post"));
+    writeFileSync(join(blogDir, "brand-new-post", "index.html"), blogHtml("2024-09-10"));
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    writeFileSync(sitemapPath, makeSitemap(urlBlock(`${IBASE}/`, "2024-01-01")));
+
+    runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir });
+
+    const result = readFileSync(sitemapPath, "utf-8");
+    expect(result).toContain(`<loc>${IBASE}/blog/brand-new-post/</loc>`);
+    expect(result).toContain("<lastmod>2024-09-10</lastmod>");
+  });
+
+  it("removes a stale blog entry whose directory no longer exists on disk", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+    mkdirSync(join(blogDir, "active-post"));
+    writeFileSync(join(blogDir, "active-post", "index.html"), blogHtml("2024-04-01"));
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/active-post/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/deleted-post/`, "2023-12-01")
+      )
+    );
+
+    runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir });
+
+    const result = readFileSync(sitemapPath, "utf-8");
+    expect(result).not.toContain(`<loc>${IBASE}/blog/deleted-post/</loc>`);
+    expect(result).toContain(`<loc>${IBASE}/blog/active-post/</loc>`);
+  });
+
+  it("auto-discovers a non-blog page in public/ and includes it in the output", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+    const aboutDir = join(publicDir, "about");
+    mkdirSync(aboutDir, { recursive: true });
+    mkdirSync(join(blogDir, "some-post"));
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    writeFileSync(join(aboutDir, "index.html"), pageHtml());
+    writeFileSync(join(blogDir, "some-post", "index.html"), blogHtml("2024-05-05"));
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/about/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/some-post/`, "2024-01-01")
+      )
+    );
+
+    runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir });
+
+    const result = readFileSync(sitemapPath, "utf-8");
+    expect(result).toContain(`<loc>${IBASE}/about/</loc>`);
+    expect(result).toContain(`<loc>${IBASE}/blog/some-post/</loc>`);
+    expect(result).toContain("<lastmod>2024-05-05</lastmod>");
+  });
+
+  it("produces a sitemap that passes validateSitemap end-to-end (wiring check)", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+    mkdirSync(join(blogDir, "post-a"));
+    mkdirSync(join(blogDir, "post-b"));
+    writeFileSync(join(blogDir, "post-a", "index.html"), blogHtml("2024-01-10"));
+    writeFileSync(join(blogDir, "post-b", "index.html"), blogHtml("2024-02-20"));
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/post-a/`, "2023-01-01")
+      )
+    );
+
+    // Should not throw — the internal validateSitemap call is the real check.
+    expect(() =>
+      runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir })
+    ).not.toThrow();
+
+    // Also verify the written content directly.
+    const result = readFileSync(sitemapPath, "utf-8");
+    expect(result).toContain("<lastmod>2024-01-10</lastmod>");
+    expect(result).toContain("<lastmod>2024-02-20</lastmod>");
+    expect(result).toContain(`<loc>${IBASE}/blog/post-a/</loc>`);
+    expect(result).toContain(`<loc>${IBASE}/blog/post-b/</loc>`);
+  });
+
+  it("uses a nonBlogPageOverride file path when supplied (absolute path)", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+    mkdirSync(join(blogDir, "override-post"));
+    writeFileSync(join(blogDir, "override-post", "index.html"), blogHtml("2024-07-07"));
+    // Homepage lives outside publicDir — simulate with an absolute file path override.
+    const homeHtml = join(tmpDir, "index.html");
+    writeFileSync(homeHtml, pageHtml());
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/override-post/`, "2024-01-01")
+      )
+    );
+
+    runUpdateSitemap({
+      sitemapPath,
+      publicDir,
+      baseUrl: IBASE,
+      repoRoot: tmpDir,
+      nonBlogPageOverrides: { [`${IBASE}/`]: { file: homeHtml } },
+    });
+
+    const result = readFileSync(sitemapPath, "utf-8");
+    expect(result).toContain(`<loc>${IBASE}/</loc>`);
+    expect(result).toContain(`<loc>${IBASE}/blog/override-post/</loc>`);
   });
 });

@@ -28,53 +28,67 @@ import { collapseBlankLines, findUnregisteredSitemapUrls } from "./sitemap-utils
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "../..");
 
-const SITEMAP_PATH = join(
+const DEFAULT_SITEMAP_PATH = join(
   REPO_ROOT,
   "artifacts/landing-page/public/sitemap.xml"
 );
-const PUBLIC_DIR = join(REPO_ROOT, "artifacts/landing-page/public");
-const BLOG_DIR = join(PUBLIC_DIR, "blog");
-const BASE_URL = "https://www.jobsdonelabs.ai";
+const DEFAULT_PUBLIC_DIR = join(REPO_ROOT, "artifacts/landing-page/public");
+const DEFAULT_BASE_URL = "https://www.jobsdonelabs.ai";
 
 /**
  * Override metadata for pages whose HTML lives outside public/.
  * Auto-discovery covers everything inside public/; only add an entry here
  * when the HTML file is at a non-canonical location (e.g. the homepage).
  */
-const NON_BLOG_PAGE_OVERRIDES: Record<string, { file: string }> = {
-  [`${BASE_URL}/`]: {
+const DEFAULT_NON_BLOG_PAGE_OVERRIDES: Record<string, { file: string }> = {
+  [`${DEFAULT_BASE_URL}/`]: {
     file: "artifacts/landing-page/index.html",
   },
 };
 
-/**
- * Walks PUBLIC_DIR and returns one {url, file} entry per index.html found,
- * skipping blog-post subdirectories (direct children of BLOG_DIR — those
- * are handled by the blog-post logic).
- */
-function discoverNonBlogPages(): Array<{ url: string; file: string }> {
+export interface UpdateSitemapOptions {
+  sitemapPath: string;
+  publicDir: string;
+  baseUrl: string;
+  /**
+   * Map of canonical URL → absolute file path for pages whose HTML lives
+   * outside `publicDir` (e.g. the site root `index.html`).
+   * When omitted, no overrides are applied.
+   */
+  nonBlogPageOverrides?: Record<string, { file: string }>;
+  /**
+   * Root directory used to compute relative file paths in log output.
+   * Defaults to the repo root when not supplied.
+   */
+  repoRoot?: string;
+}
+
+function discoverNonBlogPages(
+  publicDir: string,
+  blogDir: string,
+  baseUrl: string,
+  repoRoot: string
+): Array<{ url: string; file: string }> {
   const pages: Array<{ url: string; file: string }> = [];
 
   function walk(dir: string): void {
     const entries = readdirSync(dir, { withFileTypes: true });
     for (const entry of entries) {
       if (entry.isDirectory()) {
-        // Blog post dirs live directly inside BLOG_DIR — skip them here.
-        if (dir === BLOG_DIR) continue;
+        if (dir === blogDir) continue;
         walk(join(dir, entry.name));
       } else if (entry.name === "index.html") {
         const absPath = join(dir, "index.html");
-        // Relative to PUBLIC_DIR: "" | "/about/ryne-bandolik" | "/blog" | …
-        const relToPublic = dir.slice(PUBLIC_DIR.length);
+        const relToPublic = dir.slice(publicDir.length);
         const urlPath = relToPublic ? `${relToPublic}/` : "/";
-        const url = `${BASE_URL}${urlPath}`;
-        const fileRelToRepo = absPath.slice(REPO_ROOT.length + 1);
+        const url = `${baseUrl}${urlPath}`;
+        const fileRelToRepo = absPath.slice(repoRoot.length + 1);
         pages.push({ url, file: fileRelToRepo });
       }
     }
   }
 
-  walk(PUBLIC_DIR);
+  walk(publicDir);
   return pages;
 }
 
@@ -99,131 +113,138 @@ function setLastmod(block: string, loc: string, date: string): string {
   );
 }
 
-const slugs = readdirSync(BLOG_DIR, { withFileTypes: true })
-  .filter((d) => d.isDirectory())
-  .map((d) => d.name);
+/**
+ * Core update logic — extracted so integration tests can inject fixture paths
+ * without touching the real sitemap or blog directory.
+ */
+export function runUpdateSitemap(opts: UpdateSitemapOptions): void {
+  const {
+    sitemapPath,
+    publicDir,
+    baseUrl,
+    nonBlogPageOverrides = {},
+    repoRoot = REPO_ROOT,
+  } = opts;
 
-const blogDates = new Map<string, string>();
-for (const slug of slugs) {
-  const htmlPath = join(BLOG_DIR, slug, "index.html");
-  const html = readFileSync(htmlPath, "utf-8");
-  blogDates.set(slug, extractDate(html, htmlPath));
-  console.log(`[update-sitemap]   ${slug}: ${blogDates.get(slug)}`);
-}
+  const blogDir = join(publicDir, "blog");
 
-// Discover non-blog pages from the public/ directory tree.
-const discoveredPages = discoverNonBlogPages();
+  const slugs = readdirSync(blogDir, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name);
 
-// Build the final url→file map: start from discovered pages, then apply
-// overrides (which can supply a custom file path or add pages outside public/).
-const allNonBlogFiles = new Map<string, string>(); // url → file (relative to REPO_ROOT)
-
-for (const { url, file } of discoveredPages) {
-  const override = NON_BLOG_PAGE_OVERRIDES[url];
-  allNonBlogFiles.set(url, override?.file ?? file);
-}
-
-// Add override entries that discovery didn't cover (e.g. homepage lives outside public/).
-for (const [url, meta] of Object.entries(NON_BLOG_PAGE_OVERRIDES)) {
-  if (!allNonBlogFiles.has(url)) {
-    allNonBlogFiles.set(url, meta.file);
-  }
-}
-
-const sitemap = readFileSync(SITEMAP_PATH, "utf-8");
-
-// Split into alternating [non-url-text, <url>…</url>, non-url-text, …].
-// The capturing group keeps each URL block as its own element so we can
-// update it in isolation — no regex can accidentally span two blocks.
-const parts = sitemap.split(/(<url>[\s\S]*?<\/url>)/g);
-
-const existingSlugs = new Set<string>();
-let removedCount = 0;
-
-// Matches a blog-post <loc> like https://www.jobsdonelabs.ai/blog/<slug>/
-// The blog index (/blog/) has an empty capture group and is intentionally excluded.
-const BLOG_POST_LOC_RE = new RegExp(
-  `<loc>${BASE_URL.replace(".", "\\.")}/blog/([^/]+)/</loc>`
-);
-
-// Build a lookup from URL → date for non-blog pages so we can update them
-// in a single pass over the parts array alongside blog-post updates.
-const nonBlogDates = new Map<string, string>();
-for (const [url, file] of allNonBlogFiles) {
-  const filePath = join(REPO_ROOT, file);
-  const html = readFileSync(filePath, "utf-8");
-  const date = extractDate(html, filePath);
-  nonBlogDates.set(url, date);
-  console.log(`[update-sitemap]   ${url}: ${date}`);
-}
-
-for (let i = 0; i < parts.length; i++) {
-  const part = parts[i];
-  if (!part.startsWith("<url>")) continue;
-
-  const blogMatch = part.match(BLOG_POST_LOC_RE);
-  if (blogMatch) {
-    const slugInSitemap = blogMatch[1];
-    if (blogDates.has(slugInSitemap)) {
-      // Slug still exists on disk — update lastmod as before.
-      existingSlugs.add(slugInSitemap);
-      const loc = `${BASE_URL}/blog/${slugInSitemap}/`;
-      parts[i] = setLastmod(part, loc, blogDates.get(slugInSitemap)!);
-    } else {
-      // Slug no longer exists on disk — remove the entry.
-      console.log(`[update-sitemap]   removing stale entry: /blog/${slugInSitemap}/`);
-      parts[i] = "";
-      removedCount++;
-    }
-    continue;
+  const blogDates = new Map<string, string>();
+  for (const slug of slugs) {
+    const htmlPath = join(blogDir, slug, "index.html");
+    const html = readFileSync(htmlPath, "utf-8");
+    blogDates.set(slug, extractDate(html, htmlPath));
+    console.log(`[update-sitemap]   ${slug}: ${blogDates.get(slug)}`);
   }
 
-  // Check whether this block matches a non-blog page.
-  let matchedNonBlog = false;
-  for (const [url, date] of nonBlogDates) {
-    if (part.includes(`<loc>${url}</loc>`)) {
-      parts[i] = setLastmod(part, url, date);
-      matchedNonBlog = true;
-      break;
+  const discoveredPages = discoverNonBlogPages(publicDir, blogDir, baseUrl, repoRoot);
+
+  const allNonBlogFiles = new Map<string, string>();
+
+  for (const { url, file } of discoveredPages) {
+    const override = nonBlogPageOverrides[url];
+    allNonBlogFiles.set(url, override?.file ?? file);
+  }
+
+  for (const [url, meta] of Object.entries(nonBlogPageOverrides)) {
+    if (!allNonBlogFiles.has(url)) {
+      allNonBlogFiles.set(url, meta.file);
     }
   }
-}
 
-// Warn about any sitemap URL that is neither a known non-blog page nor a blog post.
-for (const loc of findUnregisteredSitemapUrls(sitemap, nonBlogDates, BASE_URL)) {
-  console.warn(
-    `[update-sitemap] ⚠ WARNING: sitemap URL not found on disk — lastmod will not be updated: ${loc}`
+  const sitemap = readFileSync(sitemapPath, "utf-8");
+
+  const parts = sitemap.split(/(<url>[\s\S]*?<\/url>)/g);
+
+  const existingSlugs = new Set<string>();
+  let removedCount = 0;
+
+  const BLOG_POST_LOC_RE = new RegExp(
+    `<loc>${baseUrl.replace(/\./g, "\\.")}/blog/([^/]+)/</loc>`
+  );
+
+  const nonBlogDates = new Map<string, string>();
+  for (const [url, file] of allNonBlogFiles) {
+    const filePath = file.startsWith("/") ? file : join(repoRoot, file);
+    const html = readFileSync(filePath, "utf-8");
+    const date = extractDate(html, filePath);
+    nonBlogDates.set(url, date);
+    console.log(`[update-sitemap]   ${url}: ${date}`);
+  }
+
+  for (let i = 0; i < parts.length; i++) {
+    const part = parts[i];
+    if (!part.startsWith("<url>")) continue;
+
+    const blogMatch = part.match(BLOG_POST_LOC_RE);
+    if (blogMatch) {
+      const slugInSitemap = blogMatch[1];
+      if (blogDates.has(slugInSitemap)) {
+        existingSlugs.add(slugInSitemap);
+        const loc = `${baseUrl}/blog/${slugInSitemap}/`;
+        parts[i] = setLastmod(part, loc, blogDates.get(slugInSitemap)!);
+      } else {
+        console.log(`[update-sitemap]   removing stale entry: /blog/${slugInSitemap}/`);
+        parts[i] = "";
+        removedCount++;
+      }
+      continue;
+    }
+
+    for (const [url, date] of nonBlogDates) {
+      if (part.includes(`<loc>${url}</loc>`)) {
+        parts[i] = setLastmod(part, url, date);
+        break;
+      }
+    }
+  }
+
+  for (const loc of findUnregisteredSitemapUrls(sitemap, nonBlogDates, baseUrl)) {
+    console.warn(
+      `[update-sitemap] ⚠ WARNING: sitemap URL not found on disk — lastmod will not be updated: ${loc}`
+    );
+  }
+
+  const newEntries: string[] = [];
+  for (const [slug, date] of blogDates) {
+    if (!existingSlugs.has(slug)) {
+      const loc = `${baseUrl}/blog/${slug}/`;
+      newEntries.push(
+        [
+          "  <url>",
+          `    <loc>${loc}</loc>`,
+          `    <lastmod>${date}</lastmod>`,
+          "    <changefreq>monthly</changefreq>",
+          "    <priority>0.8</priority>",
+          "  </url>",
+        ].join("\n")
+      );
+    }
+  }
+
+  let updated = collapseBlankLines(parts.join(""));
+  if (newEntries.length > 0) {
+    updated = updated.replace("</urlset>", newEntries.join("\n") + "\n</urlset>");
+  }
+
+  validateSitemap(updated, nonBlogDates, blogDates, baseUrl);
+
+  writeFileSync(sitemapPath, updated, "utf-8");
+
+  console.log(
+    `[update-sitemap] ✓ sitemap.xml updated — ${blogDates.size} blog post(s) and ${nonBlogDates.size} non-blog page(s) processed` +
+      (newEntries.length > 0 ? `, ${newEntries.length} new entry added` : "") +
+      (removedCount > 0 ? `, ${removedCount} stale entry removed` : "")
   );
 }
 
-const newEntries: string[] = [];
-for (const [slug, date] of blogDates) {
-  if (!existingSlugs.has(slug)) {
-    const loc = `${BASE_URL}/blog/${slug}/`;
-    newEntries.push(
-      [
-        "  <url>",
-        `    <loc>${loc}</loc>`,
-        `    <lastmod>${date}</lastmod>`,
-        "    <changefreq>monthly</changefreq>",
-        "    <priority>0.8</priority>",
-        "  </url>",
-      ].join("\n")
-    );
-  }
-}
-
-let updated = collapseBlankLines(parts.join(""));
-if (newEntries.length > 0) {
-  updated = updated.replace("</urlset>", newEntries.join("\n") + "\n</urlset>");
-}
-
-validateSitemap(updated, nonBlogDates, blogDates, BASE_URL);
-
-writeFileSync(SITEMAP_PATH, updated, "utf-8");
-
-console.log(
-  `[update-sitemap] ✓ sitemap.xml updated — ${blogDates.size} blog post(s) and ${nonBlogDates.size} non-blog page(s) processed` +
-    (newEntries.length > 0 ? `, ${newEntries.length} new entry added` : "") +
-    (removedCount > 0 ? `, ${removedCount} stale entry removed` : "")
-);
+runUpdateSitemap({
+  sitemapPath: DEFAULT_SITEMAP_PATH,
+  publicDir: DEFAULT_PUBLIC_DIR,
+  baseUrl: DEFAULT_BASE_URL,
+  nonBlogPageOverrides: DEFAULT_NON_BLOG_PAGE_OVERRIDES,
+  repoRoot: REPO_ROOT,
+});
