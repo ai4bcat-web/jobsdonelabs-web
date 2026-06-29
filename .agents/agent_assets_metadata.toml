@@ -77,3 +77,9 @@ id = "lW09_TR8-a6M1mIB_X6vl"
 uri = "file://artifacts/landing-page/public/og-image.png"
 type = "image"
 title = "Updated Facebook Preview Image (1200×630)"
+
+[[outputs]]
+id = "0e1Lf6lRX_0jGilfwnt0S"
+uri = "file://artifacts/landing-page/public/hero-diagram.png"
+type = "image"
+title = "Hero diagram (old funnel image)"
