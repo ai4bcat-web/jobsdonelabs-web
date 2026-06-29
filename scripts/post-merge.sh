@@ -7,7 +7,7 @@ pnpm --filter @workspace/scripts run update-sitemap
 pnpm --filter @workspace/scripts run inject-og-dimensions
 
 # Generate OG images for any blog posts that are missing one
-pnpm --filter @workspace/scripts run gen-og -- --missing
+pnpm --filter @workspace/scripts run gen-og --missing
 
 # --- Commit and push newly generated og.png files ---
 # Uses a pull --rebase retry to handle the case where a human pushed an og.png
