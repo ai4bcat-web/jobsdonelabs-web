@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { validateSitemap } from "./sitemap-validator.js";
+import { collapseBlankLines } from "./sitemap-utils.js";
 
 const BASE = "https://www.example.com";
 
@@ -213,5 +214,84 @@ describe("validateSitemap — multiple simultaneous failures", () => {
     expect(err?.message).toMatch(/missing-page|missing/i);
     expect(err?.message).toMatch(/no-lastmod.*missing a valid <lastmod>/);
     expect(err?.message).toMatch(/Duplicate <loc>/);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// collapseBlankLines — blank-line cleanup after a <url> block is removed
+// ---------------------------------------------------------------------------
+
+/**
+ * Simulates what update-sitemap.ts does when it removes a <url> block:
+ *   parts[i] = ""  →  parts.join("")  →  collapseBlankLines(…)
+ *
+ * The sitemap helper here produces the same separator style the real file
+ * uses (one blank line between blocks), so we can verify the full round-trip.
+ */
+function joinAndCollapse(...parts: string[]): string {
+  return collapseBlankLines(parts.join(""));
+}
+
+describe("collapseBlankLines — blank-line cleanup after entry removal", () => {
+  it("removes extra blank lines when the middle entry is deleted", () => {
+    const before = "\n\n  <url>\n    <loc>https://x.com/a/</loc>\n  </url>\n\n";
+    const deleted = "";
+    const after = "\n\n  <url>\n    <loc>https://x.com/c/</loc>\n  </url>\n\n";
+
+    const result = joinAndCollapse(before, deleted, after);
+
+    const consecutive = result.match(/\n(\s*\n)+/g) ?? [];
+    const maxRun = Math.max(...consecutive.map((s) => (s.match(/\n/g) ?? []).length));
+    expect(maxRun).toBeLessThanOrEqual(2);
+  });
+
+  it("does not produce 3+ consecutive newlines anywhere in the output", () => {
+    const blocks = [
+      "\n\n  <url>\n    <loc>https://x.com/1/</loc>\n  </url>\n\n",
+      "",
+      "\n\n  <url>\n    <loc>https://x.com/2/</loc>\n  </url>\n\n",
+      "",
+      "\n\n  <url>\n    <loc>https://x.com/3/</loc>\n  </url>\n\n",
+    ];
+
+    const result = collapseBlankLines(blocks.join(""));
+
+    expect(result).not.toMatch(/\n\n\n/);
+  });
+
+  it("preserves the loc URLs of non-removed entries after cleanup", () => {
+    // Simulate the real split/join structure: the whitespace lives in the
+    // separator parts (not attached to the <url> blocks themselves), which
+    // is exactly what sitemap.split(/(<url>[\s\S]*?<\/url>)/g) produces.
+    const sep = "\n  ";
+    const block1 = "<url>\n    <loc>https://x.com/kept-a/</loc>\n  </url>";
+    const block2 = "<url>\n    <loc>https://x.com/kept-b/</loc>\n  </url>";
+    const removed = "";
+
+    // sep + block1 + sep + removed + sep + block2 + sep
+    const raw = sep + block1 + sep + removed + sep + block2 + sep;
+    const result = collapseBlankLines(raw);
+
+    expect(result).toContain("<loc>https://x.com/kept-a/</loc>");
+    expect(result).toContain("<loc>https://x.com/kept-b/</loc>");
+  });
+
+  it("leaves output unchanged when there are no consecutive blank lines", () => {
+    const clean = "line1\n\nline2\n\nline3\n";
+    expect(collapseBlankLines(clean)).toBe(clean);
+  });
+
+  it("collapses a run of 4 newlines down to exactly 2", () => {
+    const input = "a\n\n\n\nb";
+    const result = collapseBlankLines(input);
+    expect(result).toBe("a\n\nb");
+  });
+
+  it("collapses blank lines that contain only spaces or tabs", () => {
+    const input = "a\n   \n\t\nb";
+    const result = collapseBlankLines(input);
+    expect(result).not.toMatch(/\n\n\n/);
+    expect(result).toContain("a");
+    expect(result).toContain("b");
   });
 });

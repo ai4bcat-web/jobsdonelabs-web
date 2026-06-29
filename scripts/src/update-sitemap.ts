@@ -18,6 +18,7 @@ import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateSitemap } from "./sitemap-validator.js";
+import { collapseBlankLines } from "./sitemap-utils.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "../..");
@@ -171,11 +172,7 @@ for (const [slug, date] of blogDates) {
   }
 }
 
-let updated = parts.join("");
-// Remove blank lines left behind when a <url> block is deleted (parts[i] = "").
-// The separator text on either side of the removed block remains, producing
-// two adjacent whitespace-only lines. Collapse ≥3 consecutive newlines to 2.
-updated = updated.replace(/(\n[ \t]*){3,}/g, "\n\n");
+let updated = collapseBlankLines(parts.join(""));
 if (newEntries.length > 0) {
   updated = updated.replace("</urlset>", newEntries.join("\n") + "\n</urlset>");
 }
