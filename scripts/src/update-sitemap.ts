@@ -8,8 +8,13 @@
  *      the segment whose <loc> matches the page — no cross-block regex bleed.
  *   4. Inserts a new <url> entry for any blog post not yet in the sitemap.
  *
- * Non-blog pages (homepage, blog index, case study, about) are also refreshed
- * using the same date-extraction logic via the NON_BLOG_PAGES map below.
+ * Non-blog pages are discovered automatically by walking public/ for index.html
+ * files and deriving their canonical URL from the path. Blog-post subdirectories
+ * (direct children of public/blog/) are excluded from this scan.
+ *
+ * NON_BLOG_PAGE_OVERRIDES supplies metadata only for pages whose HTML lives
+ * outside public/ (e.g. the homepage). No config edits are needed when a new
+ * public/ page lands.
  *
  * Run automatically via scripts/post-merge.sh before the sitemap ping.
  */
@@ -27,31 +32,51 @@ const SITEMAP_PATH = join(
   REPO_ROOT,
   "artifacts/landing-page/public/sitemap.xml"
 );
-const BLOG_DIR = join(REPO_ROOT, "artifacts/landing-page/public/blog");
+const PUBLIC_DIR = join(REPO_ROOT, "artifacts/landing-page/public");
+const BLOG_DIR = join(PUBLIC_DIR, "blog");
 const BASE_URL = "https://www.jobsdonelabs.ai";
 
 /**
- * Maps each non-blog sitemap URL to its corresponding HTML file path
- * (relative to REPO_ROOT). Add new pages here to keep them auto-dated.
+ * Override metadata for pages whose HTML lives outside public/.
+ * Auto-discovery covers everything inside public/; only add an entry here
+ * when the HTML file is at a non-canonical location (e.g. the homepage).
  */
-const NON_BLOG_PAGES: Array<{ url: string; file: string }> = [
-  {
-    url: `${BASE_URL}/`,
+const NON_BLOG_PAGE_OVERRIDES: Record<string, { file: string }> = {
+  [`${BASE_URL}/`]: {
     file: "artifacts/landing-page/index.html",
   },
-  {
-    url: `${BASE_URL}/blog/`,
-    file: "artifacts/landing-page/public/blog/index.html",
-  },
-  {
-    url: `${BASE_URL}/case-study/logistics-200k-profit/`,
-    file: "artifacts/landing-page/public/case-study/logistics-200k-profit/index.html",
-  },
-  {
-    url: `${BASE_URL}/about/ryne-bandolik/`,
-    file: "artifacts/landing-page/public/about/ryne-bandolik/index.html",
-  },
-];
+};
+
+/**
+ * Walks PUBLIC_DIR and returns one {url, file} entry per index.html found,
+ * skipping blog-post subdirectories (direct children of BLOG_DIR — those
+ * are handled by the blog-post logic).
+ */
+function discoverNonBlogPages(): Array<{ url: string; file: string }> {
+  const pages: Array<{ url: string; file: string }> = [];
+
+  function walk(dir: string): void {
+    const entries = readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        // Blog post dirs live directly inside BLOG_DIR — skip them here.
+        if (dir === BLOG_DIR) continue;
+        walk(join(dir, entry.name));
+      } else if (entry.name === "index.html") {
+        const absPath = join(dir, "index.html");
+        // Relative to PUBLIC_DIR: "" | "/about/ryne-bandolik" | "/blog" | …
+        const relToPublic = dir.slice(PUBLIC_DIR.length);
+        const urlPath = relToPublic ? `${relToPublic}/` : "/";
+        const url = `${BASE_URL}${urlPath}`;
+        const fileRelToRepo = absPath.slice(REPO_ROOT.length + 1);
+        pages.push({ url, file: fileRelToRepo });
+      }
+    }
+  }
+
+  walk(PUBLIC_DIR);
+  return pages;
+}
 
 function extractDate(html: string, filePath: string): string {
   const modMatch = html.match(/"dateModified"\s*:\s*"(\d{4}-\d{2}-\d{2})"/);
@@ -86,6 +111,25 @@ for (const slug of slugs) {
   console.log(`[update-sitemap]   ${slug}: ${blogDates.get(slug)}`);
 }
 
+// Discover non-blog pages from the public/ directory tree.
+const discoveredPages = discoverNonBlogPages();
+
+// Build the final url→file map: start from discovered pages, then apply
+// overrides (which can supply a custom file path or add pages outside public/).
+const allNonBlogFiles = new Map<string, string>(); // url → file (relative to REPO_ROOT)
+
+for (const { url, file } of discoveredPages) {
+  const override = NON_BLOG_PAGE_OVERRIDES[url];
+  allNonBlogFiles.set(url, override?.file ?? file);
+}
+
+// Add override entries that discovery didn't cover (e.g. homepage lives outside public/).
+for (const [url, meta] of Object.entries(NON_BLOG_PAGE_OVERRIDES)) {
+  if (!allNonBlogFiles.has(url)) {
+    allNonBlogFiles.set(url, meta.file);
+  }
+}
+
 const sitemap = readFileSync(SITEMAP_PATH, "utf-8");
 
 // Split into alternating [non-url-text, <url>…</url>, non-url-text, …].
@@ -105,7 +149,7 @@ const BLOG_POST_LOC_RE = new RegExp(
 // Build a lookup from URL → date for non-blog pages so we can update them
 // in a single pass over the parts array alongside blog-post updates.
 const nonBlogDates = new Map<string, string>();
-for (const { url, file } of NON_BLOG_PAGES) {
+for (const [url, file] of allNonBlogFiles) {
   const filePath = join(REPO_ROOT, file);
   const html = readFileSync(filePath, "utf-8");
   const date = extractDate(html, filePath);
@@ -145,12 +189,12 @@ for (let i = 0; i < parts.length; i++) {
   }
 
   if (!matchedNonBlog) {
-    // Extract the <loc> value for a helpful warning message.
+    // This sitemap URL is neither a known blog post nor a discoverable non-blog
+    // page — it may be stale or point to a file that no longer exists.
     const locMatch = part.match(/<loc>([^<]+)<\/loc>/);
     const loc = locMatch ? locMatch[1] : "(unknown loc)";
     console.warn(
-      `[update-sitemap] ⚠ WARNING: sitemap URL not in NON_BLOG_PAGES and not a blog post — lastmod will not be updated: ${loc}\n` +
-        `  Add an entry for this URL to the NON_BLOG_PAGES array in scripts/src/update-sitemap.ts`
+      `[update-sitemap] ⚠ WARNING: sitemap URL not found on disk — lastmod will not be updated: ${loc}`
     );
   }
 }
@@ -186,4 +230,3 @@ console.log(
     (newEntries.length > 0 ? `, ${newEntries.length} new entry added` : "") +
     (removedCount > 0 ? `, ${removedCount} stale entry removed` : "")
 );
-
