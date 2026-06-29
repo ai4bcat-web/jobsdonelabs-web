@@ -179,9 +179,9 @@ if (newEntries.length > 0) {
   updated = updated.replace("</urlset>", newEntries.join("\n") + "\n</urlset>");
 }
 
-writeFileSync(SITEMAP_PATH, updated, "utf-8");
-
 validateSitemap(updated, nonBlogDates, blogDates);
+
+writeFileSync(SITEMAP_PATH, updated, "utf-8");
 
 console.log(
   `[update-sitemap] ✓ sitemap.xml updated — ${blogDates.size} blog post(s) and ${nonBlogDates.size} non-blog page(s) processed` +
