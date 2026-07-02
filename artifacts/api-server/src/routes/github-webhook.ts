@@ -26,6 +26,27 @@ function verifySignature(
   }
 }
 
+/**
+ * Returns true when the push was made by the Replit bot (e.g. the og.png
+ * auto-commit).  Bot commits carry "[skip ci]" in their message, which is the
+ * conventional marker for "do not trigger automated pipelines for this push".
+ *
+ * Detecting this prevents an infinite webhook loop:
+ *   human push → webhook → git pull → post-merge generates og.png
+ *   → bot push → webhook → (this guard fires) → skipped, no git pull
+ *
+ * Exported for unit testing.
+ */
+export function isBotPush(event: Record<string, unknown>): boolean {
+  const headCommit = event.head_commit as
+    | Record<string, unknown>
+    | null
+    | undefined;
+  const message =
+    typeof headCommit?.message === "string" ? headCommit.message : "";
+  return message.includes("[skip ci]");
+}
+
 router.post("/github-webhook", async (req: Request, res: Response) => {
   const secret = process.env.GITHUB_WEBHOOK_SECRET;
   if (!secret) {
@@ -62,6 +83,12 @@ router.post("/github-webhook", async (req: Request, res: Response) => {
   const ref = event.ref as string | undefined;
   if (!ref?.endsWith("/main")) {
     res.status(200).json({ message: `Ignored push to ${ref ?? "unknown ref"}` });
+    return;
+  }
+
+  if (isBotPush(event)) {
+    logger.info("Skipping bot push ([skip ci] detected) — no git pull triggered");
+    res.status(200).json({ message: "Skipped bot push" });
     return;
   }
 
