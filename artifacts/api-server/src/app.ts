@@ -7,6 +7,9 @@ import { logger } from "./lib/logger";
 
 const app: Express = express();
 
+// Trust Google Frontend proxy headers (X-Forwarded-Host, etc.)
+app.set("trust proxy", true);
+
 app.use(
   pinoHttp({
     logger,
