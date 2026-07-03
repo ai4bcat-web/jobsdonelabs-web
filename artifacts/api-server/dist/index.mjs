@@ -32376,6 +32376,15 @@ router2.post("/github-webhook", async (req, res) => {
     path.join("artifacts", "api-server")
   ) ? path.resolve(process.cwd(), "../..") : process.cwd();
   try {
+    await execAsync("git rev-parse --git-dir", { cwd: workspaceRoot2 });
+  } catch {
+    logger.warn(
+      { workspaceRoot: workspaceRoot2 },
+      "Not a git repository \u2014 skipping pull (production environment)"
+    );
+    return;
+  }
+  try {
     const { stdout, stderr } = await execAsync(
       "git pull -X ours",
       { cwd: workspaceRoot2 }
