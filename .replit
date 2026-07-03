@@ -5,6 +5,10 @@ router = "application"
 deploymentTarget = "autoscale"
 run = ["node", "artifacts/landing-page/server.mjs"]
 
+[deployment.build]
+args = ["pnpm", "--filter", "api-server", "build"]
+env = { "CI" = "true" }
+
 [deployment.postBuild]
 args = ["pnpm", "store", "prune"]
 env = { "CI" = "true" }
