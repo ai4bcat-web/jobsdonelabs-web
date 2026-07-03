@@ -26,12 +26,54 @@ if (!basePath) {
   );
 }
 
+const wwwRedirectMiddleware = (
+  req: { headers: Record<string, string | string[] | undefined>; url?: string },
+  res: {
+    writeHead: (status: number, headers: Record<string, string>) => void;
+    end: () => void;
+  },
+  next: () => void,
+) => {
+  const host = (req.headers["x-forwarded-host"] as string) || req.headers.host || "";
+  const hostname =
+    typeof host === "string" ? host.split(":")[0] : String(host).split(":")[0];
+
+  // Only redirect if it's the bare domain (non-www), not localhost or Replit domains
+  if (
+    hostname === "jobsdonelabs.ai" ||
+    hostname.endsWith(".jobsdonelabs.ai")
+  ) {
+    const target =
+      "www." +
+      hostname.replace(/^(www\.)?/, "");
+    const port = typeof host === "string" && host.includes(":") ? host.split(":")[1] : "";
+    const location = `https://${target}${port ? ":" + port : ""}${req.url || "/"}`;
+    res.writeHead(301, { Location: location });
+    res.end();
+    return;
+  }
+  next();
+};
+
+function wwwRedirectPlugin() {
+  return {
+    name: "www-redirect",
+    configureServer(server: any) {
+      server.middlewares.use(wwwRedirectMiddleware);
+    },
+    configurePreviewServer(server: any) {
+      server.middlewares.use(wwwRedirectMiddleware);
+    },
+  };
+}
+
 export default defineConfig({
   base: basePath,
   plugins: [
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),
+    wwwRedirectPlugin(),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [
