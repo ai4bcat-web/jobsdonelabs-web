@@ -31,6 +31,20 @@ app.use("/api/github-webhook", express.raw({ type: "application/json" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Redirect non-www → www (301) for all requests
+app.use((req, res, next) => {
+  const hostname = (req.hostname || req.get("host") || "").split(":")[0];
+  if (
+    hostname === "jobsdonelabs.ai" ||
+    (hostname.endsWith(".jobsdonelabs.ai") && !hostname.startsWith("www."))
+  ) {
+    const target = "www." + hostname.replace(/^(www\.)?/, "");
+    const location = `https://${target}${req.originalUrl}`;
+    return res.redirect(301, location);
+  }
+  next();
+});
+
 app.use(blogRouter);
 app.use("/api", router);
 
