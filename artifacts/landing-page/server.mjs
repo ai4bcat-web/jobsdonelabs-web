@@ -10,7 +10,11 @@ import { join, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
-const publicDir = join(__dirname, "dist", "public");
+// Serve from public/ (pre-built static HTML files committed to repo)
+// Falls back to dist/public/ if it exists (Vite build output)
+const distPublic = join(__dirname, "dist", "public");
+const staticPublic = join(__dirname, "public");
+const publicDir = existsSync(distPublic) ? distPublic : staticPublic;
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
