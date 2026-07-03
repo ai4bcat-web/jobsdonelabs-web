@@ -34,9 +34,9 @@ const wwwRedirectMiddleware = (
   },
   next: () => void,
 ) => {
-  const host = (req.headers["x-forwarded-host"] as string) || req.headers.host || "";
+  const rawHost = (req.headers.host as string) || (req.headers["x-forwarded-host"] as string) || "";
   const hostname =
-    typeof host === "string" ? host.split(":")[0] : String(host).split(":")[0];
+    typeof rawHost === "string" ? rawHost.split(":")[0] : String(rawHost).split(":")[0];
 
   // Only redirect if it's the bare domain (non-www), not localhost or Replit domains
   if (

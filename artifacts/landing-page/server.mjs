@@ -60,8 +60,10 @@ function serveFile(res, filePath) {
 }
 
 const server = createServer((req, res) => {
-  const host = req.headers["x-forwarded-host"] || req.headers.host || "";
-  const hostname = typeof host === "string" ? host.split(":")[0] : String(host).split(":")[0];
+  // Check Host header first (what the client actually requested),
+  // fall back to x-forwarded-host for proxy scenarios
+  const rawHost = req.headers.host || req.headers["x-forwarded-host"] || "";
+  const hostname = typeof rawHost === "string" ? rawHost.split(":")[0] : String(rawHost).split(":")[0];
 
   // Redirect non-www to www (301 permanent)
   if (
