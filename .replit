@@ -4,10 +4,7 @@ modules = ["nodejs-24", "python-3.11"]
 router = "application"
 deploymentTarget = "autoscale"
 run = ["node", "artifacts/landing-page/server.mjs"]
-
-[deployment.build]
-args = ["pnpm", "--filter", "api-server", "build"]
-env = { "CI" = "true" }
+build = "pnpm --filter api-server build"
 
 [deployment.postBuild]
 args = ["pnpm", "store", "prune"]

@@ -32502,6 +32502,7 @@ app.use("/api/github-webhook", import_express5.default.raw({ type: "application/
 app.use(import_express5.default.json());
 app.use(import_express5.default.urlencoded({ extended: true }));
 app.use((req, res, next) => {
+  res.setHeader("X-Www-Redirect", "active");
   const hostname = (req.hostname || req.get("host") || "").split(":")[0];
   if (hostname === "jobsdonelabs.ai" || hostname.endsWith(".jobsdonelabs.ai") && !hostname.startsWith("www.")) {
     const target = "www." + hostname.replace(/^(www\.)?/, "");

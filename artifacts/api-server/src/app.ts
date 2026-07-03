@@ -36,6 +36,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Redirect non-www → www (301) for all requests
 app.use((req, res, next) => {
+  // Signal that this middleware is active (remove after confirming)
+  res.setHeader("X-Www-Redirect", "active");
+  
   const hostname = (req.hostname || req.get("host") || "").split(":")[0];
   if (
     hostname === "jobsdonelabs.ai" ||
