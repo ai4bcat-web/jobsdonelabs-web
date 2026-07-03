@@ -57,9 +57,18 @@ function ContactChip({ icon, title, sub }: { icon: React.ReactNode; title: strin
   );
 }
 
+// Lead capture → GoHighLevel. In GHL, create a Workflow with an "Inbound Webhook"
+// trigger, copy its URL, and paste it below. Each submission POSTs the form as
+// JSON; the workflow maps the fields onto a contact and kicks off the
+// nurture/booking sequence. The same submit fires a Plausible "Contact Form
+// Submit" event so the funnel step is measurable.
+const GHL_INBOUND_WEBHOOK = ""; // ← paste GHL inbound webhook URL here
+
 export default function Contact() {
   const [showBooking, setShowBooking] = useState(false);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
   const [form, setForm] = useState({
     fullName:"", email:"", company:"", industry:"", revenue:"", leaking:"",
   });
@@ -68,9 +77,46 @@ export default function Contact() {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSent(true);
+    if (sending) return;
+    setError(false);
+    setSending(true);
+
+    // Funnel measurement (Plausible custom event). No-op until events are enabled.
+    try {
+      (window as unknown as { plausible?: (e: string, o?: unknown) => void }).plausible?.(
+        "Contact Form Submit",
+        { props: { industry: form.industry || "n/a", revenue: form.revenue || "n/a" } },
+      );
+    } catch { /* analytics must never block the lead */ }
+
+    // Lead capture → GoHighLevel inbound webhook.
+    try {
+      if (!GHL_INBOUND_WEBHOOK) throw new Error("GHL webhook not configured");
+      const res = await fetch(GHL_INBOUND_WEBHOOK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          full_name: form.fullName,
+          first_name: form.fullName.trim().split(" ")[0] || form.fullName,
+          last_name: form.fullName.trim().split(" ").slice(1).join(" "),
+          email: form.email,
+          company: form.company,
+          industry: form.industry,
+          revenue: form.revenue,
+          painpoint: form.leaking,
+          source: "jobsdonelabs.ai — contact form",
+          page: typeof window !== "undefined" ? window.location.href : "",
+        }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   function focusBlue(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
@@ -227,18 +273,26 @@ export default function Contact() {
               </div>
 
               {/* Submit */}
-              <button type="submit" disabled={sent}
+              <button type="submit" disabled={sent || sending}
                 style={{
                   width:"100%", padding:"16px", borderRadius:14,
                   border:"none", background: sent ? "#2a7a2a" : ACCENT,
                   color:"#fff", fontSize:16, fontWeight:800,
-                  cursor: sent ? "default" : "pointer",
+                  cursor: sent || sending ? "default" : "pointer",
                   fontFamily:HG,
                   transition:"background .3s",
+                  opacity: sending ? 0.8 : 1,
                   boxShadow: sent ? "none" : `0 6px 24px -6px ${ACCENT}88`,
                 }}>
-                {sent ? "Sent — we'll be in touch ✓" : "Send message →"}
+                {sent ? "Sent — we'll be in touch ✓" : sending ? "Sending…" : "Send message →"}
               </button>
+              {error && (
+                <p style={{ fontSize:13, color:ACCENT, fontFamily:HG, marginTop:-6 }}>
+                  Something went wrong sending that. Please email{" "}
+                  <a href="mailto:ryne@jobsdone.io" style={{ color:ACCENT, fontWeight:700 }}>ryne@jobsdone.io</a>{" "}
+                  and we'll jump on it.
+                </p>
+              )}
             </form>
           </div>
         </div>

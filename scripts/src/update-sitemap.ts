@@ -209,6 +209,8 @@ export function runUpdateSitemap(opts: UpdateSitemapOptions): void {
   }
 
   const newEntries: string[] = [];
+
+  // Auto-insert any blog post not yet in the sitemap.
   for (const [slug, date] of blogDates) {
     if (!existingSlugs.has(slug)) {
       const loc = `${baseUrl}/blog/${slug}/`;
@@ -225,7 +227,28 @@ export function runUpdateSitemap(opts: UpdateSitemapOptions): void {
     }
   }
 
-  let updated = collapseBlankLines(parts.join(""));
+  // Auto-insert any discovered non-blog page that is not yet in the sitemap.
+  // This ensures that when a new page lands in public/ via a GitHub push it
+  // gets a sitemap entry immediately rather than causing validateSitemap to
+  // throw with an unhelpful "missing" error.
+  const currentXml = parts.join("");
+  for (const [url, date] of nonBlogDates) {
+    if (!currentXml.includes(`<loc>${url}</loc>`)) {
+      console.log(`[update-sitemap]   adding new non-blog page: ${url}`);
+      newEntries.push(
+        [
+          "  <url>",
+          `    <loc>${url}</loc>`,
+          `    <lastmod>${date}</lastmod>`,
+          "    <changefreq>monthly</changefreq>",
+          "    <priority>0.6</priority>",
+          "  </url>",
+        ].join("\n")
+      );
+    }
+  }
+
+  let updated = collapseBlankLines(currentXml);
   if (newEntries.length > 0) {
     updated = updated.replace("</urlset>", newEntries.join("\n") + "\n</urlset>");
   }

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Track Wholesale Customer Payments on Net-30 | Jobs Done Labs</title>
+  <meta name="description" content="Your wholesale buyers owe you thousands on net-30 terms and your spreadsheet can't tell you who's 60 days late. Here's the free system that fixes it." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/wholesale-net-30-payment-tracking-spreadsheet/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/wholesale-net-30-payment-tracking-spreadsheet/" />
+  <meta property="og:title" content="How to Track Wholesale Customer Payments on Net-30 | Jobs Done Labs" />
+  <meta property="og:description" content="Your wholesale buyers owe you thousands on net-30 terms and your spreadsheet can't tell you who's 60 days late. Here's the free system that fixes it." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Track Wholesale Net-30 Payments Without Software" />
+  <meta name="twitter:description" content="The free spreadsheet system that catches late wholesale payments before they're 90 days old." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Track Wholesale Customer Payments on Net-30 Terms Without Software: A Complete Spreadsheet System for Small Brands",
+    "description": "You're tracking 40 retailers who owe you on net-30 terms using a spreadsheet that breaks every month. Three invoices went 90 days unpaid and you wrote off $2,800. Here's the free AR aging tracker, email templates, and 20-minute weekly review system that catches late payments before they slip — no $200/month wholesale platform required.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/wholesale-net-30-payment-tracking-spreadsheet/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I really track wholesale net-30 payments without buying expensive software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. A Google Sheets AR aging tracker plus a 20-minute Friday review routine handles 40-75 wholesale retailers reliably. The key is building the right spreadsheet structure — tabs for Active Orders, Payments Received, AR Aging (0-30/31-60/61-90/90+), and a Retailer Directory — plus a disciplined weekly review cadence. Platforms like JOOR and RepSpark start at $200-500/month and are designed for 100+ retailer operations. Most small CPG brands don't need them yet. The spreadsheet system described in this guide costs $0 and takes about 2 hours to set up. When you cross 75 active wholesale accounts, the platform math may start to make sense — but below that threshold, you're paying for features you don't need." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much money do small brands lose to uncollected wholesale payments?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The average small CPG brand doing $400K-850K in wholesale revenue loses $8,000-$15,000 per year to write-offs from accounts that went 90+ days without follow-up. This doesn't count the cash flow drag from retailers who routinely pay 10-15 days late — money that could be funding new production runs or marketing. The worst part: most of these write-offs are preventable. A 20-minute weekly AR aging review catches late payments at day 31 instead of day 91. Improving DSO (Days Sales Outstanding) by just 8 days on $470K in wholesale receivables frees up roughly $10,300 in working capital at any given time." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to set up a wholesale payment tracking system?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can build the core AR aging spreadsheet in about 2 hours — creating the tabs, setting up the aging formulas, and adding conditional formatting for overdue alerts. Populating it with your existing receivables takes another hour if you have clean records. After that, the ongoing time commitment is 20 minutes per week: sort by aging column, identify accounts past 30 days, send templated reminder emails to the 3-5 retailers who are late, and update payment statuses. Most operators who switch from ad-hoc tracking to this system recover the setup time within the first month just from payments they would have otherwise missed." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "How to Track Wholesale Customer Payments on Net-30 Terms Without Software", "item": "https://www.jobsdonelabs.ai/blog/wholesale-net-30-payment-tracking-spreadsheet/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --line:rgba(11,13,18,.1); --muted:rgba(11,13,18,.52); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; border-bottom:1px solid var(--line); }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--ink); color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; padding:10px 20px; border-radius:50px; }
+    article { max-width:760px; margin:0 auto; padding:64px 24px 96px; }
+    .breadcrumb { font-size:13px; color:var(--muted); margin-bottom:40px; }
+    .breadcrumb a { color:var(--accent); text-decoration:none; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,4.5vw,3rem); line-height:1.08; letter-spacing:-0.01em; margin-bottom:16px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:48px; }
+    .byline strong { color:var(--ink); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.5rem,3vw,2rem); line-height:1.12; margin:48px 0 16px; }
+    h3 { font-family:'Anton',sans-serif; font-size:1.2rem; margin:32px 0 12px; letter-spacing:-0.005em; }
+    p { font-size:17px; margin-bottom:20px; color:rgba(11,13,18,.82); }
+    ul, ol { margin:16px 0 24px 24px; font-size:17px; color:rgba(11,13,18,.82); }
+    li { margin-bottom:10px; }
+    .highlight-box { background:#fff; border-left:4px solid var(--accent); padding:24px 28px; margin:32px 0; border-radius:0 4px 4px 0; }
+    .highlight-box p { margin-bottom:0; }
+    .level-card { background:#fff; padding:28px 32px; margin:24px 0; border-radius:4px; border:1px solid var(--line); }
+    .level-card h3 { margin-top:0; display:flex; align-items:center; gap:12px; }
+    .level-badge { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; padding:4px 10px; border-radius:3px; letter-spacing:.06em; }
+    .callout { background:var(--ink); color:var(--cream); padding:36px 40px; margin:48px 0; border-radius:4px; text-align:center; }
+    .callout h2 { color:var(--cream); margin-top:0; }
+    .callout p { color:rgba(244,239,227,.78); font-size:17px; }
+    .callout a { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:16px; padding:14px 32px; border-radius:50px; margin-top:20px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.35); padding:32px 24px; border-top:1px solid var(--line); }
+    footer a { color:inherit; }
+    .faq { margin-top:64px; }
+    .faq h2 { margin-bottom:32px; }
+    .faq-item { background:#fff; padding:24px 28px; margin:2px 0; border-radius:4px; }
+    .faq-item h3 { font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:17px; margin:0 0 8px; }
+    .faq-item p { margin-bottom:0; font-size:16px; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <article>
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Wholesale order management and payment tracking" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Wholesale Net-30 Payment Tracker</div>
+    <h1>You're Tracking 40 Wholesale Customers on Net-30 Terms With a Spreadsheet That Breaks Every Month — Here's the Free AR Aging System That Actually Works</h1>
+    <p class="byline"><strong>Ryne Bandolik</strong> · July 1, 2026 · 10 min read</p>
+
+    <p>You know the moment. It's Friday afternoon, you scroll through your bank transactions, and something doesn't add up. A retailer who ordered 24 units of your starter kit six weeks ago still hasn't paid. You check your spreadsheet — the one with columns for Retailer Name, Invoice #, Amount, and Paid? (Y/N). It says "N." No follow-up was sent. No reminder. Just silence. The invoice is now 60 days old and you're starting to wonder if that $1,200 is ever coming back.</p>
+
+    <p>This isn't a hypothetical. It's the exact position hundreds of small CPG brands find themselves in when wholesale crosses the 20-retailer threshold. The spreadsheet that worked when you had 8 accounts becomes a liability at 40 — not because you're bad at tracking payments, but because the tool was never designed for this job.</p>
+
+    <div class="highlight-box">
+      <p><strong>The real cost of the spreadsheet-that-breaks.</strong> A small organic skincare brand doing $470K/year in wholesale across 40 independent retailers discovered three unpaid invoices totaling $2,800 — all 90+ days old. They wrote it off. Two retailers consistently pay 10-15 days late and nobody tracks it. The founder has no idea what her Days Sales Outstanding (DSO) is. At 40 retailers, the "scroll through and check the Y/N column" approach consumes 2-3 hours every Friday — and still misses payments. <strong>The fix costs $0 and takes an afternoon.</strong></p>
+    </div>
+
+    <p>You've probably looked at wholesale management platforms. JOOR, RepSpark, OrderWerks — the demos are slick. But they start at $200-500/month, and when you're only adding 5 more retailers this year, that math doesn't pencil out. Here's what nobody in the platform ecosystem will tell you: <strong>you don't need their software yet. You need a better spreadsheet — one purpose-built for AR aging, not a generic "Invoice Tracker" template from Etsy.</strong></p>
+
+    <h2>Why every generic payment tracker fails at 20+ retailers</h2>
+
+    <p>The problem isn't the spreadsheet format — it's what most templates leave out. Here's what breaks:</p>
+
+    <h3>1. The "Paid? Y/N" column is a trap</h3>
+    <p>A binary paid/unpaid flag tells you nothing about urgency. A retailer who's 5 days late is different from one who's 55 days late, but a "Y/N" column treats them identically. By the time you scroll through 40 rows and notice the three "N"s buried among the "Y"s, the oldest one is already approaching 90 days — the point at which collection probability drops below 50%.</p>
+
+    <h3>2. No aging means no prioritization</h3>
+    <p>AR aging — bucketing receivables into 0-30, 31-60, 61-90, and 90+ day groups — is the single most important feature of any payment tracking system. It tells you who to call first, who gets the firm email, and who needs a "final notice" letter. A generic spreadsheet has no aging logic. You're sorting manually, which means you're acting on the invoices you happen to notice, not the ones that are most urgent.</p>
+
+    <h3>3. Payment history disappears into the void</h3>
+    <p>When a retailer pays, you mark the invoice as "Y" and... that's it. Three months later, when the same retailer is late again, you can't see that they've been late 4 of the last 6 cycles. A retailer who's habitually 10-15 days late is fundamentally different from one who's late once because their AP person was on vacation — but without a payment log, you can't tell the difference.</p>
+
+    <h3>4. The follow-up process is manual and inconsistent</h3>
+    <p>You send "just checking in!" emails when you happen to notice a late payment. Sometimes it's day 32, sometimes it's day 67. The language is different each time. Some retailers get friendly reminders. Others get nothing because their N is buried on row 34 of a spreadsheet you only look at when you're wondering why cash is tight this month.</p>
+
+    <h2>The 4-Tab AR Aging Spreadsheet System (Free, Built in 2 Hours)</h2>
+
+    <p>Here's the system. It's four Google Sheets tabs, takes about 2 hours to build, and handles 40-75 retailers reliably. When you cross 75 active wholesale accounts, you'll know it's time to evaluate platform options — but until then, this is all you need.</p>
+
+    <div class="level-card">
+      <h3><span class="level-badge">TAB 1</span> Active Orders</h3>
+      <p>One row per open invoice. Columns:</p>
+      <ul>
+        <li><strong>Retailer Name</strong> — consistent naming is critical; use the legal business name from their resale certificate</li>
+        <li><strong>Invoice #</strong> — your internal numbering; use format INV-YYYY-MM-NNN for sortability</li>
+        <li><strong>Invoice Date</strong> — date the order shipped, not the date you created the invoice</li>
+        <li><strong>Due Date</strong> — invoice date + 30 days. Use <code>=InvoiceDate+30</code> formula</li>
+        <li><strong>Amount</strong> — the total invoice amount including shipping if you charge for it</li>
+        <li><strong>Days Overdue</strong> — <code>=TODAY()-DueDate</code>. This auto-calculates every time you open the sheet</li>
+        <li><strong>Aging Bucket</strong> — <code>=IF(DaysOverdue<=0,"Current",IF(DaysOverdue<=30,"1-30",IF(DaysOverdue<=60,"31-60",IF(DaysOverdue<=90,"61-90","90+"))))</code></li>
+        <li><strong>Last Follow-Up Date</strong> — manually updated; links to the Payment Log tab</li>
+        <li><strong>Status</strong> — dropdown: Open / Partial Payment / Paid / Disputed / Write-off</li>
+      </ul>
+      <p>Conditional formatting: rows turn yellow at 1-30 days overdue, orange at 31-60, red at 61+. This makes your Friday review visual — you can scan the color, not the numbers.</p>
+    </div>
+
+    <div class="level-card">
+      <h3><span class="level-badge">TAB 2</span> Payments Received</h3>
+      <p>Every payment gets logged here. Columns:</p>
+      <ul>
+        <li><strong>Date Received</strong> — the date the payment hit your bank, not the date you noticed</li>
+        <li><strong>Retailer Name</strong> — must match Tab 1 exactly (use data validation dropdown)</li>
+        <li><strong>Invoice #</strong> — what this payment applies to</li>
+        <li><strong>Amount</strong> — the amount received</li>
+        <li><strong>Payment Method</strong> — ACH, check, wire, credit card</li>
+        <li><strong>Days Late</strong> — <code>=DateReceived - DueDate</code>. This is your truth column. Over time, you'll see which retailers consistently pay on day 35 vs. day 28.</li>
+        <li><strong>Notes</strong> — partial payment? short-paid? overpaid? note it here.</li>
+      </ul>
+      <p>When a payment comes in, log it here first. Then go to Tab 1 and mark the invoice as Paid or Partial Payment. This two-step process is intentional — it forces you to verify that the payment amount matches the invoice amount before closing it out.</p>
+    </div>
+
+    <div class="level-card">
+      <h3><span class="level-badge">TAB 3</span> AR Aging Summary</h3>
+      <p>This tab auto-calculates from Tab 1 using SUMIFS. It's your Friday dashboard:</p>
+      <ul>
+        <li><strong>Total Outstanding:</strong> SUM of all open invoice amounts</li>
+        <li><strong>Current (0-30 days):</strong> $$ — these are fine, no action needed</li>
+        <li><strong>31-60 days:</strong> $$ — these get the "friendly reminder" email today</li>
+        <li><strong>61-90 days:</strong> $$ — these get the "payment is now due" call</li>
+        <li><strong>90+ days:</strong> $$ — these get the "final notice" letter; consider collections</li>
+        <li><strong>DSO (Days Sales Outstanding):</strong> = (Total AR / Annual Wholesale Revenue) × 365. Track this monthly. If DSO is trending up, your collection process is getting worse, even if total AR looks flat.</li>
+      </ul>
+      <p>A separate section shows AR Aging by Retailer, so you can see which accounts are dragging your DSO up. One retailer with $4,200 sitting at 75 days is a bigger problem than five retailers at 35 days.</p>
+    </div>
+
+    <div class="level-card">
+      <h3><span class="level-badge">TAB 4</span> Retailer Directory</h3>
+      <p>Static reference data that feeds the other tabs:</p>
+      <ul>
+        <li><strong>Retailer Name</strong> (used for data validation dropdowns in Tabs 1-2)</li>
+        <li><strong>Buyer Contact Name & Email</strong> — the actual person who handles AP</li>
+        <li><strong>Payment Terms</strong> — net-30 standard, but some accounts may have net-45 or net-60 negotiated</li>
+        <li><strong>Credit Limit</strong> — the maximum outstanding balance you'll carry for this retailer</li>
+        <li><strong>Last Order Date</strong> — helps identify dormant accounts</li>
+        <li><strong>Notes</strong> — "always pays 5 days late but never defaults" or "requires PO number on every invoice"</li>
+      </ul>
+    </div>
+
+    <h2>The 20-Minute Friday AR Review Protocol</h2>
+
+    <p>The spreadsheet is the tool. The protocol is what makes it work. Here's the Friday routine — it takes 20 minutes once you've done it a few times:</p>
+
+    <ol>
+      <li><strong>Open Tab 3 (AR Aging Summary).</strong> Look at the aging buckets. If 90+ is above zero, that's your first priority. If 61-90 is growing week-over-week, your follow-up process isn't working.</li>
+      <li><strong>Open Tab 1 (Active Orders).</strong> Sort by Days Overdue, descending. Work top to bottom — the oldest overdue invoices first.</li>
+      <li><strong>For each overdue invoice, cross-reference Tab 2 (Payments Received).</strong> Did the money come in and you forgot to mark it? It happens. Check your bank before sending a reminder.</li>
+      <li><strong>Send templated emails to the 3-5 retailers who are actually late.</strong> Use the templates below. Don't customize — the consistency is the point. Retailers learn that you follow up reliably.</li>
+      <li><strong>Update the Last Follow-Up Date column in Tab 1.</strong> This prevents double-emailing and lets you see at a glance who hasn't been contacted.</li>
+      <li><strong>Log any payments received this week in Tab 2.</strong> Update Tab 1 statuses. Move paid invoices to a "Paid Invoices" archive tab if you want to keep Tab 1 clean (optional — keep them if you want to track payment velocity).</li>
+      <li><strong>Check DSO.</strong> Is it trending up? Down? Flat? This single number tells you whether your collection process is improving or degrading.</li>
+    </ol>
+
+    <h2>Email Templates: The Right Words at the Right Time</h2>
+
+    <p>These are designed to be copied, pasted, and filled in. No rewriting, no overthinking. The power is in the consistency — retailers learn that day 31 means an email, day 61 means a call, and day 91 means collections.</p>
+
+    <div class="level-card">
+      <h3><span class="level-badge">DAY 25</span> Friendly Heads-Up (Before It's Due)</h3>
+      <p style="font-family:monospace;font-size:15px;color:rgba(11,13,18,.7);">Subject: Quick heads-up — invoice INV-2026-07-001 due next week<br><br>
+      Hi [Buyer Name],<br><br>
+      Just a quick note that invoice INV-2026-07-001 for $[Amount] is due on [Due Date]. No rush — just flagging it in case your AP team needs anything from our side (W-9, updated COI, banking details, etc.).<br><br>
+      Happy to help with anything that makes the payment process smoother on your end.<br><br>
+      Best,<br>[Your Name]</p>
+    </div>
+
+    <div class="level-card">
+      <h3><span class="level-badge">DAY 31</span> The "Friendly Reminder" (1 Day Late)</h3>
+      <p style="font-family:monospace;font-size:15px;color:rgba(11,13,18,.7);">Subject: Following up — invoice INV-2026-07-001<br><br>
+      Hi [Buyer Name],<br><br>
+      Following up on invoice INV-2026-07-001 for $[Amount], which was due on [Due Date]. I know things slip through — if this is already in process, no worries at all. Just let me know when we should expect it.<br><br>
+      If there's an issue or you need anything from us, I'm happy to sort it out.<br><br>
+      Thanks,<br>[Your Name]</p>
+    </div>
+
+    <div class="level-card">
+      <h3><span class="level-badge">DAY 45</span> The "We Need to Resolve This" Email</h3>
+      <p style="font-family:monospace;font-size:15px;color:rgba(11,13,18,.7);">Subject: Outstanding balance — invoice INV-2026-07-001 now 15 days past due<br><br>
+      Hi [Buyer Name],<br><br>
+      I've sent a couple of notes about invoice INV-2026-07-001 ($[Amount]), which is now 15 days past due. I want to make sure this hasn't fallen through the cracks — and if there's a dispute or issue with the order that's holding up payment, I'd rather know now so we can resolve it directly.<br><br>
+      Can you let me know the status by [3 business days from now]? If I don't hear back, I'll give you a call to make sure we're aligned.<br><br>
+      Appreciate it,<br>[Your Name]</p>
+    </div>
+
+    <div class="level-card">
+      <h3><span class="level-badge">DAY 60</span> Final Notice Before Collections</h3>
+      <p style="font-family:monospace;font-size:15px;color:rgba(11,13,18,.7);">Subject: Final notice — invoice INV-2026-07-001 30 days past due<br><br>
+      Hi [Buyer Name],<br><br>
+      Invoice INV-2026-07-001 for $[Amount] is now 30 days past due. We've reached out several times and haven't received payment or a response.<br><br>
+      We value your business and want to resolve this directly, but if we don't receive payment or a payment plan commitment by [7 days from now], we'll need to place your account on hold for future orders and escalate to collections.<br><br>
+      If circumstances have changed and you need to discuss a payment arrangement, please call me directly at [your phone number]. I'd much rather work something out than go the collections route.<br><br>
+      Regards,<br>[Your Name]</p>
+    </div>
+
+    <h2>When to Cut Off a Retailer: The 3-Strike Rule</h2>
+
+    <p>Not every wholesale relationship is worth saving. Use this framework:</p>
+
+    <ul>
+      <li><strong>Strike 1:</strong> Payment is 60+ days late. Send the final notice. Document it in the Retailer Directory notes.</li>
+      <li><strong>Strike 2:</strong> A second payment in the same 12-month period goes 60+ days late. Place the account on prepaid or COD terms — no more net-30 until they demonstrate 6 months of on-time payment.</li>
+      <li><strong>Strike 3:</strong> A third late payment, or any single invoice that goes 90+ days without communication from the retailer. Cut off future orders. Send to collections for outstanding balances above $500. For smaller amounts, write it off and redirect your energy to retailers who pay on time.</li>
+    </ul>
+
+    <p>The hardest part of this rule isn't enforcing it — it's accepting that some retailers will leave. But a retailer who doesn't pay you on net-30 isn't a customer. They're an interest-free lender you didn't agree to be.</p>
+
+    <h2>Integrating With QuickBooks or Xero</h2>
+
+    <p>The AR spreadsheet and your accounting software don't need to be disconnected. Here's the bridge:</p>
+
+    <ol>
+      <li><strong>Create invoices in QuickBooks/Xero as normal.</strong> This is your official record. The spreadsheet is your operational dashboard — faster and more visual than any accounting software's AR module.</li>
+      <li><strong>Export open invoices from QuickBooks to CSV once a week</strong> (Reports → Customers & Receivables → Open Invoices → Export). Paste new invoices into Tab 1 of the spreadsheet.</li>
+      <li><strong>When payments come in, record them in QuickBooks first</strong> (this is your books of record), then log them in Tab 2 of the spreadsheet.</li>
+      <li><strong>Once a month, reconcile Tab 3's total outstanding against QuickBooks' open AR report.</strong> They should match within 1-2 days' timing difference. If they don't, you missed logging a payment or closing an invoice.</li>
+    </ol>
+
+    <p>This dual-system approach exists because QuickBooks' built-in AR reporting is slow, hard to scan, and doesn't have aging-by-retailer at a glance. The spreadsheet is your Friday operations tool. QuickBooks is your month-end accounting record.</p>
+
+    <h2>How to Know When You've Outgrown the Spreadsheet</h2>
+
+    <p>The system works until it doesn't. Here are the triggers that mean it's time to evaluate a wholesale management platform:</p>
+
+    <ul>
+      <li><strong>You've crossed 75 active wholesale accounts.</strong> At this volume, the 20-minute Friday review becomes 45 minutes, then an hour. The time cost approaches platform pricing.</li>
+      <li><strong>You're tracking purchase orders, inventory allocation, AND payments.</strong> Three separate spreadsheets that need to reconcile = the spreadsheet architecture is now your bottleneck, not your solution.</li>
+      <li><strong>Your retailers are asking for a portal.</strong> When 3+ retailers ask "can we check our order status online?", it's time to look at B2B wholesale platforms that include a retailer-facing portal (JOOR, RepSpark, NuORDER).</li>
+      <li><strong>Your DSO is trending up despite following the protocol.</strong> This means the problem isn't tracking — it's your credit policy or your retailer quality. The spreadsheet can't fix that.</li>
+    </ul>
+
+    <p>When you hit these triggers, the platform math becomes rational: $300/month for JOOR vs. 4 hours/week of spreadsheet wrangling at $50/hour effective rate = the platform is cheaper. But until you hit these triggers? <strong>The spreadsheet is free, it works, and it's already better than what you're doing now.</strong></p>
+
+    <div class="highlight-box">
+      <p><strong>The difference between this system and what you're doing now isn't complexity — it's reliability.</strong> A "Paid? Y/N" column that you check sporadically is hope-based AR management. An aging summary that auto-calculates and a 20-minute Friday protocol is process-based AR management. One works. The other costs you $2,800 in write-offs you never saw coming.</p>
+    </div>
+
+    <div class="callout">
+      <h2>Stop Guessing Who Owes You Money</h2>
+      <p>You didn't build a wholesale brand to become an accounts receivable clerk. The 4-tab system takes 2 hours to set up and 20 minutes a week to run. If you want someone to build the automated version — payment reminders that send themselves, aging alerts that hit your phone, and a dashboard that shows you DSO without opening a spreadsheet — that's what we do.</p>
+      <a href="/contact">Book a free audit →</a>
+    </div>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Can I really track wholesale net-30 payments without buying expensive software?</h3>
+        <p>Yes. A Google Sheets AR aging tracker plus a 20-minute Friday review routine handles 40-75 wholesale retailers reliably. The key is building the right spreadsheet structure — tabs for Active Orders, Payments Received, AR Aging (0-30/31-60/61-90/90+), and a Retailer Directory — plus a disciplined weekly review cadence. Platforms like JOOR and RepSpark start at $200-500/month and are designed for 100+ retailer operations. Most small CPG brands don't need them yet. The spreadsheet system described in this guide costs $0 and takes about 2 hours to set up. When you cross 75 active wholesale accounts, the platform math may start to make sense — but below that threshold, you're paying for features you don't need.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much money do small brands lose to uncollected wholesale payments?</h3>
+        <p>The average small CPG brand doing $400K-850K in wholesale revenue loses $8,000-$15,000 per year to write-offs from accounts that went 90+ days without follow-up. This doesn't count the cash flow drag from retailers who routinely pay 10-15 days late — money that could be funding new production runs or marketing. The worst part: most of these write-offs are preventable. A 20-minute weekly AR aging review catches late payments at day 31 instead of day 91. Improving DSO by just 8 days on $470K in wholesale receivables frees up roughly $10,300 in working capital at any given time.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long does it take to set up a wholesale payment tracking system?</h3>
+        <p>You can build the core AR aging spreadsheet in about 2 hours — creating the tabs, setting up the aging formulas, and adding conditional formatting for overdue alerts. Populating it with your existing receivables takes another hour if you have clean records. After that, the ongoing time commitment is 20 minutes per week: sort by aging column, identify accounts past 30 days, send templated reminder emails to the 3-5 retailers who are late, and update payment statuses. Most operators who switch from ad-hoc tracking to this system recover the setup time within the first month just from payments they would have otherwise missed.</p>
+      </div>
+    </section>
+
+<section class="related-reading">
+<h2>Related reading</h2>
+<p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+<ul style="list-style:none;padding:0;margin:0">
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/shopify-quickbooks-reconciliation-never-matches/" style="font-weight:600;color:#1466FF;text-decoration:none">Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It, Honestly)</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/ecommerce-manual-data-entry-silent-killer/" style="font-weight:600;color:#1466FF;text-decoration:none">Manual Data Entry Is the Silent Killer of Your E-Commerce Business — Here's the 5-Level System...</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/small-business-purchase-order-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Tracking 50 Purchase Orders in WhatsApp and a Spreadsheet Nobody Updates — Here's the PO T...</a>
+  </li>
+</ul>
+</section>
+
+</article>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>

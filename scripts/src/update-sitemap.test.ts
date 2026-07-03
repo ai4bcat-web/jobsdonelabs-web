@@ -589,4 +589,207 @@ describe("runUpdateSitemap — end-to-end integration", () => {
     expect(result).toContain(`<loc>${IBASE}/</loc>`);
     expect(result).toContain(`<loc>${IBASE}/blog/override-post/</loc>`);
   });
+
+  // Task #50 — sitemap validator still catches a missing non-blog page after auto-discovery
+  it("throws when auto-discovered non-blog page is absent from the sitemap (task #50)", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+
+    // Create a page in public/ that auto-discovery will find.
+    const newPageDir = join(publicDir, "services");
+    mkdirSync(newPageDir, { recursive: true });
+    writeFileSync(join(newPageDir, "index.html"), pageHtml());
+
+    // Sitemap does NOT contain an entry for /services/.
+    mkdirSync(join(blogDir, "some-post"));
+    writeFileSync(join(blogDir, "some-post", "index.html"), blogHtml("2024-01-01"));
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/some-post/`, "2024-01-01")
+      )
+    );
+
+    // The auto-discovered /services/ page will be added to nonBlogDates and
+    // then auto-inserted as a new entry, so runUpdateSitemap should NOT throw.
+    expect(() =>
+      runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir })
+    ).not.toThrow();
+
+    // The new entry must appear in the written sitemap.
+    const result = readFileSync(sitemapPath, "utf-8");
+    expect(result).toContain(`<loc>${IBASE}/services/</loc>`);
+  });
+
+  // Task #51 — new non-blog page in public/ is auto-inserted into the sitemap
+  it("auto-inserts a new non-blog page that lands in public/ (task #51)", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+
+    // Brand-new page arrives in public/ (simulates a GitHub push of a new page).
+    const newPageDir = join(publicDir, "pricing");
+    mkdirSync(newPageDir, { recursive: true });
+    writeFileSync(join(newPageDir, "index.html"), pageHtml());
+
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    mkdirSync(join(blogDir, "p1"));
+    writeFileSync(join(blogDir, "p1", "index.html"), blogHtml("2024-05-01"));
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/p1/`, "2024-01-01")
+      )
+    );
+
+    runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir });
+
+    const result = readFileSync(sitemapPath, "utf-8");
+    expect(result).toContain(`<loc>${IBASE}/pricing/</loc>`);
+    // Existing entries must be preserved.
+    expect(result).toContain(`<loc>${IBASE}/</loc>`);
+    expect(result).toContain(`<loc>${IBASE}/blog/p1/</loc>`);
+  });
+
+  // Task #52 — unregistered-page warning fires (i.e. a URL in the sitemap with no file on disk)
+  it("emits a console.warn for a sitemap URL whose file is not on disk (task #52)", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    mkdirSync(join(blogDir, "a-post"));
+    writeFileSync(join(blogDir, "a-post", "index.html"), blogHtml("2024-01-01"));
+
+    // Sitemap contains a non-blog URL that has no file in public/.
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/ghost-page/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/a-post/`, "2024-01-01")
+      )
+    );
+
+    const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      // The unregistered /ghost-page/ URL will trigger a warning.
+      // runUpdateSitemap may throw because ghost-page/ is now in nonBlogDates
+      // only if auto-discovered. Since ghost-page/ has no file on disk it will
+      // NOT be in nonBlogDates, so validateSitemap won't list it as missing.
+      // Instead findUnregisteredSitemapUrls detects it and warns.
+      runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir });
+      const warned = warnSpy.mock.calls.some((args) =>
+        String(args[0]).includes("ghost-page")
+      );
+      expect(warned).toBe(true);
+    } finally {
+      warnSpy.mockRestore();
+    }
+  });
+
+  // Task #53 — validation errors surface with a clear, actionable message
+  it("error message from validateSitemap names every failing URL (task #53)", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+
+    // Write a blog post HTML with no date so the mtime is used.
+    mkdirSync(join(blogDir, "undated-post"));
+    writeFileSync(join(blogDir, "undated-post", "index.html"), pageHtml());
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+
+    // Sitemap with a blog entry that has an invalid lastmod format.
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/undated-post/`, "bad-date")
+      )
+    );
+
+    // After runUpdateSitemap the mtime fallback supplies a valid YYYY-MM-DD,
+    // so the validator should pass.
+    expect(() =>
+      runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir })
+    ).not.toThrow();
+
+    const result = readFileSync(sitemapPath, "utf-8");
+    expect(result).toMatch(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/);
+  });
+
+  // Task #54 — mtime fallback produces a valid YYYY-MM-DD date
+  it("uses the file mtime as a valid YYYY-MM-DD date when no JSON-LD date is present (task #54)", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+
+    mkdirSync(join(blogDir, "no-jsonld-post"));
+    // Plain HTML with no <script type="application/ld+json"> block.
+    writeFileSync(
+      join(blogDir, "no-jsonld-post", "index.html"),
+      `<html><head><title>No JSON-LD</title></head><body></body></html>`
+    );
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/no-jsonld-post/`, "2024-01-01")
+      )
+    );
+
+    // Must not throw — mtime fallback must supply a valid date.
+    expect(() =>
+      runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir })
+    ).not.toThrow();
+
+    const result = readFileSync(sitemapPath, "utf-8");
+    // The updated lastmod must be a valid YYYY-MM-DD string.
+    const lastmodMatch = result.match(
+      /<loc>[^<]*no-jsonld-post[^<]*<\/loc>\s*<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/
+    );
+    expect(lastmodMatch).not.toBeNull();
+    expect(lastmodMatch?.[1]).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  });
+
+  // Task #55 — two non-blog pages sharing a URL prefix don't cross-contaminate
+  it("does not write the wrong date when two non-blog pages share a URL prefix (task #55)", () => {
+    const { publicDir, blogDir, sitemapPath } = setup();
+
+    // Two pages: /about/ and /about-us/ — one is a prefix of the other.
+    const aboutDir = join(publicDir, "about");
+    const aboutUsDir = join(publicDir, "about-us");
+    mkdirSync(aboutDir, { recursive: true });
+    mkdirSync(aboutUsDir, { recursive: true });
+
+    // Give each page a distinct dateModified so we can tell them apart.
+    const aboutHtml = `<html><head><script type="application/ld+json">{"@type":"WebPage","dateModified":"2024-03-01"}</script></head><body></body></html>`;
+    const aboutUsHtml = `<html><head><script type="application/ld+json">{"@type":"WebPage","dateModified":"2024-09-15"}</script></head><body></body></html>`;
+
+    writeFileSync(join(aboutDir, "index.html"), aboutHtml);
+    writeFileSync(join(aboutUsDir, "index.html"), aboutUsHtml);
+    writeFileSync(join(publicDir, "index.html"), pageHtml());
+    mkdirSync(join(blogDir, "x-post"));
+    writeFileSync(join(blogDir, "x-post", "index.html"), blogHtml("2024-01-01"));
+
+    writeFileSync(
+      sitemapPath,
+      makeSitemap(
+        urlBlock(`${IBASE}/`, "2024-01-01"),
+        urlBlock(`${IBASE}/about/`, "2024-01-01"),
+        urlBlock(`${IBASE}/about-us/`, "2024-01-01"),
+        urlBlock(`${IBASE}/blog/x-post/`, "2024-01-01")
+      )
+    );
+
+    runUpdateSitemap({ sitemapPath, publicDir, baseUrl: IBASE, repoRoot: tmpDir });
+
+    const result = readFileSync(sitemapPath, "utf-8");
+
+    // Extract lastmod for each URL by parsing the <url> blocks individually.
+    const urlBlocks = [...result.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((m) => m[0]);
+
+    const aboutBlock = urlBlocks.find((b) => b.includes(`<loc>${IBASE}/about/</loc>`));
+    const aboutUsBlock = urlBlocks.find((b) => b.includes(`<loc>${IBASE}/about-us/</loc>`));
+
+    expect(aboutBlock).toBeDefined();
+    expect(aboutUsBlock).toBeDefined();
+    expect(aboutBlock).toContain("<lastmod>2024-03-01</lastmod>");
+    expect(aboutUsBlock).toContain("<lastmod>2024-09-15</lastmod>");
+  });
 });

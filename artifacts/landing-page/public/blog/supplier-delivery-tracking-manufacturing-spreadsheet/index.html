@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suppliers Are Late Again and It's Costing $1,000/Week | JobsDone Labs</title>
+  <meta name="description" content="Suppliers are late, production stops, and you don't know who's next. The free supplier delivery tracking system for small manufacturers." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/supplier-delivery-tracking-manufacturing-spreadsheet/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/supplier-delivery-tracking-manufacturing-spreadsheet/" />
+  <meta property="og:title" content="Suppliers Are Late Again and It's Costing $1,000/Week | JobsDone Labs" />
+  <meta property="og:description" content="Suppliers are late, production stops, and you don't know who's next. The free supplier delivery tracking system for small manufacturers." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Suppliers Are Late Again and It's Costing $1,000/Week" />
+  <meta name="twitter:description" content="The free supplier delivery scorecard system to track every PO, calculate on-time rates, and stop idle shop floor hours." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Suppliers Are Late Again and It's Costing $1,000/Week — How to Track Supplier Delivery Performance Without Software",
+    "description": "A complete supplier delivery tracking system for small manufacturers: free scorecard template, Monday morning protocol, supplier communication templates, and cost-of-late-delivery calculator — all without procurement software.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-07-03",
+    "dateModified": "2026-07-03",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/supplier-delivery-tracking-manufacturing-spreadsheet/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does it actually cost when a supplier is late?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The true cost has four components: idle labor (hours × shop rate — at $85/hour with 4 idle workers for 3 hours, that's $1,020 per incident), expedited shipping to recover the schedule, overtime to catch up on the delayed job, and customer late-delivery penalties. For a 35-person shop, a single late delivery of critical material can cost $1,500–3,000 in direct waste, not counting the customer trust damage from missing a promised date. Across 15–20% of POs arriving late, a typical small manufacturer loses $40,000–60,000 per year to supplier delivery failures they could have anticipated with a tracking system." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I really need supplier management software, or can a spreadsheet work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For manufacturers with fewer than 50 active POs and one person managing procurement (even part-time), a well-structured spreadsheet is the correct tool. Procurement software like SourceDay or Precoro starts at $200–400/month, requires supplier onboarding, and is built for dedicated purchasing departments — not for a production manager who's also doing quoting, scheduling, and quality checks. The spreadsheet system described in this guide handles the core need: knowing who's late, who's due this week, and which jobs are at risk. You only need to upgrade when you cross 50+ active POs, have multiple people managing procurement, or need supplier portal functionality for large vendors." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the Jobs Done Labs $30K guarantee apply to supplier tracking?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The $30K guarantee works the same way for supplier tracking as for every other automation we build: we map your current procurement-to-production handoff during a free audit, identify exactly which supplier delays are costing you idle shop hours and late deliveries, and build automations that give you Monday-morning visibility into every at-risk PO — all within your existing tools (spreadsheets, QuickBooks, email). We track the documented cost recovery (idle hours avoided, expedited shipping saved, late penalties eliminated). If the total doesn't reach $30,000 in net profit recovered within 90 days, you pay nothing. For most small manufacturers, supplier visibility alone recovers $25,000–45,000 in the first year." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Supplier Delivery Tracking", "item": "https://www.jobsdonelabs.ai/blog/supplier-delivery-tracking-manufacturing-spreadsheet/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:40px; }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    a { color:var(--accent-deep); }
+    .comparison { margin:28px 0; }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+<img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80" alt="Manufacturing warehouse with shelved materials" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Manufacturing &amp; Industrial</span>
+      <h1>Suppliers Are Late Again and It's Costing $1,000/Week — How to Track Supplier Delivery Without Software</h1>
+      <p class="byline">By Ryne Bandolik · Jobs Done Labs · July 3, 2026</p>
+
+      <p>Dave runs production at a 35-person sheet metal fabricator in Ohio. He sources raw materials from 23 suppliers — steel, aluminum, hardware, finishes. Each job needs 3-8 different materials to start, and every Monday morning he stands in front of a whiteboard trying to remember who promised what and when. Alro said the 14-gauge would be here Wednesday. Or was it Tuesday? And was that this week or last week?</p>
+
+      <p>Here's the math Dave lives with: 15-20% of purchase orders arrive late. When a supplier misses a date, Dave doesn't find out until the material fails to show up — which means the press brake sits idle at $85/hour, the 4-person welding crew has nothing to weld, and a job that was due Friday is now due next Wednesday. Three hours of unexpected downtime per week × 4 idle workers × $85/hour shop rate = $1,020/week in direct labor waste. Add expedited shipping to recover, overtime to catch up, and late-delivery penalties from customers — at least $40,000 a year vanishing into supplier delivery failures Dave could have seen coming.</p>
+
+      <p>Dave looked at supplier management software. SourceDay. Precoro. Lasso. They start at $200-400/month, require supplier onboarding, and are built for procurement departments with dedicated buyers — not for a production manager who's also doing quoting, scheduling, and quality checks. Dave doesn't need a procurement platform. He needs to know, on Monday morning, in under 10 minutes: which suppliers are late, who's due this week, and which jobs are at risk.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The problem isn't that you don't have software.</strong> It's that your supplier promises live in your head — and when you're not in the building, nobody knows which POs are at risk and which jobs are about to stop. This guide shows you how to fix that with a spreadsheet system you can build this afternoon, for $0.</p>
+      </div>
+
+      <h2>The Monday morning blind spot</h2>
+      <p>Every small manufacturer has a version of this problem. The production manager holds the supplier relationship map in their head. They know Alro is usually reliable but has been slipping on aluminum deliveries. They know the hardware supplier in Indiana always pads their lead times by 3 days. This tribal knowledge works — until it doesn't. When the production manager is out sick, in a customer meeting, or simply overloaded, the system collapses into guesswork.</p>
+
+      <p>The cost of this blind spot compounds fast:</p>
+      <ul>
+        <li><strong>Idle labor:</strong> Workers standing around waiting for material at full shop rate.</li>
+        <li><strong>Expedited shipping:</strong> Overnighting material you should have ordered 3 days ago, at 4x normal cost.</li>
+        <li><strong>Overtime to catch up:</strong> Running Saturdays at time-and-a-half because the week's schedule collapsed.</li>
+        <li><strong>Customer trust erosion:</strong> Missing promised dates. The customer doesn't care that your supplier was late — they care that <em>you</em> were late.</li>
+      </ul>
+
+      <p>And here's what the software vendors won't tell you: for a shop with fewer than 50 active POs and one person managing procurement, a spreadsheet <em>is</em> the right tool. The problem isn't the tool — it's that nobody has a system for using it.</p>
+
+      <h2>The supplier delivery scorecard system</h2>
+      <p>This system uses four spreadsheet tabs — built in Google Sheets or Excel — to replace the mental whiteboard with something visible, shareable, and impossible to ignore on Monday morning. Here's what each tab does:</p>
+
+      <h3>Tab 1 — Supplier Directory</h3>
+      <p>The master list of every supplier you buy from. Columns: Supplier Name, Contact Name, Phone/Email, Lead Time (standard, in days), Category (raw material, hardware, finishes, packaging), Reliability Notes (free-text — "usually pads lead times by 2 days," "aluminum deliveries slipping since Q2"). This is the reference sheet — build it once, update it quarterly.</p>
+
+      <h3>Tab 2 — PO Tracker</h3>
+      <p>The workhorse. Every purchase order gets a row. Columns: PO#, Supplier, Material/Part, Job# (which customer job this material feeds), Date Ordered, Promised Delivery Date, Actual Delivery Date, Days Late, Production Impact (which job is at risk if this is late), Status (On Track / Late / Delivered). This is where the Monday morning review happens — sort by Promised Delivery Date for this week, flag anything already late, and identify at-risk jobs before production stops.</p>
+
+      <h3>Tab 3 — Supplier Scorecard</h3>
+      <p>The accountability tab. One row per supplier. Columns: Total POs, On-Time Deliveries, On-Time %, Average Days Late, Trend (↑ improving, → stable, ↓ declining), Last 5 Deliveries (dates + late/on-time for each). This is the data you use for quarterly supplier reviews — and for negotiating. When a supplier drops below 80% on-time, you bring the scorecard to the conversation. "Your on-time rate was 72% last quarter. Our production stopped 4 times because of late deliveries. Here's what we need from you, and here's the backup supplier we'll use if we don't get it."</p>
+
+      <h3>Tab 4 — Weekly Risk Report</h3>
+      <p>The dashboard you print every Monday morning. Shows: all POs due this week (sorted by date), any POs already late (red), at-risk jobs (which customer orders depend on late materials), and a summary line: "$X,XXX in shop rate at risk this week from late deliveries." This is the one sheet the owner needs to see. Everything else supports this report.</p>
+
+      <h2>The 10-minute Monday morning protocol</h2>
+      <p>This is the system in practice. Every Monday at 7:30 AM, before the shop floor starts:</p>
+      <ol>
+        <li><strong>Open the PO Tracker.</strong> Sort by Promised Delivery Date. Everything due this week — scan for suppliers who historically run late (check the Scorecard tab).</li>
+        <li><strong>Flag late POs.</strong> Anything where today's date > Promised Delivery Date and Actual Delivery Date is blank. These are your fires.</li>
+        <li><strong>Identify at-risk jobs.</strong> For each late or at-risk PO, look at the Production Impact column. Which customer orders depend on this material? Those are the calls you make today — before the customer calls you.</li>
+        <li><strong>Send proactive check-ins.</strong> For every PO due this week from a supplier with <85% on-time rate, send a quick email: "Confirming the 14-gauge aluminum for PO#1247 is still on track for Wednesday delivery. This feeds the Acme order due Friday — let me know if anything changes."</li>
+        <li><strong>Print the Weekly Risk Report.</strong> One page. Goes to the owner, the production manager, and anyone who talks to customers. Everyone knows what's at risk, and nobody gets blindsided.</li>
+      </ol>
+
+      <div class="callout">
+        <p style="margin:0"><strong>10 minutes, every Monday.</strong> That's the entire time commitment for a system that prevents $1,000/week in idle labor. The ROI on this protocol — measured in press brakes that don't sit idle and welding crews that don't stand around — is north of 50:1.</p>
+      </div>
+
+      <h2>How to calculate the true cost of a late delivery</h2>
+      <p>Most shops only count the obvious cost: the idle hours. But a late delivery is a four-part expense, and missing any part means you're under-counting the damage:</p>
+      <div class="comparison">
+        <table>
+          <tr>
+            <th>Cost category</th>
+            <th>How to calculate</th>
+            <th>Typical per-incident cost</th>
+          </tr>
+          <tr>
+            <td>Idle labor</td>
+            <td>(Idle worker-hours) × (blended shop rate)</td>
+            <td>$600–1,500</td>
+          </tr>
+          <tr>
+            <td>Expedited shipping</td>
+            <td>(Rush freight cost) − (standard freight cost)</td>
+            <td>$200–800</td>
+          </tr>
+          <tr>
+            <td>Recovery overtime</td>
+            <td>(Overtime hours) × (1.5× hourly rate)</td>
+            <td>$400–1,200</td>
+          </tr>
+          <tr>
+            <td>Customer late fee risk</td>
+            <td>Per-contract penalty or lost-future-order estimate</td>
+            <td>$500–5,000</td>
+          </tr>
+        </table>
+      </div>
+      <p style="font-size:15px; color:rgba(23,21,19,.55);">For Dave's shop: one late aluminum delivery last month cost $1,275 in idle labor, $340 in expedited shipping from a backup supplier, and delayed a $45,000 customer order by 4 days. The customer still hasn't placed their next order. That's the real cost of not knowing.</p>
+
+      <h2>The supplier communication templates</h2>
+
+      <h3>The "checking on delivery status" email (send 3 days before promise date)</h3>
+      <div class="checklist">
+        <p style="font-family:monospace;font-size:15px;margin:0">Subject: Checking on PO#1247 — 14-gauge aluminum for Wednesday<br><br>Hi [Name],<br><br>Just confirming PO#1247 (14-gauge aluminum, 500 lbs) is still on track for delivery this Wednesday, July 7. This feeds the Acme Manufacturing order due Friday — appreciate a quick confirmation either way.<br><br>Thanks,<br>[Your name]</p>
+      </div>
+
+      <h3>The "you're late — what's the new ETA?" call script (day of missed delivery)</h3>
+      <div class="checklist">
+        <p style="margin:0"><strong>You:</strong> "Hi [Name], PO#1247 for 14-gauge aluminum was due today and hasn't arrived. What's the new ETA?"<br><br><strong>They'll say:</strong> "Should be there Thursday."<br><br><strong>You:</strong> "OK — Thursday by when? This job ships Friday morning and we need 8 hours of production time. If it's not here by 10 AM Thursday, the Acme order is going to be late."<br><br><strong>They'll say:</strong> "Let me check and call you back."<br><br><strong>You:</strong> "Thanks. I need a firm time by end of day today — otherwise I'll need to source from a backup supplier to keep this job on schedule."<br><br><em>Why this works: you're not angry, you're specific. You named the downstream consequence (Acme order), the hard cutoff (10 AM Thursday), and the backup plan. The supplier now has a real deadline, not just a complaint.</em></p>
+      </div>
+
+      <h3>The quarterly supplier performance review template</h3>
+      <p>Once per quarter, pull the Scorecard tab and send this to every supplier whose on-time rate is below 85%:</p>
+      <div class="checklist">
+        <p style="font-family:monospace;font-size:15px;margin:0">Subject: Q3 Delivery Performance — [Supplier Name]<br><br>Hi [Name],<br><br>Sharing our delivery performance data for Q3. Your on-time rate this quarter was [XX]% across [N] POs, with an average delay of [X.X] days. Late deliveries from your team caused [N] production stops on our end.<br><br>We value our relationship and want to keep working together. Can we set up a 15-minute call to talk about what's driving the delays and what we can do on our side — different lead times, earlier PO placement, consolidated orders — to get this above 90% in Q4?<br><br>Best,<br>[Your name]</p>
+      </div>
+      <p style="font-size:15px; color:rgba(23,21,19,.55);">Most suppliers have no idea their on-time rate is 72% — they've never seen it quantified. The scorecard changes the conversation from "you're always late" to "here's the data, let's fix it together." And if they won't fix it, you have the data to justify switching.</p>
+
+      <h2>How to use the scorecard to negotiate with suppliers</h2>
+      <p>The Supplier Scorecard tab is your leverage. When a supplier drops below 80% on-time delivery for two consecutive quarters, you have two moves:</p>
+      <ol>
+        <li><strong>Demand improvement with data.</strong> "Your on-time rate was 72% in Q2 and 68% in Q3. That's 11 late deliveries out of 40 POs. Each late delivery costs us roughly $1,200 in idle labor and expedited shipping. We need to see 85%+ in Q4, or we'll need to reallocate volume." You're not angry — you're factual. And the data makes it impossible to argue.</li>
+        <li><strong>Switch with confidence.</strong> The Supplier Directory tab already has backup suppliers listed. When you've given a supplier two quarters to improve and they haven't, you're not making an emotional decision — you're following the scorecard. The data tells you when it's time to switch, and it justifies the switch to anyone who asks.</li>
+      </ol>
+      <p>For the supplier that <em>does</em> perform — 95%+ on-time, zero drama — the scorecard is also your retention tool. Send them the data once a year: "Your on-time rate was 97% in 2026. We notice. We appreciate it. Here's more volume."</p>
+
+      <h2>Integrating with QuickBooks</h2>
+      <p>If you use QuickBooks for purchasing, you can cut your data entry time in half:</p>
+      <ol>
+        <li>In QuickBooks, go to Reports → Purchases → Open Purchase Orders.</li>
+        <li>Export to Excel/CSV.</li>
+        <li>Copy the PO#, Supplier, Item, and Expected Date columns into the PO Tracker tab.</li>
+        <li>Manually fill in the Job# and Production Impact columns — those are tribal knowledge QuickBooks doesn't have.</li>
+      </ol>
+      <p>This takes about 5 minutes for 20-30 open POs — and it ensures your PO Tracker is never stale because the source data comes from QuickBooks, not from memory.</p>
+
+      <h2>When to upgrade from the spreadsheet</h2>
+      <p>The spreadsheet system works until you hit these trigger metrics. When you cross any two of them, it's time to look at lightweight procurement tools:</p>
+      <ul>
+        <li><strong>50+ active POs at any given time.</strong> The spreadsheet gets unwieldy — too many rows to review in 10 minutes on Monday morning.</li>
+        <li><strong>2+ people managing procurement.</strong> Spreadsheets get out of sync when multiple people update them. You need a shared system with version control.</li>
+        <li><strong>Multi-site operations.</strong> Different facilities ordering from the same suppliers need consolidated visibility, not per-site spreadsheets.</li>
+        <li><strong>Supplier portal requirement.</strong> Large customers or ISO certification audits require formal supplier management processes that a spreadsheet can't document.</li>
+      </ul>
+      <p>Until then? The spreadsheet is the right tool. Don't let anyone sell you a $400/month platform for a problem a Monday morning protocol can solve.</p>
+
+      <div class="comparison">
+        <h2>Decision guide</h2>
+        <table>
+          <tr>
+            <th>Your situation</th>
+            <th>Right tool</th>
+            <th>Typical cost</th>
+          </tr>
+          <tr>
+            <td>&lt; 50 active POs, 1 person managing procurement</td>
+            <td>Supplier delivery scorecard spreadsheet</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>50–150 active POs, 2+ buyers</td>
+            <td>Lightweight procurement tool (Precoro, Lasso)</td>
+            <td>$200–400/mo</td>
+          </tr>
+          <tr>
+            <td>Spreadsheet works but data lives in silos</td>
+            <td>Automation glue (QuickBooks → PO Tracker sync)</td>
+            <td>Built to scope</td>
+          </tr>
+          <tr>
+            <td>150+ POs, dedicated procurement team, ISO audits</td>
+            <td>Full procurement platform (+ integration)</td>
+            <td>$500+/mo</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Do this Monday: build the system in 2 hours</h2>
+      <div class="checklist">
+        <h3>6 steps to a working supplier scorecard by Monday afternoon</h3>
+        <ol>
+          <li><strong>Create the four tabs.</strong> New Google Sheet. Supplier Directory, PO Tracker, Supplier Scorecard, Weekly Risk Report. Use the column layouts above.</li>
+          <li><strong>Populate the Supplier Directory.</strong> List every active supplier — name, contact, lead time, category. This is 30 minutes of data entry you do once.</li>
+          <li><strong>Enter all open POs.</strong> Export from QuickBooks or your email inbox. Every PO with a promised delivery date gets a row in the PO Tracker.</li>
+          <li><strong>Set up conditional formatting.</strong> In the PO Tracker: if Status = "Late," the row turns red. If Promised Delivery Date is within 3 days, the row turns yellow. Visual cues do the work for you.</li>
+          <li><strong>Build the Weekly Risk Report formula.</strong> Use SUMIFS to count late POs and SUMIFS to total the Production Impact dollar values. Now the report auto-populates — you just print it Monday morning.</li>
+          <li><strong>Put it on the calendar.</strong> Monday 7:30 AM, recurring. "Supplier scorecard review — 10 minutes." The system only works if you run it.</li>
+        </ol>
+        <p style="font-size:15px; color:rgba(23,21,19,.55); margin:16px 0 0">Total time to build: 2 hours. Total maintenance: 10 minutes per week. ROI: $1,000+/week in prevented idle labor, starting the first time you catch a late delivery before it stops production.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>How much does it actually cost when a supplier is late?</h3>
+        <p>The true cost has four components: idle labor (hours × shop rate — at $85/hour with 4 idle workers for 3 hours, that's $1,020 per incident), expedited shipping to recover the schedule, overtime to catch up on the delayed job, and customer late-delivery penalties. For a 35-person shop, a single late delivery of critical material can cost $1,500–3,000 in direct waste, not counting the customer trust damage from missing a promised date. Across 15–20% of POs arriving late, a typical small manufacturer loses $40,000–60,000 per year to supplier delivery failures they could have anticipated with a tracking system.</p>
+        <h3>Do I really need supplier management software, or can a spreadsheet work?</h3>
+        <p>For manufacturers with fewer than 50 active POs and one person managing procurement (even part-time), a well-structured spreadsheet is the correct tool. Procurement software like SourceDay or Precoro starts at $200–400/month, requires supplier onboarding, and is built for dedicated purchasing departments — not for a production manager who's also doing quoting, scheduling, and quality checks. The spreadsheet system described in this guide handles the core need: knowing who's late, who's due this week, and which jobs are at risk. You only need to upgrade when you cross 50+ active POs, have multiple people managing procurement, or need supplier portal functionality for large vendors.</p>
+        <h3>How does the Jobs Done Labs $30K guarantee apply to supplier tracking?</h3>
+        <p>The $30K guarantee works the same way for supplier tracking as for every other automation we build: we map your current procurement-to-production handoff during a free audit, identify exactly which supplier delays are costing you idle shop hours and late deliveries, and build automations that give you Monday-morning visibility into every at-risk PO — all within your existing tools (spreadsheets, QuickBooks, email). We track the documented cost recovery (idle hours avoided, expedited shipping saved, late penalties eliminated). If the total doesn't reach $30,000 in net profit recovered within 90 days, you pay nothing. For most small manufacturers, supplier visibility alone recovers $25,000–45,000 in the first year.</p>
+      </section>
+
+<section class="related-reading">
+<h2>Related reading</h2>
+<p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+<ul style="list-style:none;padding:0;margin:0">
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/manufacturing-job-costing-without-erp/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet System</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/small-manufacturing-production-scheduling-guide/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Whiteboard Production Schedule Broke the Day You Hit 20 Orders</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/small-manufacturer-inventory-management-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Raw Material Shelf Is a Guessing Game — Free Inventory System</a>
+  </li>
+</ul>
+</section>
+
+      <div class="cta-box">
+        <h2>Stop losing $1,000/week to supplier blind spots</h2>
+        <p>Book a free 15-minute audit. We'll map your procurement-to-production handoff, show you exactly which supplier delays are costing you idle shop hours, and build automations that give you Monday morning visibility — covered by our $30K-recovered-in-90-days guarantee. If documented recovery doesn't reach $30K, you pay nothing.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
+  </footer>
+</body>
+</html>

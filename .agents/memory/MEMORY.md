@@ -1,0 +1,1 @@
+- [OG/sitemap pipeline decisions](og-sitemap-pipeline.md) — key constraints for the post-merge automation pipeline and the blog/about/case-study OG image system.

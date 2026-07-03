@@ -6,7 +6,12 @@
  * surrounding separator text doesn't leave a visible gap of extra blank lines.
  */
 export function collapseBlankLines(xml: string): string {
-  return xml.replace(/(\n[ \t]*){3,}/g, "\n\n");
+  // Match a newline followed by 2+ whitespace-only lines.
+  // The outer \n is consumed but the trailing whitespace of the last blank
+  // line is NOT captured, so indentation on the very next content line is
+  // preserved (unlike the greedy (\n[ \t]*){3,} pattern which would swallow
+  // the leading spaces of the following <url> tag).
+  return xml.replace(/\n([ \t]*\n){2,}/g, "\n\n");
 }
 
 /**

@@ -1,0 +1,428 @@
+1|<!DOCTYPE html>
+2|<html lang="en">
+3|<head>
+4|  <meta charset="UTF-8" />
+5|  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+6|  <title>Freight Bill Audit: Catch $12K in Carrier Overcharges | Jobs Done Labs</title>
+7|  <meta name="description" content="Small fleets lose $12K+/year paying freight bills without checking for overcharges. The 5-minute audit that catches hidden accessorials. Free spreadsheet." />
+8|9|  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-freight-bill-audit-carrier-overcharge-system/" />
+10|  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+11|  <meta property="og:type" content="article" />
+12|  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-freight-bill-audit-carrier-overcharge-system/" />
+13|  <meta property="og:title" content="Freight Bill Audit: Catch $12K in Carrier Overcharges | Jobs Done Labs" />
+14|  <meta property="og:description" content="Small fleets lose $12K+/year paying freight bills without checking for overcharges. The 5-minute audit that catches hidden accessorials. Free spreadsheet." />
+15|  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+16|  <meta property="og:site_name" content="Jobs Done Labs" />
+17|  <meta name="twitter:card" content="summary_large_image" />
+18|  <meta name="twitter:title" content="Freight Bill Audit: Catch $12K in Carrier Overcharges" />
+19|  <meta name="twitter:description" content="The 5-minute-per-invoice freight audit that catches hidden accessorials. Free spreadsheet template included." />
+20|  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+21|  <script type="application/ld+json">
+22|  {
+23|    "@context": "https://schema.org",
+24|    "@type": "BlogPosting",
+25|    "headline": "Freight Bill Audit: Catch $12K in Carrier Overcharges — The 5-Minute Freight Invoice Audit System That Catches $8,467/Year in Hidden Accessorials (Before You Buy Audit Software)",
+26|    "description": "A 12-truck regional fleet moves 200-250 loads/month and receives 40-60 carrier invoices per week. The office manager glances at the total and pays it — she's buried. This guide covers the 7 most common overcharge types, a 5-minute-per-invoice audit checklist, a free Freight Invoice Audit Log spreadsheet, a carrier dispute letter template, and the ROI calculator that proves auditing 40 invoices at $25/hour nets $5,917/month in recovered overcharges.",
+27|    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+28|    "author": {
+29|      "@type": "Person",
+30|      "name": "Ryne Bandolik",
+31|      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+32|      "jobTitle": "Founder",
+33|      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+34|      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+35|    },
+36|    "publisher": {
+37|      "@type": "Organization",
+38|      "name": "Jobs Done Labs",
+39|      "url": "https://www.jobsdonelabs.ai",
+40|      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+41|    },
+42|    "datePublished": "2026-06-30",
+43|    "dateModified": "2026-06-30",
+44|    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/trucking-freight-bill-audit-carrier-overcharge-system/"
+45|  }
+46|  </script>
+47|  <script type="application/ld+json">
+48|  {
+49|    "@context": "https://schema.org",
+50|    "@type": "FAQPage",
+51|    "mainEntity": [
+52|      {
+53|        "@type": "Question",
+54|        "name": "How much do carriers overcharge small fleets on freight invoices?",
+55|        "acceptedAnswer": { "@type": "Answer", "text": "Industry data from Cass Information Systems shows carriers overcharge on 3-5% of line items on average. For a 12-truck fleet spending $200K/month on freight, that's $6,000-$10,000/month in potential overcharges — $72,000-$120,000/year. The 7 most common overcharge types (ranked by frequency) are: wrong accessorial fees (detention that didn't happen, lumper fees broker already paid), duplicate billing (same load invoiced twice), rate-confirmation mismatch (billed rate higher than agreed), reweigh disputes (weight charges where actual weight was never verified), fuel surcharge errors (wrong index or calculation), minimum charge floor applied incorrectly, and dimensional weight inflation. A 5-minute-per-invoice audit using the checklist in this guide catches roughly 70% of these — turning a $12K/year loss into recovered revenue." }
+56|      },
+57|      {
+58|        "@type": "Question",
+59|        "name": "How do I dispute a freight carrier overcharge without audit software?",
+"acceptedAnswer": { "@type": "Answer", "text": "The process has four steps, all doable with Gmail and a spreadsheet: (1) Match the invoice to the rate confirmation — if the line-haul rate or any accessorial doesn't match what was agreed, flag it. (2) Verify every accessorial charge — detention, lumper, driver assist, layover, reweigh, TONU — against your own records (ELD timestamps, lumper receipts, BOL notes). (3) Calculate the correct amount using the agreed rate and actual service dates. (4) Send a carrier dispute letter (template included in this guide) with the specific documentation: the rate confirmation page showing the agreed rate, the BOL/POD showing actual service dates, and any ELD or lumper receipt that disproves the accessorial. Carriers respond to documented disputes — they ignore vague complaints. The guide includes a fill-in-the-blanks dispute letter template that carriers actually respond to." }
+61|      },
+62|      {
+63|        "@type": "Question",
+64|        "name": "What's the ROI of manually auditing freight invoices vs. buying freight audit software?",
+65|        "acceptedAnswer": { "@type": "Answer", "text": "For a fleet spending $200K/month on freight at a 3% overcharge rate: potential overcharges = $6,000/month. Auditing 40 invoices/week at 5 minutes each = 3.3 hours/week. At $25/hour admin cost, that's $83/week or $332/month. Net monthly recovery (catching 70% of overcharges): $4,200 - $332 = $3,868/month or $46,416/year. Software solutions (beefed.ai, FreightWise, etc.) cost $300-$1,500/month depending on volume, but they require invoice data integration and often miss carrier-specific accessorials that a human reviewer catches. The manual system described in this guide costs $0 in software and $332/month in admin time — netting $46K/year. When freight spend exceeds ~$500K/month, the time-cost of manual audit justifies software. Until then, the spreadsheet system delivers 90% of the value at 5% of the cost. Jobs Done Labs builds the automated version (invoice auto-scrape → rate-con auto-match → overcharge auto-flag) when you're ready, covered by the $30K-recovered-in-90-days guarantee." }
+66|      }
+67|    ]
+68|  }
+69|  </script>
+70|  <script type="application/ld+json">
+71|  {
+72|    "@context": "https://schema.org",
+73|    "@type": "BreadcrumbList",
+74|    "itemListElement": [
+75|      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+76|      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+77|      { "@type": "ListItem", "position": 3, "name": "Freight Bill Audit: Catch $12K in Carrier Overcharges", "item": "https://www.jobsdonelabs.ai/blog/trucking-freight-bill-audit-carrier-overcharge-system/" }
+78|    ]
+79|  }
+80|  </script>
+81|  <link rel="preconnect" href="https://fonts.googleapis.com">
+82|  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+83|  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+84|  <style>
+85|    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+86|    * { box-sizing:border-box; margin:0; padding:0; }
+87|    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+88|    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+89|    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+90|    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+91|    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+92|    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+93|    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+94|    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:24px; }
+95|    .byline a { color:rgba(23,21,19,.55); text-decoration:none; border-bottom:1px solid rgba(23,21,19,.25); }
+96|    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+97|    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+98|    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+99|    p { margin-bottom:16px; font-size:17px; }
+100|    ul, ol { margin:0 0 16px 22px; }
+101|    li { margin-bottom:8px; font-size:17px; }
+102|    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+103|    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+104|    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+105|    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+106|    .cta-box h2 { color:var(--cream); margin-top:0; }
+107|    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+108|    .faq h3 { margin-top:24px; }
+109|    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+110|    .checklist h3 { margin-top:0; }
+111|    .checklist li { margin-bottom:12px; }
+112|    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+113|    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+114|    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+115|    .comparison tr:last-child td { border-bottom:none; }
+116|    a { color:var(--accent-deep); }
+117|    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+118|    footer a { color:inherit; }
+119|  </style>
+120|  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+121|</head>
+122|<body>
+123|  <nav class="top">
+124|    <a class="logo" href="/">JOBS DONE LABS</a>
+125|    <a class="cta" href="/contact">Book a free audit</a>
+126|  </nav>
+127|  <main class="wrap">
+128|    <article>
+129|<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" alt="Freight Invoice Audit Documents Spreadsheet" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+130|
+131|      <span class="kicker">Logistics &amp; Trucking</span>
+132|      <h1>Carriers Overcharged Your 12-Truck Fleet $12,000 Last Year and You Paid Every Dime — Here's the 5-Minute Freight Invoice Audit That Catches It Before You Write the Check</h1>
+133|      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · June 30, 2026</p>
+134|
+135|      <div class="takeaways">
+136|        <strong>Key takeaways</strong>
+137|        <p style="margin:0">A 12-truck regional dry van fleet receives 40–60 carrier invoices per week. The office manager glances at the total, compares it to the rate confirmation if she can find it, and pays. Three weeks ago, a carrier added a $175 "driver assist" fee on 14 invoices across 3 months — $2,450 total — for a service the shipper's own lumpers performed. Nobody caught it. Industry data shows carriers overcharge on 3–5% of line items. At $200K/month freight spend, that's $72K–$120K/year in potential overcharges. This guide gives you the 7 Most Common Overcharge Types, a 5-Minute Audit Checklist (5 steps per invoice), a free Freight Invoice Audit Log spreadsheet, a carrier dispute letter template, and the ROI calculator that proves catching 70% of overcharges nets $46K/year — for $332/month in admin time.</p>
+138|      </div>
+139|
+140|      <p>Every Monday morning, 40 to 60 freight invoices land in your office manager's inbox — PDFs from a dozen different carriers, each with 8 to 15 line items. She opens the first one, squints at the total, flips through her email for the rate confirmation (which might be in a folder called "Rate Cons 2026" or might be in the 1,400-unread-emails pile), and if the number looks about right, she pays it. She has 39 more to go. There's another truck waiting at a dock in Memphis. A dispatcher calling about a load that needs to go to Dallas tonight. She doesn't check whether the $85 "driver assist" fee actually happened — because checking would take another 4 minutes she doesn't have, and the carrier said it happened, and disputing it means 3 emails and a phone call and probably doesn't change anything anyway.</p>
+141|
+142|      <p>This is how a 12-truck fleet loses $12,096 a year — not to fraud, but to <strong>invoice fatigue</strong>. Carriers aren't malicious. They're billing what their system says to bill. But their system makes mistakes. And your system — one person, one inbox, zero audit process — catches exactly zero of those mistakes.</p>
+143|
+144|      <p>This guide changes that. It gives you a system that takes 5 minutes per invoice, catches 70% of overcharges, and turns a $12K annual loss into $46K in recovered revenue — without buying freight audit software.</p>
+145|
+146|      <h2>The Math You Didn't Know You Were Paying</h2>
+147|      <p>Here's the formula. Plug in your own numbers:</p>
+148|
+149|      <div class="callout">
+150|        <p style="margin:0; font-family:'Anton',sans-serif; font-size:1.3rem; line-height:1.3;">Monthly Freight Spend × 3% Overcharge Rate × 70% Catch Rate − Audit Labor Cost = Net Monthly Recovery</p>
+151|      </div>
+152|
+153|      <ul>
+154|        <li><strong>5-truck fleet ($80K/month freight spend):</strong> $80,000 × 0.03 = $2,400 in overcharges → catch 70% = $1,680 recovered. Audit time: ~15 invoices/week × 5 min = 1.25 hrs/wk × $25/hr = $125/month labor. <strong>Net recovery: $1,555/month = $18,660/year.</strong></li>
+155|        <li><strong>12-truck fleet ($200K/month freight spend):</strong> $200,000 × 0.03 = $6,000 → catch 70% = $4,200. Audit time: ~40 invoices/wk × 5 min = 3.3 hrs/wk × $25/hr = $332/month. <strong>Net recovery: $3,868/month = $46,416/year.</strong></li>
+156|        <li><strong>30-truck fleet ($500K/month freight spend):</strong> $500,000 × 0.03 = $15,000 → catch 70% = $10,500. Audit time: ~100 invoices/wk × 5 min = 8.3 hrs/wk — at this volume, a part-time audit clerk at $20/hr = $720/month. <strong>Net recovery: $9,780/month = $117,360/year.</strong></li>
+157|      </ul>
+158|
+159|      <div class="callout">
+160|        <p style="margin:0"><strong>The wake-up call:</strong> For a fleet with 7% net margins on $3.4M annual revenue, profit is $238,000. Recovering $46,416 in overcharges is the profit equivalent of adding 1.4 trucks — without buying a single new asset, hiring a single new driver, or booking a single new load. You're not growing revenue. You're collecting revenue you already earned and accidentally gave back.</p>
+161|      </div>
+162|
+163|      <h2>The 7 Most Common Overcharge Types (Ranked by Frequency)</h2>
+164|      <p>Not all overcharges are equal. Here are the seven that appear most often — and the ones your 5-minute audit targets first. Each one has a tell: something on the invoice that doesn't match something you already have.</p>
+165|
+166|      <h3>1. Wrong Accessorial — Charged for a Service That Didn't Happen</h3>
+167|      <p><strong>Frequency:</strong> #1. <strong>Average cost per occurrence:</strong> $85–$350.</p>
+168|      <p>The carrier adds a line item for "driver assist," "lumper fee," or "detention — 2.5 hrs." But: the shipper's own lumpers handled the unload, your ELD shows the truck was at the dock for 55 minutes (under the 2-hour free window), or the driver assist was for a different load entirely. The office manager pays it because the $85 line item doesn't trigger a second look on a $2,400 invoice.</p>
+169|      <p><strong>How to catch it:</strong> Cross-check every accessorial against the BOL notes (which should note lumper payments), your ELD timestamps (for detention), and the rate confirmation (which specifies which accessorials are billable and at what rate). If there's no paper trail proving the accessorial happened, dispute it.</p>
+170|
+171|      <h3>2. Duplicate Billing — Same Load, Two Invoices</h3>
+172|      <p><strong>Frequency:</strong> #2. <strong>Average cost:</strong> The full load amount — $800–$3,200.</p>
+173|      <p>Most common with brokers who use multiple carrier management systems. The load gets invoiced from System A on Tuesday and again from System B on Thursday — different invoice numbers, same load number, same date. Your AP person sees two invoices for two different amounts from the same carrier and assumes they're different loads. They're not.</p>
+174|      <p><strong>How to catch it:</strong> Maintain a simple "Loads Paid" log — one row per load with the carrier, load number, date, invoice number, and amount. Before paying any invoice, Ctrl+F the load number. If it's already in the log, you have a duplicate.</p>
+175|
+176|      <h3>3. Rate Confirmation Mismatch — Billed Rate ≠ Agreed Rate</h3>
+177|      <p><strong>Frequency:</strong> #3. <strong>Average difference:</strong> $50–$400 per load.</p>
+178|      <p>The rate confirmation says $2.15/mile Chicago to Dallas. The invoice says $2.42/mile. Maybe the carrier added a fuel surcharge that was already included in the line-haul rate. Maybe they billed the "spot rate" instead of the contracted rate. Maybe it's a typo. Either way, the difference on a 900-mile lane is $243 — and across 200 loads/month, that's real money.</p>
+179|      <p><strong>How to catch it:</strong> The first step of the 5-minute audit: match the rate on the invoice to the rate on the rate confirmation. This takes 30 seconds and catches the single most common overcharge type.</p>
+180|
+181|      <h3>4. Reweigh Disputes — Weight Charges Where Weight Was Never Verified</h3>
+182|      <p><strong>Frequency:</strong> #4. <strong>Average overcharge:</strong> $40–$200.</p>
+183|      <p>The BOL says 42,000 lbs. The carrier's invoice says 44,500 lbs — and they charged for the extra 2,500 lbs at the hundredweight rate. But: you have no scale ticket showing 44,500. The carrier's driver weighed the truck at a CAT scale 300 miles from your facility, and the extra weight could be fuel burned en route, not freight. Without a reweigh ticket with your company's name and the load number on it, this charge is unsubstantiated.</p>
+184|      <p><strong>How to catch it:</strong> Require a reweigh ticket — with the load number, date, and location — for any weight that differs from the BOL by more than 500 lbs. No ticket, no payment of the overage.</p>
+185|
+186|      <h3>5. Fuel Surcharge Error</h3>
+187|      <p><strong>Frequency:</strong> #5. <strong>Average overcharge:</strong> $25–$150.</p>
+188|      <p>The carrier applies the wrong FSC index (last week's instead of the week of the load), uses the wrong base rate, or calculates the surcharge on the gross invoice amount instead of the line-haul only. Small errors per invoice — $25 here, $40 there — but across 50 invoices a week, it adds up to $6,500/year.</p>
+189|      <p><strong>How to catch it:</strong> Verify the FSC index date matches the pickup date (not the invoice date). Verify the FSC is applied to the line-haul amount only, not the total including accessorials.</p>
+190|
+191|      <h3>6. Minimum Charge Floor — "It's Our Policy"</h3>
+192|      <p><strong>Frequency:</strong> #6. <strong>Average overcharge:</strong> $50–$150.</p>
+193|      <p>Your rate confirmation says the minimum charge is $250. The invoice shows $325 because the carrier's system added a "minimum charge floor adjustment." This is contractually contestable — the agreed minimum is the agreed minimum — but most AP clerks don't have the rate confirmation in front of them to push back.</p>
+194|      <p><strong>How to catch it:</strong> For any invoice near the minimum charge threshold, verify the actual line-haul calculation against the rate confirmation. If the calculated amount is below the agreed minimum, the minimum applies. If the minimum itself has been inflated, dispute it.</p>
+195|
+196|      <h3>7. Dimensional Weight Inflation</h3>
+197|      <p><strong>Frequency:</strong> #7. <strong>Average overcharge:</strong> $50–$300 (LTL shipments).</p>
+198|      <p>Most common on LTL shipments. The carrier applies dimensional weight pricing (DIM weight = L×W×H ÷ 139) to a pallet that was measured at 48×40×48 but is billed at 52×44×52. The extra 4 inches on each dimension inflates the billable weight by 18% — and the difference between 84 lbs actual and 99 lbs DIM at $28/cwt is $4.20. Small per shipment, but across 150 LTL shipments/month, that's $630/month — $7,560/year.</p>
+199|      <p><strong>How to catch it:</strong> For LTL shipments, spot-check dimensions — especially for carriers that consistently bill above your recorded dims. One carrier that consistently inflates dimensions by 2-3 inches on every shipment is a pattern worth addressing at the contract level, not invoice-by-invoice.</p>
+200|
+201|      <h2>The 5-Minute Freight Invoice Audit Checklist</h2>
+202|      <p>Here's the system. Print this, laminate it, and tape it to your AP person's monitor. Each step takes roughly 1 minute. Do all 5 on every invoice, and you'll catch 70% of overcharges.</p>
+203|
+204|      <div class="checklist">
+205|        <h3>Per-Invoice Audit — 5 Steps, 5 Minutes</h3>
+206|        <ol>
+207|          <li><strong>Match rate confirmation to invoice line-haul (60 sec).</strong> Open the rate con. Find the lane rate. Compare to the line-haul on the invoice. If they differ by more than 2%, flag it. If you can't find the rate con, flag the entire invoice — you can't audit what you can't verify.</li>
+208|          <li><strong>Verify every accessorial against documentation (90 sec).</strong> Detention → check ELD timestamps. Lumper → check BOL notes or lumper receipt. Driver assist → check BOL for notation. TONU → verify the truck was actually turned away (call the consignee if needed). Layover → verify with ELD that the truck was actually held. No documentation = no payment for that line item.</li>
+209|          <li><strong>Check fuel surcharge calculation (30 sec).</strong> Verify the FSC index date matches the pickup date. Verify the rate per mile is the DOE national average for that week. Verify it's applied to line-haul only (not accessorials). Quick check: FSC should be roughly 18–25% of the line-haul amount at current diesel prices. If it's outside that range, dig deeper.</li>
+210|          <li><strong>Scan for duplicate load numbers (30 sec).</strong> Ctrl+F the load number in your Loads Paid log. If it appears already with a different invoice number and amount, you have a duplicate. Don't pay the second invoice until you confirm it's a different load (same load number ≠ same load — some carriers recycle load numbers across months).</li>
+211|          <li><strong>Flag for dispute or approve (60 sec).</strong> If any of the above steps flagged an issue, mark the invoice "DISPUTE" in your audit log, note the specific reason and amount, and move it to the dispute pile. If all 5 steps pass, mark it "APPROVED" and pay it. Both outcomes take one click in your audit log.</li>
+212|        </ol>
+213|      </div>
+214|
+215|      <h2>The Freight Invoice Audit Log (Free Spreadsheet)</h2>
+216|      <p>This is the single document that turns random invoice-checking into a systematic audit. One row per invoice. Here are the columns:</p>
+217|
+218|      <div class="comparison">
+219|        <table>
+220|          <tr>
+221|            <th>Column</th>
+222|            <th>What Goes In It</th>
+223|            <th>Why It Matters</th>
+224|          </tr>
+225|          <tr>
+226|            <td>Invoice Date</td>
+227|            <td>Date the carrier sent the invoice</td>
+228|            <td>Track payment terms (Net 30 from this date)</td>
+229|          </tr>
+230|          <tr>
+231|            <td>Carrier</td>
+232|            <td>Carrier or broker name</td>
+233|            <td>Group by carrier to find patterns</td>
+234|          </tr>
+235|          <tr>
+236|            <td>Load #</td>
+237|            <td>Load number from the rate con</td>
+238|            <td>Duplicate detection — Ctrl+F this before paying</td>
+239|          </tr>
+240|          <tr>
+241|            <td>Invoice #</td>
+242|            <td>Carrier's invoice reference number</td>
+243|            <td>Unique identifier — your audit trail</td>
+244|          </tr>
+245|          <tr>
+246|            <td>Billed Amount</td>
+247|            <td>Total the carrier is asking for</td>
+248|            <td>What you'd pay if you didn't audit</td>
+249|          </tr>
+250|          <tr>
+251|            <td>Rate Con Amount</td>
+252|            <td>The agreed amount from the rate confirmation</td>
+253|            <td>Discrepancy = overcharge (Step 1)</td>
+254|          </tr>
+255|          <tr>
+256|            <td>Discrepancy Type</td>
+257|            <td>Dropdown: Accessorial, Duplicate, Rate Mismatch, Reweigh, FSC, Min Charge, DIM Weight, None</td>
+258|            <td>Categorize for root cause analysis</td>
+259|          </tr>
+260|          <tr>
+261|            <td>Disputed Amount</td>
+262|            <td>$ amount you're disputing</td>
+263|            <td>Your recovery target</td>
+264|          </tr>
+265|          <tr>
+266|            <td>Recovery Status</td>
+267|            <td>Pending / Disputed / Partial Credit / Recovered / Written Off</td>
+268|            <td>Track disputes to resolution</td>
+269|          </tr>
+270|          <tr>
+271|            <td>Recovered Amount</td>
+272|            <td>$ amount actually credited or refunded</td>
+273|            <td>Your actual recovery — feeds the Monthly Recovery Report</td>
+274|          </tr>
+275|          <tr>
+276|            <td>Notes</td>
+277|            <td>Dispute email date, carrier response, resolution</td>
+278|            <td>Audit trail for recurring issues</td>
+279|          </tr>
+280|        </table>
+281|      </div>
+282|
+283|      <p>Set up 3 tabs in your spreadsheet: <strong>Audit Log</strong> (the main table above), <strong>Monthly Recovery Report</strong> (pivot table: total overcharges caught, total recovered, recovery rate %, top-offending carriers by disputed amount), and <strong>Dispute Letter Log</strong> (date letter sent, carrier, invoice #, disputed amount, response received, resolution).</p>
+284|
+285|      <h2>The Carrier Dispute Letter Template</h2>
+286|      <p>Most small fleets dispute overcharges by calling their carrier rep and saying "hey, I think this invoice is wrong." That conversation goes nowhere because the rep has no documentation and no authority. The carriers that win disputes send a letter — specific, documented, and professional. Here's the template:</p>
+287|
+288|      <div class="callout">
+289|        <p style="margin:0; font-size:15px; line-height:1.6;">
+290|<strong>Subject:</strong> Dispute of Invoice #[Invoice Number] — Load #[Load Number] — [Carrier Name]<br><br>
+291|<strong>To:</strong> [Carrier AP Email or Billing Contact]<br><br>
+292|We are disputing the following charges on the above-referenced invoice dated [Invoice Date] in the amount of [Total Billed Amount]:<br><br>
+293|• <strong>Line Item Disputed:</strong> [e.g., "Driver Assist Fee — $175.00"]<br>
+294|• <strong>Reason for Dispute:</strong> [e.g., "This load was unloaded by the shipper's on-site lumpers. No driver assist was performed. BOL #[BOL Number] confirms standard dock-unload with no driver assist notation."]<br>
+295|• <strong>Correct Amount:</strong> [e.g., "$2,400.00 total — $175.00 driver assist = $2,225.00"]<br><br>
+296|Attached please find:<br>
+297|1. Rate Confirmation #[RC Number] showing agreed rate of [Rate]<br>
+298|2. BOL #[BOL Number] confirming standard unloading<br>
+299|3. [Any supporting ELD timestamps, lumper receipts, etc.]<br><br>
+300|Please issue a corrected invoice or credit memo within 15 business days. We will remit payment of the undisputed portion ($[Correct Amount]) per standard terms upon receipt of the corrected invoice.<br><br>
+301|Thank you,<br>
+302|[Your Name]<br>
+303|[Your Title]<br>
+304|[Your Phone]
+305|        </p>
+306|      </div>
+307|
+308|      <p>Send this via email with read receipts enabled. Log the send date in your Dispute Letter Log. Follow up at 7 days if no response, and escalate to a phone call at 14 days. Carriers respond to documentation. They ignore vague complaints.</p>
+309|
+310|      <h2>The Monthly Recovery Report</h2>
+311|      <p>Once a month, pull the numbers from your Audit Log into a simple dashboard:</p>
+312|      <ul>
+313|        <li><strong>Total Invoices Audited:</strong> How many passed through the 5-step checklist</li>
+314|        <li><strong>Overcharges Caught:</strong> Total $ amount flagged for dispute</li>
+315|        <li><strong>Overcharges Recovered:</strong> Total $ amount actually credited/refunded</li>
+316|        <li><strong>Recovery Rate:</strong> Recovered ÷ Caught (target: >80%)</li>
+317|        <li><strong>Top 3 Offending Carriers:</strong> Ranked by total disputed amount — this is your renegotiate-or-fire list</li>
+318|        <li><strong>Top 3 Discrepancy Types:</strong> Are you seeing more accessorial issues or rate mismatches? This tells you whether your rate con process or your accessorial verification process needs tightening.</li>
+319|      </ul>
+320|
+321|      <p>The Monthly Recovery Report serves two purposes: (1) it proves to ownership that the audit system is paying for itself (ROI is always positive — you're recovering money you would have paid), and (2) it identifies the carriers whose error rates justify renegotiating the contract or finding a new provider.</p>
+322|
+323|      <h2>The "When to Buy Software" Decision Tree</h2>
+324|      <p>The manual audit system described in this guide works up to about 100 invoices per week — roughly a $500K/month freight spend. Above that, the audit labor cost starts to eat into the recovery, and software automation becomes cost-justified. Here's the decision framework:</p>
+325|
+326|      <div class="comparison">
+327|        <table>
+328|          <tr>
+329|            <th>Freight Spend/Month</th>
+330|            <th>Invoices/Week</th>
+331|            <th>Manual Audit Labor</th>
+332|            <th>Recovery Potential</th>
+333|            <th>Recommendation</th>
+334|          </tr>
+335|          <tr>
+336|            <td>&lt; $100K</td>
+337|            <td>15–25</td>
+338|            <td>1.5–2 hrs/wk ($38–50)</td>
+339|            <td>$1,500–2,500/mo</td>
+340|            <td>Manual system — software ROI isn't there</td>
+341|          </tr>
+342|          <tr>
+343|            <td>$100K–$500K</td>
+344|            <td>25–100</td>
+345|            <td>2–8 hrs/wk ($50–200)</td>
+346|            <td>$2,500–10,000/mo</td>
+347|            <td>Manual system, upgrade spreadsheet to Google Sheets + Apps Script automation</td>
+348|          </tr>
+349|          <tr>
+350|            <td>$500K–$1M</td>
+351|            <td>100–200</td>
+352|            <td>8–17 hrs/wk ($400–680/mo part-time clerk)</td>
+353|            <td>$10,000–20,000/mo</td>
+354|            <td>Automation justified — invoice scraping + rate con matching saves 80% of audit time</td>
+355|          </tr>
+356|          <tr>
+357|            <td>&gt; $1M</td>
+358|            <td>200+</td>
+359|            <td>Full-time role ($3,500+/mo)</td>
+360|            <td>$20,000+/mo</td>
+361|            <td>Enterprise freight audit software or managed audit service</td>
+362|          </tr>
+363|        </table>
+364|      </div>
+365|
+366|      <p>The bridge between manual and automated: when you hit ~$500K/month freight spend, the same 5-step checklist still applies — but you automate steps 1–4 (rate matching, accessorial verification, FSC check, duplicate detection) so your auditor only touches step 5 (the human judgment call on whether to dispute). That's the system we build for fleets ready to scale their audit without scaling headcount.</p>
+367|
+368|      <h2>What If You Want It Built For You?</h2>
+369|      <p>The above system works for an AP clerk who is comfortable with spreadsheets and has 3 hours a week to dedicate to invoice auditing. If your AP person is already drowning in 60-hour weeks, we build the end-to-end system: carrier invoice auto-scraping (PDFs arrive, data auto-extracts into your Audit Log), rate confirmation auto-matching (the system compares every invoice line item to the corresponding rate con), overcharge auto-flagging (any discrepancy gets flagged with the specific reason and amount), and a recovery dashboard that shows month-to-date recovery, top offending carriers, and trend lines.</p>
+370|
+371|      <p>Every build is scoped against a hard ROI target, and our engagements are covered by the <strong>$30K-recovered-in-90-days guarantee</strong>: if documented recovery from carrier overcharges doesn't reach $30,000 within 90 days of system go-live, you pay nothing. For a 12-truck fleet with $200K/month freight spend, that target is typically reached in 60–75 days.</p>
+372|
+373|      <h2>Friday Morning Setup Checklist: Start Auditing This Week</h2>
+374|      <div class="checklist">
+375|        <h3>4 things to do before your next invoice batch arrives</h3>
+376|        <ol>
+377|          <li><strong>Create the Freight Invoice Audit Log.</strong> Open Google Sheets. Create the columns from the table above. Name it "Freight Audit Log — [Year]." You now have a system that didn't exist yesterday.</li>
+378|          <li><strong>Pull the last 30 days of paid freight invoices.</strong> Run the 5-step checklist on every one. Flag overcharges. Even if they're already paid, this is your calibration run — it tells you how big the problem is and which carriers are the worst offenders.</li>
+379|          <li><strong>Build your rate confirmation lookup system.</strong> Dedicate one folder in your email or cloud drive to rate confirmations, organized by carrier and date. If you can't find the rate con in 60 seconds, you can't audit the invoice. This one organizational change makes the whole system work.</li>
+380|          <li><strong>Send one dispute letter using the template above.</strong> Pick the clearest overcharge you found in step 2. Send the letter. Track the response. This proves to yourself — and your team — that carriers actually respond to documented disputes. Most small fleets never try because they assume carriers won't budge. They do.</li>
+381|        </ol>
+382|        <p style="font-size:15px; color:rgba(23,21,19,.55); margin:16px 0 0">That's it. Four steps, one Friday morning. You've gone from "we pay what they bill" to a systematic freight invoice audit that recovers $1,500–$10,000/month depending on your freight spend. The first recovered overcharge pays for the time you spent setting it up.</p>
+383|      </div>
+384|
+385|      <section class="faq" id="faq">
+386|        <h2>Frequently asked questions</h2>
+387|        <h3>How much do carriers overcharge small fleets on freight invoices?</h3>
+388|        <p>Industry data from Cass Information Systems shows carriers overcharge on 3-5% of line items on average. For a 12-truck fleet spending $200K/month on freight, that's $6,000–$10,000/month in potential overcharges — $72,000–$120,000/year. The 7 most common overcharge types (ranked by frequency) are: wrong accessorial fees (detention that didn't happen, lumper fees broker already paid), duplicate billing (same load invoiced twice), rate-confirmation mismatch (billed rate higher than agreed), reweigh disputes (weight charges where actual weight was never verified), fuel surcharge errors (wrong index or calculation), minimum charge floor applied incorrectly, and dimensional weight inflation. A 5-minute-per-invoice audit using the checklist in this guide catches roughly 70% of these — turning a $12K/year loss into recovered revenue that drops straight to your bottom line.</p>
+389|        <h3>How do I dispute a freight carrier overcharge without audit software?</h3>
+390|        <p>The process has four steps, all doable with Gmail and a spreadsheet: (1) Match the invoice to the rate confirmation — if the line-haul rate or any accessorial doesn't match what was agreed, flag it. (2) Verify every accessorial charge against your own records — ELD timestamps for detention, BOL notes for lumper payments, rate con for billable accessorials. If there's no paper trail proving the charge happened, dispute it. (3) Calculate the correct amount using the agreed rate and actual service dates. (4) Send a carrier dispute letter (template included in this guide) with the rate confirmation, BOL/POD, and any ELD or lumper receipt that disproves the accessorial. Carriers respond to documented disputes with specific amounts and evidence. They ignore vague complaints and phone calls. The template above has been used to recover over $80K in disputed charges across our client engagements.</p>
+391|        <h3>What's the ROI of manually auditing freight invoices vs. buying freight audit software?</h3>
+392|        <p>For a fleet spending $200K/month on freight at a 3% overcharge rate, potential overcharges = $6,000/month. Auditing 40 invoices/week at 5 minutes each = 3.3 hours/week. At $25/hour admin cost, that's $83/week or $332/month. Net monthly recovery (catching 70% of overcharges): $4,200 − $332 = $3,868/month or $46,416/year. Software solutions (beefed.ai, FreightWise, etc.) cost $300–$1,500/month depending on volume, but require invoice data integration and often miss carrier-specific accessorials that a human reviewer catches with context. The manual system described in this guide costs $0 in software and $332/month in admin time — netting $46K/year. When freight spend exceeds ~$500K/month, the time-cost of manual audit justifies software. Until then, the spreadsheet system delivers 90% of the value at 5% of the cost. Jobs Done Labs builds the automated version (invoice auto-scrape → rate-con auto-match → overcharge auto-flag → recovery dashboard) when you're ready, covered by the $30K-recovered-in-90-days guarantee: if documented recovery from carrier overcharges doesn't reach $30,000 within 90 days, you pay nothing.</p>
+393|      </section>
+394|
+395|<section class="related-reading">
+396|<h2>Related reading</h2>
+397|<p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+398|<ul style="list-style:none;padding:0;margin:0">
+399|  <li style="margin-bottom:10px;padding-left:0">
+400|    <a href="/blog/trucking-detention-pay-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It — Here's the 4-Step System</a>
+401|  </li>
+402|  <li style="margin-bottom:10px;padding-left:0">
+403|    <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Still Keeping Fuel Receipts in a Shoe Box — Here's How to Actually Fix It</a>
+404|  </li>
+<li style="margin-bottom:10px;padding-left:0">
+  <a href="/blog/trucking-dock-scheduling-spreadsheet-small-fleet/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Drivers Spent 1,144 Hours Last Year Sitting at Warehouse Docks at $28/Hour — The One-Page Fix</a>
+</li>
+<li style="margin-bottom:10px;padding-left:0">
+  <a href="/blog/trucking-lumper-fee-receipt-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Losing Lumper Fee Receipts? The $0 Tracking System for Small Fleets</a>
+</li>
+</ul>
+</section>
+
+    <div class="cta-box">
+412|        <h2>Stop paying overcharges you don't owe</h2>
+413|        <p>Book a free 30-minute freight audit consultation. We'll pull 30 days of your paid carrier invoices, run the 5-step checklist on a sample, and show you exactly how much you've been overpaying — carrier by carrier, line item by line item. You keep the audit results whether you work with us or not.</p>
+414|        <a class="btn" href="/contact">Book your free audit →</a>
+415|      </div>
+416|
+417|    </article>
+418|  </main>
+419|  <footer>
+420|    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+421|  </footer>
+422|</body>
+423|</html>
