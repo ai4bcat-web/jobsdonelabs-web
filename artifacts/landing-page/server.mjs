@@ -60,7 +60,10 @@ const server = createServer((req, res) => {
   const hostname = typeof host === "string" ? host.split(":")[0] : String(host).split(":")[0];
 
   // Redirect non-www to www (301 permanent)
-  if (hostname === "jobsdonelabs.ai" || hostname.endsWith(".jobsdonelabs.ai")) {
+  if (
+    hostname === "jobsdonelabs.ai" ||
+    (hostname.endsWith(".jobsdonelabs.ai") && !hostname.startsWith("www."))
+  ) {
     const target = "www." + hostname.replace(/^(www\.)?/, "");
     const location = `https://${target}${req.url || "/"}`;
     res.writeHead(301, {

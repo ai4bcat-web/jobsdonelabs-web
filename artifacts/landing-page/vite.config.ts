@@ -41,7 +41,7 @@ const wwwRedirectMiddleware = (
   // Only redirect if it's the bare domain (non-www), not localhost or Replit domains
   if (
     hostname === "jobsdonelabs.ai" ||
-    hostname.endsWith(".jobsdonelabs.ai")
+    (hostname.endsWith(".jobsdonelabs.ai") && !hostname.startsWith("www."))
   ) {
     const target =
       "www." +
