@@ -3,6 +3,7 @@ modules = ["nodejs-24", "python-3.11"]
 [deployment]
 router = "application"
 deploymentTarget = "autoscale"
+run = ["node", "artifacts/landing-page/server.mjs"]
 
 [deployment.postBuild]
 args = ["pnpm", "store", "prune"]
