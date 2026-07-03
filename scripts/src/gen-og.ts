@@ -75,7 +75,7 @@ function escapeXml(str: string): string {
     .replace(/"/g, "&quot;");
 }
 
-function buildSvg(title: string, description: string): string {
+export function buildSvg(title: string, description: string): string {
   const TITLE_FONT_SIZE = 62;
   const DESC_FONT_SIZE = 28;
   const LABEL_FONT_SIZE = 16;
@@ -235,4 +235,7 @@ function main(): void {
   }
 }
 
-main();
+const isMain =
+  process.argv[1] &&
+  (await import("node:url")).fileURLToPath(import.meta.url) === process.argv[1];
+if (isMain) main();
