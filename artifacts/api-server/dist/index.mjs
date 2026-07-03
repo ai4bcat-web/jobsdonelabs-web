@@ -27925,7 +27925,7 @@ var require_pino = __commonJS({
     function pinoBundlerAbsolutePath(p) {
       try {
         const path3 = __require("path");
-        const outputDir = "/Users/adminoid/AI_WORKSPACE/jobsdonelabs/artifacts/api-server/dist";
+        const outputDir = "/home/runner/workspace/artifacts/api-server/dist";
         return path3.resolve(outputDir, p.replace(/^\.\//, ""));
       } catch (e) {
         const f = new Function("p", "return new URL(p, import.meta.url).pathname");
@@ -32375,6 +32375,15 @@ router2.post("/github-webhook", async (req, res) => {
   const workspaceRoot2 = process.cwd().endsWith(
     path.join("artifacts", "api-server")
   ) ? path.resolve(process.cwd(), "../..") : process.cwd();
+  try {
+    await execAsync("git rev-parse --git-dir", { cwd: workspaceRoot2 });
+  } catch {
+    logger.warn(
+      { workspaceRoot: workspaceRoot2 },
+      "Not a git repository \u2014 skipping pull (production environment)"
+    );
+    return;
+  }
   try {
     const { stdout, stderr } = await execAsync(
       "git pull -X ours",
