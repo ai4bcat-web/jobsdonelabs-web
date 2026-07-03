@@ -18,13 +18,19 @@ localPort = 18083
 run = "pnpm --filter @workspace/landing-page run dev"
 
 [services.production]
-build = [ "pnpm", "--filter", "@workspace/landing-page", "run", "build" ]
-publicDir = "artifacts/landing-page/dist/public"
-serve = "static"
 
-[[services.production.rewrites]]
-from = "/*"
-to = "/index.html"
+[services.production.build]
+args = ["pnpm", "--filter", "@workspace/landing-page", "run", "build"]
+
+[services.production.build.env]
+NODE_ENV = "production"
+
+[services.production.run]
+args = ["node", "artifacts/landing-page/server.mjs"]
+
+[services.production.run.env]
+PORT = "18083"
+NODE_ENV = "production"
 
 [services.env]
 PORT = "18083"

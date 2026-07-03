@@ -100,6 +100,19 @@ router.post("/github-webhook", async (req: Request, res: Response) => {
     ? path.resolve(process.cwd(), "../..")
     : process.cwd();
 
+  // Verify we are inside a git repo before attempting pull.
+  // In production the deployment container has no .git directory, so
+  // git pull would always fail. We skip it silently in that case.
+  try {
+    await execAsync("git rev-parse --git-dir", { cwd: workspaceRoot });
+  } catch {
+    logger.warn(
+      { workspaceRoot },
+      "Not a git repository — skipping pull (production environment)",
+    );
+    return;
+  }
+
   try {
     // -X ours: auto-resolve conflicts by preferring the local (Replit) version.
     // New files from GitHub (blog posts, etc.) are always brought in since they
