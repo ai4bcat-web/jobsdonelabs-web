@@ -1,20 +1,19 @@
 /**
  * Production server for jobsdonelabs.ai
  * - Redirects non-www → www (301) for all requests
- * - Serves static files from dist/public/
+ * - Serves static files: checks dist/public/ first (Vite build), then public/ (pre-rendered SEO pages)
+ * - Falls back to dist/public/index.html or public/index.html for SPA routing
  * - Runs on PORT env var (Replit autoscale requirement)
  */
 import { createServer } from "node:http";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, statSync } from "node:fs";
 import { join, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
-// Serve from public/ (pre-built static HTML files committed to repo)
-// Falls back to dist/public/ if it exists (Vite build output)
+
 const distPublic = join(__dirname, "dist", "public");
 const staticPublic = join(__dirname, "public");
-const publicDir = existsSync(distPublic) ? distPublic : staticPublic;
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
@@ -37,41 +36,94 @@ const MIME = {
 
 const port = parseInt(process.env.PORT || "8080", 10);
 
+/**
+ * Resolve a URL pathname to an absolute file path.
+ * Checks dist/public/ first (Vite assets + index.html), then public/ (pre-rendered HTML pages).
+ * Returns null if nothing matched.
+ */
+function resolveFilePath(pathname) {
+  // Sanitize to prevent directory traversal
+  const safe = pathname.replace(/\.\./g, "").replace(/\/+/g, "/");
+
+  const candidates = [];
+
+  // Check both directories; dist/public takes priority for overlapping files (e.g. index.html)
+  for (const base of [distPublic, staticPublic]) {
+    if (!existsSync(base)) continue;
+
+    let p = join(base, safe);
+
+    // Directory → look for index.html inside
+    if (existsSync(p)) {
+      try {
+        if (statSync(p).isDirectory()) {
+          const idx = join(p, "index.html");
+          if (existsSync(idx)) candidates.push(idx);
+          continue;
+        }
+      } catch {}
+      candidates.push(p);
+      continue;
+    }
+
+    // No extension → try .html suffix (clean URLs)
+    if (!extname(p)) {
+      const html = p + ".html";
+      if (existsSync(html)) {
+        candidates.push(html);
+        continue;
+      }
+    }
+  }
+
+  return candidates[0] ?? null;
+}
+
+/** Fall-back SPA shell for client-side routes */
+function spaFallback() {
+  for (const base of [distPublic, staticPublic]) {
+    const idx = join(base, "index.html");
+    if (existsSync(idx)) return idx;
+  }
+  return null;
+}
+
 function serveFile(res, filePath) {
   try {
     const data = readFileSync(filePath);
     const ext = extname(filePath).toLowerCase();
+    const isHtml = ext === ".html";
     res.writeHead(200, {
       "Content-Type": MIME[ext] || "application/octet-stream",
-      "Cache-Control": "public, max-age=3600",
+      // Assets are fingerprinted; HTML should not be cached long-term
+      "Cache-Control": isHtml ? "public, max-age=300" : "public, max-age=31536000, immutable",
     });
     res.end(data);
   } catch {
-    // File not found — serve index.html for SPA routing
-    try {
-      const indexHtml = readFileSync(join(publicDir, "index.html"));
-      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-      res.end(indexHtml);
-    } catch {
-      res.writeHead(404, { "Content-Type": "text/plain" });
-      res.end("404 Not Found");
+    const fallback = spaFallback();
+    if (fallback) {
+      try {
+        const data = readFileSync(fallback);
+        res.writeHead(200, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=300" });
+        res.end(data);
+        return;
+      } catch {}
     }
+    res.writeHead(404, { "Content-Type": "text/plain" });
+    res.end("404 Not Found");
   }
 }
 
 const server = createServer((req, res) => {
-  // Check Host header first (what the client actually requested),
-  // fall back to x-forwarded-host for proxy scenarios
-  const rawHost = req.headers.host || req.headers["x-forwarded-host"] || "";
-  const hostname = typeof rawHost === "string" ? rawHost.split(":")[0] : String(rawHost).split(":")[0];
+  const rawHost = req.headers["x-forwarded-host"] || req.headers.host || "";
+  const hostname = (typeof rawHost === "string" ? rawHost : String(rawHost)).split(":")[0];
 
-  // Redirect non-www to www (301 permanent)
+  // 301 redirect non-www → www (before any file serving)
   if (
     hostname === "jobsdonelabs.ai" ||
     (hostname.endsWith(".jobsdonelabs.ai") && !hostname.startsWith("www."))
   ) {
-    const target = "www." + hostname.replace(/^(www\.)?/, "");
-    const location = `https://${target}${req.url || "/"}`;
+    const location = `https://www.jobsdonelabs.ai${req.url || "/"}`;
     res.writeHead(301, {
       Location: location,
       "Cache-Control": "no-cache",
@@ -80,31 +132,30 @@ const server = createServer((req, res) => {
     return;
   }
 
-  // Serve static file or fall back to index.html (SPA)
-  const url = new URL(req.url || "/", `http://${host}`);
-  let filePath = join(publicDir, url.pathname);
-
-  // If path is a directory, serve index.html
-  if (existsSync(filePath) && !filePath.includes(".")) {
-    const indexPath = join(filePath, "index.html");
-    if (existsSync(indexPath)) {
-      filePath = indexPath;
-    }
+  let pathname;
+  try {
+    pathname = new URL(req.url || "/", "http://localhost").pathname;
+  } catch {
+    pathname = "/";
   }
 
-  // If no extension, try adding .html (clean URLs)
-  if (!extname(filePath)) {
-    const htmlPath = filePath + ".html";
-    if (existsSync(htmlPath)) {
-      filePath = htmlPath;
+  const filePath = resolveFilePath(pathname);
+  if (filePath) {
+    serveFile(res, filePath);
+  } else {
+    // SPA fallback for client-side routes
+    const fallback = spaFallback();
+    if (fallback) {
+      serveFile(res, fallback);
+    } else {
+      res.writeHead(404, { "Content-Type": "text/plain" });
+      res.end("404 Not Found");
     }
   }
-
-  serveFile(res, filePath);
 });
 
 server.listen(port, "0.0.0.0", () => {
   console.log(`Server running on port ${port}`);
-  console.log(`Serving static files from: ${publicDir}`);
+  console.log(`Serving from: ${existsSync(distPublic) ? distPublic : staticPublic} (+ public/ fallback)`);
   console.log(`Non-www → www redirect: ENABLED`);
 });
