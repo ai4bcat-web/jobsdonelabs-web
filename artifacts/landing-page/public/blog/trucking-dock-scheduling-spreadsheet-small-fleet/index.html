@@ -1,351 +1,351 @@
-1|<!DOCTYPE html>
-2|<html lang="en">
-3|<head>
-4|  <meta charset="UTF-8" />
-5|  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-6|  <title>Your Drivers Spent 1,144 Hours Last Year Sitting | Jobs Done Labs</title>
-7|  <meta name="description" content="A 15-truck fleet loses $32,000/year in driver wait time because every warehouse has a different scheduling process and no carrier-side system exists. The..." />
-8|  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-dock-scheduling-spreadsheet-small-fleet/" />
-9|  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-10|  <meta property="og:type" content="article" />
-11|  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-dock-scheduling-spreadsheet-small-fleet/" />
-12|  <meta property="og:title" content="Your Drivers Spent 1,144 Hours Last Year Sitting | Jobs Done Labs" />
-13|  <meta property="og:description" content="A 15-truck fleet loses $32,000/year in driver wait time because every warehouse has a different scheduling process and no carrier-side system exists. The..." />
-14|  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Drivers Spent 1,144 Hours Last Year Sitting | Jobs Done Labs</title>
+  <meta name="description" content="A 15-truck fleet loses $32,000/year in driver wait time because every warehouse has a different scheduling process and no carrier-side system exists. The..." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-dock-scheduling-spreadsheet-small-fleet/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-dock-scheduling-spreadsheet-small-fleet/" />
+  <meta property="og:title" content="Your Drivers Spent 1,144 Hours Last Year Sitting | Jobs Done Labs" />
+  <meta property="og:description" content="A 15-truck fleet loses $32,000/year in driver wait time because every warehouse has a different scheduling process and no carrier-side system exists. The..." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type" content="image/png" />
-15|  <meta property="og:site_name" content="Jobs Done Labs" />
-16|  <meta name="twitter:card" content="summary_large_image" />
-17|  <meta name="twitter:title" content="Your Drivers Spent 1,144 Hours Last Year Sitting at Warehouse Docks at $28/Hour" />
-18|  <meta name="twitter:description" content="The one-page dock scheduling system for small fleets — no software, no warehouse buy-in required." />
-19|  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
-20|  <script type="application/ld+json">
-21|  {
-22|    "@context": "https://schema.org",
-23|    "@type": "BlogPosting",
-24|    "headline": "Your Drivers Spent 1,144 Hours Last Year Sitting at Warehouse Docks at $28/Hour While You Paid Them to Scroll Their Phones — The One-Page Dock Scheduling System for Small Fleets That Works With Every Warehouse's Chaos",
-25|    "description": "A 15-truck regional carrier delivers to 12+ distribution centers weekly, each with its own scheduling process — portal, phone call, third-party platform, or first-come-first-served chaos. Drivers wait 22 hours/week collectively, costing $32,000/year in paid idle time. Every dock scheduling 'solution' is built for the warehouse side, not the carrier. This guide covers the Facility Playbook, Weekly Dock Schedule spreadsheet, Morning Confirmation Protocol, Wait Time Tracker, and Arrive Early vs. On-Time Decision Matrix — a complete manual system that works with whatever chaos each warehouse uses, costing $0 and taking 3 hours to set up.",
-26|    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
-27|    "author": {
-28|      "@type": "Person",
-29|      "name": "Ryne Bandolik",
-30|      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
-31|      "jobTitle": "Founder",
-32|      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
-33|      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
-34|    },
-35|    "publisher": {
-36|      "@type": "Organization",
-37|      "name": "Jobs Done Labs",
-38|      "url": "https://www.jobsdonelabs.ai",
-39|      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
-40|    },
-41|    "datePublished": "2026-06-29",
-42|    "dateModified": "2026-06-29",
-43|    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/trucking-dock-scheduling-spreadsheet-small-fleet/"
-44|  }
-45|  </script>
-46|  <script type="application/ld+json">
-47|  {
-48|    "@context": "https://schema.org",
-49|    "@type": "FAQPage",
-50|    "mainEntity": [
-51|      {
-52|        "@type": "Question",
-53|        "name": "How much does driver dock wait time actually cost a small fleet?",
-54|        "acceptedAnswer": { "@type": "Answer", "text": "For a 15-truck fleet averaging 22 hours of collective dock wait time per week at $28/hour loaded driver cost, the annual math is: 22 hours × $28 × 52 weeks = $32,032 in paid driver time spent sitting at docks. That doesn't count the opportunity cost: 1,144 annual hours that could have been spent moving 280+ additional loads. On a single bad day where three trucks each wait 2-4 hours due to lost appointments, sick contacts, and dock overbooking, that's 11 hours × $28 = $308 in one day. A fleet owner paying drivers $28/hour to scroll their phones while a Walmart DC 'finds' the appointment they booked 48 hours ago is bleeding money with zero recourse — because every dock scheduling tool on the market is designed for the warehouse, not the carrier." }
-55|      },
-56|      {
-57|        "@type": "Question",
-58|        "name": "How does a dock scheduling spreadsheet work without the warehouses adopting any software?",
-59|        "acceptedAnswer": { "@type": "Answer", "text": "The system has five components, none of which require any warehouse to change its process. (1) The Facility Playbook — one page per delivery location documenting the scheduling process (portal URL, phone number, contact name, hours, lead time required, typical wait time, backup contact, notes on which doors are fastest). (2) The Weekly Dock Schedule — a Gantt-style spreadsheet showing which truck is at which dock at what time, with built-in travel time calculations between facilities. (3) The Morning Confirmation Protocol — a 15-minute routine at 6am: call or check portal for every appointment today, confirm it's still good, flag issues before trucks leave. (4) The Wait Time Tracker — log every wait by facility, building the data set that justifies pushing back on chronic offender facilities or adding a wait-time surcharge. (5) The Arrive Early vs. On-Time Decision Matrix — for facilities with chronic overbooking, arriving 30 minutes early can mean the difference between a 45-minute wait and a 3-hour wait. Total setup time: 3 hours. Cost: $0. The system works with whatever chaos each warehouse already uses because it's built for the carrier side — you're documenting THEIR process, not asking them to adopt yours." }
-60|      },
-61|      {
-62|        "@type": "Question",
-63|        "name": "What's the ROI of setting up a dock scheduling system versus buying scheduling software?",
-64|        "acceptedAnswer": { "@type": "Answer", "text": "The manual system takes 3 hours to set up and costs $0. Even reducing dock wait time by 30% — from 22 hours/week to 15.4 hours/week — saves 6.6 hours × $28 × 52 = $9,610/year. Reducing by 50% saves $16,016/year. The ROI is effectively infinite because there's no cost. By contrast, dock scheduling software like Opendock, MercuryGate, or C3 Solutions costs $300-1,200/month and requires the warehouse to adopt it — which a small carrier cannot force a Walmart DC or Sysco distribution center to do. The spreadsheet system is the bridge: it gets wait time under control today, builds the data set that proves the financial case for software, and teaches you exactly what you'd need software to automate. When you're ready, Jobs Done Labs can build a custom automation layer — auto-confirming appointments via portal API, auto-routing based on real-time dock availability, and auto-alerting when a driver has been waiting over 30 minutes. Every engagement is covered by the $30K-recovered-in-90-days guarantee: if documented savings don't reach $30K, you pay nothing." }
-65|      }
-66|    ]
-67|  }
-68|  </script>
-69|  <script type="application/ld+json">
-70|  {
-71|    "@context": "https://schema.org",
-72|    "@type": "BreadcrumbList",
-73|    "itemListElement": [
-74|      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
-75|      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
-76|      { "@type": "ListItem", "position": 3, "name": "Your Drivers Spent 1,144 Hours Last Year Sitting at Warehouse Docks at $28/Hour While You Paid Them to Scroll Their Phones", "item": "https://www.jobsdonelabs.ai/blog/trucking-dock-scheduling-spreadsheet-small-fleet/" }
-77|    ]
-78|  }
-79|  </script>
-80|  <link rel="preconnect" href="https://fonts.googleapis.com">
-81|  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-82|  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
-83|  <style>
-84|    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
-85|    * { box-sizing:border-box; margin:0; padding:0; }
-86|    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
-87|    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
-88|    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
-89|    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
-90|    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
-91|    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
-92|    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
-93|    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:24px; }
-94|    .byline a { color:rgba(23,21,19,.55); text-decoration:none; border-bottom:1px solid rgba(23,21,19,.25); }
-95|    .byline a:hover { color:var(--accent); border-color:var(--accent); }
-96|    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
-97|    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
-98|    p { margin-bottom:16px; font-size:17px; }
-99|    ul, ol { margin:0 0 16px 22px; }
-100|    li { margin-bottom:8px; font-size:17px; }
-101|    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
-102|    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
-103|    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
-104|    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
-105|    .cta-box h2 { color:var(--cream); margin-top:0; }
-106|    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
-107|    .faq h3 { margin-top:24px; }
-108|    .related { margin-top:48px; border-top:1px solid rgba(23,21,19,.12); padding-top:32px; }
-109|    .related h2 { font-size:1.3rem; margin:0 0 20px; }
-110|    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
-111|    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
-112|    .related-card:hover { outline:2px solid var(--accent); }
-113|    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
-114|    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
-115|    a { color:var(--accent-deep); }
-116|    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
-117|    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
-118|    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
-119|    .comparison tr:last-child td { border-bottom:none; }
-120|    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
-121|    .checklist h4 { font-family:'Anton',sans-serif; font-size:1.05rem; margin-bottom:12px; }
-122|    .checklist li { position:relative; padding-left:20px; list-style:none; }
-123|    .checklist li::before { content:'☐'; position:absolute; left:0; color:var(--accent); font-weight:700; }
-124|    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.4); padding:32px 24px; }
-125|    footer a { color:inherit; }
-126|  </style>
-127|  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
-128|</head>
-129|<body>
-130|  <nav class="top">
-131|    <a class="logo" href="/">JOBS DONE LABS</a>
-132|    <a class="cta" href="/contact">Book a free audit</a>
-133|  </nav>
-134|  <main class="wrap">
-135|    <article>
-136|<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80" alt="Trucking Logistics Warehouse" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
-137|
-138|      <span class="kicker">Logistics &amp; Trucking</span>
-139|      <h1>Your Drivers Spent 1,144 Hours Last Year Sitting at Warehouse Docks at $28/Hour While You Paid Them to Scroll Their Phones</h1>
-140|      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · June 29, 2026 · 7 min read</p>
-141|
-142|      <p>Last Tuesday, three trucks from a 15-truck regional carrier arrived at three different warehouses at their scheduled times. All three waited 2-4 hours. The Walmart DC had a shift change and "lost" the appointment booked 48 hours prior. Sysco's Bob in receiving called in sick — and nobody else knew about the appointment. The third warehouse overbooked their docks and had five trucks ahead. Total driver wait time that day: 11 hours. At $28/hour loaded driver cost, that's $308 in paid wait time in ONE DAY.</p>
-143|
-144|      <p>Multiply that across the week: 22 hours of collective dock wait time. Across the year: 1,144 hours. Annual cost: <strong>$32,032</strong> in paid driver time spent sitting. That doesn't count the opportunity cost — 1,144 hours that could have moved 280+ additional loads. And the fleet owner is paying drivers to scroll their phones because a warehouse employee can't find an appointment confirmation.</p>
-145|
-146|      <div class="takeaways">
-147|        <strong>Key takeaways</strong>
-148|        <ul>
-149|          <li>A 15-truck fleet loses $32K/year in driver wait time at docks — and every scheduling "solution" is built for the warehouse, not the carrier</li>
-150|          <li>The Facility Playbook + Weekly Dock Schedule + Morning Confirmation Protocol gives you a system that works with whatever chaos each warehouse uses</li>
-151|          <li>Setup takes 3 hours and costs $0 — the entire system runs on Google Sheets and a 15-minute daily routine</li>
-152|          <li>You can't force Walmart to adopt your scheduling app. You CAN build a carrier-side system that prevents surprise wait time</li>
-153|        </ul>
-154|      </div>
-155|
-156|      <h2>Why every dock scheduling tool fails the small carrier</h2>
-157|
-158|      <p>Search for "dock appointment scheduling" and you'll find Opendock, MercuryGate, C3 Solutions, queueme.io, MobiDock, and Dashdoc. All of them are built for <strong>the warehouse side</strong>. The shipper or receiver pays for them. The carrier — the one doing the delivering, the one whose driver is burning $28/hour in the cab — has no seat at the table.</p>
-159|
-160|      <p>Here's what a small fleet (5-30 trucks) actually faces:</p>
-161|
-162|      <ul>
-163|        <li><strong>Facility A</strong> requires appointments booked 48 hours in advance via a web portal — but the portal doesn't send confirmations and the shift supervisor doesn't check it until 7am</li>
-164|        <li><strong>Facility B</strong> uses a phone call to "Bob in receiving" who works 6am-2pm — Bob is great, but when Bob calls in sick, nobody knows your truck is coming</li>
-165|        <li><strong>Facility C</strong> uses a third-party scheduling platform (Opendock) — and your dispatcher now has to learn yet another login for one facility</li>
-166|        <li><strong>Facility D</strong> has no system at all — first-come-first-served, and if you arrive after 8am you're behind seven other trucks</li>
-167|        <li><strong>Facility E</strong> is a Walmart DC that will NEVER adopt your scheduling tool, no matter how good it is</li>
-168|      </ul>
-169|
-170|      <p>The dispatcher tracks all this in a spiral notebook: "Mon — Walmart DC 6027, appt 7:30am, door 14. Sysco — call Bob. Kroger — portal, conf# 88472." The system works until it doesn't. And when it doesn't, a driver sits for three hours while you pay them.</p>
-171|
-172|      <div class="callout">
-173|        <p><strong>The ugly math:</strong> 22 hours/week of dock wait × $28/hour × 52 weeks = $32,032/year in idle driver pay. At a fleet net margin of 7%, you'd need $457,600 in additional revenue to generate that same profit. Reducing wait time by just 50% puts $16,000 back in your pocket — with zero new revenue required.</p>
-174|      </div>
-175|
-176|      <h2>The 5-part dock scheduling system that works with every warehouse's chaos</h2>
-177|
-178|      <p>This system is built on one principle: you cannot change the warehouse's process, so you document it, systematize around it, and catch failure points before trucks leave the yard. Five components, $0 cost, 3 hours to set up.</p>
-179|
-180|      <h3>1. The Facility Playbook — one page per delivery location</h3>
-181|
-182|      <p>Create a Google Sheets workbook. Tab 1: "Facility Playbook." One row per delivery location you serve regularly. Columns:</p>
-183|
-184|      <ul>
-185|        <li><strong>Facility name & address</strong> — the official name (not "the Walmart on 35") plus the exact dock address so drivers don't GPS to the front entrance</li>
-186|        <li><strong>Scheduling method</strong> — Portal / Phone / Third-party platform / None (first-come-first-served). This tells the dispatcher in one glance what process to follow</li>
-187|        <li><strong>Portal URL / login</strong> — if it's portal-based, the exact URL and shared login credentials. Bookmark these in the dispatcher's browser too</li>
-188|        <li><strong>Phone number & contact name</strong> — if it's phone-based. Include the backup contact for when the primary is out</li>
-189|        <li><strong>Contact hours</strong> — Bob works 6am-2pm. If you need to confirm at 4pm, you need a different number</li>
-190|        <li><strong>Lead time required</strong> — 48 hours? 24 hours? Same-day OK? Knowing this prevents the "we can't schedule you for tomorrow" panic</li>
-191|        <li><strong>Typical wait time</strong> — based on your own data (see Wait Time Tracker below). "Usually 30 min but can spike to 2hr if arrival is after 9am"</li>
-192|        <li><strong>Fastest doors</strong> — experienced drivers know: door 12 is always faster than door 3. Write it down so new drivers don't learn the hard way</li>
-193|        <li><strong>Special notes</strong> — "Must have PO# on BOL or they reject," "Security requires driver's license at gate," "No restroom access — use the gas station on Route 9"</li>
-194|      </ul>
-195|
-196|      <p>This is the single most valuable document in your operations. When a dispatcher quits, the Facility Playbook means their replacement isn't starting from zero. When you add a new delivery lane, the first driver to that facility fills out the Playbook entry and the knowledge is captured forever.</p>
-197|
-198|      <h3>2. The Weekly Dock Schedule — Gantt-style view</h3>
-199|
-200|      <p>Tab 2 of the workbook: "Weekly Schedule." This is your command center. Columns:</p>
-201|
-202|      <ul>
-203|        <li><strong>Day / Time blocks</strong> — rows for each day, columns for each hour block (6am, 7am, 8am…)</li>
-204|        <li><strong>Truck ID</strong> — which unit is assigned</li>
-205|        <li><strong>Driver name</strong> — who's behind the wheel</li>
-206|        <li><strong>Facility</strong> — from the Facility Playbook</li>
-207|        <li><strong>Appointment time</strong> — the confirmed slot</li>
-208|        <li><strong>Travel time from previous stop</strong> — auto-calculated in Google Sheets using your known drive times between facilities. This is the field that prevents double-booking a truck that physically can't make it from Facility A to Facility B in 45 minutes</li>
-209|        <li><strong>Confirmed?</strong> — Y/N. This is the column you check every morning (see Protocol #3)</li>
-210|        <li><strong>Notes</strong> — "Load #44892, 22 pallets, need liftgate"</li>
-211|      </ul>
-212|
-213|      <p>Conditional formatting makes this visual: green = confirmed, yellow = awaiting confirmation, red = conflict (two trucks scheduled same time at same facility with one dock). The dispatcher can see the entire week at a glance — and more importantly, can spot the holes where a truck has 3 hours of unscheduled time between deliveries that could be filled with a backhaul.</p>
-214|
-215|      <h3>3. The Morning Confirmation Protocol — 15 minutes that saves hours</h3>
-216|
-217|      <p>This is the single highest-leverage routine in the system. Every morning at 6am, the dispatcher (or night dispatcher, or early driver supervisor) runs through three steps:</p>
-218|
-219|      <div class="checklist">
-220|        <h4>Morning Confirmation Checklist (15 min)</h4>
-221|        <ol>
-222|          <li><strong>Pull up today's column</strong> on the Weekly Schedule. For every appointment listed, confirm it one of three ways: (a) log into the facility's portal and verify the appointment is still showing, (b) call the facility contact and ask "confirming our 7:30 delivery — we still good?", or (c) for no-system facilities, call anyway and say "our truck is rolling at 6:30, ETA 7:15 — please flag us in."</li>
-223|          <li><strong>Mark confirmed/unconfirmed</strong> on the Weekly Schedule. Green checkmark = confirmed. Red X = issue. Deal with red X's NOW — before the truck is on the highway.</li>
-224|          <li><strong>Flag the problem facilities</strong> to the driver. If the Walmart DC still hasn't confirmed by 6:15am, text the driver: "Walmart not confirmed yet — call me before you leave. Might re-route to Kroger first." A 2-minute text prevents a 3-hour wait.</li>
-225|        </ol>
-226|      </div>
-227|
-228|      <p>Cost of this protocol: 15 minutes of dispatcher time. Value: preventing even one 3-hour wait per week = $84 saved × 52 weeks = $4,368/year. And that's conservative.</p>
-229|
-230|      <h3>4. The Wait Time Tracker — build the data that justifies change</h3>
-231|
-232|      <p>Tab 3 of the workbook: "Wait Time Log." This is your ammunition. Every time a driver waits more than 15 minutes past their appointment time, the driver texts the dispatcher: arrival time, docked time. The dispatcher logs it:</p>
-233|
-234|      <ul>
-235|        <li>Date</li>
-236|        <li>Facility</li>
-237|        <li>Driver</li>
-238|        <li>Scheduled appointment time</li>
-239|        <li>Actual arrival time</li>
-240|        <li>Actual dock time</li>
-241|        <li>Wait minutes (auto-calculated)</li>
-242|        <li>Reason (from driver: "shift change," "overbooked," "couldn't find appointment," "no reason given")</li>
-243|        <li>Cost of wait (minutes × driver hourly rate ÷ 60, auto-calculated)</li>
-244|      </ul>
-245|
-246|      <p>Within 4 weeks, you'll have a data set that tells you: Facility X averages 72-minute waits on Tuesdays. Facility Y is fastest — 12 minutes average. Facility Z has gotten 40% worse since they changed dock managers. This data does three things:</p>
-247|
-248|      <ol>
-249|        <li><strong>Justifies adding a wait-time surcharge</strong> to chronic offender facilities. "Our data shows your average dock-to-unload time is 82 minutes, 3x our lane average. Our new rate includes a detention surcharge after 30 minutes."</li>
-250|        <li><strong>Informs routing decisions.</strong> Schedule Facility Z for 7am when they're fresh, not 2pm when the afternoon chaos has set in.</li>
-251|        <li><strong>Exposes the cost to your own team.</strong> When drivers see the weekly total — "We lost $617 to dock wait time this week" — accountability improves. Nobody wants to be the driver whose facility is the outlier.</li>
-252|      </ol>
-253|
-254|      <h3>5. The Arrive Early vs. On-Time Decision Matrix</h3>
-255|
-256|      <p>Not all facilities behave the same way. Some reward early arrival — if you're there at 6:45 for a 7:00 appointment, they'll take you early and you're out by 7:30. Others punish it — "your appointment is at 7:00, go park in the staging lot and we'll call you." The Decision Matrix, built from your Wait Time Tracker data:</p>
-257|
-258|      <div class="comparison">
-259|        <table>
-260|          <tr><th>Facility behavior</th><th>Strategy</th><th>Example</th></tr>
-261|          <tr><td><strong>Early-friendly</strong> — they take trucks as they arrive, appointment time is a suggestion</td><td>Arrive 30 min early. You'll likely get loaded/unloaded before your official slot and free up the truck for an extra run.</td><td>Regional food distributor, small warehouse, 4-door dock</td></tr>
-262|          <tr><td><strong>Strict appointment</strong> — they follow the schedule, arriving early just means sitting in staging</td><td>Arrive exactly on time. Use the extra 30 minutes for a driver break, fuel stop, or pre-trip inspection.</td><td>Walmart DC, Amazon facility, large 3PL warehouse</td></tr>
-263|          <tr><td><strong>Chronic overbooker</strong> — they schedule 12 trucks for 8 doors, every slot is a suggestion</td><td>Arrive 45 min early. Being first in the "unofficial" queue means the difference between a 30-min wait and a 2-hour wait. The risk: if they're having a rare smooth day, you sit. The data will tell you which gamble is worth it.</td><td>Busy cross-dock, peak season produce distributor</td></tr>
-264|          <tr><td><strong>Chaos facility</strong> — no system, no schedule, no point of contact</td><td>Arrive at shift start (6am). Be the first truck the fresh crew sees. Avoid shift change windows (2pm-3pm) and lunch (11:30am-12:30pm) at all costs.</td><td>Small manufacturer, single-dock receiving, "just back up to the door"</td></tr>
-265|        </table>
-266|      </div>
-267|
-268|      <p>This matrix turns tribal knowledge into an operating procedure. Every new driver gets it. Every dispatcher uses it to sequence the day. Within two weeks, wait time drops because trucks are arriving when each facility is most likely to process them quickly — not when the appointment says to arrive.</p>
-269|
-270|      <h2>When your spreadsheet breaks — the bridge to automation</h2>
-271|
-272|      <p>This manual system works beautifully for fleets with 5-30 trucks delivering to 10-25 regular facilities. At some point — typically around 40+ trucks or 30+ facilities, or when you add a second dispatcher — the spreadsheet hits its limit:</p>
-273|
-274|      <ul>
-275|        <li>The Morning Confirmation Protocol takes 45 minutes instead of 15 because there are too many facilities to call</li>
-276|        <li>The Weekly Schedule has too many rows to scan at a glance — conflicts get missed</li>
-277|        <li>The Wait Time Tracker has so much data that nobody analyzes it anymore — it becomes a data graveyard</li>
-278|      </ul>
-279|
-280|      <p>That's the signal. You've proven the ROI of systematic dock scheduling. You know exactly which facilities are the problem. You know the dollar value of reducing wait time. Now you can justify automation — and you'll know exactly what to automate because you've been doing it manually:</p>
-281|
-282|      <ol>
-283|        <li><strong>Auto-confirm appointments</strong> — scripts that log into facility portals at 5am and verify today's appointments are still in the system, flagging cancellations to the dispatcher's phone before they leave for work</li>
-284|        <li><strong>Auto-route based on real-time dock availability</strong> — if Facility A's portal shows no appointments available until 2pm but Facility B has a 10am slot, your dispatcher sees the trade-off instantly</li>
-285|        <li><strong>Auto-alert on excessive wait time</strong> — when a driver's ELD shows they've been stationary at a facility for >30 minutes past appointment time, the dispatcher gets a notification to call the dock office</li>
-286|        <li><strong>Auto-generate the Wait Time Report</strong> — weekly PDF with facility rankings, cost totals, and trend lines, emailed to the fleet owner every Monday morning</li>
-287|      </ol>
-288|
-289|      <p>This is where Jobs Done Labs comes in. We build the automation layer that connects to your ELD, your facility portals, and your dispatch workflow — so your dispatcher stops being a portal-login-and-phone-call machine and starts being a strategist. And every engagement is covered by our guarantee.</p>
-290|
-291|      <div class="callout">
-292|        <p><strong>The $30K guarantee:</strong> Every Jobs Done Labs build is priced against a hard ROI target. If we don't recover or save you $30K in documented, measurable results within 90 days, you pay nothing. Dock scheduling automation typically hits this target in 6-10 weeks for a 20+ truck fleet just from recovered driver productivity and reduced detention exposure.</p>
-293|      </div>
-294|
-295|      <section class="faq">
-296|        <h2>Frequently asked questions</h2>
-297|        <h3>How much does driver dock wait time actually cost a small fleet?</h3>
-298|        <p>For a 15-truck fleet averaging 22 hours of collective dock wait time per week at $28/hour loaded driver cost, the annual math is: 22 hours × $28 × 52 weeks = $32,032 in paid driver time spent sitting at docks. That doesn't count the opportunity cost: 1,144 annual hours that could have been spent moving 280+ additional loads. On a single bad day where three trucks each wait 2-4 hours due to lost appointments, sick contacts, and dock overbooking, that's 11 hours × $28 = $308 in one day. A fleet owner paying drivers $28/hour to scroll their phones while a Walmart DC "finds" the appointment they booked 48 hours ago is bleeding money with zero recourse — because every dock scheduling tool on the market is designed for the warehouse, not the carrier.</p>
-299|        <h3>How does a dock scheduling spreadsheet work without the warehouses adopting any software?</h3>
-300|        <p>The system has five components, none of which require any warehouse to change its process. (1) The Facility Playbook — one page per delivery location documenting the scheduling process, contacts, hours, lead time, typical wait, and door notes. (2) The Weekly Dock Schedule — a Gantt-style spreadsheet showing which truck is at which dock at what time with built-in travel time calculations. (3) The Morning Confirmation Protocol — a 15-minute routine at 6am to verify every appointment is still good before trucks leave. (4) The Wait Time Tracker — log every wait by facility to build the data that justifies surcharges or schedule changes. (5) The Arrive Early vs. On-Time Decision Matrix — which facilities reward early arrival and which punish it. Total setup time: 3 hours. Cost: $0. The system works with whatever chaos each warehouse already uses because you're documenting THEIR process, not asking them to adopt yours.</p>
-301|        <h3>What's the ROI of setting up a dock scheduling system versus buying scheduling software?</h3>
-302|        <p>The manual system takes 3 hours to set up and costs $0. Even reducing dock wait time by 30% — from 22 hours/week to 15.4 hours/week — saves $9,610/year. Reducing by 50% saves $16,016/year. The ROI is effectively infinite because there's no cost. By contrast, dock scheduling software like Opendock, MercuryGate, or C3 Solutions costs $300-1,200/month and requires the warehouse to adopt it — which a small carrier cannot force a Walmart DC to do. The spreadsheet system gets wait time under control today and builds the data that proves the financial case for software. When you're ready, Jobs Done Labs can build a custom automation layer — auto-confirming appointments, auto-routing, and auto-alerting on excessive waits — all covered by the $30K-recovered-in-90-days guarantee.</p>
-303|      </section>
-304|
-305|      <div class="related">
-306|        <h2>Related posts</h2>
-307|        <div class="related-grid">
-308|          <a class="related-card" href="/blog/trucking-detention-pay-tracking-system/">
-309|            <span class="cat">Logistics &amp; Trucking</span>
-310|            <span class="title">You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It</span>
-311|          </a>
-312|          <a class="related-card" href="/blog/truck-fleet-maintenance-tracking-system/">
-313|            <span class="cat">Logistics &amp; Trucking</span>
-314|            <span class="title">Your Fleet Maintenance 'System' Is Two Spreadsheets and a Whiteboard</span>
-315|          </a>
-316|        </div>
-317|      </div>
-318|
-319|      <div class="cta-box">
-320|        <h2>Stop paying drivers to wait at docks</h2>
-321|        <p>Book a free 30-minute automation audit. We'll map your dock scheduling workflow — from appointment booking to driver check-in — and show you exactly where wait time is eating your margin. You keep the Facility Playbook template and the ROI analysis either way.</p>
-322|        <a class="btn" href="/contact">Book your free audit →</a>
-323|      </div>
-324|
-325|<section class="related-reading">
-326|<h2>Related reading</h2>
-327|<p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
-328|<ul style="list-style:none;padding:0;margin:0">
-329|  <li style="margin-bottom:10px;padding-left:0">
-330|    <a href="/blog/trucking-detention-pay-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It — The 4-Step System</a>
-331|  </li>
-332|  <li style="margin-bottom:10px;padding-left:0">
-333|    <a href="/blog/truck-fleet-maintenance-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Fleet Maintenance 'System' Is Two Spreadsheets, a Whiteboard, and Drivers Who Text You at 2 AM</a>
-334|  </li>
-335|
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Your Drivers Spent 1,144 Hours Last Year Sitting at Warehouse Docks at $28/Hour" />
+  <meta name="twitter:description" content="The one-page dock scheduling system for small fleets — no software, no warehouse buy-in required." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Your Drivers Spent 1,144 Hours Last Year Sitting at Warehouse Docks at $28/Hour While You Paid Them to Scroll Their Phones — The One-Page Dock Scheduling System for Small Fleets That Works With Every Warehouse's Chaos",
+    "description": "A 15-truck regional carrier delivers to 12+ distribution centers weekly, each with its own scheduling process — portal, phone call, third-party platform, or first-come-first-served chaos. Drivers wait 22 hours/week collectively, costing $32,000/year in paid idle time. Every dock scheduling 'solution' is built for the warehouse side, not the carrier. This guide covers the Facility Playbook, Weekly Dock Schedule spreadsheet, Morning Confirmation Protocol, Wait Time Tracker, and Arrive Early vs. On-Time Decision Matrix — a complete manual system that works with whatever chaos each warehouse uses, costing $0 and taking 3 hours to set up.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/trucking-dock-scheduling-spreadsheet-small-fleet/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does driver dock wait time actually cost a small fleet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For a 15-truck fleet averaging 22 hours of collective dock wait time per week at $28/hour loaded driver cost, the annual math is: 22 hours × $28 × 52 weeks = $32,032 in paid driver time spent sitting at docks. That doesn't count the opportunity cost: 1,144 annual hours that could have been spent moving 280+ additional loads. On a single bad day where three trucks each wait 2-4 hours due to lost appointments, sick contacts, and dock overbooking, that's 11 hours × $28 = $308 in one day. A fleet owner paying drivers $28/hour to scroll their phones while a Walmart DC 'finds' the appointment they booked 48 hours ago is bleeding money with zero recourse — because every dock scheduling tool on the market is designed for the warehouse, not the carrier." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a dock scheduling spreadsheet work without the warehouses adopting any software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The system has five components, none of which require any warehouse to change its process. (1) The Facility Playbook — one page per delivery location documenting the scheduling process (portal URL, phone number, contact name, hours, lead time required, typical wait time, backup contact, notes on which doors are fastest). (2) The Weekly Dock Schedule — a Gantt-style spreadsheet showing which truck is at which dock at what time, with built-in travel time calculations between facilities. (3) The Morning Confirmation Protocol — a 15-minute routine at 6am: call or check portal for every appointment today, confirm it's still good, flag issues before trucks leave. (4) The Wait Time Tracker — log every wait by facility, building the data set that justifies pushing back on chronic offender facilities or adding a wait-time surcharge. (5) The Arrive Early vs. On-Time Decision Matrix — for facilities with chronic overbooking, arriving 30 minutes early can mean the difference between a 45-minute wait and a 3-hour wait. Total setup time: 3 hours. Cost: $0. The system works with whatever chaos each warehouse already uses because it's built for the carrier side — you're documenting THEIR process, not asking them to adopt yours." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the ROI of setting up a dock scheduling system versus buying scheduling software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The manual system takes 3 hours to set up and costs $0. Even reducing dock wait time by 30% — from 22 hours/week to 15.4 hours/week — saves 6.6 hours × $28 × 52 = $9,610/year. Reducing by 50% saves $16,016/year. The ROI is effectively infinite because there's no cost. By contrast, dock scheduling software like Opendock, MercuryGate, or C3 Solutions costs $300-1,200/month and requires the warehouse to adopt it — which a small carrier cannot force a Walmart DC or Sysco distribution center to do. The spreadsheet system is the bridge: it gets wait time under control today, builds the data set that proves the financial case for software, and teaches you exactly what you'd need software to automate. When you're ready, Jobs Done Labs can build a custom automation layer — auto-confirming appointments via portal API, auto-routing based on real-time dock availability, and auto-alerting when a driver has been waiting over 30 minutes. Every engagement is covered by the $30K-recovered-in-90-days guarantee: if documented savings don't reach $30K, you pay nothing." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Your Drivers Spent 1,144 Hours Last Year Sitting at Warehouse Docks at $28/Hour While You Paid Them to Scroll Their Phones", "item": "https://www.jobsdonelabs.ai/blog/trucking-dock-scheduling-spreadsheet-small-fleet/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:24px; }
+    .byline a { color:rgba(23,21,19,.55); text-decoration:none; border-bottom:1px solid rgba(23,21,19,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid rgba(23,21,19,.12); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    a { color:var(--accent-deep); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h4 { font-family:'Anton',sans-serif; font-size:1.05rem; margin-bottom:12px; }
+    .checklist li { position:relative; padding-left:20px; list-style:none; }
+    .checklist li::before { content:'☐'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.4); padding:32px 24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80" alt="Trucking Logistics Warehouse" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Logistics &amp; Trucking</span>
+      <h1>Your Drivers Spent 1,144 Hours Last Year Sitting at Warehouse Docks at $28/Hour While You Paid Them to Scroll Their Phones</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · June 29, 2026 · 7 min read</p>
+
+      <p>Last Tuesday, three trucks from a 15-truck regional carrier arrived at three different warehouses at their scheduled times. All three waited 2-4 hours. The Walmart DC had a shift change and "lost" the appointment booked 48 hours prior. Sysco's Bob in receiving called in sick — and nobody else knew about the appointment. The third warehouse overbooked their docks and had five trucks ahead. Total driver wait time that day: 11 hours. At $28/hour loaded driver cost, that's $308 in paid wait time in ONE DAY.</p>
+
+      <p>Multiply that across the week: 22 hours of collective dock wait time. Across the year: 1,144 hours. Annual cost: <strong>$32,032</strong> in paid driver time spent sitting. That doesn't count the opportunity cost — 1,144 hours that could have moved 280+ additional loads. And the fleet owner is paying drivers to scroll their phones because a warehouse employee can't find an appointment confirmation.</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <ul>
+          <li>A 15-truck fleet loses $32K/year in driver wait time at docks — and every scheduling "solution" is built for the warehouse, not the carrier</li>
+          <li>The Facility Playbook + Weekly Dock Schedule + Morning Confirmation Protocol gives you a system that works with whatever chaos each warehouse uses</li>
+          <li>Setup takes 3 hours and costs $0 — the entire system runs on Google Sheets and a 15-minute daily routine</li>
+          <li>You can't force Walmart to adopt your scheduling app. You CAN build a carrier-side system that prevents surprise wait time</li>
+        </ul>
+      </div>
+
+      <h2>Why every dock scheduling tool fails the small carrier</h2>
+
+      <p>Search for "dock appointment scheduling" and you'll find Opendock, MercuryGate, C3 Solutions, queueme.io, MobiDock, and Dashdoc. All of them are built for <strong>the warehouse side</strong>. The shipper or receiver pays for them. The carrier — the one doing the delivering, the one whose driver is burning $28/hour in the cab — has no seat at the table.</p>
+
+      <p>Here's what a small fleet (5-30 trucks) actually faces:</p>
+
+      <ul>
+        <li><strong>Facility A</strong> requires appointments booked 48 hours in advance via a web portal — but the portal doesn't send confirmations and the shift supervisor doesn't check it until 7am</li>
+        <li><strong>Facility B</strong> uses a phone call to "Bob in receiving" who works 6am-2pm — Bob is great, but when Bob calls in sick, nobody knows your truck is coming</li>
+        <li><strong>Facility C</strong> uses a third-party scheduling platform (Opendock) — and your dispatcher now has to learn yet another login for one facility</li>
+        <li><strong>Facility D</strong> has no system at all — first-come-first-served, and if you arrive after 8am you're behind seven other trucks</li>
+        <li><strong>Facility E</strong> is a Walmart DC that will NEVER adopt your scheduling tool, no matter how good it is</li>
+      </ul>
+
+      <p>The dispatcher tracks all this in a spiral notebook: "Mon — Walmart DC 6027, appt 7:30am, door 14. Sysco — call Bob. Kroger — portal, conf# 88472." The system works until it doesn't. And when it doesn't, a driver sits for three hours while you pay them.</p>
+
+      <div class="callout">
+        <p><strong>The ugly math:</strong> 22 hours/week of dock wait × $28/hour × 52 weeks = $32,032/year in idle driver pay. At a fleet net margin of 7%, you'd need $457,600 in additional revenue to generate that same profit. Reducing wait time by just 50% puts $16,000 back in your pocket — with zero new revenue required.</p>
+      </div>
+
+      <h2>The 5-part dock scheduling system that works with every warehouse's chaos</h2>
+
+      <p>This system is built on one principle: you cannot change the warehouse's process, so you document it, systematize around it, and catch failure points before trucks leave the yard. Five components, $0 cost, 3 hours to set up.</p>
+
+      <h3>1. The Facility Playbook — one page per delivery location</h3>
+
+      <p>Create a Google Sheets workbook. Tab 1: "Facility Playbook." One row per delivery location you serve regularly. Columns:</p>
+
+      <ul>
+        <li><strong>Facility name & address</strong> — the official name (not "the Walmart on 35") plus the exact dock address so drivers don't GPS to the front entrance</li>
+        <li><strong>Scheduling method</strong> — Portal / Phone / Third-party platform / None (first-come-first-served). This tells the dispatcher in one glance what process to follow</li>
+        <li><strong>Portal URL / login</strong> — if it's portal-based, the exact URL and shared login credentials. Bookmark these in the dispatcher's browser too</li>
+        <li><strong>Phone number & contact name</strong> — if it's phone-based. Include the backup contact for when the primary is out</li>
+        <li><strong>Contact hours</strong> — Bob works 6am-2pm. If you need to confirm at 4pm, you need a different number</li>
+        <li><strong>Lead time required</strong> — 48 hours? 24 hours? Same-day OK? Knowing this prevents the "we can't schedule you for tomorrow" panic</li>
+        <li><strong>Typical wait time</strong> — based on your own data (see Wait Time Tracker below). "Usually 30 min but can spike to 2hr if arrival is after 9am"</li>
+        <li><strong>Fastest doors</strong> — experienced drivers know: door 12 is always faster than door 3. Write it down so new drivers don't learn the hard way</li>
+        <li><strong>Special notes</strong> — "Must have PO# on BOL or they reject," "Security requires driver's license at gate," "No restroom access — use the gas station on Route 9"</li>
+      </ul>
+
+      <p>This is the single most valuable document in your operations. When a dispatcher quits, the Facility Playbook means their replacement isn't starting from zero. When you add a new delivery lane, the first driver to that facility fills out the Playbook entry and the knowledge is captured forever.</p>
+
+      <h3>2. The Weekly Dock Schedule — Gantt-style view</h3>
+
+      <p>Tab 2 of the workbook: "Weekly Schedule." This is your command center. Columns:</p>
+
+      <ul>
+        <li><strong>Day / Time blocks</strong> — rows for each day, columns for each hour block (6am, 7am, 8am…)</li>
+        <li><strong>Truck ID</strong> — which unit is assigned</li>
+        <li><strong>Driver name</strong> — who's behind the wheel</li>
+        <li><strong>Facility</strong> — from the Facility Playbook</li>
+        <li><strong>Appointment time</strong> — the confirmed slot</li>
+        <li><strong>Travel time from previous stop</strong> — auto-calculated in Google Sheets using your known drive times between facilities. This is the field that prevents double-booking a truck that physically can't make it from Facility A to Facility B in 45 minutes</li>
+        <li><strong>Confirmed?</strong> — Y/N. This is the column you check every morning (see Protocol #3)</li>
+        <li><strong>Notes</strong> — "Load #44892, 22 pallets, need liftgate"</li>
+      </ul>
+
+      <p>Conditional formatting makes this visual: green = confirmed, yellow = awaiting confirmation, red = conflict (two trucks scheduled same time at same facility with one dock). The dispatcher can see the entire week at a glance — and more importantly, can spot the holes where a truck has 3 hours of unscheduled time between deliveries that could be filled with a backhaul.</p>
+
+      <h3>3. The Morning Confirmation Protocol — 15 minutes that saves hours</h3>
+
+      <p>This is the single highest-leverage routine in the system. Every morning at 6am, the dispatcher (or night dispatcher, or early driver supervisor) runs through three steps:</p>
+
+      <div class="checklist">
+        <h4>Morning Confirmation Checklist (15 min)</h4>
+        <ol>
+          <li><strong>Pull up today's column</strong> on the Weekly Schedule. For every appointment listed, confirm it one of three ways: (a) log into the facility's portal and verify the appointment is still showing, (b) call the facility contact and ask "confirming our 7:30 delivery — we still good?", or (c) for no-system facilities, call anyway and say "our truck is rolling at 6:30, ETA 7:15 — please flag us in."</li>
+          <li><strong>Mark confirmed/unconfirmed</strong> on the Weekly Schedule. Green checkmark = confirmed. Red X = issue. Deal with red X's NOW — before the truck is on the highway.</li>
+          <li><strong>Flag the problem facilities</strong> to the driver. If the Walmart DC still hasn't confirmed by 6:15am, text the driver: "Walmart not confirmed yet — call me before you leave. Might re-route to Kroger first." A 2-minute text prevents a 3-hour wait.</li>
+        </ol>
+      </div>
+
+      <p>Cost of this protocol: 15 minutes of dispatcher time. Value: preventing even one 3-hour wait per week = $84 saved × 52 weeks = $4,368/year. And that's conservative.</p>
+
+      <h3>4. The Wait Time Tracker — build the data that justifies change</h3>
+
+      <p>Tab 3 of the workbook: "Wait Time Log." This is your ammunition. Every time a driver waits more than 15 minutes past their appointment time, the driver texts the dispatcher: arrival time, docked time. The dispatcher logs it:</p>
+
+      <ul>
+        <li>Date</li>
+        <li>Facility</li>
+        <li>Driver</li>
+        <li>Scheduled appointment time</li>
+        <li>Actual arrival time</li>
+        <li>Actual dock time</li>
+        <li>Wait minutes (auto-calculated)</li>
+        <li>Reason (from driver: "shift change," "overbooked," "couldn't find appointment," "no reason given")</li>
+        <li>Cost of wait (minutes × driver hourly rate ÷ 60, auto-calculated)</li>
+      </ul>
+
+      <p>Within 4 weeks, you'll have a data set that tells you: Facility X averages 72-minute waits on Tuesdays. Facility Y is fastest — 12 minutes average. Facility Z has gotten 40% worse since they changed dock managers. This data does three things:</p>
+
+      <ol>
+        <li><strong>Justifies adding a wait-time surcharge</strong> to chronic offender facilities. "Our data shows your average dock-to-unload time is 82 minutes, 3x our lane average. Our new rate includes a detention surcharge after 30 minutes."</li>
+        <li><strong>Informs routing decisions.</strong> Schedule Facility Z for 7am when they're fresh, not 2pm when the afternoon chaos has set in.</li>
+        <li><strong>Exposes the cost to your own team.</strong> When drivers see the weekly total — "We lost $617 to dock wait time this week" — accountability improves. Nobody wants to be the driver whose facility is the outlier.</li>
+      </ol>
+
+      <h3>5. The Arrive Early vs. On-Time Decision Matrix</h3>
+
+      <p>Not all facilities behave the same way. Some reward early arrival — if you're there at 6:45 for a 7:00 appointment, they'll take you early and you're out by 7:30. Others punish it — "your appointment is at 7:00, go park in the staging lot and we'll call you." The Decision Matrix, built from your Wait Time Tracker data:</p>
+
+      <div class="comparison">
+        <table>
+          <tr><th>Facility behavior</th><th>Strategy</th><th>Example</th></tr>
+          <tr><td><strong>Early-friendly</strong> — they take trucks as they arrive, appointment time is a suggestion</td><td>Arrive 30 min early. You'll likely get loaded/unloaded before your official slot and free up the truck for an extra run.</td><td>Regional food distributor, small warehouse, 4-door dock</td></tr>
+          <tr><td><strong>Strict appointment</strong> — they follow the schedule, arriving early just means sitting in staging</td><td>Arrive exactly on time. Use the extra 30 minutes for a driver break, fuel stop, or pre-trip inspection.</td><td>Walmart DC, Amazon facility, large 3PL warehouse</td></tr>
+          <tr><td><strong>Chronic overbooker</strong> — they schedule 12 trucks for 8 doors, every slot is a suggestion</td><td>Arrive 45 min early. Being first in the "unofficial" queue means the difference between a 30-min wait and a 2-hour wait. The risk: if they're having a rare smooth day, you sit. The data will tell you which gamble is worth it.</td><td>Busy cross-dock, peak season produce distributor</td></tr>
+          <tr><td><strong>Chaos facility</strong> — no system, no schedule, no point of contact</td><td>Arrive at shift start (6am). Be the first truck the fresh crew sees. Avoid shift change windows (2pm-3pm) and lunch (11:30am-12:30pm) at all costs.</td><td>Small manufacturer, single-dock receiving, "just back up to the door"</td></tr>
+        </table>
+      </div>
+
+      <p>This matrix turns tribal knowledge into an operating procedure. Every new driver gets it. Every dispatcher uses it to sequence the day. Within two weeks, wait time drops because trucks are arriving when each facility is most likely to process them quickly — not when the appointment says to arrive.</p>
+
+      <h2>When your spreadsheet breaks — the bridge to automation</h2>
+
+      <p>This manual system works beautifully for fleets with 5-30 trucks delivering to 10-25 regular facilities. At some point — typically around 40+ trucks or 30+ facilities, or when you add a second dispatcher — the spreadsheet hits its limit:</p>
+
+      <ul>
+        <li>The Morning Confirmation Protocol takes 45 minutes instead of 15 because there are too many facilities to call</li>
+        <li>The Weekly Schedule has too many rows to scan at a glance — conflicts get missed</li>
+        <li>The Wait Time Tracker has so much data that nobody analyzes it anymore — it becomes a data graveyard</li>
+      </ul>
+
+      <p>That's the signal. You've proven the ROI of systematic dock scheduling. You know exactly which facilities are the problem. You know the dollar value of reducing wait time. Now you can justify automation — and you'll know exactly what to automate because you've been doing it manually:</p>
+
+      <ol>
+        <li><strong>Auto-confirm appointments</strong> — scripts that log into facility portals at 5am and verify today's appointments are still in the system, flagging cancellations to the dispatcher's phone before they leave for work</li>
+        <li><strong>Auto-route based on real-time dock availability</strong> — if Facility A's portal shows no appointments available until 2pm but Facility B has a 10am slot, your dispatcher sees the trade-off instantly</li>
+        <li><strong>Auto-alert on excessive wait time</strong> — when a driver's ELD shows they've been stationary at a facility for >30 minutes past appointment time, the dispatcher gets a notification to call the dock office</li>
+        <li><strong>Auto-generate the Wait Time Report</strong> — weekly PDF with facility rankings, cost totals, and trend lines, emailed to the fleet owner every Monday morning</li>
+      </ol>
+
+      <p>This is where Jobs Done Labs comes in. We build the automation layer that connects to your ELD, your facility portals, and your dispatch workflow — so your dispatcher stops being a portal-login-and-phone-call machine and starts being a strategist. And every engagement is covered by our guarantee.</p>
+
+      <div class="callout">
+        <p><strong>The $30K guarantee:</strong> Every Jobs Done Labs build is priced against a hard ROI target. If we don't recover or save you $30K in documented, measurable results within 90 days, you pay nothing. Dock scheduling automation typically hits this target in 6-10 weeks for a 20+ truck fleet just from recovered driver productivity and reduced detention exposure.</p>
+      </div>
+
+      <section class="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>How much does driver dock wait time actually cost a small fleet?</h3>
+        <p>For a 15-truck fleet averaging 22 hours of collective dock wait time per week at $28/hour loaded driver cost, the annual math is: 22 hours × $28 × 52 weeks = $32,032 in paid driver time spent sitting at docks. That doesn't count the opportunity cost: 1,144 annual hours that could have been spent moving 280+ additional loads. On a single bad day where three trucks each wait 2-4 hours due to lost appointments, sick contacts, and dock overbooking, that's 11 hours × $28 = $308 in one day. A fleet owner paying drivers $28/hour to scroll their phones while a Walmart DC "finds" the appointment they booked 48 hours ago is bleeding money with zero recourse — because every dock scheduling tool on the market is designed for the warehouse, not the carrier.</p>
+        <h3>How does a dock scheduling spreadsheet work without the warehouses adopting any software?</h3>
+        <p>The system has five components, none of which require any warehouse to change its process. (1) The Facility Playbook — one page per delivery location documenting the scheduling process, contacts, hours, lead time, typical wait, and door notes. (2) The Weekly Dock Schedule — a Gantt-style spreadsheet showing which truck is at which dock at what time with built-in travel time calculations. (3) The Morning Confirmation Protocol — a 15-minute routine at 6am to verify every appointment is still good before trucks leave. (4) The Wait Time Tracker — log every wait by facility to build the data that justifies surcharges or schedule changes. (5) The Arrive Early vs. On-Time Decision Matrix — which facilities reward early arrival and which punish it. Total setup time: 3 hours. Cost: $0. The system works with whatever chaos each warehouse already uses because you're documenting THEIR process, not asking them to adopt yours.</p>
+        <h3>What's the ROI of setting up a dock scheduling system versus buying scheduling software?</h3>
+        <p>The manual system takes 3 hours to set up and costs $0. Even reducing dock wait time by 30% — from 22 hours/week to 15.4 hours/week — saves $9,610/year. Reducing by 50% saves $16,016/year. The ROI is effectively infinite because there's no cost. By contrast, dock scheduling software like Opendock, MercuryGate, or C3 Solutions costs $300-1,200/month and requires the warehouse to adopt it — which a small carrier cannot force a Walmart DC to do. The spreadsheet system gets wait time under control today and builds the data that proves the financial case for software. When you're ready, Jobs Done Labs can build a custom automation layer — auto-confirming appointments, auto-routing, and auto-alerting on excessive waits — all covered by the $30K-recovered-in-90-days guarantee.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/trucking-detention-pay-tracking-system/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <span class="title">You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It</span>
+          </a>
+          <a class="related-card" href="/blog/truck-fleet-maintenance-tracking-system/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <span class="title">Your Fleet Maintenance 'System' Is Two Spreadsheets and a Whiteboard</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Stop paying drivers to wait at docks</h2>
+        <p>Book a free 30-minute automation audit. We'll map your dock scheduling workflow — from appointment booking to driver check-in — and show you exactly where wait time is eating your margin. You keep the Facility Playbook template and the ROI analysis either way.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+<section class="related-reading">
+<h2>Related reading</h2>
+<p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+<ul style="list-style:none;padding:0;margin:0">
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-detention-pay-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It — The 4-Step System</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/truck-fleet-maintenance-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Fleet Maintenance 'System' Is Two Spreadsheets, a Whiteboard, and Drivers Who Text You at 2 AM</a>
+  </li>
+
   <li style="margin-bottom:10px;padding-left:0">
     <a href="/blog/trucking-freight-bill-audit-carrier-overcharge-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Freight Bill Audit: Catch $12K in Carrier Overcharges — The 5-Minute System</a>
   </li>
 </ul>
-336|</section>
-337|
-338|    </article>
-339|  </main>
-340|  <footer>
-341|    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
-342|  </footer>
-343|</body>
-344|</html>
+</section>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
