@@ -111,6 +111,49 @@ describe("validateSitemap — check 2: non-blog URLs present", () => {
     expect(err?.message).toMatch(/page-a/);
     expect(err?.message).toMatch(/page-b/);
   });
+
+  it("throws when a URL produced by auto-discovery is absent from the XML", () => {
+    // These URLs represent what discoverNonBlogPages derives from files such as
+    // public/about/index.html and public/contact/index.html.  Passing them to
+    // validateSitemap directly — as runUpdateSitemap does after discovery —
+    // confirms the validator still fires when one of those pages is missing,
+    // regardless of how nonBlogDates was populated.
+    const discoveredPages = makeNonBlog(
+      `${BASE}/`,
+      `${BASE}/about/`,
+      `${BASE}/contact/`
+    );
+    // XML contains / and /about/ but is missing the auto-discovered /contact/.
+    const xml = sitemap(
+      urlBlock(`${BASE}/`),
+      urlBlock(`${BASE}/about/`)
+    );
+    expect(() =>
+      validateSitemap(xml, discoveredPages, makeBlog(), BASE)
+    ).toThrow(/Non-blog entry missing from sitemap.*contact/);
+  });
+
+  it("throws for every auto-discovered page absent from the XML (all errors collected)", () => {
+    // Confirms the validator collects all missing-page errors rather than
+    // short-circuiting after the first one, matching the behaviour needed
+    // when several pages are discovered on disk but none yet in sitemap.xml.
+    const discoveredPages = makeNonBlog(
+      `${BASE}/`,
+      `${BASE}/services/`,
+      `${BASE}/pricing/`
+    );
+    // XML only contains / — both discovered sub-pages are absent.
+    const xml = sitemap(urlBlock(`${BASE}/`));
+    let err: Error | undefined;
+    try {
+      validateSitemap(xml, discoveredPages, makeBlog(), BASE);
+    } catch (e) {
+      err = e as Error;
+    }
+    expect(err).toBeDefined();
+    expect(err?.message).toMatch(/services/);
+    expect(err?.message).toMatch(/pricing/);
+  });
 });
 
 describe("validateSitemap — check 3: blog entries have valid <lastmod>", () => {
