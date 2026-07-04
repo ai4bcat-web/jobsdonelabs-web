@@ -35,6 +35,17 @@ const MIME = {
 };
 
 const port = parseInt(process.env.PORT || "8080", 10);
+const EXPRESS_PORT = 8080;
+const EXPRESS_HOST = "127.0.0.1";
+
+// Paths that should be proxied to the Express API server
+const PROXY_PATHS = ["/blog", "/about", "/case-study", "/api"];
+
+function shouldProxy(pathname) {
+  return PROXY_PATHS.some(
+    (p) => pathname === p || pathname.startsWith(p + "/")
+  );
+}
 
 /**
  * Resolve a URL pathname to an absolute file path.
