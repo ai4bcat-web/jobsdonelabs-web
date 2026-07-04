@@ -375,6 +375,44 @@ describe("collapseBlankLines — blank-line cleanup after entry removal", () => 
     expect(result).toContain("a");
     expect(result).toContain("b");
   });
+
+  it("preserves leading indentation on the line following a collapsed blank-line run", () => {
+    // When two "\n\n  " separators merge after a middle entry is deleted the
+    // combined string is "\n\n  \n\n  <url>…".  The old (\n[ \t]*){3,} regex
+    // consumed the trailing "  " as part of the match, stripping the
+    // indentation from the next tag.  The fixed regex stops at the last \n
+    // before the non-blank content line, so "  " is preserved.
+    const input =
+      "\n\n  \n\n  <url>\n    <loc>https://x.com/kept/</loc>\n  </url>\n";
+    const result = collapseBlankLines(input);
+    expect(result).toContain("  <url>");
+    expect(result).not.toMatch(/\n\n\n/);
+  });
+
+  it("preserves exact block structure (not just <loc>) of adjacent entries after collapse", () => {
+    // Simulate two adjacent separator+block pairs where the middle entry was
+    // deleted: sep + block1 + sep + "" + sep + block2 + sep
+    // The output must preserve full indentation and tag structure of both blocks.
+    const sep = "\n\n  ";
+    const block1 =
+      "<url>\n    <loc>https://x.com/page-a/</loc>\n    <lastmod>2024-01-01</lastmod>\n  </url>";
+    const block2 =
+      "<url>\n    <loc>https://x.com/page-b/</loc>\n    <lastmod>2024-06-15</lastmod>\n  </url>";
+
+    const raw = sep + block1 + sep + "" + sep + block2 + sep;
+    const result = collapseBlankLines(raw);
+
+    // Full block1 content must be intact — indentation, lastmod, closing tag.
+    expect(result).toContain(
+      "  <url>\n    <loc>https://x.com/page-a/</loc>\n    <lastmod>2024-01-01</lastmod>\n  </url>"
+    );
+    // Full block2 content must be intact — indentation, lastmod, closing tag.
+    expect(result).toContain(
+      "  <url>\n    <loc>https://x.com/page-b/</loc>\n    <lastmod>2024-06-15</lastmod>\n  </url>"
+    );
+    // No triple newlines anywhere.
+    expect(result).not.toMatch(/\n\n\n/);
+  });
 });
 
 // ---------------------------------------------------------------------------
