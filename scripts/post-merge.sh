@@ -13,7 +13,7 @@ pnpm --filter db push
 if ! pnpm --filter @workspace/scripts run test; then
   echo ""
   echo "╔══════════════════════════════════════════════════════════════════╗"
-  echo "║  [post-merge] FATAL: Script tests failed — sync aborted.        ║"
+  echo "║  ❌ Sitemap tests failed — sitemap update aborted.              ║"
   echo "║  Fix the failing test(s) listed above, then re-run post-merge.  ║"
   echo "╚══════════════════════════════════════════════════════════════════╝"
   exit 1
