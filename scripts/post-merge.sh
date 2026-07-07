@@ -1,5 +1,10 @@
 #!/bin/bash
 set -e
+
+# Set git identity for auto-commits (required in the task agent environment)
+git config --local user.email "bot@jobsdonelabs.ai"
+git config --local user.name "JobsDone Labs Bot"
+
 pnpm install --frozen-lockfile
 pnpm --filter db push
 
