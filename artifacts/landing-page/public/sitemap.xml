@@ -38,13 +38,19 @@
   </url>
   <url>
     <loc>https://www.jobsdonelabs.ai/blog/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.jobsdonelabs.ai/blog/hvac-after-hours-emergency-call-triage-system/</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jobsdonelabs.ai/blog/contractor-material-price-escalation-tracking/</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
