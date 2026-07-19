@@ -70,11 +70,14 @@ export default function Contact() {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
   const [form, setForm] = useState({
-    fullName:"", email:"", company:"", industry:"", revenue:"", leaking:"",
+    fullName:"", email:"", phone:"", company:"", industry:"", revenue:"", leaking:"",
+    smsConsent: false,
   });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    const target = e.target as HTMLInputElement;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    setForm(prev => ({ ...prev, [target.name]: value }));
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -102,10 +105,12 @@ export default function Contact() {
           first_name: form.fullName.trim().split(" ")[0] || form.fullName,
           last_name: form.fullName.trim().split(" ").slice(1).join(" "),
           email: form.email,
+          phone: form.phone,
           company: form.company,
           industry: form.industry,
           revenue: form.revenue,
           painpoint: form.leaking,
+          sms_consent: form.smsConsent,
           source: "jobsdonelabs.ai — contact form",
           page: typeof window !== "undefined" ? window.location.href : "",
         }),
@@ -213,6 +218,14 @@ export default function Contact() {
                   style={fieldInput} onFocus={focusBlue} onBlur={blurLine} />
               </div>
 
+              {/* Phone number */}
+              <div>
+                <label style={fieldLabel}>Phone Number</label>
+                <input name="phone" type="tel" placeholder="(555) 000-0000"
+                  value={form.phone} onChange={handleChange} required
+                  style={fieldInput} onFocus={focusBlue} onBlur={blurLine} />
+              </div>
+
               {/* Company */}
               <div>
                 <label style={fieldLabel}>Company</label>
@@ -272,6 +285,24 @@ export default function Contact() {
                   onFocus={focusBlue} onBlur={blurLine} />
               </div>
 
+              {/* SMS consent checkbox */}
+              <label style={{
+                display:"flex", alignItems:"flex-start", gap:12, cursor:"pointer",
+                padding:"14px 16px", borderRadius:12,
+                background:"rgba(11,13,18,.04)", border:`1px solid ${LINE}`,
+              }}>
+                <input
+                  name="smsConsent"
+                  type="checkbox"
+                  checked={form.smsConsent}
+                  onChange={handleChange}
+                  style={{ marginTop:3, width:16, height:16, accentColor:ACCENT, flexShrink:0, cursor:"pointer" }}
+                />
+                <span style={{ fontSize:13, lineHeight:1.55, color:INK_SOFT, fontFamily:HG }}>
+                  I consent to receive informational text messages from JobsDone Inc. regarding my inquiry, project updates, and customer support. Message frequency varies. Message and data rates may apply. Reply <strong>HELP</strong> for help or <strong>STOP</strong> to opt out.
+                </span>
+              </label>
+
               {/* Submit */}
               <button type="submit" disabled={sent || sending}
                 style={{
@@ -286,6 +317,7 @@ export default function Contact() {
                 }}>
                 {sent ? "Sent — we'll be in touch ✓" : sending ? "Sending…" : "Send message →"}
               </button>
+
               {error && (
                 <p style={{ fontSize:13, color:ACCENT, fontFamily:HG, marginTop:-6 }}>
                   Something went wrong sending that. Please email{" "}
@@ -293,6 +325,19 @@ export default function Contact() {
                   and we'll jump on it.
                 </p>
               )}
+
+              {/* Privacy & Terms links — visible directly below the form */}
+              <p style={{ fontSize:12, color:INK_SOFT, fontFamily:HG, lineHeight:1.6, margin:"4px 0 0", textAlign:"center" }}>
+                By submitting, you agree to our{" "}
+                <Link href="/privacy">
+                  <span style={{ color:ACCENT, fontWeight:600, cursor:"pointer", textDecoration:"underline" }}>Privacy Policy</span>
+                </Link>
+                {" "}and{" "}
+                <Link href="/terms">
+                  <span style={{ color:ACCENT, fontWeight:600, cursor:"pointer", textDecoration:"underline" }}>Terms of Service</span>
+                </Link>.
+              </p>
+
             </form>
           </div>
         </div>
