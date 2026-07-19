@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Failed Subscriptions Drain $300/Mo — Free Dunning Fix | JobsDone Labs</title>
+    <meta name="description" content="Your subscribers’ payments fail because cards expire and Stripe’s default emails go unread. Free 7-step dunning sequence + tracking spreadsheet." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/subscription-failed-payment-recovery-dunning-template/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/subscription-failed-payment-recovery-dunning-template/" />
+  <meta property="og:title" content="Failed Subscriptions Drain $300/Mo — Free Dunning Fix" />
+  <meta property="og:description" content="Cards expire, payments fail, subscribers vanish. Recover 50–70% of lost revenue with 7 free dunning email templates and a tracking spreadsheet." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Failed Subscription Payments Bleed $300+/Month — Free Dunning Template" />
+  <meta name="twitter:description" content="Recover 50-70% of failed subscription payments with 7 free email templates and a tracking spreadsheet. No $99/month app needed." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Failed Subscription Payment Recovery: How to Stop Losing $300–500/Month to Involuntary Churn (Free Dunning Template)",
+    "description": "Every month, 3-5% of your subscription revenue vanishes because cards expire and Stripe's default emails go unread. Here's the 7-email dunning sequence and tracking spreadsheet that recovers 50-70% of failed payments — no $99/month app required.",
+    "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-07-19",
+    "dateModified": "2026-07-19",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/subscription-failed-payment-recovery-dunning-template/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I recover failed subscription payments without buying an expensive app?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can recover 50-70% of failed subscription payments without spending a dime on software. The system has three parts: (1) Pre-expiry emails sent 14 days and 7 days before a card expires — this alone increases proactive payment updates by 200-400%. (2) A 5-stage post-failure dunning sequence — Day 1 friendly notification, Day 3 on-hold notice, Day 7 final warning with cancellation date, Day 10 optional SMS for VIP customers, Day 14 cancellation notice with easy re-subscribe link. (3) A free tracking spreadsheet to log every failed payment, every email sent, and every recovery outcome. For brands with under 300 subscribers, this manual system recovers $300-500/month and takes about 30 minutes per week to run. You don't need Recharge at $99/month or Bold at $199/month until you cross roughly 500 subscribers — and by then the recovery math justifies the cost." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the ROI of setting up a dunning sequence for my subscription business?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Do the math for your own numbers. If you have 312 subscribers at $34/month = $10,608 in monthly subscription revenue, your involuntary churn rate (failed payments that never recover) is likely 3-5%. That's $318-530/month disappearing. Annually: $3,816-6,360. A proper dunning sequence recovers 50-70% of those failures — $1,900-4,450/year in recovered revenue. The email templates and tracking spreadsheet cost $0. The weekly 30-minute admin session costs maybe $25-50 in your time. That's an ROI of 38x to 89x on your time investment. Even if you upgrade to Recharge at $99/month once you hit 500+ subscribers, you're still net-positive: $99 x 12 = $1,188/year in software cost vs $4,000-6,000 in recovered revenue — a 3.4x to 5x ROI. The alternative — doing nothing — costs you that revenue permanently, plus the lifetime value of subscribers who churn and never come back ($750-1,000 per lost subscriber when you factor in referrals and upsells)." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to set up a subscription payment recovery system?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can have the pre-expiry emails running today — export your active subscribers from Stripe or Shopify, filter for cards expiring this month, and send the 14-day template to anyone whose card expires in the next two weeks. That's 20 minutes. The full system takes about 2-3 hours: set up the tracking spreadsheet (30 minutes), customize the email templates with your brand voice and payment update link (45 minutes), configure the pre-expiry calendar reminder to check expiring cards on the 1st and 15th of each month (15 minutes), and build the weekly dunning review habit — every Monday morning, export failed payments from the past 7 days, enter them in the tracker, and send the appropriate email in the sequence (30 minutes). After the first month, the weekly review drops to 15-20 minutes because you're just processing new failures, not building the system. Total time to full operational system: one focused afternoon. Ongoing maintenance: 30 minutes per week for under 500 subscribers." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Failed Subscription Payment Recovery", "item": "https://www.jobsdonelabs.ai/blog/subscription-failed-payment-recovery-dunning-template/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --line:rgba(11,13,18,.1); --muted:rgba(11,13,18,.52); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; border-bottom:1px solid var(--line); }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--ink); color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; padding:10px 20px; border-radius:50px; }
+    article { max-width:760px; margin:0 auto; padding:64px 24px 96px; }
+    .breadcrumb { font-size:13px; color:var(--muted); margin-bottom:40px; }
+    .breadcrumb a { color:var(--accent); text-decoration:none; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,4.5vw,3rem); line-height:1.08; letter-spacing:-0.01em; margin-bottom:16px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:48px; }
+    .byline strong { color:var(--ink); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.5rem,3vw,2rem); line-height:1.12; margin:48px 0 16px; }
+    h3 { font-family:'Anton',sans-serif; font-size:1.2rem; margin:32px 0 12px; letter-spacing:-0.005em; }
+    p { font-size:17px; margin-bottom:20px; color:rgba(11,13,18,.82); }
+    ul, ol { margin:16px 0 24px 24px; font-size:17px; color:rgba(11,13,18,.82); }
+    li { margin-bottom:10px; }
+    .highlight-box { background:#fff; border-left:4px solid var(--accent); padding:24px 28px; margin:32px 0; border-radius:0 4px 4px 0; }
+    .highlight-box p { margin-bottom:0; }
+    .stage-card { background:#fff; padding:28px 32px; margin:16px 0; border-radius:4px; border:1px solid var(--line); }
+    .stage-card h3 { margin-top:0; display:flex; align-items:center; gap:12px; }
+    .stage-badge { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; padding:4px 10px; border-radius:3px; letter-spacing:.06em; }
+    .email-template { background:#f9f7f2; padding:24px 28px; margin:20px 0; border-radius:4px; border:1px dashed var(--line); font-size:15px; }
+    .email-template .subject { font-weight:700; color:var(--ink); margin-bottom:8px; }
+    .email-template .body-text { color:rgba(11,13,18,.72); white-space:pre-line; }
+    .callout { background:var(--ink); color:var(--cream); padding:36px 40px; margin:48px 0; border-radius:4px; text-align:center; }
+    .callout h2 { color:var(--cream); margin-top:0; }
+    .callout p { color:rgba(244,239,227,.78); font-size:17px; }
+    .callout a { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:16px; padding:14px 32px; border-radius:50px; margin-top:20px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.35); padding:32px 24px; border-top:1px solid var(--line); }
+    footer a { color:inherit; }
+    .faq { margin-top:64px; }
+    .faq h2 { margin-bottom:32px; }
+    .faq-item { background:#fff; padding:24px 28px; margin:2px 0; border-radius:4px; }
+    .faq-item h3 { font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:17px; margin:0 0 8px; }
+    .faq-item p { margin-bottom:0; font-size:16px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <article>
+    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80" alt="Credit card and laptop — subscription payment recovery" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Failed Subscription Payment Recovery</div>
+    <h1>Failed Subscription Payment Recovery — Every Month, 3–5% of Your Subscription Revenue Just Disappears Because Cards Expire and Nobody Told the Customer. Here's the Free Dunning System That Recovers 50–70% of Failed Payments</h1>
+    <p class="byline"><strong>Ryne Bandolik</strong> &middot; July 19, 2026 &middot; 10 min read</p>
+
+    <p>It's the first of the month. You open your Shopify dashboard to check yesterday's revenue and something is wrong. Yesterday shows $3,247 in sales — but your subscription billing report shows only $2,831. That's <strong>$416 missing.</strong></p>
+
+    <p>You drill into the subscription section: <strong>"12 Failed Payments."</strong> You export the CSV. It's the same story every month: 2 cards expired (the customers got new cards and didn't think to update their payment method on your site). 3 cards declined — insufficient funds (it's the day before payday). 4 cards declined — do not honor (bank's fraud detection flagged the recurring charge). 2 cards declined — generic decline (Stripe's response code offers no explanation). And 1 account was on its 4th failed attempt — Stripe has now canceled the subscription. That customer had been subscribing for 17 months. Lifetime value: $697. Lost because their card expired and nobody sent them a reminder they actually read.</p>
+
+    <div class="highlight-box">
+      <p><strong>Let's do the math.</strong> You have 312 active subscribers at an average of $34/month = $10,608 in monthly subscription revenue. Your monthly involuntary churn rate is 3–5%. That's <strong>$318–530 in monthly revenue just… gone.</strong> Annually: $3,816–6,360. That's not lost to competition. That's not lost because the product is bad. That's lost because a piece of plastic expired and your payment recovery system is Stripe's default "We'll try again in 3 days" email — which goes to the customer's Promotions tab, gets archived unread, and by the 4th failed attempt the customer doesn't even remember subscribing.</p>
+    </div>
+
+    <p>Here's what you could recover with a proper dunning sequence: <strong>40–70% of failed payments.</strong> That's $1,500–4,400 in annual revenue you're currently setting on fire — from customers who WANT to keep subscribing and don't even know their payment failed.</p>
+
+    <h2>The Difference Between Voluntary and Involuntary Churn (This Matters)</h2>
+
+    <p><strong>Voluntary churn</strong> is when a customer decides to cancel — they don't want the product anymore, it's too expensive, they found a competitor. That's a retention problem. <strong>Involuntary churn</strong> is when a customer WANTS to keep subscribing but their payment fails — expired card, insufficient funds, bank fraud flag, issuer declined for no clear reason. The customer has no idea anything is wrong. They expect the box to show up, the software to keep working, the membership to stay active. When it doesn't, they're confused and frustrated — and by the time they realize what happened, they've already missed a delivery or lost access, and the friction of re-subscribing (find the site, log in, update payment, restart subscription) causes additional voluntary churn on top of the payment failure.</p>
+
+    <p><strong>Involuntary churn is your #1 churn driver that costs nothing to fix.</strong> Voluntary churn requires product improvements, pricing strategy, competitive positioning. Involuntary churn requires seven emails and a spreadsheet.</p>
+
+    <h2>Why Your Current Recovery Process Fails</h2>
+
+    <p>Stripe (and most payment processors) provides basic smart retry: it will automatically retry failed payments using machine learning to determine optimal retry timing. Stripe sends automated email notifications to the customer: "Your payment failed. We'll try again in 3 days. Please update your payment method." Here's what's wrong with those emails:</p>
+
+    <ul>
+      <li><strong>They come from Stripe's domain, not your brand.</strong> Open rates for Stripe's default emails average 15–25%. Branded emails from your own domain average 45–65%.</li>
+      <li><strong>They're generic transactional templates.</strong> Not branded, not warm, not urgent. They look like every other payment notification people ignore.</li>
+      <li><strong>They land in the Promotions or Updates tab in Gmail.</strong> Not the Primary inbox where your customers actually read email.</li>
+      <li><strong>They have no escalation logic.</strong> The 1st email is identical to the 3rd — no increasing urgency, no alternative contact channel, no "your subscription will be canceled in 7 days" final warning.</li>
+      <li><strong>There's no pre-expiry notification at all.</strong> Stripe doesn't warn customers before their card expires. A pre-expiry reminder sent 14 days and 7 days before expiration increases proactive payment updates by <strong>200–400%.</strong></li>
+    </ul>
+
+    <p>Stripe's smart retries recover about 25–35% of failed payments on their own. A properly designed multi-channel dunning sequence recovers <strong>50–70%.</strong> That gap — the extra 25–35 percentage points — is entirely in your control. And it costs $0 to capture.</p>
+
+    <h2>The Real Cost of Doing Nothing</h2>
+
+    <p>An involuntary churn customer doesn't just represent lost subscription revenue for that month. Here's the compound cost:</p>
+
+    <ul>
+      <li><strong>Lost lifetime value:</strong> The average subscription customer stays 14–22 months. A $34/month subscriber who churns involuntarily at month 17 represents $578 in lost subscription revenue.</li>
+      <li><strong>Lost referral value:</strong> Active subscribers refer 2–3x more than churned ones. Conservatively: $50–100 in lost referral value.</li>
+      <li><strong>Lost upsell/cross-sell:</strong> The VIP upgrade, the limited edition, the add-on product they would have bought next quarter. Another $100–300 in lost opportunity.</li>
+      <li><strong>Re-acquisition cost:</strong> If they want to come back, you'll spend $25–40 in marketing to re-acquire them — on top of the original $25–60 acquisition cost you already paid.</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>Total cost of one involuntary churn:</strong> $750–1,000. Per subscriber. And you have 12 of them per month. <strong>That's $9,000–12,000/year walking out the door</strong> — from customers who never wanted to leave.</p>
+    </div>
+
+    <h2>The Free Dunning System: 7 Emails + 1 Spreadsheet</h2>
+
+    <p>Here's the exact system. It has two parts: pre-expiry (stop the problem before it starts) and post-failure (recover payments that already failed). Both are manual — designed for brands with under 500 subscribers who can't justify a $99–499/month subscription management platform. If you're bigger than that, skip to the "When to Upgrade" section at the bottom.</p>
+
+    <h2>Part 1: The Pre-Expiry Campaign (Stop the Problem Before It Starts)</h2>
+
+    <p>A customer whose card expires next month is going to become a failed payment next month — unless you tell them first. Two emails, sent before the expiration date:</p>
+
+    <div class="stage-card">
+      <h3><span class="stage-badge">14 DAYS BEFORE</span> Friendly Heads-Up</h3>
+      <div class="email-template">
+        <div class="subject">Subject: Your card ending in [LAST4] expires this month — quick update?</div>
+        <div class="body-text">Hey [First Name],
+
+Just a quick heads-up — the card you use for your [Product Name] subscription (ending in [LAST4]) expires this month. If you've already got a new card, updating it now takes 30 seconds and keeps everything running without interruption.
+
+Update your payment method: [DIRECT LINK]
+
+If you've already updated it, you're all set — ignore this!
+
+Thanks,
+[Your Name]
+[Brand Name]</div>
+      </div>
+    </div>
+
+    <div class="stage-card">
+      <h3><span class="stage-badge">7 DAYS BEFORE</span> Urgency Escalates</h3>
+      <div class="email-template">
+        <div class="subject">Subject: Your [Product Name] subscription pauses in 7 days — card expiring</div>
+        <div class="body-text">Hey [First Name],
+
+Following up on my note from last week — your card ending in [LAST4] expires in 7 days. Once it expires, your next [Product Name] payment won't go through and your [subscription/box/access] will be paused.
+
+Updating takes less than a minute: [DIRECT LINK]
+
+If you've already switched cards, thank you — you can ignore this!
+
+[Your Name]
+[Brand Name]</div>
+      </div>
+    </div>
+
+    <p><strong>How to run this manually:</strong> On the 1st and 15th of each month, export your active subscribers from Stripe or Shopify. Filter for cards expiring this month. Send the 14-day template to anyone whose card expires in the next 14–21 days. Send the 7-day template to anyone whose card expires in the next 7–14 days. For under 500 subscribers, this takes 15 minutes twice a month.</p>
+
+    <h2>Part 2: The 5-Stage Post-Failure Dunning Sequence</h2>
+
+    <p>When a payment fails, don't rely on Stripe's default email. Send your own branded sequence with escalating urgency:</p>
+
+    <div class="stage-card">
+      <h3><span class="stage-badge">DAY 1</span> Friendly Notification</h3>
+      <div class="email-template">
+        <div class="subject">Subject: Your [Product Name] payment didn’t go through — here’s how to fix it</div>
+        <div class="body-text">Hey [First Name],
+
+Your [Product Name] payment of $[AMOUNT] didn’t go through today — this is usually just an expired card or a temporary hold from your bank. Happens all the time, nothing to worry about.
+
+Updating your payment takes 30 seconds: [DIRECT LINK]
+
+We’ll automatically retry the payment in 3 days, so if your bank already cleared things up, you don’t need to do anything. If you’ve got questions, just reply to this email.
+
+[Your Name]
+[Brand Name]</div>
+      </div>
+    </div>
+
+    <div class="stage-card">
+      <h3><span class="stage-badge">DAY 3</span> On-Hold Notice</h3>
+      <div class="email-template">
+        <div class="subject">Subject: Your [Product Name] subscription is on hold — update payment to reactivate</div>
+        <div class="body-text">Hey [First Name],
+
+Quick follow-up — we tried to process your $[AMOUNT] payment again but it still didn’t go through. Your [Product Name] [subscription/box/access] is now on hold. Nothing has been canceled yet — but you won’t receive your next [delivery/access] until the payment is updated.
+
+Fix this now (30 seconds): [DIRECT LINK]
+
+If you meant to cancel, no hard feelings — just reply and let us know. Otherwise, we’d love to keep you around.
+
+[Your Name]</div>
+      </div>
+    </div>
+
+    <div class="stage-card">
+      <h3><span class="stage-badge">DAY 7</span> Final Warning</h3>
+      <div class="email-template">
+        <div class="subject">Subject: Your [Product Name] subscription will be canceled in 7 days</div>
+        <div class="body-text">Hey [First Name],
+
+I wanted to give you one last heads-up. Your [Product Name] payment of $[AMOUNT] still hasn't gone through, and per our billing policy, your subscription will be canceled on [CANCEL DATE] — 7 days from now.
+
+You’ve been a customer for [X MONTHS] and we’d genuinely hate to lose you over a card issue. If you still want [Product Name], updating your payment now takes 30 seconds and everything picks up right where it left off — no gaps, no missed deliveries.
+
+Reactivate your subscription: [DIRECT LINK]
+
+If you’ve decided to move on, no worries — and thank you for being a customer. You’re welcome back anytime.
+
+[Your Name]
+[Brand Name]</div>
+      </div>
+    </div>
+
+    <div class="stage-card">
+      <h3><span class="stage-badge">DAY 10 (OPTIONAL)</span> SMS Reminder</h3>
+      <div class="email-template">
+        <div class="subject">Subject: N/A (SMS)</div>
+        <div class="body-text">Hey [First Name] — your [Product Name] subscription is about to cancel because the payment didn’t go through. Update your card here to keep it active: [SHORT LINK] Reply STOP to opt out.</div>
+      </div>
+      <p style="margin-top:12px;"><strong>Only use SMS for:</strong> subscriptions over $25/month, customers who've been with you 6+ months, or VIP tiers. SMS is high-friction for the customer — don't burn that channel on a $9/month subscription. If you don't have the customer's phone number (and permission to text them), skip this stage entirely.</p>
+    </div>
+
+    <div class="stage-card">
+      <h3><span class="stage-badge">DAY 14</span> Cancellation + Win-Back</h3>
+      <div class="email-template">
+        <div class="subject">Subject: Your [Product Name] subscription has been canceled — here’s how to re-subscribe</div>
+        <div class="body-text">Hey [First Name],
+
+Your [Product Name] subscription has been canceled because we weren’t able to process your payment after multiple attempts. You won’t be charged again.
+
+If this was unintentional (expired card, bank issue, just got busy) — you can re-subscribe anytime and pick up right where you left off. Re-subscribing takes about 60 seconds:
+
+Re-subscribe now: [DIRECT LINK]
+
+If you’ve decided [Product Name] isn’t right for you anymore, that’s completely okay — and thank you for the [X MONTHS] you spent with us. If there’s anything we could have done better, I’d genuinely love to hear it — just reply to this email.
+
+Either way, we’re grateful you were a customer.
+
+[Your Name]
+[Brand Name]</div>
+      </div>
+    </div>
+
+    <h2>The Free Failed Payment Tracking Spreadsheet</h2>
+
+    <p>Without a tracker, you'll lose track of who's on which day of the sequence, who you've already contacted, and whether your recovery efforts are actually working. Here's what to track (columns for your Google Sheet):</p>
+
+    <ul>
+      <li><strong>Customer Name</strong> — Who are we following up with?</li>
+      <li><strong>Email</strong> — For sending the dunning emails</li>
+      <li><strong>Subscription Product</strong> — Which product/sku?</li>
+      <li><strong>Monthly Value</strong> — How much revenue is at stake?</li>
+      <li><strong>Card Expiry Date</strong> — For pre-expiry campaign targeting</li>
+      <li><strong>Pre-Expiry 14d Sent</strong> — Date you sent the 14-day heads-up</li>
+      <li><strong>Pre-Expiry 7d Sent</strong> — Date you sent the 7-day warning</li>
+      <li><strong>Payment Failed Date</strong> — When the payment first failed</li>
+      <li><strong>Failure Reason</strong> — Expired card, insufficient funds, do not honor, generic decline</li>
+      <li><strong>Dunning D1 Sent</strong> — Date Day 1 email sent</li>
+      <li><strong>Dunning D3 Sent</strong> — Date Day 3 email sent</li>
+      <li><strong>Dunning D7 Sent</strong> — Date Day 7 email sent</li>
+      <li><strong>SMS D10 Sent</strong> — Date SMS sent (if applicable)</li>
+      <li><strong>Dunning D14 Sent</strong> — Date Day 14 (cancellation) email sent</li>
+      <li><strong>Recovered?</strong> — Y/N</li>
+      <li><strong>Recovery Date</strong> — Date payment was successfully recovered</li>
+      <li><strong>Notes</strong> — Customer replied? Specific situation?</li>
+    </ul>
+
+    <p><strong>Conditional formatting to add:</strong> Highlight rows in yellow when Day 3 sent but not recovered. Highlight in orange when Day 7 sent but not recovered. Highlight in red when Day 14 sent — these are lost (for now). This gives you a 5-second visual dashboard of your recovery pipeline.</p>
+
+    <h2>Measuring What Works (The 5-Minute Weekly Dashboard)</h2>
+
+    <p>Every Monday morning, spend 5 minutes reviewing these four numbers:</p>
+
+    <ol>
+      <li><strong>Recovery Rate:</strong> Recovered payments / Total failed payments this month. Target: >50%.</li>
+      <li><strong>Recovery Rate by Failure Reason:</strong> Expired card recoveries should be 60–80% (easiest to fix — customer just needs to update). Insufficient funds recoveries should be 40–60% (they want to pay, timing is the issue). Generic declines: 20–40% (hardest to recover — sometimes the bank just won't cooperate). If your expired-card recovery rate is below 50%, your pre-expiry campaign isn't working — send those reminders earlier or more prominently.</li>
+      <li><strong>Pre-Expiry Update Rate:</strong> Customers who updated before expiry / Customers who received a pre-expiry email. Target: >25%. If it's lower, your subject lines aren't compelling enough or your emails aren't reaching the primary inbox.</li>
+      <li><strong>Time-to-Recovery:</strong> Average days between payment failure and recovery. Target: under 5 days. Longer recovery times mean more customers churn during the dunning sequence.</li>
+    </ol>
+
+    <h2>When It's Time to Upgrade (The Decision Framework)</h2>
+
+    <p>This manual system works brilliantly for brands with under 300 subscribers. But it has limits. Here's when to graduate:</p>
+
+    <div class="stage-card">
+      <h3><span class="stage-badge">STAY MANUAL</span> Under 300 Subscribers, Under $10K/Month</h3>
+      <p>The manual system costs $0 and takes 30 minutes per week. At this scale, 30 minutes of your time ($25–50) recovering $300–500/month is a 6–10x return. Don't spend $99/month on Recharge — you're not losing enough to justify it.</p>
+    </div>
+
+    <div class="stage-card">
+      <h3><span class="stage-badge">CONSIDER APPS</span> 300–1,000 Subscribers, $10–30K/Month</h3>
+      <p>At this scale, you're processing 15–50 failed payments per month. The manual system still works but takes 1–2 hours/week. Recharge at $99/month or Bold at $49.99–199/month becomes cost-justified: if automated dunning recovers an extra $200–400/month vs manual (because the platform sends emails instantly, retries at optimal times, and tracks everything automatically), $99/month is a 2–4x ROI. Plus you get your Tuesday mornings back.</p>
+    </div>
+
+    <div class="stage-card">
+      <h3><span class="stage-badge">YOU NEED A PLATFORM</span> Over 1,000 Subscribers, $30K+/Month</h3>
+      <p>At 50+ failed payments per month, manual follow-up can't keep up. You need automated dunning with smart retry logic, pre-expiry campaigns, and multi-channel recovery (email + SMS). Recharge ($99–499/month), Recurly ($199+/month), or Chargebee ($299+/month) are the standard options. At $30K/month in subscription revenue, even $300/month in platform cost is 1% of revenue — and you're recovering 3–5% of revenue that was previously lost. The math is a no-brainer.</p>
+    </div>
+
+    <div class="callout">
+      <h2>Stop Watching Subscription Revenue Disappear</h2>
+      <p>You didn't spend months acquiring subscribers just to lose them over an expired credit card. The 7-email dunning sequence and tracking spreadsheet cost $0, take an afternoon to set up, and recover 50–70% of failed payments. And if you want someone to build the fully automated version — the one that sends pre-expiry reminders, runs the dunning sequence, and updates your dashboard while you sleep — that's what we do.</p>
+      <a href="/contact">Book a free audit →</a>
+    </div>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>How do I recover failed subscription payments without buying an expensive app?</h3>
+        <p>You can recover 50–70% of failed subscription payments without spending a dime on software. The system has three parts: (1) Pre-expiry emails sent 14 days and 7 days before a card expires — this alone increases proactive payment updates by 200–400%. (2) A 5-stage post-failure dunning sequence — Day 1 friendly notification, Day 3 on-hold notice, Day 7 final warning with cancellation date, Day 10 optional SMS for VIP customers, Day 14 cancellation notice with easy re-subscribe link. (3) A free tracking spreadsheet to log every failed payment, every email sent, and every recovery outcome. For brands with under 300 subscribers, this manual system recovers $300–500/month and takes about 30 minutes per week to run. You don't need Recharge at $99/month or Bold at $199/month until you cross roughly 500 subscribers — and by then the recovery math justifies the cost.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the ROI of setting up a dunning sequence for my subscription business?</h3>
+        <p>Do the math for your own numbers. If you have 312 subscribers at $34/month = $10,608 in monthly subscription revenue, your involuntary churn rate is likely 3–5%. That's $318–530/month disappearing. Annually: $3,816–6,360. A proper dunning sequence recovers 50–70% of those failures — $1,900–4,450/year in recovered revenue. The email templates and tracking spreadsheet cost $0. The weekly 30-minute admin session costs maybe $25–50 in your time. That's an ROI of 38x to 89x on your time investment. Even if you upgrade to Recharge at $99/month once you hit 500+ subscribers, you're still net-positive: $99 x 12 = $1,188/year in software cost vs $4,000–6,000 in recovered revenue — a 3.4x to 5x ROI.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long does it take to set up a subscription payment recovery system?</h3>
+        <p>You can have the pre-expiry emails running today — export your active subscribers from Stripe or Shopify, filter for cards expiring this month, and send the 14-day template to anyone whose card expires in the next two weeks. That's 20 minutes. The full system takes about 2–3 hours: set up the tracking spreadsheet (30 minutes), customize the email templates with your brand voice and payment update link (45 minutes), configure the pre-expiry calendar reminder to check expiring cards on the 1st and 15th of each month (15 minutes), and build the weekly dunning review habit (30 minutes). After the first month, the weekly review drops to 15–20 minutes. Total time to full operational system: one focused afternoon. Ongoing maintenance: 30 minutes/week for under 500 subscribers.</p>
+      </div>
+    </section>
+
+  <section class="related-reading">
+  <h2>Related reading</h2>
+  <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+  <ul style="list-style:none;padding:0;margin:0">
+    <li style="margin-bottom:10px;padding-left:0">
+      <a href="/blog/ecommerce-manual-data-entry-silent-killer/" style="font-weight:600;color:#1466FF;text-decoration:none">Manual Data Entry Is the Silent Killer of Your E-Commerce Business — The 5-Level Inventory Sync System (Starting at $0)</a>
+    </li>
+    <li style="margin-bottom:10px;padding-left:0">
+      <a href="/blog/shopify-quickbooks-reconciliation-never-matches/" style="font-weight:600;color:#1466FF;text-decoration:none">Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It, Honestly)</a>
+    </li>
+    <li style="margin-bottom:10px;padding-left:0">
+      <a href="/blog/wholesale-net-30-payment-tracking-spreadsheet/" style="font-weight:600;color:#1466FF;text-decoration:none">Tracking 40 Wholesale Customers on Net-30 Terms? The Free AR Aging System That Catches Late Payments Before They're 90 Days Old</a>
+    </li>
+  </ul>
+  </section>
+
+  </article>
+  <footer>
+    &copy; 2026 Jobs Done Labs &middot; <a href="/">Home</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
