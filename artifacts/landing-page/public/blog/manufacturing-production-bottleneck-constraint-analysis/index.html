@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12 Machines But Only One Bottleneck | Jobs Done Labs</title>
+  <meta name="description" content="Wasting $150K on the wrong machine because you can't find your real bottleneck? Free production constraint analysis spreadsheet. Find it in 30 minutes." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/manufacturing-production-bottleneck-constraint-analysis/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/manufacturing-production-bottleneck-constraint-analysis/" />
+  <meta property="og:title" content="12 Machines But Only One Bottleneck | Jobs Done Labs" />
+  <meta property="og:description" content="Wasting $150K on the wrong machine because you can't find your real bottleneck? Free production constraint analysis spreadsheet. Find it in 30 minutes." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="12 Machines But Only One Bottleneck" />
+  <meta name="twitter:description" content="Wasting $150K on the wrong machine because you can't find your real bottleneck? Free production constraint analysis spreadsheet. Find it in 30 minutes." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your Shop Has 12 Machines But Only One Of Them Is The Bottleneck \u2014 And You're About To Spend $150,000 On The Wrong Machine Because You Don't Know Which One It Is (Free Production Bottleneck Identification Spreadsheet)",
+    "description": "Every production system has exactly ONE bottleneck. Optimize anywhere else and you're wasting money. Free 5-sheet toolkit: machine throughput log, WIP queue tracker, constraint identification dashboard, bottleneck relief ROI calculator, and capacity planning model. Find your real constraint in 30 minutes, calculate which investment yields the highest ROI \u2014 no $500-25,000/month MES software needed.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-07-25",
+    "dateModified": "2026-07-25",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/manufacturing-production-bottleneck-constraint-analysis/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I find my production bottleneck without spending thousands on MES software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You need three data points per machine: runtime hours per shift, parts produced, and WIP queue depth in front of each work center. Collect this using the hour meter method (photo of each machine's hour meter at shift start and end \u2014 2 minutes/day), the operator log method (each operator logs parts completed per shift on a clipboard), and the WIP walk method (5-minute walk counting pallets waiting at each machine). Enter the numbers into the free bottleneck identification spreadsheet. The constraint is the machine with the highest sustained utilization (90%+) combined with the deepest queue waiting for it. This 30-minute monthly analysis replaces guessing with data \u2014 no IoT sensors, no $500-25,000/month software, just a systematic process that answers the half-million-dollar question: which machine do I invest in next?" }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the ROI of fixing a bottleneck vs buying another machine?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The difference between guessing and systematically identifying the bottleneck is typically $420,000 in additional annual revenue. Here's the math from a real 12-machine job shop: current throughput is 60% of theoretical capacity at $1.4M annual revenue. If you guess wrong and buy a $150,000 mill that isn't the bottleneck, throughput barely moves to 62% and you gain $50K/year \u2014 a 33% ROI. But if you correctly identify the constraint (say the EDM station) and relieve it with a $50,000 investment \u2014 a used machine, fixture upgrade, or part-time second-shift operator \u2014 throughput jumps to 80%, revenue hits $1.87M, and your ROI is 940%. The free bottleneck relief ROI calculator in the spreadsheet models each option: cost, throughput increase, additional annual revenue, payback period, and ROI percentage \u2014 so you present your banker with data, not gut feel." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the $30K guarantee work for manufacturing automation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The $30K-recovered-in-90-days guarantee covers all operational automation we build for your manufacturing business \u2014 including production scheduling, job costing, quality tracking, and constraint analysis dashboards. Recovery is calculated from: documented throughput increases from bottleneck identification and relief, reduced WIP inventory carrying costs (parts no longer sitting 4 days between operations), recovered margin from jobs that were under-quoted because energy and overhead weren't allocated, and admin time saved from production tracking. If the documented total across all automations doesn't reach $30K within 90 days, you pay nothing. For a 12-machine shop at $1.4M revenue, bottleneck identification alone typically yields $200K-400K in throughput improvement \u2014 far exceeding the guarantee threshold within the first month." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost to automate production bottleneck tracking for a small job shop?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We build custom automation systems priced to the scope of your shop \u2014 typically $3,000-15,000 for a complete production visibility system that includes machine-level throughput tracking, WIP queue monitoring, constraint identification dashboards, and job costing integration. Compare this to off-the-shelf MES software: Plex at $5,000-25,000/month ($60K-300K/year), JobBOSS at $200-500/user/month, or MachineMetrics at $100-300/machine/month plus $200-500/machine in IoT hardware. Our systems are custom-built to your actual workflow \u2014 not a one-size-fits-all platform you spend 40-80 hours configuring. Plus, the $30K guarantee means if the system doesn't identify at least $30K in recoverable throughput or cost savings within 90 days, you pay nothing. Most shops recover the full build cost in the first 30-60 days from the first constraint relief decision alone." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Manufacturing Production Bottleneck Analysis", "item": "https://www.jobsdonelabs.ai/blog/manufacturing-production-bottleneck-constraint-analysis/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Anton&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --line:rgba(11,13,18,.1); --muted:rgba(11,13,18,.45); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; border-bottom:1px solid var(--line); }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--ink); color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; padding:10px 20px; border-radius:50px; }
+
+    article { max-width:760px; margin:0 auto; padding:64px 24px 64px; }
+    .post-tag { display:inline-block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,4.5vw,3rem); line-height:1.08; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:13px; color:var(--muted); margin-bottom:38px; display:flex; align-items:center; gap:12px; }
+    .byline .avatar { width:32px; height:32px; border-radius:50%; background:var(--line); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px; }
+    .hero-img { width:100%; max-width:100%; height:auto; border-radius:8px; margin-bottom:40px; display:block; background:#0B0D12; }
+    h2 { font-family:'Anton',sans-serif; font-size:1.5rem; line-height:1.15; margin:40px 0 16px; letter-spacing:-0.005em; }
+    h3 { font-family:'Anton',sans-serif; font-size:1.2rem; line-height:1.2; margin:32px 0 12px; }
+    p { font-size:17px; line-height:1.72; margin-bottom:20px; color:rgba(11,13,18,.85); }
+    ul, ol { margin-bottom:20px; padding-left:24px; }
+    li { font-size:16px; line-height:1.7; margin-bottom:10px; color:rgba(11,13,18,.85); }
+    blockquote { border-left:3px solid var(--accent); padding:12px 24px; margin:28px 0; background:#fff; border-radius:0 6px 6px 0; font-size:16px; color:rgba(11,13,18,.65); font-style:italic; }
+    table { width:100%; border-collapse:collapse; margin:24px 0; font-size:14px; }
+    th { background:var(--ink); color:var(--cream); padding:10px 14px; text-align:left; font-weight:600; font-size:13px; }
+    td { padding:10px 14px; border-bottom:1px solid var(--line); }
+    tr:nth-child(even) td { background:#fff; }
+    .cta-box { background:#fff; border:2px solid var(--accent); border-radius:8px; padding:28px 32px; margin:40px 0; text-align:center; }
+    .cta-box h3 { margin-top:0; }
+    .cta-box .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:15px; padding:14px 32px; border-radius:50px; margin-top:16px; }
+    .toc { background:#fff; padding:20px 28px; border-radius:8px; margin-bottom:36px; }
+    .toc h3 { margin-top:0; margin-bottom:10px; font-size:15px; }
+    .toc ol { margin-bottom:0; font-size:14px; }
+    .toc li { margin-bottom:4px; }
+    .toc a { color:var(--accent); text-decoration:none; }
+    .related-reading { background:#fff; border-radius:8px; padding:32px; margin-top:48px; }
+    .related-reading h2 { margin-top:0; font-size:1.3rem; }
+    .key-takeaway { background:#fff; border-left:4px solid var(--accent); padding:18px 24px; margin:24px 0; border-radius:0 6px 6px 0; }
+    .key-takeaway strong { color:var(--accent); font-family:'Anton',sans-serif; letter-spacing:0.02em; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.35); padding:32px 24px; border-top:1px solid var(--line); }
+    footer a { color:inherit; }
+    @media (max-width:640px) {
+      article { padding:40px 20px; }
+      h1 { font-size:1.8rem; }
+      .cta-box { padding:24px 20px; }
+    }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <article>
+    <span class="post-tag">Manufacturing</span>
+    <h1>Your Shop Has 12 Machines But Only One Of Them Is The Bottleneck — And You're About To Spend $150,000 On The Wrong Machine Because You Don't Know Which One It Is</h1>
+    <div class="byline">
+      <div class="avatar">RB</div>
+      <span>Ryne Bandolik &middot; July 25, 2026 &middot; 12 min read</span>
+    </div>
+
+    <svg class="hero-img" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="630" fill="#0B0D12"/>
+      <text x="600" y="60" text-anchor="middle" fill="rgba(255,255,255,0.08)" font-family="Anton,sans-serif" font-size="18" letter-spacing="0.2em">PRODUCTION BOTTLENECK CONSTRAINT ANALYSIS</text>
+      <!-- 4 machines with WIP visualization -->
+      <rect x="80" y="120" width="220" height="140" rx="8" fill="#1a2235" stroke="#2a3550" stroke-width="2"/>
+      <text x="190" y="175" text-anchor="middle" fill="#4a90d9" font-family="monospace" font-size="18" font-weight="bold">CNC MILL #4</text>
+      <text x="190" y="210" text-anchor="middle" fill="#ff6b6b" font-family="monospace" font-size="40" font-weight="bold">92%</text>
+      <text x="190" y="240" text-anchor="middle" fill="#666" font-family="monospace" font-size="11">WIP: 3 pallets</text>
+
+      <rect x="340" y="120" width="220" height="140" rx="8" fill="#1a2235" stroke="#ff6b6b" stroke-width="3"/>
+      <text x="450" y="175" text-anchor="middle" fill="#4a90d9" font-family="monospace" font-size="18" font-weight="bold">SURFACE GRINDER</text>
+      <text x="450" y="210" text-anchor="middle" fill="#ff4444" font-family="monospace" font-size="40" font-weight="bold">99%</text>
+      <text x="450" y="240" text-anchor="middle" fill="#ff6b6b" font-family="monospace" font-size="13" font-weight="bold">WIP: 14 pallets</text>
+
+      <rect x="600" y="120" width="220" height="140" rx="8" fill="#1a2235" stroke="#2a3550" stroke-width="2"/>
+      <text x="710" y="175" text-anchor="middle" fill="#4a90d9" font-family="monospace" font-size="18" font-weight="bold">CNC LATHE #2</text>
+      <text x="710" y="210" text-anchor="middle" fill="#ff6b6b" font-family="monospace" font-size="40" font-weight="bold">88%</text>
+      <text x="710" y="240" text-anchor="middle" fill="#666" font-family="monospace" font-size="11">WIP: 5 pallets</text>
+
+      <rect x="860" y="120" width="260" height="140" rx="8" fill="#1a2235" stroke="#2a3550" stroke-width="2"/>
+      <text x="990" y="175" text-anchor="middle" fill="#4a90d9" font-family="monospace" font-size="18" font-weight="bold">BAND SAW</text>
+      <text x="990" y="210" text-anchor="middle" fill="#47d147" font-family="monospace" font-size="40" font-weight="bold">34%</text>
+      <text x="990" y="240" text-anchor="middle" fill="#666" font-family="monospace" font-size="11">WIP: 1 pallet</text>
+
+      <!-- Arrow pointing to bottleneck -->
+      <polygon points="450,280 440,300 460,300" fill="#ff4444"/>
+      <rect x="340" y="300" width="220" height="28" rx="4" fill="#ff4444"/>
+      <text x="450" y="320" text-anchor="middle" fill="#fff" font-family="Anton,sans-serif" font-size="15" font-weight="bold"> THIS IS YOUR BOTTLENECK </text>
+
+      <!-- Chart area bottom -->
+      <rect x="80" y="380" width="1040" height="210" rx="6" fill="#1a2235"/>
+      <text x="600" y="415" text-anchor="middle" fill="#999" font-family="monospace" font-size="15">THROUGHPUT PER MACHINE (parts/hour) — height = throughput rate</text>
+      <rect x="130" y="440" width="90" height="130" fill="#2a3550"/><text x="175" y="585" text-anchor="middle" fill="#999" font-size="11">Mill #1</text><text x="175" y="435" text-anchor="middle" fill="#47d147" font-size="11">18.2</text>
+      <rect x="250" y="460" width="90" height="110" fill="#2a3550"/><text x="295" y="585" text-anchor="middle" fill="#999" font-size="11">Mill #2</text><text x="295" y="455" text-anchor="middle" fill="#47d147" font-size="11">16.8</text>
+      <rect x="370" y="500" width="90" height="70" fill="#2a3550"/><text x="415" y="585" text-anchor="middle" fill="#999" font-size="11">EDM</text><text x="415" y="495" text-anchor="middle" fill="#ccc" font-size="11">9.4</text>
+      <rect x="490" y="545" width="90" height="25" fill="#ff4444"/><text x="535" y="585" text-anchor="middle" fill="#ff6b6b" font-size="11">Grinder *</text><text x="535" y="538" text-anchor="middle" fill="#ff4444" font-size="11">4.2</text>
+      <rect x="610" y="420" width="90" height="150" fill="#2a3550"/><text x="655" y="585" text-anchor="middle" fill="#999" font-size="11">Saw</text><text x="655" y="415" text-anchor="middle" fill="#47d147" font-size="11">22.1</text>
+      <rect x="730" y="480" width="90" height="90" fill="#2a3550"/><text x="775" y="585" text-anchor="middle" fill="#999" font-size="11">Lathe #1</text><text x="775" y="475" text-anchor="middle" fill="#ccc" font-size="11">12.6</text>
+      <rect x="850" y="500" width="90" height="70" fill="#2a3550"/><text x="895" y="585" text-anchor="middle" fill="#999" font-size="11">Swiss #1</text><text x="895" y="495" text-anchor="middle" fill="#ccc" font-size="11">10.1</text>
+      <rect x="970" y="510" width="90" height="60" fill="#2a3550"/><text x="1015" y="585" text-anchor="middle" fill="#999" font-size="11">Swiss #2</text><text x="1015" y="505" text-anchor="middle" fill="#ccc" font-size="11">8.7</text>
+      <text x="535" y="610" text-anchor="middle" fill="#ff4444" font-size="10">* CONSTRAINT — relieable for 9.4 parts/hr gain across entire system</text>
+    </svg>
+
+    <div class="toc">
+      <h3>In this guide:</h3>
+      <ol>
+        <li><a href="#mistake">"We Bought a $120,000 CNC Mill and Our Throughput Didn't Change"</a></li>
+        <li><a href="#toc-primer">The Theory of Constraints in 10 Minutes</a></li>
+        <li><a href="#toolkit">The Free Bottleneck Identification Toolkit: 5 Sheets</a></li>
+        <li><a href="#data">How to Collect Machine Data Without IoT Sensors</a></li>
+        <li><a href="#relief">The 4 Ways to Relieve a Bottleneck</a></li>
+        <li><a href="#walk">The 15-Minute Bottleneck Walk</a></li>
+        <li><a href="#threshold">MES Software vs Spreadsheet: When to Upgrade</a></li>
+        <li><a href="#quarterly">The Quarterly Bottleneck Review Process</a></li>
+      </ol>
+    </div>
+
+    <h2 id="mistake">I. "We Bought a $120,000 CNC Mill and Our Throughput Didn't Change — Because the Bottleneck Was the Saw, Not the Mill"</h2>
+
+    <p>Here's a story we hear from small job shop owners at least twice a month.</p>
+
+    <p>You run a precision CNC shop — 12 machines, 6 operators, $1.4M in annual revenue. You're turning away work because lead times are 6-8 weeks and customers want 4. Your gut says you could be producing 30-40% more with the same equipment and headcount. The banker asks "what would another machine do for your throughput?" and you can't answer with a number — so you guess.</p>
+
+    <p>You point at the CNC mills because they're always running. You spend $120,000 on a new one. Three months later, throughput is up maybe 2%. The new mill sits idle half the day. Why? Because the <strong>real bottleneck was the surface grinder</strong> — the machine that only runs 3 hours a day but every single part has to pass through it before final inspection. The new mill just added more WIP to the pile in front of the grinder.</p>
+
+    <blockquote>You didn't need more capacity at the mills. You needed more capacity at the grinder — which would have cost $18,000 for a used one, not $120,000 for a new mill. You spent $102,000 more than you needed to, and you still haven't increased throughput.</blockquote>
+
+    <p>This is the Theory of Constraints problem in practice. Every production system has <strong>exactly ONE bottleneck</strong> — the constraint that limits total throughput. Optimize anywhere else and you're not just wasting money — you're actively making the problem worse by piling up WIP in front of the real constraint.</p>
+
+    <div class="key-takeaway">
+      <p style="margin-bottom:0"><strong>KEY TAKEAWAY:</strong> The difference between guessing your bottleneck and systematically identifying it is $420,000 in annual revenue and a $100,000 lower capital investment.</p>
+    </div>
+
+    <table>
+      <tr><th>Scenario</th><th>Throughput</th><th>Annual Revenue</th><th>Investment</th><th>ROI</th></tr>
+      <tr><td>Current state</td><td>60%</td><td>$1.4M</td><td>—</td><td>—</td></tr>
+      <tr><td style="color:#e05555">Wrong investment (add mill)</td><td>62%</td><td>$1.45M</td><td>$150,000</td><td style="color:#e05555">33% — terrible</td></tr>
+      <tr><td style="color:#3ba55c">Right investment (relieve bottleneck)</td><td>80%</td><td>$1.87M</td><td>$50,000</td><td style="color:#3ba55c">940% — transformational</td></tr>
+    </table>
+
+    <h2 id="toc-primer">II. The Theory of Constraints in 10 Minutes</h2>
+
+    <p>Developed by Eliyahu Goldratt in <em>The Goal</em> (1984), the Theory of Constraints (TOC) rests on three principles every shop owner needs to know. No industrial engineering degree required.</p>
+
+    <p><strong>1. Every production system has exactly ONE bottleneck.</strong><br>
+    Not two. Not "all our machines are busy." One machine, work center, or process step that limits the total output of the entire system. If you have 12 machines and 6 operators, one specific resource is the constraint. Find it.</p>
+
+    <p><strong>2. An hour lost at the bottleneck is an hour lost for the entire system.</strong><br>
+    If the grinder is the bottleneck and it goes down for 2 hours, the entire shop loses 2 hours of throughput — even if every other machine is running at 100%. Conversely, an hour saved at a non-bottleneck is a mirage. If you make the saw 20% faster, you just create more WIP in front of the grinder. Total throughput doesn't change.</p>
+
+    <p><strong>3. Optimize the constraint, then find the next one.</strong><br>
+    Once you relieve the bottleneck (adding capacity, reducing setup time, offloading work), throughput increases — until a new constraint emerges. The bottleneck moves. Your job is to find it, fix it, and repeat. This is a continuous process, not a one-time project.</p>
+
+    <p><strong>How to spot the bottleneck in your shop:</strong> Look for the machine with (a) the highest sustained utilization — 90%+, not just "busy during first shift" — AND (b) the largest queue of WIP waiting in front of it. If Mill #4 runs at 92% utilization with 3 pallets waiting and the Grinder runs at 99% with 12 pallets waiting, the Grinder is your bottleneck. The WIP piles up at the constraint like cars at a traffic light.</p>
+
+    <h2 id="toolkit">III. The Free Bottleneck Identification Toolkit: 5 Sheets</h2>
+
+    <p>This is the spreadsheet we built for shop owners who need to find their constraint without spending $500-25,000/month on MES software. Five sheets, 30 minutes per month, zero cost. Here's what each sheet does:</p>
+
+    <h3>Sheet 1: Machine Throughput Log</h3>
+    <p>Per machine, per shift: hours run, parts produced, cycle time per part, throughput rate (parts/hour), setup time, downtime, utilization %, target throughput, and throughput gap. The "throughput gap" column tells you how many parts you're <em>not</em> producing because this machine can't keep up with demand. Enter data from hour meters or operator logs. The sheet auto-calculates utilization and ranks machines by throughput rate.</p>
+
+    <h3>Sheet 2: WIP Queue Tracker</h3>
+    <p>Per work center: jobs waiting, total parts waiting, longest wait time (how many hours/days has the oldest part been sitting?), value of WIP in queue (Throughput-Dollar-Days — the dollar value of parts multiplied by days waiting), and the upstream machine feeding the queue. This reveals the dependency chain: the Grinder's queue is deep because the EDM feeds it 3x more parts than the Mills feed the EDM. You can't fix the Grinder without understanding what's feeding it.</p>
+
+    <h3>Sheet 3: Constraint Identification Dashboard</h3>
+    <p>Auto-calculates which machine is the bottleneck based on three inputs: utilization % (highest), queue depth (largest WIP waiting), and throughput rate (lowest relative to demand). Generates a ranked list of suspected constraints with confidence scores. If Machine #7 (EDM) has 97% utilization AND 14 pallets waiting AND produces 4.2 parts/hour while demand requires 6.5, it's your bottleneck with 94% confidence.</p>
+
+    <h3>Sheet 4: Bottleneck Relief ROI Calculator</h3>
+    <p>For each relief option: option description (overtime, second shift, new/used machine, setup reduction via SMED, offload work to outside shop), one-time cost, ongoing cost, throughput increase (parts/week), additional annual revenue, payback period in months, and ROI %. Ranks all options by ROI so you present your banker with a ranked list — not a single request.</p>
+
+    <h3>Sheet 5: Capacity Planning Model</h3>
+    <p>Enter your product mix: part number, cycle time per part per machine, monthly demand quantity. The model calculates required machine hours per work center, compares to available hours (after accounting for setup, maintenance, and breaks), and identifies where demand exceeds capacity. This tells you <em>before</em> you quote a delivery date whether you can actually hit it.</p>
+
+    <div class="cta-box">
+      <h3>Get the Free Bottleneck Identification Toolkit</h3>
+      <p style="font-size:15px;color:var(--muted);margin-bottom:0;">The 5-sheet spreadsheet is included free with a production audit. We'll also walk the shop floor with you (virtually or in-person) and help you identify your constraint on the first call.</p>
+      <a class="btn" href="/contact">Book a free production audit →</a>
+    </div>
+
+    <h2 id="data">IV. How to Collect Machine Run-Time Data Without IoT Sensors</h2>
+
+    <p>You don't need MachineMetrics at $100-300/machine/month. You don't need IoT hardware at $200-500/machine. You need three data collection methods that take under 15 minutes per day total — and the spreadsheet does the rest.</p>
+
+    <p><strong>The Hour Meter Method (2 minutes/day).</strong> Every machine has an hour meter — usually on the control panel or inside the electrical cabinet. Take a photo of each machine's hour meter at shift start and shift end with your phone. The difference is runtime for that shift. For 12 machines, that's 24 photos — 2 minutes of walking the floor. Enter the numbers into the throughput log once a week (10 minutes on Friday afternoon).</p>
+
+    <p><strong>The Operator Log Method (30 seconds/shift/operator).</strong> Each operator already knows how many parts they completed. Give them a clipboard at their workstation with a simple log: date, machine, part number, quantity completed, any downtime and why. Takes 30 seconds per shift per operator. The data feeds the throughput log and the WIP tracker simultaneously.</p>
+
+    <p><strong>The WIP Walk Method (5 minutes/day).</strong> Once per shift, walk the shop floor and count: how many pallets/totes are sitting in front of each machine? Write the number on a whiteboard. This 5-minute walk tells you exactly where WIP is accumulating — and accumulated WIP points directly at the bottleneck. If you do nothing else, do the WIP walk. You'll know within a week which machine has the deepest queue.</p>
+
+    <div class="key-takeaway">
+      <p style="margin-bottom:0"><strong>KEY TAKEAWAY:</strong> Count parts, not dollars. You don't need to know the dollar value of WIP to find the bottleneck. The machine with the most stuff piled in front of it — that's where you look first.</p>
+    </div>
+
+    <h2 id="relief">V. The 4 Ways to Relieve a Bottleneck (Ranked by Cost)</h2>
+
+    <p>Once you've identified the constraint, you have four levers to pull — from cheapest/fastest to most expensive:</p>
+
+    <p><strong>1. Reduce setup time at the bottleneck (SMED).</strong> If the Grinder takes 45 minutes to change over between part numbers and you do 4 changeovers per day, that's 3 hours/day of lost bottleneck capacity. Apply Single-Minute Exchange of Die (SMED) principles: separate internal setup (must be done while machine stopped) from external setup (can be done while machine runs). Move everything possible to external. Standardize fixture locations. Pre-stage tools. A $0 process change can recover 30-50% of lost setup time — adding 7-10 hours/week of bottleneck capacity without spending a dime.</p>
+
+    <p><strong>2. Add capacity at the bottleneck.</strong> Overtime (cheapest — $25-35/hour for an operator, adds 10-20 hours/week), second shift (moderate — hire a part-time operator at $20-25/hour for 20 hours/week), or additional machine (most expensive — but now you know exactly which machine to buy). The ROI calculator tells you which option pays back fastest.</p>
+
+    <p><strong>3. Offload bottleneck work to an outside shop.</strong> Send the parts that must pass through the grinder to an external grinding shop. Yes, you lose margin on those parts — but you free up the bottleneck, which increases total system throughput. Do the math: if offloading costs $500/week but the increased throughput from all OTHER machines generates $3,000/week, it's a $2,500/week net win.</p>
+
+    <p><strong>4. Improve quality at the bottleneck — stop making scrap there.</strong> This is the most expensive place in your entire shop to produce a bad part. A scrapped part at the bottleneck consumed the bottleneck's time (the most constrained resource) AND all the upstream resources that fed it. If your bottleneck scrap rate is 3%, eliminating it is equivalent to adding 3% capacity — for zero capital cost. Inspect parts BEFORE they enter the bottleneck so you're not wasting constrained time on parts that are already defective.</p>
+
+    <h2 id="walk">VI. The 15-Minute Bottleneck Walk</h2>
+
+    <p>You can identify your most likely constraint without a single spreadsheet cell. Walk the shop floor and look for three things:</p>
+
+    <ol>
+      <li><strong>The machine with parts stacked up in front of it.</strong> Pallets, totes, bins — whatever form WIP takes in your shop, it accumulates at the constraint. If you see 8 pallets at the grinder and 1 at every other machine, you've found it.</li>
+      <li><strong>The machine where operators are waiting.</strong> If an operator is standing idle waiting for a machine to finish a cycle, that machine is probably the bottleneck — it's pacing the operator's entire workflow.</li>
+      <li><strong>The machine that never stops — and you wish it would.</strong> The machine that runs through lunch, runs through shift change, and is the one you dread breaking down because "everything stops." That's your constraint.</li>
+    </ol>
+
+    <p>This walk takes 15 minutes. Do it once a week. You'll develop an instinct for exactly where your constraint lives.</p>
+
+    <h2 id="threshold">VII. When to Buy MES Software vs When the Spreadsheet Is Enough</h2>
+
+    <p>The free spreadsheet toolkit handles constraint identification for shops with up to roughly 20 machines and 50 part numbers. Beyond that threshold, the manual data collection becomes a bottleneck itself — and that's when you consider MES software.</p>
+
+    <p><strong>Triggers to upgrade to MachineMetrics / ProShop / JobBOSS:</strong></p>
+    <ul>
+      <li>You've crossed 20+ machines — the hour meter photo method becomes impractical</li>
+      <li>You have 50+ active part numbers with complex multi-step routings</li>
+      <li>You hold ISO/AS9100 certification requiring real-time traceability</li>
+      <li>Your revenue exceeds $5M and you can justify the $500-2,500/month software cost</li>
+      <li>You have a dedicated production manager who will actually use the software dashboard</li>
+    </ul>
+
+    <p><strong>Stay with the spreadsheet if:</strong></p>
+    <ul>
+      <li>You're under 20 machines and you (the owner) are the one making capital decisions</li>
+      <li>Your problem is "which machine do I invest in?" not "I need real-time OEE dashboards"</li>
+      <li>You do bottleneck analysis quarterly, not daily</li>
+      <li>You haven't yet maximized the free methods (operator logs, WIP walks, SMED setup reduction)</li>
+    </ul>
+
+    <p>Most shops under $5M revenue are in the spreadsheet zone. Buy the software <em>after</em> you've outgrown the free system, not before you've ever used any system.</p>
+
+    <h2 id="quarterly">VIII. The Quarterly Bottleneck Review Process</h2>
+
+    <p>Here's the rhythm that keeps your shop running at 80%+ throughput:</p>
+
+    <p><strong>Week 1 (first Monday of quarter):</strong> Pull 12 weeks of machine runtime data. Update the Throughput Log and WIP Queue Tracker. Identify the current constraint. If it's the same as last quarter and you haven't relieved it yet, you have a management problem, not an analysis problem.</p>
+
+    <p><strong>Week 2:</strong> Model 3-5 relief options in the ROI Calculator. Rank by ROI. Pick the highest-ROI option that you can execute this quarter.</p>
+
+    <p><strong>Week 3:</strong> Execute the relief option. If it's adding overtime, implement it. If it's reducing setup time, run the SMED workshop. If it's buying a machine, place the order.</p>
+
+    <p><strong>Week 6-8:</strong> Measure results. Did throughput increase? Did the bottleneck move? If yes, you're doing it right. If no, you misidentified the constraint — re-run the analysis.</p>
+
+    <p><strong>Quarterly rhythm:</strong> Repeat every 90 days. Each quarter you find the constraint, relieve it, and the bottleneck moves to a new location. Within 12-18 months, you've systematically eliminated the low-hanging constraints and your shop runs at 80-90% of theoretical capacity — up from 60%.</p>
+
+    <div class="cta-box">
+      <h3>Stop guessing. Start measuring.</h3>
+      <p style="font-size:15px;color:var(--muted);margin-bottom:0;">We'll analyze your shop floor, identify your constraint, and build a custom production visibility system — all backed by the $30K-in-90-days guarantee. If we don't find at least $30K in recoverable throughput, you pay nothing.</p>
+      <a class="btn" href="/contact">Book your free production audit →</a>
+    </div>
+
+    <section class="related-reading">
+      <h2>Related reading</h2>
+      <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+      <ul style="list-style:none;padding:0;margin:0">
+        <li style="margin-bottom:10px;padding-left:0"><a href="/blog/small-manufacturing-production-scheduling-guide/" style="font-weight:600;color:#1466FF;text-decoration:none">The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System</a></li>
+        <li style="margin-bottom:10px;padding-left:0"><a href="/blog/manufacturing-job-costing-without-erp/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet System</a></li>
+        <li style="margin-bottom:10px;padding-left:0"><a href="/blog/supplier-delivery-tracking-manufacturing-spreadsheet/" style="font-weight:600;color:#1466FF;text-decoration:none">Suppliers Are Late Again and It's Costing $1,000/Week — How to Track Supplier Delivery Without Software</a></li>
+      </ul>
+    </section>
+  </article>
+  <footer>
+    &copy; 2026 Jobs Done Labs &middot; <a href="/">Home</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/industries/manufacturing/">Manufacturing</a> &middot; <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
