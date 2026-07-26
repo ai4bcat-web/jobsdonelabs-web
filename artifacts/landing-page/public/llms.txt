@@ -1,6 +1,6 @@
 # Jobs Done Labs
 
-> Jobs Done Labs builds custom automation systems for small and mid-size businesses, focused on recovering $30K+ in lost revenue or wasted operations cost within 90 days.
+> AI automation agency for small trades, logistics, and home-service businesses. We build custom automation systems that recover $30K+ in net profit within 90 days — or you pay nothing.
 
 ## What we do
 - Custom business automation systems (workflow automation, AI agents, integrations)
@@ -9,6 +9,7 @@
 
 ## Key pages
 - [Home](https://www.jobsdonelabs.ai/): offer, process, case studies, and booking link
+- [Stop missing customer calls](https://www.jobsdonelabs.ai/blog/stop-missing-customer-calls-small-business-guide/): free missed-call revenue calculator, 7-fix system from voicemail rewrite to custom automated intake — stop losing $200+/call, starting at $0
 - [Your Techs Made 15 Second Trips Last Month and It Cost You $1,500](https://www.jobsdonelabs.ai/blog/truck-inventory-second-trip-prevention/): why second trips burn $500-1,500/month per home service shop and the 3-part $0 truck inventory system (morning checklist, QR bin scan, nightly reconciliation) that stops it using free tools
 - [Stop chasing clients for documents](https://www.jobsdonelabs.ai/blog/stop-chasing-client-documents/): why email follow-up fails at accounting/bookkeeping firms and the automated request-and-reminder workflow that ends the document chase
 - [You're Losing $200,000 a Year in Unpaid Detention](https://www.jobsdonelabs.ai/blog/trucking-detention-pay-tracking-system/): the 4-step detention tracking system that gets small carriers paid — auto-capture timestamps, auto-generate invoices, auto-deliver to brokers, auto-track payment status
