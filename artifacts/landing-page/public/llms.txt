@@ -9,17 +9,72 @@
 
 ## Key pages
 - [Home](https://www.jobsdonelabs.ai/): offer, process, case studies, and booking link
-- [Stop missing customer calls](https://www.jobsdonelabs.ai/blog/stop-missing-customer-calls-small-business-guide/): free missed-call revenue calculator, 7-fix system from voicemail rewrite to custom automated intake — stop losing $200+/call, starting at $0
-- [Your Techs Made 15 Second Trips Last Month and It Cost You $1,500](https://www.jobsdonelabs.ai/blog/truck-inventory-second-trip-prevention/): why second trips burn $500-1,500/month per home service shop and the 3-part $0 truck inventory system (morning checklist, QR bin scan, nightly reconciliation) that stops it using free tools
-- [Stop chasing clients for documents](https://www.jobsdonelabs.ai/blog/stop-chasing-client-documents/): why email follow-up fails at accounting/bookkeeping firms and the automated request-and-reminder workflow that ends the document chase
-- [You're Losing $200,000 a Year in Unpaid Detention](https://www.jobsdonelabs.ai/blog/trucking-detention-pay-tracking-system/): the 4-step detention tracking system that gets small carriers paid — auto-capture timestamps, auto-generate invoices, auto-deliver to brokers, auto-track payment status
-- [Shopify payouts never match QuickBooks?](https://www.jobsdonelabs.ai/blog/shopify-quickbooks-reconciliation-never-matches/): why Shopify payouts structurally never match QuickBooks — batch settlement, fees deducted pre-deposit, multi-order netting — and the 4 ways to fix it, honestly compared
-- [Fuel receipts & expense tracking for trucking](https://www.jobsdonelabs.ai/blog/trucking-fuel-receipts-expense-tracking-fix/): what the IRS and IFTA actually require, a 3-tier system that works from the truck cab, and a Friday-afternoon checklist to stop being the person with a shoe box of receipts
-- [Subcontractor paperwork for small GCs](https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/): the 5 documents every GC must collect (W-9, COI, contract, lien waiver, safety cert), what happens when each is missing, and a 3-tier system to tame it without buying another platform
-- [The real fix for the contractor estimate time drain](https://www.jobsdonelabs.ai/blog/contractor-estimate-time-management/): why charging for estimates isn't the first answer — the pre-qualification funnel and 3-tier estimate system that cut 500+ unpaid hours a year and raise close rates
-- [A job-costing system that works from the jobsite](https://www.jobsdonelabs.ai/blog/contractor-job-costing-system-field-to-office/): why QuickBooks job costing fails small contractors, the 4 numbers that prove a job's profit, and a 3-tier field-to-office system your crew will actually use
-- [What comes after the whiteboard production schedule](https://www.jobsdonelabs.ai/blog/small-manufacturing-production-scheduling-guide/): the signs a small manufacturer has outgrown spreadsheet/whiteboard scheduling, the 4 components every system needs, and an honest spreadsheet → MRP → ERP migration path
-- [Closing the inventory spreadsheet gap](https://www.jobsdonelabs.ai/blog/small-manufacturer-inventory-management-system/): the 5 reasons counts drift, the minimum viable inventory system (owner, cycle counts, bin locations, reorder triggers), and an automation ladder from Sheets to custom glue
+- [Contact](https://www.jobsdonelabs.ai/#contact): get in touch for a free audit
+
+## Logistics
+- [Driver Medical Card Expired? Free DOT Compliance Tracker | JobsDone Labs](https://www.jobsdonelabs.ai/blog/trucking-driver-certification-compliance-tracker/): A grounded driver costs $600/day in lost revenue. Free DOT certification tracker: medical card, CDL, hazmat endorsements, DMV self-certification — one spreadsheet, $0.
+- [Freight Bill Audit: Catch $12K in Carrier Overcharges](https://www.jobsdonelabs.ai/blog/trucking-freight-bill-audit-carrier-overcharge-system/): Small fleets lose $12K+/year paying freight bills without checking for overcharges. The 5-minute audit that catches hidden accessorials. Free spreadsheet.
+- [Fuel Card Audit: Catch $25K in Driver Fuel Theft](https://www.jobsdonelabs.ai/blog/trucking-fuel-card-audit-reconciliation-system/): Your fuel card statement hides $10K-$25K/year in personal use and out-of-network fees. The 6-tab reconciliation system that catches it all. Free spreadsheet.
+- [Hazmat Compliance for Small Fleets: Free Checklist](https://www.jobsdonelabs.ai/blog/trucking-occasional-hazmat-shipper-compliance/): Hauling hazmat 3x/year without registration or a security plan? One DOT stop = $75K fine. Free compliance kit with checklist, templates, 1-weekend setup.
+- [Losing Lumper Fee Receipts? The $0 Tracking System](https://www.jobsdonelabs.ai/blog/trucking-lumper-fee-receipt-tracking-system/): Fleets lose $18K+/year in unrecovered lumper fees because there
+- [Pick/Pack Errors Cost You $54,000 Last Year — The $0](https://www.jobsdonelabs.ai/blog/warehouse-pick-pack-error-reduction-system/): Your pickers made 270 errors last month and it cost you $5,400. Here
+- [Truck Accident FMCSA Compliance: The 7-Day System](https://www.jobsdonelabs.ai/blog/trucking-post-accident-fmcsa-compliance-system/): After a truck accident, 8 hours for drug test decisions, 24 hours for insurance, 30 days for state reports. Free FMCSA compliance checklist for small carriers.
+- [You're Losing $200,000 a Year in Unpaid Detention](https://www.jobsdonelabs.ai/blog/trucking-detention-pay-tracking-system/): Most small trucking carriers lose $25-100/hour in detention fees they never collect — because tracking is manual, brokers dispute timestamps, and nobody...
+- [You're Still Keeping Fuel Receipts in a Shoe Box](https://www.jobsdonelabs.ai/blog/trucking-fuel-receipts-expense-tracking-fix/): Most owner-operators still stuff fuel receipts into a shoe box and pray they don
+- [Your Drivers Spent 1,144 Hours Last Year Sitting](https://www.jobsdonelabs.ai/blog/trucking-dock-scheduling-spreadsheet-small-fleet/): A 15-truck fleet loses $32,000/year in driver wait time because every warehouse has a different scheduling process and no carrier-side system exists. The...
+- [Your Fleet Maintenance 'System' Is Two Spreadsheets](https://www.jobsdonelabs.ai/blog/truck-fleet-maintenance-tracking-system/): A missed oil change cost one fleet $31,700 in engine rebuild, tow, and downtime. This guide gives you a 5-level fleet maintenance tracking system — starting...
+- [Your PODs Go Missing Before Billing — Here's the Fix](https://www.jobsdonelabs.ai/blog/trucking-pod-tracking-without-tms/): Most small carriers lose $93K+/year to missing PODs and delayed billing. A POD tracking spreadsheet cuts billing delay from 11 days to 2. Free template.
+
+## Manufacturing
+- [12 Machines But Only One Bottleneck](https://www.jobsdonelabs.ai/blog/manufacturing-production-bottleneck-constraint-analysis/): Wasting $150K on the wrong machine because you can
+- [FDA Batch Records: GMP Template &amp; Lot Traceability](https://www.jobsdonelabs.ai/blog/fda-batch-record-lot-traceability-template/): Paper batch records failed your last FDA audit. Free GMP batch record templates with lot traceability — 21 CFR Part 111/117 compliant, built in one weekend, $0.
+- [Suppliers Are Late Again and It's Costing $1,000/Week | JobsDone Labs](https://www.jobsdonelabs.ai/blog/supplier-delivery-tracking-manufacturing-spreadsheet/): Suppliers are late, production stops, and you don
+- [You're Losing $80,000 a Year Quoting Jobs by Feel](https://www.jobsdonelabs.ai/blog/manufacturing-job-costing-without-erp/): 40% of your jobs run over cost and you don
+- [Your Inventory Spreadsheet Says 500. The Shelf Has](https://www.jobsdonelabs.ai/blog/small-manufacturer-inventory-management-system/): Inventory spreadsheets always drift. Here are the 5 reasons counts go wrong, the minimum viable inventory system for a small manufacturer, and an honest...
+- [Your Whiteboard Production Schedule Broke the Day You](https://www.jobsdonelabs.ai/blog/small-manufacturing-production-scheduling-guide/): A whiteboard and a spreadsheet run a small shop fine — until they don
+
+## Healthcare
+- [16 Hours a Week on Prior Authorizations and You Still](https://www.jobsdonelabs.ai/blog/manual-prior-authorization-workflow-small-practice/): Small medical practices lose $35K–$45K per year in staff time on prior authorizations — and every software
+- [Medical Records Request Tracking Spreadsheet](https://www.jobsdonelabs.ai/blog/medical-records-request-tracking-system/): Your office manager spends 8-10 hrs/week on medical records requests with no system. Free tracking template + HIPAA-compliant workflow for small practices.
+- [Medical Waste Compliance Inspection Guide](https://www.jobsdonelabs.ai/blog/medical-waste-compliance-inspection-documentation-system/): Your waste manifests are in a shoebox and the state inspector just called. Free 5-tab documentation system that passes inspections every time — no compliance software needed.
+- [Nurse Triage Documentation to Prevent Lawsuits](https://www.jobsdonelabs.ai/blog/nurse-phone-triage-documentation-system/): Your nurses document phone triage with four characters on a sticky note. Free system that makes every call defensible in a deposition — $0, no EHR add-on.
+- [Patient Care Gap Recall Spreadsheet](https://www.jobsdonelabs.ai/blog/patient-care-gap-recall-tracking-system/): Your diabetic patients are overdue for A1C, quality scores are tanking, and the manual audit takes 12 days a quarter. Free care gap tracking template.
+- [Refill Chaos Costs Your Practice $41,750/Year](https://www.jobsdonelabs.ai/blog/prescription-refill-request-tracking-system/): Your practice loses $41K+/year to broken refill chaos. This free 5-tab tracking system stops patients from running out of medication with no EHR add-on needed.
+- [Your New Provider Can't Bill for 5 Months and You're](https://www.jobsdonelabs.ai/blog/medical-practice-provider-credentialing-tracking-system/): Growing medical practices lose $30K+ per new provider in unbillable time while credentialing applications sit in payer queues for 90-150 days. Here
+
+## Home Services
+- [Approved Financing Deals Are Dying — Free Tracker](https://www.jobsdonelabs.ai/blog/contractor-financing-application-pipeline-tracker/): 30% of approved contractor financing deals never close. Free Google Sheets pipeline template: track every lender, every approval, every expiration date.
+- [Lumber Prices Blew Your Remodel Budget — Fix It](https://www.jobsdonelabs.ai/blog/contractor-material-price-escalation-tracking/): Lumber is up 22% since you bid that remodel. You won
+- [Spending $3K/Month On Ads With Zero ROI Tracking](https://www.jobsdonelabs.ai/blog/contractor-marketing-roi-tracker/): You spend $3,200/month on Google Ads, Facebook, Yelp, and Angi but can
+- [Stop Missing Customer Calls — Cost + 7 Fixes](https://www.jobsdonelabs.ai/blog/stop-missing-customer-calls-small-business-guide/): Missed calls cost service businesses $200+ each. Free revenue calculator, text-back auto-reply setup, and 7 fixes to capture every lead — starting at $0.
+- [When to Roll a Truck at 3am: Emergency Triage System](https://www.jobsdonelabs.ai/blog/hvac-after-hours-emergency-call-triage-system/): Every after-hours dispatch costs $360-480. The 3-tier Red/Yellow/Green triage system for HVAC, plumbing &amp; electrical contractors. Free decision checklist.
+- [You Did the Work and They're Refusing to Pay —](https://www.jobsdonelabs.ai/blog/contractor-proof-of-work-service-verification-system/): Customer disputes and chargebacks cost the average field service business $15,200/year. Here
+- [You Don't Actually Know If Your Last Job Made Money](https://www.jobsdonelabs.ai/blog/contractor-job-costing-system-field-to-office/): QuickBooks job costing fails most small contractors because it
+- [You Spent 15 Hours on Estimates This Week and Landed](https://www.jobsdonelabs.ai/blog/contractor-estimate-time-management/): Contractors burn 8–12 hours a week on free estimates and close maybe a quarter of them. The fix isn
+- [Your Customers' HVAC Is Failing and You Don't Know](https://www.jobsdonelabs.ai/blog/hvac-equipment-lifecycle-tracking-system/): Service customers have aging furnaces, ACs, water heaters you
+- [Your Techs Made 15 Second Trips Last Month](https://www.jobsdonelabs.ai/blog/truck-inventory-second-trip-prevention/): A 5-tech home service shop averages 3-5 second trips per tech per month because parts aren
+
+## Construction
+- [Free Construction Daily Report: Stop Losing Disputes](https://www.jobsdonelabs.ai/blog/construction-daily-report-legal-protection-system/): Your spiral notebook can
+- [Track Subcontractor Insurance Without Software](https://www.jobsdonelabs.ai/blog/subcontractor-coi-insurance-compliance-tracking-system/): Missed COI expiration cost a GC $140K. Free 4-tab spreadsheet to track sub insurance, auto-calc reminders, and stop coverage gaps — no SaaS needed.
+- [You're a GC, Not a Filing Clerk — How to Tame](https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/): 
+- [Your Foreman Is Filling Out Paper Timesheets in His](https://www.jobsdonelabs.ai/blog/construction-crew-time-tracking-paper-timesheet-system/): Your crews are losing 2-3 hours of billable time every week because foremen fill out timesheets from memory. Here
+
+## Professional Services
+- [Chasing Clients for Documents Is Eating Your Billable](https://www.jobsdonelabs.ai/blog/stop-chasing-client-documents/): Accounting and bookkeeping firms lose hours every week chasing clients for documents. Here
+- [Scope Creep Is Bleeding Your Margins — Free Fix](https://www.jobsdonelabs.ai/blog/scope-creep-tracker-fixed-fee-consulting-change-order/): Every
+- [Your Agency Spends 40+ Hours a Month Hand-Building](https://www.jobsdonelabs.ai/blog/marketing-agency-client-reporting-automation-guide/): Small marketing agencies lose 36+ billable hours a month hand-assembling client reports from platform screenshots. Here
+- [Your Loan File Is Sitting on Someone's Desk Missing 3 Documents and Nobody's Chasing — The AI Processor That Fixes It](https://www.jobsdonelabs.ai/blog/mortgage-missing-document-borrower-chase-automation/): Mortgage processors spend 40-60% of their week chasing missing documents. AI-powered missing doc detection and borrower chasing automation eliminates 80% of that — here
+- [Your Underwriter Just Added 14 Conditions and Your Processor Has 47 Other Files — The Intake-to-Close AI System](https://www.jobsdonelabs.ai/blog/mortgage-condition-clearing-intake-to-close-automation/): Underwriting just dropped 14 conditions on one file while your processor juggles 47 others. An AI intake-to-close system clears conditions automatically — here
+
+## Retail/E-Commerce
+- [Failed Subscriptions Drain $300/Mo — Free Dunning Fix | JobsDone Labs](https://www.jobsdonelabs.ai/blog/subscription-failed-payment-recovery-dunning-template/): Your subscribers’ payments fail because cards expire and Stripe’s default emails go unread. Free 7-step dunning sequence + tracking spreadsheet.
+- [How to Track Wholesale Customer Payments on Net-30](https://www.jobsdonelabs.ai/blog/wholesale-net-30-payment-tracking-spreadsheet/): Your wholesale buyers owe you thousands on net-30 terms and your spreadsheet can
+- [Manual Data Entry Is the Silent Killer](https://www.jobsdonelabs.ai/blog/ecommerce-manual-data-entry-silent-killer/): You
+- [Multi-Channel Product Listing Spreadsheet](https://www.jobsdonelabs.ai/blog/multi-channel-product-catalog-without-pim/): Copy-pasting data across Shopify, Amazon, and Walmart from a spreadsheet that
+- [Shopify Payouts Never Match QuickBooks? Here's Why](https://www.jobsdonelabs.ai/blog/shopify-quickbooks-reconciliation-never-matches/): Every e-commerce owner hits the wall: Shopify says you made $4,231.47 but QuickBooks shows $3,897.12 and your bank has neither number. Here
+- [You're Tracking 50 Purchase Orders in WhatsApp](https://www.jobsdonelabs.ai/blog/small-business-purchase-order-tracking-system/): Small product businesses lose $50K/year in missed sales and rush-order premiums because they track POs across WhatsApp, email, and a spreadsheet from 2023....
 
 ## Contact
 - Website: https://www.jobsdonelabs.ai
+- Book a free audit: https://www.jobsdonelabs.ai/#contact
