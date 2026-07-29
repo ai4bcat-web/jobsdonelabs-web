@@ -1047,11 +1047,13 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Drove 240 Miles to Give 7 Free Estimates — The Tire-Kicker Filter System
+
 You're Spending $3,200/Month On Marketing And Have No Idea Which Half Is Working — The Free ROI Tracker
 
 30% Of Your Approved Financing Deals Are Dying in Someone's Inbox — The Free Pipeline Tracker
 
-Lumber Prices Blew Your Remodel Budget — The 6-Tab Cost Tracker
+Lumber Prices Blew Your Remodel Budget — The 6-Tab Profit Leak Detector
 
 Your Foreman Is Filling Out Paper Timesheets in His Truck at 6PM — The Fill-It-Now System
 
@@ -1499,21 +1501,19 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Drove 240 Miles to Give 7 Free Estimates — The Tire-Kicker Filter System
+
 You're Spending $3,200/Month On Marketing And Have No Idea Which Half Is Working — The Free ROI Tracker
 
 30% Of Your Approved Financing Deals Are Dying in Someone's Inbox — The Free Pipeline Tracker
 
-Lumber Prices Blew Your Remodel Budget — The 6-Tab Cost Tracker
-
-Your Sub's Insurance Expired 3 Weeks Ago and You Just Found Out — The Free COI Compliance System
+Lumber Prices Blew Your Remodel Budget — The 6-Tab Profit Leak Detector
 
 Your Foreman Is Filling Out Paper Timesheets in His Truck at 6PM — The Fill-It-Now System
 
 Your Techs Made 15 Second Trips Last Month and It Cost You $1,500
 
-You Did the Work and They're Refusing to Pay — The 5-Point Service Verification System
-
-You Spent 15 Hours on Estimates This Week and Landed 2 Jobs — Here's the Real Fix
+You Don't Actually Know If Your Last Job Made Money
 
 You're a GC, Not a Filing Clerk — How to Tame Subcontractor Paperwork Without Another Platform
 
@@ -1931,6 +1931,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+You Drove 240 Miles to Give 7 Free Estimates — The Tire-Kicker Filter System
 
 Your Field Crews Know Exactly How Much They Lost — 3 Weeks After the Job Closed
 
@@ -2674,6 +2676,257 @@ Your Field Crews Know Exactly How Much They Lost — 3 Weeks After the Job Close
 
 
 URL: https://www.jobsdonelabs.ai/blog/contractor-proof-of-work-service-verification-system/
+
+---
+
+# You Drove 240 Miles to Give 7 Free Estimates That
+
+Home Services & Trades
+
+You Drove 240 Miles to Give 7 Free Estimates Last Week — And 5 of Those People Were Never Going to Buy
+
+By Ryne Bandolik · Jobs Done Labs · July 29, 2026
+
+"I swear to God, I just drove 45 minutes to a kitchen remodel estimate and the guy had no budget, no timeline, and his wife wasn't even home. He was just 'curious what it might cost.'" That's from a real r/Contractor thread, July 2026 — and if you run a trade, you've lived some version of it every single week.
+
+The numbers are brutal. A mid-size plumbing or HVAC shop sends someone to 4-6 estimates per week. Depending on your market, 40-60% of those go to tire-kickers — people collecting 3+ bids without real intent, or with no budget, or who are 6 months from pulling the trigger. Each dead estimate costs 30-60 minutes of windshield time, 30-45 minutes on site, and 20-30 minutes writing a proposal — roughly 1.5 hours you'll never bill. At 5 dead estimates a week and $75/hour, that's $562/week in lost labor alone. Over a year: $29,250. Add $0.65/mile vehicle cost and it pushes past $40K.
+
+And that's just the direct cost. The real damage is the opportunity cost: every hour spent in a tire-kicker's kitchen is an hour you're not selling to a ready buyer, not managing your crew, and not running your business.
+
+The reframe:
+
+You don't need to stop giving free estimates. You need to stop giving them to people who were never going to hire you. A $0 pre-qualification system that filters just half the dead estimates recovers $15,000-20,000/year — without spending a dime on software.
+
+The math: what tire-kickers actually cost you
+
+Run your own numbers. Grab last week:
+
+Count the estimates.
+
+How many did you (or your estimator) drive to?
+
+Count the wins.
+
+How many turned into signed contracts?
+
+Estimate the dead ones.
+
+Wins minus total = dead estimates. Multiply by 1.5 hours and your loaded hourly rate. That's what you burned last week on people who were never going to buy.
+
+Example: 12 estimates, 4 wins = 8 dead. 8 × 1.5 hours × $75/hour = $900 in one week. Annualized: $46,800. Before you even count the truck, the gas, and the proposals you wrote at 9pm.
+
+What's actually burning the hours
+
+Cost factor
+
+Per dead estimate
+
+Weekly (5 dead)
+
+Annual
+
+Drive time + on-site + proposal (1.5 hrs)
+
+$112.50
+
+$562.50
+
+$29,250
+
+Vehicle cost ($0.65/mile × 40 mi avg)
+
+$26.00
+
+$130.00
+
+$6,760
+
+Lost selling time (could've closed 1 more job)
+
+$150-300
+
+$750-1,500
+
+$39,000-78,000
+
+Total real cost
+
+$288-438
+
+$1,442-2,192
+
+$75,000-114,000
+
+Costs assume $75/hr loaded labor rate, 40-mile average round trip. Your numbers may vary — plug in your own. The pattern holds regardless of trade.
+
+The Tire-Kicker Filter: 3 parts, $0, built this week
+
+There are only three pieces. None requires software. All can be running by Friday.
+
+Part 1 — The 5-question phone script
+
+When a lead calls or texts, someone runs these five questions before anything goes on the calendar:
+
+Budget range.
+
+"Most [project type] jobs like yours land between $X and $Y. Does that fit what you had in mind?" If they hesitate, choke, or say "we're just trying to get a sense" — they're price-shopping. Give them a ballpark range and ask them to call back when they have a number. You just saved an hour.
+
+Timeline.
+
+"Are you looking to start in the next 30-60 days, or just gathering ideas?" "Just gathering ideas" goes into a follow-up list — not onto your calendar. You'll circle back in 60 days. Right now, you've got real buyers to see.
+
+Decision-maker.
+
+"Will everyone who's part of the decision be there when I come out?" One walkthrough, one decision. Not a re-do for the spouse, not "let me talk to my partner and I'll get back to you." If they can't get everyone in the room, they're not ready.
+
+Scope reality.
+
+Two questions that confirm it's a job type you actually want and can price — e.g. "Is this a full gut or a cosmetic refresh?" for remodelers, or "What's the square footage?" for flooring. Nothing complex — just enough to confirm the job is real.
+
+How they found you.
+
+"Just curious — did someone refer you, or did you find us online?" A referral passes the gate automatically. A Google search who found three other contractors and is collecting bids? Flag them for a follow-up — but maybe not a same-week site visit.
+
+The gate:
+
+Leads who pass 4+ questions get a slot. Leads who pass 2-3 get a ballpark range and a follow-up. Leads who pass 0-1 get a polite "reach back out when you're ready." The script takes 4 minutes and saves you 90 — every single time it filters a tire-kicker.
+
+Part 2 — The automated SMS qualifying sequence
+
+Not every lead calls. Many come through your website, Facebook, or text message. For those, use this 3-message SMS sequence — set it up once in your phone or an auto-responder, and it runs itself:
+
+Message 1 (instant auto-reply):
+
+"Hey [name], thanks for reaching out! Quick one — most [project type] jobs like yours land around $X-Y. Does that work for your budget? Just want to make sure we're in the same ballpark before I send someone out."
+
+Message 2 (if they reply yes):
+
+"Great. Two more quick questions: (1) Are you looking to start in the next 30 days or just gathering info? (2) Will everyone who makes the decision be there for the walkthrough?"
+
+Message 3 (routing):
+
+If they pass both — "Perfect. Here's my calendar link to grab a time that works. Looking forward to it." If they're gathering info or can't get everyone — "No worries at all. Here's a rough ballpark for what you described, based on similar projects we've done. When you're closer to pulling the trigger, reach back out and we'll get you on the schedule."
+
+The SMS sequence filters 30-40% of tire-kickers before anyone even answers the phone. It runs while you're on a jobsite. It costs nothing. And it makes sure the leads on your calendar have already passed the first gate.
+
+Part 3 — The minimum-job threshold framework
+
+There's a dollar amount below which a free on-site estimate doesn't make financial sense. Find yours:
+
+Your estimate cost:
+
+Average drive + walkthrough + proposal time (hours) × your loaded hourly rate
+
+Your target margin:
+
+What percentage of the job price do you need to keep after costs?
+
+Your threshold:
+
+Estimate cost ÷ (1 - target margin) = minimum job size for a free site visit
+
+Example: 1.5 hours at $75/hr = $112.50. Target margin = 40%. Threshold = $112.50 ÷ 0.6 = $187.50. Round up to a practical number — most trades land between $2,500 and $5,000.
+
+Jobs under your threshold get a ballpark range — text them an estimate based on photos and past jobs. It takes 10 minutes instead of 90, and the margins still work because you never left the office. Jobs over your threshold get the full site visit — and now every visit goes to a lead who's worth the drive.
+
+This isn't turning away small jobs.
+
+It's protecting the margin on them. A $1,200 water heater quoted from photos in 10 minutes has great margin. A $1,200 water heater with a 90-minute free estimate has almost none. You still do the work — you just don't give away the estimate.
+
+The dead-estimate cost calculator
+
+Know exactly what each dead estimate costs you so you can decide what's worth filtering:
+
+Plug in your numbers
+
+Your loaded hourly rate:
+
+Wage + payroll taxes + workers' comp + benefits ÷ hours worked. For most trades this lands between $55-95/hour.
+
+Average estimate round-trip miles:
+
+Use 30-50 if you're not sure. Multiply by your per-mile cost (IRS rate is $0.70/mile for 2026).
+
+Your close rate on unqualified leads:
+
+Be honest. Most contractors converting walk-in leads without qualification close 20-30%.
+
+Dead estimates per week:
+
+Total estimates × (1 - close rate).
+
+Annual cost:
+
+Dead estimates × (labor cost + vehicle cost) × 52 weeks + lost opportunity.
+
+For a shop doing 12 estimates/week at 25% close rate with $75/hr loaded cost and 40-mile round trips: 9 dead estimates × ($112.50 + $26.00) × 52 = $64,818/year in wasted estimate costs. Filter half with a $0 phone script: $32,409 recovered — before you count the extra jobs you closed with the time you got back.
+
+Where automation takes over
+
+Once the phone script, SMS sequence, and threshold framework are working manually, automation makes them run without you:
+
+Website intake → auto-qualify.
+
+A lead fills in budget range, timeline, project type, and decision-maker status. The form auto-scores the answers against your gates and routes accordingly — calendar invite for qualified leads, ballpark-range email for tire-kickers.
+
+AI voice agent for phone leads.
+
+An AI answers your business line 24/7, runs the same 5-question script, and either transfers qualified callers to you or texts them a ballpark range. Cost: $0.10-0.25/minute — roughly $2-5 per filtered call, vs. $112 for a dead estimate.
+
+Auto-ballpark from job history.
+
+A lookup table of your last 20-30 jobs by type and size auto-generates a ballpark range for Tier-1 leads. No manual typing, no guesswork.
+
+Calendar + CRM sync.
+
+Qualified leads book straight onto your calendar. Tire-kickers go into a 60-day nurture sequence — automated follow-up texts that check in when their timeline gets closer.
+
+That's the build Jobs Done Labs scopes during a free audit: we map your exact lead-to-estimate flow, find the three biggest tire-kicker leaks, and build the qualification pipeline that stops them. Covered by the
+
+$30K-recovered-in-90-days guarantee
+
+— if documented recovery doesn't reach $30K, you pay nothing.
+
+Frequently asked questions
+
+How much money do contractors lose giving free estimates to tire-kickers?
+
+At 7 dead estimates per week — each costing roughly 1.5 hours in drive time, on-site walkthrough, and proposal writing — a contractor burns about 10.5 hours per week on leads that never convert. At a $75/hour billable rate, that's $787/week or roughly $40,950/year in lost billable time — before counting vehicle costs at $0.65/mile. Plus the real hidden cost: every hour you spend driving to a tire-kicker is an hour you're not selling to a serious buyer, not managing your crew, and not building your business. The total annual cost — between lost billable hours, vehicle expense, and opportunity cost — typically lands between $45,000 and $70,000 for a mid-size shop. A $0 pre-qualification system that filters just half the dead estimates recovers $20,000-35,000/year.
+
+How do I pre-qualify leads before driving out to give an estimate?
+
+Use a 5-question phone script before you ever put the truck in drive: (1) Budget range — "Most projects like yours land between $X and $Y. Does that fit what you had in mind?" If they choke on the low end, they're not your customer. (2) Timeline — "Are you looking to start in the next 30-60 days, or just gathering ideas?" Just-gathering goes into a follow-up sequence, not your calendar. (3) Decision-maker — "Will everyone who needs to approve be at the walkthrough?" One trip, one decision. (4) Scope — Two questions to confirm it's work you actually want. (5) How they found you — reveals whether they called 5 contractors or were referred by someone who trusts you. Leads who pass all five get a slot. Everyone else gets a ballpark range by text and a polite "reach back out when you're ready."
+
+Should I charge for estimates to filter out tire-kickers?
+
+Charging for estimates CAN work — but only after you've fixed the qualification process. The right sequence: first, install the 5-question phone screen so you only estimate for qualified leads. Your close rate will climb and dead-estimate hours will drop without scaring anyone off. Then, implement the minimum-job threshold: any project under $X (typically $2,500-5,000 depending on your trade) gets a ballpark range by text, not a site visit. Finally — and only then — charge a proposal fee for full site visits on larger jobs. Credit the fee toward the project if they sign. That way, the fee filters the last tier of tire-kickers without scaring off serious buyers. Charging before you qualify is like putting a locked gate on your driveway before you've paved the road — you'll lose good customers along with the bad ones.
+
+What's a minimum-job-threshold and how do I set one?
+
+A minimum-job threshold is the dollar amount below which a free, on-site estimate doesn't make financial sense — the point where the cost of your time and truck exceeds the expected margin on the job. To find yours: take your average drive + walkthrough + proposal time (typically 1-2 hours), multiply by your loaded hourly cost (wage + burden + vehicle), and divide by your target gross margin percentage. For most trades, this lands between $2,500 and $5,000. Any lead under that number gets a ballpark range via text or email instead of a site visit. This isn't turning away small jobs — it's protecting your margin on them. A $1,200 water heater replacement with a free 90-minute estimate at $75/hour loaded cost leaves almost nothing. A $1,200 replacement quoted from photos in 10 minutes still has healthy margin. The threshold is about where you estimate, not whether you do the work.
+
+How can I automate the lead qualification process so I don't have to call everyone?
+
+The automation path: (1) Add an intake form to your website with the 5 qualification questions — budget range, timeline, decision-maker, project scope, referral source. (2) Set up an automated SMS sequence that fires when a lead submits the form: "Hey [name], thanks for reaching out! Quick: most [project type] jobs like yours run $X-Y. Does that work?" Their reply routes qualified leads to your calendar and sends tire-kickers a friendly ballpark range. (3) For phone leads, an AI voice agent can run the same script 24/7 — ask the 5 questions, route qualified callers to your phone if you're available or book them for a callback, and text ballpark ranges to everyone else. That's what Jobs Done Labs builds during a free audit: an automated qualification pipeline that filters leads before they reach you, so every estimate on your calendar is a lead who already passed the gates. Covered by the $30K-recovered-in-90-days guarantee — if documented recovery doesn't reach $30K, you pay nothing.
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+You Spent 15 Hours on Estimates This Week and Landed 2 Jobs — Here's the Real Fix
+
+You're Spending $3,200/Month On Marketing and Have No Idea Which Half Is Working
+
+You Don't Actually Know If Your Last Job Made Money — A Job-Costing System That Works From the Jobsite
+
+Find out exactly how much you're burning on dead estimates — in 15 minutes
+
+Book a free audit. We'll pull your last 30 days of estimates, tag every tire-kicker, calculate what they cost you in labor, fuel, and lost sales — and show you what a $0 qualification pipeline would recover. No pitch, no pressure. You keep the analysis either way.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/contractor-tire-kicker-filter-system/
 
 ---
 
