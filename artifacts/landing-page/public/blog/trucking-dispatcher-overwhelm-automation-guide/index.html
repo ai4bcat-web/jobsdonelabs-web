@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dispatcher Overwhelmed? Automate Dispatching Without Hiring | Jobs Done Labs</title>
+  <meta name="description" content="One dispatcher managing 50+ loads burns out. Missed reloads cost $2K/week. Free guide: automate load boards, driver check-ins, and dispatch — no new hires needed." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-dispatcher-overwhelm-automation-guide/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-dispatcher-overwhelm-automation-guide/" />
+  <meta property="og:title" content="Dispatcher Overwhelmed? Automate Dispatching Without Hiring | Jobs Done Labs" />
+  <meta property="og:description" content="One dispatcher managing 50+ loads burns out. Missed reloads cost $2K/week. Free guide: automate load boards, driver check-ins, and dispatch — no new hires needed." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dispatcher Overwhelmed? How Small Fleets Handle 50+ Loads Without Hiring" />
+  <meta name="twitter:description" content="One dispatcher managing 50+ loads burns out. Missed reloads cost $2K/week. Free guide to automate load boards, driver check-ins, and dispatch." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Dispatcher Overwhelmed? How Small Fleets Handle 50+ Loads Without Hiring",
+    "description": "A small fleet (5-20 trucks) runs with one dispatcher who juggles load boards (DAT, Truckstop), phone calls, driver check-ins, and customer updates. The dispatcher burns out. Missed reloads cost $2K/week. The owner can't hire another qualified dispatcher because good ones want $70K+. This guide covers the real cost of dispatcher overwhelm, load board automation, driver self-service check-ins, and how to build a dispatching dashboard one person can actually manage — no new hires, no $500/month software.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-07-30",
+    "dateModified": "2026-07-30",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/trucking-dispatcher-overwhelm-automation-guide/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does dispatcher burnout actually cost a small fleet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For a 15-truck fleet with one dispatcher, the hard costs are measurable: missed reloads that go unfilled because the dispatcher was handling a driver emergency = $2,000-4,000/week in deadhead miles and empty return trips. Dispatcher turnover (industry average is 18-24 months before a solo dispatcher quits) costs $15,000-25,000 to replace — recruiting, training, and 3-6 months of reduced booking volume while the new hire ramps up. The soft costs are worse: when a dispatcher is overwhelmed, they default to familiar lanes and familiar brokers instead of hunting for higher-paying loads. A dispatcher running at 120% capacity leaves $50,000-100,000/year in unrealized revenue on the table — they literally don't have time to find the better-paying loads." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the cheapest way to automate dispatching without hiring another person?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Start at $0 with load board automation: tools like Parade and Truckbase auto-refresh DAT and Truckstop, filter by your lanes and equipment type, and surface the top 5-10 loads that match — no more refreshing 3 screens manually. For driver check-ins, replace 20 phone calls/day with a simple Google Form + Apps Script that texts drivers an arrival ETA link, auto-logs check-ins to a shared spreadsheet, and alerts the dispatcher only when a driver is late or missing. For customer updates, set up email automations triggered by load status changes — 'picked up,' 'in transit,' 'delivered' — so the dispatcher stops writing the same 3 emails 15 times a day. Total cost for all three: $0-150/month. Setup time: 1-2 weeks. Time recovered: 15-20 hours/week for the dispatcher." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you automate load board matching without paying for expensive dispatch software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The simplest approach is a Google Sheet with IMPORTHTML or a script that scrapes DAT/Truckstop (where allowed by ToS), filters loads by your preferred lanes and equipment, and highlights the highest $/mile in green. More robust: Parade or Truckbase ($100-300/month) auto-refresh load boards, apply your lane preferences, and present a ranked list. The productivity gain isn't from finding more loads — it's from not manually refreshing 3 screens 40 times a day. A dispatcher who spends 2 hours/day refreshing load boards instead of 6 hours/day is a dispatcher who has time to negotiate rates, build broker relationships, and plan reloads before the truck arrives — the activities that actually raise revenue per truck." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the Jobs Done Labs $30K guarantee work for dispatching automation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Every Jobs Done Labs engagement is backed by a written guarantee: if the automation system we build doesn't recover or save at least $30,000 in documented bottom-line impact within 90 days of deployment, you pay nothing. For dispatching, we measure against your pre-build baseline: dispatcher hours/week (we audit actual time logs), missed reloads/month (deadhead miles tracked), and revenue per truck per week (from your TMS or settlement sheets). The $30K can come from recovered dispatcher time (fewer hours on manual tasks = more time on high-value activities like rate negotiation and reload planning), reduced deadhead (automated reload matching), or higher revenue per truck (dispatcher freed to find better-paying loads). We only take on work where the ROI math clearly exceeds $30K before we start." }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries does Jobs Done Labs automate besides trucking?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Jobs Done Labs builds custom automation systems across four industries: Logistics & Trucking (fleet operations, dispatch, detention pay, document management, IFTA compliance), Manufacturing (production scheduling, inventory sync, job costing, QuickBooks-to-shop-floor data flow), Professional Services (client onboarding, billing automation, document collection, scope creep tracking), and Home Services & Trades (field-to-office job costing, estimate workflows, material tracking, after-hours triage). Every build starts with a free 30-minute audit where we map your current process, quantify what the inefficiency is costing you, and recommend the 2-3 highest-ROI fixes — whether that's a simple spreadsheet template or full custom automation." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Dispatcher Overwhelmed? How Small Fleets Handle 50+ Loads Without Hiring", "item": "https://www.jobsdonelabs.ai/blog/trucking-dispatcher-overwhelm-automation-guide/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --accent-deep:#0D4FC5; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--ink); color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--ink); color:var(--cream); font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,2.8rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(11,13,18,.55); margin-bottom:24px; }
+    .byline a { color:rgba(11,13,18,.55); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .comparison { margin:28px 0; }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(11,13,18,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    a { color:var(--accent-deep); }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80" alt="Trucking dispatcher managing fleet operations dashboard" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Logistics &amp; Trucking</span>
+      <h1>Dispatcher Overwhelmed? How Small Fleets Handle 50+ Loads Without Hiring</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · July 30, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A small fleet (5-20 trucks) runs with one dispatcher who juggles DAT, Truckstop, phone calls, driver check-ins, and customer updates. The dispatcher burns out. Missed reloads cost $2,000-4,000/week. The owner can't hire another qualified dispatcher because good ones want $70K+ — and finding someone who knows your lanes, your brokers, and your drivers takes 3-6 months. This guide covers load board automation that stops the manual refresh grind, driver self-service check-ins that eliminate 20 phone calls/day, customer update automations that cut email time by 80%, and a dispatch dashboard one person can actually manage. The full stack costs $0-150/month and recovers 15-20 hours/week. No new hires, no $500/month dispatch software.</p>
+      </div>
+
+      <h2>The Real Cost of Dispatcher Overwhelm (It's Bigger Than You Think)</h2>
+      <p>Walk into any small fleet office at 7 AM and you'll see the same scene: one dispatcher with three monitors open — DAT on the left, Truckstop in the middle, a spreadsheet on the right — a phone pinned between shoulder and ear, a driver texting about a breakdown, and four carriers waiting on rate confirmations. This person is the central nervous system of a $2-5 million operation. And they're drowning.</p>
+
+      <p>The hard costs are measurable. Here's the math for a <strong>15-truck fleet with one dispatcher</strong>:</p>
+
+      <div class="callout">
+        <p style="margin:0; font-family:'Anton',sans-serif; font-size:1.2rem; line-height:1.3;">Missed reloads: 3-5 per week × $800 average reload value = $2,400-4,000/week in deadhead and empty miles</p>
+      </div>
+
+      <p>A missed reload happens like this: a driver delivers in Chicago at 2 PM. The dispatcher planned to find them a reload to Cincinnati, but at 1:30 PM a different driver got into an accident — the dispatcher spent the next 90 minutes on the phone with insurance, the broker, and the tow company. By the time they got back to the Chicago driver, the good reloads were gone. The driver deadheads home at $2.10/mile operating cost with zero revenue.</p>
+
+      <p>Now multiply that across a year:</p>
+
+      <ul>
+        <li><strong>Missed reloads:</strong> 3/week × $800 × 50 weeks = <strong>$120,000/year</strong> in unrealized revenue.</li>
+        <li><strong>Dispatcher turnover cost:</strong> Industry average is 18-24 months before a solo dispatcher quits from burnout. Replacing one costs $15,000-25,000 in recruiting, training, and 3-6 months of reduced booking volume while the new hire learns your lanes. If you lose a dispatcher every 2 years, that's <strong>$7,500-12,500/year amortized</strong>.</li>
+        <li><strong>Revenue left on the table:</strong> An overwhelmed dispatcher defaults to familiar lanes and familiar brokers instead of hunting for higher-paying loads. They don't have time to negotiate. They take the first acceptable load instead of the best load. Across 15 trucks, the difference between "acceptable" and "best" loads is $200-500/week per truck. That's <strong>$150,000-390,000/year</strong> in revenue that was available but never captured — because the dispatcher literally didn't have the bandwidth to find it.</li>
+      </ul>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The wake-up number:</strong> A dispatcher running at 120% capacity doesn't just burn out — they leave $250,000-500,000/year on the table in missed reloads, turnover costs, and un-negotiated rates. Hiring a second dispatcher at $70K solves the burnout but costs $70K. Automation solves the capacity problem for $0-150/month.</p>
+      </div>
+
+      <h2>The 4 Automations That Give a Dispatcher Their Day Back</h2>
+      <p>You don't need to replace your dispatcher. You need to remove the 60% of their day spent on tasks a computer should handle — refreshing screens, copy-pasting data, typing the same 3 emails — so they can spend their time on the 40% that actually makes money: negotiating rates, building broker relationships, and planning reloads.</p>
+
+      <h3>1. Load Board Automation: Stop Refreshing 3 Screens 40 Times a Day</h3>
+      <p>The average dispatcher spends <strong>2-4 hours/day</strong> manually refreshing DAT, Truckstop, and direct shipper portals — scanning for loads that match their lanes, equipment type, and preferred rates. This is the lowest-ROI activity in the entire operation. It requires zero judgment, zero negotiation skill, and zero relationship-building. A script can do it.</p>
+      <p><strong>The fix:</strong> Tools like Parade, Truckbase, or Smart Capacity ($100-300/month) connect to load boards via API, apply your lane preferences and equipment filters, and surface the top 5-10 matching loads automatically. The dispatcher opens one dashboard instead of three screens. More importantly, the tool refreshes continuously — the dispatcher sees new loads within minutes of posting, not hours later when they finally get around to refreshing DAT.</p>
+      <p>For fleets that want to start at $0: build a Google Sheet with Apps Script that pulls load data from RSS feeds or email alerts and filters by your 3-5 most profitable lanes. It won't be real-time, but it eliminates the manual refresh grind for your core lanes.</p>
+      <p><strong>Setup time:</strong> 2-4 hours for the Google Sheet version, 1-2 weeks for a full API-connected tool. <strong>Cost:</strong> $0-300/month. <strong>Time recovered:</strong> 10-15 hours/week.</p>
+
+      <h3>2. Driver Check-In Automation: From 20 Phone Calls a Day to Zero</h3>
+      <p>A dispatcher with 15 trucks makes <strong>15-25 check-in calls per day</strong>: "Where are you?" "What's your ETA?" "Did you pick up yet?" "Are you empty yet?" Each call is 2-5 minutes. That's 1-2 hours/day spent on information that already exists — it's just not flowing to the dispatcher automatically.</p>
+      <p><strong>The fix:</strong> Replace phone calls with a driver self-service system. Drivers get a text link (via Twilio or a simple Google Form) where they tap one button: "Arrived at pickup," "Loaded — departing," "Arrived at delivery," "Empty — ready for reload." The responses auto-log to a shared Google Sheet or dispatch dashboard. The dispatcher sees every driver's status in real time without making a single call.</p>
+      <p>If your ELD supports geofence alerts (most modern ELDs do), you can automate even further: the system auto-detects when a truck enters a pickup geofence and marks the driver as "arrived." No driver input needed. The dispatcher only gets alerted for exceptions — a driver who's been "at pickup" for 3+ hours (possible detention), or a driver who's 30+ minutes past ETA.</p>
+      <p><strong>Setup time:</strong> 3-5 hours for the Google Form + text version, 1-2 weeks for ELD geofence integration. <strong>Cost:</strong> $0-20/month (Twilio SMS). <strong>Time recovered:</strong> 5-8 hours/week.</p>
+
+      <h3>3. Customer Update Automation: Stop Typing the Same 3 Emails 15 Times a Day</h3>
+      <p>Every load has 3-4 status changes: picked up, in transit, arrived at delivery, delivered. For each status change, the dispatcher emails the broker or customer. At 15 loads/day × 3 status changes × 3 minutes per email, that's <strong>2+ hours/day writing emails</strong> that all say essentially the same thing.</p>
+      <p><strong>The fix:</strong> Connect your load tracking to an email automation. When a driver taps "loaded — departing" in the check-in system, it triggers an email to the broker: "Load #XXXX — Picked up at [time], departing [location], ETA [destination] at [time]. Driver: [name], Truck: [unit]." Same for "in transit" and "delivered." The dispatcher reviews the email before it sends (one click) but doesn't write it from scratch.</p>
+      <p><strong>Setup time:</strong> 2-4 hours using Gmail + Google Apps Script or Zapier. <strong>Cost:</strong> $0-30/month. <strong>Time recovered:</strong> 6-10 hours/week.</p>
+
+      <h3>4. The Dispatch Dashboard: One Screen That Replaces the Chaos</h3>
+      <p>After implementing automations 1-3, the dispatcher's workflow changes from reactive chaos to a single-screen dashboard:</p>
+
+      <ul>
+        <li><strong>Left panel:</strong> Auto-refreshed load board showing top matches for your lanes, sorted by $/mile. Green = new in last 15 minutes.</li>
+        <li><strong>Center panel:</strong> Live driver status board — every driver, current location, load status, next available time. Red = driver idle and ready for reload, needs attention NOW.</li>
+        <li><strong>Right panel:</strong> Exception queue — detention alerts (driver at pickup 3+ hours), late drivers (30+ min past ETA), broker disputes. This is the only column that demands immediate action.</li>
+      </ul>
+
+      <p>The dispatcher now spends their morning on the exception queue (real problems that need human judgment) and the afternoon on reload planning and rate negotiation (high-value activities). The manual refresh-and-type grind is gone.</p>
+
+      <div class="comparison">
+        <h3>Dispatcher Day: Before vs After Automation</h3>
+        <table>
+          <tr>
+            <th>Task</th>
+            <th>Before (hrs/day)</th>
+            <th>After (hrs/day)</th>
+            <th>Method</th>
+          </tr>
+          <tr>
+            <td>Refresh load boards</td>
+            <td>3-4</td>
+            <td>0.5</td>
+            <td>Auto-refresh + filter</td>
+          </tr>
+          <tr>
+            <td>Driver check-in calls</td>
+            <td>1.5-2</td>
+            <td>0.25</td>
+            <td>Self-service + geofence</td>
+          </tr>
+          <tr>
+            <td>Customer status emails</td>
+            <td>2-2.5</td>
+            <td>0.5</td>
+            <td>Auto-triggered templates</td>
+          </tr>
+          <tr>
+            <td>Rate negotiation</td>
+            <td>0.5-1</td>
+            <td>2-3</td>
+            <td>Freed capacity</td>
+          </tr>
+          <tr>
+            <td>Reload planning</td>
+            <td>0.5</td>
+            <td>2-3</td>
+            <td>Freed capacity</td>
+          </tr>
+          <tr>
+            <td><strong>Total productive time</strong></td>
+            <td><strong>1-1.5 hrs</strong></td>
+            <td><strong>4-6 hrs</strong></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+
+      <p>The dispatcher went from spending 85% of their day on clerical work to spending 70% on revenue-generating activities — without working more hours, without hiring help, and without burning out.</p>
+
+      <h2>When to Outsource Dispatch vs Automate It Yourself</h2>
+      <p>For fleets under 10 trucks, outsourcing dispatch to a service (typically 5-8% of load revenue) can make more sense than building automation — the volume isn't high enough for automation to pay back quickly, and a good dispatch service brings broker relationships you don't have. For fleets with 10-25 trucks, automation is the sweet spot: the volume justifies the setup time, and you keep control over broker relationships and lane selection. For fleets above 25 trucks, you need both — automation for the clerical work AND a second dispatcher for the relationship load.</p>
+
+      <h2>What If You Want the Whole System Built For You?</h2>
+      <p>We build the full dispatch automation stack — load board connection, driver check-in system, customer update automations, and dispatch dashboard — end-to-end. Our approach: we spend a day shadowing your dispatcher, map every repetitive task, quantify what the overwhelm is costing you in missed reloads and deadhead, and build the automations that give them their day back. Every build is scoped against a hard ROI target and covered by our $30K-recovered-in-90-days guarantee. If documented recovery doesn't reach $30K — from fewer deadhead miles, higher revenue per truck, or recovered dispatcher time — you pay nothing.</p>
+
+      <h2>Monday Morning Setup: Reclaim Your Dispatcher's First 10 Hours This Week</h2>
+      <div class="checklist">
+        <h3>3 things to do before your dispatcher starts on Monday</h3>
+        <ol>
+          <li><strong>Time-audit one day.</strong> Have your dispatcher log every task for a single day in 15-minute increments. Categorize each one: "load board refresh," "driver check-in call," "customer email," "rate negotiation," "problem-solving." By end of day, you'll see exactly where the hours go — and 60-70% of them will be automatable clerical work.</li>
+          <li><strong>Set up the driver check-in form.</strong> Create a Google Form with 4 options: "Arrived at pickup," "Loaded — departing," "Arrived at delivery," "Empty — ready for reload." Text the link to every driver. Connect responses to a Google Sheet the dispatcher can open on one screen. This alone kills 15-20 phone calls tomorrow. Setup time: 45 minutes.</li>
+          <li><strong>Build the email template library.</strong> Draft one email template for each load status change: "Picked up," "In transit," "Delivered." Save them as Gmail canned responses or in a Google Doc the dispatcher can copy-paste. Tomorrow, instead of typing each email from scratch, the dispatcher copies the template and fills in 3 fields (load number, time, location). Email time drops from 3 minutes to 30 seconds each.</li>
+        </ol>
+        <p style="font-size:15px; color:rgba(11,13,18,.55); margin:16px 0 0">That's it. You've gone from "our dispatcher is drowning" to a system with driver self-service check-ins, email templates, and a clear data set showing exactly which tasks to automate next. Most fleets recover 10+ dispatcher hours in the first week with just these two changes — before spending a dime on software.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>How much does dispatcher burnout actually cost a small fleet?</h3>
+        <p>For a 15-truck fleet with one dispatcher, missed reloads cost $2,000-4,000/week in deadhead miles — $100,000-200,000/year. Dispatcher turnover (industry average 18-24 months) costs $15,000-25,000 to replace. And an overwhelmed dispatcher defaults to familiar lanes instead of hunting for higher-paying loads, leaving $150,000-390,000/year in unrealized revenue on the table. The combined cost of running one dispatcher at 120% capacity is $250,000-500,000/year — far more than the $70K salary of a second dispatcher, but the automation stack that solves it costs $0-150/month.</p>
+
+        <h3>What's the cheapest way to automate dispatching without hiring another person?</h3>
+        <p>Start at $0 with three builds: load board alerts via Google Sheets + Apps Script (filter your top 5 lanes automatically), driver self-service check-ins via Google Forms + text links (eliminate 15-20 phone calls/day), and email templates for load status updates (cut email time from 3 minutes to 30 seconds each). Total cost: $0-20/month. Setup time: 1-2 weeks. Time recovered: 15-20 hours/week for the dispatcher. If you need real-time load board matching, add Parade or Truckbase ($100-300/month) for API-connected auto-refresh.</p>
+
+        <h3>Can you automate load board matching without paying for expensive dispatch software?</h3>
+        <p>Yes. Start with a Google Sheet that pulls load data from email alerts or RSS feeds and filters by your most profitable lanes. More robust: Parade or Truckbase ($100-300/month) auto-refresh DAT and Truckstop, apply your lane preferences, and present a ranked list. The gain isn't from finding more loads — it's from not manually refreshing 3 screens 40 times a day. A dispatcher who spends 2 hours/day on load boards instead of 6 has time to negotiate rates and plan reloads — the activities that actually raise revenue per truck.</p>
+
+        <h3>How does the $30K guarantee work for dispatching automation?</h3>
+        <p>Every Jobs Done Labs engagement is backed by a written guarantee: if the automation system we build doesn't recover or save at least $30,000 in documented bottom-line impact within 90 days, you pay nothing. For dispatching, we measure against your pre-build baseline: dispatcher hours/week (audited from time logs), missed reloads/month (deadhead miles tracked), and revenue per truck per week (from your TMS or settlement sheets). The $30K can come from recovered dispatcher time, reduced deadhead, or higher revenue per truck.</p>
+
+        <h3>What industries does Jobs Done Labs serve besides trucking?</h3>
+        <p>Jobs Done Labs builds custom automation systems for Logistics &amp; Trucking (fleet operations, dispatch, detention pay, IFTA compliance), Manufacturing (production scheduling, inventory sync, job costing, QuickBooks-to-shop-floor data flow), Professional Services (client onboarding, billing automation, document collection, scope creep tracking), and Home Services &amp; Trades (field-to-office job costing, estimate workflows, material tracking, after-hours triage). Every build starts with a free 30-minute audit.</p>
+      </section>
+
+<section class="related-reading">
+<h2>Related reading</h2>
+<p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+<ul style="list-style:none;padding:0;margin:0">
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-detention-pay-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Losing $200,000 a Year in Unpaid Detention — Here's the 4-Step System to Get Paid</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-dock-scheduling-spreadsheet-small-fleet/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Drivers Spent 1,144 Hours Last Year Sitting at Warehouse Docks — The One-Page Fix</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-freight-bill-audit-carrier-overcharge-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Carriers Overcharged Your Fleet $12,000 Last Year — The 5-Minute Audit</a>
+  </li>
+</ul>
+</section>
+
+      <div class="cta-box">
+        <h2>Give your dispatcher their day back</h2>
+        <p>Book a free 30-minute dispatch audit. We'll shadow your dispatcher (virtually), map every repetitive task, and show you the 2-3 automations that recover the most hours fastest. No pitch, no pressure. You keep the audit map either way.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+</article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>

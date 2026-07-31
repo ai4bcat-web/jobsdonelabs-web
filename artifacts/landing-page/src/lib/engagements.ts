@@ -116,6 +116,23 @@ export const TIERS: Tier[] = [
   },
 ];
 
+/** The four steps from first contact to handover, shown on /pricing. */
+export const LADDER: { step: string; label: string; body: string }[] = [
+  { step: "01", label: "Free call",  body: "45 minutes. We map where the money leaks and whether the math works. You keep the map either way." },
+  { step: "02", label: "Blueprint",  body: "Two paid weeks. Full ops map, ranked agent opportunities, and one agent shipped. Credited back if you continue." },
+  { step: "03", label: "Retainer",   body: "Coaching, Fractional CTO, or an embedded division — whichever matches who's holding the keyboard." },
+  { step: "04", label: "Handover",   body: "Your team runs the fleet. Keep us on Fleet Care if you'd rather we watched it." },
+];
+
+/** The comparison that reframes the competitor set as "hire vs fractional". */
+export const VS_HIRE: { label: string; hire: string; jdl: string }[] = [
+  { label: "Annual cost",                 hire: "$220K–$300K + equity",          jdl: "$144K, all in" },
+  { label: "Time to productive",          hire: "4–7 months to hire and ramp",   jdl: "First system live in ~3 weeks" },
+  { label: "Who does the building",       hire: "You hire builders under them",  jdl: "An agent fleet that's already running" },
+  { label: "If it isn't working",         hire: "Severance conversation",        jdl: "End of term" },
+  { label: "Track record you're buying",  hire: "A résumé",                      jdl: "A portfolio of businesses run this way" },
+];
+
 export const ADD_ONS = [
   {
     name: "AI Enablement Workshop",

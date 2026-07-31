@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check, X, Plus, Minus } from "lucide-react";
 import BookingModal, { type BookingIntent } from "@/components/BookingModal";
-import { BLUEPRINT, TIERS, ADD_ONS, PRINCIPLES, MATRIX, PRICING_FAQ, type Tier } from "@/lib/engagements";
+import { BLUEPRINT, TIERS, ADD_ONS, PRINCIPLES, MATRIX, PRICING_FAQ, LADDER, VS_HIRE, type Tier } from "@/lib/engagements";
 
 /* Design tokens — mirrored from Home so the page reads as one site */
 const CREAM       = "#F4EFE3";
@@ -196,12 +196,7 @@ function PricingHero({ onBook }: { onBook:()=>void }) {
 /*  Ladder — how an engagement starts   */
 /* ───────────────────────────────────── */
 function Ladder() {
-  const steps = [
-    { step:"01", label:"Free call",  body:"45 minutes. We map where the money leaks and whether the math works. You keep the map either way." },
-    { step:"02", label:"Blueprint",  body:"Two paid weeks. Full ops map, ranked agent opportunities, and one agent shipped. Credited back if you continue." },
-    { step:"03", label:"Retainer",   body:"Coaching, Fractional CTO, or an embedded division — whichever matches who's holding the keyboard." },
-    { step:"04", label:"Handover",   body:"Your team runs the fleet. Keep us on Fleet Care if you'd rather we watched it." },
-  ];
+  const steps = LADDER;
   return (
     <section style={{ background:INK, padding:"72px 24px" }}>
       <div style={{ maxWidth:1120, margin:"0 auto" }}>
@@ -504,13 +499,7 @@ function Principles() {
 /*  Cost-of-hire comparison             */
 /* ───────────────────────────────────── */
 function VsHire() {
-  const rows: [string, string, string][] = [
-    ["Annual cost",              "$220K–$300K + equity", "$144K, all in"],
-    ["Time to productive",       "4–7 months to hire and ramp", "First system live in ~3 weeks"],
-    ["Who does the building",    "You hire builders under them", "An agent fleet that's already running"],
-    ["If it isn't working",      "Severance conversation", "End of term"],
-    ["Track record you're buying","A résumé",             "A portfolio of businesses run this way"],
-  ];
+  const rows: [string, string, string][] = VS_HIRE.map(r => [r.label, r.hire, r.jdl]);
   return (
     <section style={{ background:CREAM2, padding:"88px 24px" }}>
       <div style={{ maxWidth:900, margin:"0 auto" }}>
