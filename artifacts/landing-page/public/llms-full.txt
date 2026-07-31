@@ -1,3 +1,310 @@
+# Automation Pricing: What Small Businesses Pay
+
+Professional Services
+
+How Much Does Business Process Automation Cost for a Small Company?
+
+Ryne Bandolik
+
+· Jobs Done Labs · July 30, 2026
+
+Key takeaways
+
+Nobody publishes real automation prices online. Every vendor buries the number behind a "book a demo" button, and small business owners are left guessing whether it's $500 or $50,000. Here are the real numbers across 5 tiers — from $0 spreadsheet templates to $30K custom builds — with the math that determines which tier you need, what drives cost up or down, and a free savings calculator so you can run your own numbers before talking to a single vendor. For most businesses with 10-50 employees, the right answer is somewhere between $0 and $15,000 — not the six-figure ERP quotes that scare everyone away from automation entirely.
+
+You've probably searched "how much does automation cost" and found exactly zero useful answers. The vendors selling automation won't tell you — not without a 45-minute demo and a follow-up call where they "customize a package for your needs" (translation: they're figuring out how much they think you'll pay). The freelancers on Upwork quote anywhere from $500 to $50,000 for what sounds like the same project. And the blogs? They say things like "it depends on your needs" and then pivot to selling their own services.
+
+This guide is different. It gives you the actual price ranges, with real examples, and the math to figure out which tier you actually need. No demo required.
+
+The 5 Tiers of Automation Cost (Real Numbers)
+
+Every automation build falls into one of five tiers. The tier you need depends on three things: how many systems you're connecting, how complex your business rules are, and what happens when the automation fails.
+
+Tier
+
+What you get
+
+Cost
+
+Timeline
+
+Best for
+
+1. DIY Free
+
+Spreadsheet templates + manual process design. You build it yourself using Google Sheets, conditional formatting, and maybe 30 lines of Apps Script.
+
+1 afternoon
+
+Single-system tracking (inventory log, invoice tracker, lead list). One person manages it. Errors are annoying but not expensive.
+
+2. No-Code
+
+Zapier, Make, or n8n connecting 2-5 systems with pre-built integrations. Linear workflows: if X happens in system A, do Y in system B.
+
+$20-200/month
+
+2 hours to 2 days
+
+QuickBooks → CRM sync, Gmail → spreadsheet logging, form submissions → Slack notifications. Someone on your team can learn the tool.
+
+3. Freelancer
+
+A freelancer or small agency builds a custom Google Sheets + Apps Script workflow for your exact process. Includes some error handling and a basic dashboard.
+
+$500-2,500
+
+one-time
+
+1-3 weeks
+
+Custom invoice generation from a spreadsheet, multi-step approval workflows, automated report generation. You don't want to learn the tool yourself.
+
+4. Custom Build
+
+A professional automation team builds a system connecting multiple platforms via API, with a dashboard, error handling, data validation, and team training.
+
+$5,000-30,000
+
+one-time
+
+4-12 weeks
+
+ELD → detention invoice → broker email → payment dashboard (trucking). QuickBooks → production sheet → inventory sync (manufacturing). Multi-system workflows where failure costs real money.
+
+5. Enterprise
+
+Full automation suite with SSO, audit trails, compliance certifications, dedicated support, and SLA guarantees.
+
+$30,000-150,000+
+
+3-6 months
+
+100+ employee businesses. HIPAA-compliant healthcare automation. SOC 2 financial workflows. You probably don't need this tier.
+
+Most small businesses with 10-50 employees land in Tiers 1-4.
+
+If you're reading this and you don't have a dedicated IT team, you almost certainly don't need Tier 5. The automation industry wants you to believe you need the $50K enterprise suite. You don't. A $0 spreadsheet template that saves 5 hours/week of manual work is automation. A $200/month Zapier workflow that eliminates double data entry between QuickBooks and your CRM is automation. Start where you are.
+
+Free Savings Calculator: What's Automation Actually Worth to Your Business?
+
+Before you spend a dollar, run your own numbers. This calculator estimates what you're spending on manual processes today — and what you'd save at each tier.
+
+Automation Savings Calculator
+
+Fill in your numbers. All calculations happen in your browser — nothing is sent anywhere.
+
+Number of employees doing manual data entry or repetitive admin work
+
+Hours per week each spends on automatable tasks
+
+Average hourly rate (loaded — include taxes + benefits)
+
+Estimated error rate from manual entry (% of entries wrong)
+
+Calculate my savings →
+
+What Drives the Price Up (and What Doesn't)
+
+Two automation projects that sound identical can have a 10x price difference. Here's what actually drives the number:
+
+Price driver #1: Number of systems to connect
+
+Every system you want to connect adds roughly $2,000-5,000 to a custom build. Connecting QuickBooks to your CRM is one integration. Connecting QuickBooks + CRM + TMS + email marketing + a custom dashboard is five. The first integration is the most expensive (setting up authentication, data mapping standards, error handling architecture). Each additional integration is cheaper because the foundation is built.
+
+Price driver #2: Data complexity (the real multiplier)
+
+Syncing customer names between systems is simple — one field, one mapping, done. Syncing multi-line invoices with tax calculations, partial payments, multi-currency, and line-item matching? That's 10-20x more complex. If your data has "it depends" rules — "the tax rate depends on the customer's state AND their exemption status AND whether it's a service or product" — your build cost goes up significantly. This is the single biggest reason two projects that sound the same have different prices.
+
+Price driver #3: What happens when it breaks
+
+The cheapest automation is the one where failure is annoying but not expensive. If a Zapier zap fails and an email doesn't send — someone notices tomorrow, they trigger it manually, life goes on. That's a $20/month automation. If the automation that generates detention invoices fails and you miss $2,000 in revenue in a week — you need error handling, alerts, retry logic, and a dashboard showing what ran and what didn't. That 20-30% cost increase on the build saves you 10x in prevented failures.
+
+What does NOT drive the price up (but vendors will tell you it does)
+
+"AI-powered" labeling.
+
+Most business automation doesn't need AI. A deterministic workflow (if this, then that) is more reliable and costs the same whether someone calls it "AI" or not. Don't pay a premium for AI you don't need.
+
+Number of users.
+
+Unless you need role-based access controls with individual logins, the number of people who use the system doesn't significantly change the build cost. A dashboard that 3 people view costs the same to build as one that 30 people view.
+
+The vendor's brand name.
+
+A $30K build from a two-person automation shop often produces a better system than a six-figure quote from a big consultancy — because the shop builds one thing (automation) all day, while the consultancy spends half the budget on project management and slide decks.
+
+Real Cost Examples by Business Type
+
+Trucking fleet (20 trucks): Detention pay automation
+
+Tier 1 ($0):
+
+Google Sheet with columns for arrival/departure times, rate lookup, and auto-calculated hours. Dispatcher logs times manually. Saves 5 hours/week in invoice prep. Recovers maybe 50% of detention fees (up from 40%).
+
+Tier 4 ($12,000-18,000 one-time):
+
+ELD geofence data → auto-timestamp capture → detention rate lookup → auto-generated invoice with BOL/POD attached → email to broker with delivery tracking → payment status dashboard. Recovers 80%+ of detention fees. For a 20-truck fleet losing $117K/year, that's $70K/year in recovered revenue. ROI: under 3 months.
+
+Manufacturing job shop (40 employees): Production scheduling
+
+Tier 1 ($0):
+
+Shared Google Sheet with color-coded work orders, updated manually by the production manager. Better than a whiteboard — at least it's visible to everyone. But still breaks when the one person who understands it is out sick.
+
+Tier 4 ($15,000-25,000 one-time):
+
+Auto-scheduling based on machine availability + job priority + material readiness. Drag-and-drop rescheduling. Auto-notifies sales when a job is delayed. Rush order insertion with what-if impact view. Reduces late deliveries from 30% to under 10%. For a $2M/year shop, that's $400K/year in on-time revenue that was previously at risk.
+
+Professional services firm (15 employees): Client onboarding
+
+Tier 2 ($50/month):
+
+Make (Integromat) workflow: signed proposal → auto-create project folder → auto-send welcome email with intake form → auto-create client record in CRM → auto-assign team member. Takes 4 hours to set up. Eliminates the "who's handling the new client?" email thread that costs 3 hours/week.
+
+Tier 4 ($8,000-14,000 one-time):
+
+Full onboarding portal: client uploads documents, auto-parsed into project management system, auto-scheduled kickoff call based on team availability, automated check-in emails at day 7/14/30, scope creep detection flag. Cuts onboarding from 2 weeks to 3 days. For a firm billing $200/hour, that's $16,000 in recovered billable time per new client — the build pays for itself on client #1.
+
+Ongoing Costs: What Nobody Tells You About
+
+The build cost is the down payment. Here's what you'll pay to keep it running:
+
+Cost type
+
+Tier 1-2
+
+Tier 3-4
+
+Notes
+
+Platform fees
+
+$0-200/month
+
+$10-300/month
+
+Zapier/Make/n8n subscriptions, Google Workspace, API access fees for the systems you connect.
+
+Maintenance
+
+$0 (you fix it)
+
+$500-2,500/year
+
+APIs change, fields get renamed, auth tokens expire. Budget 5-10% of build cost annually for a freelancer to handle breakage. Most months nothing breaks — but when it does, you want someone who can fix it in an hour instead of you spending a day debugging.
+
+Expansion
+
+$0 (you add it)
+
+$1,500-5,000 per new integration
+
+Adding a new system to an existing automation typically costs 20-30% of the original build — the architecture and patterns are already in place.
+
+Bottom line: a $15,000 custom build typically costs $650-2,000/year to maintain and run. That's $54-167/month — less than most SaaS subscriptions — for a system that saves $50,000-100,000+/year.
+
+How to Get an Honest Price (Before You Talk to Any Vendor)
+
+Map your process on paper first.
+
+Write down every step, every system involved, and every "it depends" branch. If you can't describe your process, no vendor can price it accurately — and a surprising number of automation projects fail because the process was never actually documented before someone started building.
+
+Count your integrations.
+
+List every system that needs to talk to another system. Count the connections. Use the tier table above as a rough pricing guide: 1-2 integrations = Tier 2, 3-5 = Tier 4.
+
+Calculate the cost of doing nothing.
+
+Use the calculator on this page. Know your annual manual-process cost before any vendor gives you a quote. If a vendor quotes $30K and your manual cost is $20K/year, walk away — the ROI doesn't work. If your manual cost is $120K/year, a $30K build pays for itself in 3 months.
+
+Ask for a fixed-price scope, not hourly.
+
+Any automation vendor who can't give you a fixed price after a 1-hour call doesn't understand your problem well enough to solve it. Hourly billing for automation builds is a red flag — it means the scope is undefined and you're paying for their learning curve.
+
+Ask what happens when it breaks.
+
+Every automation breaks eventually. The vendor's answer to this question tells you more about their quality than their portfolio does. A good answer: "We build error handling into every workflow — you get an alert with the exact error and what to do. We monitor for the first 30 days and fix anything that surfaces. After that, maintenance is $X/month." A bad answer: "Our systems don't break" (they do) or "You can call us anytime" (at what rate?).
+
+If You Want Us to Price Your Build
+
+We do this differently. You book a free 30-minute audit. You describe your process. We tell you honestly which tier you need — including whether you even need us at all. If a $0 spreadsheet template solves your problem, we'll tell you that and send you the template. If you need a custom build, we'll scope it against a hard ROI target and back it with our $30K-recovered-in-90-days guarantee: if documented savings don't hit $30K, you pay nothing.
+
+We only take on work where the pre-build ROI math clearly exceeds $30K. That means we'll sometimes tell a prospective client "you don't need us yet — start with this template and come back when you've outgrown it." We'd rather earn your trust than close a sale that doesn't make financial sense for you.
+
+Frequently asked questions
+
+How much does business process automation cost for a small company?
+
+Real costs fall into 5 tiers: Tier 1 — $0 (spreadsheet templates you build yourself in an afternoon). Tier 2 — $20-200/month (no-code tools like Zapier, Make, or n8n connecting 2-5 systems). Tier 3 — $500-2,500 one-time (a freelancer builds a custom Google Sheets + Apps Script workflow, 1-3 weeks). Tier 4 — $5,000-30,000 one-time (a custom automation build connecting multiple systems via API with a dashboard, error handling, and training — 4-12 weeks). Tier 5 — $30,000-150,000+ (enterprise suite with compliance and dedicated support). Most small businesses with 10-50 employees get everything they need in Tiers 1-4. The right question isn't "how much does automation cost" — it's "which tier solves my problem and what's the ROI?"
+
+What's the cheapest way to automate my business processes?
+
+Start at $0 with what you already have: Google Sheets + Google Apps Script + Gmail. Auto-generate invoices when a status changes, auto-send follow-ups when leads go cold, auto-flag overdue tasks with conditional formatting, and auto-sync data between sheets using IMPORTRANGE. This $0 tier handles 60-70% of what most small businesses need. When you outgrow it — needing real-time sync between QuickBooks and your CRM, or data validation Apps Script can't handle — graduate to Tier 2 ($20-200/month no-code). The rule: don't pay for automation until the free tier breaks.
+
+How long until I see ROI from business automation?
+
+Tier 1 (free spreadsheets): ROI is same-day — if a template saves you 2 hours/week, you're ahead by lunch. Tier 2 (no-code, $20-200/month): ROI in 1-4 weeks. Tier 4 (custom build, $5K-30K): ROI in 30-90 days. A $15,000 custom system that saves $6,000/month breaks even in 2-3 months. Jobs Done Labs backs every custom build with a written guarantee: if the system doesn't recover or save at least $30,000 in documented bottom-line impact within 90 days, you pay nothing. We only take on work where the pre-build ROI math clearly exceeds $30K.
+
+What factors drive automation cost up or down?
+
+Five factors: (1) Number of systems to integrate — each additional system adds $2K-5K. (2) Data complexity — multi-line invoices with tax calculations and partial payments can 2-3x build time vs simple customer name sync. (3) Error handling — robust error detection and alerting adds 20-30% to build cost and is almost always worth it. (4) User interface — a Google Sheet dashboard costs $0 in UI development; a custom web dashboard adds $3K-10K. (5) Compliance requirements — HIPAA, SOC 2, or audit trails can 1.5-2x the cost. Most small businesses don't need this tier.
+
+What industries does Jobs Done Labs serve for automation?
+
+Jobs Done Labs builds custom automation systems for four industries where manual processes eat the most profit: Logistics & Trucking, Manufacturing, Professional Services, and Home Services & Trades. Every build starts with a free 30-minute audit where we map your current process and recommend the 2-3 highest-ROI fixes — whether that's a free spreadsheet template or a full custom automation. You keep the map either way.
+
+How does the Jobs Done Labs $30K guarantee work?
+
+Every engagement is backed by a written guarantee: if the automation system we build doesn't recover or save at least $30,000 in documented bottom-line impact within 90 days of deployment, you pay nothing. We measure against your actual pre-build baseline — we audit current numbers together before writing code. The $30K can come from labor savings, error reduction, recovered revenue, or cost avoidance. If the documented number at 90 days is below $30K, the engagement is free.
+
+Should I use no-code tools or hire someone to build custom automation?
+
+Use no-code when connecting 2-4 systems with pre-built integrations, your workflow is linear (if this → do that), and someone on your team can learn the tool. Hire custom when connecting systems without pre-built integrations, your workflow has branching logic with 10+ decision points, you need error handling that alerts specific people, or the cost of failure is high (missed invoices, compliance gaps). Rule of thumb: if you can describe your process in one paragraph without "it depends" branches, no-code works. If every answer starts with "well, it depends on whether...", you need custom.
+
+What's the difference between one-time build cost and ongoing maintenance?
+
+Build cost covers design, development, testing, and training. Ongoing costs: platform fees ($0-300/month for tools the automation runs on), maintenance ($500-2,500/year — APIs change, fields get renamed, auth tokens expire), and expansion ($1,500-5,000 per new integration added later). Budget 5-10% of build cost annually for maintenance. Adding a new integration to an existing system typically costs 20-30% of the original build — the foundation is already there.
+
+Related posts
+
+Professional Services
+
+Stop Copying Data Between Systems: How Small Businesses Eliminate Manual Data Entry
+
+Professional Services
+
+Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
+
+Professional Services
+
+Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop
+
+Stop guessing what automation costs
+
+Book a free 30-minute automation audit. We'll map your current process, quantify what inefficiency is costing you, and give you an honest recommendation — whether that's a free spreadsheet template or a custom build with a hard ROI target. No pitch, no pressure. You keep the map either way.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Stop Copying Data Between Systems: How Small Businesses Eliminate Manual Data Entry Without Buying Expensive Software
+
+Your Agency Spends 40+ Hours a Month Hand-Building Client Reports — Here's the Fix
+
+Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts for Fixed-Fee Engagements
+
+Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop
+
+Your Clients Still Email Tax Returns Instead of Using the Portal You Pay For — Free Adoption Playbook
+
+
+URL: https://www.jobsdonelabs.ai/blog/business-process-automation-cost-small-business/
+
+---
+
 # Clients Won't Use Your Portal? Free Adoption Playbook
 
 Professional Services
@@ -5409,6 +5716,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+How Much Does Business Process Automation Cost? Honest Price Breakdown for Small Companies
+
 Clients Won't Use Your Portal? Free Adoption Playbook With Onboarding Sequences, Policy Templates, and Automated Reminders
 
 Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
@@ -9528,6 +9837,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+How Much Does Business Process Automation Cost? Honest Price Breakdown for Small Companies
+
 Clients Won't Use Your Portal? Free Adoption Playbook With Onboarding Sequences, Policy Templates, and Automated Reminders
 
 Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop
@@ -10633,6 +10944,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+How Much Does Business Process Automation Cost? Honest Price Breakdown for Small Companies
+
 Clients Won't Use Your Portal? Free Adoption Playbook With Onboarding Sequences, Policy Templates, and Automated Reminders
 
 Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
@@ -10863,6 +11176,8 @@ Every Jobs Done Labs engagement is backed by a written guarantee: if the automat
 Related reading
 
 If you found this useful, you'll want these too:
+
+How Much Does Business Process Automation Cost? Honest Price Breakdown for Small Companies
 
 Manual Data Entry Is the Silent Killer of Your E-Commerce Business — The 5-Level System
 

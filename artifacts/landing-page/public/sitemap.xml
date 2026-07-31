@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.jobsdonelabs.ai/</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,37 +14,37 @@
   </url>
   <url>
     <loc>https://www.jobsdonelabs.ai/industries/healthcare/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.jobsdonelabs.ai/industries/professional-services/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.jobsdonelabs.ai/industries/logistics/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.jobsdonelabs.ai/industries/manufacturing/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.jobsdonelabs.ai/industries/mortgage-lending/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.jobsdonelabs.ai/blog/</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://www.jobsdonelabs.ai/blog/small-manufacturing-production-scheduling-guide/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -266,7 +266,7 @@
   </url>
   <url>
     <loc>https://www.jobsdonelabs.ai/blog/trucking-detention-pay-tracking-system/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -383,7 +383,6 @@
   <priority>0.8</priority>
 </url>
 
-
 <url>
   <loc>https://www.jobsdonelabs.ai/blog/stop-missing-customer-calls-small-business-guide/</loc>
   <lastmod>2026-07-26</lastmod>
@@ -419,4 +418,17 @@
   <priority>0.8</priority>
 </url>
 
+<url>
+  <loc>https://www.jobsdonelabs.ai/blog/business-process-automation-cost-small-business/</loc>
+  <lastmod>2026-07-30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+  <url>
+    <loc>https://www.jobsdonelabs.ai/free-guide/freight-brokerage-automation/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
