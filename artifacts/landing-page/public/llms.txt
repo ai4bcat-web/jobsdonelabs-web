@@ -9,7 +9,6 @@
 
 ## Key pages
 - [Home](https://www.jobsdonelabs.ai/): offer, process, case studies, and booking link
-- [Engagements & Pricing](https://www.jobsdonelabs.ai/pricing/): fractional AI CTO retainers — AI Operating Blueprint $7,500 one-time (credited back), Fractional AI Coach $4,500/mo, Fractional AI CTO $12,000/mo, Embedded AI Division from $25,000/mo
 - [Contact](https://www.jobsdonelabs.ai/#contact): get in touch for a free audit
 
 ## Logistics
@@ -54,6 +53,7 @@
 - [Spending $3K/Month On Ads With Zero ROI Tracking](https://www.jobsdonelabs.ai/blog/contractor-marketing-roi-tracker/): You spend $3,200/month on Google Ads, Facebook, Yelp, and Angi but can't tell which leads turn into profitable jobs. Free contractor marketing ROI tracker — $0, 15 min/week.
 - [Lumber Prices Blew Your Remodel Budget — Fix It](https://www.jobsdonelabs.ai/blog/contractor-material-price-escalation-tracking/): Lumber is up 22% since you bid that remodel. You won't know you lost $4,700 until closeout. The 6-tab tracker catches profit leaks in 48 hours — no ERP needed.
 - [You Did the Work and They're Refusing to Pay —](https://www.jobsdonelabs.ai/blog/contractor-proof-of-work-service-verification-system/): Customer disputes and chargebacks cost the average field service business $15,200/year. Here's the 5-point documentation system that proves every job was...
+- [Slow Lead Response Costing You Jobs? How to Fix It](https://www.jobsdonelabs.ai/blog/contractor-slow-lead-response-losing-jobs/): 78% of homeowners book the first contractor who calls back. Losing 3-4 jobs a week to faster competitors? This free lead-capture automation guide is the fix.
 - [You Drove 240 Miles to Give 7 Free Estimates That](https://www.jobsdonelabs.ai/blog/contractor-tire-kicker-filter-system/): Contractors waste $40K/year driving to free estimates for tire-kickers who never buy. Pre-qual phone script, SMS sequence, minimum-job framework — $0.
 - [When to Roll a Truck at 3am: Emergency Triage System](https://www.jobsdonelabs.ai/blog/hvac-after-hours-emergency-call-triage-system/): Every after-hours dispatch costs $360-480. The 3-tier Red/Yellow/Green triage system for HVAC, plumbing & electrical contractors. Free decision checklist.
 - [Your Customers' HVAC Is Failing and You Don't Know](https://www.jobsdonelabs.ai/blog/hvac-equipment-lifecycle-tracking-system/): Service customers have aging furnaces, ACs, water heaters you're not tracking. Free lifecycle spreadsheet — flag every unit before it fails, no software.
