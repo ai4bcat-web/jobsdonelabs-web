@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check, X, Plus, Minus } from "lucide-react";
-import BookingModal from "@/components/BookingModal";
+import BookingModal, { type BookingIntent } from "@/components/BookingModal";
 import { BLUEPRINT, TIERS, ADD_ONS, PRINCIPLES, MATRIX, PRICING_FAQ, type Tier } from "@/lib/engagements";
 
 /* Design tokens — mirrored from Home so the page reads as one site */
@@ -277,7 +277,7 @@ function BlueprintBand({ onBook }: { onBook:()=>void }) {
 /* ───────────────────────────────────── */
 /*  Tier cards                          */
 /* ───────────────────────────────────── */
-function TierCard({ tier, onBook, delay }: { tier:Tier; onBook:()=>void; delay:number }) {
+function TierCard({ tier, onBook, delay }: { tier:Tier; onBook:(intent:BookingIntent)=>void; delay:number }) {
   const dark = !!tier.featured;
   return (
     <Fade delay={delay}>
@@ -339,14 +339,14 @@ function TierCard({ tier, onBook, delay }: { tier:Tier; onBook:()=>void; delay:n
           ))}
         </div>
         {dark
-          ? <PrimaryBtn onClick={onBook} full>{tier.cta} <ArrowRight size={16} /></PrimaryBtn>
-          : <GhostBtn onClick={onBook} full>{tier.cta} <ArrowRight size={15} /></GhostBtn>}
+          ? <PrimaryBtn onClick={() => onBook(tier.id as BookingIntent)} full>{tier.cta} <ArrowRight size={16} /></PrimaryBtn>
+          : <GhostBtn onClick={() => onBook(tier.id as BookingIntent)} full>{tier.cta} <ArrowRight size={15} /></GhostBtn>}
       </div>
     </Fade>
   );
 }
 
-function Tiers({ onBook }: { onBook:()=>void }) {
+function Tiers({ onBook }: { onBook:(intent:BookingIntent)=>void }) {
   return (
     <section id="tiers" style={{ background:CREAM, padding:"40px 24px 88px" }}>
       <div style={{ maxWidth:1180, margin:"0 auto" }}>
@@ -645,7 +645,8 @@ function MiniFooter() {
 /* ───────────────────────────────────── */
 export default function Pricing() {
   const [showBooking, setShowBooking] = useState(false);
-  const open = () => setShowBooking(true);
+  const [intent, setIntent] = useState<BookingIntent>("pricing-hero");
+  const open = (i: BookingIntent) => { setIntent(i); setShowBooking(true); };
 
   // The page is client-routed, so title/description/canonical are set on mount and
   // restored on unmount. If this page ever needs to rank on its own, pre-render it
@@ -673,19 +674,19 @@ export default function Pricing() {
 
   return (
     <div style={{ background:CREAM, color:INK, fontFamily:"'Hanken Grotesk',system-ui,sans-serif", WebkitFontSmoothing:"antialiased" }}>
-      <PricingNav onBook={open} />
-      <PricingHero onBook={open} />
+      <PricingNav onBook={() => open("nav")} />
+      <PricingHero onBook={() => open("pricing-hero")} />
       <Ladder />
-      <BlueprintBand onBook={open} />
+      <BlueprintBand onBook={() => open("blueprint")} />
       <Tiers onBook={open} />
       <Matrix />
       <VsHire />
       <AddOns />
       <Principles />
       <PricingFAQ />
-      <FinalCTA onBook={open} />
+      <FinalCTA onBook={() => open("pricing-final")} />
       <MiniFooter />
-      <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
+      <BookingModal open={showBooking} onClose={() => setShowBooking(false)} intent={intent} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import BookingModal from "@/components/BookingModal";
+import BookingModal, { type BookingIntent } from "@/components/BookingModal";
 import { TIERS } from "@/lib/engagements";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
@@ -285,12 +285,12 @@ const MARQUEE_ITEMS = [
   "Food Service Distribution","Home Service","Wholesale & Supply","Field Services",
 ];
 
-const PILOT_SEATS = [
-  { label:"HVAC & Plumbing"     },
-  { label:"Freight & Logistics" },
-  { label:"Manufacturing"       },
-  { label:"Field Service"       },
-  { label:"Auto Transport"      },
+/* What's actually open, by tier. The Embedded Division is genuinely
+   capacity-bound — one operator can only sit in so many leadership teams. */
+const SEAT_AVAILABILITY: { tier:string; note:string; capped?:boolean }[] = [
+  { tier:"Fractional AI Coach",  note:"Open · 3-month minimum" },
+  { tier:"Fractional AI CTO",    note:"Open · 6-month minimum" },
+  { tier:"Embedded AI Division", note:"2 seats a year", capped:true },
 ];
 
 const FIT_FOR = [
@@ -1123,6 +1123,10 @@ function Guarantee() {
             <p style={{ color:"rgba(255,255,255,.8)", fontSize:16.5, lineHeight:1.7, marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
               We put our entire fee on the line. Either we find and recover at least $30,000 in net profit for your business within 90 days — or you owe us nothing. That's how confident we are in the work.
             </p>
+            <p style={{ color:"rgba(255,255,255,.66)", fontSize:14.5, lineHeight:1.65, marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              Applies to the <Link href="/pricing" style={{ color:"#fff", fontWeight:700, textDecoration:"underline", textUnderlineOffset:3 }}>Fractional AI CTO tier and above</Link> —
+              the engagements where we hold the keyboard. Coaching can't carry it, because your team does the building.
+            </p>
             <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
               {GUARANTEE_ITEMS.map(item => (
                 <div key={item} style={{ display:"flex", alignItems:"flex-start", gap:12 }}>
@@ -1199,38 +1203,50 @@ function Fit() {
 }
 
 /* ───────────────────────────────────── */
-/*  Pilot                               */
+/*  Seats — what's actually open        */
 /* ───────────────────────────────────── */
-function Pilot({ onBook }: { onBook:()=>void }) {
+function Seats({ onBook }: { onBook:()=>void }) {
   return (
     <section style={{ background:CREAM2, padding:"96px 24px" }}>
       <div style={{ maxWidth:800, margin:"0 auto", textAlign:"center" }}>
         <Fade>
           <div style={{ background:INK2, border:"1px solid rgba(255,255,255,.08)", borderRadius:16, padding:"48px 36px", position:"relative", overflow:"hidden" }}>
-            <SectionLabel onDark>Pilot program · 2026</SectionLabel>
+            <SectionLabel onDark>Availability</SectionLabel>
             <H2 onDark style={{ maxWidth:560, margin:"0 auto 14px" }}>
-              We're building for 5 service businesses right now.
+              The Embedded Division is two seats a year.
             </H2>
-            <p style={{ color:"rgba(244,239,227,.58)", fontSize:16, lineHeight:1.7, maxWidth:480, margin:"0 auto 36px", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              Instead of recycled testimonials, here's the truth: we're hands-on with our founding cohort as we speak. Full, numbers-backed case studies drop Q4 2026 — get in before they do.
+            <p style={{ color:"rgba(244,239,227,.58)", fontSize:16, lineHeight:1.7, maxWidth:520, margin:"0 auto 36px", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              Not manufactured scarcity — arithmetic. A CTO of record sits in your leadership meetings, owns your AI P&amp;L,
+              and reports to your board. One person can do that twice a year and do it properly. Coaching and the Fractional
+              CTO tier scale with the agent fleet; the top seat doesn't.
             </p>
             <div style={{ display:"flex", flexWrap:"wrap", gap:10, justifyContent:"center", marginBottom:32 }}>
-              {PILOT_SEATS.map(s => (
-                <div key={s.label} style={{ display:"flex", alignItems:"center", gap:8,
-                  background:"rgba(255,255,255,.05)", border:"1px solid rgba(255,255,255,.1)",
+              {SEAT_AVAILABILITY.map(s => (
+                <div key={s.tier} style={{ display:"flex", alignItems:"center", gap:8,
+                  background:s.capped?"rgba(20,102,255,.14)":"rgba(255,255,255,.05)",
+                  border:s.capped?`1px solid ${ACCENT}66`:"1px solid rgba(255,255,255,.1)",
                   borderRadius:6, padding:"9px 16px" }}>
-                  <span style={{ width:8, height:8, borderRadius:"50%", background:"rgba(255,255,255,.25)", flex:"0 0 auto" }} />
-                  <span style={{ fontSize:13.5, fontWeight:600, color:"rgba(244,239,227,.7)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.label}</span>
+                  <span style={{ width:8, height:8, borderRadius:"50%",
+                    background:s.capped?ACCENT:"rgba(255,255,255,.25)", flex:"0 0 auto" }} />
+                  <span style={{ fontSize:13.5, fontWeight:700, color:"rgba(244,239,227,.86)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.tier}</span>
+                  <span style={{ fontSize:13, color:"rgba(244,239,227,.5)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.note}</span>
                 </div>
               ))}
             </div>
             <div style={{ display:"inline-flex", alignItems:"center", gap:7, background:"rgba(255,255,255,.05)", border:"1px solid rgba(255,255,255,.1)", borderRadius:6, padding:"8px 14px", marginBottom:28 }}>
-              <span style={{ fontSize:12, fontWeight:600, color:"rgba(244,239,227,.42)", letterSpacing:"0.06em", fontFamily:"'Hanken Grotesk',sans-serif" }}>Case studies coming Q4 2026</span>
+              <span style={{ fontSize:12, fontWeight:600, color:"rgba(244,239,227,.42)", letterSpacing:"0.06em", fontFamily:"'Hanken Grotesk',sans-serif" }}>Every engagement starts with the $7,500 Blueprint — credited back</span>
             </div>
-            <div>
+            <div style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap" }}>
               <PrimaryBtn onClick={onBook}>
-                Apply for the next cohort <ArrowRight size={16} />
+                Ask about the next seat <ArrowRight size={16} />
               </PrimaryBtn>
+              <Link href="/pricing" style={{ textDecoration:"none" }}>
+                <span style={{ display:"inline-flex", alignItems:"center", gap:8, background:"transparent", color:CREAM,
+                  fontSize:15, fontWeight:700, padding:"13px 24px", borderRadius:50, border:"1.5px solid rgba(255,255,255,.22)",
+                  cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+                  Compare the tiers <ArrowRight size={15} />
+                </span>
+              </Link>
             </div>
           </div>
         </Fade>
@@ -1415,14 +1431,15 @@ function Footer() {
 /* ───────────────────────────────────── */
 export default function Home() {
   const [showBooking, setShowBooking] = useState(false);
-  const open = () => setShowBooking(true);
+  const [intent, setIntent] = useState<BookingIntent>("hero");
+  const open = (i: BookingIntent) => { setIntent(i); setShowBooking(true); };
 
   useEffect(() => {
     const clickHandler = (e: MouseEvent) => {
       const el = (e.target as Element).closest('a[href="#book"]');
-      if (el) { e.preventDefault(); setShowBooking(true); }
+      if (el) { e.preventDefault(); setIntent("cta-link"); setShowBooking(true); }
     };
-    const customHandler = () => setShowBooking(true);
+    const customHandler = () => { setIntent("footer"); setShowBooking(true); };
     document.addEventListener("click", clickHandler);
     document.addEventListener("open-booking", customHandler);
     return () => {
@@ -1433,27 +1450,27 @@ export default function Home() {
 
   return (
     <div style={{ background:CREAM, color:INK, fontFamily:"'Hanken Grotesk',system-ui,sans-serif", WebkitFontSmoothing:"antialiased" }}>
-      <ExitIntentPopup onOpen={open} />
-      <LPNav onBook={open} />
-      <Hero onBook={open} />
+      <ExitIntentPopup onOpen={() => open("exit-intent")} />
+      <LPNav onBook={() => open("nav")} />
+      <Hero onBook={() => open("hero")} />
       <TrustStrip />
       <Problem />
       <Industries />
       <Testimonials />
       <FSO />
-      <InlineCTA onBook={open} />
+      <InlineCTA onBook={() => open("inline-cta")} />
       <Services />
       <Process />
-      <Engagements onBook={open} />
+      <Engagements onBook={() => open("engagements")} />
       <Results />
       <Comparison />
       <Guarantee />
       <Fit />
-      <Pilot onBook={open} />
+      <Seats onBook={() => open("seats")} />
       <FAQ />
-      <FinalCTA onBook={open} />
+      <FinalCTA onBook={() => open("final-cta")} />
       <Footer />
-      <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
+      <BookingModal open={showBooking} onClose={() => setShowBooking(false)} intent={intent} />
     </div>
   );
 }
