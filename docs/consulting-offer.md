@@ -96,24 +96,46 @@ finished CTO engagement downgrades into instead of churning to zero.
   - Footer: "Engagements & pricing" and a link out to makeitryne.ai
 - **`public/sitemap.xml`**: `/pricing` added at priority 0.95.
 
-## Open decisions for Ryne
+## Decisions taken (2026-07-30, RW-74)
 
-1. **The $30K guarantee vs. the retainer model.** The guarantee is load-bearing —
-   it's in the hero, the VSL, the blog, the OG images, and most inbound SEO. The
-   current build keeps it and scopes it to the CTO tier and above. The alternative
-   is retiring it in favour of a pure fractional-leadership pitch, which is a much
-   larger rewrite (and would invalidate a lot of published content). Not done
-   unilaterally.
-2. **Pilot-program section.** It still says "5 service businesses, case studies Q4
-   2026." That reads as project work and pulls against the retainer story. Worth
-   replacing with the two Embedded Division seats.
-3. **Blueprint vs. free audit.** Both now exist. The free 45-minute call qualifies;
-   the paid Blueprint delivers. If inbound volume is high the free call could go
-   away entirely and the Blueprint becomes the front door.
-4. **SEO for `/pricing`.** It's client-routed, so it inherits the shell's meta tags
-   until mount (title/description/canonical are swapped in JS). If it should rank
-   for "fractional AI CTO pricing", pre-render it into
-   `public/pricing/index.html` the way the industries pages are handled.
-5. **GHL booking flow.** Every CTA on `/pricing` opens the same audit-call booking
-   widget. A tier-specific intake (which tier they clicked) would make the calls
-   much better qualified.
+1. **The $30K guarantee stays**, scoped to the Fractional AI CTO tier and above.
+   Retiring it would have invalidated the hero, the VSL, the OG images and most
+   of the published blog library, for no offsetting gain. The scope is now stated
+   wherever the guarantee appears: the home guarantee band links to `/pricing`
+   and says Coaching can't carry it, and the same line is in the pricing FAQ and
+   in the home page's crawler fallback and FAQ schema. The "no long-term
+   retainers" guarantee bullet — which flatly contradicted the model — is gone.
+2. **The pilot-program section is retired.** In its place is an availability
+   band: Coaching and Fractional CTO are open, the Embedded Division is two seats
+   a year. That reads as capacity, not as a founding cohort waiting on Q4 case
+   studies, and it sells the top tier instead of apologising for having no
+   testimonials.
+3. **Both the free call and the Blueprint stay.** The free 45-minute call remains
+   the front door — it's what every CTA and every blog post already points at, and
+   the funnel from makeitryne.ai needs a $0 first step. The Blueprint is the paid
+   bridge behind it. Revisit only if inbound volume outgrows Ryne's calendar; the
+   change would then be a copy edit, not a rebuild.
+4. **`/pricing` is pre-rendered.** `prerender/pricing.ts` runs as a Vite plugin
+   after the bundle is written and emits `dist/public/pricing/index.html` from the
+   built shell — pricing title, description, canonical, OG/Twitter tags, and
+   Service + BreadcrumbList + FAQPage structured data, with the `#root` crawler
+   fallback replaced by the pricing copy. React still takes over on mount, so
+   there is one design, not two. Everything is generated from `engagements.ts`.
+5. **CTAs carry a tier.** `BookingModal` takes a `BookingIntent` and passes it to
+   the GHL calendar as UTM params (`utm_content` = the tier or CTA that was
+   clicked, `utm_medium` = home or pricing page). A click on the $25K tier and a
+   click in the footer no longer look identical in the CRM.
+
+## Still open
+
+- **Published content still quotes the old offer.** The blog library and
+  `llms-full.txt` carry "$50K to $120K" project pricing and "no retainer" in
+  places. The home page, `/pricing`, `index.html`'s crawler fallback and
+  `llms.txt` are updated; the ~50 blog posts are not. They're jd4's territory and
+  a bulk rewrite there is its own job.
+- **GHL side of the intake.** The UTM params are being sent; someone still has to
+  confirm the calendar stores them on the contact and build the view that makes
+  them useful. Tier-specific intake questions would be better still.
+- **Nothing pins the Embedded Division seat count.** The site says two seats a
+  year. If one gets taken, the copy in `SEAT_AVAILABILITY` (Home.tsx) is where to
+  say so.
