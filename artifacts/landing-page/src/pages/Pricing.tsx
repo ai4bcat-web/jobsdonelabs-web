@@ -124,7 +124,7 @@ function PricingNav({ onBook }: { onBook:()=>void }) {
   const links: [string,string][] = [
     ["/#services","Services"],
     ["/#industries","Industries"],
-    ["/pricing","Engagements"],
+    ["/pricing/","Engagements"],
     ["/blog/","Blog"],
     ["/case-study/logistics-200k-profit","Case Study"],
     ["/contact","Contact"],
@@ -138,7 +138,7 @@ function PricingNav({ onBook }: { onBook:()=>void }) {
         <div className="hidden md:flex" style={{ alignItems:"center", gap:22 }}>
           {links.map(([href,label]) => (
             <a key={href} href={href}
-              style={{ fontSize:14, fontWeight:600, color:href==="/pricing"?INK:INK_SOFT,
+              style={{ fontSize:14, fontWeight:600, color:href==="/pricing/"?INK:INK_SOFT,
                 textDecoration:"none", letterSpacing:"-0.01em", fontFamily:HG }}>
               {label}
             </a>
@@ -653,7 +653,7 @@ export default function Pricing() {
       "content",
       "Fractional AI CTO and AI consulting retainers for $1M+ operators. Coaching from $4,500/mo, Fractional AI CTO $12,000/mo, Embedded AI Division from $25,000/mo. Starts with a $7,500 AI Operating Blueprint, credited back.",
     );
-    canonical?.setAttribute("href", "https://www.jobsdonelabs.ai/pricing");
+    canonical?.setAttribute("href", "https://www.jobsdonelabs.ai/pricing/");
     return () => {
       document.title = prev.title;
       if (prev.desc !== null) desc?.setAttribute("content", prev.desc);

@@ -115,12 +115,24 @@ finished CTO engagement downgrades into instead of churning to zero.
    the funnel from makeitryne.ai needs a $0 first step. The Blueprint is the paid
    bridge behind it. Revisit only if inbound volume outgrows Ryne's calendar; the
    change would then be a copy edit, not a rebuild.
-4. **`/pricing` is pre-rendered.** `prerender/pricing.ts` runs as a Vite plugin
-   after the bundle is written and emits `dist/public/pricing/index.html` from the
-   built shell — pricing title, description, canonical, OG/Twitter tags, and
-   Service + BreadcrumbList + FAQPage structured data, with the `#root` crawler
-   fallback replaced by the pricing copy. React still takes over on mount, so
-   there is one design, not two. Everything is generated from `engagements.ts`.
+4. **`/pricing/` is pre-rendered, in two layers.** Production serves files out
+   of `public/` as soon as they land, but anything under `dist/` only changes when
+   the app is rebuilt and republished — so a single layer would have left the
+   sitemap advertising a URL that served the home page shell.
+   - `scripts/src/gen-pricing-page.ts` writes a self-contained
+     `public/pricing/index.html` (no bundle, no JS) and runs from
+     `post-merge.sh`, so it is live the moment a push lands.
+   - `prerender/pricing.ts` runs as a Vite plugin after the bundle is written and
+     overwrites `dist/public/pricing/index.html` with the built shell — same
+     metadata, but the `#root` crawler fallback is the pricing copy and React
+     takes over on mount. That one wins after the next publish.
+
+   Both carry the pricing title, description, canonical, OG/Twitter tags and
+   Service + BreadcrumbList + FAQPage structured data, and both are generated
+   from `engagements.ts`. Canonical is `/pricing/` with the trailing slash — that
+   is what the directory actually serves and what `update-sitemap` derives, so
+   the two don't fight and produce a duplicate entry. The client router answers
+   on both spellings.
 5. **CTAs carry a tier.** `BookingModal` takes a `BookingIntent` and passes it to
    the GHL calendar as UTM params (`utm_content` = the tier or CTA that was
    clicked, `utm_medium` = home or pricing page). A click on the $25K tier and a

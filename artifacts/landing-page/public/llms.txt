@@ -9,7 +9,7 @@
 
 ## Key pages
 - [Home](https://www.jobsdonelabs.ai/): offer, process, case studies, and booking link
-- [Engagements & Pricing](https://www.jobsdonelabs.ai/pricing): fractional AI CTO retainers — AI Operating Blueprint $7,500 one-time (credited back), Fractional AI Coach $4,500/mo, Fractional AI CTO $12,000/mo, Embedded AI Division from $25,000/mo
+- [Engagements & Pricing](https://www.jobsdonelabs.ai/pricing/): fractional AI CTO retainers — AI Operating Blueprint $7,500 one-time (credited back), Fractional AI Coach $4,500/mo, Fractional AI CTO $12,000/mo, Embedded AI Division from $25,000/mo
 - [Contact](https://www.jobsdonelabs.ai/#contact): get in touch for a free audit
 
 ## Logistics

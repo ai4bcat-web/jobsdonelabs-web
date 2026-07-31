@@ -18,6 +18,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/pricing" component={Pricing} />
+      <Route path="/pricing/" component={Pricing} />
       <Route path="/roi-calculator" component={ROICalculator} />
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />

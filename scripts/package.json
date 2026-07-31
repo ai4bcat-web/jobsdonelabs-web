@@ -9,6 +9,7 @@
     "ping-sitemap": "tsx ./src/ping-sitemap.ts",
     "check-og-tags": "tsx ./src/check-og-tags.ts",
     "gen-og": "tsx ./src/gen-og.ts",
+    "gen-pricing-page": "tsx ./src/gen-pricing-page.ts",
     "inject-og-dimensions": "tsx ./src/inject-og-dimensions.ts",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit"

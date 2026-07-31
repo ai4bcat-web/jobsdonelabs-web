@@ -25,7 +25,7 @@ import {
 } from "../src/lib/engagements";
 
 const SITE = "https://www.jobsdonelabs.ai";
-const URL = `${SITE}/pricing`;
+const URL = `${SITE}/pricing/`;
 
 const TITLE = "Engagements & Pricing — Fractional AI CTO | Jobs Done Labs";
 const DESCRIPTION =

@@ -441,7 +441,7 @@ function ExitIntentPopup({ onOpen }: { onOpen:()=>void }) {
 const NAV_LINKS: [string,string][] = [
   ["/#services","Services"],
   ["/#industries","Industries"],
-  ["/pricing","Engagements"],
+  ["/pricing/","Engagements"],
   ["/case-study/logistics-200k-profit","Case Study"],
   ["/roi-calculator","ROI Calculator"],
   ["/blog/","Blog"],
@@ -577,7 +577,7 @@ function Hero({ onBook }: { onBook:()=>void }) {
                 <PrimaryBtn onClick={onBook}>
                   Book your free audit <ArrowRight size={16} />
                 </PrimaryBtn>
-                <Link href="/pricing" style={{ textDecoration:"none" }}>
+                <Link href="/pricing/" style={{ textDecoration:"none" }}>
                   <span style={{ display:"inline-flex", alignItems:"center", gap:7, fontSize:15, fontWeight:700,
                     color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif", cursor:"pointer" }}>
                     See engagements &amp; pricing <ArrowRight size={15} />
@@ -894,7 +894,7 @@ function Engagements({ onBook }: { onBook:()=>void }) {
                     fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:18, flex:1 }}>
                     {t.promise}
                   </p>
-                  <Link href="/pricing" style={{ textDecoration:"none" }}>
+                  <Link href="/pricing/" style={{ textDecoration:"none" }}>
                     <span style={{ display:"inline-flex", alignItems:"center", gap:6, fontSize:14.5, fontWeight:700,
                       color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
                       What's included <ArrowRight size={15} />
@@ -908,7 +908,7 @@ function Engagements({ onBook }: { onBook:()=>void }) {
         <Fade delay={0.26}>
           <div style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap", marginTop:36 }}>
             <PrimaryBtn onClick={onBook}>Book your free audit <ArrowRight size={16} /></PrimaryBtn>
-            <Link href="/pricing" style={{ textDecoration:"none" }}>
+            <Link href="/pricing/" style={{ textDecoration:"none" }}>
               <span style={{ display:"inline-flex", alignItems:"center", gap:8, background:"transparent", color:INK,
                 fontSize:15, fontWeight:700, padding:"13px 24px", borderRadius:50, border:`1.5px solid ${LINE}`,
                 cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif" }}>
@@ -1124,7 +1124,7 @@ function Guarantee() {
               We put our entire fee on the line. Either we find and recover at least $30,000 in net profit for your business within 90 days — or you owe us nothing. That's how confident we are in the work.
             </p>
             <p style={{ color:"rgba(255,255,255,.66)", fontSize:14.5, lineHeight:1.65, marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              Applies to the <Link href="/pricing" style={{ color:"#fff", fontWeight:700, textDecoration:"underline", textUnderlineOffset:3 }}>Fractional AI CTO tier and above</Link> —
+              Applies to the <Link href="/pricing/" style={{ color:"#fff", fontWeight:700, textDecoration:"underline", textUnderlineOffset:3 }}>Fractional AI CTO tier and above</Link> —
               the engagements where we hold the keyboard. Coaching can't carry it, because your team does the building.
             </p>
             <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
@@ -1240,7 +1240,7 @@ function Seats({ onBook }: { onBook:()=>void }) {
               <PrimaryBtn onClick={onBook}>
                 Ask about the next seat <ArrowRight size={16} />
               </PrimaryBtn>
-              <Link href="/pricing" style={{ textDecoration:"none" }}>
+              <Link href="/pricing/" style={{ textDecoration:"none" }}>
                 <span style={{ display:"inline-flex", alignItems:"center", gap:8, background:"transparent", color:CREAM,
                   fontSize:15, fontWeight:700, padding:"13px 24px", borderRadius:50, border:"1.5px solid rgba(255,255,255,.22)",
                   cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif" }}>
@@ -1389,7 +1389,7 @@ function Footer() {
           <div>
             <div style={{ fontSize:12, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:"rgba(244,239,227,.38)", marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif" }}>Company</div>
             <a href="#" onClick={e => { e.preventDefault(); document.dispatchEvent(new CustomEvent("open-booking")); }} style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Book a call</a>
-            <Link href="/pricing" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Engagements &amp; pricing</Link>
+            <Link href="/pricing/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Engagements &amp; pricing</Link>
             <a href="https://makeitryne.ai" target="_blank" rel="noopener noreferrer" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Free AI builds &amp; prompts</a>
             <Link href="/contact" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Contact</Link>
             <a href="/#faq" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>FAQ</a>
