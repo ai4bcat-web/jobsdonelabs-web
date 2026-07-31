@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import prerenderPricing from "./prerender/pricing";
 
 const rawPort = process.env.PORT;
 // PORT is only needed for the dev/preview server — not for `vite build`.
@@ -69,6 +70,7 @@ export default defineConfig({
     tailwindcss(),
     runtimeErrorOverlay(),
     wwwRedirectPlugin(),
+    prerenderPricing(),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [

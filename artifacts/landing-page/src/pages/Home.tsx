@@ -252,7 +252,7 @@ const COMPARISON_ROWS = [
 
 const GUARANTEE_ITEMS = [
   "We recover at least $30,000 in net profit within 90 days — guaranteed to the last cent",
-  "No long-term retainers, no lock-in contracts",
+  "One fixed monthly fee, a term you can see the end of — never hourly",
   "You keep every system we build, regardless of outcome",
   "If we miss the target, you pay nothing. Zero.",
 ];
