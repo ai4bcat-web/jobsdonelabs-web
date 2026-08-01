@@ -56,10 +56,17 @@ function resolveFilePath(pathname) {
   // Sanitize to prevent directory traversal
   const safe = pathname.replace(/\.\./g, "").replace(/\/+/g, "/");
 
+  // For /blog/ paths, prefer pre-rendered public/ files (updated by jd4 pipeline)
+  // over the Vite-built dist/ (which only rebuilds on deploy).
+  // For everything else, dist/ takes priority (fingerprinted assets, SPA shell).
+  const isBlogPath = safe === "/blog" || safe.startsWith("/blog/");
+  const dirs = isBlogPath
+    ? [staticPublic, distPublic]
+    : [distPublic, staticPublic];
+
   const candidates = [];
 
-  // Check both directories; dist/public takes priority for overlapping files (e.g. index.html)
-  for (const base of [distPublic, staticPublic]) {
+  for (const base of dirs) {
     if (!existsSync(base)) continue;
 
     let p = join(base, safe);
