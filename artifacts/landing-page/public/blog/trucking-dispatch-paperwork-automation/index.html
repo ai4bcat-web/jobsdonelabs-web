@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Automate Dispatch &amp; Paperwork for Trucking | Jobs Done Labs</title>
+  <meta name="description" content="Dispatcher buried in paperwork? Free guide to automate truck dispatch, POD capture, invoicing, and compliance — no TMS needed. Start at $0." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-dispatch-paperwork-automation/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-dispatch-paperwork-automation/" />
+  <meta property="og:title" content="How to Automate Dispatch &amp; Paperwork for Trucking Companies | Jobs Done Labs" />
+  <meta property="og:description" content="Dispatcher drowning in paperwork? PODs lost before billing? Free guide to automate truck dispatch, POD tracking, invoicing, and compliance — no TMS needed, $0 to start." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Automate Dispatch &amp; Paperwork for Trucking Companies" />
+  <meta name="twitter:description" content="Dispatcher drowning in paperwork? Free guide: automate dispatch, POD tracking, invoicing, and compliance — no TMS needed. $0 to start." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Automate Dispatch and Paperwork for a Trucking Company",
+    "description": "Small trucking companies (5-25 trucks) lose $80,000-200,000/year to paperwork friction: missing PODs delay invoicing by 11 days, manual carrier packets eat 6 hours/week, IFTA and BOL retention create audit risks, and the dispatcher spends 40% of their day on paperwork instead of finding loads. This guide covers the 5 highest-ROI automations — mobile POD capture, automated invoicing from load completion, carrier packet automation, compliance document management, and dispatch-to-accounting handoff — with real pricing, setup times, and free templates for every tier.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-08-01",
+    "dateModified": "2026-08-01",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/trucking-dispatch-paperwork-automation/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does paperwork actually cost a small trucking company?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For a 15-truck fleet, the hard costs are measurable: missing PODs delay invoicing by 11 days on average — at $800-1,200/load and 15 loads/week, that's $13,000-20,000/week in delayed cash flow. About 2% of loads are never invoiced because the POD was lost — $24,000-36,000/year in completely unrecovered revenue. Manual carrier packet processing (rate confirmations, COIs, W-9s) costs 6 hours/week at $25-35/hour — $7,800-10,900/year. IFTA and BOL retention compliance gaps create audit exposure of $10,000-25,000 per audit. Combined: $80,000-200,000/year in direct losses plus untold audit risk." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the cheapest way to automate trucking paperwork without buying a TMS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Start at $0 with three builds: (1) Mobile POD capture — drivers photograph bills of lading and PODs with their phone, auto-upload to a shared Google Drive folder organized by load number. (2) Automated invoicing — connect the POD folder to Google Sheets via Apps Script; when a POD photo appears, auto-generate an invoice template with load details from your dispatch sheet. (3) Compliance document management — a Google Drive folder structure with sub-folders for each truck (BOLs, IFTA receipts, maintenance records) and a weekly audit checklist. Total cost: $0. Setup time: 4-6 hours. If you want real-time sync, add Zapier or Make ($20-30/month) to connect the mobile upload to your accounting software." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you automate dispatch AND paperwork together, or are they separate systems?",
+        "acceptedAnswer": { "@type": "Answer", "text": "They should be one system. When a driver marks 'delivered' in your dispatch board, that event should trigger invoicing — the system knows the load number, rate, customer, and that delivery is confirmed. The dispatcher shouldn't have to manually tell accounting that a load is ready to bill. Similarly, rate confirmations accepted in dispatch should auto-file into the carrier's digital folder. The integration is the whole point: dispatch events trigger paperwork actions, so nothing falls through the crack between 'the operations person' and 'the billing person.' This is custom automation territory — off-the-shelf TMS systems handle parts of this but the handoffs between systems are where small fleets lose money. We build end-to-end dispatch-to-invoicing workflows that connect your existing tools." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the Jobs Done Labs $30K guarantee work for trucking automation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Every engagement is backed by a written guarantee: if the automation system we build doesn't recover or save at least $30,000 in documented bottom-line impact within 90 days of deployment, you pay nothing. For trucking automation, we measure against your pre-build baseline: days from delivery to invoice (from your accounting system), percentage of loads with missing PODs (audited from dispatch records), dispatcher hours on paperwork vs. load-finding (time logs), and carrier packet processing time. The $30K can come from faster invoicing (reduced DSO), recovered revenue on previously un-invoiced loads, reduced dispatcher hours on paperwork, or avoided compliance penalties. We only take on work where the math clearly exceeds $30K before we start." }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries does Jobs Done Labs automate besides trucking?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Jobs Done Labs builds custom automation systems across four industries: Logistics & Trucking (fleet operations, dispatch, detention pay, IFTA compliance, document management), Manufacturing (production scheduling, inventory sync, job costing, QuickBooks-to-shop-floor data flow), Professional Services (client onboarding, billing automation, document collection, scope creep tracking), and Home Services & Trades (field-to-office job costing, estimate workflows, material tracking, after-hours triage). Every build starts with a free 30-minute audit — we map your current process, quantify what's being lost, and recommend the 2-3 highest-ROI fixes." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "How to Automate Dispatch and Paperwork for a Trucking Company", "item": "https://www.jobsdonelabs.ai/blog/trucking-dispatch-paperwork-automation/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --accent-deep:#0D4FC5; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--ink); color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--ink); color:var(--cream); font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,2.8rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(11,13,18,.55); margin-bottom:24px; }
+    .byline a { color:rgba(11,13,18,.55); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .comparison { margin:28px 0; }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(11,13,18,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    a { color:var(--accent-deep); }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+<img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=80" alt="Trucking dispatch and paperwork automation dashboard" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Logistics &amp; Trucking</span>
+      <h1>How to Automate Dispatch and Paperwork for a Trucking Company</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · August 1, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">Small trucking companies (5-25 trucks) bleed $80,000-200,000/year through paperwork friction that nobody tracks. Drivers lose bills of lading. PODs go missing and 2% of loads never get invoiced. The dispatcher spends 40% of their day on paperwork instead of finding better-paying loads. IFTA receipts pile up in a shoebox that won't survive an audit. This guide covers the 5 highest-ROI automations — mobile POD capture, automated invoicing from load completion, carrier packet processing, compliance document management, and dispatch-to-accounting handoff — with real 2026 pricing for every tier from free spreadsheet to full custom automation. Every build is scoped so you can start at $0 and scale when the ROI justifies it.</p>
+      </div>
+
+      <h2>The Paperwork Tax: What Manual Dispatch Docs Actually Cost Your Fleet</h2>
+      <p>Ask any fleet owner what their biggest operational headache is and you'll hear the same answer: "The paperwork." Not finding freight. Not maintaining trucks. Paperwork. A 15-truck fleet generates roughly 450-600 documents per month — bills of lading, proofs of delivery, rate confirmations, carrier packets, lumper receipts, fuel receipts, IFTA records, maintenance logs, driver qualification files. Every one of those documents has to be collected, verified, filed, and acted on. And in most small fleets, the system for doing that is a dispatcher with a filing cabinet and a prayer.</p>
+
+      <div class="callout">
+        <p style="margin:0; font-family:'Anton',sans-serif; font-size:1.2rem; line-height:1.3;">A 15-truck fleet processes 450-600 documents/month. At 5 minutes per document — collecting, verifying, filing — that's 37-50 hours/month. At $25/hr, paperwork costs $11,000-15,000/year in dispatcher labor alone — before accounting for the loads they didn't find while buried in paperwork.</p>
+      </div>
+
+      <p>Here's where the money actually leaks:</p>
+
+      <ul>
+        <li><strong>Missing PODs:</strong> The average small fleet takes 11 days from delivery to invoice because PODs sit in driver cabs, get lost in mail, or arrive at the office crumpled and illegible. At $800-1,200/load and 60 loads/month, that's <strong>$48,000-72,000 in cash flow delayed by nearly 2 weeks</strong> — every single month.</li>
+        <li><strong>Never-invoiced loads:</strong> About 2% of loads are never invoiced because the POD simply vanished. For a fleet running 60 loads/month at $1,000 average, that's <strong>$14,400/year in revenue you earned but never collected</strong> — and you probably never noticed because nobody's tracking the gap between dispatch data and invoiced loads.</li>
+        <li><strong>Manual carrier packet processing:</strong> Every new broker/carrier relationship requires a rate confirmation, certificate of insurance, W-9, and carrier agreement. Processing one packet manually — downloading, renaming, filing, entering into your system — takes 15-20 minutes. At 20-25 new carriers/month, that's <strong>5-8 hours/month of clerical work</strong> at $25-35/hour.</li>
+        <li><strong>IFTA and BOL retention:</strong> The IRS and DOT require 3-6 years of records retention. Most small fleets keep BOLs in cardboard boxes in a storage unit. One IFTA audit where you can't produce quarterly fuel receipts = <strong>$10,000-25,000 in penalties and back taxes</strong>. And the auditor doesn't care that "the driver lost the receipt."</li>
+      </ul>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The wake-up number:</strong> Combined, paperwork friction costs a 15-truck fleet $80,000-200,000/year — in delayed cash flow, unrecovered revenue, clerical labor, and audit exposure. A TMS that costs $500/month doesn't fix this because TMS software organizes data but doesn't automate the collection. The fix is workflow automation between the driver, the dispatcher, and the back office.</p>
+      </div>
+
+      <h2>The 5 Automations That Actually Fix Trucking Paperwork</h2>
+      <p>This isn't about buying software. It's about building workflows where events trigger actions automatically — a delivery confirmation triggers an invoice, a new carrier acceptance triggers document filing, a fuel receipt photo triggers IFTA categorization. Here are the 5 automations with the fastest payback, ranked by ROI.</p>
+
+      <h3>1. Mobile POD Capture: From Paper in the Cab to Invoice in Hours</h3>
+      <p>The single highest-ROI automation in trucking. Every day a POD sits in a driver's cab is a day your invoice isn't sent and your cash isn't coming. The fix isn't a scanner or a fancy app — it's making POD capture faster than mailing it.</p>
+      <p><strong>Tier 1 ($0):</strong> Drivers photograph the signed POD and BOL with their phone immediately after delivery. The photo auto-uploads to a shared Google Drive folder named by load number (e.g., <code>LOAD-4829-POD.pdf</code>). Your dispatcher or billing person checks the folder each morning, matches PODs to loads in the dispatch log, and generates invoices. Setup time: 1 hour — create the Drive folder structure, share it with drivers, send a 3-bullet instruction text. Cost: $0. Time recovered: 5-8 days off your invoicing cycle.</p>
+      <p><strong>Tier 2 ($20-50/month):</strong> Add a mobile scanning app like Adobe Scan or CamScanner that auto-crops, deskews, and converts photos to clean PDFs. Add Zapier or Make automation: when a new file appears in the "PODs" Drive folder, it auto-renames by date+load number and sends a notification to the billing person. Setup time: 2-3 hours. Cost: $20-50/month. Time recovered: 8-10 days off invoicing + zero manual filing.</p>
+      <p><strong>Tier 3 (custom, $3,000-8,000 build):</strong> Full mobile capture-to-invoice pipeline. Driver photographs POD → system extracts load number, date, and consignee via OCR → matches to dispatch record → auto-generates invoice draft → billing person reviews and sends in one click. Setup time: 2-4 weeks. Cost: $3,000-8,000 build, minimal ongoing. Time recovered: invoicing goes from 11 days to same-day.</p>
+
+      <h3>2. Automated Invoicing: When Delivery = Invoice (No Human In Between)</h3>
+      <p>The gap between "load delivered" and "invoice sent" is pure cash flow drag. The average small fleet waits until PODs arrive at the office (days 1-7), then enters invoice data into QuickBooks or their accounting system (day 8-10), then emails the invoice (day 11). That's 11 days of working capital tied up per load — for 60 loads/month, that's roughly <strong>$50,000-70,000 in delayed receivables at all times.</strong></p>
+      <p><strong>The fix:</strong> Connect your dispatch tracking to your invoicing. When a driver's status changes to "delivered" in your dispatch system (even a Google Sheet), that event triggers an invoice draft. For a Google Sheets setup: use Apps Script to watch for "delivered" status changes, pull the load details (rate, customer, load number) from the row, and generate an invoice template in Google Docs or send the data to QuickBooks Online via their API. The billing person reviews and sends — 90 seconds per invoice instead of 15 minutes.</p>
+      <p><strong>Setup time:</strong> 4-8 hours for the Google Sheets version, 2-4 weeks for a QuickBooks API integration. <strong>Cost:</strong> $0-30/month for the Sheets version, $3,000-6,000 for a custom QuickBooks integration. <strong>Cash flow recovered:</strong> $50,000-70,000 in accelerated receivables.</p>
+
+      <h3>3. Carrier Packet Automation: Stop Manually Processing Rate Confirmations</h3>
+      <p>Every new broker or carrier you work with generates 4-5 documents — rate confirmation, certificate of insurance, W-9, carrier agreement, maybe a broker-carrier agreement. Your dispatcher downloads each one from email, renames it, saves it to the right folder, and enters the carrier into your system. At 15-20 minutes per packet and 20-25 new carriers/month, that's <strong>5-8 hours/month of data entry.</strong></p>
+      <p><strong>The fix:</strong> Set up an email parsing automation. When a rate confirmation email arrives from a broker, automation extracts the key fields (broker name, load number, rate, pickup/delivery locations, dates) and populates a Google Sheet or your dispatch system. The PDF is auto-filed into a carrier folder. For the COI and W-9, the system checks expiration dates and alerts you 30 days before a COI expires — so you never dispatch a load to a carrier whose insurance lapsed last week.</p>
+      <p><strong>Setup time:</strong> 3-5 hours using Gmail filters + Zapier or Make. <strong>Cost:</strong> $20-30/month. <strong>Time recovered:</strong> 5-8 hours/month.</p>
+
+      <h3>4. Compliance Document Management: Survive an Audit Without a Storage Unit</h3>
+      <p>IFTA audits, DOT compliance reviews, and insurance claims all demand one thing: produce the document. The exact BOL from load 2847 on March 12, 2025. The fuel receipt from truck 14's fill-up in Amarillo on January 8. If you can't produce it, you lose. The fix isn't expensive — it's structure.</p>
+      <p><strong>The $0 system:</strong> A Google Drive folder structure organized by truck number, then by month. Every fuel receipt gets photographed into <code>Truck-14/2026-08/</code>. Every BOL gets scanned into <code>Loads/2026/Q3/</code>. Every maintenance record into <code>Truck-14/Maintenance/</code>. Create a Friday-afternoon checklist: one person spends 20 minutes verifying that every load from the week has a POD in the folder, every fuel receipt is uploaded, and any gaps are flagged for the driver to fix Monday morning. Setup time: 2 hours. Cost: $0. Audit readiness: goes from "we'll find it in the storage unit" to "here's the folder" in one weekend.</p>
+      <p><strong>For fleets ready to invest ($50-150/month):</strong> Document management tools like Hubdoc or Dext auto-extract data from receipts, categorize expenses, and sync to QuickBooks. Combined with the folder structure above, you get both audit-ready document storage AND automated expense categorization for IFTA reporting.</p>
+
+      <h3>5. Dispatch-to-Accounting Handoff: Close the Gap That Loses Loads</h3>
+      <p>This is where most fleets lose money and don't know it. The dispatcher marks a load "complete" in their system. Accounting generates an invoice from the POD — but only for loads where the POD actually arrived. Nobody ever compares the dispatch log (every load that was hauled) to the invoice register (every load that was billed). The gap is invisible — until you run the reconciliation and find 12 loads from last quarter that were never invoiced.</p>
+      <p><strong>The fix:</strong> A weekly reconciliation that takes 15 minutes. Export your dispatch log (every load with status "delivered") and your invoice register (every invoice sent) to two sheets. A simple VLOOKUP or Apps Script cross-references load numbers. Any load in the dispatch log that's NOT in the invoice register = unbilled revenue. Flag it, find the POD, bill it. Fleets that implement this typically find <strong>2-5 unbilled loads in the first reconciliation alone</strong> — that's $2,000-6,000 of revenue that was sitting in a driver's cab or a lost email thread.</p>
+      <p><strong>Setup time:</strong> 1-2 hours. <strong>Cost:</strong> $0. <strong>Recovered revenue:</strong> $2,000-36,000/year depending on fleet size and current leakage.</p>
+
+      <div class="comparison">
+        <h3>Paperwork Automation: Tier-by-Tier Cost Comparison (2026)</h3>
+        <table>
+          <tr>
+            <th>Automation</th>
+            <th>Tier 1 ($0-30/mo)</th>
+            <th>Tier 2 ($30-150/mo)</th>
+            <th>Tier 3 (Custom Build)</th>
+          </tr>
+          <tr>
+            <td>Mobile POD Capture</td>
+            <td>Phone photos → Google Drive folder by load number | 1 hr setup</td>
+            <td>Adobe Scan + Zapier file rename/notification | 2-3 hrs setup</td>
+            <td>OCR-to-invoice pipeline: photo → auto-matched invoice draft | $3K-8K build</td>
+          </tr>
+          <tr>
+            <td>Automated Invoicing</td>
+            <td>Google Sheets + Apps Script: "delivered" status → invoice template | 4-8 hrs setup</td>
+            <td>Zapier: dispatch sheet → QuickBooks draft invoice | 6-10 hrs setup</td>
+            <td>Full API integration: dispatch → QuickBooks → customer email | $3K-6K build</td>
+          </tr>
+          <tr>
+            <td>Carrier Packet Processing</td>
+            <td>Gmail filters + manual Google Sheet entry | 2 hrs setup</td>
+            <td>Email parsing via Zapier/Make → auto-populated sheet + COI expiry alerts | 3-5 hrs setup</td>
+            <td>Custom email-to-TMS integration with auto-filing and renewal tracking | $4K-7K build</td>
+          </tr>
+          <tr>
+            <td>Compliance Docs</td>
+            <td>Google Drive folder structure + Friday checklist | 2 hrs setup</td>
+            <td>Hubdoc/Dext: auto-categorize receipts + sync to QuickBooks | 3 hrs setup</td>
+            <td>Custom document management with OCR, IFTA auto-calculation | $5K-10K build</td>
+          </tr>
+          <tr>
+            <td>Dispatch-to-Invoice Reconciliation</td>
+            <td>Weekly VLOOKUP: dispatch log vs. invoice register | 1-2 hrs setup</td>
+            <td>Apps Script: auto-flag unmatched loads + email alert | 3-4 hrs setup</td>
+            <td>Real-time dispatch-to-accounting sync: every load tracked end-to-end | $2K-5K build</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Why Most TMS Software Doesn't Fix This (And What Does)</h2>
+      <p>Here's the uncomfortable truth about transportation management systems for small fleets: a TMS organizes data — it doesn't automate collection. Your TMS can store that load 4829 was delivered, but it can't make the driver photograph the POD. It can track that a carrier's COI expires in 30 days, but it can't chase down the new certificate. The gap between "the system knows" and "the human does" is where small fleets hemorrhage money.</p>
+      <p>The automation approach is different: instead of buying a system and expecting humans to feed it, you build workflows that meet humans where they already are. Drivers already have phones — make POD capture a 10-second photo, not a data entry task. Dispatchers already update load status — make that status change trigger the next step automatically. The back office already generates invoices — make the invoice generate itself from dispatch data and only require human review, not human creation.</p>
+      <p>This is custom automation territory. It doesn't come in a box. But the build cost ($3,000-15,000 for the full stack of 5 automations) pays back in 2-4 months from recovered revenue and reduced labor alone — before accounting for the audit risk you eliminated and the dispatcher hours you freed for revenue-generating work.</p>
+
+      <h2>What If You Want the Whole System Built For You?</h2>
+      <p>We build the full dispatch-to-invoicing automation stack for trucking companies — mobile POD capture, automated invoicing, carrier packet processing, compliance document management, and dispatch-to-accounting reconciliation — end-to-end. Our approach: we spend a day with your dispatcher and back office, map every document flow, quantify exactly what the paperwork friction is costing you (we'll find unbilled loads in the first hour — they're always there), and build the automations that close every gap. Every build is scoped against a hard ROI target and covered by our $30K-recovered-in-90-days guarantee. If we don't find and recover at least $30K in documented impact — from unbilled loads, accelerated invoicing, reduced dispatcher hours on paperwork, or avoided compliance penalties — you pay nothing.</p>
+
+      <h2>Friday Afternoon Setup: Stop the Paperwork Bleeding This Week</h2>
+      <div class="checklist">
+        <h3>4 things to do before your drivers roll on Monday</h3>
+        <ol>
+          <li><strong>Build the POD folder structure.</strong> Create a Google Drive folder called "PODs" with sub-folders by month (2026-08). Share it with every driver. Text them one instruction: "After every delivery, photograph the signed BOL/POD and upload it here. 10 seconds. No more lost paperwork." Setup time: 15 minutes.</li>
+          <li><strong>Run the reconciliation.</strong> Export your last 8 weeks of dispatch data (every load marked "delivered") and your last 8 weeks of invoices sent. Cross-reference by load number. Any delivered load not on the invoice list = money you haven't collected. Find the POD (check email, check the driver, check the filing cabinet) and bill it today. Most fleets find $2,000-6,000 in the first reconciliation. Setup time: 30 minutes.</li>
+          <li><strong>Create the Friday compliance checklist.</strong> A 5-item list: (a) every load this week has a POD in the Drive folder, (b) every fuel receipt is uploaded by truck, (c) all rate confirmations from new carriers are filed, (d) any expiring COIs are flagged, (e) the dispatch-to-invoice reconciliation is clean. Assign one person. 20 minutes every Friday. Setup time: 15 minutes.</li>
+          <li><strong>Set up the invoicing trigger template.</strong> In your dispatch sheet, add a column "Invoice Status" with options: Pending, Draft Generated, Sent, Paid. Write one Apps Script (or use Zapier): when status changes to "Delivered," auto-generate an invoice draft in Google Docs using a template with the load details. Billing person opens the draft, reviews, sends. Setup time: 1-2 hours.</li>
+        </ol>
+        <p style="font-size:15px; color:rgba(11,13,18,.55); margin:16px 0 0">That's it. In one afternoon, you've built a POD capture system, found (and billed) revenue you'd already lost, created an audit-ready compliance checklist, and set up automated invoicing. Most fleets recover $3,000-8,000 in the first 30 days with just these four changes — before spending a dime on software. The remaining automations (carrier packet processing, full OCR pipeline, custom integrations) can wait until the low-hanging fruit pays for them.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>How much does paperwork actually cost a small trucking company?</h3>
+        <p>For a 15-truck fleet, paperwork friction costs $80,000-200,000/year: missing PODs delay invoicing by 11 days ($13K-20K/week in delayed cash flow), 2% of loads are never invoiced because PODs vanished ($24K-36K/year in unrecovered revenue), manual carrier packet processing eats 6 hours/week ($7.8K-10.9K/year in labor), and IFTA/BOL retention gaps create $10K-25K in audit exposure per audit. Most fleets don't track these numbers because the losses are invisible — they happen in the gap between dispatch and accounting, and nobody owns the reconciliation.</p>
+
+        <h3>What's the cheapest way to automate trucking paperwork without buying a TMS?</h3>
+        <p>Start at $0 with three builds: mobile POD capture (phone photos → shared Google Drive folder by load number, 1 hour setup), automated invoicing (Google Sheets + Apps Script triggers an invoice draft when load status hits "delivered," 4-8 hours setup), and compliance document management (Drive folder structure by truck/month + Friday checklist, 2 hours setup). Total cost: $0. The first week typically recovers $2,000-6,000 in previously unbilled loads. If you want email parsing or QuickBooks sync, add Zapier or Make for $20-30/month.</p>
+
+        <h3>Can you automate dispatch AND paperwork together, or are they separate systems?</h3>
+        <p>They must be one system. When a driver marks "delivered," that event should trigger invoicing automatically — the system knows the load number, rate, customer, and that delivery is confirmed. When a rate confirmation is accepted, it should auto-file into the carrier's folder and populate your dispatch sheet. The integration is where small fleets win: dispatch events trigger paperwork actions, so nothing falls through the crack between operations and billing. This is custom automation — off-the-shelf TMS systems handle parts but the handoffs between systems are where money leaks. We build end-to-end dispatch-to-invoicing workflows that connect your existing tools.</p>
+
+        <h3>How does the $30K guarantee work for trucking automation?</h3>
+        <p>Every Jobs Done Labs engagement includes a written guarantee: if the automation system we build doesn't recover or save at least $30,000 in documented bottom-line impact within 90 days of deployment, you pay nothing. For trucking, we measure against your pre-build baseline: days from delivery to invoice, percentage of loads with missing PODs, dispatcher hours on paperwork vs. load-finding, and carrier packet processing time. The $30K can come from faster invoicing, recovered revenue on previously un-invoiced loads, reduced dispatcher hours, or avoided compliance penalties. We only take on work where the math clearly exceeds $30K before we start.</p>
+
+        <h3>What industries does Jobs Done Labs automate besides trucking?</h3>
+        <p>Jobs Done Labs builds custom automation systems for Logistics &amp; Trucking (fleet operations, dispatch, detention pay, IFTA compliance, document management), Manufacturing (production scheduling, inventory sync, job costing, QuickBooks-to-shop-floor data flow), Professional Services (client onboarding, billing automation, document collection, scope creep tracking), and Home Services &amp; Trades (field-to-office job costing, estimate workflows, material tracking, after-hours triage). Every build starts with a free 30-minute audit.</p>
+      </section>
+
+<section class="related-reading">
+<h2>Related reading</h2>
+<p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+<ul style="list-style:none;padding:0;margin:0">
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-dispatcher-overwhelm-automation-guide/" style="font-weight:600;color:#1466FF;text-decoration:none">Dispatcher Overwhelmed? How Small Fleets Handle 50+ Loads Without Hiring</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-pod-tracking-without-tms/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Drivers Turn in Paper PODs and Half Go Missing Before Billing — Here's the Fix</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-freight-bill-audit-carrier-overcharge-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Carriers Overcharged Your Fleet $12,000 Last Year — The 5-Minute Audit</a>
+  </li>
+</ul>
+</section>
+
+      <div class="cta-box">
+        <h2>Stop bleeding money on paperwork</h2>
+        <p>Book a free 30-minute paperwork audit. We'll map your document flow, find the unbilled loads hiding in the gap between dispatch and accounting, and show you the 2-3 automations that recover the most cash fastest. No pitch, no pressure. You keep the audit map either way.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+</article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
