@@ -30,7 +30,10 @@ app.use(
   }),
 );
 app.use(cors());
-app.use("/api/github-webhook", express.raw({ type: "application/json" }));
+// GitHub webhook: express.raw() MUST come before express.json() so the body
+// stays as a raw Buffer for signature verification. Also bump the limit to
+// 1 MB — push events with multiple commits can exceed the 100 KB default.
+app.use("/api/github-webhook", express.raw({ type: "application/json", limit: "1mb" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
