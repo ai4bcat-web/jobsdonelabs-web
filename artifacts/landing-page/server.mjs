@@ -59,8 +59,13 @@ function resolveFilePath(pathname) {
   // For /blog/ paths, prefer pre-rendered public/ files (updated by jd4 pipeline)
   // over the Vite-built dist/ (which only rebuilds on deploy).
   // For everything else, dist/ takes priority (fingerprinted assets, SPA shell).
-  const isBlogPath = safe === "/blog" || safe.startsWith("/blog/");
-  const dirs = isBlogPath
+  // About, contact, and blog paths: prefer public/ (static HTML from jd4 pipeline)
+  // over dist/ (Vite build) so pre-rendered SEO pages take priority.
+  const publicFirst =
+    safe === "/blog" || safe.startsWith("/blog/") ||
+    safe === "/about" || safe.startsWith("/about/") ||
+    safe === "/contact" || safe.startsWith("/contact/");
+  const dirs = publicFirst
     ? [staticPublic, distPublic]
     : [distPublic, staticPublic];
 
