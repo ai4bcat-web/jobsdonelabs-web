@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import BookingModal, { type BookingIntent } from "@/components/BookingModal";
-import { TIERS } from "@/lib/engagements";
+import BookingModal from "@/components/BookingModal";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -241,18 +240,17 @@ const RESULTS_STATS = [
 ];
 
 const COMPARISON_ROWS = [
-  { feature:"CTO-level strategy and hands-on build",  inhouse:false, freelance:false, jdl:true },
-  { feature:"Recovers profit in 90 days",             inhouse:false, freelance:false, jdl:true },
-  { feature:"Guaranteed result or you pay $0",        inhouse:false, freelance:false, jdl:true },
-  { feature:"Built by an operator running real P&Ls", inhouse:false, freelance:false, jdl:true },
-  { feature:"Systems you own outright",               inhouse:true,  freelance:false, jdl:true },
-  { feature:"One fixed monthly fee — never hourly",   inhouse:false, freelance:false, jdl:true },
-  { feature:"Live in weeks, not quarters",            inhouse:false, freelance:false, jdl:true },
+  { feature:"Recovers profit in 90 days",       inhouse:false, freelance:false, jdl:true },
+  { feature:"Guaranteed result or you pay $0",  inhouse:false, freelance:false, jdl:true },
+  { feature:"Built by real operators",          inhouse:false, freelance:false, jdl:true },
+  { feature:"Systems you own outright",         inhouse:true,  freelance:false, jdl:true },
+  { feature:"No long-term retainer",            inhouse:false, freelance:true,  jdl:true },
+  { feature:"Live in weeks, not quarters",      inhouse:false, freelance:false, jdl:true },
 ];
 
 const GUARANTEE_ITEMS = [
   "We recover at least $30,000 in net profit within 90 days — guaranteed to the last cent",
-  "One fixed monthly fee, a term you can see the end of — never hourly",
+  "No long-term retainers, no lock-in contracts",
   "You keep every system we build, regardless of outcome",
   "If we miss the target, you pay nothing. Zero.",
 ];
@@ -264,12 +262,10 @@ const FAQ_ITEMS = [
     a:"We build the four systems that recover profit for operators: lead capture and instant response, quoting and sales automation, operations and scheduling systems, and reporting dashboards. Every build is custom to your business — not templates, not off-the-shelf tools with your logo on them." },
   { q:"Do I need a technical team?",
     a:"No. We handle the architecture, integration, and deployment. We document everything and train your team to use it. You don't need developers, IT staff, or anyone technical on your side. If you have them, great — we'll work with them. If you don't, we've got it covered." },
-  { q:"How is this different from hiring an agency, a freelancer, or a full-time AI hire?",
-    a:"An agency sells deliverables. A freelancer sells hours. A full-time AI leader costs $220K–$300K a year plus equity, and you'd still be hiring builders underneath them. We sell a seat: a technology leader who runs a portfolio of businesses on AI agents, working inside yours at a fixed monthly fee — with the agent fleet that does the building already running. You own everything we build, and you can end at the end of a term." },
+  { q:"How is this different from hiring an agency or buying software?",
+    a:"Agencies deliver deliverables. Software gives you a tool. We deliver a measured result — $30K in recovered profit — or you pay nothing. We're operators, not marketers. We build inside your business, own the outcome, and hand you systems you control forever. No monthly SaaS fees, no retainer, no disappearing after launch." },
   { q:"What does it cost?",
-    a:"Engagements are monthly retainers, never hourly. Coaching runs $4,500/month for teams that build in-house; the Fractional AI CTO tier is $12,000/month and is where most operators start; an Embedded AI Division starts at $25,000/month. Everything begins with a $7,500 AI Operating Blueprint — two weeks, one working agent shipped, and the fee is credited back if you continue. Full breakdown on the Engagements page." },
-  { q:"Why a retainer instead of a one-off project?",
-    a:"Because the first build is never the whole job. Once agents meet your real data, the highest-value system is usually the one you discover in month two — and a project would have shipped and left by then. A retainer buys a leader who keeps adapting, at a number you can budget. No timesheets, no change orders, no surprise invoices." },
+    a:"Pricing depends on the scope we uncover in your audit. We've worked with businesses from $50K to $120K engagements. But here's what matters: every engagement is priced against a hard ROI target. If the math doesn't work for you, we won't sell you." },
   { q:"What happens on the free audit call?",
     a:"It's 45 minutes. We map your current ops — lead flow, quoting process, scheduling, reporting — and identify where the biggest leaks are. At the end, you get a rough number: what we think we can recover and how. No pitch, no pressure. You keep the map either way." },
   { q:"How long does it take to see results?",
@@ -285,12 +281,12 @@ const MARQUEE_ITEMS = [
   "Food Service Distribution","Home Service","Wholesale & Supply","Field Services",
 ];
 
-/* What's actually open, by tier. The Embedded Division is genuinely
-   capacity-bound — one operator can only sit in so many leadership teams. */
-const SEAT_AVAILABILITY: { tier:string; note:string; capped?:boolean }[] = [
-  { tier:"Fractional AI Coach",  note:"Open · 3-month minimum" },
-  { tier:"Fractional AI CTO",    note:"Open · 6-month minimum" },
-  { tier:"Embedded AI Division", note:"2 seats a year", capped:true },
+const PILOT_SEATS = [
+  { label:"HVAC & Plumbing"     },
+  { label:"Freight & Logistics" },
+  { label:"Manufacturing"       },
+  { label:"Field Service"       },
+  { label:"Auto Transport"      },
 ];
 
 const FIT_FOR = [
@@ -435,23 +431,15 @@ function ExitIntentPopup({ onOpen }: { onOpen:()=>void }) {
 /* ───────────────────────────────────── */
 /*  Nav                                 */
 /* ───────────────────────────────────── */
-// Kept deliberately short — "Engagements" is now a primary conversion page, and the
-// nav collides with the wordmark past seven items. Results and FAQ are on-page
-// anchors reachable by scrolling, and both still live in the mobile menu below.
 const NAV_LINKS: [string,string][] = [
   ["/#services","Services"],
   ["/#industries","Industries"],
-  ["/pricing/","Engagements"],
-  ["/case-study/logistics-200k-profit","Case Study"],
-  ["/roi-calculator","ROI Calculator"],
-  ["/blog/","Blog"],
-  ["/contact","Contact"],
-];
-
-/** Extra on-page anchors surfaced only in the mobile menu. */
-const MOBILE_EXTRA_LINKS: [string,string][] = [
   ["/#results","Results"],
   ["/#faq","FAQ"],
+  ["/blog/","Blog"],
+  ["/case-study/logistics-200k-profit","Case Study"],
+  ["/roi-calculator","ROI Calculator"],
+  ["/contact","Contact"],
 ];
 
 function LPNav({ onBook }: { onBook:()=>void }) {
@@ -506,7 +494,7 @@ function LPNav({ onBook }: { onBook:()=>void }) {
         {menu && (
           <motion.div initial={{ height:0, opacity:0 }} animate={{ height:"auto", opacity:1 }} exit={{ height:0, opacity:0 }}
             style={{ overflow:"hidden", borderTop:`1px solid ${LINE}`, background:CREAM }}>
-            {[...NAV_LINKS, ...MOBILE_EXTRA_LINKS].map(([href,label]) => (
+            {NAV_LINKS.map(([href,label]) => (
               href.startsWith("/") && !href.startsWith("/#") && !href.startsWith("/blog") && !href.startsWith("/case-study") ? (
                 <Link key={href} href={href} onClick={() => setMenu(false)}
                   style={{ display:"block", padding:"14px 24px", fontSize:16, fontWeight:600, color:INK,
@@ -571,18 +559,12 @@ function Hero({ onBook }: { onBook:()=>void }) {
               </div>
               <p style={{ fontSize:16, lineHeight:1.68, color:INK_SOFT, maxWidth:460,
                 marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                You're a $1M+ operator in service, logistics, or manufacturing, and profit slips away every week — cold leads, dropped jobs, work that should run itself. Bring in a fractional AI CTO who already runs businesses this way: custom agents, automation, and a live dashboard that find it and recover it. 90 days, or you don't pay.
+                You're a $1M+ operator in service, logistics, or manufacturing, and profit slips away every week — cold leads, dropped jobs, work that should run itself. Custom AI agents, automation, and a live dashboard find it and recover it. 90 days, or you don't pay.
               </p>
-              <div style={{ display:"flex", flexWrap:"wrap", alignItems:"center", gap:12, marginBottom:28 }}>
+              <div style={{ display:"flex", flexWrap:"wrap", gap:12, marginBottom:28 }}>
                 <PrimaryBtn onClick={onBook}>
                   Book your free audit <ArrowRight size={16} />
                 </PrimaryBtn>
-                <Link href="/pricing/" style={{ textDecoration:"none" }}>
-                  <span style={{ display:"inline-flex", alignItems:"center", gap:7, fontSize:15, fontWeight:700,
-                    color:INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif", cursor:"pointer" }}>
-                    See engagements &amp; pricing <ArrowRight size={15} />
-                  </span>
-                </Link>
               </div>
               {/* Microtrust */}
               <div style={{ display:"flex", alignItems:"center", gap:12 }}>
@@ -725,12 +707,9 @@ function FSO() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <Fade>
             <SectionLabel>Your unfair advantage</SectionLabel>
-            <H2 style={{ maxWidth:480 }}>Your fractional AI CTO.</H2>
-            <p style={{ color:INK_SOFT, fontSize:16.5, lineHeight:1.7, maxWidth:480, marginBottom:20, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              Not an agency you manage. Not software you babysit. A technology leader who already runs a portfolio of businesses on AI agents — sitting inside yours, owning the roadmap, building the systems, and accountable for the number they move.
-            </p>
+            <H2 style={{ maxWidth:480 }}>Your fractional systems operator.</H2>
             <p style={{ color:INK_SOFT, fontSize:16.5, lineHeight:1.7, maxWidth:480, marginBottom:30, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              One fixed monthly fee. A term you can see the end of. Every system yours to keep.
+              Not an agency you manage. Not software you babysit. A dedicated operator who maps your leaks, builds the systems, runs the numbers, and keeps the profit flowing back to you.
             </p>
             <div className="grid grid-cols-2 gap-4">
               {stats.map(s => (
@@ -843,80 +822,6 @@ function Process() {
             </Fade>
           ))}
         </div>
-      </div>
-    </section>
-  );
-}
-
-/* ───────────────────────────────────── */
-/*  Engagements — pricing preview       */
-/* ───────────────────────────────────── */
-function Engagements({ onBook }: { onBook:()=>void }) {
-  return (
-    <section id="engagements" style={{ background:CREAM, padding:"96px 24px" }}>
-      <div style={{ maxWidth:1120, margin:"0 auto" }}>
-        <Fade>
-          <div style={{ textAlign:"center", marginBottom:44 }}>
-            <SectionLabel>Engagements</SectionLabel>
-            <H2 style={{ maxWidth:600, margin:"0 auto 14px" }}>
-              Retainers, not hourly. Pick who holds the keyboard.
-            </H2>
-            <p style={{ fontSize:16.5, color:INK_SOFT, maxWidth:560, margin:"0 auto", fontFamily:"'Hanken Grotesk',sans-serif", lineHeight:1.65 }}>
-              Every engagement starts with a{" "}
-              <strong style={{ color:INK }}>$7,500 AI Operating Blueprint</strong> — two weeks, one working agent shipped,
-              and the fee credited back if you continue.
-            </p>
-          </div>
-        </Fade>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          {TIERS.map((t, i) => {
-            const dark = !!t.featured;
-            return (
-              <Fade key={t.id} delay={i*0.08}>
-                <div style={{
-                  background: dark ? INK2 : CREAM2,
-                  border: dark ? `1px solid ${ACCENT}55` : `1px solid ${LINE}`,
-                  borderRadius:14, padding:"28px 26px", height:"100%",
-                  display:"flex", flexDirection:"column",
-                  boxShadow: dark ? `0 24px 56px -20px ${ACCENT}55` : "none",
-                }}>
-                  <div style={{ fontSize:11, fontWeight:800, letterSpacing:"0.12em", textTransform:"uppercase",
-                    color: dark ? ACCENT : INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:10 }}>
-                    {t.eyebrow}
-                  </div>
-                  <h3 className="anton" style={{ fontSize:24, lineHeight:1.1, color: dark ? CREAM : INK, marginBottom:12 }}>{t.name}</h3>
-                  <div style={{ display:"flex", alignItems:"baseline", gap:6, marginBottom:3 }}>
-                    <span className="anton" style={{ fontSize:32, color:ACCENT, lineHeight:1 }}>{t.price}</span>
-                    <span style={{ fontSize:14.5, fontWeight:600, color: dark ? "rgba(244,239,227,.6)" : INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif" }}>{t.cadence}</span>
-                  </div>
-                  <div style={{ fontSize:12.5, color: dark ? "rgba(244,239,227,.5)" : INK_SOFT, fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:16 }}>{t.term}</div>
-                  <p style={{ fontSize:14.5, lineHeight:1.62, color: dark ? "rgba(244,239,227,.78)" : INK_SOFT,
-                    fontFamily:"'Hanken Grotesk',sans-serif", marginBottom:18, flex:1 }}>
-                    {t.promise}
-                  </p>
-                  <Link href="/pricing/" style={{ textDecoration:"none" }}>
-                    <span style={{ display:"inline-flex", alignItems:"center", gap:6, fontSize:14.5, fontWeight:700,
-                      color:ACCENT, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                      What's included <ArrowRight size={15} />
-                    </span>
-                  </Link>
-                </div>
-              </Fade>
-            );
-          })}
-        </div>
-        <Fade delay={0.26}>
-          <div style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap", marginTop:36 }}>
-            <PrimaryBtn onClick={onBook}>Book your free audit <ArrowRight size={16} /></PrimaryBtn>
-            <Link href="/pricing/" style={{ textDecoration:"none" }}>
-              <span style={{ display:"inline-flex", alignItems:"center", gap:8, background:"transparent", color:INK,
-                fontSize:15, fontWeight:700, padding:"13px 24px", borderRadius:50, border:`1.5px solid ${LINE}`,
-                cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                See full pricing <ArrowRight size={15} />
-              </span>
-            </Link>
-          </div>
-        </Fade>
       </div>
     </section>
   );
@@ -1044,7 +949,7 @@ function Comparison() {
           <div style={{ background:CREAM, border:`1px solid ${LINE}`, borderRadius:12, overflow:"hidden" }}>
             <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr", borderBottom:`1px solid ${LINE}` }}>
               <div style={{ padding:"16px 20px" }} />
-              {(["Full-time AI hire","Freelancer","Jobs Done Labs"] as string[]).map((h, i) => (
+              {(["In-house hire","Freelancer","Jobs Done Labs"] as string[]).map((h, i) => (
                 <div key={h} style={{ padding:"16px 20px", textAlign:"center",
                   background:i===2?`${ACCENT}0D`:"transparent",
                   borderLeft:`1px solid ${LINE}` }}>
@@ -1123,10 +1028,6 @@ function Guarantee() {
             <p style={{ color:"rgba(255,255,255,.8)", fontSize:16.5, lineHeight:1.7, marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
               We put our entire fee on the line. Either we find and recover at least $30,000 in net profit for your business within 90 days — or you owe us nothing. That's how confident we are in the work.
             </p>
-            <p style={{ color:"rgba(255,255,255,.66)", fontSize:14.5, lineHeight:1.65, marginBottom:28, fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              Applies to the <Link href="/pricing/" style={{ color:"#fff", fontWeight:700, textDecoration:"underline", textUnderlineOffset:3 }}>Fractional AI CTO tier and above</Link> —
-              the engagements where we hold the keyboard. Coaching can't carry it, because your team does the building.
-            </p>
             <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
               {GUARANTEE_ITEMS.map(item => (
                 <div key={item} style={{ display:"flex", alignItems:"flex-start", gap:12 }}>
@@ -1203,50 +1104,38 @@ function Fit() {
 }
 
 /* ───────────────────────────────────── */
-/*  Seats — what's actually open        */
+/*  Pilot                               */
 /* ───────────────────────────────────── */
-function Seats({ onBook }: { onBook:()=>void }) {
+function Pilot({ onBook }: { onBook:()=>void }) {
   return (
     <section style={{ background:CREAM2, padding:"96px 24px" }}>
       <div style={{ maxWidth:800, margin:"0 auto", textAlign:"center" }}>
         <Fade>
           <div style={{ background:INK2, border:"1px solid rgba(255,255,255,.08)", borderRadius:16, padding:"48px 36px", position:"relative", overflow:"hidden" }}>
-            <SectionLabel onDark>Availability</SectionLabel>
+            <SectionLabel onDark>Pilot program · 2026</SectionLabel>
             <H2 onDark style={{ maxWidth:560, margin:"0 auto 14px" }}>
-              The Embedded Division is two seats a year.
+              We're building for 5 service businesses right now.
             </H2>
-            <p style={{ color:"rgba(244,239,227,.58)", fontSize:16, lineHeight:1.7, maxWidth:520, margin:"0 auto 36px", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-              Not manufactured scarcity — arithmetic. A CTO of record sits in your leadership meetings, owns your AI P&amp;L,
-              and reports to your board. One person can do that twice a year and do it properly. Coaching and the Fractional
-              CTO tier scale with the agent fleet; the top seat doesn't.
+            <p style={{ color:"rgba(244,239,227,.58)", fontSize:16, lineHeight:1.7, maxWidth:480, margin:"0 auto 36px", fontFamily:"'Hanken Grotesk',sans-serif" }}>
+              Instead of recycled testimonials, here's the truth: we're hands-on with our founding cohort as we speak. Full, numbers-backed case studies drop Q4 2026 — get in before they do.
             </p>
             <div style={{ display:"flex", flexWrap:"wrap", gap:10, justifyContent:"center", marginBottom:32 }}>
-              {SEAT_AVAILABILITY.map(s => (
-                <div key={s.tier} style={{ display:"flex", alignItems:"center", gap:8,
-                  background:s.capped?"rgba(20,102,255,.14)":"rgba(255,255,255,.05)",
-                  border:s.capped?`1px solid ${ACCENT}66`:"1px solid rgba(255,255,255,.1)",
+              {PILOT_SEATS.map(s => (
+                <div key={s.label} style={{ display:"flex", alignItems:"center", gap:8,
+                  background:"rgba(255,255,255,.05)", border:"1px solid rgba(255,255,255,.1)",
                   borderRadius:6, padding:"9px 16px" }}>
-                  <span style={{ width:8, height:8, borderRadius:"50%",
-                    background:s.capped?ACCENT:"rgba(255,255,255,.25)", flex:"0 0 auto" }} />
-                  <span style={{ fontSize:13.5, fontWeight:700, color:"rgba(244,239,227,.86)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.tier}</span>
-                  <span style={{ fontSize:13, color:"rgba(244,239,227,.5)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.note}</span>
+                  <span style={{ width:8, height:8, borderRadius:"50%", background:"rgba(255,255,255,.25)", flex:"0 0 auto" }} />
+                  <span style={{ fontSize:13.5, fontWeight:600, color:"rgba(244,239,227,.7)", fontFamily:"'Hanken Grotesk',sans-serif" }}>{s.label}</span>
                 </div>
               ))}
             </div>
             <div style={{ display:"inline-flex", alignItems:"center", gap:7, background:"rgba(255,255,255,.05)", border:"1px solid rgba(255,255,255,.1)", borderRadius:6, padding:"8px 14px", marginBottom:28 }}>
-              <span style={{ fontSize:12, fontWeight:600, color:"rgba(244,239,227,.42)", letterSpacing:"0.06em", fontFamily:"'Hanken Grotesk',sans-serif" }}>Every engagement starts with the $7,500 Blueprint — credited back</span>
+              <span style={{ fontSize:12, fontWeight:600, color:"rgba(244,239,227,.42)", letterSpacing:"0.06em", fontFamily:"'Hanken Grotesk',sans-serif" }}>Case studies coming Q4 2026</span>
             </div>
-            <div style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap" }}>
+            <div>
               <PrimaryBtn onClick={onBook}>
-                Ask about the next seat <ArrowRight size={16} />
+                Apply for the next cohort <ArrowRight size={16} />
               </PrimaryBtn>
-              <Link href="/pricing/" style={{ textDecoration:"none" }}>
-                <span style={{ display:"inline-flex", alignItems:"center", gap:8, background:"transparent", color:CREAM,
-                  fontSize:15, fontWeight:700, padding:"13px 24px", borderRadius:50, border:"1.5px solid rgba(255,255,255,.22)",
-                  cursor:"pointer", fontFamily:"'Hanken Grotesk',sans-serif" }}>
-                  Compare the tiers <ArrowRight size={15} />
-                </span>
-              </Link>
             </div>
           </div>
         </Fade>
@@ -1389,8 +1278,6 @@ function Footer() {
           <div>
             <div style={{ fontSize:12, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", color:"rgba(244,239,227,.38)", marginBottom:14, fontFamily:"'Hanken Grotesk',sans-serif" }}>Company</div>
             <a href="#" onClick={e => { e.preventDefault(); document.dispatchEvent(new CustomEvent("open-booking")); }} style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Book a call</a>
-            <Link href="/pricing/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Engagements &amp; pricing</Link>
-            <a href="https://makeitryne.ai" target="_blank" rel="noopener noreferrer" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Free AI builds &amp; prompts</a>
             <Link href="/contact" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Contact</Link>
             <a href="/#faq" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>FAQ</a>
             <a href="/blog/subcontractor-paperwork-management-system-gc/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Subcontractor paperwork system</a>
@@ -1431,15 +1318,14 @@ function Footer() {
 /* ───────────────────────────────────── */
 export default function Home() {
   const [showBooking, setShowBooking] = useState(false);
-  const [intent, setIntent] = useState<BookingIntent>("hero");
-  const open = (i: BookingIntent) => { setIntent(i); setShowBooking(true); };
+  const open = () => setShowBooking(true);
 
   useEffect(() => {
     const clickHandler = (e: MouseEvent) => {
       const el = (e.target as Element).closest('a[href="#book"]');
-      if (el) { e.preventDefault(); setIntent("cta-link"); setShowBooking(true); }
+      if (el) { e.preventDefault(); setShowBooking(true); }
     };
-    const customHandler = () => { setIntent("footer"); setShowBooking(true); };
+    const customHandler = () => setShowBooking(true);
     document.addEventListener("click", clickHandler);
     document.addEventListener("open-booking", customHandler);
     return () => {
@@ -1450,27 +1336,26 @@ export default function Home() {
 
   return (
     <div style={{ background:CREAM, color:INK, fontFamily:"'Hanken Grotesk',system-ui,sans-serif", WebkitFontSmoothing:"antialiased" }}>
-      <ExitIntentPopup onOpen={() => open("exit-intent")} />
-      <LPNav onBook={() => open("nav")} />
-      <Hero onBook={() => open("hero")} />
+      <ExitIntentPopup onOpen={open} />
+      <LPNav onBook={open} />
+      <Hero onBook={open} />
       <TrustStrip />
       <Problem />
       <Industries />
       <Testimonials />
       <FSO />
-      <InlineCTA onBook={() => open("inline-cta")} />
+      <InlineCTA onBook={open} />
       <Services />
       <Process />
-      <Engagements onBook={() => open("engagements")} />
       <Results />
       <Comparison />
       <Guarantee />
       <Fit />
-      <Seats onBook={() => open("seats")} />
+      <Pilot onBook={open} />
       <FAQ />
-      <FinalCTA onBook={() => open("final-cta")} />
+      <FinalCTA onBook={open} />
       <Footer />
-      <BookingModal open={showBooking} onClose={() => setShowBooking(false)} intent={intent} />
+      <BookingModal open={showBooking} onClose={() => setShowBooking(false)} />
     </div>
   );
 }

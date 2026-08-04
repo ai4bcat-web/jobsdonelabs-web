@@ -1,5 +1,13 @@
 # Jobs Done Labs — fractional AI consulting offer
 
+> **SUPERSEDED — not shipping (Ryne, 2026-08-03, RW-74).**
+> The fractional-consulting reposition was cancelled. jobsdonelabs.ai keeps its
+> existing positioning and guarantee — *"Recover $30,000 in 90 days, or I work the
+> next 90 free."* The `/pricing` page, the engagement tiers and the home page
+> rewrites were reverted out of `main`; nothing here is live or scheduled to be.
+> Kept as a record of the pricing architecture and the reasoning, in case the
+> question comes back.
+
 Source: RW-71 "[VISION] Free funnel strategy: makeitryne.ai → JobsDoneLabs consulting"
 (Ryne, July 30 2026). This is the pricing architecture and the reasoning behind it.
 Prices themselves live in code at `artifacts/landing-page/src/lib/engagements.ts` —

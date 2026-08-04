@@ -19,10 +19,6 @@ if ! pnpm --filter @workspace/scripts run test; then
   exit 1
 fi
 
-# Regenerate the pre-rendered /pricing page from engagements.ts before the
-# sitemap runs, so a price change on main reaches the live static page.
-pnpm --filter @workspace/scripts run gen-pricing-page
-
 pnpm --filter @workspace/scripts run update-sitemap
 pnpm --filter @workspace/scripts run inject-og-dimensions
 
@@ -40,7 +36,6 @@ pnpm --filter @workspace/scripts run gen-og --missing
 # If the push permanently fails the local commit is reset so subsequent runs
 # start clean rather than accumulating stale commits.
 push_generated_files() {
-  git add -- 'artifacts/landing-page/public/pricing/index.html' || true
   git add -- 'artifacts/landing-page/public/blog/*/og.png' || true
   git add -- 'artifacts/landing-page/public/blog/*/index.html' || true
   git add -- 'artifacts/landing-page/public/about/*/index.html' || true

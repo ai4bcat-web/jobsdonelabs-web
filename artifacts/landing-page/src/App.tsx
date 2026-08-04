@@ -4,7 +4,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
-import Pricing from "@/pages/Pricing";
 import ROICalculator from "@/pages/ROICalculator";
 import Terms from "@/pages/Terms";
 import Privacy from "@/pages/Privacy";
@@ -17,8 +16,6 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/pricing" component={Pricing} />
-      <Route path="/pricing/" component={Pricing} />
       <Route path="/roi-calculator" component={ROICalculator} />
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />
