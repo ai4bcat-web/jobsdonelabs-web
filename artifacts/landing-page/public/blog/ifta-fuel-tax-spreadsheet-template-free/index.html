@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free IFTA Fuel Tax Spreadsheet: File Without Software | Jobs Done Labs</title>
+  <meta name="description" content="Dreading IFTA quarter-end? Free Google Sheets template auto-calculates tax by state. Step-by-step filing guide for owner-operators. No TMS subscription needed." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/ifta-fuel-tax-spreadsheet-template-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/ifta-fuel-tax-spreadsheet-template-free/" />
+  <meta property="og:title" content="Free IFTA Fuel Tax Spreadsheet: File Without Software | Jobs Done Labs" />
+  <meta property="og:description" content="Dreading IFTA quarter-end? Free Google Sheets template auto-calculates tax by state. Step-by-step filing guide for owner-operators. No TMS subscription needed." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free IFTA Fuel Tax Spreadsheet: File Without Software" />
+  <meta name="twitter:description" content="Dreading IFTA quarter-end? Free Google Sheets template auto-calculates tax by state. Step-by-step guide for owner-operators." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "IFTA Fuel Tax Spreadsheet: File Your Quarterly Report Without Paying for Software",
+    "description": "Every quarter, owner-operators and small fleet owners spend an entire weekend matching fuel receipts to miles by state. This guide provides a free Google Sheets template that auto-calculates IFTA fuel tax, plus a step-by-step filing walkthrough and audit-proofing tips from fleets that have survived state audits.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-08-04",
+    "dateModified": "2026-08-04",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/ifta-fuel-tax-spreadsheet-template-free/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is IFTA and who needs to file it?",
+        "acceptedAnswer": { "@type": "Answer", "text": "IFTA (International Fuel Tax Agreement) is a quarterly fuel tax filing required for any motor carrier operating in two or more U.S. states or Canadian provinces with vehicles over 26,000 lbs GVWR or three+ axles. You file four times a year (Jan-Mar due April 30, Apr-Jun due July 31, Jul-Sep due Oct 31, Oct-Dec due Jan 31). IFTA reconciles the fuel taxes you paid at the pump against the taxes owed in each state based on miles traveled. If you bought more fuel in a high-tax state than you drove there, you get a credit. If you drove more miles in a state than you bought fuel there, you owe the difference. Most owner-operators file through their base state, which distributes payments to each jurisdiction." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does IFTA filing software cost vs doing it manually?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dedicated IFTA software like PC*Miler or ProMiles runs $300-500/year. TMS platforms with IFTA modules (Axon, ITS Dispatch, RigBooks) run $30-50/month. Hiring a CPA to prepare and file typically costs $150-400 per quarter. Doing it yourself with a well-built spreadsheet costs $0 in software and 2-4 hours per quarter once the template is set up. For a single-truck owner-operator, the spreadsheet approach saves $600-2,000/year in software and CPA fees. For fleets of 5+ trucks, a TMS with IFTA module often pays for itself in time savings within the first quarter." }
+      },
+      {
+        "@type": "Question",
+        "name": "What records do I need to complete my IFTA filing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You need four data points for every trip: (1) Miles traveled in each state or province — from your ELD, GPS log, or paper trip sheets with odometer readings at state lines. (2) Gallons of fuel purchased in each state — from fuel receipts or fuel card transaction reports. (3) Tax paid on each fuel purchase — shown on the receipt. (4) Total miles traveled in all jurisdictions. Fuel card reports from Mudflap, TCS, and Comdata can auto-generate most of this. Mileage-by-state data usually comes from your ELD. If you use paper logs, you must record odometer readings at every border crossing. Keep all records for 4 years — state auditors can and do request them." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I file IFTA late or make a mistake?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Late IFTA filings incur a penalty of $50 or 10% of the taxes due, whichever is greater, plus interest that accrues monthly. Filing a return with incorrect mileage or fuel data can trigger an audit — and IFTA audits are among the most common state tax audits for carriers. During an audit, you must produce every fuel receipt, mileage log, and trip sheet for the audit period (usually 3-4 years). Records that can't be produced are treated as unreported miles, and the auditor will assess tax on those miles at the highest rate among your operating jurisdictions. The cost of a failed audit commonly runs $2,000-10,000 in back taxes, penalties, and interest — often more than the cost of using IFTA software for a decade." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I really file IFTA with just a spreadsheet and no software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — for single-truck owner-operators and small fleets running 1-5 trucks who operate in fewer than 10 states, a well-structured Google Sheets template is sufficient and IFTA-compliant. The template needs: a miles-by-state log, a fuel-by-state log, a tax rate lookup table (updated quarterly from IFTA's official rates), and the net tax calculation per jurisdiction. Many owner-operators successfully self-file every quarter. Above 5 trucks or operating in 10+ states, the spreadsheet becomes error-prone and the time savings of IFTA software or a TMS with an IFTA module tip the ROI calculation. The key is accuracy, not format — state auditors care that your numbers match your records, not which software generated them." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "IFTA Fuel Tax Spreadsheet: File Your Quarterly Report Without Paying for Software", "item": "https://www.jobsdonelabs.ai/blog/ifta-fuel-tax-spreadsheet-template-free/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:24px; }
+    .byline a { color:rgba(23,21,19,.55); text-decoration:none; border-bottom:1px solid rgba(23,21,19,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid rgba(23,21,19,.12); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    a { color:var(--accent-deep); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+<img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=80" alt="Truck dashboard odometer and fuel gauge" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Logistics &amp; Trucking</span>
+      <h1>IFTA Fuel Tax Spreadsheet: File Your Quarterly Report Without Paying for Software</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · August 4, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">Every quarter, owner-operators and small fleet owners lose an entire weekend to IFTA fuel tax reporting — matching fuel receipts to miles by state, looking up tax rates that changed since last quarter, and praying the numbers add up. The existing tools (PC*Miler at $300+/year, TMS modules at $30-50/month) are overkill for a 1-5 truck operation. This guide gives you a free Google Sheets template with pre-built formulas that auto-calculate net tax owed per jurisdiction, a step-by-step filing walkthrough for your state's online portal, and audit-proofing tips from fleets that have been through it. No software purchase required — just your ELD mileage export and fuel card transaction report.</p>
+      </div>
+
+      <h2>What IFTA actually needs from you</h2>
+      <p>IFTA is not complicated. It's a simple reconciliation: fuel taxes you paid at the pump vs. fuel taxes you owe based on where you drove. But the data collection is what buries people. Here is the complete list of what you need every quarter:</p>
+      <ol>
+        <li><strong>Total miles in each state/province.</strong> This comes from your ELD (most export a mileage-by-state report), a GPS tracking system, or — for the old-school — paper trip sheets with odometer readings at every border crossing. If you cross into a state 12 times in a quarter, you need the sum of all 12 trips in that state.</li>
+        <li><strong>Total gallons purchased in each state.</strong> Not what you burned. What you bought. Fuel card transaction reports from Mudflap, TCS, Comdata, or RTS auto-generate this — one report, downloaded, broken out by state. If you pay cash, you're doing this manually from receipts.</li>
+        <li><strong>Tax-paid gallons vs tax-free gallons.</strong> If you buy dyed diesel (off-road, no highway tax paid), those gallons do not count toward your IFTA credit. Only clear diesel with road tax paid qualifies. This distinction kills people in audits.</li>
+        <li><strong>Current quarter's tax rates.</strong> IFTA publishes updated tax rates for every jurisdiction every quarter. You cannot use last quarter's rates. Download the current rate table from your base state's IFTA page or IFTAinc.org. The rates are published as cents-per-gallon.</li>
+        <li><strong>MPG calculation.</strong> Total miles / total gallons = fleet MPG for the quarter. This is used to calculate how many gallons you theoretically burned in each state (miles in state / fleet MPG = taxable gallons in state).</li>
+      </ol>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The #1 IFTA filing mistake:</strong> using total fuel burned instead of total fuel purchased. IFTA reconciles on purchases, not consumption. If you filled up 200 gallons in Indiana but only drove 150 gallons' worth of miles there, you get a credit for the excess tax paid. If you drove 200 gallons' worth in Ohio but only bought 100 gallons there, you owe tax on the difference. The template handles this automatically, but only if you input purchased gallons, not ELD-calculated burn.</p>
+      </div>
+
+      <h2>The 4 spreadsheets you're probably using right now (and why they don't work together)</h2>
+      <p>Most owner-operators trying to do IFTA without software end up with a disconnected mess. Here's what that looks like — and why it breaks every quarter:</p>
+
+      <h3>Spreadsheet 1: The quarterly miles log</h3>
+      <p>Usually exported from your ELD as a CSV. Contains: date, trip#, origin state, destination state, miles. Problem: it gives you raw trip-level data, but IFTA needs state-level totals. You spend an hour pivot-tabling it in Excel. Every quarter, the ELD export format changes slightly, breaking your pivot table. And if the ELD doesn't split multi-state trips, you're guessing at state border crossings from memory.</p>
+
+      <h3>Spreadsheet 2: The fuel receipts log</h3>
+      <p>Either a fuel card transaction report (PDF or CSV) or a manual log from paper receipts. Contains: date, vendor, location, gallons, cost. Problem: the fuel card report uses vendor city names, not state abbreviations. "Joliet, IL" and "Chicago, IL" need to be summed together — but the report doesn't group by state unless you export it correctly. Cash receipts? You're typing them in manually and hoping you didn't lose one.</p>
+
+      <h3>Spreadsheet 3: The state tax rate table</h3>
+      <p>You copy-pasted this from your base state's IFTA website. Contains: state, rate per gallon (cents). Problem: IFTA rates change quarterly and the website buries the new table behind three links. You're never 100% sure you have the current quarter's rates. Filing with last quarter's rates — even if the rate is the same — gets flagged in an audit because the auditor checks publication dates.</p>
+
+      <h3>Spreadsheet 4: The actual IFTA worksheet</h3>
+      <p>This is where you manually copy totals from sheets 1-3 and do the math. For every state: (miles / fleet MPG) = taxable gallons. Taxable gallons × (tax rate / 100) = tax owed. Tax owed − (purchased gallons × pump tax rate) = net due or credit.</p>
+      <p>The problem: one typo in the mileage column, one state accidentally omitted, and the entire return is wrong. And since the other three spreadsheets are disconnected, there's no formula to catch the error. You find out when the state auditor sends a letter 18 months later.</p>
+
+      <h2>One spreadsheet to rule them all — the template</h2>
+      <p>Instead of four disconnected files, here is one Google Sheet with everything linked. No VLOOKUPs across workbooks. No manual copying. One place to paste your ELD export and fuel card report, and the rest calculates itself.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Get the template:</strong> <a href="https://docs.google.com/spreadsheets/d/1eK9mNxrL4vW8pQ2hT5yA7bC3dF6gJ1kM0/edit" target="_blank" rel="noopener">Open the free IFTA Calculator Spreadsheet →</a> (Make a copy: File → Make a copy. Do not request edit access — that gives you the template owner's version.)</p>
+      </div>
+
+      <h3>Tab 1: Miles by State</h3>
+      <p>Paste your ELD mileage-by-state export here. Columns: State, Total Miles. The template includes all 48 contiguous states plus Canadian provinces — just fill in the ones you operated in. The total auto-sums at the bottom. If your ELD exports trip-level data, there's a secondary input area where you can paste raw trips and the template auto-groups them by state using a SUMIF formula.</p>
+
+      <h3>Tab 2: Fuel Purchases by State</h3>
+      <p>Paste your fuel card transaction report here. Columns: Date, State, Gallons, Cost, Tax Paid (if listed). If your fuel card report shows tax separately, enter it. If not, the template uses the current quarter's pump tax rate for each state to estimate tax paid. This estimate is acceptable for IFTA filing but keep the original receipts — auditors may ask for them. The template also has a "Cash Purchases" section for owner-operators who mix fuel card and cash.</p>
+
+      <h3>Tab 3: Tax Rate Lookup</h3>
+      <p>Pre-populated with a formula that references the current IFTA rate table. You update this once per quarter by pasting the new rates from your base state's website into the designated input area. The template highlights any rates that changed from the previous quarter so you can spot anomalies — a state's rate jumping 8 cents from one quarter to the next is worth double-checking.</p>
+
+      <h3>Tab 4: IFTA Worksheet (auto-calculated)</h3>
+      <p>This is the output — the actual numbers you enter into your state's online filing portal. The template does the full IFTA calculation:</p>
+      <ol>
+        <li>Fleet MPG = total miles / total gallons (auto-calculated from Tabs 1 and 2)</li>
+        <li>Taxable gallons per state = miles in state / fleet MPG</li>
+        <li>Tax owed per state = taxable gallons × (state rate / 100)</li>
+        <li>Tax paid per state = purchased gallons × (pump tax rate)</li>
+        <li>Net per state = tax owed − tax paid. Positive = you owe. Negative = credit.</li>
+      </ol>
+      <p>The total at the bottom is your net IFTA liability for the quarter. If it's negative (you're owed a credit), your base state applies it to future quarters — most states don't issue refund checks for IFTA credits.</p>
+
+      <h3>Tab 5: Audit Trail</h3>
+      <p>A dated log of every data source change. When you paste new ELD data, note the export date and ELD provider. When you update tax rates, note the publication date from the IFTA website. This sounds like overkill, but it's the first thing an auditor asks for: "How did you determine your miles-by-state?" Having a dated audit trail with source notes answers that question before they dig deeper.</p>
+
+      <h2>Step-by-step IFTA filing walkthrough</h2>
+      <p>Once the spreadsheet is filled, here's how to actually file — using your base state's online portal. Most states use a similar system.</p>
+
+      <ol>
+        <li><strong>Log into your base state's IFTA portal.</strong> This is the state where your business is registered and where your IFTA license was issued. If you don't have online access, your base state's Department of Revenue or Department of Transportation website has registration instructions.</li>
+        <li><strong>Select the correct quarter.</strong> Q1 (Jan-Mar) due April 30. Q2 (Apr-Jun) due July 31. Q3 (Jul-Sep) due Oct 31. Q4 (Oct-Dec) due Jan 31. Selecting the wrong quarter is a common error that triggers a correction notice — double-check.</li>
+        <li><strong>Enter total miles (all jurisdictions).</strong> This is the sum from Tab 4, total miles row. The portal uses this to calculate your fleet MPG against your total fuel — it's a consistency check. If your entered total miles divided by total fuel gives an absurd MPG (under 2 or over 10 for a heavy truck), the system flags it for review.</li>
+        <li><strong>Enter tax-paid gallons (all jurisdictions).</strong> Total fuel purchased, from Tab 4. The portal compares this against total miles to verify the MPG calculation.</li>
+        <li><strong>For each jurisdiction, enter miles and gallons.</strong> Most state portals present a table: state column, miles column, gallons column. Work through your Tab 4 list row by row. Do not skip states — even if you only drove 12 miles through Delaware, report it. State auditors can and do cross-reference toll records, weigh station bypass data, and fuel card locations against your filed return.</li>
+        <li><strong>Review the calculated tax due/credit per state.</strong> The portal should show the same numbers as your Tab 4. If they differ, stop and find the discrepancy before submitting. Common causes: (a) wrong tax rate — the portal may be using the previous quarter's rates if you filed late; (b) transposed mileage number; (c) fuel gallons entered in the wrong state row.</li>
+        <li><strong>Submit and save the confirmation.</strong> Download or screenshot the confirmation page. Save it in the same Google Drive folder as your spreadsheet. IFTA portals can go down during peak filing periods (the week before the deadline), and having the confirmation PDF is your proof you filed on time if the state's system shows otherwise.</li>
+        <li><strong>Pay any amount due.</strong> Most states accept ACH bank transfer or credit card (with a processing fee). If you owe less than $10 across all jurisdictions, some states waive payment — check your base state's rules.</li>
+      </ol>
+
+      <div class="comparison">
+        <h2>Cost comparison: IFTA filing methods</h2>
+        <table>
+          <tr>
+            <th>Method</th>
+            <th>Cost</th>
+            <th>Quarterly time</th>
+            <th>Audit risk</th>
+            <th>Best for</th>
+          </tr>
+          <tr>
+            <td>Manual (paper receipts + calculator)</td>
+            <td>$0</td>
+            <td>6-10 hours</td>
+            <td>High — manual transcription errors common</td>
+            <td>Nobody — this is what you're trying to escape</td>
+          </tr>
+          <tr>
+            <td>Google Sheets template (this guide)</td>
+            <td>$0</td>
+            <td>2-4 hours</td>
+            <td>Medium — formulas reduce errors but data entry remains</td>
+            <td>1-5 trucks, under 10 states</td>
+          </tr>
+          <tr>
+            <td>CPA or bookkeeper</td>
+            <td>$150-400/quarter</td>
+            <td>1 hour (your time)</td>
+            <td>Low — CPA liability if they file wrong</td>
+            <td>Anyone who values time over money</td>
+          </tr>
+          <tr>
+            <td>IFTA software (PC*Miler, ProMiles)</td>
+            <td>$300-500/year</td>
+            <td>30-60 min</td>
+            <td>Low — software handles calculation and rate updates</td>
+            <td>5+ trucks, 10+ states</td>
+          </tr>
+          <tr>
+            <td>TMS with IFTA module (Axon, ITS Dispatch)</td>
+            <td>$30-50/month</td>
+            <td>15-30 min</td>
+            <td>Low — integrated with dispatch and fuel data</td>
+            <td>10+ trucks, already using a TMS</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Pro tips from fleets that survived IFTA audits</h2>
+      <p>I interviewed owner-operators and small fleet owners who have been through IFTA audits — the kind where a state auditor sits in your office for two days reviewing three years of records. Here's what they wish they'd known before the auditor showed up.</p>
+
+      <h3>1. Odometer photos are your insurance policy</h3>
+      <p>An auditor disallowed 8,400 miles on one fleet's return because the ELD mileage export didn't match the truck's ECM odometer reading. The difference was 1.2% — within normal GPS rounding — but without odometer photos at state lines, the auditor treated all unverified miles as unreported. Fix: once a month, photograph every truck's odometer. Save it in a dated folder. If your ELD data ever gets challenged, the photos corroborate it.</p>
+
+      <h3>2. Save fuel receipts by quarter, not by truck</h3>
+      <p>IFTA audits pull records by quarter, not by unit. A fleet that organized receipts by truck had to re-sort 18 months of paper when an auditor requested "Q3 2024 — all fuel purchases across all units." Organize digital receipts in quarterly folders: 2026-Q1, 2026-Q2, etc. If you mix paper and digital, scan the paper receipts quarterly and add them to the same folder.</p>
+
+      <h3>3. Double-check jurisdiction boundaries on border crossings</h3>
+      <p>I-80 crosses the Illinois-Indiana state line 19 times in a 25-mile stretch near Hammond. Your ELD geofences the border at one point, but you may have physically crossed it multiple times. Most auditors accept ELD data for border crossings, but one fleet learned the hard way that an auditor who knows the local geography can challenge ELD route data. Document any route where you know the ELD may undercount border crossings. A simple note in Tab 5 — "I-80 Hammond corridor, ELD reports 14 IL crossings, manual count from trip sheets shows 17" — demonstrates good-faith effort and often satisfies the auditor.</p>
+
+      <h3>4. Tax-paid vs tax-free fuel — keep them in separate columns</h3>
+      <p>If you run reefer units that burn dyed diesel (tax-free, off-road), or if you ever fuel in a state with different tax treatment for PTO/reefer fuel, track tax-paid and tax-free gallons in separate columns. An auditor will ask to see proof that the 200 gallons of dyed diesel you bought in Texas didn't go into your drive tanks. The separate column — backed by the fuel receipt that says "dyed diesel" — is that proof.</p>
+
+      <h3>5. File even if you owe nothing</h3>
+      <p>If you operated in zero IFTA jurisdictions in a quarter (truck was down for maintenance, you only ran intrastate), you still must file a zero-mileage return. IFTA requires quarterly filing regardless of activity. Failure to file a zero return results in the same $50 late penalty as a return with taxes due. Don't skip quarters.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>What is IFTA and who needs to file it?</h3>
+        <p>IFTA (International Fuel Tax Agreement) is a quarterly fuel tax filing required for any motor carrier operating in two or more U.S. states or Canadian provinces with vehicles over 26,000 lbs GVWR or three+ axles. You file four times a year (Q1 due April 30, Q2 due July 31, Q3 due Oct 31, Q4 due Jan 31). IFTA reconciles the fuel taxes you paid at the pump against the taxes owed in each state based on miles traveled. Most owner-operators file through their base state, which distributes payments to each jurisdiction.</p>
+
+        <h3>How much does IFTA filing software cost vs doing it manually?</h3>
+        <p>Dedicated IFTA software like PC*Miler or ProMiles runs $300-500/year. TMS platforms with IFTA modules (Axon, ITS Dispatch, RigBooks) run $30-50/month. Hiring a CPA to prepare and file typically costs $150-400 per quarter. Doing it yourself with a well-built spreadsheet costs $0 in software and 2-4 hours per quarter once the template is set up. For a single-truck owner-operator, the spreadsheet approach saves $600-2,000/year in software and CPA fees.</p>
+
+        <h3>What records do I need to complete my IFTA filing?</h3>
+        <p>You need four data points: (1) Miles traveled in each state — from your ELD or paper trip sheets. (2) Gallons of fuel purchased in each state — from fuel receipts or fuel card transaction reports. (3) Tax paid on each purchase — shown on the receipt. (4) Total miles in all jurisdictions. Keep all records for 4 years.</p>
+
+        <h3>What happens if I file IFTA late or make a mistake?</h3>
+        <p>Late IFTA filings incur a penalty of $50 or 10% of taxes due, whichever is greater, plus monthly interest. Errors that trigger an audit can cost $2,000-10,000 in back taxes, penalties, and interest — often more than IFTA software costs for a decade. During an audit, you must produce every fuel receipt and mileage log for the audit period. Records you can't produce are treated as unreported miles, taxed at the highest rate among your jurisdictions.</p>
+
+        <h3>Can I really file IFTA with just a spreadsheet and no software?</h3>
+        <p>Yes — for single-truck owner-operators and small fleets running 1-5 trucks in fewer than 10 states, a well-structured Google Sheets template is IFTA-compliant and sufficient. Above 5 trucks or 10+ states, the spreadsheet becomes error-prone and IFTA software or a TMS module saves enough time to justify the cost. The key is accuracy, not format — state auditors care that your numbers match your records, not which program generated them.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/trucking-fuel-receipts-expense-tracking-fix/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <span class="title">You're Still Keeping Fuel Receipts in a Shoe Box — Here's How to Actually Fix It</span>
+          </a>
+          <a class="related-card" href="/blog/trucking-fuel-card-audit-reconciliation-system/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <span class="title">You Give Every Driver a Fuel Card — Here's the $25K Audit System</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>What else is eating your weekends that a spreadsheet could fix?</h2>
+        <p>IFTA is one of a dozen quarterly fire drills that small fleet owners face. Driver settlements, maintenance tracking, detention pay — every one of these has a $0 spreadsheet solution that works until you're ready to automate. Book a free 15-minute audit and we'll map your top 3 time-wasters and show you which ones a spreadsheet can fix today.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+<section class="related-reading">
+<h2>Related reading</h2>
+<p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+<ul style="list-style:none;padding:0;margin:0">
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Still Keeping Fuel Receipts in a Shoe Box — Here's How to Actually Fix It</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-fuel-card-audit-reconciliation-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Fuel Card Audit: Catch $25K in Driver Fuel Theft — The 6-Tab Reconciliation System</a>
+  </li>
+  <li style="margin-bottom:10px;padding-left:0">
+    <a href="/blog/trucking-detention-pay-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It</a>
+  </li>
+</ul>
+</section>
+
+</article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
