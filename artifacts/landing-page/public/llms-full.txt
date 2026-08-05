@@ -1358,6 +1358,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Stop Losing Track of Estimates: A Free Job Tracking Spreadsheet for Small Contractors
+
 Spending Too Much Time on Invoicing? How Contractors Cut Paperwork from Hours to Minutes
 
 You Drove 240 Miles to Give 7 Free Estimates — The Tire-Kicker Filter System
@@ -2013,6 +2015,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Stop Losing Track of Estimates: A Free Job Tracking Spreadsheet for Small Contractors
 
 Your Field Crews Know Exactly How Much They Lost — 3 Weeks After the Job Closed
 
@@ -3699,6 +3703,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Stop Losing Track of Estimates: A Free Job Tracking Spreadsheet for Small Contractors
+
 Stop Missing Customer Calls — The Real Cost, a Free Revenue Calculator, and 7 Fixes That Work for Any Service Business
 
 You Drove 240 Miles to Give 7 Free Estimates Last Week — And 5 of Those People Were Never Going to Buy
@@ -4193,6 +4199,203 @@ You're Tracking 40 Wholesale Customers on Net-30 Terms With a Spreadsheet That B
 
 
 URL: https://www.jobsdonelabs.ai/blog/ecommerce-manual-data-entry-silent-killer/
+
+---
+
+# Stop Losing Estimates — Free Contractor Spreadsheet
+
+Home Services & Trades
+
+Stop Losing Track of Estimates: A Free Job Tracking Spreadsheet for Small Contractors
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 5, 2026
+
+Key takeaways
+
+Small contractors lose 15–25% of potential revenue to estimates they forgot to follow up on. For a $300K contractor, that's $45K–$75K/year in jobs that went to competitors who simply called back. The fix isn't expensive software — it's a free 3-tab spreadsheet with auto reminders and a 15-minute Monday ritual. Here's exactly how to build it, plus a downloadable template you can start using today.
+
+The real cost of estimate amnesia
+
+You've done it. Every contractor has. You send an estimate to a promising lead — nice kitchen remodel, full HVAC replacement, new deck — and they say "let me think about it." You make a mental note to follow up. Then Tuesday happens. And Wednesday. A water heater emergency in Westfield, a framing crew that ran short on lumber, a supplier who shipped the wrong tile.
+
+Three weeks later you remember that estimate. You call. They already hired someone else. "Oh, we thought you were too busy," they say. What they mean is:
+
+your competitor followed up and you didn't.
+
+This isn't a one-off. It's a pattern. Industry surveys on contractor forums and data from business coaches consistently show that small contractors lose 15–25% of their potential revenue to unfollowed estimates — not because the work was bad or the price was wrong, but because nobody circled back. For a contractor doing $300K in annual revenue with a 25–30% close rate, that's $11,250 to $18,750 in lost jobs
+
+per quarter
+
+. Over a year: $45,000 to $75,000.
+
+The math is brutal but simple:
+
+You sent 120 estimates last year. You closed 30 of them (25% close rate). Of the 90 you didn't close, how many did you follow up with more than once? Twice? At all? If just 10 of those 90 — barely 11% — would have closed with a second follow-up, and your average job is $4,500, that's $45,000 you left on the table. Not because you're bad at what you do. Because you had no system for following up.
+
+The Estimate & Job Tracker — template walkthrough
+
+The spreadsheet has three tabs. That's it. Three tabs, some conditional formatting, a few auto-calculated fields, and you have a system that runs on Monday mornings in 15 minutes flat. Here's what goes in each tab:
+
+Tab 1: Active Estimates
+
+This is where every estimate lives until it's either won or lost. No more "which folder did I save that quote in?" or scrolling through your sent emails looking for the one you sent to the Smiths three weeks ago.
+
+Columns:
+
+Estimate #, Client Name, Phone, Email, Job Type, Estimate Date, Amount, Follow-Up Date, Status (Won / Lost / Pending), Notes.
+
+The
+
+Follow-Up Date
+
+column is the most important field in the entire spreadsheet. Set it to 5 business days after the estimate date. That's your trigger. Every Monday morning, you sort by this column, and every estimate past its follow-up date gets a call, text, or email — that day. No exceptions.
+
+Conditional formatting tip:
+
+Make the Follow-Up Date cell turn red when today's date passes it. Then orange when it's within 2 days. Then green when it's more than 2 days out. One glance at the color tells you what needs attention.
+
+Tab 2: Active Jobs
+
+Once an estimate is won, it moves to Tab 2. This is your live dashboard of everything in progress, from the day the contract is signed to the day the final invoice is paid.
+
+Columns:
+
+Job #, Client, Start Date, Crew Assigned, Materials Ordered? (Yes/No), Permit Status (Pending/Approved/N/A), Invoiced? (Yes/No), Paid? (Yes/No), Notes.
+
+The genius of this tab is the
+
+Invoiced?
+
+and
+
+Paid?
+
+columns. How many jobs finish and the invoice doesn't go out for a week because you're busy? How many invoices go out and the payment doesn't come in because you forgot to follow up? These two Y/N columns make it impossible to lose track. Every Friday, sort by Invoiced=No for jobs that ended this week — and send those invoices. Then sort by Paid=No, Invoiced=Yes — and send payment reminders.
+
+Tab 3: Weekly Dashboard
+
+Auto-calculated counts that update from Tabs 1 and 2. This is what you look at on Monday morning while you drink your coffee:
+
+Estimates sent this week:
+
+COUNTIF of estimate dates in the current week
+
+Follow-ups due today:
+
+COUNTIF of follow-up dates ≤ today with status=Pending
+
+Jobs in progress:
+
+COUNTIF of jobs with Paid=No and Start Date before today
+
+Invoices outstanding:
+
+COUNTIF of Invoiced=Yes, Paid=No
+
+Revenue won this month:
+
+SUMIF of amounts for status=Won in the current month
+
+The dashboard takes 10 seconds to scan and tells you exactly what needs your attention: "5 follow-ups overdue, 3 invoices unpaid past 30 days, 8 jobs in progress." Suddenly you're not guessing — you know.
+
+The 15-minute Monday ritual
+
+Every Monday morning, before you check email, before you call the crew, before you do anything else — you do this:
+
+Open Tab 3 — Dashboard.
+
+Glance at the numbers. How many follow-ups are due? How many invoices are outstanding? This frames your priorities for the week.
+
+Open Tab 1 — Active Estimates.
+
+Sort by Follow-Up Date. Every estimate past its follow-up date gets action: a text ("Hey, just checking in — any questions on that deck estimate?"), a call, or an email. Update the Follow-Up Date to +7 days and add a note ("texted 8/5, said still deciding").
+
+Open Tab 2 — Active Jobs.
+
+Quick scan: Any jobs that finished this week with Invoiced=No? Send those invoices now. Any invoices over 30 days with Paid=No? Send a payment reminder.
+
+Total time: 15 minutes. Results: 2–3 recovered jobs per month for most contractors who stick with it. The ritual works because it's
+
+mechanical
+
+— you don't decide to follow up, the spreadsheet tells you to follow up. That's the difference between a system and a mental note.
+
+What one contractor told us:
+
+"I started tracking estimates in a spreadsheet three months ago. First month I recovered a $7,200 bathroom remodel I'd completely forgotten about. The customer said 'I was waiting for you to call back.' That one job paid for the 45 minutes it took to build the spreadsheet — 160 times over."
+
+When a spreadsheet isn't enough
+
+Let's be honest about where this system breaks. A spreadsheet works beautifully for a solo operator or a small crew doing 10–20 estimates a month. But as you grow, friction appears:
+
+Revenue Band
+
+What Works
+
+What Breaks
+
+Under $500K
+
+Spreadsheet handles everything. You're the one sending estimates, running jobs, and doing follow-up. One tab per function is plenty.
+
+Nothing, if you do the Monday ritual. The system fails when
+
+you
+
+stop using it — not when the spreadsheet stops working.
+
+$500K–$1M
+
+Spreadsheet still works but you'll feel the edges. Multiple crews mean more status updates. If you have a part-time admin, they can own the spreadsheet.
+
+You'll be tempted by Jobber/Housecall Pro demos. That's fine — but know that 60% of contractors who buy software in this revenue band use less than a third of the features and still keep a spreadsheet "for the stuff the software doesn't handle."
+
+Over $1M
+
+Time to invest in real job management software. Jobber, Housecall Pro, or ServiceTitan. The volume of estimates (50+/month) and crew scheduling complexity demands automation.
+
+The spreadsheet becomes the bottleneck — not because it can't track the data, but because the data entry itself is now 5+ hours a week.
+
+The key insight:
+
+the process matters more than the tool.
+
+A contractor with a disciplined Monday ritual and a basic spreadsheet will outperform a contractor with a $300/month software subscription they use haphazardly. Master the process on a spreadsheet. Then, when you're ready, you'll know exactly what you need software to do — and you won't overpay for features you'll never touch.
+
+Frequently asked questions
+
+I already use QuickBooks — do I still need a job tracking spreadsheet?
+
+Yes, and here's why: QuickBooks tracks money. It tells you what was invoiced, what was paid, and what's outstanding. It doesn't tell you which estimates need follow-up, which jobs are waiting on permits, or which crew is assigned where. QuickBooks is your accounting system. The spreadsheet is your operations system. They serve different purposes, and trying to make QuickBooks do operations is like using a checkbook as a project plan. Use both — the spreadsheet runs the field; QuickBooks runs the books.
+
+What about lead tracking — should estimates and new leads be in the same spreadsheet?
+
+Keep them separate, at least at first. Leads are unqualified inquiries — people who filled out a form or called asking "how much for a bathroom?" Estimates are qualified opportunities where you've already had a conversation, confirmed budget, and sent a real price. Mixing them in one spreadsheet creates noise: 30 leads where 25 never became estimates cluttering up your view of the 5 estimates that actually need follow-up. Once a lead becomes an estimate (you've seen the job and sent a number), it graduates to Tab 1. Before that, it lives in a simple inquiry log. We cover the inquiry-to-estimate pipeline in our lead response guide.
+
+How do I get my crew to use the spreadsheet?
+
+You don't — and that's by design. The spreadsheet is for the owner or office manager. The crew doesn't need to see estimates, follow-up dates, or invoice status. They need to know where to show up and what to do — that's a separate daily dispatch sheet (a printed one-pager from Tab 2 with today's jobs, addresses, and notes). Trying to get field crews to update a spreadsheet in real time is a recipe for frustration, for them and for you. The spreadsheet is your command center. The crew gets paper dispatches and texts.
+
+Want this built into an automated system — so the spreadsheet does the follow-up for you?
+
+The template handles organization. But the real money is in automation: auto-texts when estimates are 5 days old, auto-emails with seasonal promotions at day 14, an automated dashboard that shows you revenue recovery in real time. That's what Jobs Done Labs builds during a free audit — we map your exact estimate-to-close workflow, find the three biggest revenue leaks, and build the automation that plugs them. Our engagements carry a $30K-recovered-in-90-days guarantee: if documented recovery doesn't reach $30K, you pay nothing.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+You're Spending 12 Hours on Every Estimate and You Haven't Noticed It's Killing Your Close Rate
+
+Spending Too Much Time on Invoicing? How Contractors Cut Paperwork from Hours to Minutes
+
+Losing Leads Because You Can't Respond Fast Enough? Here's How Contractors Fix It
+
+
+URL: https://www.jobsdonelabs.ai/blog/estimate-job-tracking-spreadsheet-small-contractor-free/
 
 ---
 
