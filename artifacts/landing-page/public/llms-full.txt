@@ -5565,6 +5565,367 @@ URL: https://www.jobsdonelabs.ai/blog/ifta-fuel-tax-spreadsheet-template-free/
 
 ---
 
+# Track Machine Downtime Without Software
+
+Manufacturing
+
+Your Machines Keep Breaking Down and Nobody's Tracking It. Here's the $0 System That Tells You Exactly What's Costing You Money.
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 8, 2026
+
+Key takeaways
+
+A 10-machine shop with 2 hours/month of unmeasured downtime per machine is losing $36,000/year — and most shops underestimate their downtime by 3–6×. This guide gives you a complete $0 downtime tracking system in Google Sheets: operator logging with reason codes, automatic weekly Pareto analysis, simplified OEE tracking with 5 data points, and a structured improvement cadence. The system takes 2 hours to set up and 15 minutes/week to analyze. No CMMS, no software budget, no IT department required.
+
+The hidden cost of untracked downtime
+
+Here's a scenario that plays out in small manufacturing shops every day: Machine #3 goes down at 10:15 AM. The operator calls the shift supervisor, who's on the other side of the floor dealing with a quality issue. Supervisor gets to the machine at 10:45, diagnoses the problem for 30 minutes, calls maintenance at 11:15. Maintenance arrives at 1:30 PM because they were tied up on another job. The fix takes 90 minutes. Machine #3 is back up at 3:00 PM —
+
+4 hours and 45 minutes
+
+after it stopped. Production lost: ~$712 at $150/hour.
+
+Nobody wrote any of this down. Next week, Machine #3 goes down again — same root cause, same diagnostic loop, same lost production. The shop owner knows downtime happens but can't tell you how much, which machines, or why. When asked "what's your biggest downtime driver?" the answer is a guess. And guesses don't fix anything.
+
+The downtime math most shops are ignoring:
+
+A 10-machine shop averaging 2 hours of unplanned downtime per machine per month: 20 hours × $150/hr production value =
+
+$3,000/month
+
+. That's $36,000/year in
+
+direct
+
+production loss. Add indirect costs — overtime to catch up, expedited shipping on late orders, idle operators — and the real number is typically
+
+$50,000–72,000/year
+
+. The kicker: most shop owners estimate their downtime at 4–5 hours/month total across all machines. Systematic tracking reveals the actual number is routinely
+
+3–6× higher
+
+The 3-part downtime tracking system (capture, categorize, analyze)
+
+The system has three layers. Each builds on the previous one, and you can stop at any layer that meets your needs. Layer 1 takes 2 hours to set up and costs $0. Layer 3 adds OEE insight for shops that want it.
+
+Layer 1: CAPTURE — log every stoppage as it happens
+
+Every downtime event gets logged with 6 pieces of data:
+
+Machine ID
+
+— which machine stopped (CNC-3, Lathe-2, Press-1)
+
+Date
+
+— auto-populated in Google Forms
+
+Downtime Start
+
+— when the machine stopped producing (operator enters time)
+
+Downtime End
+
+— when it resumed producing
+
+Duration
+
+— auto-calculated in the Sheet (=End minus Start)
+
+Reason Code
+
+— dropdown: Mechanical, Electrical, Operator Error, Setup/Changeover, Material Wait, Quality Stop, Unknown
+
+The data entry path: Google Form (loaded on a shop floor tablet or the operator's phone) feeds directly into a Google Sheet. No walking to an office terminal. No transcribing paper. Setup takes 60 minutes: create the form, add the 6 fields, share the link with operators.
+
+Critical culture point:
+
+The form has no operator name field. This is deliberate. Downtime tracking fails when operators think it's a blame system. The goal is to identify
+
+system-level
+
+patterns ("Machine #3 has a recurring electrical fault"), not to punish individuals. Communicate this clearly before rollout.
+
+Layer 2: CATEGORIZE — standard reason codes that enable comparison
+
+Reason codes turn unstructured "machine was down" into actionable data. Seven codes cover 95% of small-shop downtime:
+
+Code
+
+Definition
+
+Examples
+
+Mechanical
+
+Machine component failure
+
+Bearing seized, belt broke, spindle error
+
+Electrical
+
+Controls, sensors, or power
+
+VFD fault, limit switch stuck, breaker tripped
+
+Operator Error
+
+Setup mistake or human error
+
+Wrong tool offset, incorrect program loaded
+
+Setup/Changeover
+
+Job change or tooling swap
+
+Fixture change, program load, first-article inspection
+
+Material Wait
+
+No raw material available
+
+Aluminum shipment delayed, wrong grade delivered
+
+Quality Stop
+
+Production halted for quality check
+
+Out-of-spec measurement, customer hold, rework
+
+Unknown
+
+Stoppage with unclear cause
+
+Use sparingly — if >10% of events, your codes need refining
+
+Use these codes in the Google Form dropdown. If the "Unknown" category exceeds 10% of events after the first month, add or refine codes specific to your shop (Tooling, Coolant, Air Supply, etc.).
+
+Layer 3: ANALYZE — the 15-minute weekly review that finds your fix
+
+Every Friday, pull up the Google Sheet and create a pivot table with two dimensions:
+
+Downtime by Machine
+
+— which machines are down the most? You may discover that 2 out of 10 machines account for 70% of all downtime.
+
+Downtime by Reason Code
+
+— which categories dominate? If "Mechanical" is 60% of your downtime and 80% of that is on one machine, you know exactly where to look.
+
+Build a simple Pareto chart (bar chart sorted by total hours) and focus on the top 2–3 bars. The principle: 80% of your downtime comes from 20% of the causes. Spending a week investigating your #1 downtime driver yields 10× the return of spreading effort across 10 small problems.
+
+OEE for people who don't have time for OEE
+
+Full OEE (Overall Equipment Effectiveness) requires tracking Availability × Performance × Quality across every shift — which is why most small shops never do it. But you can get 90% of the insight with 5 data points and a $0 Google Sheet:
+
+OEE-Lite: 5 inputs
+
+Planned Production Time
+
+— shift length minus scheduled breaks and planned maintenance
+
+Actual Run Time
+
+— Planned Production Time minus unplanned downtime (from your tracking sheet)
+
+Ideal Cycle Time
+
+— the theoretical minimum time per part (from machine specs or best observed)
+
+Total Parts Produced
+
+— good parts + scrap, for the shift
+
+Good Parts
+
+— parts that passed inspection
+
+The formulas auto-calculate in your Sheet:
+
+Availability
+
+= Actual Run Time / Planned Production Time
+
+Performance
+
+= (Total Parts × Ideal Cycle Time) / Actual Run Time
+
+Quality
+
+= Good Parts / Total Parts
+
+OEE
+
+= Availability × Performance × Quality
+
+The real power isn't the OEE number itself — it's knowing
+
+which component
+
+is dragging it down. If Availability is 62% but Performance and Quality are both 95%+, your problem is machine uptime, not speed or scrap. Focus maintenance there. If Performance is 58% (machine running slow because of worn tooling), speed improvements are your highest ROI. OEE-Lite tells you where to point your effort.
+
+How to use the data to actually fix things (the 5-week improvement cadence)
+
+The most common failure mode: a shop tracks downtime for 2 weeks, sees data that feels overwhelming, and abandons the system. The fix is a structured cadence that starts slow and builds momentum:
+
+The 5-week downtime reduction cadence
+
+Weeks 1–2: Track only, don't fix anything.
+
+Build the baseline. Operators log every stoppage. Supervisors don't intervene — they observe. The goal is clean data, not immediate improvements. You'll be surprised by what the baseline reveals.
+
+Week 3: Identify top 3 downtime drivers.
+
+Run the Pareto analysis. Which 2–3 reason codes on which 2–3 machines account for 70%+ of total downtime hours? Write them on a whiteboard in the shop.
+
+Week 4: Implement one countermeasure.
+
+Pick the #1 driver and implement ONE fix. Root-cause the specific pattern (5-Why analysis), implement the fix, and document it. Don't try to fix all three at once — you'll scatter focus and fix nothing.
+
+Week 5: Measure improvement.
+
+Compare this week's downtime for that machine/reason against the baseline. Did it drop? By how much? Annualize the recovery: (hours saved per week × $150/hr × 50 weeks). Celebrate the win, then pick the next driver.
+
+Repeat monthly.
+
+Every month, you pick the top downtime driver, fix the root cause, measure the improvement, and move to the next. Over 6 months, you'll have eliminated 5–8 systemic issues. This is how shops go from "we're always fighting fires" to "we know what to expect and it's getting better."
+
+When to graduate from spreadsheet to CMMS
+
+The Google Sheets system works for shops with fewer than 20 machines and a single shift. You know it's time to graduate to a CMMS (Computerized Maintenance Management System) when you hit these trigger points:
+
+20+ machines
+
+— the pivot tables get unwieldy
+
+Multiple shifts
+
+— handoff communication between shifts becomes critical and Sheets don't handle shift-overlap analysis well
+
+ISO/AS9100 requirement
+
+— auditors want timestamped maintenance records with revision control that Sheets can't easily provide
+
+You're spending more time managing the Sheet than fixing machines
+
+— the tool should serve you, not the other way around
+
+Tool
+
+Price (per user/month)
+
+Best for
+
+Limitations
+
+Google Sheets (this system)
+
+<20 machines, single shift, no compliance requirement
+
+Manual data entry, no mobile alerts, grows unwieldy at scale
+
+MaintainX
+
+$16–40
+
+15–50 machines, mobile-first, work order + downtime in one
+
+Higher per-user cost, can feel like overkill below 10 machines
+
+Fiix
+
+$40–70
+
+20+ machines, multi-site, needs asset hierarchy + parts inventory
+
+Complex setup, steep learning curve for operators
+
+Limble
+
+$35–70
+
+10–100 machines, strong mobile UI, custom dashboards
+
+Pricing scales fast, can be hard to get buy-in from hourly operators
+
+Honest advice:
+
+If your shop has 8 machines and 12 employees, stick with Google Sheets. The CMMS salespeople will tell you their $40/user/month tool pays for itself — but if you're not systematically tracking downtime yet, the $0 Sheets system will deliver 80% of the value at 0% of the cost. Graduate to software only when the spreadsheet becomes the bottleneck.
+
+How a 12-machine CNC job shop found $52,000/year in hidden downtime and fixed the top 2 causes in 30 days
+
+An Ohio CNC job shop with 12 machines had been running for 9 years. The owner estimated "maybe 4–5 hours of downtime a month across the whole shop." They started the Google Sheets tracking system and discovered the real number:
+
+22 hours per week
+
+— nearly 6× the estimate. Two patterns dominated the data:
+
+Tooling breakage on one specific CNC lathe model (3 machines, accounting for 41% of downtime).
+
+Root cause: operators were running tool inserts past their rated life because "we don't have a replacement schedule." Fix: implemented a simple tool-life counter in the Sheet — after X parts, a flag pops up to change the insert during scheduled breaks, not during production. Cost: $0. Result: tooling-related downtime dropped from 9 hours/week to 1.5 hours/week.
+
+Material-wait because one aluminum extrusion supplier was chronically late (32% of downtime).
+
+Root cause: the supplier had no on-time delivery requirement in their contract and the shop had no backup. Fix: added a PO delivery window clause to the contract (with a 5% penalty for late deliveries) and qualified a secondary supplier for the 3 most-used extrusion profiles. Cost: supplier negotiation time (4 hours of the owner's time) and 2 hours to set up the backup supplier account. Result: material-wait downtime dropped from 7 hours/week to under 1 hour.
+
+Bottom line:
+
+Total downtime dropped from 22 hours/week to 5 hours/week. At $150/hour production value, that's
+
+17 hours/week × $150/hr × 50 weeks = $127,500/year in recovered production capacity
+
+. Total investment: 2 hours to set up the Sheet, 15 minutes/week to run the pivot table, and 4 hours of supplier negotiation. They didn't buy a CMMS, didn't hire a maintenance manager, and didn't buy new machines — they just started measuring what was already happening.
+
+The counterintuitive truth about downtime
+
+The shops with the worst downtime aren't the ones with the oldest machines — they're the ones that don't measure it at all. A 30-year-old Bridgeport with a well-executed PM schedule and systematic downtime tracking will outperform a brand-new 5-axis CNC that nobody's monitoring. The system is more important than the equipment.
+
+Frequently asked questions
+
+How do I calculate machine downtime cost?
+
+The formula: (Number of machines) × (Unplanned downtime hours per month) × (Hourly production value). For a 10-machine shop at $150/hr with 2 hours/month per machine: 20 hrs × $150 = $3,000/month, or $36,000/year. Add indirect costs (overtime, expedited shipping, idle labor) and the real number is 1.5–2× higher. The first month of tracking typically reveals 3–6× more downtime than the owner estimated.
+
+What's the simplest way to track production downtime?
+
+Clipboard + Google Sheets with 5 columns: Machine ID, Date, Start, End, Reason Code. Operators log events, supervisor runs a 15-minute pivot table on Fridays. Costs $0, takes 2 hours to set up. The cultural shift (tracking as improvement, not blame) matters more than the technology.
+
+Can I track OEE without software?
+
+Yes. OEE-Lite uses 5 data points: Planned Production Time, Actual Run Time, Ideal Cycle Time, Total Parts, Good Parts. Auto-calculate Availability × Performance × Quality in a Google Sheet. The real insight isn't the OEE number — it's knowing which component (Availability, Performance, or Quality) is the bottleneck so you focus effort where it matters.
+
+What's the difference between planned and unplanned downtime?
+
+Planned downtime is scheduled (PMs, changeovers, breaks). Unplanned downtime is the enemy — breakdowns, tooling failures, material shortages. The goal: shift downtime from unplanned to planned, then shrink the planned portion. Most shops discover that much of their "planned" downtime is actually unplanned when they start tracking systematically.
+
+How much does machine downtime really cost a small manufacturer?
+
+For a 10-machine shop: $36,000/year in direct production loss at minimum. Real case: a 12-machine CNC shop discovered 22 hrs/week of unplanned downtime (6× estimated), fixed the top 2 causes in 30 days, and recovered $127,500/year in production capacity — without buying new equipment or software.
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Your Shop Has 12 Machines But Only One Is The Bottleneck — Free Constraint Analysis Spreadsheet
+
+The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System
+
+Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufacturers
+
+Stop guessing what's eating your production capacity
+
+Jobs Done Labs builds custom downtime tracking and production visibility systems for small manufacturers — Google Sheets dashboards, automated OEE reporting, and CMMS integration that works at your scale. Free audit: we'll map your current downtime tracking (or lack of it), show you the 2–3 fixes with the highest ROI, and estimate how much capacity you're leaving on the table. No software pitch. Backed by the $30K-in-90-days guarantee: if we don't find at least $30K in recoverable production capacity, you pay nothing.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/machine-downtime-tracking-system-small-manufacturing/
+
+---
+
 # 16 Hours a Week on Prior Authorizations and You Still
 
 16 Hours a Week on Prior Authorizations and You Still Can't Afford the Software — The Manual PA Workflow That Cuts Time in Half Before You Spend a Dime
@@ -6544,6 +6905,8 @@ Book your free production audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Track Machine Downtime Without Software — The Free System for Small Manufacturers
 
 Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufacturers
 
@@ -10855,6 +11218,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Track Machine Downtime Without Software — The Free System for Small Manufacturers
+
 You're Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet System
 
 The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System
@@ -13049,6 +13414,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Track Machine Downtime Without Software — The Free System for Small Manufacturers
 
 Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufacturers
 
