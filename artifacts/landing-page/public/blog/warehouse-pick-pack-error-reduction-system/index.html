@@ -58,6 +58,21 @@
         "@type": "Question",
         "name": "Do I need to replace my existing shipping software or WMS to use this system?",
         "acceptedAnswer": { "@type": "Answer", "text": "No. This system runs alongside whatever you already use — ShipStation, ShippingEasy, Pirate Ship, your own WMS, or even just paper pick lists and a clipboard. It doesn't replace anything. It adds two verification gates (photo at drop-off and weight at pack station) that catch errors before the box leaves your dock. The Google Forms and Sheets are free, independent tools that don't integrate with anything — they're verification only. If you later upgrade to a WMS with built-in barcode scanning and weight verification, you can sunset the Google Sheets in five minutes. The point of this system is that you don't have to wait for a software purchase or a WMS implementation that takes months — you can install these two verification gates this week, start catching errors tomorrow, and decide later whether to invest in software. When you're ready for a fully automated system that integrates pick verification, weight checking, and error tracking directly into your shipping flow without manual Google Form steps, a custom automation build can connect all of it — and a Jobs Done Labs free audit will map exactly where the remaining errors are and what a build would recover." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I identify dead stock in my warehouse?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Build an Aged Inventory Report — a simple spreadsheet with columns for SKU, units in stock, unit cost, total inventory value, days since last sale, monthly storage cost, total storage incurred, and storage cost as percentage of item value. Flag any SKU where storage cost exceeds 50% of the item's value as RED (liquidate immediately), 25–50% as YELLOW (decide this week), and under 25% as GREEN (monitor). Run this report monthly. For FBA sellers, the simplest path is Seller Central → Inventory → Inventory Planning → Inventory Age — export the CSV, match it against your SKU profitability tracker, and flag anything in the 271+ day bucket for immediate action." }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do with inventory that hasn't sold in a year?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You have five options ranked by recovery rate: (1) Bundle it with a fast-moving product — recover 60–80% of cost. (2) Run a deep-discount fire sale at 60–80% off — recover 30–50%. (3) Liquidate to a liquidator like B-Stock or 888 Lots — recover 10–20% but it's fast. (4) Donate and write off — recover 25–37% through tax deduction, stops storage fees immediately. (5) Create a removal/disposal order — recover nothing, but the bleeding stops. The worst choice is doing nothing — every month you wait, the storage fees compound and the recovery percentage drops." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate whether it's cheaper to store or liquidate dead inventory?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The formula is: (Monthly storage cost × expected months until sale) vs (Unit cost − liquidation recovery). If the storage cost until you expect to sell exceeds what you'd lose by liquidating now, liquidate. Example: a product costs you $18/unit. Monthly storage is $3.50/unit. Storage for 8 months = $28 — already more than the unit is worth. Liquidation at 20% recovery loses $14.40/unit but stops the storage. The liquidation is cheaper after just 4.1 months of storage." }
       }
     ]
   }
@@ -237,6 +252,92 @@
         <p style="font-size:15px; color:rgba(23,21,19,.55); margin:16px 0 0">Total hardware: $30. Total setup time: 1 hour. First error caught: probably the same day you turn it on.</p>
       </div>
 
+      <h2>Your inventory count is accurate but $8,000 of it is dead stock bleeding storage fees every month. Here's how to find it and what to do about it</h2>
+      <p>You've got the accuracy system from part 1–4 running. Your pick/pack error rate is down. But there's a second inventory problem that accuracy alone doesn't fix: inventory that's perfectly accurate but completely dead. Correct count, zero demand, accumulating storage fees every day it sits.</p>
+      <p>A seller we worked with had 87 units of a product that sold great in 2024. In 2026, it's been sitting in FBA for 14 months. Amazon charges them $210/month in storage fees. The product cost $2,400 to manufacture. They've already paid $2,940 in storage. At this point, they're paying Amazon to store their own inventory — and they haven't made a move because "maybe it'll sell next month." That's $5,340 spent on a $2,400 product that hasn't sold a single unit this year. The inventory count is accurate. The financial decision is the problem.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The dead stock math that changes everything:</strong> Take every SKU that hasn't sold in 180+ days. Multiply unit cost × quantity on hand for total inventory value. Multiply monthly storage cost × units × months sitting. If storage cost exceeds 50% of inventory value, you've already paid Amazon more to store it than it's worth — and every month you wait makes it worse. Most sellers don't run this calculation because the storage fee shows up on a completely different report from the SKU-level sales data. The two numbers never meet. Until you make them meet.</p>
+      </div>
+
+      <h2>The dead stock identification formula</h2>
+      <p>Build one more tab in your inventory spreadsheet — the Aged Inventory Report. Here are the columns:</p>
+      <ul>
+        <li><strong>SKU and product name.</strong></li>
+        <li><strong>Units in stock.</strong> From your inventory management system or FBA Inventory report.</li>
+        <li><strong>Unit cost.</strong> What you paid to manufacture or acquire each unit.</li>
+        <li><strong>Total inventory value.</strong> Units × unit cost.</li>
+        <li><strong>Days since last sale.</strong> Today minus the date of the last order containing this SKU.</li>
+        <li><strong>Monthly storage cost per unit.</strong> For FBA: $0.78/cu ft (Jan–Sep) or $2.40+/cu ft (Oct–Dec) × cubic feet per unit ÷ number of units in that cubic foot. For your own warehouse: square footage cost allocation.</li>
+        <li><strong>Total storage cost incurred.</strong> Monthly storage × months sitting.</li>
+        <li><strong>Storage cost as % of item value.</strong> Total storage ÷ total inventory value × 100.</li>
+        <li><strong>Flag:</strong> RED = storage cost > 50% of value (you're paying more to store than the product is worth — liquidate immediately). YELLOW = 25–50% (danger zone — decide this week). GREEN = under 25% (monitor, but not urgent yet).</li>
+      </ul>
+      <p>This takes 30 minutes to set up and about 10 minutes to update monthly. The first time you run it, you'll probably find 2–5 SKUs in the red zone that you've been ignoring because "the margin is good" — margin that disappeared into storage fees six months ago.</p>
+
+      <h2>The 5 dead stock action paths</h2>
+      <p>Once you've identified your dead stock, you have exactly five options. Here they are, ranked from highest recovery to fastest resolution:</p>
+
+      <div class="comparison">
+        <table>
+          <tr>
+            <th>Path</th>
+            <th>Recovery %</th>
+            <th>Time to Execute</th>
+            <th>Best For</th>
+          </tr>
+          <tr>
+            <td>1. Bundle with fast-mover</td>
+            <td>60–80% of cost</td>
+            <td>1–2 weeks</td>
+            <td>Complementary products — dead SKU pairs naturally with a popular item. "Buy X, get Y free" or discounted bundle. Recovers most of your cost while moving the inventory.</td>
+          </tr>
+          <tr>
+            <td>2. Liquidate to a liquidator</td>
+            <td>10–20% of cost</td>
+            <td>2–4 weeks</td>
+            <td>Branded products with resale value. Contact B-Stock, 888 Lots, or similar. You'll take a bath, but $480 now is better than $2,940 in storage fees over 14 months plus eventual disposal.</td>
+          </tr>
+          <tr>
+            <td>3. Deep-discount fire sale</td>
+            <td>30–50% of cost</td>
+            <td>1–3 weeks</td>
+            <td>Products with some demand at the right price. Slash price 60–80%, run as a Lightning Deal or coupon. The goal is to clear inventory before storage fees eat another month.</td>
+          </tr>
+          <tr>
+            <td>4. Donate and write off</td>
+            <td>Tax deduction: 25–37% of cost</td>
+            <td>1 week</td>
+            <td>Products with zero resale value but deductible as charitable contribution. You get the tax write-off immediately and stop paying storage fees. Requires proper documentation.</td>
+          </tr>
+          <tr>
+            <td>5. Destroy / removal order</td>
+            <td>0% (loss is capped)</td>
+            <td>1–2 weeks</td>
+            <td>Products with zero resale value and no donation channel. Amazon charges $0.97–$2.43/unit for disposal. It stings once, then it's over. Better than paying storage fees in perpetuity.</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The decision framework in one sentence:</strong> If storage fees incurred > current liquidation value, you should have acted months ago — act today. Every day of indecision on a RED-flagged SKU costs you real money, and the math only gets worse. The best time to liquidate dead stock was when it hit 180 days without a sale. The second-best time is right now.</p>
+      </div>
+
+      <h2>The FBA aged inventory survival guide</h2>
+      <p>If you use Fulfillment by Amazon, dead stock has an extra dimension: Amazon's long-term storage fee schedule is designed to force you to act. Here's the 2026 timeline:</p>
+      <ul>
+        <li><strong>0–180 days:</strong> Monthly inventory storage fee only (standard rates). No penalty for holding. This is your selling window.</li>
+        <li><strong>181–270 days:</strong> Aged inventory surcharge kicks in — roughly $1.50/cu ft on top of the monthly storage fee. For a standard-size product at 0.5 cu ft, that's an extra $0.75/unit/month.</li>
+        <li><strong>271–365 days:</strong> Surcharge increases to $3.80+/cu ft. Your storage costs are now 3–5× the standard rate. Most sellers hit this tier without realizing because the charge appears on a different report page from their daily sales.</li>
+        <li><strong>365+ days:</strong> $6.90+/cu ft surcharge. At this point, if your product sells for under $20, you're probably losing money every month just storing it. Removal order immediately.</li>
+      </ul>
+      <p><strong>How to run your Aged Inventory Report in Seller Central:</strong> Inventory → Inventory Planning → Inventory Age. This shows every FBA SKU broken into age buckets: 0–90 days, 91–180, 181–270, 271–365, and 365+. Export to CSV. Match against your SKU profitability tracker. Any SKU in the 271+ bucket: make a decision this week. The storage fees you're paying on that inventory are almost certainly exceeding any potential profit if it eventually sells.</p>
+
+      <h2>Prevention: the reorder formula that stops dead stock before it starts</h2>
+      <p>Dead stock isn't just a cleanup problem — it's a purchasing problem. Most dead inventory started as a purchase order that was sized wrong. Here's how to prevent it:</p>
+      <p><strong>The MOQ trap:</strong> Your supplier's minimum order quantity is 500 units. You sell 8 per month. That's 62 months of inventory — more than 5 years. Even if every unit sells eventually, you've tied up capital and paid storage on product you won't need for years. The fix: negotiate a lower MOQ with a price premium, or find a supplier with smaller minimums. Paying 20% more per unit for an MOQ of 100 beats paying storage on 400 excess units for 5 years.</p>
+      <p><strong>The reorder formula:</strong> Reorder Point = (Lead Time in Days × Daily Demand) + Safety Stock. Maximum Inventory = Reorder Point + Economic Order Quantity — but capped by: (1) shelf life, (2) storage cost per unit per month, (3) cost of capital. If storage cost exceeds 2% of unit cost per month, the EOQ shrinks dramatically — it's cheaper to reorder more frequently in smaller quantities than to pay storage on excess inventory. Your spreadsheet should calculate this automatically based on your actual sales velocity, not your supplier's preferred order size.</p>
+
       <section class="faq" id="faq">
         <h2>Frequently asked questions</h2>
         <h3>How much do pick/pack errors actually cost a small warehouse?</h3>
@@ -249,7 +350,16 @@
         <p>No. This system runs alongside whatever you already use — ShipStation, ShippingEasy, Pirate Ship, your own WMS, or even just paper pick lists and a clipboard. It doesn't replace anything. It adds two verification gates — photo at drop-off and weight at pack station — that catch errors before the box leaves your dock. The Google Forms and Sheets are free, independent tools that don't integrate with anything; they're verification only. If you later upgrade to a WMS with built-in barcode scanning and weight verification, you can sunset the Google Sheets in five minutes. The point is that you don't have to wait for a software purchase or a WMS implementation that takes months — you install these two verification gates this week, start catching errors tomorrow, and decide later whether to invest in software. When you're ready for a fully automated system that connects pick verification, weight checking, and error tracking directly into your shipping flow without manual Google Form steps, a <a href="/">custom automation build</a> can handle all of it — and a Jobs Done Labs free audit will map exactly where your remaining errors live and what a build would recover.</p>
       </section>
 
-      <p style="font-size:15px; color:rgba(23,21,19,.6); margin-top:40px">Related reading: <a href="/blog/small-manufacturer-inventory-management-system/">why your inventory spreadsheet says 500 and the shelf has 350</a> · <a href="/blog/small-business-purchase-order-tracking-system/">tracking 50 purchase orders without losing any</a></p>
+      <h3>How do I identify dead stock in my warehouse?</h3>
+      <p>Build an Aged Inventory Report — a simple spreadsheet with columns for SKU, units in stock, unit cost, total inventory value, days since last sale, monthly storage cost, total storage incurred, and storage cost as percentage of item value. Flag any SKU where storage cost exceeds 50% of the item's value as RED (liquidate immediately), 25–50% as YELLOW (decide this week), and under 25% as GREEN (monitor). Run this report monthly. The first time you run it, you'll almost certainly find 2–5 SKUs you've been ignoring that are quietly burning hundreds of dollars a month in storage fees. For FBA sellers, the simplest path is Seller Central → Inventory → Inventory Planning → Inventory Age — export the CSV, match it against your SKU profitability tracker, and flag anything in the 271+ day bucket for immediate action.</p>
+
+      <h3>What should I do with inventory that hasn't sold in a year?</h3>
+      <p>You have five options ranked by recovery rate: (1) Bundle it with a fast-moving product — "Buy X, get Y free" — recover 60–80% of cost. (2) Run a deep-discount fire sale at 60–80% off — recover 30–50%. (3) Liquidate to a liquidator like B-Stock or 888 Lots — recover 10–20% but it's fast. (4) Donate and write off — recover 25–37% through tax deduction, stops storage fees immediately. (5) Create a removal/disposal order — recover nothing, but the bleeding stops. The worst choice is doing nothing — every month you wait, the storage fees compound and the recovery percentage drops. For FBA sellers specifically: if an item is over 365 days old, the $6.90+/cu ft surcharge means you're almost certainly losing money every month you keep it. Removal order immediately, then decide which of the 5 paths to take once it's back in your possession.</p>
+
+      <h3>How do I calculate whether it's cheaper to store or liquidate dead inventory?</h3>
+      <p>The formula is: (Monthly storage cost × expected months until sale) vs (Unit cost − liquidation recovery). If the storage cost until you expect to sell exceeds what you'd lose by liquidating now, liquidate. Example: a product costs you $18/unit. Monthly storage is $3.50/unit. You think it might sell in 8 months. Storage cost: 8 × $3.50 = $28/unit — already more than the unit is worth. Liquidation at 20% recovery: you lose $14.40/unit but stop paying $3.50/month immediately. The liquidation is cheaper after just 4.1 months of storage. Most sellers miss this because the storage fee and the unit cost live in different mental buckets — the unit cost happened 18 months ago (sunk cost), but the storage fee is a new expense every month (active cost). The math doesn't care when you paid for the inventory — it only cares what you'll pay going forward versus what you can recover today.</p>
+
+      <p style="font-size:15px; color:rgba(23,21,19,.6); margin-top:40px">Related reading: <a href="/blog/ecommerce-manual-data-entry-silent-killer/">why manual data entry is silently eating your e-commerce margins</a> · <a href="/blog/multi-channel-product-catalog-without-pim/">how to stop copy-pasting product data across 3 channels</a></p>
 
       <div class="cta-box">
         <h2>Find out what pick/pack errors are actually costing you — in dollars, not guesses</h2>

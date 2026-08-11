@@ -1,3 +1,342 @@
+# Where'd Your $15K Go? Free Amazon Fee Reconciliation
+
+Retail & E-Commerce Operations
+
+Amazon Took $15,000 in Fees Last Quarter and You Can't Explain Where It Went. Here's the Free Reconciliation System That Shows You Exactly Which SKUs Are Actually Profitable.
+
+By Ryne Bandolik · Jobs Done Labs · August 11, 2026
+
+You pulled up Seller Central last week. The dashboard said you did $52,000 this quarter. You felt good about that number. Then you checked your bank account. $37,000. That's $15,000 that didn't make it to your bank — and you can't explain where it went because Seller Central shows fees across fourteen different reports, none of which agree with each other.
+
+If you search "amazon seller fee reconciliation spreadsheet free" right now, the top results are all paid software: A2X at $19/month, GETIDA at $49/month, Gorilla ROI, Link My Books. Every single page-1 result wants your credit card. Not one of them offers a free, do-it-yourself alternative — even though the data you need is already sitting in your Seller Central, downloadable as a CSV, right now.
+
+The 30-second math that changes everything:
+
+Take your quarterly Amazon revenue × 25–35%. That's the range most sellers lose to fees they can't track individually. On $52,000 in sales, that's $13,000–$18,200. Your CPA probably told you the total fee number. But your CPA never told you WHICH SKUs ate the fees — and that's the number that determines whether you should raise prices, cut products, or change your FBA strategy.
+
+The Amazon fee iceberg: what you see versus what you pay
+
+Every Amazon seller knows about the 15% referral fee. That's the visible part. But here are the fees most sellers don't track individually — the ones that quietly eat your margin per SKU until a product that looks profitable on paper is actually losing money every time it ships:
+
+Fee Type
+
+What Amazon Calls It
+
+Typical Range
+
+Where It Hides
+
+Referral Fee
+
+Referral Fee on Item Price
+
+8–15% of sale price (45% for Amazon devices)
+
+Visible on every order
+
+FBA Pick & Pack
+
+FBA Pick & Pack Fee
+
+$3.22–$6.13+ per unit (size/weight)
+
+Per-order detail, easy to miss in aggregate
+
+Monthly Storage
+
+FBA Storage Fee
+
+$0.78–$2.40/cu ft (Jan–Sep), $2.40+/cu ft (Oct–Dec)
+
+Monthly report, not per-order — accumulates silently
+
+Long-Term Storage
+
+Aged Inventory Surcharge
+
+$1.50+/cu ft (181–270 days), $3.80+ (271–365), $6.90+ (365+ days)
+
+Quarterly assessment — can exceed the item's value
+
+Returns Processing
+
+FBA Returns Processing Fee
+
+Equal to original FBA fee (charged even if item is resellable)
+
+Returns report — separate from the order fee
+
+Disposal / Removal
+
+FBA Removal Order / Disposal Fee
+
+$0.97–$2.43+/unit
+
+One-time charge, easy to miss in bulk removal orders
+
+Advertising (PPC)
+
+Sponsored Products / Brands
+
+Deducted from settlement, not shown as a line item per order
+
+Separate Advertising Console — not on order reports
+
+Inbound Placement
+
+Inbound Placement Service Fee
+
+$0.18–$0.40+/unit (if you don't split shipments)
+
+Shipment-level charge, buried in shipping workflow
+
+Now add those up for a single SKU that sells for $29.99: referral ($4.50), FBA pick/pack ($5.14 for a 1.5-lb large standard), monthly storage ($0.12/unit for 30 days at $0.78/cu ft), PPC ($3.00 assuming 10% ACoS on $30), returns processing ($5.14 if 5% of units are returned — charged as an average per unit). That's $17.90 in fees on a $29.99 product. Before cost of goods. Before shipping to FBA. Before the 3% of customers who file chargebacks. Your $29.99 product with a $12 COGS looked like it made $4.99 per unit. After all fees? You're losing $0.09 per unit — and you've been selling 50 units a month for a year without knowing.
+
+The free marketplace fee tracker spreadsheet
+
+Here's a Google Sheets system that gives you per-SKU profitability across Amazon, eBay, Walmart, and Shopify — in one view, updated weekly, for $0. It has four tabs:
+
+The 4-tab tracker structure
+
+Tab 1: Amazon Raw Import.
+
+Paste your Date Range Report CSV here. Columns: Date, Order ID, SKU, Product Name, Units Sold, Revenue, Referral Fee, FBA Fee, Shipping Credit, Promotion Rebate, Refund Amount. One paste per week, 30 seconds.
+
+Tab 2: Fee Lookup Tables.
+
+Reference tables for referral fee rates by category, FBA fee rates by size tier, and monthly storage rates by time of year. These feed the auto-calculations so you don't manually enter fee rates.
+
+Tab 3: Per-SKU P&L.
+
+Auto-aggregated from Tab 1 using SUMIF formulas. Columns: SKU, Units Sold, Gross Revenue, Referral Fees, FBA Fees, Storage Fee Allocation, PPC Allocation, Returns Cost, COGS (manual entry), Net Profit, Margin %. Color-coded: green = healthy (≥20% margin), yellow = thin (10–20%), red = losing money (<10%).
+
+Tab 4: Multi-Channel Rollup.
+
+One row per SKU across all channels. If you also sell on eBay (paste eBay transaction report), Walmart, and Shopify (paste payout reports) — each channel gets its own data imported to Tab 1 with a channel label, and this tab rolls everything up so you see the real picture: your Amazon FBA fees might make a SKU look bad, but the same SKU on Shopify with merchant-fulfilled shipping has 22% margin.
+
+The formula that powers the whole thing:
+
+Net Profit = Revenue − Referral Fee − FBA Fee − (Storage Rate × Cubic Feet × Days in Stock ÷ Days in Period) − (Total PPC Spend × SKU Revenue ÷ Total Revenue) − (Returns Rate × FBA Fee) − COGS. Every variable comes from a report you can download right now. The spreadsheet handles the math. You just paste the data and read the numbers.
+
+How to download and process Amazon fee reports without accounting software
+
+This is the step most sellers skip because it looks complicated. It's not. Here's the exact 5-minute weekly process:
+
+Go to Seller Central → Reports → Payments → Date Range Report.
+
+Select "Generate Report." Choose "Summary" view. Set the date range to the past 7 days (Monday–Sunday for a clean weekly cadence).
+
+Click "Generate" and wait 30–60 seconds.
+
+Amazon builds the CSV. When it's ready, click "Download."
+
+Open the CSV, copy all rows.
+
+Paste into Tab 1 of your tracker spreadsheet starting at row 2 (row 1 is column headers — match them once, lock that row).
+
+Tab 3 auto-updates.
+
+The SUMIF formulas pull per-SKU totals from Tab 1. You don't touch Tab 3 — it just works. Watch the margin % column. Anything in red? That's your action item this week.
+
+Repeat for eBay, Walmart, Shopify.
+
+Each marketplace has its own transaction/payout report. Download them, paste into new rows in Tab 1 with a channel label. Tab 4 rolls it all up.
+
+Total time: 30 minutes per week for 4 channels. That's 2 hours a month — versus the $15,000 in invisible fees you're currently paying per quarter without knowing which SKUs are the problem.
+
+The 4-step weekly reconciliation ritual
+
+Building the spreadsheet is step one. Using it consistently is the part that actually recovers your money. Here's the Friday-afternoon routine that takes 30 minutes and makes sure nothing slips:
+
+Friday reconciliation ritual (30 min)
+
+Step 1: Download and paste.
+
+Grab this week's Date Range Report from Amazon. Paste into Tab 1. Do the same for eBay and Walmart if you sell there. (10 min)
+
+Step 2: Flag the red SKUs.
+
+Scan Tab 3 for anything with margin under 15%. Those SKUs are losing money — or close to it. Make a decision this week: raise the price, reduce PPC spend on that ASIN, or discontinue. Don't let it sit until next quarter. (5 min)
+
+Step 3: Flag storage bleeders.
+
+For FBA sellers, look at the storage fee allocation column. If any SKU's storage cost exceeds 5% of its revenue, it's been sitting too long. Create a removal order or run a promotion to clear it. Amazon charges per cubic foot, and slow inventory compounds — a product sitting 200 days at $2.40/cu ft/month can easily accumulate $8+ in storage fees on a $25 item. (5 min)
+
+Step 4: Settlement-to-bank reconciliation.
+
+Amazon deposits don't match your reports because of reserve holds, prior-period adjustments, and the 14-day payment delay. The tracker includes a settlement reconciliation tab that matches each settlement ID to a bank deposit and accounts for the reserve — so when your CPA asks why the bank deposit doesn't match your P&L, you have the answer in one row. (10 min)
+
+Multi-channel: eBay, Walmart, Shopify in one view
+
+If you sell on multiple platforms, you have the same problem multiplied by four. Each platform reports fees differently. Amazon gives you a Date Range Report. eBay gives you a Transaction Report. Walmart gives you a Payment Summary. Shopify payouts bundle everything into one deposit with a dozen deductions.
+
+Tab 4 of the tracker solves this. Each channel's fees get normalized into the same columns — referral fee, fulfillment fee, advertising, returns — regardless of what that platform calls them. The rollup view shows you per-SKU profitability across all channels. A product that loses money on Amazon FBA might be solidly profitable on Shopify where you control fulfillment. Without the cross-channel view, you'd discontinue a product that's actually making you money — just on a different platform.
+
+One seller we worked with discovered that their best-selling Amazon SKU was losing $1.12 per unit after all fees — but the same product on Walmart (lower referral fee, merchant-fulfilled) was making $4.80 per unit. They shifted inventory allocation, kept the product, and turned a $6,700 annual loss into an $18,000 profit — without changing a single listing.
+
+The fee audit: Amazon makes mistakes
+
+Amazon processes billions of transactions. They make errors. Here are the most common fee overcharges — all of which you can catch with your tracker and file for reimbursement:
+
+Returned item never actually returned.
+
+Customer files a return, Amazon refunds them, but the item was never scanned back into FBA. You paid for a return that didn't happen. Amazon reimburses these — but only if you file within 18 months. Check your returns report monthly against refunds.
+
+Dimensional weight miscalculation.
+
+Amazon measures your product's dimensions and weight when it arrives at FBA. Sometimes they get it wrong — a 12 oz product measured at 2 lbs means you're paying the next size tier's FBA fee on every unit. Compare your actual dimensions to what Amazon has on file (Inventory → Manage Inventory → click the SKU → check dimensions). File a remeasurement request if it's wrong.
+
+FBA fee charged at wrong size tier.
+
+Similar to dimensional weight — if your product gets classified as "Large Standard" when it should be "Small Standard," you're overpaying roughly $2–3 per unit. At 50 units/month, that's $1,200–$1,800/year.
+
+Storage fee for items already removed.
+
+You created a removal order. The units shipped. Amazon's system sometimes continues charging storage for 1–2 more billing cycles. Check your monthly storage report against removal order confirmations.
+
+Inbound shipment quantity discrepancies.
+
+You shipped 100 units. Amazon received 96. Four units went missing at the warehouse. After 30 days, you can file for reimbursement — but only if you have the shipment reconciliation data to prove the discrepancy. Amazon's automated reimbursement sometimes covers these; sometimes it doesn't.
+
+The average seller recovers $500–$2,000 per year in fee overcharges.
+
+Amazon's reimbursement window is 18 months. If you've never audited your fees, you're sitting on 18 months of potential reimbursements that expire every day you don't check. The fee audit tab in the tracker flags all of the above automatically — it compares your expected fees per unit to what you were actually charged and highlights any discrepancy over 5%.
+
+Spreadsheet vs SaaS: what you get at each level
+
+Free Spreadsheet
+
+Entry SaaS ($19–49/mo)
+
+Full Platform ($99+/mo)
+
+Per-SKU profitability
+
+Yes — manual data paste
+
+Yes — auto-import
+
+Yes — real-time
+
+Multi-channel view
+
+Yes — separate paste per channel
+
+Some — depends on integrations
+
+Yes — unified dashboard
+
+Fee audit / overcharge detection
+
+Manual comparison with expected
+
+Basic automated checks
+
+Full automated audit + auto-reimbursement claims
+
+QB/Xero integration
+
+Manual journal entries
+
+Auto-posting of settlements
+
+Full GL integration
+
+Storage fee tracking
+
+Yes — monthly report paste
+
+Yes — auto-calculated
+
+Yes — with forecasting
+
+Time per week
+
+30 minutes
+
+10 minutes
+
+5 minutes
+
+Cost
+
+$228–$588/year
+
+$1,188+/year
+
+The spreadsheet works for sellers doing under $500K/year who want to understand their numbers before paying for software. Once you're doing $1M+ or have 100+ SKUs, the time-value math usually favors the $49/month tier.
+
+Your Friday action plan: 5 steps, 2 hours
+
+Download your Date Range Report.
+
+Seller Central → Reports → Payments → Date Range Report → Generate (Summary view, last 30 days). Save the CSV. (2 min)
+
+Build the tracker.
+
+Create a Google Sheet with the 4 tabs described above. For Amazon-specific columns match them to the Date Range Report fields. The SUMIF formula for per-SKU revenue is:
+
+=SUMIF('Amazon Import'!C:C, A2, 'Amazon Import'!E:E)
+
+where column C is SKU, column E is revenue. Repeat for each fee column. (45 min the first time, then it's done forever)
+
+Paste 30 days of data and calculate your first per-SKU profitability.
+
+This is the moment of truth — you'll see which SKUs are profitable and which have been quietly losing money. It might be uncomfortable. It's also the most valuable 30 minutes you'll spend on your business this month. (10 min)
+
+Take action on the red SKUs.
+
+Any SKU with margin under 15% after all fees: decide this week whether to raise price, cut PPC, or discontinue. The worst decision is no decision — letting an unprofitable SKU run for another quarter burns the same fees again. (30 min)
+
+Set a recurring calendar event.
+
+Every Friday at 3pm: download reports, paste data, scan the reds. 30 minutes. The system only works if you use it — and the easiest way to make that happen is to make it a calendar appointment with yourself. (2 min)
+
+Total cost: $0. Total setup time: 2 hours one-time. Ongoing: 30 minutes every Friday. First dollar recovered: probably this week, when you spot the SKU that's been losing money for 6 months while you thought it was your best seller.
+
+Frequently asked questions
+
+How do I track Amazon seller fees without paying for software?
+
+Download your Date Range Report from Seller Central (Reports → Payments → Date Range Report → Generate → Summary view), paste into a Google Sheets tracker with columns for revenue, referral fee, FBA fee, storage fee, advertising cost, and returns cost, then use SUMIF formulas to calculate per-SKU profitability. The entire weekly process takes about 30 minutes — 5 minutes to download and paste, 25 minutes to review results and take action on unprofitable SKUs. No paid software required. However, if you're selling $1M+ annually across 100+ SKUs on multiple channels, the $19–49/month for tools like A2X or GETIDA that auto-import settlement data usually pays for itself in time savings alone — the decision is about whether the 2 hours/month you spend pasting data is more expensive than the subscription.
+
+Which Amazon fees are hidden and how do I find them?
+
+The most commonly overlooked fees are: (1) long-term storage fees for inventory over 181 days — these don't appear on per-order reports, only on monthly storage reports; (2) returns processing fees — Amazon charges you the full FBA fee to process a return, even if the item goes back into sellable inventory; (3) disposal and removal order fees; (4) inbound placement fees for shipments that aren't split to Amazon's preferred distribution; (5) unplanned service fees for prep/labeling violations. Find them all in the Date Range Report under the "Summary" view — it breaks out every fee type as a separate column. The key insight: returns processing fees are a separate line item from the original FBA fee, and sellers often miss them because a return shows as a negative revenue line, not a separate fee line. Your CPA sees the total. You need to see the breakdown.
+
+How do I know which SKUs are profitable on Amazon?
+
+The full formula: Net Profit = Revenue − Referral Fee − FBA Fee − Storage Fee Allocation − PPC Allocation − Returns Cost − COGS − Disposal/Removal Costs. Most sellers only subtract referral fee and COGS, which makes every SKU look profitable. The full calculation typically reveals that 20–30% of a catalog is losing money after all fees. Flag any SKU with margin under 15% after the full calculation — that's the minimum viable margin for a product that needs to cover overhead, returns, and growth. For slow-moving inventory, the storage fee allocation is especially dangerous: a product sitting 200+ days can accumulate storage fees exceeding 30% of its retail price without you noticing because the fee appears on a completely separate monthly report from the order-level fees.
+
+How do I reconcile Amazon settlement reports with bank deposits?
+
+Amazon settlements never match bank deposits exactly because of: (1) the 14-day payment cycle that doesn't align with calendar months, (2) reserve holds — Amazon withholds a percentage against chargebacks, (3) prior-period adjustments appearing in current settlements, and (4) advertising costs deducted on a separate billing cycle. The reconciliation formula is: Current Period Revenue − Current Period Fees + Prior Period Adjustments − Reserve Increase = Actual Bank Deposit. Track settlement IDs to bank deposits in your spreadsheet. When your CPA asks why the numbers don't match — and they will — you'll have the answer in one row instead of spending 3 hours pulling reports from four different Seller Central pages.
+
+What free tools can I use instead of paid Amazon accounting software?
+
+The core stack is free: Google Sheets for the tracker, Amazon's Date Range Report (free to download), and your existing Seller Central access. For sellers doing under $500K/year, this handles 90% of what paid software does — the 10% gap is automated data import and QuickBooks/Xero posting. If you need auto-import without paying, you can use Amazon's SP-API (free for developers, but requires technical setup) to pull settlement data programmatically. For most sellers, the manual paste approach is the right trade-off: 30 minutes per week versus $19–49/month. The moment that calculus flips (saving 2 hours/month is worth $49), switch to A2X or GETIDA. But start with the spreadsheet — you'll understand your numbers better after 4 weeks of manually pasting data than you would after a year of auto-imported reports you never actually read.
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Manual Data Entry Is the Silent Killer of Your E-Commerce Business
+
+Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It)
+
+You Sell on Shopify, Amazon, and Walmart — and Product Info Is Different on Every Channel
+
+What if you could see every fee, every SKU, every channel — without 30 minutes of manual data paste every Friday?
+
+Book a free 15-minute audit. We'll map your current reporting process, identify which SKUs you're probably losing money on right now, and show you what a custom automation build would look like — connecting Amazon SP-API, eBay, Walmart, and Shopify into one live dashboard with zero weekly data entry. No pitch, no commitment. You keep the fee analysis either way.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadsheet-free/
+
+---
+
 # Automation Pricing: What Small Businesses Pay
 
 Professional Services
@@ -4184,6 +4523,8 @@ At 12 hours/week × $40/hour, that's $24,960/year in labor cost. Add oversell co
 Related reading
 
 If you found this useful, you'll want these too:
+
+Amazon Took $15,000 in Fees Last Quarter — Free Fee Reconciliation Spreadsheet
 
 Stop Copying Data Between Systems: How Small Businesses Eliminate Manual Data Entry
 
@@ -9890,6 +10231,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Amazon Took $15,000 in Fees Last Quarter — Free Fee Reconciliation Spreadsheet
+
 Manual Data Entry Is the Silent Killer of Your E-Commerce Business
 
 Wholesale Net-30 Payment Tracking Without Software
@@ -13084,6 +13427,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Amazon Took $15,000 in Fees Last Quarter — Free Fee Reconciliation Spreadsheet
 
 Failed Subscription Payments Bleed $300+/Month — Free Dunning Templates + Tracking Spreadsheet
 
@@ -20348,6 +20693,148 @@ Brief the team.
 
 Total hardware: $30. Total setup time: 1 hour. First error caught: probably the same day you turn it on.
 
+Your inventory count is accurate but $8,000 of it is dead stock bleeding storage fees every month. Here's how to find it and what to do about it
+
+You've got the accuracy system from part 1–4 running. Your pick/pack error rate is down. But there's a second inventory problem that accuracy alone doesn't fix: inventory that's perfectly accurate but completely dead. Correct count, zero demand, accumulating storage fees every day it sits.
+
+A seller we worked with had 87 units of a product that sold great in 2024. In 2026, it's been sitting in FBA for 14 months. Amazon charges them $210/month in storage fees. The product cost $2,400 to manufacture. They've already paid $2,940 in storage. At this point, they're paying Amazon to store their own inventory — and they haven't made a move because "maybe it'll sell next month." That's $5,340 spent on a $2,400 product that hasn't sold a single unit this year. The inventory count is accurate. The financial decision is the problem.
+
+The dead stock math that changes everything:
+
+Take every SKU that hasn't sold in 180+ days. Multiply unit cost × quantity on hand for total inventory value. Multiply monthly storage cost × units × months sitting. If storage cost exceeds 50% of inventory value, you've already paid Amazon more to store it than it's worth — and every month you wait makes it worse. Most sellers don't run this calculation because the storage fee shows up on a completely different report from the SKU-level sales data. The two numbers never meet. Until you make them meet.
+
+The dead stock identification formula
+
+Build one more tab in your inventory spreadsheet — the Aged Inventory Report. Here are the columns:
+
+SKU and product name.
+
+Units in stock.
+
+From your inventory management system or FBA Inventory report.
+
+Unit cost.
+
+What you paid to manufacture or acquire each unit.
+
+Total inventory value.
+
+Units × unit cost.
+
+Days since last sale.
+
+Today minus the date of the last order containing this SKU.
+
+Monthly storage cost per unit.
+
+For FBA: $0.78/cu ft (Jan–Sep) or $2.40+/cu ft (Oct–Dec) × cubic feet per unit ÷ number of units in that cubic foot. For your own warehouse: square footage cost allocation.
+
+Total storage cost incurred.
+
+Monthly storage × months sitting.
+
+Storage cost as % of item value.
+
+Total storage ÷ total inventory value × 100.
+
+Flag:
+
+RED = storage cost > 50% of value (you're paying more to store than the product is worth — liquidate immediately). YELLOW = 25–50% (danger zone — decide this week). GREEN = under 25% (monitor, but not urgent yet).
+
+This takes 30 minutes to set up and about 10 minutes to update monthly. The first time you run it, you'll probably find 2–5 SKUs in the red zone that you've been ignoring because "the margin is good" — margin that disappeared into storage fees six months ago.
+
+The 5 dead stock action paths
+
+Once you've identified your dead stock, you have exactly five options. Here they are, ranked from highest recovery to fastest resolution:
+
+Path
+
+Recovery %
+
+Time to Execute
+
+Best For
+
+1. Bundle with fast-mover
+
+60–80% of cost
+
+1–2 weeks
+
+Complementary products — dead SKU pairs naturally with a popular item. "Buy X, get Y free" or discounted bundle. Recovers most of your cost while moving the inventory.
+
+2. Liquidate to a liquidator
+
+10–20% of cost
+
+2–4 weeks
+
+Branded products with resale value. Contact B-Stock, 888 Lots, or similar. You'll take a bath, but $480 now is better than $2,940 in storage fees over 14 months plus eventual disposal.
+
+3. Deep-discount fire sale
+
+30–50% of cost
+
+1–3 weeks
+
+Products with some demand at the right price. Slash price 60–80%, run as a Lightning Deal or coupon. The goal is to clear inventory before storage fees eat another month.
+
+4. Donate and write off
+
+Tax deduction: 25–37% of cost
+
+1 week
+
+Products with zero resale value but deductible as charitable contribution. You get the tax write-off immediately and stop paying storage fees. Requires proper documentation.
+
+5. Destroy / removal order
+
+0% (loss is capped)
+
+1–2 weeks
+
+Products with zero resale value and no donation channel. Amazon charges $0.97–$2.43/unit for disposal. It stings once, then it's over. Better than paying storage fees in perpetuity.
+
+The decision framework in one sentence:
+
+If storage fees incurred > current liquidation value, you should have acted months ago — act today. Every day of indecision on a RED-flagged SKU costs you real money, and the math only gets worse. The best time to liquidate dead stock was when it hit 180 days without a sale. The second-best time is right now.
+
+The FBA aged inventory survival guide
+
+If you use Fulfillment by Amazon, dead stock has an extra dimension: Amazon's long-term storage fee schedule is designed to force you to act. Here's the 2026 timeline:
+
+0–180 days:
+
+Monthly inventory storage fee only (standard rates). No penalty for holding. This is your selling window.
+
+181–270 days:
+
+Aged inventory surcharge kicks in — roughly $1.50/cu ft on top of the monthly storage fee. For a standard-size product at 0.5 cu ft, that's an extra $0.75/unit/month.
+
+271–365 days:
+
+Surcharge increases to $3.80+/cu ft. Your storage costs are now 3–5× the standard rate. Most sellers hit this tier without realizing because the charge appears on a different report page from their daily sales.
+
+365+ days:
+
+$6.90+/cu ft surcharge. At this point, if your product sells for under $20, you're probably losing money every month just storing it. Removal order immediately.
+
+How to run your Aged Inventory Report in Seller Central:
+
+Inventory → Inventory Planning → Inventory Age. This shows every FBA SKU broken into age buckets: 0–90 days, 91–180, 181–270, 271–365, and 365+. Export to CSV. Match against your SKU profitability tracker. Any SKU in the 271+ bucket: make a decision this week. The storage fees you're paying on that inventory are almost certainly exceeding any potential profit if it eventually sells.
+
+Prevention: the reorder formula that stops dead stock before it starts
+
+Dead stock isn't just a cleanup problem — it's a purchasing problem. Most dead inventory started as a purchase order that was sized wrong. Here's how to prevent it:
+
+The MOQ trap:
+
+Your supplier's minimum order quantity is 500 units. You sell 8 per month. That's 62 months of inventory — more than 5 years. Even if every unit sells eventually, you've tied up capital and paid storage on product you won't need for years. The fix: negotiate a lower MOQ with a price premium, or find a supplier with smaller minimums. Paying 20% more per unit for an MOQ of 100 beats paying storage on 400 excess units for 5 years.
+
+The reorder formula:
+
+Reorder Point = (Lead Time in Days × Daily Demand) + Safety Stock. Maximum Inventory = Reorder Point + Economic Order Quantity — but capped by: (1) shelf life, (2) storage cost per unit per month, (3) cost of capital. If storage cost exceeds 2% of unit cost per month, the EOQ shrinks dramatically — it's cheaper to reorder more frequently in smaller quantities than to pay storage on excess inventory. Your spreadsheet should calculate this automatically based on your actual sales velocity, not your supplier's preferred order size.
+
 Frequently asked questions
 
 How much do pick/pack errors actually cost a small warehouse?
@@ -20366,11 +20853,23 @@ custom automation build
 
 can handle all of it — and a Jobs Done Labs free audit will map exactly where your remaining errors live and what a build would recover.
 
+How do I identify dead stock in my warehouse?
+
+Build an Aged Inventory Report — a simple spreadsheet with columns for SKU, units in stock, unit cost, total inventory value, days since last sale, monthly storage cost, total storage incurred, and storage cost as percentage of item value. Flag any SKU where storage cost exceeds 50% of the item's value as RED (liquidate immediately), 25–50% as YELLOW (decide this week), and under 25% as GREEN (monitor). Run this report monthly. The first time you run it, you'll almost certainly find 2–5 SKUs you've been ignoring that are quietly burning hundreds of dollars a month in storage fees. For FBA sellers, the simplest path is Seller Central → Inventory → Inventory Planning → Inventory Age — export the CSV, match it against your SKU profitability tracker, and flag anything in the 271+ day bucket for immediate action.
+
+What should I do with inventory that hasn't sold in a year?
+
+You have five options ranked by recovery rate: (1) Bundle it with a fast-moving product — "Buy X, get Y free" — recover 60–80% of cost. (2) Run a deep-discount fire sale at 60–80% off — recover 30–50%. (3) Liquidate to a liquidator like B-Stock or 888 Lots — recover 10–20% but it's fast. (4) Donate and write off — recover 25–37% through tax deduction, stops storage fees immediately. (5) Create a removal/disposal order — recover nothing, but the bleeding stops. The worst choice is doing nothing — every month you wait, the storage fees compound and the recovery percentage drops. For FBA sellers specifically: if an item is over 365 days old, the $6.90+/cu ft surcharge means you're almost certainly losing money every month you keep it. Removal order immediately, then decide which of the 5 paths to take once it's back in your possession.
+
+How do I calculate whether it's cheaper to store or liquidate dead inventory?
+
+The formula is: (Monthly storage cost × expected months until sale) vs (Unit cost − liquidation recovery). If the storage cost until you expect to sell exceeds what you'd lose by liquidating now, liquidate. Example: a product costs you $18/unit. Monthly storage is $3.50/unit. You think it might sell in 8 months. Storage cost: 8 × $3.50 = $28/unit — already more than the unit is worth. Liquidation at 20% recovery: you lose $14.40/unit but stop paying $3.50/month immediately. The liquidation is cheaper after just 4.1 months of storage. Most sellers miss this because the storage fee and the unit cost live in different mental buckets — the unit cost happened 18 months ago (sunk cost), but the storage fee is a new expense every month (active cost). The math doesn't care when you paid for the inventory — it only cares what you'll pay going forward versus what you can recover today.
+
 Related reading:
 
-why your inventory spreadsheet says 500 and the shelf has 350
+why manual data entry is silently eating your e-commerce margins
 
-tracking 50 purchase orders without losing any
+how to stop copy-pasting product data across 3 channels
 
 Find out what pick/pack errors are actually costing you — in dollars, not guesses
 

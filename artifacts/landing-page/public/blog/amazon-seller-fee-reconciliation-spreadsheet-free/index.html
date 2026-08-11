@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where'd Your $15K Go? Free Amazon Fee Reconciliation | Jobs Done Labs</title>
+  <meta name="description" content="Amazon dashboard says $52K. Bank has $37K. Free spreadsheet tracks every fee per SKU — referral, FBA, storage, ads — so you know what's actually profitable." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadsheet-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadsheet-free/" />
+  <meta property="og:title" content="Where'd Your $15K Go? Free Amazon Fee Reconciliation Spreadsheet" />
+  <meta property="og:description" content="Amazon dashboard says $52K. Bank has $37K. Free spreadsheet tracks every fee per SKU so you see what's actually profitable — referral, FBA, storage, ads, all of it." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Where'd Your $15K Go? Free Amazon Fee Reconciliation" />
+  <meta name="twitter:description" content="Amazon dashboard says $52K. Bank has $37K. Free spreadsheet tracks every fee per SKU — referral, FBA, storage, ads — so you know what's actually profitable." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Where'd Your $15K Go? Amazon Took $15,000 in Fees Last Quarter and You Can't Explain Where It Went — Here's the Free Reconciliation System",
+    "description": "Amazon sellers lose thousands to invisible fees. Free spreadsheet tracks every marketplace fee per SKU — referral, FBA, storage, advertising, returns — so you see exactly which products are profitable. Works for Amazon, eBay, Walmart, and Shopify.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-08-11",
+    "dateModified": "2026-08-11",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadsheet-free/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I track Amazon seller fees without paying for software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can track every Amazon fee per SKU using a free Google Sheets template. Download your Date Range Report from Seller Central (Reports → Payments → Date Range Report → Generate), paste the CSV into a tracking spreadsheet with columns for revenue, referral fee, FBA fee, storage fee, advertising cost, returns cost, and disposal fees, then use simple SUMIF formulas to calculate per-SKU profitability. The entire process takes about 30 minutes per week. No paid software required — though tools like A2X and GETIDA automate the data import step if you decide the manual paste isn't worth your time." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Amazon fees are hidden and how do I find them?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The most commonly overlooked Amazon fees include: long-term storage fees (kick in at 181 days, charge per cubic foot — can exceed the item's value on slow-moving inventory), aged inventory surcharges (additional fee on top of monthly storage for items over 271 days), returns processing fees (Amazon charges you to process a return even when the item goes back into sellable inventory), disposal and removal order fees, inbound placement fees (charged when you don't use Amazon's preferred shipment splitting), and unplanned service fees (charged when you send inventory without proper prep or labeling). To find them, run a Date Range Report with the 'Summary' view in Seller Central — it breaks out every fee type. The key missed fee: FBA 'returns processing' is a separate line item from the FBA pick-and-pack fee and sellers often miss it because returns show as a negative revenue line, not a separate fee line." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know which SKUs are profitable on Amazon?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The formula is: net profit per SKU = (revenue − referral fee − FBA pick/pack fee − FBA storage fee allocation − advertising cost allocation − returns cost allocation − COGS − disposal/removal costs). Most sellers only subtract referral fee and COGS, which makes every SKU look profitable. The full-fee calculation often reveals that 20-30% of your catalog is actually losing money after all fees — especially slow-moving inventory where storage fees quietly accumulate. Use a per-unit fee tracker: download your Date Range Report, match each fee type to its SKU via the SKU or FNSKU column, and allocate pooled fees (storage, advertising) proportionally by units sold or revenue. Flag any SKU with margin under 15% after all fees — those are the ones to raise prices on or discontinue." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I do Amazon accounting in a spreadsheet instead of using A2X or QuickBooks?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, for sellers doing under $500K/year in Amazon revenue, a well-structured Google Sheets tracker handles fee reconciliation effectively. You'll need: (1) a Date Range Report download from Seller Central (weekly or bi-weekly), (2) a master SKU profitability sheet with revenue and every fee type in separate columns, (3) SUMIF formulas to aggregate per-SKU from the raw report data, and (4) a summary P&L tab that rolls up channel-level profitability. The trade-off is that software like A2X auto-imports settlement data and posts directly to QuickBooks/Xero, saving about 2-3 hours per month. The spreadsheet approach takes about 30 minutes per week but costs $0. For sellers doing over $1M/year with 100+ SKUs across multiple marketplaces, the time savings of software typically outweigh the subscription cost." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I reconcile Amazon settlement reports with my bank deposits?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Amazon settlement reports never match your bank deposits exactly, and that's by design. Here's why: (1) Amazon pays on a 14-day cycle that doesn't align with calendar months, (2) settlements include reserve holds — Amazon withholds a percentage of each disbursement as a reserve against chargebacks and A-to-Z claims, (3) adjustments from prior periods (reversed fees, reimbursements, chargebacks) appear in the current settlement, and (4) advertising charges are deducted from settlements on a separate billing cycle. To reconcile: download your settlement report (Reports → Payments → All Statements), match each settlement ID to a bank deposit, then account for the reserve balance and pending settlements that haven't been deposited yet. The reconciliation formula is: Current Period Revenue − Current Period Fees + Prior Period Adjustments − Reserve Increase = Actual Bank Deposit. A free reconciliation tab in your tracking spreadsheet handles this in about 15 minutes per settlement cycle." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Where'd Your $15K Go?", "item": "https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadsheet-free/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:40px; }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    a { color:var(--accent-deep); }
+    .comparison { margin:28px 0; }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Amazon Seller Financial Dashboard" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Retail &amp; E-Commerce Operations</span>
+      <h1>Amazon Took $15,000 in Fees Last Quarter and You Can't Explain Where It Went. Here's the Free Reconciliation System That Shows You Exactly Which SKUs Are Actually Profitable.</h1>
+      <p class="byline">By Ryne Bandolik · Jobs Done Labs · August 11, 2026</p>
+
+      <p>You pulled up Seller Central last week. The dashboard said you did $52,000 this quarter. You felt good about that number. Then you checked your bank account. $37,000. That's $15,000 that didn't make it to your bank — and you can't explain where it went because Seller Central shows fees across fourteen different reports, none of which agree with each other.</p>
+
+      <p>If you search "amazon seller fee reconciliation spreadsheet free" right now, the top results are all paid software: A2X at $19/month, GETIDA at $49/month, Gorilla ROI, Link My Books. Every single page-1 result wants your credit card. Not one of them offers a free, do-it-yourself alternative — even though the data you need is already sitting in your Seller Central, downloadable as a CSV, right now.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The 30-second math that changes everything:</strong> Take your quarterly Amazon revenue × 25–35%. That's the range most sellers lose to fees they can't track individually. On $52,000 in sales, that's $13,000–$18,200. Your CPA probably told you the total fee number. But your CPA never told you WHICH SKUs ate the fees — and that's the number that determines whether you should raise prices, cut products, or change your FBA strategy.</p>
+      </div>
+
+      <h2>The Amazon fee iceberg: what you see versus what you pay</h2>
+      <p>Every Amazon seller knows about the 15% referral fee. That's the visible part. But here are the fees most sellers don't track individually — the ones that quietly eat your margin per SKU until a product that looks profitable on paper is actually losing money every time it ships:</p>
+
+      <div class="comparison">
+        <table>
+          <tr>
+            <th>Fee Type</th>
+            <th>What Amazon Calls It</th>
+            <th>Typical Range</th>
+            <th>Where It Hides</th>
+          </tr>
+          <tr>
+            <td>Referral Fee</td>
+            <td>Referral Fee on Item Price</td>
+            <td>8–15% of sale price (45% for Amazon devices)</td>
+            <td>Visible on every order</td>
+          </tr>
+          <tr>
+            <td>FBA Pick &amp; Pack</td>
+            <td>FBA Pick &amp; Pack Fee</td>
+            <td>$3.22–$6.13+ per unit (size/weight)</td>
+            <td>Per-order detail, easy to miss in aggregate</td>
+          </tr>
+          <tr>
+            <td>Monthly Storage</td>
+            <td>FBA Storage Fee</td>
+            <td>$0.78–$2.40/cu ft (Jan–Sep), $2.40+/cu ft (Oct–Dec)</td>
+            <td>Monthly report, not per-order — accumulates silently</td>
+          </tr>
+          <tr>
+            <td>Long-Term Storage</td>
+            <td>Aged Inventory Surcharge</td>
+            <td>$1.50+/cu ft (181–270 days), $3.80+ (271–365), $6.90+ (365+ days)</td>
+            <td>Quarterly assessment — can exceed the item's value</td>
+          </tr>
+          <tr>
+            <td>Returns Processing</td>
+            <td>FBA Returns Processing Fee</td>
+            <td>Equal to original FBA fee (charged even if item is resellable)</td>
+            <td>Returns report — separate from the order fee</td>
+          </tr>
+          <tr>
+            <td>Disposal / Removal</td>
+            <td>FBA Removal Order / Disposal Fee</td>
+            <td>$0.97–$2.43+/unit</td>
+            <td>One-time charge, easy to miss in bulk removal orders</td>
+          </tr>
+          <tr>
+            <td>Advertising (PPC)</td>
+            <td>Sponsored Products / Brands</td>
+            <td>Deducted from settlement, not shown as a line item per order</td>
+            <td>Separate Advertising Console — not on order reports</td>
+          </tr>
+          <tr>
+            <td>Inbound Placement</td>
+            <td>Inbound Placement Service Fee</td>
+            <td>$0.18–$0.40+/unit (if you don't split shipments)</td>
+            <td>Shipment-level charge, buried in shipping workflow</td>
+          </tr>
+        </table>
+      </div>
+
+      <p>Now add those up for a single SKU that sells for $29.99: referral ($4.50), FBA pick/pack ($5.14 for a 1.5-lb large standard), monthly storage ($0.12/unit for 30 days at $0.78/cu ft), PPC ($3.00 assuming 10% ACoS on $30), returns processing ($5.14 if 5% of units are returned — charged as an average per unit). That's $17.90 in fees on a $29.99 product. Before cost of goods. Before shipping to FBA. Before the 3% of customers who file chargebacks. Your $29.99 product with a $12 COGS looked like it made $4.99 per unit. After all fees? You're losing $0.09 per unit — and you've been selling 50 units a month for a year without knowing.</p>
+
+      <h2>The free marketplace fee tracker spreadsheet</h2>
+      <p>Here's a Google Sheets system that gives you per-SKU profitability across Amazon, eBay, Walmart, and Shopify — in one view, updated weekly, for $0. It has four tabs:</p>
+
+      <div class="checklist">
+        <h3>The 4-tab tracker structure</h3>
+        <ol>
+          <li><strong>Tab 1: Amazon Raw Import.</strong> Paste your Date Range Report CSV here. Columns: Date, Order ID, SKU, Product Name, Units Sold, Revenue, Referral Fee, FBA Fee, Shipping Credit, Promotion Rebate, Refund Amount. One paste per week, 30 seconds.</li>
+          <li><strong>Tab 2: Fee Lookup Tables.</strong> Reference tables for referral fee rates by category, FBA fee rates by size tier, and monthly storage rates by time of year. These feed the auto-calculations so you don't manually enter fee rates.</li>
+          <li><strong>Tab 3: Per-SKU P&amp;L.</strong> Auto-aggregated from Tab 1 using SUMIF formulas. Columns: SKU, Units Sold, Gross Revenue, Referral Fees, FBA Fees, Storage Fee Allocation, PPC Allocation, Returns Cost, COGS (manual entry), Net Profit, Margin %. Color-coded: green = healthy (≥20% margin), yellow = thin (10–20%), red = losing money (&lt;10%).</li>
+          <li><strong>Tab 4: Multi-Channel Rollup.</strong> One row per SKU across all channels. If you also sell on eBay (paste eBay transaction report), Walmart, and Shopify (paste payout reports) — each channel gets its own data imported to Tab 1 with a channel label, and this tab rolls everything up so you see the real picture: your Amazon FBA fees might make a SKU look bad, but the same SKU on Shopify with merchant-fulfilled shipping has 22% margin.</li>
+        </ol>
+      </div>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The formula that powers the whole thing:</strong> Net Profit = Revenue − Referral Fee − FBA Fee − (Storage Rate × Cubic Feet × Days in Stock ÷ Days in Period) − (Total PPC Spend × SKU Revenue ÷ Total Revenue) − (Returns Rate × FBA Fee) − COGS. Every variable comes from a report you can download right now. The spreadsheet handles the math. You just paste the data and read the numbers.</p>
+      </div>
+
+      <h2>How to download and process Amazon fee reports without accounting software</h2>
+      <p>This is the step most sellers skip because it looks complicated. It's not. Here's the exact 5-minute weekly process:</p>
+      <ol>
+        <li><strong>Go to Seller Central → Reports → Payments → Date Range Report.</strong> Select "Generate Report." Choose "Summary" view. Set the date range to the past 7 days (Monday–Sunday for a clean weekly cadence).</li>
+        <li><strong>Click "Generate" and wait 30–60 seconds.</strong> Amazon builds the CSV. When it's ready, click "Download."</li>
+        <li><strong>Open the CSV, copy all rows.</strong> Paste into Tab 1 of your tracker spreadsheet starting at row 2 (row 1 is column headers — match them once, lock that row).</li>
+        <li><strong>Tab 3 auto-updates.</strong> The SUMIF formulas pull per-SKU totals from Tab 1. You don't touch Tab 3 — it just works. Watch the margin % column. Anything in red? That's your action item this week.</li>
+        <li><strong>Repeat for eBay, Walmart, Shopify.</strong> Each marketplace has its own transaction/payout report. Download them, paste into new rows in Tab 1 with a channel label. Tab 4 rolls it all up.</li>
+      </ol>
+      <p>Total time: 30 minutes per week for 4 channels. That's 2 hours a month — versus the $15,000 in invisible fees you're currently paying per quarter without knowing which SKUs are the problem.</p>
+
+      <h2>The 4-step weekly reconciliation ritual</h2>
+      <p>Building the spreadsheet is step one. Using it consistently is the part that actually recovers your money. Here's the Friday-afternoon routine that takes 30 minutes and makes sure nothing slips:</p>
+
+      <div class="checklist">
+        <h3>Friday reconciliation ritual (30 min)</h3>
+        <ol>
+          <li><strong>Step 1: Download and paste.</strong> Grab this week's Date Range Report from Amazon. Paste into Tab 1. Do the same for eBay and Walmart if you sell there. (10 min)</li>
+          <li><strong>Step 2: Flag the red SKUs.</strong> Scan Tab 3 for anything with margin under 15%. Those SKUs are losing money — or close to it. Make a decision this week: raise the price, reduce PPC spend on that ASIN, or discontinue. Don't let it sit until next quarter. (5 min)</li>
+          <li><strong>Step 3: Flag storage bleeders.</strong> For FBA sellers, look at the storage fee allocation column. If any SKU's storage cost exceeds 5% of its revenue, it's been sitting too long. Create a removal order or run a promotion to clear it. Amazon charges per cubic foot, and slow inventory compounds — a product sitting 200 days at $2.40/cu ft/month can easily accumulate $8+ in storage fees on a $25 item. (5 min)</li>
+          <li><strong>Step 4: Settlement-to-bank reconciliation.</strong> Amazon deposits don't match your reports because of reserve holds, prior-period adjustments, and the 14-day payment delay. The tracker includes a settlement reconciliation tab that matches each settlement ID to a bank deposit and accounts for the reserve — so when your CPA asks why the bank deposit doesn't match your P&amp;L, you have the answer in one row. (10 min)</li>
+        </ol>
+      </div>
+
+      <h2>Multi-channel: eBay, Walmart, Shopify in one view</h2>
+      <p>If you sell on multiple platforms, you have the same problem multiplied by four. Each platform reports fees differently. Amazon gives you a Date Range Report. eBay gives you a Transaction Report. Walmart gives you a Payment Summary. Shopify payouts bundle everything into one deposit with a dozen deductions.</p>
+      <p>Tab 4 of the tracker solves this. Each channel's fees get normalized into the same columns — referral fee, fulfillment fee, advertising, returns — regardless of what that platform calls them. The rollup view shows you per-SKU profitability across all channels. A product that loses money on Amazon FBA might be solidly profitable on Shopify where you control fulfillment. Without the cross-channel view, you'd discontinue a product that's actually making you money — just on a different platform.</p>
+      <p>One seller we worked with discovered that their best-selling Amazon SKU was losing $1.12 per unit after all fees — but the same product on Walmart (lower referral fee, merchant-fulfilled) was making $4.80 per unit. They shifted inventory allocation, kept the product, and turned a $6,700 annual loss into an $18,000 profit — without changing a single listing.</p>
+
+      <h2>The fee audit: Amazon makes mistakes</h2>
+      <p>Amazon processes billions of transactions. They make errors. Here are the most common fee overcharges — all of which you can catch with your tracker and file for reimbursement:</p>
+      <ul>
+        <li><strong>Returned item never actually returned.</strong> Customer files a return, Amazon refunds them, but the item was never scanned back into FBA. You paid for a return that didn't happen. Amazon reimburses these — but only if you file within 18 months. Check your returns report monthly against refunds.</li>
+        <li><strong>Dimensional weight miscalculation.</strong> Amazon measures your product's dimensions and weight when it arrives at FBA. Sometimes they get it wrong — a 12 oz product measured at 2 lbs means you're paying the next size tier's FBA fee on every unit. Compare your actual dimensions to what Amazon has on file (Inventory → Manage Inventory → click the SKU → check dimensions). File a remeasurement request if it's wrong.</li>
+        <li><strong>FBA fee charged at wrong size tier.</strong> Similar to dimensional weight — if your product gets classified as "Large Standard" when it should be "Small Standard," you're overpaying roughly $2–3 per unit. At 50 units/month, that's $1,200–$1,800/year.</li>
+        <li><strong>Storage fee for items already removed.</strong> You created a removal order. The units shipped. Amazon's system sometimes continues charging storage for 1–2 more billing cycles. Check your monthly storage report against removal order confirmations.</li>
+        <li><strong>Inbound shipment quantity discrepancies.</strong> You shipped 100 units. Amazon received 96. Four units went missing at the warehouse. After 30 days, you can file for reimbursement — but only if you have the shipment reconciliation data to prove the discrepancy. Amazon's automated reimbursement sometimes covers these; sometimes it doesn't.</li>
+      </ul>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The average seller recovers $500–$2,000 per year in fee overcharges.</strong> Amazon's reimbursement window is 18 months. If you've never audited your fees, you're sitting on 18 months of potential reimbursements that expire every day you don't check. The fee audit tab in the tracker flags all of the above automatically — it compares your expected fees per unit to what you were actually charged and highlights any discrepancy over 5%.</p>
+      </div>
+
+      <div class="comparison">
+        <h2>Spreadsheet vs SaaS: what you get at each level</h2>
+        <table>
+          <tr>
+            <th></th>
+            <th>Free Spreadsheet</th>
+            <th>Entry SaaS ($19–49/mo)</th>
+            <th>Full Platform ($99+/mo)</th>
+          </tr>
+          <tr>
+            <td>Per-SKU profitability</td>
+            <td>Yes — manual data paste</td>
+            <td>Yes — auto-import</td>
+            <td>Yes — real-time</td>
+          </tr>
+          <tr>
+            <td>Multi-channel view</td>
+            <td>Yes — separate paste per channel</td>
+            <td>Some — depends on integrations</td>
+            <td>Yes — unified dashboard</td>
+          </tr>
+          <tr>
+            <td>Fee audit / overcharge detection</td>
+            <td>Manual comparison with expected</td>
+            <td>Basic automated checks</td>
+            <td>Full automated audit + auto-reimbursement claims</td>
+          </tr>
+          <tr>
+            <td>QB/Xero integration</td>
+            <td>Manual journal entries</td>
+            <td>Auto-posting of settlements</td>
+            <td>Full GL integration</td>
+          </tr>
+          <tr>
+            <td>Storage fee tracking</td>
+            <td>Yes — monthly report paste</td>
+            <td>Yes — auto-calculated</td>
+            <td>Yes — with forecasting</td>
+          </tr>
+          <tr>
+            <td>Time per week</td>
+            <td>30 minutes</td>
+            <td>10 minutes</td>
+            <td>5 minutes</td>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td>$0</td>
+            <td>$228–$588/year</td>
+            <td>$1,188+/year</td>
+          </tr>
+        </table>
+        <p style="font-size:14px;color:rgba(23,21,19,.55);margin-top:8px">The spreadsheet works for sellers doing under $500K/year who want to understand their numbers before paying for software. Once you're doing $1M+ or have 100+ SKUs, the time-value math usually favors the $49/month tier.</p>
+      </div>
+
+      <div class="checklist">
+        <h3>Your Friday action plan: 5 steps, 2 hours</h3>
+        <ol>
+          <li><strong>Download your Date Range Report.</strong> Seller Central → Reports → Payments → Date Range Report → Generate (Summary view, last 30 days). Save the CSV. (2 min)</li>
+          <li><strong>Build the tracker.</strong> Create a Google Sheet with the 4 tabs described above. For Amazon-specific columns match them to the Date Range Report fields. The SUMIF formula for per-SKU revenue is: <code>=SUMIF('Amazon Import'!C:C, A2, 'Amazon Import'!E:E)</code> where column C is SKU, column E is revenue. Repeat for each fee column. (45 min the first time, then it's done forever)</li>
+          <li><strong>Paste 30 days of data and calculate your first per-SKU profitability.</strong> This is the moment of truth — you'll see which SKUs are profitable and which have been quietly losing money. It might be uncomfortable. It's also the most valuable 30 minutes you'll spend on your business this month. (10 min)</li>
+          <li><strong>Take action on the red SKUs.</strong> Any SKU with margin under 15% after all fees: decide this week whether to raise price, cut PPC, or discontinue. The worst decision is no decision — letting an unprofitable SKU run for another quarter burns the same fees again. (30 min)</li>
+          <li><strong>Set a recurring calendar event.</strong> Every Friday at 3pm: download reports, paste data, scan the reds. 30 minutes. The system only works if you use it — and the easiest way to make that happen is to make it a calendar appointment with yourself. (2 min)</li>
+        </ol>
+        <p style="font-size:15px;color:rgba(23,21,19,.55);margin:16px 0 0">Total cost: $0. Total setup time: 2 hours one-time. Ongoing: 30 minutes every Friday. First dollar recovered: probably this week, when you spot the SKU that's been losing money for 6 months while you thought it was your best seller.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>How do I track Amazon seller fees without paying for software?</h3>
+        <p>Download your Date Range Report from Seller Central (Reports → Payments → Date Range Report → Generate → Summary view), paste into a Google Sheets tracker with columns for revenue, referral fee, FBA fee, storage fee, advertising cost, and returns cost, then use SUMIF formulas to calculate per-SKU profitability. The entire weekly process takes about 30 minutes — 5 minutes to download and paste, 25 minutes to review results and take action on unprofitable SKUs. No paid software required. However, if you're selling $1M+ annually across 100+ SKUs on multiple channels, the $19–49/month for tools like A2X or GETIDA that auto-import settlement data usually pays for itself in time savings alone — the decision is about whether the 2 hours/month you spend pasting data is more expensive than the subscription.</p>
+
+        <h3>Which Amazon fees are hidden and how do I find them?</h3>
+        <p>The most commonly overlooked fees are: (1) long-term storage fees for inventory over 181 days — these don't appear on per-order reports, only on monthly storage reports; (2) returns processing fees — Amazon charges you the full FBA fee to process a return, even if the item goes back into sellable inventory; (3) disposal and removal order fees; (4) inbound placement fees for shipments that aren't split to Amazon's preferred distribution; (5) unplanned service fees for prep/labeling violations. Find them all in the Date Range Report under the "Summary" view — it breaks out every fee type as a separate column. The key insight: returns processing fees are a separate line item from the original FBA fee, and sellers often miss them because a return shows as a negative revenue line, not a separate fee line. Your CPA sees the total. You need to see the breakdown.</p>
+
+        <h3>How do I know which SKUs are profitable on Amazon?</h3>
+        <p>The full formula: Net Profit = Revenue − Referral Fee − FBA Fee − Storage Fee Allocation − PPC Allocation − Returns Cost − COGS − Disposal/Removal Costs. Most sellers only subtract referral fee and COGS, which makes every SKU look profitable. The full calculation typically reveals that 20–30% of a catalog is losing money after all fees. Flag any SKU with margin under 15% after the full calculation — that's the minimum viable margin for a product that needs to cover overhead, returns, and growth. For slow-moving inventory, the storage fee allocation is especially dangerous: a product sitting 200+ days can accumulate storage fees exceeding 30% of its retail price without you noticing because the fee appears on a completely separate monthly report from the order-level fees.</p>
+
+        <h3>How do I reconcile Amazon settlement reports with bank deposits?</h3>
+        <p>Amazon settlements never match bank deposits exactly because of: (1) the 14-day payment cycle that doesn't align with calendar months, (2) reserve holds — Amazon withholds a percentage against chargebacks, (3) prior-period adjustments appearing in current settlements, and (4) advertising costs deducted on a separate billing cycle. The reconciliation formula is: Current Period Revenue − Current Period Fees + Prior Period Adjustments − Reserve Increase = Actual Bank Deposit. Track settlement IDs to bank deposits in your spreadsheet. When your CPA asks why the numbers don't match — and they will — you'll have the answer in one row instead of spending 3 hours pulling reports from four different Seller Central pages.</p>
+
+        <h3>What free tools can I use instead of paid Amazon accounting software?</h3>
+        <p>The core stack is free: Google Sheets for the tracker, Amazon's Date Range Report (free to download), and your existing Seller Central access. For sellers doing under $500K/year, this handles 90% of what paid software does — the 10% gap is automated data import and QuickBooks/Xero posting. If you need auto-import without paying, you can use Amazon's SP-API (free for developers, but requires technical setup) to pull settlement data programmatically. For most sellers, the manual paste approach is the right trade-off: 30 minutes per week versus $19–49/month. The moment that calculus flips (saving 2 hours/month is worth $49), switch to A2X or GETIDA. But start with the spreadsheet — you'll understand your numbers better after 4 weeks of manually pasting data than you would after a year of auto-imported reports you never actually read.</p>
+      </section>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0">
+            <a href="/blog/ecommerce-manual-data-entry-silent-killer/" style="font-weight:600;color:#1466FF;text-decoration:none">Manual Data Entry Is the Silent Killer of Your E-Commerce Business</a>
+          </li>
+          <li style="margin-bottom:10px;padding-left:0">
+            <a href="/blog/shopify-quickbooks-reconciliation-never-matches/" style="font-weight:600;color:#1466FF;text-decoration:none">Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It)</a>
+          </li>
+          <li style="margin-bottom:10px;padding-left:0">
+            <a href="/blog/multi-channel-product-catalog-without-pim/" style="font-weight:600;color:#1466FF;text-decoration:none">You Sell on Shopify, Amazon, and Walmart — and Product Info Is Different on Every Channel</a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="cta-box">
+        <h2>What if you could see every fee, every SKU, every channel — without 30 minutes of manual data paste every Friday?</h2>
+        <p>Book a free 15-minute audit. We'll map your current reporting process, identify which SKUs you're probably losing money on right now, and show you what a custom automation build would look like — connecting Amazon SP-API, eBay, Walmart, and Shopify into one live dashboard with zero weekly data entry. No pitch, no commitment. You keep the fee analysis either way.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
+  </footer>
+</body>
+</html>

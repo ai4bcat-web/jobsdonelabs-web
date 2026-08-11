@@ -51,6 +51,7 @@
 - [Refill Chaos Costs Your Practice $41,750/Year](https://www.jobsdonelabs.ai/blog/prescription-refill-request-tracking-system/): Your practice loses $41K+/year to broken refill chaos. This free 5-tab tracking system stops patients from running out of medication with no EHR add-on needed.
 
 ## Home Services
+- [Where'd Your $15K Go? Free Amazon Fee Reconciliation](https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadsheet-free/): Amazon dashboard says $52K. Bank has $37K. Free spreadsheet tracks every fee per SKU — referral, FBA, storage, ads — so you know what's actually profitable.
 - [Automation Pricing: What Small Businesses Pay](https://www.jobsdonelabs.ai/blog/business-process-automation-cost-small-business/): Real automation costs for small businesses: free templates ($0), no-code ($20-200/mo), custom builds ($5K-30K). Free calculator + honest ROI breakdown.
 - [You Spent 15 Hours on Estimates This Week and Landed](https://www.jobsdonelabs.ai/blog/contractor-estimate-time-management/): Contractors burn 8–12 hours a week on free estimates and close maybe a quarter of them. The fix isn't faster estimating software — it's a pre-qualification...
 - [Approved Financing Deals Are Dying — Free Tracker](https://www.jobsdonelabs.ai/blog/contractor-financing-application-pipeline-tracker/): 30% of approved contractor financing deals never close. Free Google Sheets pipeline template: track every lender, every approval, every expiration date.
