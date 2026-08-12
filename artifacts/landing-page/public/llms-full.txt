@@ -337,6 +337,343 @@ URL: https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadshe
 
 ---
 
+# Stop Losing Billable Hours to Admin
+
+Professional Services
+
+You Bill $350/Hour But Lose 90 Minutes a Day to Admin. Here's the Time-Audit System That Recovers $75,000/Year Without Hiring Anyone.
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 12, 2026
+
+Key takeaways
+
+Solo lawyers, CPAs, and consultants lose 25–35% of their workday to non-billable admin — sorting emails, formatting documents, scheduling, and invoicing. A 5-day time audit reveals exactly where the hours disappear. The Automate/Delegate/Eliminate framework recovers 45–90 minutes/day. Templates, filters, and free tools can recover $57,000–$115,000/year — without hiring a single person.
+
+The 5-day time audit: find out where your money really goes
+
+You know you're losing billable hours. You just don't know
+
+where
+
+. The 5-day time audit answers that question with hard data — not gut feelings.
+
+Download the free time-audit spreadsheet (Google Sheets). For 5 consecutive working days, track
+
+every 15-minute block
+
+into one of five buckets:
+
+The 5 audit categories
+
+Billable-Client-Work
+
+— the actual legal/accounting/consulting work you bill for
+
+Billable-Client-Communication
+
+— emails, calls, and meetings with clients about active matters
+
+Non-Billable-Admin
+
+— email sorting, filing, scheduling, invoicing, formatting, data entry, chasing signatures
+
+Non-Billable-Business-Development
+
+— proposals, networking, content, referral relationships
+
+Pure-Waste
+
+— social media, context-switching recovery, looking for that file you know you saved somewhere
+
+25–35%
+
+That's how much of the average solo professional's workday lands in buckets 3 and 5 — non-billable admin and pure waste. At $350/hour × 1.5 hours/day × 220 working days =
+
+$115,500/year in lost billable capacity
+
+. Even at $200/hour, that's $66,000/year.
+
+The spreadsheet auto-calculates your leakage. At the end of the 5 days, you'll have a single number:
+
+this is exactly how much money you're leaving on the table every year
+
+. That number is the motivation you need for what comes next.
+
+The 3-bucket system: Automate, Delegate, Eliminate
+
+Once you know which tasks are draining your time, sort every non-billable activity into one of three buckets:
+
+Bucket
+
+What goes here
+
+Example
+
+Automate
+
+Repetitive, rules-based tasks a computer can do
+
+Email sorting by client, invoice generation, calendar scheduling, doc templates
+
+Delegate
+
+Tasks requiring judgment but not your expertise — a $15–25/hr virtual assistant can handle them
+
+Follow-up scheduling, data entry, file organization, travel booking, client intake forms
+
+Eliminate
+
+Tasks you do out of habit that add zero client value — stop doing them entirely
+
+Re-reading emails 3 times, manually formatting the same header on every doc, double-checking things that were already right
+
+The rule of thumb: if a task doesn't require your license, your signature, or your brain — it belongs in Automate or Delegate. If it adds no value to anyone, eliminate it cold.
+
+The top 5 admin time sinks and exactly how to automate each
+
+These five tasks consume nearly every minute in the "Non-Billable-Admin" bucket. Here's the step-by-step fix for each — all starting at $0.
+
+1. Email sorting and triaging (20 min/day recovered)
+
+Set up Gmail filters that auto-label every incoming email by client, matter, or project. Create labels: "Client-Acme," "Client-Baker," "Prospect," "Newsletter," "Admin." Then add auto-archive rules for CC-only emails and newsletters you never read. When you open your inbox, client emails are already sorted — you see Acme matters together, Baker matters together. No more scrolling through 40 emails to find the thread.
+
+Setup time:
+
+30 minutes.
+
+Cost:
+
+$0 (included with Gmail/Google Workspace).
+
+Recovered:
+
+15–20 min/day.
+
+2. Calendar scheduling (15 min/day recovered)
+
+Use Calendly free tier. Set up one event type: "30-Minute Call." Connect it to your Google Calendar so it only shows availability during your open slots. Replace every "what time works for you?" email with a single line: "You can grab a time on my calendar here: [Calendly link]." That's 5 back-and-forth emails eliminated per meeting booked.
+
+Setup time:
+
+15 minutes.
+
+Cost:
+
+$0 (Calendly free tier).
+
+Recovered:
+
+10–15 min/day.
+
+3. Document formatting and template population (10 min/day recovered)
+
+Stop rewriting engagement letters, retention agreements, and follow-up emails from scratch. Build one master template for each document type with merge fields for client name, date, scope, and fee. Store them in a Google Drive folder called "Templates." When you need a document, open the template, fill in 4 fields, send. This is 90 seconds instead of 12 minutes of retyping the same boilerplate.
+
+Setup time:
+
+2 hours (one-time).
+
+Cost:
+
+$0 (Google Docs).
+
+Recovered:
+
+8–12 min/day.
+
+4. Timesheet tracking and invoice generation (15 min/day recovered)
+
+Use Toggl Track free tier. Start a timer when you begin working on a client matter, stop it when you switch. At month-end, export the time log into a pre-built invoice template (Google Sheets) that auto-populates: client name, hours worked, rate, total. The invoice populates from the timesheet data in under 60 seconds.
+
+Setup time:
+
+45 minutes.
+
+Cost:
+
+$0 (Toggl free tier + Google Sheets).
+
+Recovered:
+
+12–15 min/day.
+
+5. Automated invoice delivery (5 min/day recovered)
+
+Use Gmail's scheduled send or a free tool like Mailmeteor to batch-deliver invoices to clients on a set schedule. Create a recurring calendar reminder: "Send invoices — 1st of month." The invoices are already built from #4 above; sending them takes 30 seconds per client instead of 5 minutes of composing individual emails.
+
+Setup time:
+
+10 minutes.
+
+Cost:
+
+$0.
+
+Recovered:
+
+5–8 min/day.
+
+75 min/day
+
+Total recovered across all 5 automations: 60–75 minutes of billable time per day. At $350/hour × 1.25 hours × 220 days =
+
+$96,250/year in recovered capacity
+
+. Total setup cost across all 5: $0.
+
+The ROI calculator: what's your number?
+
+Plug your own numbers into this formula:
+
+Annual Recovery = (Hours recovered per day × Billable rate × Working days per year) − Automation cost
+
+Example 1 — Solo lawyer at $350/hr:
+
+(1.25 hrs × $350 × 220) − $0 =
+
+$96,250
+
+Example 2 — CPA at $200/hr (recovering 45 min/day):
+
+(0.75 hrs × $200 × 220) − $200/yr tools =
+
+$32,800
+
+Example 3 — Consultant at $150/hr (recovering 60 min/day):
+
+(1.0 hrs × $150 × 220) − $300/yr tools =
+
+$32,700
+
+Even if all you do is set up email filters and Calendly — 30 minutes of work — you'll recover $15,000–$25,000/year. There is no other investment in your practice with a 500x+ first-year ROI.
+
+When to hire vs. when to automate
+
+Not everything should be automated. Some tasks need a human — just not
+
+you
+
+. Here's the decision framework:
+
+Hire a VA ($15–25/hr) when…
+
+Automate with tools ($0–50/mo) when…
+
+The task requires judgment — "which of these 5 emails is actually urgent?"
+
+The task follows rules — "if email is from Client X, label it Client-X and skip inbox"
+
+It involves talking to humans — client intake calls, scheduling conflicts, vendor follow-ups
+
+It involves data — copying from one system to another, formatting, calculating, sorting
+
+It happens irregularly or varies each time — "research this specific thing"
+
+It happens the same way every time — "every month, export timesheet, populate invoice"
+
+You have 20+ hours/week to offload and the math works
+
+You have 5–10 hours/week to recover and don't want to manage a person
+
+The smart sequence:
+
+automate first, then delegate the remainder.
+
+Automating the repetitive stuff shrinks the admin pile. What's left is the human-judgment work — perfect for a part-time VA at $15–25/hour. A VA handling 10 hours/week costs $600–$1,000/month. If that 10 hours is now billable at $350/hour, that's $14,000/month in new capacity for $1,000/month in cost. A 14x return.
+
+The template library: stop rewriting the same documents
+
+Most professionals have 5–8 document types they create over and over: engagement letters, proposals, follow-up emails, status updates, final reports. Each one takes 15–45 minutes from scratch — but 80% of the content is identical every time.
+
+Build a template library in Google Drive:
+
+Engagement letter
+
+— merge fields: client name, scope paragraph, fee structure, start date
+
+Proposal
+
+— merge fields: client name, problem statement, solution overview, timeline, investment
+
+Project status update
+
+— merge fields: client name, period, accomplishments, next steps, blockers
+
+Invoice cover email
+
+— merge fields: client name, period, total, due date, payment link
+
+Follow-up after proposal
+
+— merge fields: client name, proposal date, value-add link, call-to-action
+
+Each template takes 2 hours to build once. Each use saves 20–30 minutes. If you use each template 15–20 times per year, the time saved is 25–50 hours — the equivalent of a full workweek you just got back.
+
+Store the folder at
+
+drive.google.com > Templates > [Client-Work]
+
+. When you need a document, open the template, fill in the 4–6 merge fields, and send. Three minutes instead of thirty.
+
+Frequently asked questions
+
+How much billable time do professionals lose to admin work?
+
+Most solo professionals lose 60–90 minutes per day to non-billable admin — sorting emails, formatting documents, scheduling, invoicing, and data entry. At $350/hour, that's $57,750–$115,500/year in lost revenue. A 5-day time audit typically reveals 25–35% of the workday goes to non-revenue-generating activities.
+
+How do I automate admin tasks at a small law firm?
+
+Start with the 5 biggest time sinks: (1) Set up Gmail filters + labels to auto-sort client emails by matter — saves 15–20 min/day. (2) Use Calendly free tier for scheduling — eliminates 5 back-and-forth emails per appointment. (3) Build document templates with merge fields for engagement letters and retention agreements. (4) Use Toggl Track free tier for time tracking that auto-populates invoices. (5) Set up automated invoice delivery. These five changes recover 45–75 minutes/day for under $50/month.
+
+What admin work should a solo consultant delegate first?
+
+Delegate scheduling/follow-ups, data entry, file organization, and travel booking to a $15–25/hour virtual assistant. Reserve legal/financial review, client strategy, and deliverables for yourself. The rule of thumb: if the task doesn't require your specific expertise and someone can do it for less than a third of your billable rate, delegate it. Most solo consultants can offload 10–15 hours/week within the first month.
+
+How do I do a time audit for my professional services firm?
+
+For 5 consecutive working days, track every 15-minute block in a spreadsheet with these categories: Billable-Client-Work, Billable-Client-Communication, Non-Billable-Admin, Non-Billable-Business-Development, and Pure-Waste. At the end of the week, total each category. Multiply the non-billable hours by your billable rate to calculate the dollar leakage. Most professionals are shocked — the average is 25–35% of the workday on non-billable tasks.
+
+What's the ROI of automating administrative tasks for a CPA?
+
+A CPA billing $250/hour who recovers 60 minutes/day from admin tasks saves $250 × 220 working days = $55,000/year in recovered billable capacity. The automation cost (templates, scheduling tool, email filters, virtual assistant for overflow) typically runs $200–500/month, or $2,400–$6,000/year. Net ROI: $49,000–$52,600/year — a 9x–22x return. Even recovering just 30 minutes/day yields $27,500/year.
+
+Related posts
+
+Professional Services
+
+Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop
+
+Professional Services
+
+Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
+
+Professional Services
+
+Clients Won't Use Your Portal? Free Adoption Playbook With Onboarding Sequences
+
+Stop doing admin you shouldn't be doing
+
+We build automations that recover 10–20 hours/week for professional services firms — custom workflows that handle the repetitive admin so you bill more hours. Starting at $997. No long-term contracts.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop
+
+Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
+
+Clients Won't Use Your Portal? Free Adoption Playbook With Onboarding Sequences
+
+
+URL: https://www.jobsdonelabs.ai/blog/billable-hours-time-audit-professional-services/
+
+---
+
 # Automation Pricing: What Small Businesses Pay
 
 Professional Services
@@ -947,6 +1284,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+You Bill $350/Hour But Lose 90 Minutes/Day to Admin — Free Time-Audit System
 
 How Much Does Business Process Automation Cost? Honest Price Breakdown for Small Companies
 
@@ -13179,6 +13518,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Bill $350/Hour But Lose 90 Minutes/Day to Admin — Free Time-Audit System
+
 How Much Does Business Process Automation Cost? Honest Price Breakdown for Small Companies
 
 Clients Won't Use Your Portal? Free Adoption Playbook With Onboarding Sequences, Policy Templates, and Automated Reminders
@@ -14293,6 +14634,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+You Bill $350/Hour But Lose 90 Minutes/Day to Admin — Free Time-Audit System
 
 How Much Does Business Process Automation Cost? Honest Price Breakdown for Small Companies
 

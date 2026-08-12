@@ -52,6 +52,7 @@
 
 ## Home Services
 - [Where'd Your $15K Go? Free Amazon Fee Reconciliation](https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadsheet-free/): Amazon dashboard says $52K. Bank has $37K. Free spreadsheet tracks every fee per SKU — referral, FBA, storage, ads — so you know what's actually profitable.
+- [Stop Losing Billable Hours to Admin](https://www.jobsdonelabs.ai/blog/billable-hours-time-audit-professional-services/): Solo professionals lose $75K+/year to admin busywork. Free time-audit spreadsheet reveals the leak. Automate/delegate/eliminate — recover 45–90 min/day at $0.
 - [Automation Pricing: What Small Businesses Pay](https://www.jobsdonelabs.ai/blog/business-process-automation-cost-small-business/): Real automation costs for small businesses: free templates ($0), no-code ($20-200/mo), custom builds ($5K-30K). Free calculator + honest ROI breakdown.
 - [You Spent 15 Hours on Estimates This Week and Landed](https://www.jobsdonelabs.ai/blog/contractor-estimate-time-management/): Contractors burn 8–12 hours a week on free estimates and close maybe a quarter of them. The fix isn't faster estimating software — it's a pre-qualification...
 - [Approved Financing Deals Are Dying — Free Tracker](https://www.jobsdonelabs.ai/blog/contractor-financing-application-pipeline-tracker/): 30% of approved contractor financing deals never close. Free Google Sheets pipeline template: track every lender, every approval, every expiration date.
