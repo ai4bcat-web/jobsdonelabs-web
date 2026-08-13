@@ -12,6 +12,7 @@
 - [Contact](https://www.jobsdonelabs.ai/#contact): get in touch for a free audit
 
 ## Logistics
+- [Freight Claim System That Gets Small Carriers Paid](https://www.jobsdonelabs.ai/blog/freight-damage-claim-tracking-spreadsheet-small-carrier/): Cargo damage claims keep dying because nobody photographed delivery. Free freight claim tracker + evidence checklist to get small carriers paid.
 - [Free IFTA Fuel Tax Spreadsheet: File Without Software](https://www.jobsdonelabs.ai/blog/ifta-fuel-tax-spreadsheet-template-free/): Dreading IFTA quarter-end? Free Google Sheets template auto-calculates tax by state. Step-by-step filing guide for owner-operators. No TMS subscription needed.
 - [Your Fleet Maintenance 'System' Is Two Spreadsheets](https://www.jobsdonelabs.ai/blog/truck-fleet-maintenance-tracking-system/): A missed oil change cost one fleet $31,700 in engine rebuild, tow, and downtime. This guide gives you a 5-level fleet maintenance tracking system — starting...
 - [Your Techs Made 15 Second Trips Last Month](https://www.jobsdonelabs.ai/blog/truck-inventory-second-trip-prevention/): A 5-tech home service shop averages 3-5 second trips per tech per month because parts aren't on the truck — costing $1,500-$2,250/month in pure waste....
