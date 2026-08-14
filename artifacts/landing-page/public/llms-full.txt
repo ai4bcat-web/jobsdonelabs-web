@@ -7285,6 +7285,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Second Shift Scrapped 40 Parts Because the Whiteboard Said Nothing — Free Shift Handover Log
+
 Your Shop Has 12 Machines But Only One Is The Bottleneck — Free Constraint Analysis Spreadsheet
 
 The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System
@@ -8283,6 +8285,8 @@ Book your free production audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Your Second Shift Scrapped 40 Parts Because the Whiteboard Said Nothing — Free Shift Handover Log
 
 Track Machine Downtime Without Software — The Free System for Small Manufacturers
 
@@ -13852,6 +13856,283 @@ URL: https://www.jobsdonelabs.ai/blog/scope-creep-tracker-fixed-fee-consulting-c
 
 ---
 
+# Shift Handover Log Template for Manufacturing
+
+Manufacturing
+
+Your Second Shift Just Scrapped 40 Parts Because the First Shift's Whiteboard Said Nothing. Here's the Shift Handover Log That Ends It.
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 14, 2026
+
+Key takeaways
+
+A two-shift shop runs 500-750 handovers a year, and each one is a defect, safety, or rework risk when it lives on a whiteboard nobody updates. This guide gives you a free shift handover log spreadsheet (14 fields, one tab per machine), the 5-point handover ritual that makes it stick, and the machine-condition column that stops cold-start scrap.
+
+The scenario plays out the same way in thousands of job shops every week. First shift fights a coolant leak on machine 4 all night, patches it, and leaves a half-sentence on a whiteboard that reads "M4 coolant — check." The whiteboard doesn't say the repair is temporary. It doesn't say the leak returns above 4,000 RPM. It doesn't say the offset got bumped during the fight. Second shift fires the machine up cold, runs the first setup at full speed, and scraps 40 parts before anyone notices. Every handover mistake like this costs at least one setup — and nobody can point to the system that let it happen, because there isn't one.
+
+This guide is the fix. It's a shift handover log you can set up in Google Sheets in under an hour, plus the handover ritual that makes it stick. No MES. No Andon software. No $500/month subscription. Just a system that makes sure the next shift knows what the last shift learned.
+
+What a bad handover costs
+
+Handovers are the highest-frequency event in a multi-shift shop: 2-3 per day, 250 working days a year — that's 500-750 chances a year for information to die between shifts. Every failed handover has a measurable price tag:
+
+Restart time:
+
+15-45 minutes per failed handover while the incoming shift re-derives what the outgoing shift already knew. At 500 handovers a year and even a 10% failure rate, that's 12-56 hours of paid production time spent re-learning instead of making parts.
+
+Scrap and rework:
+
+one scrapped setup runs $200-$2,000 in material and machine time depending on the part. If handover failures cause just one scrap event a month, that's $2,400-$24,000 a year.
+
+Safety:
+
+the incident you didn't hear about — a loose guard, a pinched air line, a fixture clamp that slips — is the one that injures someone on the next shift.
+
+Customer trust:
+
+the job that ships late because "nobody told us it was a hot order" doesn't show up on a scrap report, but it shows up when the customer re-quotes the work.
+
+Industry experience is consistent on this: handover failures cause a disproportionate share of quality escapes in multi-shift shops. The log costs one setup. One incident it prevents pays for it forever.
+
+The core problem isn't laziness — it's a system that relies on memory.
+
+Nobody forgets the coolant leak because they don't care. They forget because the information lives in one person's head, and that person went home at 3 PM. Fix the system, not the people.
+
+The free shift handover log spreadsheet
+
+The log is a Google Sheet with one tab per machine (or one shared log per line if you run fewer than 5 machines). Every shift fills out one row before they leave. Auto-timestamps from Google Sheets give you a searchable history that no whiteboard can match.
+
+Each row carries 14 fields:
+
+Date and shift
+
+— timestamp + which shift is handing off (auto-fill works fine).
+
+Machine / line
+
+— one tab per machine keeps it clean.
+
+Jobs running
+
+— job number, part number, operation, and where in the run they are.
+
+Status
+
+— running, stopped, setup, or PM. One word, no ambiguity.
+
+Issues encountered
+
+— what went wrong this shift, in plain language.
+
+Corrective actions taken
+
+— what was done about it, and whether it's a permanent fix or a patch.
+
+Jobs completed
+
+— quantity good, so next shift knows what's already done.
+
+Scrap / rework produced
+
+— quantity and part number. This feeds your scrap tracking when you add it.
+
+Materials consumed vs. planned
+
+— flag shortages before they stop the next shift.
+
+Pending items for next shift
+
+— the single most important column. Everything that needs action, with who owns it.
+
+Safety notes
+
+— guards, spills, near-misses, anything the next shift should walk in knowing.
+
+Machine condition
+
+— the column that prevents cold-start scrap (full breakdown below).
+
+Quality flags
+
+— inspection holds, customer complaints, first-piece status (below).
+
+Sign-off
+
+— outgoing and incoming shift both initial. Handover isn't done until the incoming shift signs it.
+
+The setup takes about an hour: create the tabs, freeze the header row, add data validation dropdowns for Status (running/stopped/setup/PM) so nobody can type "kinda running," and share it view-only with the office so the production manager can see every handover without walking the floor.
+
+The 5-point verbal handover ritual
+
+The log is the record. The ritual is the enforcement mechanism — five minutes at shift change, standing together at the first machine, log in hand. The log is the agenda. Five points, in order:
+
+WIP status
+
+— what's running, what's next, what's hot for a customer.
+
+Equipment issues
+
+— what broke, what got patched, what's on watch.
+
+Quality flags
+
+— holds, first-piece approvals, anything the customer is waiting on.
+
+Material shortages
+
+— what's low, what's on order, what will stop a job at 9 AM.
+
+Open action items
+
+— who owes what to whom, and by when.
+
+Two rules make the ritual work.
+
+First, the oncoming shift reads the log BEFORE the outgoing shift leaves
+
+— questions get answered face to face, not via a 9 PM phone call.
+
+Second, nothing verbal that isn't written.
+
+If it's important enough to say, it's important enough to be in the log. That single rule is what turns the ritual from a chat into a system.
+
+If handover disputes between shifts are already common at your shop — "we told them" vs. "nobody told us" — the sign-off field in the log ends the argument. The signature is the evidence.
+
+The machine-condition column that prevents cold-start scrap
+
+The specific failure that inspired this guide — second shift firing up a machine mid-repair and scrapping the first run — is solved by one column, filled out with discipline. At every handover, the outgoing shift records five things per machine:
+
+Coolant
+
+— level, any leaks, any leak that was patched (and how long the patch has been running).
+
+Tool wear
+
+— inserts changed this shift, tools near end of life, anything cutting "off" that the next shift will inherit.
+
+In-process settings
+
+— offsets, speeds/feeds, or parameters changed this shift. If a machine isn't running the standard program, the next shift must know before they hit cycle start.
+
+Alarms
+
+— any alarm seen this shift, even if it cleared. Repeat alarms are the early warning of a breakdown; this column is how they get seen across shifts instead of dying with the shift that saw them.
+
+Calibration and inspection state
+
+— last calibration, any inspection hold, anything due.
+
+The rule: if the machine is in any state other than "running normal production," it's written down. This column is also the natural bridge to your
+
+downtime tracking log
+
+— the machines that keep showing "issues encountered" in the handover are the same ones eating your downtime budget, and now you'll have the paper trail to prove which ones.
+
+Quality flags that carry across shifts
+
+Some information dies silently between shifts every single week — and it's always the same category:
+
+Inspection holds
+
+— parts quarantined pending a decision. If the next shift doesn't know they're on hold, they ship them, or they rework them twice.
+
+Customer complaints pending
+
+— the angry email that arrived at 4:55 PM. It needs a response tomorrow morning, and tomorrow's shift needs to know before the phone rings.
+
+First-piece approval status
+
+— the setup that's waiting on the customer's sign-off before the run starts. If it's approved, run it. If it's not, don't.
+
+None of these are dramatic. All of them cost money when they get lost. The quality-flags column exists precisely because these items are boring enough to forget and expensive enough to matter.
+
+When to upgrade from log to software
+
+The spreadsheet is the right tool for most small shops, and it stays right until one of three triggers fires:
+
+Trigger
+
+Why the log starts to strain
+
+What to look at instead
+
+3+ shifts
+
+Three handovers a day across 10+ machines creates 30+ rows daily; supervisors can't review that volume in a spreadsheet.
+
+MES modules with shift log + Andon integration
+
+10+ machines
+
+One tab per machine works at 5 machines; at 15 it becomes 15 places to look for one answer.
+
+CMMS with shift handover built into work orders
+
+Handover disputes are routine
+
+If you're regularly in "we told them" arguments, you need automated, uneditable timestamps and audit trails.
+
+Any MES/CMMS with immutable handover records
+
+Until one of those triggers fires, the spreadsheet wins on cost, adoption, and speed to set up. The best handover system is the one operators actually fill out — and operators fill out the log because it's their shield: it's the document that proves what they told the next shift, in writing, before they went home.
+
+If your shop also struggles with
+
+keeping the schedule board honest
+
+finding which machine is really your bottleneck
+
+, the handover log plugs into both — it's the daily feed of truth that makes scheduling and constraint analysis actually reflect what's happening on the floor.
+
+Frequently asked questions
+
+What should a shift handover log include?
+
+Date, shift, machine or line, jobs running, machine status, issues encountered, corrective actions taken, jobs completed, scrap/rework produced, materials consumed vs. planned, pending items for the next shift, safety notes, machine condition, and sign-off from both shifts — 14 fields total. The machine-condition field is the one most shops skip, and it's the one that prevents cold-start scrap.
+
+How do I stop shift change mistakes in manufacturing?
+
+Three rules end most shift change mistakes: the outgoing shift writes everything down before leaving; the incoming shift reads the log and walks the machines before the outgoing shift leaves; and a fixed 5-minute handover ritual runs on a 5-point agenda — WIP status, equipment issues, quality flags, material shortages, and open action items.
+
+Why do production issues get lost between shifts?
+
+Because the handover medium is memory. Whiteboards get erased, texts get buried, and verbal summaries evaporate the moment the shift that gave them walks out the door. A written log survives the person — it keeps inspection holds, pending complaints, and machine quirks in one place the incoming shift reads before touching anything.
+
+Is a whiteboard enough for shift handover?
+
+No. A whiteboard has no history, no accountability, and no way to spot patterns across weeks. Keep it as a live visual summary if you like, but make the spreadsheet log the system of record.
+
+How do I track machine condition across shifts?
+
+Record five things per machine at every handover: coolant level and leaks, tool wear state, in-process settings, alarms seen, and calibration or inspection state. The rule: anything other than "running normal production" gets written down with what the next shift should do before running it.
+
+What's the best free shift handover template?
+
+A Google Sheets log with one tab per machine and the 14 fields above. It's free, works on every operator's phone, auto-timestamps, and gives supervisors a searchable history. Upgrade to MES software only when you hit 3+ shifts, 10+ machines, or routine handover disputes.
+
+Stop paying for what the last shift forgot to say
+
+Jobs Done Labs builds handover and shop-floor tracking systems for small manufacturers — shift logs, downtime tracking, scrap attribution, and the automated reporting that turns them into decisions instead of spreadsheets. Free audit: we'll walk your current handover process, show you the 2-3 fixes with the highest ROI, and estimate what handover failures are costing you today. Backed by the $30K-in-90-days guarantee: if we don't find at least $30K in recoverable production value, you pay nothing.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Track Machine Downtime Without Software — The Free System for Small Manufacturers
+
+The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System
+
+Your Shop Has 12 Machines But Only One Is The Bottleneck — Free Constraint Analysis Spreadsheet
+
+
+URL: https://www.jobsdonelabs.ai/blog/shift-handover-log-spreadsheet-manufacturing-free-template/
+
+---
+
 # Shopify Payouts Never Match QuickBooks? Here's Why
 
 Retail & E-Commerce Operations
@@ -14802,6 +15083,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Your Second Shift Scrapped 40 Parts Because the Whiteboard Said Nothing — Free Shift Handover Log
 
 Track Machine Downtime Without Software — The Free System for Small Manufacturers
 
