@@ -663,6 +663,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Proposal Pipeline Tracker: Know Who to Call Today — Free Spreadsheet
+
 Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop
 
 Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
@@ -12350,6 +12352,281 @@ URL: https://www.jobsdonelabs.ai/blog/prescription-refill-request-tracking-syste
 
 ---
 
+# Proposal Pipeline Tracking: Know Who to Call Today
+
+Professional Services
+
+You Had 14 Proposals Out Last Month and Followed Up on 3. Here's the Pipeline Tracker That Tells You Exactly Who to Call Today.
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 15, 2026
+
+Key takeaways
+
+A proposal pipeline tracker tells you which open proposals to follow up on today — and what to say. You can build one in a free spreadsheet in about an hour: a 5-stage pipeline (Lead → Qualified → Proposal Sent → Negotiation → Closed), a next-action column, a 10-second "who to call today" morning view, and the 7-14-21 follow-up sequence. If you're sitting on 14 open proposals right now, the sheet below will tell you exactly which 3 calls pay for your week.
+
+The month ends and you finally look at the pipeline. Six proposals expired without a single follow-up. Two of them were $8,000 projects where the prospect
+
+asked
+
+you to sell to them. You were busy doing client work — reasonable — and now the deals are cold, the window is closed, and the only record of them is a sent folder in your email.
+
+This isn't a discipline problem. It's a systems problem. You don't have a way to see, at a glance,
+
+who needs a call today
+
+— so follow-ups only happen when you happen to remember them. A pipeline tracker fixes exactly that. It's one spreadsheet, five stages, and one column that does the remembering for you.
+
+The cost of pipeline neglect
+
+Here's the math that woke up every consultant we've shown it to. Plug in your own numbers:
+
+Avg proposal value
+
+proposals that expired unfollowed this year
+
+your close rate when you follow up properly
+
+Example: 14 proposals a month, you follow up properly on 3 and sign 2. Two more die every month from a missing third touch — 24 proposals a year at $4,000 average, with even a conservative 10% follow-up close rate. That's
+
+$9,600 a year in recoverable revenue at the low end
+
+. Most solo professionals we talk to find the real number between
+
+$20,000 and $40,000
+
+— and unlike new business, these deals already know you, already asked for a proposal, and already budgeted for the work.
+
+The uncomfortable part isn't the money. It's that the fix costs nothing and takes an hour to set up.
+
+The 5-stage pipeline tracker spreadsheet
+
+Build this in Google Sheets (or Excel — same structure). One tab, one row per active deal, five stages:
+
+Lead
+
+— someone expressed interest; not qualified yet.
+
+Qualified
+
+— real need, real budget, real timeline. Proposal in progress.
+
+Proposal Sent
+
+— the clock starts here. This stage has a follow-up sequence attached to it (below).
+
+Negotiation
+
+— scope, price, or timeline is being discussed. Active conversation.
+
+Closed — Won or Lost
+
+— the only two allowed exits.
+
+The columns that make it work:
+
+Prospect
+
+— name and company.
+
+— email and phone. If you have to hunt for it at follow-up time, you won't follow up.
+
+Proposal date and value
+
+— value drives which deals deserve your personal call vs. an email.
+
+Stage
+
+— use a data-validation dropdown so nobody can type "kind of negotiating."
+
+Probability
+
+— your honest estimate: 10% lead, 30% qualified, 50% sent, 70% negotiation.
+
+Next action
+
+— one specific verb: "call," "email case study," "send contract."
+
+Next action date
+
+— THE column. Everything else in this guide exists to serve this date.
+
+Last contact and notes
+
+— so you never open a call cold.
+
+Setup takes about an hour: create the columns, freeze the header row, add the two dropdowns, and add conditional formatting that turns any overdue next-action date red. That red is the entire system in one color — it means "this deal is going cold
+
+right now
+
+and you are the only person who can stop it."
+
+The "who to call today" daily view
+
+Every morning, open the sheet and sort by
+
+next action date, ascending
+
+. Overdue follow-ups float to the top, today's calls sit right under them. In ten seconds you have your day's sales work: the top three rows. No login, no app, no CRM loading screen, no dashboard of 14 widgets — just the three calls that matter.
+
+One rule makes the view self-enforcing:
+
+never end the day with an overdue follow-up on the sheet.
+
+Either you made the call, or you set a new date — but the red row doesn't survive the day untouched. This is the same discipline you already apply when you're
+
+chasing a client for documents
+
+— a specific person, a specific request, a specific date — except now it runs toward revenue instead of away from paperwork.
+
+The sheet also ends the classic "is this warm or dead?" guessing. Three touches with no response and no new next action? The deal tells you it's dead — move it to Closed-Lost and stop carrying it in your head.
+
+The 7-14-21 day follow-up sequence
+
+Every proposal that leaves your outbox gets a sequence, not a prayer. Five touches, each with a job:
+
+Day 1 — Send the proposal
+
+, with a specific line in the cover email: "I'll follow up Thursday to walk through any questions." Never send a proposal without announcing the follow-up. It converts the chase from annoying to expected.
+
+Day 3 — The value-add email.
+
+Not "just checking in." Send a case study, a relevant article, or an answer to a question they asked during discovery. You're adding value and staying visible without asking for anything.
+
+Day 7 — The call.
+
+This is where most saved deals actually close. Walk through the proposal section by section, answer the objection they didn't put in the email, and ask: "What would need to be true for us to start on the 1st?"
+
+Day 14 — The final email.
+
+Short and honest: "I'll close this proposal window Friday so we can both plan our month. If the timing isn't right, no problem — tell me and I'll reopen it when it is."
+
+Day 21 — Move to Closed-Lost
+
+and drop the prospect into a 90-day nurture list. The pipeline stays honest, and the prospect gets a relevant check-in next quarter instead of radio silence.
+
+Each touch gets logged in the
+
+last contact
+
+column with the date. Two months from now, when the prospect says "I never heard from you," the sheet says otherwise.
+
+While you're strengthening the follow-up muscle, make sure the deals you
+
+close stay profitable —
+
+scope creep
+
+is how a signed $8,000 proposal becomes a $5,200 delivery, and the tracker for that belongs next to this one.
+
+The monthly 15-minute pipeline review
+
+On the last business day of the month, open the sheet and answer five questions. That's the entire review:
+
+Proposals sent
+
+— is the number going up or down? Down three months straight is a top-of-funnel problem, not a follow-up problem.
+
+Win rate
+
+— proposals won ÷ proposals sent, same period. Track it monthly; the trend matters more than any single month.
+
+Average time-to-close
+
+— if it's creeping up, your proposals are stalling in Negotiation and you need a close date in every conversation.
+
+Average deal size
+
+— the cheapest lever in the sheet. Same close rate, 15% bigger proposals, 15% more revenue.
+
+Stage conversion
+
+— what fraction of Proposal Sent moves to Negotiation? Of Negotiation to Won? This tells you whether the problem is the proposal itself or the conversation after it.
+
+If the review shows you're losing more revenue to admin time than to lost deals, run the companion exercise from our
+
+billable hours time audit
+
+— the two numbers together (what you're losing to neglect, what you're losing to admin) usually add up to more than the cost of a hire, which is why they're the first thing we look at with every client.
+
+When the spreadsheet isn't enough
+
+The spreadsheet is the right tool for most solo professionals and small firms — and it stays right until one of these triggers fires:
+
+Trigger
+
+Why the spreadsheet starts to strain
+
+What to look at instead
+
+20+ active deals
+
+More than 20 rows and the daily sort starts burying deals; you're scrolling instead of calling.
+
+A lightweight CRM (HubSpot free tier, Pipedrive)
+
+Team of 3+
+
+One shared sheet works when one person owns sales. With three people updating it, deals get overwritten and nobody trusts the data.
+
+A CRM with per-user views and activity logging
+
+Email integration needed
+
+When you're manually copying email threads into the notes column daily, the system costs more time than it saves.
+
+Pipedrive, Close, or HubSpot — the email sync is the feature you're buying
+
+One honest note before you spend anything: most CRMs are built for sales teams, not for a consultant who wants to know who to call today. The free spreadsheet does the who-to-call job
+
+better
+
+because it has exactly the columns above and nothing else. Buy software when the triggers fire — not because a vendor's onboarding email told you spreadsheets are unprofessional.
+
+Frequently asked questions
+
+How do I track proposals without a CRM?
+
+Build a 5-stage pipeline spreadsheet — Lead, Qualified, Proposal Sent, Negotiation, Closed — with one row per deal and a next-action column with a date. Sort by next action date every morning and the overdue follow-ups float to the top. A free Google Sheets tracker covers solo consultants and small firms up to roughly 20 active deals.
+
+What's the best free pipeline tracker for consultants?
+
+A Google Sheets pipeline with the 5 stages, a next-action column, and conditional formatting that flags overdue follow-ups in red. It's free, works on your phone, and the daily view takes 10 seconds: sort by next action date and make your top three calls. Upgrade to a CRM only past 20+ active deals, a team of three or more, or when you need automatic email logging.
+
+How often should I follow up on a proposal?
+
+Use the 7-14-21 sequence: Day 1 send the proposal and announce your follow-up; Day 3 send a value-add email; Day 7 call to walk through the proposal; Day 14 send a final email with a close date; Day 21 mark the deal Closed-Lost and move it to a 90-day nurture list. Most solo professionals stop at Day 1 — the Day 7 call is where the majority of saved deals close.
+
+How do I calculate my consulting win rate?
+
+Divide proposals won by proposals sent over the same period — 8 signed out of 40 sent is 20%. Track it monthly, along with average time-to-close, average deal size, and pipeline value. Win rate by stage (what fraction of Negotiation deals close) is the more useful number: it shows where proposals stall and what to fix first.
+
+What should a consulting pipeline spreadsheet include?
+
+Per deal: prospect, company, contact details, proposal date and value, stage, probability, next action, next action date, last contact, and notes. Add dropdowns for stage and probability, red conditional formatting for overdue next actions, and a summary block at the top: proposals sent, win rate, pipeline value, and average time-to-close.
+
+Your pipeline is leaking — let's find out how much
+
+Jobs Done Labs builds pipeline and follow-up systems for consultants and professional services firms — proposal tracking, automated follow-up sequences, and the reporting that turns a spreadsheet into a revenue forecast. Free audit: we'll walk your current sales process, show you the 2-3 fixes with the highest ROI, and estimate what expired proposals are costing you today. Backed by the $30K-in-90-days guarantee: if we don't find at least $30K in recoverable revenue or savings, you pay nothing.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+You Bill $350/Hour But Lose 90 Minutes a Day to Admin — Here's the Time-Audit System That Recovers $75,000/Year
+
+Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
+
+Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop
+
+
+URL: https://www.jobsdonelabs.ai/blog/proposal-pipeline-tracking-spreadsheet-consulting-free/
+
+---
+
 # Cut Quality Inspection Paperwork in Half
 
 Manufacturing
@@ -13841,6 +14118,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Proposal Pipeline Tracker: Know Who to Call Today — Free Spreadsheet
+
 You Bill $350/Hour But Lose 90 Minutes/Day to Admin — Free Time-Audit System
 
 How Much Does Business Process Automation Cost? Honest Price Breakdown for Small Companies
@@ -15236,6 +15515,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Proposal Pipeline Tracker: Know Who to Call Today — Free Spreadsheet
 
 You Bill $350/Hour But Lose 90 Minutes/Day to Admin — Free Time-Audit System
 
