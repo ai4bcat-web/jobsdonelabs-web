@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stop Losing $8,000/Year to Driver Settlement Errors | Jobs Done Labs</title>
+  <meta name="description" content="Unreconciled miles silently cost small fleets $8,000+/year. Free driver settlement reconciliation spreadsheet, weekly trip log, and Friday Close process." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-driver-settlement-pay-reconciliation-system/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-driver-settlement-pay-reconciliation-system/" />
+  <meta property="og:title" content="Stop Losing $8,000/Year to Driver Settlement Errors" />
+  <meta property="og:description" content="Unreconciled miles silently cost small fleets $8,000+/year. Free driver settlement reconciliation spreadsheet, weekly trip log, and Friday Close process." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stop Losing $8,000/Year to Driver Settlement Errors" />
+  <meta name="twitter:description" content="Unreconciled miles silently cost small fleets $8,000+/year. Free driver settlement reconciliation spreadsheet, weekly trip log, and Friday Close process." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+
+  <!-- Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Stop Losing $8,000/Year to Settlement Errors: A Free Driver Pay Reconciliation Template for Small Fleets.",
+    "description": "Settlement disputes are the number one owner-operator relationship killer in small fleets, and the money leaks quietly: 65 unreconciled miles per driver per week at $0.62/mile compounds to $8,000+ per year for a 4-driver fleet. This guide gives you the free driver settlement reconciliation spreadsheet, the 5-minute weekly trip log, and the Friday Close process that ends same-week settlement disputes.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/", "sameAs": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-08-16",
+    "dateModified": "2026-08-16",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/trucking-driver-settlement-pay-reconciliation-system/"
+  }
+  </script>
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I reconcile driver settlements without TMS software?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You need two documents: a weekly trip log from each driver and a reconciliation spreadsheet in the office. The driver fills in date, load number, origin and destination, miles, rate, and any extras (detention, lumper, layover) plus deductions (fuel advances, cash advances, truck payment) every Friday — about 5 minutes. The office enters payroll-calculated figures next to each driver-reported figure in the spreadsheet, and a formula flags any row where the difference exceeds 5% or $25. You resolve the flagged rows, then finalize payroll. No TMS required — a free Google Sheets workbook handles fleets up to roughly 20 trucks." }
+      },
+      {
+        "@type": "Question",
+        "name": "What should a driver settlement statement include?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A complete settlement statement has five sections. (1) Load details: load number, date, origin, destination, and rate confirmation number. (2) Miles: loaded miles, deadhead miles, and total paid miles with the mileage rate applied to each. (3) Accessorial pay: detention, lumper reimbursement, layover, and stop pay. (4) Deductions: fuel advances, cash advances, truck payment, insurance, and any authorized withholdings. (5) Net pay: the amount actually deposited. Drivers dispute settlements when any section is missing or unexplained — a statement with all five sections resolves most disputes before they start." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I verify driver mileage against my records?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pull the ELD miles for the week per driver — most ELD platforms export a weekly miles report in under a minute. Compare ELD total miles against the driver-reported miles on the trip log. Small differences are normal (PC miles, routing differences), so apply a tolerance: investigate only when the gap exceeds 5% or $25, whichever triggers first. For fleets without ELDs, compare against dispatch's planned route miles plus documented detours. The point is not to be exact to the tenth of a mile — it is to catch the systematic errors: a rate applied to the wrong mileage band, or a load missing from the statement entirely." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the most common settlement errors small fleets make?",
+        "acceptedAnswer": { "@type": "Answer", "text": "There are six recurring discrepancy sources. (1) Deadhead miles not paid because dispatch's quote excluded them. (2) Missing detention pay because the driver never submitted the detention form. (3) Lumper reimbursements entered on the wrong settlement or double-paid. (4) Double-counted fuel advances — the advance is deducted twice or not deducted at all. (5) Per-diem miscalculations when the per-diem split is applied to the wrong day count. (6) Rate-confirmation versus dispatch-quote mismatch, where the driver was quoted one rate and the rate confirmation shows another. Each of these is fixable with a documented rule, and the reconciliation spreadsheet catches them the week they happen instead of months later." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do settlement errors cost a trucking company?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The direct cost of unreconciled miles is roughly 65 miles per week per driver at $0.62 per mile — about $40 per driver per week. Across 4 drivers and 52 weeks, that compounds to over $8,000 per year in mispaid or overpaid miles. The indirect cost is larger: drivers who believe they are being shorted on settlements leave at roughly twice the rate of drivers who trust the numbers, and every driver replacement costs $8,000-$12,000 in recruiting, orientation, and lost productivity. Settlement accuracy is a retention program as much as an accounting fix." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle a driver settlement dispute?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Handle it the same week, in a structured conversation, not over text at 10pm. The Friday Close process builds this in: drivers submit trip logs by noon Friday, the office reconciles by 3pm, and any flagged discrepancies are resolved with the driver by 4pm — before payroll finalizes. When a dispute arises, pull the three sources of truth: the rate confirmation, the ELD miles report, and the driver's trip log. The discrepancy source is almost always visible in one of the three. If the carrier is wrong, correct the settlement immediately — paying a legitimate short-pay the same week is worth far more in driver trust than the $40-$50 it costs." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the $30K recovery guarantee Jobs Done Labs offers?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Jobs Done Labs builds the automated version of these money-recovery workflows — settlement reconciliation, detention capture, fuel card audits, and freight bill audits — and backs them with a $30K-in-90-days guarantee: if documented recovery (pay errors, overcharges, and leakage combined) doesn't reach $30,000 within 90 days, you pay nothing. The free spreadsheet and Friday Close process in this guide are the manual version of the same system — start there, and when the fleet grows past what a spreadsheet can handle, the guarantee covers the automated build." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Stop Losing $8,000/Year to Driver Settlement Errors", "item": "https://www.jobsdonelabs.ai/blog/trucking-driver-settlement-pay-reconciliation-system/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:24px; }
+    .byline a { color:rgba(23,21,19,.55); text-decoration:none; border-bottom:1px solid rgba(23,21,19,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid rgba(23,21,19,.12); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    a { color:var(--accent-deep); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="/og-image.jpg" alt="Fleet manager reconciling driver settlement statements against ELD mileage reports in a spreadsheet" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Logistics &amp; Trucking</span>
+      <h1>Stop Losing $8,000/Year to Settlement Errors: A Free Driver Pay Reconciliation Template for Small Fleets</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> &middot; Jobs Done Labs &middot; August 16, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <ul style="margin:0;padding-left:18px">
+          <li style="font-size:16px;margin-bottom:6px">65 unreconciled miles per driver per week at $0.62/mile compounds to over $8,000/year for a 4-driver fleet — before counting the cost of drivers who quit over disputed pay.</li>
+          <li style="font-size:16px;margin-bottom:6px">The fix is two free documents: a 5-minute driver trip log (Friday, from the cab) and an office reconciliation spreadsheet that flags any discrepancy over 5% or $25.</li>
+          <li style="font-size:16px;margin-bottom:6px">Six discrepancy sources cause 90% of settlement disputes: deadhead miles, missing detention, lumper mix-ups, double-counted fuel advances, per-diem errors, and rate mismatches.</li>
+          <li style="font-size:16px;margin-bottom:6px">The Friday Close — trips in by noon, reconciled by 3pm, disputes settled by 4pm — ends the "we'll look into it" resentment that drives drivers away.</li>
+        </ul>
+      </div>
+
+      <h2>The $8,000 Leak You Can't See</h2>
+      <p>Here's a conversation that happens in every small fleet at least once: a driver looks at his settlement and says the miles don't match what he ran. The office says they'll look into it. Three weeks later the load is forgotten, the dispute is unresolved, and the driver is quietly checking load boards for another carrier.</p>
+      <p>The math is smaller than it feels — and that's exactly why nobody fixes it. A driver who runs 2,900 miles a week might be off by 65 miles on his settlement. At $0.62 per mile, that's about $40. Not a fortune. But multiply it:</p>
+      <div class="callout">
+        <strong style="display:block;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">The $8,000/year math</strong>
+        <p style="margin:0;font-size:16px">65 unreconciled miles per driver per week &times; $0.62 per mile &times; 4 drivers &times; 52 weeks = <strong>$8,382 per year</strong> in pay that's either shorted (angry drivers) or overpaid (silent margin loss). And that's before the trust cost: drivers who feel shorted on settlements leave at roughly twice the rate of drivers who trust the numbers — and every replacement costs $8,000-$12,000 in recruiting, orientation, and lost productivity.</p>
+      </div>
+      <p>Notice what makes this leak different from the ones in our <a href="/blog/trucking-fuel-card-audit-reconciliation-system/">fuel card audit guide</a> or <a href="/blog/trucking-detention-pay-tracking-system/">detention pay system</a>: it's not fraud, and it's not one big miss. It's small weekly drift between what the driver recorded and what the office paid — drift that compounds silently all year because nobody reconciles the two numbers side by side.</p>
+
+      <h2>Why Nobody Reconciles (and Why It's Not the Office's Fault)</h2>
+      <p>Most small fleets pay drivers from three disconnected sources: the driver's memory, dispatch's notes, and whatever the factoring or payroll company says the load paid. The settlement itself gets built in a rush on Friday afternoon, and the driver's paper trip sheets — if they exist — get filed in a drawer nobody opens again.</p>
+      <p>By the time a discrepancy surfaces, the evidence is gone: the load is three weeks old, the rate confirmation is buried, and the ELD report was never pulled. So disputes end in one of two ways: the office eats the difference (drift compounds), or the driver eats it (resentment compounds).</p>
+      <p>The system below breaks that cycle with two free documents and one weekly routine. It works for fleets of 1-20 trucks. Above that, the TMS question at the end of this guide becomes relevant.</p>
+
+      <h2>Document 1: The Driver's 5-Minute Weekly Trip Log</h2>
+      <p>Drivers don't need a form that takes 30 minutes — if it does, it won't get filled out. The trip log is a phone-friendly one-row-per-load sheet the driver completes Friday from the cab, in about five minutes for a 5-load week.</p>
+      <div class="checklist">
+        <h3>Columns on the driver's weekly trip log</h3>
+        <ul>
+          <li><strong>Date &amp; load number</strong> — the rate confirmation number, so the office can pull the source document in seconds.</li>
+          <li><strong>Origin &amp; destination</strong> — city pair. Enough to spot deadhead and routing discrepancies.</li>
+          <li><strong>Miles</strong> — loaded miles and deadhead miles as separate columns. This is the field that generates most disputes, so keep it separate.</li>
+          <li><strong>Rate</strong> — what the driver believes the load pays (per mile, flat, or percentage).</li>
+          <li><strong>Extras</strong> — detention, lumper reimbursement, layover, stop pay. Each as its own column, with the amount.</li>
+          <li><strong>Deductions</strong> — fuel advance, cash advance, truck payment, insurance. What came out, so it doesn't surprise the driver later.</li>
+        </ul>
+      </div>
+      <p>The design rule: <strong>the driver records everything from the cab, the same week, before memory softens.</strong> A log filled out Friday night is accurate. A log reconstructed three weeks later during a dispute is fiction. Make the Friday submission a condition of getting paid — no log, no settlement — and you'll never chase it.</p>
+
+      <h2>Document 2: The Office Settlement Reconciliation Spreadsheet</h2>
+      <p>The office side is a free Google Sheets workbook with one tab per driver, one row per week. The magic is in the comparison columns: driver-reported figures sit next to payroll-calculated figures, and a formula flags the rows that don't match.</p>
+      <div class="checklist">
+        <h3>How the reconciliation tab works</h3>
+        <ul>
+          <li><strong>Column set A — driver reported:</strong> miles, rate, extras, and deductions from the trip log.</li>
+          <li><strong>Column set B — office calculated:</strong> the same fields from the rate confirmation, dispatch system, ELD export, and payroll run.</li>
+          <li><strong>Variance columns:</strong> A minus B for each field, with a total-dollar variance per row.</li>
+          <li><strong>The flag rule:</strong> conditional formatting highlights any row where the variance exceeds <strong>5% or $25</strong>, whichever triggers first. Under the threshold, it's noise. Over it, it gets resolved before payroll finalizes.</li>
+          <li><strong>Resolution notes:</strong> a final column where the office records what the discrepancy was and how it was settled. Over a quarter, this column becomes your list of systemic fixes.</li>
+        </ul>
+      </div>
+      <p>The $25/5% tolerance matters more than it looks. If you investigate every 3-mile difference, you'll spend Friday chasing noise and the system dies of exhaustion. The tolerance keeps the routine survivable while catching every discrepancy with real money attached.</p>
+
+      <h2>The 6 Most Common Discrepancy Sources (and the Fix for Each)</h2>
+      <p>When a row flags, the cause is almost always one of six things. Here they are with the fix:</p>
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr>
+              <th>Discrepancy</th>
+              <th>What Happened</th>
+              <th>The Fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Deadhead miles unpaid</strong></td>
+              <td>Dispatch's quote excluded deadhead; the driver ran 80 miles empty to the pickup and wasn't paid for it.</td>
+              <td>Write deadhead into the rate confirmation at booking. If the broker won't pay it, it's a known cost — at minimum the driver sees it documented instead of discovering it on the settlement.</td>
+            </tr>
+            <tr>
+              <td><strong>Missing detention pay</strong></td>
+              <td>The driver sat 3 hours at a dock but never submitted the detention form, or it was submitted and never entered.</td>
+              <td>Put detention on the trip log itself — if the driver logged it Friday, the office reconciles it Monday. Pair with a <a href="/blog/trucking-detention-pay-tracking-system/">detention tracking system</a> if this recurs weekly.</td>
+            </tr>
+            <tr>
+              <td><strong>Lumper mix-ups</strong></td>
+              <td>The lumper receipt was entered twice, or reimbursed on the wrong driver's settlement.</td>
+              <td>One lumper column on the trip log, one receipt per row, and a running total that must match the month's receipts before payroll finalizes.</td>
+            </tr>
+            <tr>
+              <td><strong>Double-counted fuel advances</strong></td>
+              <td>The advance was deducted from the load and again from the weekly total — or not deducted at all.</td>
+              <td>Fuel advances live in one column with a load reference. The reconciliation tab nets advances against the card data you already pull for your <a href="/blog/trucking-fuel-card-audit-reconciliation-system/">fuel card audit</a>.</td>
+            </tr>
+            <tr>
+              <td><strong>Per-diem miscalculation</strong></td>
+              <td>The per-diem split was applied to the wrong number of days (calendar days vs. working days).</td>
+              <td>Fix the rule once and write it into the spreadsheet: per-diem applies to nights on the road, in a consistent formula cell — not typed by hand.</td>
+            </tr>
+            <tr>
+              <td><strong>Rate mismatch</strong></td>
+              <td>The driver was quoted $2.10/mile by dispatch, but the rate confirmation says $1.98.</td>
+              <td>Root cause is a broken handoff between dispatch and accounting. The rate confirmation is the source of truth — reconcile against it, then fix the quoting process that created the gap.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>The Friday Close: A Weekly Routine That Ends Settlement Drama</h2>
+      <p>The entire system runs on one weekly routine. It sounds rigid because it is rigid — and that's the point. When drivers know disputes get resolved on Friday before payroll runs, the "we'll look into it" resentment disappears.</p>
+      <div class="checklist">
+        <h3>The Friday Close schedule</h3>
+        <ul>
+          <li><strong>Noon — trip logs in.</strong> Drivers submit their weekly trip log from the cab. No log, no settlement.</li>
+          <li><strong>1pm-3pm — office reconciles.</strong> The office enters payroll-calculated figures, and the flag rule lights up discrepancies.</li>
+          <li><strong>3pm-4pm — disputes resolved.</strong> The office calls each flagged driver, pulls the rate confirmation and ELD report, and settles it on the spot. Same-day answers.</li>
+          <li><strong>4pm — payroll finalizes.</strong> Settlements go out with zero open questions.</li>
+          <li><strong>Quarterly — fix the system.</strong> Review the resolution-notes column. If a discrepancy type shows up three times, the root cause gets fixed in the process, not re-resolved every week.</li>
+        </ul>
+      </div>
+      <p>Fleets that run this routine report the same pattern: disputes drop in month one because drivers stop padding miles once they know every row is checked against the ELD — and trust climbs because short-pays get corrected the same week they're found.</p>
+
+      <h2>When to Upgrade from the Spreadsheet to a TMS</h2>
+      <p>The free system has a ceiling. Here's the honest math:</p>
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>What It Means</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>3+ hours per week</strong> of reconciliation work</td>
+              <td>At 3 hours a week the office is spending $4,500+/year of labor on the manual system — TMS settlement modules start making sense.</td>
+            </tr>
+            <tr>
+              <td><strong>20+ trucks</strong></td>
+              <td>Beyond roughly 20 trucks, per-driver tabs and manual entry break down. Settlement automation inside a TMS ($100-300/month) or a payroll integration becomes cheaper than the errors.</td>
+            </tr>
+            <tr>
+              <td><strong>Percentage pay or complex splits</strong></td>
+              <td>The spreadsheet handles per-mile and flat rates cleanly. Percentage-of-load pay with multiple splits and escrows is where manual formulas start producing their own errors.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Until you hit one of those signals, the spreadsheet isn't a stopgap — it's the right tool. And when you do upgrade, the trip log and Friday Close ritual carry straight into the new system, because they were never about the software.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>How do I reconcile driver settlements without TMS software?</h3>
+        <p>You need two documents: a weekly trip log from each driver and a reconciliation spreadsheet in the office. The driver fills in date, load number, origin and destination, miles, rate, and any extras (detention, lumper, layover) plus deductions (fuel advances, cash advances, truck payment) every Friday — about 5 minutes. The office enters payroll-calculated figures next to each driver-reported figure in the spreadsheet, and a formula flags any row where the difference exceeds 5% or $25. You resolve the flagged rows, then finalize payroll. No TMS required — a free Google Sheets workbook handles fleets up to roughly 20 trucks.</p>
+
+        <h3>What should a driver settlement statement include?</h3>
+        <p>A complete settlement statement has five sections. (1) Load details: load number, date, origin, destination, and rate confirmation number. (2) Miles: loaded miles, deadhead miles, and total paid miles with the mileage rate applied to each. (3) Accessorial pay: detention, lumper reimbursement, layover, and stop pay. (4) Deductions: fuel advances, cash advances, truck payment, insurance, and any authorized withholdings. (5) Net pay: the amount actually deposited. Drivers dispute settlements when any section is missing or unexplained — a statement with all five sections resolves most disputes before they start.</p>
+
+        <h3>How do I verify driver mileage against my records?</h3>
+        <p>Pull the ELD miles for the week per driver — most ELD platforms export a weekly miles report in under a minute. Compare ELD total miles against the driver-reported miles on the trip log. Small differences are normal (PC miles, routing differences), so apply a tolerance: investigate only when the gap exceeds 5% or $25, whichever triggers first. For fleets without ELDs, compare against dispatch's planned route miles plus documented detours. The point is not to be exact to the tenth of a mile — it is to catch the systematic errors: a rate applied to the wrong mileage band, or a load missing from the statement entirely.</p>
+
+        <h3>What are the most common settlement errors small fleets make?</h3>
+        <p>There are six recurring discrepancy sources. (1) Deadhead miles not paid because dispatch's quote excluded them. (2) Missing detention pay because the driver never submitted the detention form. (3) Lumper reimbursements entered on the wrong settlement or double-paid. (4) Double-counted fuel advances — the advance is deducted twice or not deducted at all. (5) Per-diem miscalculations when the per-diem split is applied to the wrong day count. (6) Rate-confirmation versus dispatch-quote mismatch, where the driver was quoted one rate and the rate confirmation shows another. Each of these is fixable with a documented rule, and the reconciliation spreadsheet catches them the week they happen instead of months later.</p>
+
+        <h3>How much do settlement errors cost a trucking company?</h3>
+        <p>The direct cost of unreconciled miles is roughly 65 miles per week per driver at $0.62 per mile — about $40 per driver per week. Across 4 drivers and 52 weeks, that compounds to over $8,000 per year in mispaid or overpaid miles. The indirect cost is larger: drivers who believe they are being shorted on settlements leave at roughly twice the rate of drivers who trust the numbers, and every driver replacement costs $8,000-$12,000 in recruiting, orientation, and lost productivity. Settlement accuracy is a retention program as much as an accounting fix.</p>
+
+        <h3>How do I handle a driver settlement dispute?</h3>
+        <p>Handle it the same week, in a structured conversation, not over text at 10pm. The Friday Close process builds this in: drivers submit trip logs by noon Friday, the office reconciles by 3pm, and any flagged discrepancies are resolved with the driver by 4pm — before payroll finalizes. When a dispute arises, pull the three sources of truth: the rate confirmation, the ELD miles report, and the driver's trip log. The discrepancy source is almost always visible in one of the three. If the carrier is wrong, correct the settlement immediately — paying a legitimate short-pay the same week is worth far more in driver trust than the $40-$50 it costs.</p>
+
+        <h3>What's the $30K recovery guarantee Jobs Done Labs offers?</h3>
+        <p>Jobs Done Labs builds the automated version of these money-recovery workflows — settlement reconciliation, detention capture, fuel card audits, and freight bill audits — and backs them with a $30K-in-90-days guarantee: if documented recovery (pay errors, overcharges, and leakage combined) doesn't reach $30,000 within 90 days, you pay nothing. The free spreadsheet and Friday Close process in this guide are the manual version of the same system — start there, and when the fleet grows past what a spreadsheet can handle, the guarantee covers the automated build.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/trucking-detention-pay-tracking-system/">
+            <span class="cat">Logistics</span>
+            <div class="title">You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It</div>
+          </a>
+          <a class="related-card" href="/blog/trucking-fuel-card-audit-reconciliation-system/">
+            <span class="cat">Logistics</span>
+            <div class="title">You Give Every Driver a Fuel Card and Just Trust They're Not Filling Up Their Personal Truck — Here's the $25K Audit System</div>
+          </a>
+          <a class="related-card" href="/blog/trucking-freight-bill-audit-carrier-overcharge-system/">
+            <span class="cat">Logistics</span>
+            <div class="title">Carriers Overcharged Your 12-Truck Fleet $12,000 Last Year and You Paid Every Dime — The 5-Minute Audit</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>What if every settlement reconciled itself — ELD miles, rate confirmations, and driver logs — automatically?</h2>
+        <p>We build the automated version of this system for small fleets: ELD-to-payroll mileage checks, auto-flagged discrepancies, and a Friday Close dashboard that tells your office exactly which rows to review. Backed by our $30K-in-90-days guarantee.</p>
+        <a class="btn" href="/contact">Book your free audit &rarr;</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-detention-pay-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-fuel-card-audit-reconciliation-system/" style="font-weight:600;color:#1466FF;text-decoration:none">You Give Every Driver a Fuel Card and Just Trust They're Not Filling Up Their Personal Truck — Here's the $25K Audit System</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-freight-bill-audit-carrier-overcharge-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Carriers Overcharged Your 12-Truck Fleet $12,000 Last Year and You Paid Every Dime — The 5-Minute Audit</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    &copy; 2026 Jobs Done Labs &middot; <a href="/">Home</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
