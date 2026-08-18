@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stop Losing Referred Patients: Free Tracker | Jobs Done Labs</title>
+  <meta name="description" content="Up to 40% of referrals never complete, costing a small practice $62K-$124K/year. Free tracking spreadsheet, 3-touch protocol, and fax-failure fix." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/patient-referral-loop-closure-tracking-system/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/patient-referral-loop-closure-tracking-system/" />
+  <meta property="og:title" content="Stop Losing Referred Patients: Free Loop-Closure Tracker" />
+  <meta property="og:description" content="Up to 40% of referrals never complete, costing a small practice $62K-$124K/year. Free tracking spreadsheet, 3-touch protocol, and fax-failure fix." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stop Losing Referred Patients: Free Loop-Closure Tracker" />
+  <meta name="twitter:description" content="Up to 40% of referrals never complete, costing a small practice $62K-$124K/year. Free tracking spreadsheet, 3-touch protocol, and fax-failure fix." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+
+  <!-- Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your Referred Patient Never Got to the Cardiologist and Nobody Noticed for 4 Months. Here's the Referral Loop-Closure System for Small Practices.",
+    "description": "Referral leakage is the silent revenue killer in small practices. 20-40% of specialist referrals never complete, and the downstream cost doubles when you factor in lost visit revenue, un-billed care coordination, and patient attrition. This guide gives you the free referral tracking spreadsheet, the 3-touch confirmation protocol, and the CCM billing pathway that turns a referral log into a revenue center.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/", "sameAs": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/patient-referral-loop-closure-tracking-system/"
+  }
+  </script>
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I track patient referrals without an EHR referral module?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can use a free Google Sheets referral tracking spreadsheet. Per referral, track: patient name, referring provider, specialist, reason, urgency, sent date, confirmation received, appointment date, report received, and loop-closed status. Auto-color-code: green for closed, yellow for pending, red for stalled over 30 days. This spreadsheet replaces the paper log most practices use and takes 5 minutes per referral to maintain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's a referral loop and how do I close it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A referral loop is the full cycle: you refer a patient to a specialist, the specialist sees them, and you receive the specialist's report back. The loop is 'closed' when the report is filed in the patient's chart and any recommended follow-up is scheduled. Most practices only complete the first step (sending the referral) — the loop stays open because nobody confirms the patient was seen or the report came back. The 3-touch protocol (send, confirm receipt at day 7, call the patient at day 30) closes it systematically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do referrals fall through the cracks in small practices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Referrals fail for three main reasons: (1) Fax failures — the specialist never received the referral and nobody follows up to confirm. (2) No patient follow-up — the referral was sent, but the patient never scheduled the appointment and nobody checked. (3) No report retrieval — the patient was seen, but the specialist's report was never requested or filed. Without a tracking system, each of these failures is invisible until the patient returns months later with worsening symptoms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if a specialist actually saw my patient?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most reliable method is calling the patient directly — it's the step nobody does, and it's the one that closes the loop. At day 30 after referral, a quick call ('Did you get in with the cardiologist? How did it go?') confirms the appointment happened, builds patient loyalty, and surfaces any barriers. The spreadsheet's 'appointment date' and 'report received' columns track this systematically. For high-volume practices, a weekly MA review of all yellow/pending items catches the ones that need a phone call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I bill for care coordination with a spreadsheet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — if you document the time and clinical staff involved. Chronic Care Management (CCM) CPT 99490 reimburses approximately $42 per patient per month for 20+ minutes of non-face-to-face care coordination. Transitional Care Management (TCM) CPT 99495/99496 reimburses approximately $165-$235 for post-discharge coordination. The referral tracking spreadsheet documents the touchpoints, time spent, and clinical staff involved — exactly what auditors look for. For a practice with 200 eligible Medicare patients, CCM alone can represent approximately $100K/year in currently unbilled revenue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the best free referral tracking template for primary care?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best free template is a Google Sheets tracker with columns for: patient name, DOB, referral date, referring provider, specialty, reason, urgency, sent via (fax/portal/e-fax), sent date, confirmation received (Y/N), specialist practice, appointment date, report received (Y/N), loop closed (Y/N), follow-up scheduled (Y/N), and notes. Auto-color-coding flags stalled referrals (green = closed, yellow = pending, red = stalled over 30 days). The 3-touch protocol (send, confirm at day 7, call patient at day 30) turns the tracker from a passive log into an active care coordination system."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Patient Referral Loop-Closure Tracking System", "item": "https://www.jobsdonelabs.ai/blog/patient-referral-loop-closure-tracking-system/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#171513; --accent:#D34E24; --accent-deep:#A33A17; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(23,21,19,.55); margin-bottom:24px; }
+    .byline a { color:rgba(23,21,19,.55); text-decoration:none; border-bottom:1px solid rgba(23,21,19,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid rgba(23,21,19,.12); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    a { color:var(--accent-deep); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(23,21,19,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(23,21,19,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://www.jobsdonelabs.ai/og-image.jpg" alt="Patient referral tracking spreadsheet for medical practices — close the loop on specialist referrals" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Healthcare &amp; Medical Practices</span>
+      <h1>Your Referred Patient Never Got to the Cardiologist and Nobody Noticed for 4 Months. Here's the Referral Loop-Closure System for Small Practices.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · August 18, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">20-40% of specialist referrals never complete — and the downstream cost doubles when you factor in lost visit revenue, un-billed care coordination, and patient attrition. A 3-provider practice leaking 30% of 15 referrals/week loses $62K-$124K/year. This guide gives you the free referral tracking spreadsheet, the 3-touch confirmation protocol that closes every loop, and the CCM billing pathway that turns a referral log into a revenue center.</p>
+      </div>
+
+      <h2>The hidden cost of referral leakage</h2>
+
+      <p>You refer a patient to cardiology. The fax goes out. Six weeks later, the patient is back in your office with worsening symptoms — and the cardiologist never saw them. The fax "didn't go through." Nobody followed up. Your MA kept a paper log that nobody updates.</p>
+
+      <p>This isn't a one-off. Industry estimates put referral non-completion rates at 20-40% depending on specialty and practice size. Every incomplete referral means:</p>
+
+      <ul>
+        <li><strong>Lost downstream visit revenue</strong> — averaging $100-$250 per completed specialist visit, depending on specialty and payer mix</li>
+        <li><strong>Un-billed care coordination</strong> — CPT codes 99490 (CCM, ~$42/month) and 99495/99496 (TCM, ~$165-$235) are available for the coordination work you're already doing but not billing</li>
+        <li><strong>Patient attrition</strong> — patients who fall through the cracks are twice as likely to leave the practice within 12 months</li>
+        <li><strong>Quality penalties</strong> — MIPS and value-based contracts ding you on care coordination metrics that referral tracking directly supports</li>
+      </ul>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The self-serve calculator:</strong> Take your average referrals per week, multiply by your leakage rate, multiply by your average downstream visit revenue. A 3-provider practice with 15 referrals/week, 30% leakage, and $150 average downstream revenue = $35,100/year in lost visits alone. Add un-billed CCM for 200 eligible Medicare patients and you're looking at $100K+ in combined leakage and missed billing.</p>
+      </div>
+
+      <h2>The free referral tracking spreadsheet</h2>
+
+      <p>The spreadsheet replaces the paper log, the Post-it notes, and the "I'll follow up when I have time" system. It tracks every referral from send to specialist report — and auto-flags the ones stalling.</p>
+
+      <p><strong>Per referral, track these columns:</strong></p>
+
+      <ul>
+        <li><strong>Patient name + DOB</strong> — for chart lookup and duplicate detection</li>
+        <li><strong>Referral date + referring provider</strong> — when and who initiated</li>
+        <li><strong>Specialty + reason</strong> — cardiology, ortho, derm, etc. + clinical reason</li>
+        <li><strong>Urgency</strong> — routine / urgent / stat (stat referrals need a same-day phone call, not just a fax)</li>
+        <li><strong>Sent via</strong> — fax, portal, e-fax, direct message (different methods have different confirmation reliability)</li>
+        <li><strong>Sent date + confirmation received? (Y/N)</strong> — did the specialist's office acknowledge receipt?</li>
+        <li><strong>Specialist practice + contact</strong> — name and phone number for follow-up calls</li>
+        <li><strong>Appointment date</strong> — when the patient was actually seen (populated after confirmation)</li>
+        <li><strong>Report received? (Y/N)</strong> — did the specialist's report come back?</li>
+        <li><strong>Loop closed? (Y/N)</strong> — is the report filed and follow-up scheduled?</li>
+        <li><strong>Follow-up scheduled? (Y/N)</strong> — has the patient been scheduled for a follow-up visit with you?</li>
+        <li><strong>Notes</strong> — call notes, barriers, special instructions</li>
+      </ul>
+
+      <p><strong>Auto-color-coding:</strong> GREEN = loop closed (report filed, follow-up scheduled). YELLOW = pending confirmation or awaiting report. RED = stalled > 30 days with no confirmation. The color coding makes Monday morning review a 5-minute scan — any RED item gets actioned that day.</p>
+
+      <h2>The 3-touch referral confirmation protocol</h2>
+
+      <p>Most practices send the referral and stop. The protocol adds three structured touches that catch failures before the patient returns with worsening symptoms:</p>
+
+      <div class="checklist">
+        <h3>Touch 1: Send + retain confirmation</h3>
+        <ul>
+          <li>Send the referral via fax, e-fax, or portal</li>
+          <li><strong>Retain the confirmation:</strong> fax transmission report, e-fax delivery receipt, portal confirmation screenshot</li>
+          <li>Log the sent date and confirmation status in the tracker</li>
+          <li>If no confirmation is available (old-school fax machine), mark the tracker as "sent — unconfirmed" and treat it as YELLOW from day 1</li>
+        </ul>
+      </div>
+
+      <div class="checklist">
+        <h3>Touch 2: Day 7 — confirm receipt</h3>
+        <ul>
+          <li>MA calls the specialist's office: "I'm confirming our referral for [patient name] sent on [date] was received. Can you verify it's in your system?"</li>
+          <li>If received: log the contact person and date, update tracker to "confirmed."</li>
+          <li>If NOT received: re-send immediately, log the second attempt, and escalate to the specialist's office manager if it fails twice.</li>
+          <li>This 5-minute call per referral catches the 10-15% of faxes that fail silently.</li>
+        </ul>
+      </div>
+
+      <div class="checklist">
+        <h3>Touch 3: Day 30 — call the patient</h3>
+        <ul>
+          <li>MA calls the patient: "I'm checking in — did you get in with the cardiologist? How did it go?"</li>
+          <li>If yes: log the appointment date, request the specialist's report (if not yet received), and schedule the follow-up with you.</li>
+          <li>If no: find out why. Scheduling barrier? Insurance issue? Transportation? Address the barrier and re-schedule.</li>
+          <li>This is the touch nobody does — and it's the one that closes the loop AND builds patient loyalty. Patients remember the practice that called to check on them.</li>
+        </ul>
+      </div>
+
+      <h2>The fax failure problem (and the free fix)</h2>
+
+      <p>Fax machines fail silently. The sending machine prints "OK" on the transmission report — but the receiving machine was out of paper, offline, or the number was wrong. E-fax services are better (they log delivery at the server level), but even they can't confirm the fax reached the right person's desk.</p>
+
+      <p>The fix is the tracker's "confirmation received?" column. If it's YELLOW at day 7, Touch 2 catches it. The protocol doesn't require new technology — it requires a recurring calendar reminder and 5 minutes per outstanding referral. For practices sending 15-20 referrals per week, the weekly touch-2 review takes under 30 minutes.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Portal hack:</strong> Many specialist practices now accept referrals through their EHR portal rather than fax. Portal submissions generate automated confirmation receipts and are trackable. For your top-5 most-referred specialties, ask for portal access — it eliminates the fax-failure problem entirely for those referrals.</p>
+      </div>
+
+      <h2>Getting the specialist's report back — the closure half nobody does</h2>
+
+      <p>Even when the patient is seen, the specialist's report often never makes it back to your chart. The patient assumes you have it. You assume it was sent. Six months later, you're seeing the patient for a follow-up and you have no idea what the cardiologist found.</p>
+
+      <p>The protocol's second half closes this gap:</p>
+
+      <ol>
+        <li><strong>Set a report-expected date:</strong> appointment date + 14 days. Most specialists dictate and send reports within 2 weeks.</li>
+        <li><strong>Weekly MA review:</strong> every Monday, scan the tracker for items where the report-expected date has passed but "report received" = N. These are your priority follow-up calls.</li>
+        <li><strong>Request the report:</strong> call the specialist's office, request the report be faxed or sent via portal. Most will send it same-day when asked.</li>
+        <li><strong>Auto-schedule follow-up:</strong> once the report is received, the MA schedules the patient's follow-up visit with you within 7 days. This ensures the specialist's findings are reviewed and acted on while they're still current.</li>
+      </ol>
+
+      <p>This transforms a "referral log" into a "care coordination system." The difference is the closed loop — the report is in the chart, the patient is scheduled, and nothing falls through.</p>
+
+      <h2>Billing for care coordination (the revenue you're leaving on the table)</h2>
+
+      <p>The referral tracking you're doing — the phone calls, the follow-ups, the report coordination — is billable care coordination. Medicare's Chronic Care Management (CCM) and Transitional Care Management (TCM) programs reimburse for exactly this work.</p>
+
+      <div class="comparison">
+        <table>
+          <tr>
+            <th>CPT Code</th>
+            <th>Service</th>
+            <th>Approx. Reimbursement</th>
+            <th>Requirements</th>
+          </tr>
+          <tr>
+            <td>99490</td>
+            <td>CCM — 20+ min/month non-face-to-face</td>
+            <td>~$42/month/patient</td>
+            <td>Clinical staff time, documented care plan, patient consent</td>
+          </tr>
+          <tr>
+            <td>99495</td>
+            <td>TCM — post-discharge, moderate complexity</td>
+            <td>~$165/episode</td>
+            <td>Communication within 2 business days, face-to-face within 14 days</td>
+          </tr>
+          <tr>
+            <td>99496</td>
+            <td>TCM — post-discharge, high complexity</td>
+            <td>~$235/episode</td>
+            <td>Same as 99495 with higher medical decision-making</td>
+          </tr>
+        </table>
+      </div>
+
+      <p>The referral tracker documents the time, the touchpoints, and the clinical staff involved — exactly what auditors want to see. For a practice with 200 Medicare patients eligible for CCM (two or more chronic conditions), that's approximately $100K/year in currently unbilled revenue. The spreadsheet doesn't just track referrals — it builds the documentation trail that justifies billing for the coordination work you're already doing.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Getting started with CCM billing:</strong> (1) Identify eligible patients — run a report for Medicare patients with 2+ chronic conditions. (2) Obtain verbal or written consent — document it in the chart. (3) Create a care plan — the referral tracker's notes column serves as the starting point. (4) Track time — the tracker's touchpoint logs document the minutes. (5) Bill monthly — 99490 once per calendar month per patient. Your practice management system or biller handles the submission; the tracker provides the documentation.</p>
+      </div>
+
+      <h2>When to upgrade from a spreadsheet</h2>
+
+      <p>The free spreadsheet works for practices sending up to 50 referrals per week. Beyond that, the manual tracking becomes a bottleneck. Here's when to consider an EHR referral module or standalone referral management tool:</p>
+
+      <ul>
+        <li><strong>50+ referrals/week</strong> — the spreadsheet becomes a part-time job. EHR-integrated referral management (most EHRs have it as a module) automates the send/confirm/report workflow.</li>
+        <li><strong>Multiple locations</strong> — if referrals flow between two or more practice sites, a centralized system prevents duplication and cross-site blind spots.</li>
+        <li><strong>Value-based contracts</strong> — if your practice participates in ACOs, MIPS, or capitated arrangements, referral completion rates directly affect your quality scores and shared savings. EHR-level tracking provides the reporting those contracts require.</li>
+      </ul>
+
+      <p>But for the 1-5 provider practice — the spreadsheet plus the 3-touch protocol is the right tool. It costs $0, takes 30 minutes per week to review, and catches the 20-40% of referrals that would otherwise fall through.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>How do I track patient referrals without an EHR referral module?</h3>
+        <p>Use a free Google Sheets referral tracking spreadsheet. Per referral, track patient name, referring provider, specialist, reason, urgency, sent date, confirmation received, appointment date, report received, and loop-closed status. Auto-color-code: green for closed, yellow for pending, red for stalled over 30 days. This replaces the paper log and takes 5 minutes per referral to maintain.</p>
+
+        <h3>What's a referral loop and how do I close it?</h3>
+        <p>A referral loop is the full cycle: you refer a patient to a specialist, the specialist sees them, and you receive the specialist's report back. The loop is "closed" when the report is filed in the patient's chart and any recommended follow-up is scheduled. Most practices only complete the first step (sending the referral). The 3-touch protocol (send, confirm receipt at day 7, call the patient at day 30) closes it systematically.</p>
+
+        <h3>Why do referrals fall through the cracks in small practices?</h3>
+        <p>Referrals fail for three main reasons: (1) Fax failures — the specialist never received the referral and nobody follows up to confirm. (2) No patient follow-up — the referral was sent, but the patient never scheduled the appointment and nobody checked. (3) No report retrieval — the patient was seen, but the specialist's report was never requested or filed. Without a tracking system, each of these failures is invisible until the patient returns months later with worsening symptoms.</p>
+
+        <h3>How do I know if a specialist actually saw my patient?</h3>
+        <p>The most reliable method is calling the patient directly — it's the step nobody does. At day 30 after referral, a quick call confirms the appointment happened, builds patient loyalty, and surfaces any barriers. The spreadsheet's "appointment date" and "report received" columns track this systematically. For high-volume practices, a weekly MA review of all yellow/pending items catches the ones that need a phone call.</p>
+
+        <h3>Can I bill for care coordination with a spreadsheet?</h3>
+        <p>Yes — if you document the time and clinical staff involved. CCM CPT 99490 reimburses approximately $42 per patient per month for 20+ minutes of non-face-to-face care coordination. TCM CPT 99495/99496 reimburses approximately $165-$235 for post-discharge coordination. The referral tracking spreadsheet documents the touchpoints, time spent, and clinical staff involved — exactly what auditors look for.</p>
+
+        <h3>What's the best free referral tracking template for primary care?</h3>
+        <p>The best free template is a Google Sheets tracker with columns for patient name, DOB, referral date, referring provider, specialty, reason, urgency, sent via, confirmation received, specialist practice, appointment date, report received, loop closed, follow-up scheduled, and notes. Auto-color-coding flags stalled referrals. The 3-touch protocol turns the tracker from a passive log into an active care coordination system.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/patient-care-gap-recall-tracking-system/">
+            <span class="cat">Healthcare &amp; Medical Practices</span>
+            <div class="title">Your Diabetic Patients Are Overdue for A1C Checks — Here's the Care Gap System That Catches Every One Before Your MIPS Score Tanks</div>
+          </a>
+          <a class="related-card" href="/blog/insurance-verification-workflow-front-desk-free/">
+            <span class="cat">Healthcare &amp; Medical Practices</span>
+            <div class="title">Cut Insurance Verification Time in Half: A Front Desk Workflow That Doesn't Cost $900/Month</div>
+          </a>
+          <a class="related-card" href="/blog/medical-records-request-tracking-system/">
+            <span class="cat">Healthcare &amp; Medical Practices</span>
+            <div class="title">Medical Records Requests Are Eating 8 Hours of Your Office Manager's Week — Here's the Tracking System That Fixes It</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Want this referral loop-closure system built for your practice?</h2>
+        <p>We build custom referral tracking workflows — spreadsheet-based or integrated with your EHR — that close the loop on every specialist referral. Free 30-minute audit: we'll map your current referral process, identify the leakage points, and give you a build plan that fits your practice size and EHR.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/patient-care-gap-recall-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Diabetic Patients Are Overdue for A1C Checks — Here's the Care Gap System That Catches Every One Before Your MIPS Score Tanks</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/insurance-verification-workflow-front-desk-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Cut Insurance Verification Time in Half: A Front Desk Workflow That Doesn't Cost $900/Month</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/medical-records-request-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Medical Records Requests Are Eating 8 Hours of Your Office Manager's Week — Here's the Tracking System That Fixes It</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
