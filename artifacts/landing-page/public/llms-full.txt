@@ -985,6 +985,207 @@ URL: https://www.jobsdonelabs.ai/blog/business-process-automation-cost-small-bus
 
 ---
 
+# ISO Missed Calibration Dates? Free Tracking System
+
+Manufacturing
+
+You Missed One Calibration Date and Now the ISO Auditor Is Asking Questions. Here's the Free Calibration Tracking System That Keeps Every Instrument Current.
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 19, 2026
+
+Key takeaways
+
+One missed calibration due date = an ISO finding. This free spreadsheet replaces your 2022 binder: instrument list, due-date alerts that turn red two weeks before deadline, vendor contact log, and an out-of-tolerance action tracker. Everything you need to walk into a calibration audit confident. $0, one hour to set up.
+
+What ISO 9001 actually requires for calibration
+
+Let's skip the legalese. ISO 9001 clause 7.1.5 says you need five things when it comes to calibration:
+
+Identify what needs calibration.
+
+Every instrument whose accuracy affects product quality — micrometers, calipers, pressure gages, temperature probes, torque wrenches, hardness testers, CMMs — needs to be on a list. If you're not sure whether a tool needs calibration, ask: "Would a bad reading from this tool let a defective part ship?" If yes, it belongs on the list.
+
+Calibrate on a defined schedule.
+
+Every instrument needs a calibration interval. Most manufacturers default to annual, but ISO doesn't mandate annual — it mandates that your interval is justified. A micrometer used 200 times a day in a grinding environment needs calibration more often than one used twice a week in QC. The standard requires you to document your rationale.
+
+Keep records of every calibration event.
+
+For each calibration: date, who performed it (internal tech or external lab), what standard was used (traceable to NIST or national equivalent), the results (as-found and as-left readings), and the calibration certificate number. If you use an outside lab, their certificate counts — but you still need a log showing when each instrument was sent out and when it came back.
+
+Have a plan for out-of-tolerance events.
+
+This is the one shops miss. When a device is found out of tolerance, ISO requires you to assess what products were inspected or manufactured using that device since its last in-tolerance calibration. If the device was reading 0.003\" off for three months, every part measured with it might be suspect. You need a documented product-recall assessment.
+
+Prevent unauthorized adjustments.
+
+Instruments must be sealed or configured so operators can't tweak them. This is mostly a physical control (seals, locks, restricted access), but your system should note which instruments are adjustable and how they're protected.
+
+The audit test
+
+An ISO auditor will walk up to any instrument on your shop floor and ask: "When was this last calibrated? Show me the record." If you can't produce it within 60 seconds, that's a finding. This system is designed so you can answer without leaving the calibration tab.
+
+The spreadsheet that replaces your 2022 binder
+
+Most small shops track calibration with a three-ring binder. Stickers fall off gages. Vendor invoices pile up unlogged. The calibration interval for that one surface plate was "in the binder somewhere." Last audit, two gages were six months past due and nobody knew until the auditor found them.
+
+Here's what the free calibration tracking spreadsheet gives you — all in one Google Sheets workbook (or Excel, your choice):
+
+Instrument register.
+
+One row per instrument: ID number, description, manufacturer, model, serial number, location (machine center or department), calibration interval (months), next calibration due date, and current status (In Tolerance / Due Soon / Past Due / Out for Cal).
+
+Calibration log.
+
+Date, instrument ID, who performed it (or which external lab), standard used, as-found condition, as-left condition, certificate number, and notes. This is the audit trail — every calibration event is one row.
+
+Vendor contact sheet.
+
+For instruments sent to outside labs: lab name, contact person, phone, email, typical turnaround time, and which instruments they're qualified to calibrate. When a due date is approaching, you know exactly who to call.
+
+Out-of-tolerance action log.
+
+Instrument ID, date found OOT, how far out of tolerance, which jobs/products may be affected, product recall assessment, and corrective action taken. This is the sheet that saves you during an audit.
+
+Audit-ready summary tab.
+
+A dashboard tab that shows: total instruments, how many are currently past due, how many are due within 30 days, how many are out for calibration, and the date of the last full system review. Print this tab and hand it to the auditor.
+
+How to set up calibration due-date alerts that actually work
+
+The difference between a system that prevents audit findings and one that collects dust is the alerting. Most calibration spreadsheets fail because the due dates are manual — someone has to remember to look at the sheet. By the time they do, three instruments are already past due.
+
+Here's the alerting setup in the free template:
+
+Conditional formatting — green, yellow, red.
+
+The "Next Cal Due" column uses three-color conditional formatting:
+
+Green:
+
+Due date is more than 30 days away. Instrument is current.
+
+Yellow:
+
+Due within 14–30 days. Time to schedule the calibration or contact the lab.
+
+Red:
+
+Due within 14 days. This instrument is in the danger zone — remove it from service if you can, and prioritize the calibration.
+
+Red bold + "PAST DUE" tag:
+
+Due date has passed. This instrument should be quarantined immediately and an out-of-tolerance assessment initiated.
+
+Weekly email reminder.
+
+The template includes a Google Sheets Apps Script that sends a Monday-morning email listing: (a) all instruments due within 30 days, (b) all instruments currently past due, and (c) all instruments currently out for calibration with their expected return dates. Copy-paste the script, authorize it once, and the emails run automatically.
+
+Friday close process.
+
+Every Friday, the quality manager (or shop supervisor) spends 5 minutes reviewing the calibration tab: update any statuses, check for new instruments that need adding, confirm vendors have returned anything that was out. This 5-minute Friday habit is what keeps a $0 spreadsheet running like a $500/month system.
+
+Two weeks, not two days
+
+The most common calibration failure mode: alerts fire two days before the due date. The calibration lab needs two weeks' lead time. The instrument sits past due for 12 days for no reason other than bad alert timing. Set alerts at 14 days minimum — the conditional formatting in this template does it automatically.
+
+What to do when a device is found out of tolerance
+
+A micrometer comes back from the cal lab and the report says it was reading 0.002\" high. It's been like that for six months. Every part measured with it in that window might be undersize by 0.002\". What do you do?
+
+ISO 9001 clause 7.1.5 requires a documented response. Here's the 4-step OOT procedure built into the spreadsheet:
+
+Quarantine the instrument.
+
+Tag it "OUT OF TOLERANCE — DO NOT USE." Remove it from the production floor. Update the instrument register to "OOT — Under Review."
+
+Determine the impact window.
+
+Go to the calibration log and find the last in-tolerance calibration date for this instrument. Every product inspected or manufactured using this device between that date and today is potentially affected. The OOT log has a column for "Impact Window: [start date] to [end date]."
+
+Assess product risk.
+
+For each affected job or product: what was the tolerance? How critical is the dimension? If the instrument was off by 0.002\" and the part tolerance is ±0.010\", the risk is low — document the assessment and close the case. If the instrument was off by 0.002\" and the tolerance is ±0.005\", the margin is tight — re-inspect a sample of parts. If the instrument was off by 0.002\" and the tolerance is ±0.001\", you may need to recall product. The OOT log includes a risk assessment column: Low / Medium / High / Critical.
+
+Document corrective action.
+
+What did you do? Re-inspected 100% of affected parts? Contacted the customer? Adjusted the calibration interval? The OOT log captures the action, the date, and the sign-off. This is what the auditor wants to see: you found the problem, you assessed the impact, you fixed it, and you changed your system so it's less likely to happen again.
+
+How to survive the auditor's calibration review
+
+When the ISO auditor sits down and says "show me your calibration system," they're looking for three documents. Here's what they are and where they live in this spreadsheet:
+
+Document
+
+What the auditor checks
+
+Where it lives
+
+Instrument list with calibration status
+
+Every instrument that affects quality must be on the list. The auditor will pick 3-5 instruments at random from the shop floor, then ask to see them in your register. Missing instruments = finding.
+
+Instrument Register tab — print the whole sheet. The auditor will cross-reference serial numbers against physical instruments on the floor.
+
+Calibration records for the last cycle
+
+The auditor will trace 3-5 calibration events from the register to the actual calibration certificates. They're checking that the log is complete and that certificates are traceable to a national standard (NIST in the US).
+
+Calibration Log tab — each row maps to a calibration certificate. Keep the actual certificates in a folder (physical or PDF) organized by instrument ID.
+
+Out-of-tolerance procedure and records
+
+The auditor will ask: "Have you had any instruments found out of tolerance? Show me what you did." If you've never had an OOT event, they'll ask: "Show me your procedure for when it happens."
+
+OOT Action Log tab + the printed procedure. Even if the log is empty, the procedure proves you've thought about it.
+
+The Audit-Ready Summary tab prints all three documents on one page. Walk into the audit, hand the auditor the printout, and spend the next 30 seconds watching them realize your calibration system is solid. That's a lot better than the 30 minutes of shuffling through a binder they'd otherwise spend.
+
+Frequently asked questions
+
+Does ISO 9001 require calibration management software?
+
+No. ISO 9001 requires documented records that are controlled, retrievable, and protected from loss. A well-maintained spreadsheet satisfies every documentation requirement of clause 7.1.5. The standard cares about the
+
+outcome
+
+— instruments are calibrated, records exist, out-of-tolerance events are assessed — not about what software you use.
+
+How often do most small manufacturers actually calibrate?
+
+Annual is the default for most hand-held instruments (micrometers, calipers, indicators). Pressure gages and torque wrenches are commonly semi-annual. CMMs are typically annual, sometimes semi-annual in high-use environments. The right frequency depends on usage, environment, and history — the spreadsheet includes a frequency-rationale column so you can document why each interval is what it is.
+
+What if I use an outside calibration lab? How does the tracking system work?
+
+The Vendor Contact tab tracks each lab's turnaround time and instrument qualifications. When an instrument goes out for calibration: log it in the Calibration Log as "Sent to [lab name]" with the ship date. When it returns: update the row with the return date, as-found/as-left readings, and certificate number. The Instrument Register shows the instrument's status as "Out for Cal" while it's away, so nobody uses it on the floor.
+
+How many instruments does a typical small machine shop have in calibration?
+
+A shop with 10-20 machinists typically has 60-100 instruments in the calibration program — micrometers (OD, ID, depth), calipers (dial, digital), indicators (dial, test), bore gages, pin gages, thread gages, height gages, surface plates, hardness testers, profilometers, and torque wrenches. The instrument count grows fast because every set of pin gages or thread plug gages is its own instrument in the register. The spreadsheet handles 200+ instruments without slowing down.
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Track Machine Downtime Without Software — The Free System for Small Manufacturers
+
+Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufacturers
+
+Suppliers Are Late Again and It's Costing $1,000/Week — How to Track Supplier Delivery Without Software
+
+Stop losing sleep over the next ISO audit
+
+Jobs Done Labs builds custom quality and calibration automation for small manufacturers — digital instrument tracking, automated calibration scheduling with email alerts, and audit-ready reporting that produces every document an auditor asks for. Free 15-minute audit: we'll map your current calibration workflow, show you which instruments are at highest risk of going past due, and build a system that makes your next surveillance audit boring. Backed by our $30K-recovered-in-90-days guarantee: if documented recovery doesn't reach $30K, you pay nothing.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/calibration-tracking-spreadsheet-iso-9001-manufacturing-free-template/
+
+---
+
 # Clients Won't Use Your Portal? Free Adoption Playbook
 
 Professional Services
@@ -7590,6 +7791,8 @@ Your Shop Has 12 Machines But Only One Is The Bottleneck — Free Constraint Ana
 
 The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System
 
+Missed One Calibration Date? The Free ISO 9001 Calibration Tracking System That Keeps Every Instrument Current
+
 Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufacturers
 
 Stop guessing what's eating your production capacity
@@ -13479,6 +13682,8 @@ You're Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet Syste
 
 The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System
 
+Missed One Calibration Date? The Free ISO 9001 Calibration Tracking System That Keeps Every Instrument Current
+
 Your Shop Has 12 Machines But Only One Is The Bottleneck — And You're About To Spend $150,000 On The Wrong Machine
 
 Stop spending half your inspection shift on paperwork
@@ -18161,6 +18366,8 @@ You're Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet Syste
 Your Whiteboard Production Schedule Broke the Day You Hit 20 Orders
 
 Your Raw Material Shelf Is a Guessing Game — Free Inventory System
+
+Missed One Calibration Date? The Free ISO 9001 Calibration Tracking System That Keeps Every Instrument Current
 
 Paper Batch Records Failed Your FDA Audit — Free GMP Templates & Lot Traceability System
 

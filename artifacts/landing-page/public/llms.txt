@@ -32,6 +32,7 @@
 - [Pick/Pack Errors Cost You $54,000 Last Year — The $0](https://www.jobsdonelabs.ai/blog/warehouse-pick-pack-error-reduction-system/): Your pickers made 270 errors last month and it cost you $5,400. Here's the free phone-camera and scale system that cuts errors in half by Friday — no WMS...
 
 ## Manufacturing
+- [ISO Missed Calibration Dates? Free Tracking System](https://www.jobsdonelabs.ai/blog/calibration-tracking-spreadsheet-iso-9001-manufacturing-free-template/): ISO flagged your missed calibration and wrote a finding. Free tracking spreadsheet — due-date alerts, OOT log, audit-ready reports. $0, one hour.
 - [You Don't Actually Know If Your Last Job Made Money](https://www.jobsdonelabs.ai/blog/contractor-job-costing-system-field-to-office/): QuickBooks job costing fails most small contractors because it's built for the office, not the truck. Here are the 4 numbers that tell you if a job was...
 - [FDA Batch Records: GMP Template & Lot Traceability](https://www.jobsdonelabs.ai/blog/fda-batch-record-lot-traceability-template/): Paper batch records failed your last FDA audit. Free GMP batch record templates with lot traceability — 21 CFR Part 111/117 compliant, built in one weekend, $0.
 - [Track Machine Downtime Without Software](https://www.jobsdonelabs.ai/blog/machine-downtime-tracking-system-small-manufacturing/): Your machines are down and nobody's tracking it. The $0 Google Sheets system that logs every stoppage, finds root causes, and tells you what to fix first.
