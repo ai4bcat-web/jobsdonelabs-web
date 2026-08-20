@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Truck Stock Tracker: Stop Mid-Job Parts Runs | Jobs Done Labs</title>
+  <meta name="description" content="A 5-tech shop loses $1,800/week on mid-job parts runs. Free truck stock spreadsheet with restock checklist, common-parts list, and auto-reorder alerts." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/service-truck-parts-inventory-spreadsheet-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/service-truck-parts-inventory-spreadsheet-free/" />
+  <meta property="og:title" content="Free Truck Stock Tracker: Stop Mid-Job Parts Runs | Jobs Done Labs" />
+  <meta property="og:description" content="A 5-tech shop loses $1,800/week on mid-job parts runs. Free truck stock spreadsheet with restock checklist, common-parts list, and auto-reorder alerts." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Truck Stock Tracker: Stop Mid-Job Parts Runs" />
+  <meta name="twitter:description" content="A 5-tech shop loses $1,800/week on mid-job parts runs. Free truck stock spreadsheet with restock checklist, common-parts list, and auto-reorder alerts." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Your Tech Made a 40-Minute Parts Run for a $6 Fitting. Here's the Free Truck Stock Tracker That Ends Mid-Job Supply-House Runs.",
+    "description": "A 5-tech HVAC, plumbing, or electrical shop loses $1,800/week on mid-job supply-house runs for $6 fittings. This guide covers the real cost of unstocked trucks, a free Google Sheets truck stock inventory spreadsheet with per-truck tabs and auto-reorder alerts, the 15-minute Monday morning van check, an 80/20 common-parts list by trade, vendor-managed inventory options, and when to upgrade from spreadsheet to truck inventory software.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.linkedin.com/in/rynebandolik/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai"
+    },
+    "datePublished": "2026-08-20",
+    "dateModified": "2026-08-20"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I track inventory on my service truck without buying software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can track truck stock with a free Google Sheets spreadsheet. Set up one tab per truck, with columns for bin location, part name, SKU, quantity on hand, minimum threshold, supplier, and reorder quantity. Add conditional formatting to highlight items that fall below the minimum — red means reorder now. Run a 15-minute Monday morning count of your 20 most-used items and update quantities. This system works for shops with 1-10 trucks and costs $0."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the best free truck stock spreadsheet for plumbers and electricians?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best free option is a custom Google Sheets truck stock tracker built for your trade. It includes per-truck inventory tabs, an auto-populated master restock list (items flagged red across all trucks), and a trade-specific common-parts checklist covering the 12-15 items that handle 80% of service calls. Unlike generic inventory apps, it's built around the actual workflow: what's on the truck this morning, what ran low, what needs to be on the shop order by noon."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I stop mid-job parts runs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stop mid-job parts runs with a 3-part system: (1) a truck stock spreadsheet that tracks every part by bin location with minimum thresholds, (2) a 15-minute Monday morning van check where each tech counts their 20 most-used items and updates quantities, and (3) an 80/20 common-parts list that ensures the truck is always stocked for the jobs that make up 80% of calls. When the spreadsheet shows a part is below minimum, it hits the master restock list — and the shop order goes out before the truck leaves the yard."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do home service companies lose on supply-house runs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A single mid-job parts run costs $50-150 in direct waste: tech hourly ($25-40/hr for 40 minutes), truck cost ($0.70/mile for a 20-mile round trip), supply-house markup (15-25% over bulk pricing), and the billable time lost on the current job. Across 10 techs averaging 2 runs per week, that's $1,800/week in non-billable driving. Annualized: $90,000+ in pure operational waste from trucks that weren't stocked for common jobs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I always keep stocked on an HVAC service truck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For HVAC: capacitors (5/7.5/10/15/20/30/40/45/60/80 MFD), contactors (1-pole and 2-pole, 30/40 amp), relays and transformers, thermostats (2-3 universal models), condensate drain fittings and PVC, refrigerant leak sealant, fuses, and a set of common blower and condenser fan motors. For plumbing: compression fittings, shut-off valves, toilet fill valves and flappers, P-traps, supply lines, wax rings, pipe dope and tape, and a selection of copper and PEX fittings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I switch from a spreadsheet to truck inventory software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Below 3 trucks, a Google Sheets spreadsheet is sufficient and costs $0. At 3-10 trucks, trial truck inventory modules in ServiceTitan, Housecall Pro, or mHelpDesk — the time saved on manual counting starts to justify the monthly subscription. Above 10 trucks, inventory software pays for itself in prevented parts runs: the cost of one wasted trip per truck per week exceeds the monthly SaaS fee. Comparison of leading options is included in the full guide."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.jobsdonelabs.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.jobsdonelabs.ai/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Free Truck Stock Tracker: Stop Mid-Job Parts Runs"
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="/og-image.jpg" alt="A service truck stocked with HVAC and plumbing parts by bin location" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Home Services &amp; Trades</span>
+      <h1>Your Tech Made a 40-Minute Parts Run for a $6 Fitting. Here's the Free Truck Stock Tracker That Ends Mid-Job Supply-House Runs.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> &middot; Jobs Done Labs &middot; August 20, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A 5-tech shop loses $1,800/week on mid-job parts runs — $90K+/year in unbillable windshield time. The root cause isn't lazy techs; it's truck stock nobody tracks systematically. This guide gives you a free Google Sheets truck stock tracker with per-truck tabs, auto-reorder alerts, a 15-minute Monday morning van check, and an 80/20 common-parts list by trade — all for $0.</p>
+      </div>
+
+      <h2>What a mid-job parts run actually costs</h2>
+      <p>It's 10:30 AM on a Tuesday. Your HVAC tech is on a no-cool call at 123 Main Street. He opens the condenser, diagnoses a bad capacitor — and his truck doesn't have a 40/5 MFD. He calls the supply house. They have it. 20 minutes there, 20 minutes back. The capacitor costs $6.37.</p>
+
+      <p>The customer paid for a diagnostic + repair. They didn't pay for 40 minutes of windshield time. <strong>That $6 part just cost you $90.</strong></p>
+
+      <div class="callout">
+        <p style="margin-bottom:0;font-weight:700;">The math per wasted trip:</p>
+        <ul style="margin-top:10px;">
+          <li><strong>Tech hourly:</strong> $25-40/hr &times; 40 min = $17-27</li>
+          <li><strong>Truck cost:</strong> $0.70/mile &times; 20 miles = $14</li>
+          <li><strong>Supply-house markup:</strong> 15-25% over bulk pricing = $1-2</li>
+          <li><strong>Billable time lost:</strong> 40 min that could've been the next call</li>
+          <li><strong>Per-trip total:</strong> $50-90 in hard cost + 1 hour of lost billable time</li>
+        </ul>
+      </div>
+
+      <p>Now multiply that across your fleet. <strong>A 10-tech shop averaging 2 supply-house runs per tech per week is burning $1,800/week in non-billable driving.</strong> That's $90,000+ a year — an entire tech's salary — evaporating because trucks weren't stocked for the jobs that make up 80% of your calls.</p>
+
+      <p>The fix isn't buying more parts. It's knowing what's on every truck this morning, what ran low yesterday, and what needs to be on the shop order by noon. That's what the free truck stock tracker does.</p>
+
+      <h2>The free truck stock inventory spreadsheet</h2>
+      <p>This Google Sheets system replaces "I think I have one of those somewhere" with a single source of truth for every truck in your fleet. One spreadsheet, one tab per truck, zero cost.</p>
+
+      <div class="checklist">
+        <h3>What the spreadsheet tracks (per truck, per tab)</h3>
+        <ul>
+          <li><strong>Bin location</strong> — shelf, drawer, or bin number in the truck. Techs find parts in seconds, not minutes.</li>
+          <li><strong>Part name &amp; SKU</strong> — the exact item and supply house part number.</li>
+          <li><strong>Quantity on hand</strong> — updated every Monday during the 15-minute van check.</li>
+          <li><strong>Minimum threshold</strong> — the lowest quantity before reorder. When qty drops below this, the cell turns red.</li>
+          <li><strong>Supplier &amp; reorder qty</strong> — who carries it and how many to buy at a time.</li>
+          <li><strong>Unit cost &amp; last restock date</strong> — for tracking inventory value and identifying slow-moving stock.</li>
+        </ul>
+      </div>
+
+      <p><strong>Auto-alerts that do the thinking for you:</strong> Conditional formatting highlights every cell in red where quantity on hand is below the minimum threshold. A master restock tab auto-populates with every red-flagged item across all trucks — so your parts manager sees exactly what to order by noon, across the entire fleet, on one screen.</p>
+
+      <p>No software to install. No subscription. No learning curve beyond "this cell is red, order more." The spreadsheet template is free, customizable by trade, and built to match how service trucks actually operate — not how a SaaS vendor thinks they should.</p>
+
+      <h2>The 15-minute Monday morning van check</h2>
+      <p>The spreadsheet only works if quantities are current. Here's the routine that keeps it accurate without turning your techs into inventory clerks:</p>
+
+      <div class="checklist">
+        <h3>Every Monday, before the first dispatch:</h3>
+        <ol>
+          <li><strong>Open the truck stock spreadsheet</strong> on a phone or tablet — the Google Sheets mobile app works in the truck.</li>
+          <li><strong>Count the 20 most-used items.</strong> Not all 200 SKUs — just the 20 that cause 80% of supply-house runs. These are the capacitors, contactors, fittings, and common repair parts identified in your trade's 80/20 list (below).</li>
+          <li><strong>Update qty on hand.</strong> Tap the cell, type the number. Takes 15 minutes for all 20 items across 2-3 bins.</li>
+          <li><strong>Flag red items for the shop order.</strong> Any cell that turns red after updating — the part is below minimum. It goes on the restock list before the tech leaves the yard.</li>
+        </ol>
+      </div>
+
+      <p><strong>Before/after reality check:</strong> A 7-truck plumbing shop in Ohio adopted this Monday morning routine. Before: 3 supply-house runs per tech per day on average — 21 runs/day across the fleet. After 4 weeks: down to 3 runs/day total — one per tech <em>per week</em>. The time saved went straight into billable service calls. No new software, no new hires, just a 15-minute Monday check.</p>
+
+      <h2>The 80/20 parts list by trade</h2>
+      <p>Twelve to fifteen part types cover 80% of common service calls. Stock these on every truck and your emergency supply-house runs drop to specialty parts and new-install materials only.</p>
+
+      <div class="checklist">
+        <h3>HVAC — always on the truck:</h3>
+        <ul>
+          <li>Capacitors: 5, 7.5, 10, 15, 20, 30, 40, 45, 60, 80 MFD (dual and single)</li>
+          <li>Contactors: 1-pole and 2-pole, 30 and 40 amp</li>
+          <li>Relays and transformers (universal 24V)</li>
+          <li>Thermostats: 2-3 universal programmable models</li>
+          <li>Condensate drain fittings: 3/4" PVC elbows, tees, couplings, and a float switch</li>
+          <li>Refrigerant leak sealant (universal) and a set of common blower/condenser fan motors</li>
+          <li>Fuses: 3A, 5A, 10A automotive and glass-tube</li>
+        </ul>
+
+        <h3 style="margin-top:20px;">Plumbing — always on the truck:</h3>
+        <ul>
+          <li>Compression fittings: 1/2" and 3/4" angle stops, straight stops, couplings</li>
+          <li>Shut-off valves: 1/2" and 3/4" ball valves, gate valves</li>
+          <li>Toilet repair: universal fill valves, 2" and 3" flappers, wax rings, tank-to-bowl kits</li>
+          <li>P-traps: 1-1/4" and 1-1/2" slip-joint in PVC and brass</li>
+          <li>Supply lines: 12", 16", 20" braided stainless in 1/2" and 3/8" compression</li>
+          <li>Pipe dope, Teflon tape, plumber's putty, and silicone</li>
+          <li>Copper fittings: 1/2" and 3/4" elbows, tees, couplings, caps — plus a short stick of each</li>
+        </ul>
+
+        <h3 style="margin-top:20px;">Electrical — always on the truck:</h3>
+        <ul>
+          <li>Breakers: 15A, 20A, 30A single-pole; 20A, 30A, 40A, 50A double-pole (common brands: Square D, Siemens, Eaton)</li>
+          <li>Receptacles: 15A and 20A duplex, GFCI (indoor and weather-resistant)</li>
+          <li>Switches: single-pole, 3-way, 4-way, dimmer</li>
+          <li>Wire nuts and Wago connectors: assorted sizes</li>
+          <li>NM cable staples and Romex connectors</li>
+          <li>Junction box covers, blank plates, and device boxes</li>
+        </ul>
+      </div>
+
+      <p><strong>Customize the list for your shop.</strong> Export your last 6 months of service invoices. Sort by part type. The top 15 items that appear most often are <em>your</em> 80/20 list — broader than what's above, more specific to your territory and customer base. Update it quarterly as your call mix shifts.</p>
+
+      <h2>Vendor-managed inventory — your supply house might do this for free</h2>
+      <p>If managing truck stock yourself still feels like a second job, ask your supply house rep about vendor-managed inventory (VMI). Companies like MSC, Fastenal, and most local HVAC/plumbing/electrical supply houses offer VMI for service trucks — they send someone to your shop, count your bins, restock on a schedule, and bill you after.</p>
+
+      <p><strong>The service is often free</strong> if you have an established account and buy enough volume. With 5+ trucks, it's worth a 10-minute phone call to ask. If the spreadsheet still wins — and for most shops under 10 trucks, it does — you've at least benchmarked the option and know when to revisit it.</p>
+
+      <h2>When to upgrade from spreadsheet to truck inventory software</h2>
+      <p>The spreadsheet handles everything a shop with 1-10 trucks needs. At some point, manual counting hits diminishing returns. Here's the upgrade decision in one table:</p>
+
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr>
+              <th>Truck count</th>
+              <th>Best approach</th>
+              <th>Tools</th>
+              <th>Monthly cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1-3 trucks</td>
+              <td>Free Google Sheets tracker</td>
+              <td>Custom spreadsheet (this guide)</td>
+              <td>$0</td>
+            </tr>
+            <tr>
+              <td>3-10 trucks</td>
+              <td>Trial field-service software with inventory module</td>
+              <td>ServiceTitan, Housecall Pro, mHelpDesk</td>
+              <td>$100-400/mo</td>
+            </tr>
+            <tr>
+              <td>10+ trucks</td>
+              <td>Dedicated inventory management inside your FSM</td>
+              <td>ServiceTitan, simPRO, or ERP inventory module</td>
+              <td>$300-800/mo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>The break-even math:</strong> If your fleet is burning $1,800/week on parts runs, a $400/month inventory module pays for itself with 2 prevented runs per month. Above 10 trucks, software isn't an expense — it's cheaper than the windshield time it replaces.</p>
+
+      <p>But don't let the upgrade path distract you. Most shops reading this have 1-7 trucks and zero truck stock system at all. <strong>Start with the spreadsheet.</strong> Run it for 90 days. Track how many supply-house runs you prevent. When the data says it's time to upgrade, you'll know — because the spreadsheet told you.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>How long does it take to set up the truck stock spreadsheet?</h3>
+        <p>About 2 hours for the first truck — building the tab, populating your parts list, and setting up conditional formatting for auto-alerts. Each additional truck takes 30 minutes (copy the tab, adjust quantities). The Monday morning count takes 15 minutes per truck per week.</p>
+
+        <h3>Do my techs really need to count parts every Monday?</h3>
+        <p>Yes — and they'll resist at first. But once they experience a week with zero mid-job supply-house runs, the 15-minute Monday check becomes the routine they defend, not the one they avoid. Frame it this way: 15 minutes at the shop beats 40 minutes in traffic. Every tech who's burned a lunch break at the supply house understands that trade.</p>
+
+        <h3>What if I run an electrical shop — does this still apply?</h3>
+        <p>Absolutely. Electrical trucks have the same problem: the breaker you need is the one you're out of. The trade-specific 80/20 list above includes common electrical parts. The spreadsheet system works identically across HVAC, plumbing, electrical, pest control, and any trade that runs service trucks with stocked inventory.</p>
+
+        <h3>Can I use this for landscaping or pest control trucks?</h3>
+        <p>Yes. Landscaping trucks stock fertilizers, pesticides, sprinkler heads, and tool parts. Pest control trucks stock chemicals, bait stations, and application equipment. The spreadsheet structure (per-truck tab, min threshold, auto-alerts) works for any truck that carries consumable inventory. Swap the 80/20 parts list for yours and you're running the same system.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/truck-inventory-second-trip-prevention/">
+            <span class="cat">Home Services &amp; Trades</span>
+            <div class="title">Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix</div>
+          </a>
+          <a class="related-card" href="/blog/hvac-after-hours-emergency-call-triage-system/">
+            <span class="cat">Home Services &amp; Trades</span>
+            <div class="title">When to Roll a Truck at 3am: An After-Hours Emergency Triage System</div>
+          </a>
+          <a class="related-card" href="/blog/small-manufacturer-inventory-management-system/">
+            <span class="cat">Manufacturing</span>
+            <div class="title">Your Raw Material Shelf Is a Guessing Game — A Free Inventory Management System for Small Shops</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Your trucks are your biggest revenue lever — or your biggest cost center</h2>
+        <p>If your shop is burning a tech's worth of salary on supply-house runs, the truck stock spreadsheet stops the bleeding for $0. But if the problem runs deeper — if your entire field operation runs on sticky notes and group texts — we build the systems that turn a service business into a revenue machine. Starting at $0 for the audit.</p>
+        <a class="btn" href="/contact">Book your free audit &rarr;</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/truck-inventory-second-trip-prevention/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/hvac-after-hours-emergency-call-triage-system/" style="font-weight:600;color:#1466FF;text-decoration:none">When to Roll a Truck at 3am: An After-Hours Emergency Triage System for HVAC, Plumbing, and Electrical Contractors</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/contractor-job-costing-system-field-to-office/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Field Crews Know Exactly How Much They Lost — 3 Weeks After the Job Closed</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    &copy; 2026 Jobs Done Labs &middot; <a href="/">Home</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>

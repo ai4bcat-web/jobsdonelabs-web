@@ -3126,6 +3126,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Tech Made a 40-Minute Parts Run for a $6 Fitting — The Free Truck Stock Tracker That Ends It
+
 Spending Too Much Time on Invoicing? How Contractors Cut Paperwork from Hours to Minutes
 
 You Drove 240 Miles to Give 7 Free Estimates — The Tire-Kicker Filter System
@@ -6572,6 +6574,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Your Tech Made a 40-Minute Parts Run for a $6 Fitting — The Free Truck Stock Tracker That Ends It
 
 Losing Leads Because You Can't Respond Fast Enough? Here's How Contractors Fix It
 
@@ -14930,6 +14934,287 @@ URL: https://www.jobsdonelabs.ai/blog/scope-creep-tracker-fixed-fee-consulting-c
 
 ---
 
+# Free Truck Stock Tracker: Stop Mid-Job Parts Runs
+
+Home Services & Trades
+
+Your Tech Made a 40-Minute Parts Run for a $6 Fitting. Here's the Free Truck Stock Tracker That Ends Mid-Job Supply-House Runs.
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 20, 2026
+
+Key takeaways
+
+A 5-tech shop loses $1,800/week on mid-job parts runs — $90K+/year in unbillable windshield time. The root cause isn't lazy techs; it's truck stock nobody tracks systematically. This guide gives you a free Google Sheets truck stock tracker with per-truck tabs, auto-reorder alerts, a 15-minute Monday morning van check, and an 80/20 common-parts list by trade — all for $0.
+
+What a mid-job parts run actually costs
+
+It's 10:30 AM on a Tuesday. Your HVAC tech is on a no-cool call at 123 Main Street. He opens the condenser, diagnoses a bad capacitor — and his truck doesn't have a 40/5 MFD. He calls the supply house. They have it. 20 minutes there, 20 minutes back. The capacitor costs $6.37.
+
+The customer paid for a diagnostic + repair. They didn't pay for 40 minutes of windshield time.
+
+That $6 part just cost you $90.
+
+The math per wasted trip:
+
+Tech hourly:
+
+$25-40/hr × 40 min = $17-27
+
+Truck cost:
+
+$0.70/mile × 20 miles = $14
+
+Supply-house markup:
+
+15-25% over bulk pricing = $1-2
+
+Billable time lost:
+
+40 min that could've been the next call
+
+Per-trip total:
+
+$50-90 in hard cost + 1 hour of lost billable time
+
+Now multiply that across your fleet.
+
+A 10-tech shop averaging 2 supply-house runs per tech per week is burning $1,800/week in non-billable driving.
+
+That's $90,000+ a year — an entire tech's salary — evaporating because trucks weren't stocked for the jobs that make up 80% of your calls.
+
+The fix isn't buying more parts. It's knowing what's on every truck this morning, what ran low yesterday, and what needs to be on the shop order by noon. That's what the free truck stock tracker does.
+
+The free truck stock inventory spreadsheet
+
+This Google Sheets system replaces "I think I have one of those somewhere" with a single source of truth for every truck in your fleet. One spreadsheet, one tab per truck, zero cost.
+
+What the spreadsheet tracks (per truck, per tab)
+
+Bin location
+
+— shelf, drawer, or bin number in the truck. Techs find parts in seconds, not minutes.
+
+Part name & SKU
+
+— the exact item and supply house part number.
+
+Quantity on hand
+
+— updated every Monday during the 15-minute van check.
+
+Minimum threshold
+
+— the lowest quantity before reorder. When qty drops below this, the cell turns red.
+
+Supplier & reorder qty
+
+— who carries it and how many to buy at a time.
+
+Unit cost & last restock date
+
+— for tracking inventory value and identifying slow-moving stock.
+
+Auto-alerts that do the thinking for you:
+
+Conditional formatting highlights every cell in red where quantity on hand is below the minimum threshold. A master restock tab auto-populates with every red-flagged item across all trucks — so your parts manager sees exactly what to order by noon, across the entire fleet, on one screen.
+
+No software to install. No subscription. No learning curve beyond "this cell is red, order more." The spreadsheet template is free, customizable by trade, and built to match how service trucks actually operate — not how a SaaS vendor thinks they should.
+
+The 15-minute Monday morning van check
+
+The spreadsheet only works if quantities are current. Here's the routine that keeps it accurate without turning your techs into inventory clerks:
+
+Every Monday, before the first dispatch:
+
+Open the truck stock spreadsheet
+
+on a phone or tablet — the Google Sheets mobile app works in the truck.
+
+Count the 20 most-used items.
+
+Not all 200 SKUs — just the 20 that cause 80% of supply-house runs. These are the capacitors, contactors, fittings, and common repair parts identified in your trade's 80/20 list (below).
+
+Update qty on hand.
+
+Tap the cell, type the number. Takes 15 minutes for all 20 items across 2-3 bins.
+
+Flag red items for the shop order.
+
+Any cell that turns red after updating — the part is below minimum. It goes on the restock list before the tech leaves the yard.
+
+Before/after reality check:
+
+A 7-truck plumbing shop in Ohio adopted this Monday morning routine. Before: 3 supply-house runs per tech per day on average — 21 runs/day across the fleet. After 4 weeks: down to 3 runs/day total — one per tech
+
+per week
+
+. The time saved went straight into billable service calls. No new software, no new hires, just a 15-minute Monday check.
+
+The 80/20 parts list by trade
+
+Twelve to fifteen part types cover 80% of common service calls. Stock these on every truck and your emergency supply-house runs drop to specialty parts and new-install materials only.
+
+HVAC — always on the truck:
+
+Capacitors: 5, 7.5, 10, 15, 20, 30, 40, 45, 60, 80 MFD (dual and single)
+
+Contactors: 1-pole and 2-pole, 30 and 40 amp
+
+Relays and transformers (universal 24V)
+
+Thermostats: 2-3 universal programmable models
+
+Condensate drain fittings: 3/4" PVC elbows, tees, couplings, and a float switch
+
+Refrigerant leak sealant (universal) and a set of common blower/condenser fan motors
+
+Fuses: 3A, 5A, 10A automotive and glass-tube
+
+Plumbing — always on the truck:
+
+Compression fittings: 1/2" and 3/4" angle stops, straight stops, couplings
+
+Shut-off valves: 1/2" and 3/4" ball valves, gate valves
+
+Toilet repair: universal fill valves, 2" and 3" flappers, wax rings, tank-to-bowl kits
+
+P-traps: 1-1/4" and 1-1/2" slip-joint in PVC and brass
+
+Supply lines: 12", 16", 20" braided stainless in 1/2" and 3/8" compression
+
+Pipe dope, Teflon tape, plumber's putty, and silicone
+
+Copper fittings: 1/2" and 3/4" elbows, tees, couplings, caps — plus a short stick of each
+
+Electrical — always on the truck:
+
+Breakers: 15A, 20A, 30A single-pole; 20A, 30A, 40A, 50A double-pole (common brands: Square D, Siemens, Eaton)
+
+Receptacles: 15A and 20A duplex, GFCI (indoor and weather-resistant)
+
+Switches: single-pole, 3-way, 4-way, dimmer
+
+Wire nuts and Wago connectors: assorted sizes
+
+NM cable staples and Romex connectors
+
+Junction box covers, blank plates, and device boxes
+
+Customize the list for your shop.
+
+Export your last 6 months of service invoices. Sort by part type. The top 15 items that appear most often are
+
+your
+
+80/20 list — broader than what's above, more specific to your territory and customer base. Update it quarterly as your call mix shifts.
+
+Vendor-managed inventory — your supply house might do this for free
+
+If managing truck stock yourself still feels like a second job, ask your supply house rep about vendor-managed inventory (VMI). Companies like MSC, Fastenal, and most local HVAC/plumbing/electrical supply houses offer VMI for service trucks — they send someone to your shop, count your bins, restock on a schedule, and bill you after.
+
+The service is often free
+
+if you have an established account and buy enough volume. With 5+ trucks, it's worth a 10-minute phone call to ask. If the spreadsheet still wins — and for most shops under 10 trucks, it does — you've at least benchmarked the option and know when to revisit it.
+
+When to upgrade from spreadsheet to truck inventory software
+
+The spreadsheet handles everything a shop with 1-10 trucks needs. At some point, manual counting hits diminishing returns. Here's the upgrade decision in one table:
+
+Truck count
+
+Best approach
+
+Tools
+
+Monthly cost
+
+1-3 trucks
+
+Free Google Sheets tracker
+
+Custom spreadsheet (this guide)
+
+3-10 trucks
+
+Trial field-service software with inventory module
+
+ServiceTitan, Housecall Pro, mHelpDesk
+
+$100-400/mo
+
+10+ trucks
+
+Dedicated inventory management inside your FSM
+
+ServiceTitan, simPRO, or ERP inventory module
+
+$300-800/mo
+
+The break-even math:
+
+If your fleet is burning $1,800/week on parts runs, a $400/month inventory module pays for itself with 2 prevented runs per month. Above 10 trucks, software isn't an expense — it's cheaper than the windshield time it replaces.
+
+But don't let the upgrade path distract you. Most shops reading this have 1-7 trucks and zero truck stock system at all.
+
+Start with the spreadsheet.
+
+Run it for 90 days. Track how many supply-house runs you prevent. When the data says it's time to upgrade, you'll know — because the spreadsheet told you.
+
+Frequently asked questions
+
+How long does it take to set up the truck stock spreadsheet?
+
+About 2 hours for the first truck — building the tab, populating your parts list, and setting up conditional formatting for auto-alerts. Each additional truck takes 30 minutes (copy the tab, adjust quantities). The Monday morning count takes 15 minutes per truck per week.
+
+Do my techs really need to count parts every Monday?
+
+Yes — and they'll resist at first. But once they experience a week with zero mid-job supply-house runs, the 15-minute Monday check becomes the routine they defend, not the one they avoid. Frame it this way: 15 minutes at the shop beats 40 minutes in traffic. Every tech who's burned a lunch break at the supply house understands that trade.
+
+What if I run an electrical shop — does this still apply?
+
+Absolutely. Electrical trucks have the same problem: the breaker you need is the one you're out of. The trade-specific 80/20 list above includes common electrical parts. The spreadsheet system works identically across HVAC, plumbing, electrical, pest control, and any trade that runs service trucks with stocked inventory.
+
+Can I use this for landscaping or pest control trucks?
+
+Yes. Landscaping trucks stock fertilizers, pesticides, sprinkler heads, and tool parts. Pest control trucks stock chemicals, bait stations, and application equipment. The spreadsheet structure (per-truck tab, min threshold, auto-alerts) works for any truck that carries consumable inventory. Swap the 80/20 parts list for yours and you're running the same system.
+
+Related posts
+
+Home Services & Trades
+
+Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix
+
+Home Services & Trades
+
+When to Roll a Truck at 3am: An After-Hours Emergency Triage System
+
+Manufacturing
+
+Your Raw Material Shelf Is a Guessing Game — A Free Inventory Management System for Small Shops
+
+Your trucks are your biggest revenue lever — or your biggest cost center
+
+If your shop is burning a tech's worth of salary on supply-house runs, the truck stock spreadsheet stops the bleeding for $0. But if the problem runs deeper — if your entire field operation runs on sticky notes and group texts — we build the systems that turn a service business into a revenue machine. Starting at $0 for the audit.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix
+
+When to Roll a Truck at 3am: An After-Hours Emergency Triage System for HVAC, Plumbing, and Electrical Contractors
+
+Your Field Crews Know Exactly How Much They Lost — 3 Weeks After the Job Closed
+
+
+URL: https://www.jobsdonelabs.ai/blog/service-truck-parts-inventory-spreadsheet-free/
+
+---
+
 # Shift Handover Log Template for Manufacturing
 
 Manufacturing
@@ -18800,6 +19085,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Your Tech Made a 40-Minute Parts Run for a $6 Fitting — The Free Truck Stock Tracker That Ends It
 
 When to Roll a Truck at 3am: An After-Hours Emergency Triage System
 
