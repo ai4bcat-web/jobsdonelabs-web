@@ -48,6 +48,7 @@
 
 ## Healthcare
 - [16 Hours a Week on Prior Authorizations and You Still](https://www.jobsdonelabs.ai/blog/manual-prior-authorization-workflow-small-practice/): Small medical practices lose $35K–$45K per year in staff time on prior authorizations — and every software 'solution' costs more than the problem. Here's...
+- [Free Medical Claims Appeal Tracker Spreadsheet](https://www.jobsdonelabs.ai/blog/medical-claims-denial-appeal-tracking-spreadsheet-free/): 5-15% of claims are denied and most expire before appeal. Free tracker with deadline calendar, reason-code guide, and template letters.
 - [Your New Provider Can't Bill for 5 Months and You're](https://www.jobsdonelabs.ai/blog/medical-practice-provider-credentialing-tracking-system/): Growing medical practices lose $30K+ per new provider in unbillable time while credentialing applications sit in payer queues for 90-150 days. Here's the...
 - [Medical Records Request Tracking Spreadsheet](https://www.jobsdonelabs.ai/blog/medical-records-request-tracking-system/): Your office manager spends 8-10 hrs/week on medical records requests with no system. Free tracking template + HIPAA-compliant workflow for small practices.
 - [Medical Waste Compliance Inspection Guide](https://www.jobsdonelabs.ai/blog/medical-waste-compliance-inspection-documentation-system/): Your waste manifests are in a shoebox and the state inspector just called. Free 5-tab documentation system that passes inspections every time — no compliance software needed.

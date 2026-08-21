@@ -7432,6 +7432,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Practice Wrote Off $87,000 in Denied Claims Last Year — Free Appeal Tracker Spreadsheet
+
 Stop Losing Referred Patients: Free Loop-Closure Tracker for Small Practices
 
 16 Hours a Week on Prior Authorizations — The Manual PA Workflow That Cuts Time in Half Before You Spend a Dime
@@ -8171,6 +8173,8 @@ Book your audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Your Practice Wrote Off $87,000 in Denied Claims Last Year — Free Appeal Tracker Spreadsheet
 
 Cut Insurance Verification Time in Half: A Front Desk Workflow That Doesn't Cost $900/Month
 
@@ -9196,6 +9200,341 @@ URL: https://www.jobsdonelabs.ai/blog/marketing-agency-client-reporting-automati
 
 ---
 
+# Free Medical Claims Appeal Tracker Spreadsheet
+
+Healthcare & Medical Practices
+
+Your Practice Wrote Off $87,000 in Denied Claims Last Year. Here's the Free Appeal Tracker That Turns Denials Into Paid Claims.
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 21, 2026
+
+Key takeaways
+
+5-15% of claims are denied — a $1.2M practice loses $96K/year in denials with 65% recoverable. Most small practices have no systematic appeal process: denials live in filing cabinets until the appeal window closes. This free Google Sheets denial tracker gives you per-claim appeal deadline tracking (auto-calculated by payer), the 5 most common denial reason codes and exactly how to appeal each one, template appeal letters, and the 15-minute weekly denial huddle that moves your appeal rate from 40% to 85% — all for $0.
+
+What denied claims actually cost your practice
+
+Every practice manager knows denials are a problem. What almost nobody calculates is the dollar figure. Let's do the math.
+
+The industry average denial rate is 5-15% of claims submitted. For a $1.2 million primary care practice submitting roughly 8,000 claims per year, an 8% denial rate means
+
+640 denied claims annually
+
+. At an average allowed amount of $150 per claim, that's $96,000 in denied revenue.
+
+Not all denials are appealable — some are legitimate (patient wasn't covered, service wasn't a benefit). But industry data from the Medical Group Management Association (MGMA) shows that
+
+roughly 65% of denials are appealable
+
+. Of those,
+
+60-70% are overturned on appeal
+
+when properly documented. That means:
+
+$96,000 in denials × 65% appealable = $62,400 in potentially recoverable claims
+
+$62,400 × 65% appeal success rate = $40,560 in actual recovery potential
+
+Cost to appeal: roughly $45/hour biller time × 60 minutes per appeal × 60 appeals = $2,700 in labor
+
+Net recovery: $37,860 to the bottom line — from claims you were going to write off.
+
+Here's the part nobody talks about:
+
+Most small practices don't even attempt 60% of these appeals. Not because the appeal would fail — because the 180-day window closes before anyone pulls the denial out of the filing cabinet. The money isn't lost because the payer said no. It's lost because
+
+nobody had a system to say yes in time.
+
+The free denied claims appeal tracker spreadsheet
+
+The spreadsheet below replaces the filing cabinet, the sticky notes, and the biller's memory. It tracks every denied claim from the moment the remittance advice arrives until the check clears — with deadline alerts so nothing expires.
+
+Per-claim tracking fields:
+
+Denial tracker column layout
+
+Patient name
+
+— who the claim is for
+
+Claim number
+
+— from the original submission
+
+Date of service
+
+— when the encounter happened
+
+Payer
+
+— Blue Cross, United, Aetna, Medicare, etc.
+
+CPT codes
+
+— which services were billed (99213, 99214, etc.)
+
+Billed amount
+
+— what you submitted
+
+Denial date
+
+— from the remittance advice
+
+Denial reason code
+
+— CO-16, CO-22, CO-50, CO-11, CO-29, etc.
+
+Denial category
+
+— medical necessity / coding / timely filing / authorization / eligibility / coordination of benefits / other
+
+Appeal deadline
+
+auto-calculated:
+
+denial date + 180 days for commercial, + 120 days for Medicare
+
+Days remaining
+
+— countdown with conditional formatting (see below)
+
+Appeal status
+
+— not started / drafting / submitted / approved / denied-2nd-level
+
+Appealed amount
+
+— what you're asking to recover
+
+Recovered amount
+
+— what actually came back
+
+Notes
+
+— payer contact, appeal reference number, follow-up log
+
+Conditional formatting rules:
+
+GREEN
+
+— 60+ days remaining. No urgency.
+
+YELLOW
+
+— 30-60 days remaining. Start drafting.
+
+RED
+
+— fewer than 30 days remaining. Drop everything — this claim expires this month.
+
+Dashboard pivot table:
+
+A second tab aggregates all denials by reason code and shows total revenue at risk by category. One glance tells the practice manager: "We have $18,400 in medical-necessity denials with fewer than 30 days remaining. Biller, those are your priority this week."
+
+The 5 most common denial reasons — and exactly how to appeal each one
+
+Denial reason codes look like alphabet soup, but 80% of denials fall into just five categories. Here's what each one means and the specific documentation that gets it overturned.
+
+Code
+
+Meaning
+
+How to appeal
+
+CO-16
+
+Medical necessity — payer says the service wasn't medically necessary
+
+Send the clinical notes from the encounter, plus a citation from a peer-reviewed guideline or the payer's own medical policy that supports the service. If the payer has an LCD (Local Coverage Determination) for the CPT code, quote it directly.
+
+Template letter included below.
+
+CO-22
+
+Coordination of benefits — payer thinks another insurer is primary
+
+Send the other payer's Explanation of Benefits (EOB) showing they processed and paid as secondary. If the patient has no other coverage, send a signed statement from the patient confirming no other insurance. This is the fastest appeal — most CO-22 denials are resolved in one submission.
+
+CO-50
+
+Not covered — payer says the service isn't a plan benefit
+
+Check the payer's LCD or NCD (National Coverage Determination) for the CPT code. If the service is listed as covered with specific criteria, document how the patient met those criteria. If it's genuinely not covered, check whether an ABN (Advance Beneficiary Notice) was signed — if so, bill the patient. If not, this one's a write-off.
+
+CO-11
+
+Diagnosis mismatch — the diagnosis code doesn't support the procedure code
+
+Send corrected coding with supporting documentation from the encounter. This often happens when the provider documents a specific condition but the coder selects a non-specific ICD-10 code. Have the provider add an addendum to the note with the more specific diagnosis, then resubmit with the corrected ICD-10.
+
+CO-29
+
+Timely filing — payer says the claim was submitted past the deadline
+
+This is the hardest appeal, but not impossible. Pull your clearinghouse report showing the original submission date with timestamp. If it was submitted on time and the payer lost it, the clearinghouse report is your proof. If it was genuinely late, document the reason (EHR outage, staff turnover) and request a one-time exception — some payers grant these, especially for established practices.
+
+Template appeal letter: Medical necessity (CO-16)
+
+[Date]
+
+[Payer Name]
+
+Provider Appeals Department
+
+[Address]
+
+RE: Appeal of Denied Claim — Medical Necessity
+
+Patient: [Name]
+
+Claim #: [Number]
+
+Date of Service: [Date]
+
+CPT Code(s): [Codes]
+
+Denial Reason: CO-16 — Service Not Medically Necessary
+
+Dear Provider Appeals Department,
+
+We are appealing the denial of the above-referenced claim on the grounds that the service was medically necessary and consistent with [Payer Name]'s published medical policy [Policy Number, if available] and evidence-based clinical guidelines.
+
+Clinical documentation supporting medical necessity:
+
+[Summarize the clinical findings from the encounter note that support the service — diagnosis, symptoms, prior treatment attempts, risk factors.]
+
+Guideline support:
+
+The service provided is consistent with [cite a relevant guideline — e.g., American Academy of Family Physicians, USPSTF, specialty society guideline].
+
+Enclosed please find: (1) the clinical encounter note, (2) the relevant medical policy excerpt, and (3) the guideline citation. We respectfully request reconsideration and payment of this claim in the amount of $[Amount].
+
+Sincerely,
+
+[Provider Name]
+
+[Practice Name]
+
+[Phone]
+
+The 15-minute weekly denial huddle
+
+The tracker only works if someone looks at it. Here's the Monday-morning process that takes 15 minutes and recovers $30K-40K per year.
+
+Weekly denial huddle agenda
+
+Biller pulls the tracker
+
+and sorts by "days remaining" — ascending. The claims closest to expiration float to the top.
+
+Flag the 3 highest-value claims expiring this month.
+
+These are the ones where the appeal deadline window closes within 30 days AND the billed amount is significant (typically $200+). If there are 12 claims expiring, you can't appeal all 12 this week — pick the 3 with the biggest dollars attached.
+
+Office manager reviews and allocates.
+
+Assign each flagged claim to a biller or, if the appeal is complex (medical necessity with extensive documentation), to an outsourced appeal service. Write the assigned person's initials in the tracker's "status" column.
+
+Review last week's submitted appeals.
+
+Any responses come back? Update the tracker — approved, denied-at-second-level, or pending.
+
+Update the dashboard.
+
+Note the week-over-week change in total-denials-at-risk. The trending number is what tells you whether your denial rate is improving or getting worse.
+
+Before/after:
+
+A family practice in Ohio went from a 40% appeal rate to 85% in three months using this exact system. Their biller had been prioritizing denials by "which ones she remembered" — which meant the highest-dollar denials from 90 days ago were forgotten while she worked on yesterday's $45 denial. The tracker flipped the priority order: oldest claims first, highest-dollar within the oldest. Recovery jumped from $14K/year to $41K/year. Same biller, same hours — different system.
+
+When to outsource vs. handle in-house
+
+Not every practice needs to outsource denial management. But at a certain volume, in-house appeals hit diminishing returns — the biller is spending so much time appealing that new claims aren't getting submitted.
+
+Monthly denial volume
+
+Recommended approach
+
+Estimated cost
+
+Below $30K/month in denials
+
+Spreadsheet + in-house biller. The volume is manageable — 20-40 denials per month — and the biller can handle appeals alongside regular billing duties with a structured tracker.
+
+$0 for the spreadsheet; biller time already budgeted
+
+$30K–$100K/month
+
+Dedicated denial manager or part-time appeal specialist. At this volume (60-150 denials/month), appeals become a full-time function. A dedicated person pays for themselves at a 3:1 recovery-to-salary ratio.
+
+$35K–$50K/year salary, offset by $100K–$150K in recovery
+
+$100K+/month
+
+Outsource to an RCM vendor. Vendors like Waystar, Navicure, and Kareo have dedicated appeal teams, payer-specific expertise, and software that auto-generates appeal letters. They typically charge a percentage of recovered revenue (3-8%).
+
+3-8% of recovered revenue; typically yields higher overturn rates than in-house at scale
+
+The golden rule:
+
+Whatever approach you choose,
+
+run the tracker first.
+
+Before you hire a denial manager or sign an RCM contract, use the spreadsheet for 90 days. Measure: how many denials do you actually receive per month? What's your current appeal rate? What's your current recovery rate? Those three numbers tell you exactly what kind of help you need — and whether it'll pay for itself.
+
+Frequently asked questions
+
+How do I track denied medical claims without buying software?
+
+Use a free Google Sheets spreadsheet with columns for patient name, claim number, denial date, denial reason code, appeal deadline (auto-calculated based on payer — 180 days for commercial, 120 for Medicare), appeal status, and recovered amount. Add conditional formatting to highlight claims with fewer than 30 days remaining. This replaces the filing-cabinet-and-sticky-note approach most small practices rely on, and it costs nothing.
+
+What are the most common medical claim denial reasons and how do I appeal them?
+
+The five most common denial reason codes are CO-16 (medical necessity — appeal with clinical notes and guideline citations), CO-22 (coordination of benefits — send the other payer's EOB), CO-50 (not covered — check the payer's LCD/NCD and document medical necessity), CO-11 (diagnosis mismatch — send corrected coding with provider addendum), and CO-29 (timely filing — provide clearinghouse report showing original submission timestamp). Each requires specific documentation; template letters for all five are in the tracker.
+
+How long do I have to appeal a denied medical claim?
+
+Commercial insurance: typically 180 days from the denial date on the remittance advice. Medicare: 120 days from the remittance advice date. Medicaid: varies by state, typically 30-90 days. Always verify the specific deadline in the payer's provider manual — it's printed on the remittance advice. Missing the deadline converts the denial into a permanent write-off with no further appeal rights.
+
+How much money does a medical practice lose on unworked denials?
+
+A $1.2M practice with an 8% denial rate loses approximately $96,000 in denied claims annually. About 65% of those ($62,400) are appealable, and 60-70% are overturned on appeal — meaning $37,000-$43,000 is recoverable. After subtracting biller labor for appeals (~$2,700), the net recovery is roughly $34,000-$40,000. Most practices capture less than half of this because denials expire before anyone appeals them.
+
+What's the best free denial tracking spreadsheet for small practices?
+
+The best free tracker includes per-claim fields (patient, claim number, payer, denial date, reason code, billed amount), auto-calculated appeal deadlines by payer type, days-remaining countdown with color-coded conditional formatting, appeal status tracking, and a pivot table showing denials grouped by reason code and revenue impact. This gives you everything a $300-500/month denial management module offers — without the subscription.
+
+When should I outsource medical claim denial appeals?
+
+Below $30K/month in denials: handle in-house with a spreadsheet. Between $30K-$100K/month: hire a dedicated denial manager or part-time appeal specialist. Above $100K/month: outsource to an RCM vendor. But always run the tracker for 90 days first so you know your actual denial volume, appeal rate, and recovery rate — those numbers determine whether outsourcing will pay for itself.
+
+Stop writing off denials that should have been paid
+
+Every denied claim that expires past its appeal window is revenue your practice earned and gave away. The tracker above costs $0 and takes one afternoon to set up. If your practice needs help building the spreadsheet — or wants a custom denial management workflow integrated with your EHR and billing system — we build those. Starting at $0 for the assessment.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+16 Hours a Week on Prior Authorizations and You Still Can't Afford the Software — The Manual PA Workflow
+
+Cut Insurance Verification Time in Half: A Front Desk Workflow That Doesn't Cost $900/Month
+
+Medical Records Requests Are Eating 8 Hours of Your Office Manager's Week — Here's the Tracking System That Fixes It
+
+
+URL: https://www.jobsdonelabs.ai/blog/medical-claims-denial-appeal-tracking-spreadsheet-free/
+
+---
+
 # Your New Provider Can't Bill for 5 Months and You're
 
 › Provider Credentialing Tracking System
@@ -10070,6 +10409,8 @@ Book a free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Your Practice Wrote Off $87,000 in Denied Claims Last Year — Free Appeal Tracker Spreadsheet
 
 Stop Losing Referred Patients: Free Loop-Closure Tracker for Small Practices
 
