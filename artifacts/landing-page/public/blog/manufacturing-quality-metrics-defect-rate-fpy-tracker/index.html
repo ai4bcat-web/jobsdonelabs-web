@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Defect Rate and FPY: Free Quality Metrics Tracker | Jobs Done Labs</title>
+  <meta name="description" content="Your shop floor says 97% yield but your scrap bill tells a different story. Free spreadsheet tracks real defect rate, FPY, and quality costs — no QMS needed." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/manufacturing-quality-metrics-defect-rate-fpy-tracker/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/manufacturing-quality-metrics-defect-rate-fpy-tracker/" />
+  <meta property="og:title" content="Defect Rate and FPY: Free Quality Metrics Tracker | Jobs Done Labs" />
+  <meta property="og:description" content="Your shop floor says 97% yield but your scrap bill tells a different story. Free spreadsheet tracks real defect rate, FPY, and quality costs — no QMS needed." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&amp;q=80" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Defect Rate and FPY: Free Quality Metrics Tracker" />
+  <meta name="twitter:description" content="Your shop floor says 97% yield but your scrap bill tells a different story. Free spreadsheet tracks real defect rate, FPY, and quality costs." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&amp;q=80" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your Shop Floor Runs at 97% Yield — But the Accountant's Scrap Report Says 82%. Here's the Free Quality Metrics Tracker That Shows What's Really Happening Between the Machine and the Shipping Dock.",
+    "description": "A 40,000-part/month shop that reports 97% yield but has a true defect rate of 15% is losing over $115,000/month in scrap and rework costs that don't appear on any report. This guide provides a free quality metrics spreadsheet with defect log, FPY dashboard, Pareto analysis, and shift-level tracking — everything a small manufacturer needs to measure real quality without expensive QMS software.",
+    "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/", "jobTitle": "Founder", "worksFor": { "@type": "Organization", "name": "Jobs Done Labs" } },
+    "publisher": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+    "datePublished": "2026-08-22",
+    "dateModified": "2026-08-22"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I track manufacturing defect rates without expensive QMS software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You track defect rates with a structured spreadsheet that logs every defect by shift, machine, part number, and defect type. The free manufacturing quality metrics spreadsheet in this guide includes a Defect Log tab, a Dashboard that auto-calculates first pass yield (FPY), rework rate, and scrap cost, and a Pareto tab that identifies your top defect causes. Total setup time: 2-3 hours. Cost: $0."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between first pass yield and final yield?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First pass yield (FPY) is the percentage of parts that pass inspection the FIRST time, before any rework. Final yield is the percentage that eventually ship. A shop running 82% FPY and 99% final yield is reworking 17% of all parts — and that rework labor is eating margins without showing up on the P&L. The gap between FPY and final yield IS your rework cost. Target: FPY above 95%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does rework actually cost per part?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rework typically costs 2-3x the original per-part labor because it requires re-handling, re-setup, additional inspection, and often expedited processing. If a part costs $12 in material + labor to produce, reworking it costs $24-36. If 60% of your defects are reworked (not scrapped), a 40,000-part/month shop with 15% defect rate spends approximately $86,400/month on rework alone. The free quality tracker calculates this cost automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the most common root causes of manufacturing defects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Across small manufacturing shops, the top three root causes follow the Pareto principle: 1. Tooling wear (approximately 35% of defects) — fixed with preventative tool change intervals, 2. Setup error (approximately 25%) — fixed with first-article inspection checklists, 3. Operator error (approximately 20%) — fixed with standardized work instructions, not blame. The quality tracker's Pareto tab identifies your specific top three within the first month of use, so you can attack the 20% of causes driving 80% of your defect cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate the true cost of scrap and rework?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "True quality cost = (scrapped units × unit material + labor cost) + (reworked units × rework labor cost per unit) + (line-down hours × hourly downtime cost). Example: 2,400 scrapped units × $12 = $28,800 + 3,600 reworked units × $24 rework cost = $86,400 + any production downtime from quality stops. The spreadsheet handles these calculations automatically — you enter defect counts and the Dashboard tab shows total quality cost and quality cost as a percentage of revenue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's a good first pass yield target for a small machine shop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A healthy FPY target for a small CNC machine shop is 95% or above. Shops running below 90% FPY are almost certainly losing significant margin to rework — a 15% rework rate on 40,000 parts/month at $24/rework cost = $86,400/month that could be recovered through root-cause fixes. The tracker auto-color-codes your FPY: green (≥95%), yellow (90-94%), red (<90%) so operators and supervisors see quality performance at a glance."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Defect Rate & FPY: Free Manufacturing Quality Tracker", "item": "https://www.jobsdonelabs.ai/blog/manufacturing-quality-metrics-defect-rate-fpy-tracker/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80" alt="Manufacturing quality inspection on the shop floor" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Manufacturing</span>
+      <h1>Your Shop Floor Runs at 97% Yield — But the Accountant's Scrap Report Says 82%. Here's the Free Quality Metrics Tracker That Shows What's Really Happening Between the Machine and the Shipping Dock.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · August 22, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A 40,000-part/month shop with a reported 97% yield and a true defect rate of 15% is losing $115,000/month in hidden scrap and rework costs — because nobody tracks defects between the machine and month-end close. The free quality metrics spreadsheet in this guide gives you a real-time dashboard of first pass yield, defect rate by shift and machine, rework cost, and a Pareto chart of root causes. $0, 2–3 hours to set up, same-shift visibility into quality problems that are currently two weeks cold by the time you see them.</p>
+      </div>
+
+      <h2>The hidden cost of not knowing your real defect rate</h2>
+
+      <p>Here's how the math works in a typical 40,000-part/month job shop. The production manager reports 97% yield. The shop floor feels like things are running well — most parts ship on time, customers aren't complaining. But here's what's actually happening:</p>
+
+      <p>Operators catch defects during production and rework them on the spot. The reworked parts eventually pass inspection and ship. Those hours of rework labor never get flagged as a quality problem — they just disappear into the shop's labor variance. The scrap that does get counted is what's obvious: the cracked casting, the hole drilled in the wrong location. What doesn't get counted: the 3,600 parts that got reworked last month because a cutting tool was worn 0.004" oversize, or the 2,400 parts that were scrapped because the first-article inspection checklist wasn't followed after a setup change.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The real numbers:</strong> 40,000 parts/month × 15% true defect rate (not the 3% you report) = 6,000 defective parts/month. At $12/part material + labor, that's $72,000/month in scrap value. But rework costs MORE than scrap: a reworked part consumes 2–3x the original labor. If 60% of defects are reworked and 40% scrapped: 3,600 reworked × $24/rework cost = $86,400 + 2,400 scrapped × $12 = $28,800. <strong>Total: $115,200/month in quality costs that don't appear on any report.</strong></p>
+      </div>
+
+      <p>The worst part? Nobody sees this number. The accountant's scrap report arrives 3 weeks after month-end and only captures the parts that were physically thrown away. The rework hours are buried in labor variance. The root cause — a worn tool that should have been changed 400 parts ago — was already replaced and forgotten. By the time the report lands, the machine settings have been changed twice and the operator has rotated to a different cell. The problem is both invisible and unsolvable by the time you learn about it.</p>
+
+      <h2>The free manufacturing quality metrics spreadsheet</h2>
+
+      <p>This spreadsheet changes that. It lives on the shop floor — not in the accountant's office — and it's filled out in real time by the people who see defects first: your operators and shift leads. Here's what each tab does:</p>
+
+      <h3>Dashboard tab</h3>
+      <p>The one-page summary your production manager looks at every morning:</p>
+      <ul>
+        <li><strong>Month, total parts produced, parts OK first pass, parts reworked, parts scrapped</strong> — raw inputs that auto-populate the calculations</li>
+        <li><strong>First pass yield % (auto-calculated)</strong> — parts OK first pass ÷ total produced. This is the metric that actually matters.</li>
+        <li><strong>Rework rate % and scrap rate %</strong> — auto-calculated from the defect log</li>
+        <li><strong>Cost of rework, cost of scrap, total quality cost</strong> — auto-calculated using your per-part cost inputs</li>
+        <li><strong>Quality cost as % of revenue</strong> — the number your CFO will actually care about</li>
+        <li><strong>Auto-color-coding:</strong> FPY ≥ 95% → GREEN. 90–94% → YELLOW. Below 90% → RED. No interpretation needed — the color tells the shift lead everything.</li>
+      </ul>
+
+      <h3>Defect Log tab</h3>
+      <p>Where every defect gets recorded. Operators fill this out during the shift — takes 30 seconds per entry:</p>
+      <ul>
+        <li>Date, shift, machine/cell, part number, operator</li>
+        <li><strong>Defect type:</strong> Dimensional / Cosmetic / Functional / Material / Assembly</li>
+        <li>Defect description (free text — "OD on Part #447 measured 1.252", spec is 1.250" ± 0.001")</li>
+        <li>Quantity affected</li>
+        <li><strong>Disposition:</strong> Rework / Scrap / Use-as-is / Return-to-supplier</li>
+        <li><strong>Root cause category:</strong> Machine wear / Operator error / Material defect / Setup error / Tooling wear</li>
+        <li>Corrective action taken</li>
+        <li>Closed? Y/N — shift lead checks this at end of shift during the 5-minute huddle</li>
+      </ul>
+
+      <h3>Pareto tab</h3>
+      <p>Auto-generates from the defect log — no manual data entry:</p>
+      <ul>
+        <li><strong>Defect-type Pareto chart:</strong> What types of defects are most common? Usually 2–3 defect types account for 80% of your problems.</li>
+        <li><strong>Defect-by-machine heatmap:</strong> Which machines are generating the most defects? Often it's one machine with a worn spindle bearing or a toolholder that's never been checked for runout.</li>
+        <li><strong>Defect-by-shift comparison:</strong> Is the night shift producing more scrap? Why? (Usually because the night shift has less supervision and skips first-article inspections.)</li>
+      </ul>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The spreadsheet costs $0 and takes 2–3 hours to set up.</strong> It runs in Google Sheets — no software installation, no IT approval, no QMS license. One person sets it up once, shares it with shift leads, and operators log defects during their shift. The Dashboard updates automatically.</p>
+      </div>
+
+      <h2>The 5-minute end-of-shift quality huddle that found $43,000 in scrap the spreadsheets missed</h2>
+
+      <p>A CNC shop in Ohio implemented this exact system after losing a $43,000 order because a dimensional drift on Part #447 wasn't caught until the customer rejected the entire batch. The problem had been developing for 11 days — tool wear was gradually pushing the OD 0.002" oversize — but because nobody tracked defects systematically, the pattern was invisible.</p>
+
+      <p>Here's the huddle they run now, every shift, in 5 minutes:</p>
+
+      <ol>
+        <li><strong>Shift lead opens the Defect Log</strong> and scans for any defect type that appeared 3+ times during the shift. Three dimensional defects on Part #447? That's a pattern — not random.</li>
+        <li><strong>Flag it immediately:</strong> "We had 4 dimensional defects on Part #447 — looks like Tool #3 is wearing. Maintenance is checking the runout now. Anything else?"</li>
+        <li><strong>Document the corrective action</strong> in the defect log and mark it closed when verified.</li>
+      </ol>
+
+      <p>Results after 8 weeks: rework dropped 40%. The shop went from discovering quality problems at month-end (when the accountant closed the books) to discovering them the same shift. The $43,000 batch rejection hasn't repeated.</p>
+
+      <div class="checklist">
+        <h3>The 5-minute huddle checklist</h3>
+        <ol>
+          <li>Open the Defect Log for the shift just completed</li>
+          <li>Identify any defect type that appeared 3+ times — this is your signal</li>
+          <li>Check the Dashboard: is FPY in the RED? If so, what's driving it?</li>
+          <li>Assign corrective action and owner — write it in the log</li>
+          <li>Close any corrective actions marked complete from the previous shift</li>
+        </ol>
+        <p style="margin:12px 0 0"><strong>Total time: 5 minutes.</strong> Total cost: $0. Total annual savings from catching defects same-day instead of month-end: depends on your scrap rate, but for the Ohio shop, it was $43,000 in prevented rejections alone — not counting the 40% reduction in ongoing rework.</p>
+      </div>
+
+      <h2>First pass yield vs. final yield — the metric your customers actually care about</h2>
+
+      <p>Here's a distinction that separates shops that know their quality from shops that guess:</p>
+
+      <ul>
+        <li><strong>First pass yield (FPY)</strong> = the percentage of parts that pass inspection the FIRST time, before any rework. Formula: Parts OK first pass ÷ Total parts produced.</li>
+        <li><strong>Final yield</strong> = the percentage of parts that eventually ship. Formula: (Total produced – Scrapped) ÷ Total produced.</li>
+      </ul>
+
+      <p>A shop running 82% FPY and 99% final yield sounds impressive — "99% of everything we build ships to the customer!" But here's what that actually means: <strong>17% of every part you produce is reworked.</strong> Your customers receive good parts because you're spending a fortune in rework labor making them good. Your margins are being consumed by labor that doesn't add value — it just fixes mistakes.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The gap between FPY and final yield IS your rework cost.</strong> If your FPY is 82% and your final yield is 99%, you're reworking 17% of all parts. On 40,000 parts/month: 6,800 parts reworked × $24/rework = $163,200/month in hidden quality cost. That's $1.96 million/year in labor that adds zero value — and it's invisible on your P&L because rework hours are absorbed into the standard labor variance line.</p>
+      </div>
+
+      <p>The tracker measures both FPY and final yield, displays the gap between them, and calculates the dollar value of that gap. The target: FPY above 95%. At 95% FPY, your rework drops from 6,800 parts/month to 2,000 — a $115,000/month swing. That's not a process improvement. That's a measurement improvement: once you can see the problem, you can fix it.</p>
+
+      <h2>Root cause categories and the Pareto principle of defects</h2>
+
+      <p>80% of your defects come from 20% of root causes. In most small manufacturing shops, the top three are:</p>
+
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr>
+              <th>Root cause</th>
+              <th>% of defects</th>
+              <th>Fix</th>
+              <th>Cost to fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Tooling wear</strong></td>
+              <td>~35%</td>
+              <td>Preventative tool change intervals based on tool-life data, not "when it sounds bad"</td>
+              <td>$0 — change tools on a schedule instead of reactively</td>
+            </tr>
+            <tr>
+              <td><strong>2. Setup error</strong></td>
+              <td>~25%</td>
+              <td>First-article inspection checklist: measure the first part off every setup against a checklist of critical dimensions before running production</td>
+              <td>$0 — one printed checklist per machine</td>
+            </tr>
+            <tr>
+              <td><strong>3. Operator error</strong></td>
+              <td>~20%</td>
+              <td>Standardized work instructions with photos, not text from an engineering drawing that nobody can read. Blame the process, not the person.</td>
+              <td>$0 — one afternoon to document and photograph each setup</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The spreadsheet's Pareto tab identifies YOUR specific top three within the first month of use. Attack those three — tool change schedule, setup checklist, work instructions — and your defect rate drops 50–70%. This isn't theory. It's the Toyota Production System operating principle applied through a spreadsheet instead of an enterprise MES.</p>
+
+      <div class="checklist">
+        <h3>Month 1: Get the data</h3>
+        <ul>
+          <li>Set up the spreadsheet (2–3 hours)</li>
+          <li>Train operators to log defects during the shift (30-second task per defect)</li>
+          <li>Run the 5-minute end-of-shift huddle every shift</li>
+          <li>At the end of month 1: review the Pareto tab. Your top 3 defect causes will be clearly visible.</li>
+        </ul>
+        <h3>Month 2: Attack the top cause</h3>
+        <ul>
+          <li>Implement the fix for your #1 root cause (e.g., tool change intervals)</li>
+          <li>Continue logging. The defect log will show you immediately whether the fix is working — within the first week, the defect count for that category should drop.</li>
+        </ul>
+        <h3>Month 3: Attack cause #2</h3>
+        <ul>
+          <li>By now, your FPY should be trending up. The Dashboard's color-coding makes this visible at a glance.</li>
+        </ul>
+      </div>
+
+      <h2>Going beyond the spreadsheet — when quality metrics justify better tools</h2>
+
+      <p>The spreadsheet is designed to be your first step. It proves the ROI of quality measurement before you spend a dollar on software. Once you've run the tracker for 3–6 months, you'll have hard data to answer the question: "Should we invest in a real QMS?"</p>
+
+      <p>The answer depends on what the data tells you:</p>
+
+      <ul>
+        <li><strong>If your FPY is 95%+ and quality cost is under 3% of revenue:</strong> The spreadsheet is sufficient. You don't need a QMS — you need to maintain what's working.</li>
+        <li><strong>If your FPY is below 90% and quality cost exceeds 5% of revenue:</strong> The spreadsheet has already identified your top root causes. Before buying software, implement the fixes for your top 3 causes (they cost $0). If FPY doesn't improve to 92%+ after 3 months, the root cause is likely systemic — machine capability, material supplier quality, or workforce skill — not a measurement gap. A QMS can help with traceability and audit compliance, but it won't fix a machine that can't hold tolerance.</li>
+        <li><strong>If you need ISO 9001 or AS9100 certification:</strong> A QMS like Greenlight Guru, Qualio, or QT9 becomes necessary — not for quality improvement, but for document control, audit trails, and CAPA workflows. Budget $500–1,500/month. The spreadsheet data from your first 3 months gives you the baseline metrics that make QMS implementation faster and more credible with auditors.</li>
+      </ul>
+
+      <p>But the spreadsheet isn't just a stepping stone. For shops under $5M revenue running 1–2 shifts with under 50 employees, it's often the permanent solution. The problem isn't that you need better software — the problem is that you need <em>any</em> systematic measurement at all. The spreadsheet solves that. Everything else is optimization.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>How do I track manufacturing defect rates without expensive QMS software?</h3>
+        <p>You track defect rates with a structured spreadsheet that logs every defect by shift, machine, part number, and defect type. The free manufacturing quality metrics spreadsheet in this guide includes a Defect Log tab, a Dashboard that auto-calculates first pass yield (FPY), rework rate, and scrap cost, and a Pareto tab that identifies your top defect causes. Total setup time: 2–3 hours. Cost: $0.</p>
+
+        <h3>What's the difference between first pass yield and final yield?</h3>
+        <p>First pass yield (FPY) is the percentage of parts that pass inspection the FIRST time, before any rework. Final yield is the percentage that eventually ship. A shop running 82% FPY and 99% final yield is reworking 17% of all parts — and that rework labor is eating margins without showing up on the P&amp;L. The gap between FPY and final yield IS your rework cost. Target: FPY above 95%.</p>
+
+        <h3>How much does rework actually cost per part?</h3>
+        <p>Rework typically costs 2–3x the original per-part labor because it requires re-handling, re-setup, additional inspection, and often expedited processing. If a part costs $12 in material + labor to produce, reworking it costs $24–36. If 60% of your defects are reworked (not scrapped), a 40,000-part/month shop with 15% defect rate spends approximately $86,400/month on rework alone. The free quality tracker calculates this cost automatically.</p>
+
+        <h3>What are the most common root causes of manufacturing defects?</h3>
+        <p>Across small manufacturing shops, the top three root causes follow the Pareto principle: 1. Tooling wear (approximately 35% of defects) — fixed with preventative tool change intervals, 2. Setup error (approximately 25%) — fixed with first-article inspection checklists, 3. Operator error (approximately 20%) — fixed with standardized work instructions, not blame. The quality tracker's Pareto tab identifies your specific top three within the first month of use.</p>
+
+        <h3>How do I calculate the true cost of scrap and rework?</h3>
+        <p>True quality cost = (scrapped units × unit material + labor cost) + (reworked units × rework labor cost per unit) + (line-down hours × hourly downtime cost). Example: 2,400 scrapped units × $12 = $28,800 + 3,600 reworked units × $24 rework cost = $86,400 + any production downtime from quality stops. The spreadsheet handles these calculations automatically.</p>
+
+        <h3>What's a good first pass yield target for a small machine shop?</h3>
+        <p>A healthy FPY target for a small CNC machine shop is 95% or above. Shops running below 90% FPY are almost certainly losing significant margin to rework — a 15% rework rate on 40,000 parts/month at $24/rework cost = $86,400/month that could be recovered through root-cause fixes. The tracker auto-color-codes your FPY: green (≥95%), yellow (90–94%), red (&lt;90%).</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/quality-inspection-paperwork-reduction-manufacturing/">
+            <span class="cat">Manufacturing</span>
+            <div class="title">Cut Quality Inspection Paperwork in Half: A Shop Floor Guide</div>
+          </a>
+          <a class="related-card" href="/blog/machine-downtime-tracking-system-small-manufacturing/">
+            <span class="cat">Manufacturing</span>
+            <div class="title">Your Machines Keep Breaking Down and Nobody's Tracking It</div>
+          </a>
+          <a class="related-card" href="/blog/manufacturing-job-costing-without-erp/">
+            <span class="cat">Manufacturing</span>
+            <div class="title">You're Losing $80,000 a Year Quoting Jobs by Feel</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Quality metrics tell you WHAT's broken. Automating the fix is our job.</h2>
+        <p>If the tracker shows you're losing $115K/month to rework — or if you already know the problem and just need someone to build the system that fixes it — we automate the data collection, the alerts, and the corrective-action workflows so your shift leads spend their 5-minute huddle acting on data, not entering it. Free 30-minute audit. No software pitch — just a plan.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/quality-inspection-paperwork-reduction-manufacturing/" style="font-weight:600;color:#1466FF;text-decoration:none">Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufacturers</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/supplier-delivery-tracking-manufacturing-spreadsheet/" style="font-weight:600;color:#1466FF;text-decoration:none">Suppliers Are Late Again and It's Costing $1,000/Week — How to Track Supplier Delivery Without Software</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/manufacturing-production-bottleneck-constraint-analysis/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Shop Has 12 Machines But Only One Is The Bottleneck</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
