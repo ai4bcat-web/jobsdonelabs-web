@@ -2905,6 +2905,8 @@ You're Spending 12 Hours on Every Estimate and You Haven't Noticed It's Killing 
 
 How Much Does Business Process Automation Cost for a Small Company? An Honest Price Breakdown
 
+Your Best HVAC Customer Only Calls When the AC Is Broken — The Free Maintenance Plan Tracker
+
 
 URL: https://www.jobsdonelabs.ai/blog/contractor-invoicing-automation-guide/
 
@@ -6589,6 +6591,8 @@ Your Customers' HVAC Is Failing and You Don't Know: A Free Equipment Lifecycle T
 
 Stop Missing Customer Calls — The Real Cost, a Free Revenue Calculator, and 7 Fixes That Work for Any Service Business
 
+Your Best HVAC Customer Only Calls When the AC Is Broken — The Free Maintenance Plan Tracker
+
 
 URL: https://www.jobsdonelabs.ai/blog/hvac-after-hours-emergency-call-triage-system/
 
@@ -6777,6 +6781,8 @@ When to Roll a Truck at 3am: An After-Hours Emergency Triage System for HVAC, Pl
 Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix
 
 You Did the Work and They're Refusing to Pay — The 5-Point Service Verification System
+
+Your Best HVAC Customer Only Calls When the AC Is Broken — The Free Maintenance Plan Tracker That Turns Repairs Into Revenue
 
 Turn your filing cabinet into a $1M+ replacement pipeline
 
@@ -7809,6 +7815,351 @@ Book your free audit →
 
 
 URL: https://www.jobsdonelabs.ai/blog/machine-downtime-tracking-system-small-manufacturing/
+
+---
+
+# Losing HVAC Renewals? Free Maintenance Plan Tracker
+
+Home Services & Trades
+
+Your Best HVAC Customer Only Calls When the AC Is Broken. Here's the Free Maintenance Plan Tracker That Turns Emergency Repairs Into Renewing Revenue.
+
+Ryne Bandolik
+
+· Jobs Done Labs ·
+
+August 23, 2026
+
+Key takeaways
+
+The fastest way to stop losing maintenance plan renewals is a free Google Sheets tracker that flags every plan 60 days before expiration, auto-calculates renewal revenue, and gives you a 4-touch email-and-call sequence you copy-paste. The spreadsheet costs $0 and takes under an hour to set up. A 50-plan book moving from 85% to 98% renewal adds roughly $2,600/year in revenue with zero new sales — the money is already in your customer list, it's just leaking through administrative cracks.
+
+What a lost renewal actually costs
+
+A maintenance plan customer isn't just a $299-499/year line on a spreadsheet. They're the customer who calls you for every repair, recommends you to two neighbors, and stays 3-4 years. Conservatively, one plan customer is worth $1,500-2,000 over their lifetime — not counting the $400-800 repair calls they make between tune-ups.
+
+Now do the math on what you lose when a renewal slips.
+
+The cost of one forgotten renewal
+
+Average plan value: $400/year × 3.5 years retention = $1,400 direct plan revenue lost
+
+1-2 referrals over the relationship (at 0.5 referrals × $400 average): $200-400 in referral revenue lost
+
+3-4 repair calls over the relationship that now go to a competitor ($400 avg each): $1,200-1,600 in repair revenue lost
+
+Total: one lost renewal = roughly $2,800-3,400 in lifetime revenue handed to a competitor
+
+Losing just one renewal per month — which is what happens when the "system" is a manila folder or an office manager who also does payroll, AP, and phones — is $33,000-40,000 per year in invisible churn. It doesn't show on any P&L because it's revenue that should have renewed, not revenue that was on the books and walked.
+
+Now contrast: a 50-plan book at 85% renewal is $17,000/year in plan revenue. The same book at 98% renewal — achievable with a tracking spreadsheet and a no-pressure 4-touch sequence — is roughly $19,600/year. That $2,600 difference came from a spreadsheet, not from a sales call or a marketing campaign. And the 50th customer who stayed instead of calling a competitor is the one who refers your shop to the whole neighborhood.
+
+Related:
+
+equipment tracking post
+
+covers the hardware side of every plan customer.
+
+The free maintenance plan renewal tracker spreadsheet
+
+Everything below is built into a single Google Sheets workbook you can copy, rename for your shop, and start using in under an hour. No macros, no add-ons, no monthly fee.
+
+Dashboard tab — at-a-glance renewal health
+
+Total active plans (auto-counted from the customer tab)
+
+Plans renewing this month, next month, and this quarter
+
+Renewal revenue projected by quarter (plan value × count of plans renewing that quarter)
+
+Renewal rate % (auto-calculated: RENEWED ÷ total expired or renewed)
+
+Plans past due — count and total dollar value of un-renewed plans now in the red
+
+Year-over-year comparison: this quarter renewal revenue vs. same quarter last year
+
+Per-customer tracker tab — every plan, one row
+
+Customer name, address, phone, and email
+
+Equipment type and age (furnace, AC, heat pump — age matters for repair-to-plan conversion, covered below)
+
+Plan type: Annual, Semi-Annual, or Quarterly
+
+Plan start date and renewal date
+
+Number of visits included per year (1 or 2)
+
+Date of last maintenance visit
+
+Next scheduled visit date
+
+Plan value ($/year)
+
+Payment method (credit card on file, check, invoiced)
+
+Auto-renew? (Y/N)
+
+Renewal status column — RENEWED / PENDING <30d / PENDING <60d / PAST DUE / CANCELLED
+
+Color-coded alerts:
+
+Conditional formatting auto-highlights:
+
+YELLOW
+
+when renewal is within 60 days,
+
+AMBER
+
+within 30 days, and
+
+RED
+
+when past due. You open the sheet on Monday morning and the color-coding tells you who needs a call this week — no digging, no remembering.
+
+Renewal communication log tab
+
+Tracks which touch each customer received: Email at 60 days (✓), Email at 30 days (✓), Phone call at 14 days (✓), Final notice at 7 days (✓), plus any customer response notes. No more wondering "did we call the Johnsons about their spring tune-up?" — the log has the timestamp.
+
+Warranty-claim log tab
+
+Added to the same workbook: while the tech is there for the tune-up, any failing part still under manufacturer warranty becomes a recoverable claim. Track the date, customer, equipment, part, manufacturer, warranty status, claim filed date, claim reference number, documentation submitted, and reimbursement received date and amount. This tab turns a maintenance visit that finds a covered failure from a paperwork nightmare into a revenue recovery event — covered in detail below. If your tech finds a $300 blower motor that Carrier's warranty covers, and your office forgets to file the claim within the 60-day window, you ate the $300. The log prevents that.
+
+Related:
+
+invoicing automation
+
+covers getting paid for every visit — including warranty-backed work.
+
+The off-season scheduling strategy that fills spring and fall
+
+Here's the scheduling rhythm that separates shops running at 98% renewal from the ones bleeding renewals into the "call us when you're ready" void:
+
+Off-season cadence
+
+Spring tune-ups (March-May):
+
+Book them in January. When competitors are slow and your proactive callback to an existing plan customer sounds like above-and-beyond service.
+
+Fall tune-ups (September-October):
+
+Book them in July. Same logic — you're calling when nobody else is, and you're confirming a calendar date, not asking if they want to renew.
+
+60-day advance scheduling:
+
+Operators who pre-schedule report show rates around 85%, versus roughly 45% for "we'll call you when it's time." The calendar appointment is the commitment. The tracker auto-calculates next-visit dates from the last-visit date, so you always know who's due when.
+
+No-show buffer:
+
+Schedule 5-10% more visits than you have capacity, knowing that pre-scheduled 60-day-out appointments will have some reschedules. The tracker's scheduling queue tab shows who's confirmed and who hasn't responded.
+
+Converting repair calls into maintenance plans
+
+The highest-converting moment for a maintenance plan isn't a Facebook ad or a postcard. It's the repair visit, after the AC is blowing cold air and the customer is relieved. The tech hands them a card — not a pitch, not a brochure, just the math:
+
+"Your system is running great. Our $299 annual plan covers two tune-ups, priority scheduling, and if anything fails between visits you skip the dispatch fee. No pressure — just letting you know it exists."
+
+At a 15% conversion rate — the low end of what operators report — here's how the math works for a 5-tech shop:
+
+5 techs × 8 calls/day × 250 working days = 10,000 service calls per year
+
+15% conversion = 1,500 new plan customers per year
+
+At $299-499/plan = $450,000-750,000 in new recurring revenue
+
+Cost to acquire: the price of a business card. Zero marketing spend.
+
+The tracker's conversion-tracking tab logs: which tech made the offer, what the repair was, whether the customer accepted, and the plan start date. After 90 days you know which techs convert at 25% and which haven't handed out a single card — and you can coach accordingly.
+
+The renewal email sequence that gets 85%+ re-enrollment without a single sales call
+
+Four touches, zero upsells. The goal isn't to sell them something new — it's to not lose what they already bought.
+
+4-touch renewal sequence
+
+60 days before renewal — Email:
+
+"Your ComfortGuard plan renewes on [date]. Everything stays the same — same price, same 2 tune-ups, same priority scheduling. Reply YES to lock it in." No pricing change, no new terms, just confirmation.
+
+30 days before renewal — Email:
+
+"Quick reminder — your plan renewes next month. Your spring tune-up is already on the schedule for [date]. No action needed — just confirming." The scheduled appointment is the retention anchor.
+
+14 days before renewal — Phone call:
+
+Two minutes, personable. "Just making sure everything's good with the system since the last tune-up. While I have you — your plan renewes on the 15th, everything stays the same. We good?" This call is the highest-converting single touch because it's a human voice.
+
+7 days before renewal — Final notice:
+
+"Your ComfortGuard plan auto-renews on [date] at the current rate unless we hear otherwise. Reply STOP to cancel." Low-friction, no guilt. They stay because they want to.
+
+The templates are in the spreadsheet's communication log tab, ready to copy-paste into your email client or CRM. Adjust the bracketed fields ([date], plan name, next visit date) per customer — takes 20 seconds per renewal.
+
+Related:
+
+no-show prevention
+
+covers making sure they actually show up to that scheduled tune-up.
+
+While you're there for the tune-up — the warranty claim that pays for the visit
+
+Here's a scenario that plays out hundreds of times a day in HVAC shops across the country: a tech is doing a routine maintenance visit and finds a failing blower motor. It's 4 years old. The manufacturer's warranty is 5 years, parts and labor. The tech replaces the motor, files a quick service report, and moves on. Six weeks later, Carrier denies the claim — missing a field on the report. The shop eats an $800 part and 2 hours of tech time. The maintenance visit that should have been profitable just went negative.
+
+The warranty-claim log tab in the renewal tracker prevents this. For every claim:
+
+Date of visit and customer name
+
+Equipment, make, model, serial number
+
+Part replaced and part number
+
+Manufacturer and warranty coverage window (5 years, 10 years, etc.)
+
+Warranty status: COVERED / DENIED / PENDING / EXPIRED
+
+Claim filed date
+
+Claim reference number from the manufacturer's portal
+
+Documentation submitted checklist: service report with ambient temperature at time of failure, serial number photo, proof of purchase, install date
+
+Reimbursement received date and dollar amount
+
+The 60-day filing window is the trap. HVAC manufacturers (Carrier, Trane, Lennox, Rheem) all have 30-90 day claim windows from the date the part was removed, and the documentation requirements vary by manufacturer. Missing one field — ambient temperature at failure, which sounds like trivia — is the #1 reason claims are denied. The log's checklist column ensures every claim goes out with complete documentation. For a shop replacing 2-3 warranty-covered parts a month at an average of $400 each, that's $9,600-14,400/year in recoverable parts and labor that's currently written off as "cost of doing business."
+
+The maintenance visit now has two revenue sources: the plan renewal (recurring) and the warranty recovery (one-time, from the same truck roll). The tracker shows both in the dashboard.
+
+When to move from spreadsheet to field-service CRM
+
+There's a point where the spreadsheet has done its job and it's time to hand the workload to software. Here's how to know when:
+
+Plan count
+
+Tool
+
+Cost
+
+Why
+
+1-100 plans
+
+Google Sheets tracker
+
+One person can manage this in 15-20 minutes per week. The color-coded alerts do the heavy lifting.
+
+100-300 plans
+
+Trial CRM agreement module
+
+$200-500/month
+
+The time saved on manual tracking and the prevented churn from 1-2 missed renewals/month justifies the subscription.
+
+300+ plans
+
+Full CRM with auto-renewal
+
+$300-500+/month
+
+At this scale, losing 2-3 renewals/month to administrative oversight costs more than the software. Automated email sequences and integrated scheduling become necessary.
+
+Leading CRM options (approximate 2026 list pricing)
+
+Platform
+
+Monthly cost
+
+Agreement management
+
+Best for
+
+ServiceTitan
+
+~$300-500/month
+
+Full agreement lifecycle, auto-renewal emails, integrated scheduling
+
+Shops with 10+ techs
+
+Housecall Pro
+
+~$200-400/month
+
+Agreement tracking, auto-reminders, customer portal
+
+Shops with 3-10 techs
+
+simPRO
+
+~$200-350/month
+
+Service agreement management, maintenance scheduling, asset tracking
+
+Mid-size commercial/residential shops
+
+Related:
+
+after-hours triage
+
+keeps the dispatch board clean so your techs aren't running emergency calls instead of scheduled maintenance visits.
+
+Frequently asked questions
+
+How do I track HVAC maintenance plan renewals without buying software?
+
+Use a free Google Sheets tracker with tabs for your dashboard, per-customer renewals, communication log, and warranty claims. Set up color-coded conditional formatting: yellow at 60 days out, amber at 30 days, red when past due. On Monday morning, you open one sheet and the colors tell you who needs a call or email this week. The system costs $0 and takes under an hour to personalize. We've built the exact template described in this post —
+
+reach out
+
+and we'll send you a copy.
+
+How do I stop maintenance plan renewals from slipping through the cracks?
+
+Three things, all in the same spreadsheet: (1) color-coded alerts that flag every plan at 60 and 30 days before expiration, so nothing sneaks up on you, (2) a 4-touch renewal sequence of two emails, one phone call, and one final notice — with copy-paste templates so the person doing it doesn't have to write anything from scratch, and (3) off-season scheduling — book spring tune-ups in January and fall tune-ups in July, tying renewal to a calendar commitment instead of a "call us when you're ready" hope.
+
+What's the best free renewal tracking spreadsheet for HVAC and plumbing contractors?
+
+A custom Google Sheets workbook built around your plan book. It includes a dashboard (active plans, renewals this month, quarterly revenue projection), a customer tracker with auto-highlighted renewal dates, a communication log tracking every touch you've made to each customer, a conversion tracker showing which repair calls became plans, and a warranty-claim log for recovering manufacturer reimbursements on parts replaced during tune-ups. $0, no monthly fee, no add-ons — just Google Sheets. If you'd rather have us build it for you,
+
+book a free audit
+
+and we'll customize it to your plan types and equipment mix.
+
+How do I convert one-time repair customers to annual maintenance plans?
+
+The moment is the repair visit, after the problem is fixed and the customer is relieved. The tech hands them a card: "Our $299 annual plan covers two tune-ups, priority scheduling, and if anything fails between visits you skip the dispatch fee." No pitch, no pressure, just the math. Shops using this approach report 15-25% conversion from repair call to plan. For a 5-tech shop running 8 calls/day over 250 working days, that's roughly 1,500 new plan customers per year — at $299-499 each, approximately $450,000-750,000 in new recurring revenue. The spreadsheet tracks conversion by tech so you can see who's handing out the cards and who isn't.
+
+How much is a maintenance plan customer worth over 5 years?
+
+A $400/year plan customer, with typical 3-4 year retention and 1-2 referrals over the relationship, is worth approximately $1,500-2,000 in direct plan and referral revenue — not counting the repair calls they make between tune-ups (which average $400-800 each). At scale: a 50-plan book at 85% renewal generates roughly $17,000/year in plan revenue. The same book at 98% renewal — achievable with the tracking system and 4-touch sequence — generates about $19,600/year. That $2,600 difference is revenue you already own; it's just leaking out through a forgotten calendar event.
+
+When should I use HVAC service software instead of spreadsheets for agreement tracking?
+
+Below approximately 100 plan customers, the Google Sheets tracker described in this post is sufficient — one person can manage it in 15-20 minutes per week. At 100-300 plans, trial the agreement modules in ServiceTitan (full lifecycle, auto-renewal emails), Housecall Pro (agreement tracking with customer portal), or simPRO (service agreement management with asset tracking). At 300+ plans, the CRM pays for itself: losing just 2-3 renewals per month to administrative oversight costs more than the monthly software fee. The spreadsheet is the bridge — use it until the CRM math pencils out.
+
+How do I track manufacturer warranty claims for HVAC parts replaced during maintenance visits?
+
+The tracker includes a warranty-claim log tab. For every part replaced under warranty during a maintenance visit, log: date, customer, equipment, part, manufacturer, warranty status, claim filed date, reference number, documentation checklist (service report, ambient temperature, serial number, proof of purchase), and reimbursement amount. The checklist is the key — manufacturers deny claims most often because one field on the service report is missing (ambient temperature at time of failure being the #1 culprit). The log ensures every claim goes out complete within the 60-day filing window so your shop recovers the cost of the part and, when covered, the labor. No more eating $400-800 per claim because the paperwork wasn't perfect.
+
+We build the follow-up automations that go with this tracker
+
+JobsDone Labs builds custom AI automations for home service companies — automated renewal reminders, missed-call text-back, estimate follow-up sequences, and dispatch scheduling. The spreadsheet tracks everything; the automations make sure the reminders actually go out on time, every time, without anyone in the office having to remember.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Your Customers' HVAC Is Failing and You Don't Know: A Free Equipment Lifecycle Tracking System
+
+When to Roll a Truck at 3am: An After-Hours Emergency Triage System for HVAC, Plumbing, and Electrical Contractors
+
+Spending Too Much Time on Invoicing? How Contractors Cut Paperwork from Hours to Minutes
+
+
+URL: https://www.jobsdonelabs.ai/blog/maintenance-plan-renewal-tracking-spreadsheet-free/
 
 ---
 
