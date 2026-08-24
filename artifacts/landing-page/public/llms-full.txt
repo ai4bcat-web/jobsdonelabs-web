@@ -10186,6 +10186,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Free Payer Rate Comparison Spreadsheet for Medical Practices
+
 16 Hours a Week on Prior Authorizations and You Still Can't Afford the Software — The Manual PA Workflow
 
 Cut Insurance Verification Time in Half: A Front Desk Workflow That Doesn't Cost $900/Month
@@ -13834,6 +13836,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Free Payer Rate Comparison Spreadsheet for Medical Practices
+
 Your Diabetic Patients Are Overdue for A1C Checks — Here's the Care Gap System That Catches Every One Before Your MIPS Score Tanks
 
 Cut Insurance Verification Time in Half: A Front Desk Workflow That Doesn't Cost $900/Month
@@ -13842,6 +13846,219 @@ Medical Records Requests Are Eating 8 Hours of Your Office Manager's Week — He
 
 
 URL: https://www.jobsdonelabs.ai/blog/patient-referral-loop-closure-tracking-system/
+
+---
+
+# Free Payer Rate Comparison Spreadsheet
+
+Healthcare
+
+Your Biggest Payer Pays You 22% Less for the Same Office Visit — and You'd Never Know Without This Free Rate Comparison Spreadsheet
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 24, 2026
+
+Key takeaways
+
+Most medical practices have never compared per-code reimbursement rates across payers. The gap between your highest and lowest payer on a level-3 visit can exceed $22 — silent revenue leakage of $23K-$70K/year depending on practice size. This free Google Sheets rate comparison spreadsheet makes the disparity visible for the first time. Includes per-code payer comparison dashboard, contract renewal calendar with 90-day auto-highlighting, and a data-backed negotiation script.
+
+The math your practice manager never showed you
+
+Walk through your office and ask: "Which payer reimburses us the best for a 99213?" Most practice owners can't answer. They know United "fights everything" and Aetna "is decent." They don't know the actual dollar difference.
+
+Here's the math they're missing. A 15-patient-per-day practice with 5 major payers. For a standard level-3 established patient visit (99213):
+
+Payer
+
+Rate for 99213
+
+Vs. Median
+
+Aetna
+
+$104
+
++$13 above median
+
+Humana
+
+$98
+
++$7 above median
+
+Blue Cross Blue Shield
+
+$91
+
+at median
+
+UnitedHealthcare
+
+$87
+
+−$4 below median
+
+Cigna
+
+$82
+
+−$9 below median
+
+The spread between your highest payer (Aetna, $104) and your lowest (Cigna, $82) is $22 per visit. On paper it's one office visit, one code, one E&M service. In reality it's a $22 gap you'd never notice unless you compared the contracts side by side.
+
+The annual math:
+
+15 patients/day × 5 days × 48 weeks = 3,600 visits/year. If half are level-3 visits: 1,800 × the $13 average rate gap between your bottom two payers and median =
+
+$23,400/year
+
+in invisible revenue leakage. For a 3-provider practice billing 5,400 level-3 visits/year: $70,200. That's a staff salary — gone, every year, because nobody compared the payer contracts.
+
+And this is just one code. Add level-4 visits (99214), new patient visits (99203-99204), the G2211 complexity add-on, consult codes, and your top procedure codes, and the total gap widens further. The spreadsheet below makes every one of these gaps visible for the first time.
+
+The free payer rate comparison spreadsheet
+
+The spreadsheet has five tabs, each serving a distinct part of the rate comparison workflow. You populate your own EOB data — the spreadsheet does the math.
+
+Dashboard tab — the one-page revenue reality
+
+The dashboard pulls from all other tabs to give you a single view of where your money is and where it's not. It shows: top-20 CPT codes by volume, weighted-average reimbursement rate across all payers, annual revenue projection at current rates, the revenue gap vs. median-rate targets, and a per-payer utilization percentage (what fraction of your visits each payer represents). One number stares back at you:
+
+"At current contracted rates, you're leaving $X on the table per year."
+
+Per-Payer tabs — one sheet per insurance contract
+
+Each payer gets a dedicated tab. Header section: payer name, contact name/phone/email, contract effective date, contract renewal date, fee schedule type (Medicare-based percentage, flat fee schedule, or individually negotiated), and contract notes (prior auth requirements, timely filing limit, appeals process). Then the rate grid: your top 20 CPT codes, the contracted allowed amount per code, the Medicare rate for comparison, and the payer's rate as a percentage of Medicare. The renewal date auto-highlights: green if 180+ days out, yellow at 120 days, amber at 90 days, red at 60 days.
+
+Payer Comparison tab — the grid that changes everything
+
+This is the heart of the spreadsheet. Rows = CPT codes. Columns = payers. Each cell = the allowed amount that payer reimburses for that code. Color-scale: green cells = the highest rate for that code across all your payers; red cells = the lowest. A practice owner opens this tab and sees — in 30 seconds — that Cigna is paying $82 for the exact same 99213 Humana pays $98 for. The auto-calculation at the bottom totals current annual revenue at contracted rates and projects what revenue would be if every below-median payer were negotiated to median. That's your negotiation target in dollars.
+
+Contract Renewal Calendar — the deadline you can't afford to miss
+
+Most payer contracts auto-renew with a 90-day opt-out window. If you miss the window, you're locked in for another year at the same rates — rates you now know are below market. This tab tracks: contract start date, renewal date, 90-day opt-out deadline, current rate basis, and your target rate for renegotiation. Auto-highlight rules: renewal deadline within 90 days → amber; within 60 days → red. A separate "Renegotiation Prep" section pulls per-code comparison data so you walk into the call with:
+
+"Your rate for 99213 is 15% below the regional median for practices of our size."
+
+Negotiation Prep tab — turn your spreadsheet into a proposal
+
+Select a payer and a date range, and this tab generates a formatted comparison summary ready to export as PDF. It includes: your practice volume for the top codes, the payer's current rates vs. your median rates, the annualized revenue gap, and a suggested target rate for each code. This IS your negotiation documentation — no separate proposal writing needed.
+
+The per-code lookup that replaces "I think Aetna pays pretty well"
+
+Open the Payer Comparison tab, pick any CPT code from the filter dropdown. The grid shows every payer's rate for that single code, the spread from highest to lowest, and how many units you billed last year for that code. This is the conversation starter.
+
+For the practice owner seeing their own numbers for the first time:
+
+"I billed 1,800 level-3 visits last year. Cigna paid $82 per visit. Humana paid $98. If I negotiate Cigna up to $95 — not even to Humana's rate, just to within striking distance — that's $23,400 in additional revenue this year. Same patients, same visits, same codes. Different contract rate."
+
+This isn't theory. It's your own data, your own volume, your own contract rates — organized in a grid you can understand in 60 seconds.
+
+The payer negotiation script — 3 sentences that get a rate review
+
+Most small practices avoid rate renegotiation because they don't know what to say. The fear: the payer will refuse, or worse, drop the contract. In reality, payer provider reps handle rate reviews routinely — they expect them at renewal. What they don't expect from a small practice is data. That's your advantage.
+
+The three-sentence opener (call your provider rep)
+
+"We're reviewing our contract ahead of the [date] renewal. Our internal analysis shows our reimbursement for 99213 is X% below the regional median for practices of our size."
+
+— Data-backed, not emotional. You're not complaining. You're informing.
+
+"Can you share the rate schedule you're currently offering to practices with similar volume in our region?"
+
+— Not a demand. A question. You're asking for information they have and you don't. If they decline to share rates, that's also data.
+
+"I'd like to open a formal rate review. What documentation do you need from us?"
+
+— The spreadsheet IS the documentation. Export the Payer Comparison tab as PDF and attach it. The rep now has your data, your volume, and your requested rates — in a format their contracting team can process.
+
+If the rep says rates are non-negotiable for practices under 10 providers: ask what threshold triggers negotiation eligibility. If it's 10 providers and you're at 3, ask about the carrier's independent practice association (IPA) or clinically integrated network (CIN) — joining one can give you the volume-based negotiating power of a larger group while remaining independent.
+
+If the rep says rates are set regionally and can't be adjusted: ask to speak with the regional contracting manager. Front-line reps have narrow authority; contracting managers have flexibility. The spreadsheet makes you look like the kind of practice that tracks its numbers — and payers negotiate differently with practices that track their numbers.
+
+The contract renewal calendar that earns its own salary
+
+Here's the scenario that happens in thousands of practices every year: your United contract auto-renews on January 1. The opt-out window closed on October 1. You didn't notice — you were dealing with flu season, a retiring partner, and a legacy EHR migration that took six months longer than promised. By the time you realized United was paying 20% below market, you were locked in for another 12 months. That single miss cost a 3-provider practice $42,000.
+
+The Contract Renewal Calendar tab prevents this. It's dead simple: every payer contract gets a row with the renewal date and the opt-out deadline (90 days before renewal). The spreadsheet highlights deadlines automatically. No complex triggers, no calendar integrations — just a column that turns amber when you have 90 days and red when you have 60.
+
+Every Monday morning, you open the tab for 45 seconds. If you see red, you act. If it's all green, you close it. The calendar earns its salary the first time it prevents a missed opt-out.
+
+When to move from spreadsheet to practice management analytics
+
+The spreadsheet is the bridge — it gets you from "I think Aetna pays better" to "I know exactly how much each payer reimburses per code." When you outgrow it depends on practice size and complexity:
+
+Practice Size
+
+Recommended Approach
+
+Monthly Cost
+
+1-3 providers
+
+Google Sheets rate comparison spreadsheet
+
+3-10 providers
+
+PMS analytics module (athenahealth, Kareo/Tebra, AdvancedMD, eClinicalWorks)
+
+$200–$500/month
+
+10+ providers
+
+Dedicated revenue-cycle analytics (HealthQx, VisiQuate, RCM vendor analytics)
+
+$500–$2,000/month
+
+Most PMS platforms include some level of payer-mix reporting in their base subscription. The analytics add-on modules ($200-$500/month) add per-code reimbursement comparison, denial-trend analysis by payer, and contract-modeling features. Below 3 providers, the spreadsheet covers the core need. At 10+, the analytics platforms auto-pull EOB data, model contract scenarios, and generate the negotiation reports — they earn their cost through recovered revenue alone.
+
+Keep the spreadsheet even after upgrading. It's the lightweight cross-check: when the PMS analytics say one thing and your manual comparison says another, you've found either a data-feed error or a contract nuance the algorithm missed.
+
+Frequently asked questions
+
+How do I compare reimbursement rates across different insurance payers?
+
+Start with your top 15-20 CPT codes by volume. Pull the allowed amount from your last 30 EOBs per payer per code — your practice management system or billing reports can export this data. Enter rates into a comparison grid: one row per code, one column per payer, each cell showing the allowed amount. Color-scale from green (highest) to red (lowest). Multiply the per-code gap by your annual volume for that code to get the annual revenue impact. A 3-provider practice typically finds $30K-$70K/year in invisible rate disparities.
+
+What's the best free spreadsheet to track medical practice payer rates?
+
+A purpose-built Google Sheets payer rate comparison spreadsheet with: Dashboard tab showing annual revenue at current rates vs median rates, Per-Payer tabs with fee schedules and contract dates, Payer Comparison tab with per-code color-scaled grid, Contract Renewal Calendar with 90-day auto-highlight warnings, and a Negotiation Prep tab that exports the comparison data as a PDF. This covers the operational need without the $200-$500/month cost of practice management analytics modules for practices under 10 providers.
+
+How much money does a medical practice lose by not comparing payer contracts?
+
+A 15-patient-per-day solo practice with 5 major payers typically loses $23K-$40K per year. The math: if half of 3,600 annual visits are level-3 (99213), and the spread between lowest and median payer rate is $13/visit on that code alone, that's 1,800 x $13 = $23,400. Add level-4 visits, consult codes, and procedure codes, and the gap widens. For a 3-provider practice, the annual revenue leakage from uncompared payer rates tops $70K — enough to hire a full-time biller or nurse.
+
+How do I negotiate better rates with insurance companies as a small practice?
+
+Start 90 days before contract renewal. Call your provider rep with data: "Our internal analysis shows reimbursement for 99213 is 15% below the regional median for practices of our size." Request the rate schedule for similar-volume practices. If declined, request a formal rate review and submit the comparison spreadsheet as documentation. The key difference from standard negotiation: you're citing your own data and volume, not industry averages. A practice billing 1,800 level-3 visits has real negotiating leverage.
+
+Which CPT codes should I compare first?
+
+Start with your top 10-15 codes by volume — they drive 70-80% of revenue. For most primary care practices: 99213 (level-3 established), 99214 (level-4 established), 99203-99204 (new patient visits), G2211 (complexity add-on), and your top 3 procedure codes. Run the comparison on these first — the findings on volume codes dominate the annual impact. Expand to consult codes and preventive codes in a second pass.
+
+When should I use practice management software instead of spreadsheets for payer rate comparison?
+
+Below 3 providers: a well-built Google Sheets comparison spreadsheet is sufficient and costs $0. At 3-10 providers, consider your PMS analytics module — athenahealth, Kareo/Tebra, AdvancedMD, and eClinicalWorks all include payer-mix and reimbursement analytics as add-ons ($200-$500/month). At 10+ providers, dedicated revenue-cycle analytics platforms (HealthQx, VisiQuate) become cost-justified. The spreadsheet is the bridge — use it until the analytics module pencils out, and keep it as a lightweight cross-check even after upgrading.
+
+Stop leaving money in your payer contracts
+
+You're probably losing $23K-$70K/year to uncompared payer rates — and you won't find it until you look. We help medical practices automate the revenue-cycle workflows that spreadsheets can't reach. If you're ready to turn invisible revenue leakage into line items you can see and fix, let's talk.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Medical Claims Denial Appeal Tracking Spreadsheet
+
+Patient Referral Loop-Closure Tracking System
+
+Stop Manual Data Entry Between Systems
+
+
+URL: https://www.jobsdonelabs.ai/blog/payer-contract-rate-comparison-spreadsheet-medical-practice-free/
 
 ---
 
@@ -17837,6 +18054,8 @@ Every Jobs Done Labs engagement is backed by a written guarantee: if the automat
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free Payer Rate Comparison Spreadsheet for Medical Practices
 
 How Much Does Business Process Automation Cost? Honest Price Breakdown for Small Companies
 

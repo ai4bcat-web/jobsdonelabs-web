@@ -56,6 +56,7 @@
 - [Nurse Triage Documentation to Prevent Lawsuits](https://www.jobsdonelabs.ai/blog/nurse-phone-triage-documentation-system/): Your nurses document phone triage with four characters on a sticky note. Free system that makes every call defensible in a deposition — $0, no EHR add-on.
 - [Patient Care Gap Recall Spreadsheet](https://www.jobsdonelabs.ai/blog/patient-care-gap-recall-tracking-system/): Your diabetic patients are overdue for A1C, quality scores are tanking, and the manual audit takes 12 days a quarter. Free care gap tracking template.
 - [Stop Losing Referred Patients: Free Tracker](https://www.jobsdonelabs.ai/blog/patient-referral-loop-closure-tracking-system/): Up to 40% of referrals never complete, costing a small practice $62K-$124K/year. Free tracking spreadsheet, 3-touch protocol, and fax-failure fix.
+- [Free Payer Rate Comparison Spreadsheet](https://www.jobsdonelabs.ai/blog/payer-contract-rate-comparison-spreadsheet-medical-practice-free/): Your payers vary by $22 for the same visit code — invisible until you compare. Free spreadsheet with per-code lookup and renewal calendar.
 - [Refill Chaos Costs Your Practice $41,750/Year](https://www.jobsdonelabs.ai/blog/prescription-refill-request-tracking-system/): Your practice loses $41K+/year to broken refill chaos. This free 5-tab tracking system stops patients from running out of medication with no EHR add-on needed.
 
 ## Home Services
