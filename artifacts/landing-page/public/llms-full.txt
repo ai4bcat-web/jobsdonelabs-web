@@ -4841,6 +4841,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Stop Losing Track of Estimates: A Free Job Tracking Spreadsheet for Small Contractors
+
 Losing Leads Because You Can't Respond Fast Enough? Here's How Contractors Fix It
 
 You Spent 15 Hours on Estimates This Week and Landed 2 Jobs — Here's the Real Fix
@@ -5510,6 +5512,74 @@ What one contractor told us:
 
 "I started tracking estimates in a spreadsheet three months ago. First month I recovered a $7,200 bathroom remodel I'd completely forgotten about. The customer said 'I was waiting for you to call back.' That one job paid for the 45 minutes it took to build the spreadsheet — 160 times over."
 
+One follow-up isn't enough. Here's the 3-touch cadence that closes 45% instead of 25%.
+
+The Monday ritual is your floor, not your ceiling. A single follow-up recovers the easy wins — the customer who was quietly waiting for you to call back. But most lost estimates aren't waiting. They're
+
+deciding
+
+, and deciding takes time. One check-in isn't a system; it's a coin flip.
+
+Here's the conversion math that changes everything. Contractors who send an estimate and follow up
+
+zero times
+
+close about 25% of the people they quote. Contractors who run a three-touch cadence — a light check-in on day 3, a value-add on day 7, and a close-out on day 14 — close
+
+40-50%
+
+of the same pool. A 20-point lift on 12 estimates a month at a $4,500 average job is
+
+$10,800 a month
+
+in additional closed revenue. The cost? Three two-minute texts per estimate.
+
+The cadence, step by step:
+
+Day 0 — set the expectation (when you send the estimate).
+
+"I'll follow up Wednesday if I don't hear from you." No pressure, just a heads-up. Now the follow-up isn't an interruption — it's something you promised.
+
+Day 3 — the checking-in text.
+
+"Hey, just checking if you had any questions on that deck estimate. Happy to walk through anything." Two sentences, personable, zero hard sell. This one touch recovers most of the easy wins.
+
+Day 7 — the value-add.
+
+Send a before/after photo or a case study from a similar project. Give first, ask later. This is the touch that separates you from the contractor who just texted "so, you in?"
+
+Day 14 — the close-out.
+
+"I'm closing this estimate out Friday. Here's a link to grab 10 minutes if you want to go over it." Urgency without pressure. Most of the 40-50% closes happen on this touch — because now the customer has seen you show up three times, and showing up is rare.
+
+The 3 texts, ready to copy and send
+
+Day 3:
+
+"Hey [name], just checking if you had any questions on the [project] estimate I sent. Happy to walk through anything over the phone."
+
+Day 7:
+
+"[Name], here's a before/after from a [similar project] we just wrapped. Thought it might help you picture [the result]."
+
+Day 14:
+
+"[Name], I'm closing this estimate out Friday. If you'd like 10 minutes to go over it, here's my calendar: [link]. If not, no worries — you know where to find me."
+
+Add four columns to Tab 1
+
+so the cadence runs itself: Follow-Up 1 Date + Method, Follow-Up 2 Date + Method, Final Follow-Up Date, and Win/Loss Outcome. The outcome column is the one that matters most — it auto-calculates your follow-up conversion rate, so you can watch 25% become 45% in real time instead of guessing.
+
+Why most contractors only follow up once:
+
+they treat the follow-up as a chore to survive, not a sequence to run — and they're afraid of being annoying. But a customer who asked you to quote them isn't annoyed by a follow-up; they're annoyed by being ghosted by three contractors who promised to call. The three-touch cadence isn't pestering. It's the difference between "the guy who quoted me" and "the guy who actually wanted the job." If you're worried you're burning follow-ups on tire-kickers, run them through
+
+the tire-kicker filter
+
+first. And if your real problem is that leads go cold before you ever follow up, read our guide to
+
+responding to leads fast enough to win
+
 When a spreadsheet isn't enough
 
 Let's be honest about where this system breaks. A spreadsheet works beautifully for a solo operator or a small crew doing 10–20 estimates a month. But as you grow, friction appears:
@@ -5562,6 +5632,18 @@ How do I get my crew to use the spreadsheet?
 
 You don't — and that's by design. The spreadsheet is for the owner or office manager. The crew doesn't need to see estimates, follow-up dates, or invoice status. They need to know where to show up and what to do — that's a separate daily dispatch sheet (a printed one-pager from Tab 2 with today's jobs, addresses, and notes). Trying to get field crews to update a spreadsheet in real time is a recipe for frustration, for them and for you. The spreadsheet is your command center. The crew gets paper dispatches and texts.
 
+How do I follow up on an estimate without being annoying?
+
+Lead with help, not a sales pitch. A follow-up that asks a question — "any questions on that deck estimate?" — is welcome; one that just says "so, you in?" feels like pressure. Three rules make it comfortable. First, set the expectation at day 0: tell them you'll follow up, so when it lands it's a promise kept, not an interruption. Second, give before you ask — the day-7 touch should be a before/after photo or case study, not another "just checking in." Third, cap it at three touches over two weeks, then let go gracefully. Customers who asked you to quote them aren't annoyed by a follow-up; they're annoyed by being ghosted by contractors who promised to call and never did. The annoying thing isn't the follow-up — it's the hard sell.
+
+How many times should I follow up on a quote before giving up?
+
+Three touches over two weeks, then stop: day 3 (the checking-in text), day 7 (the value-add), day 14 (the close-out). That's the sweet spot — enough touches to move the decision, few enough that it never feels like pestering. Contractor-forum and business-coach data is consistent on the curve: win rates climb from roughly 25% with zero follow-ups to 40-50% with three, then flatten. A fourth or fifth touch adds almost nothing and starts to annoy. After the day-14 close-out, mark the estimate lost in your spreadsheet — and if it's the right kind of lead, drop them into a 60-day nurture (a quarterly check-in) instead of continuing to chase.
+
+What's the best estimate follow-up text template for contractors?
+
+Keep it to two sentences, personable, and specific to their project. The best-performing pattern we've seen is the day-3 check-in: "Hey [name], just checking if you had any questions on the [project] estimate I sent. Happy to walk through anything." It works because it asks a question instead of demanding a decision, and it references their actual job rather than a generic "checking in." For the day-7 touch, send a before/after photo or a case study from a similar project — give first, ask later. For day 14, add gentle urgency: "I'm closing this estimate out Friday. If you'd like 10 minutes to go over it, here's my calendar." The full three-text sequence, ready to copy, is in the cadence section above.
+
 Want this built into an automated system — so the spreadsheet does the follow-up for you?
 
 The template handles organization. But the real money is in automation: auto-texts when estimates are 5 days old, auto-emails with seasonal promotions at day 14, an automated dashboard that shows you revenue recovery in real time. That's what Jobs Done Labs builds during a free audit — we map your exact estimate-to-close workflow, find the three biggest revenue leaks, and build the automation that plugs them. Our engagements carry a $30K-recovered-in-90-days guarantee: if documented recovery doesn't reach $30K, you pay nothing.
@@ -5573,6 +5655,8 @@ Related reading
 If you found this useful, you'll want these too:
 
 You Paid a Tech to Sit in Traffic for an Appointment Nobody Kept. Here's the Free No-Show Prevention System That Cuts Missed Appointments in Half.
+
+You Drove 240 Miles to Give 7 Free Estimates Last Week — And 5 of Those People Were Never Going to Buy
 
 You're Spending 12 Hours on Every Estimate and You Haven't Noticed It's Killing Your Close Rate
 
