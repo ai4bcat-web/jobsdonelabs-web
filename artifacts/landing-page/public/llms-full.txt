@@ -20618,6 +20618,341 @@ URL: https://www.jobsdonelabs.ai/blog/truck-inventory-second-trip-prevention/
 
 ---
 
+# Who Owes Your Fleet Money? Free Carrier AR Tracker
+
+Logistics & Trucking
+
+You Finished the Load 47 Days Ago and the Broker Still Hasn't Paid. Here's the Free Carrier AR Tracker That Tells You Who Owes What — Before You Take the Next Load From Them.
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 27, 2026
+
+Key takeaways
+
+A 6-truck fleet working 14 brokers generates 200-300 invoices a month — and the factoring company only tracks what THEY funded, not short-pays under $200, unauthorized deductions, slow-pay patterns, or brokers who "forget" to process rate confirmations.
+
+The free carrier AR spreadsheet has three parts: a per-broker tab (aging, days-to-pay, open disputes), a per-load tab (rate-con vs. paid vs. short-pay), and a dashboard that auto-highlights invoices YELLOW at net+7 and RED at net+30.
+
+The reliability score auto-ranks every broker from 12 months of payment data — one RED broker and you demand quick-pay or COD before taking their next load.
+
+The 5-minute short-pay dispute process catches a $175 unauthorized deduction in week one instead of finding it 90 days later, when the broker refuses to pay.
+
+The Hidden Cost of "Trust Me" Broker Payment Tracking
+
+Here's a story that replays in every small fleet. You run 6 trucks and work with 14 brokers. A factoring company sends you a statement every couple of weeks, and you assume it's the full picture. Then one quarter you find a $3,400 load TQL short-paid — they deducted a $175 lumper fee you never approved — and by the time you notice, it's 90 days later and they refuse to reverse it.
+
+The problem isn't that the factoring company is lying. It's that the factor only tracks
+
+the invoices they funded
+
+. What falls through the cracks is everything else:
+
+Short-pays under $200.
+
+A $175 lumper deduction here, a $90 fuel-surcharge haircut there — individually invisible, collectively real money, and below the factor's attention threshold.
+
+Unauthorized deductions.
+
+Lumper fees, detention clawbacks, and "processing fees" that never appeared on the rate confirmation you signed.
+
+Slow-pay patterns.
+
+Which brokers consistently pay at day 45 instead of day 30, and which ones pay at day 75.
+
+Brokers who "forget" to process rate confirmations.
+
+The load was delivered, the POD is clean, but the rate con was never entered on their side — and nobody on either end notices for six weeks.
+
+The fix is a carrier-side accounts receivable tracker:
+
+who owes your trucking company money, by broker, with short-pay detection
+
+— independent of whatever your factor happens to fund. This is the one gap in a trucking back office that's otherwise well-covered. We've written systems for
+
+unpaid detention
+
+fuel card abuse
+
+, and the
+
+shipper side of freight bill audit
+
+— but nothing tracks the money coming
+
+from brokers. Until now.
+
+The Free Carrier Accounts Receivable Spreadsheet
+
+The tracker is a free Google Sheets workbook with three tabs. It's built for the reality of a small fleet — not the chart-of-accounts abstraction of a general ledger, and not the 2-week lag of a factoring statement.
+
+Tab 1 — Per-broker AR
+
+Broker & contact
+
+— name, AP contact, MC number, and payment terms.
+
+Total outstanding
+
+— every open invoice summed, so you know exactly how much each broker owes right now.
+
+Oldest unpaid invoice
+
+— the single number that tells you whether this is a normal lag or a problem.
+
+Avg days-to-pay (12-month)
+
+— their actual behavior, not their stated terms. A broker whose terms say net-30 but pays in 48 days gets flagged.
+
+Open short-pay disputes
+
+— a running list with the amount in question and the status.
+
+Reliability rating
+
+— the auto-calculated score (see below).
+
+Tab 2 — Per-load log
+
+Load number, broker, rate-con amount, invoice number.
+
+Dates
+
+— delivered, invoiced, due, paid.
+
+Amount paid vs. amount owed
+
+— the difference is your short-pay.
+
+Factoring company & dispute status
+
+— so you can reconcile against the factor's statement when the numbers drift apart.
+
+Tab 3 — Dashboard
+
+Total AR
+
+and AR by broker.
+
+Aging buckets
+
+— current, 30, 60, 90+ days.
+
+Weekly cash-in projection
+
+— what's actually due to land this week, so you can plan fuel, payroll, and truck payments.
+
+Brokers ranked by reliability
+
+— the list that tells you who to book next and who to demand quick-pay from.
+
+Auto-highlight
+
+— an invoice turns YELLOW at net+7 (courtesy check-in) and RED at net+30 (formal demand).
+
+The design rule is the same one behind our
+
+load confirmation filing system
+
+: the rate confirmation is the source document. Every row on the per-load tab should be traceable back to a signed rate con, because when a broker short-pays, the rate con plus the POD is the entire dispute.
+
+The "Before You Take the Next Load" Broker Reliability Score
+
+This is the part that changes behavior, not just bookkeeping. The score is auto-calculated from three inputs, weighted by recency:
+
+Input
+
+What It Measures
+
+Why It Matters
+
+Days-to-pay
+
+Average time from invoice to payment over 12 months.
+
+Slow payment is free financing for them and a cash squeeze for you.
+
+Short-pay frequency
+
+How often the amount paid is less than the rate-con amount.
+
+Short-payers don't change; they just get better at hiding it.
+
+Dispute resolution
+
+How quickly and fairly they resolve a flagged short-pay.
+
+A broker that fixes a $175 error in a week is worth keeping. One that stonewalls is a liability.
+
+A broker that lands in the RED — slow pay, frequent short-pays, hostile disputes — triggers a rule:
+
+quick-pay or COD before the next load.
+
+You don't fire them on emotion; you re-term them on data. This single feature prevents the majority of bad-debt loads before they're ever booked, because the worst brokers reveal themselves in 90 days of payment history.
+
+The 5-Minute Short-Pay Dispute Process
+
+Short-pays are recoverable — but only if you catch them fast. The window matters because a broker that short-pays you $175 and gets a polite email on day three will usually just cut the check. The same $175 on day ninety is a refusal, because by then the load is closed on their side and the person who short-paid it has moved on.
+
+The process, start to finish
+
+Day 1 — spot it.
+
+The per-load tab flags the short-pay the week it happens. Mark it "open dispute."
+
+Day 3 — follow up.
+
+A short email to the broker's AP contact: rate con, POD, and the exact dollar amount of the short-pay. No anger, just the documents.
+
+Day 7 — formal dispute.
+
+If there's no response, escalate with the rate con and POD attached and a specific figure owed, cc'ing the factoring company if one is involved.
+
+The $175 lumper deduction in the opening story is the test case: caught in week one, it's an easy reversal. Caught at day ninety, it's gone. Your tracker's job is to make "week one" the default, not the exception.
+
+When to Fire a Broker (With Data, Not Emotion)
+
+Every fleet owner has a broker they
+
+feel
+
+is slow to pay. The reliability score turns that feeling into a 12-month report. Once a quarter, sort the per-broker tab by score and look at the bottom three.
+
+The math that makes firing worth it
+
+Shifting average days-to-pay from 52 to 34 across a 6-truck fleet accelerates $12,000-$18,000 of cash flow — money that's no longer sitting in someone else's bank account for an extra three weeks. Firing or re-terming your bottom three brokers, and demanding quick-pay from the borderline ones, is a cash-flow decision, not a grudge.
+
+The conversation is simple when you have the data: "Over the last 12 months you've averaged 54 days to pay and short-paid on 9 loads. We'll keep hauling for you, but going forward it's quick-pay or COD." Some brokers fix it on the spot. The ones that argue are the ones you're better off without.
+
+When to Graduate to a TMS
+
+The spreadsheet has a ceiling, and it's worth being honest about it:
+
+Fleet size
+
+Right tool for AR
+
+Why
+
+Under 10 trucks
+
+Free spreadsheet
+
+Manual entry is manageable and the flexibility beats an under-used TMS.
+
+10-25 trucks
+
+Entry TMS (Rose Rocket, ITS Dispatch, AscendTMS, Axon)
+
+Hundreds of invoices a month make manual entry error-prone; a factoring or AR module pays for itself.
+
+25+ trucks
+
+Full TMS
+
+Manual reconciliation simply doesn't scale; the AR module is table stakes.
+
+The deciding signal is time, not a round truck count: when reconciliation eats 3+ hours a week and errors start creeping in, upgrade. Until then, the spreadsheet isn't a stopgap — it's the right tool.
+
+Carrier AR Is the Last Piece of the "Automate the Back Office" Story
+
+This tracker doesn't live alone. It's the collections half of a four-part back office we've mapped for small carriers:
+
+Dispatch & paperwork
+
+— covered in our
+
+dispatch and paperwork automation guide
+
+Driver settlement
+
+— the money going
+
+out
+
+to your drivers, in our
+
+driver pay reconciliation system
+
+Expense audit
+
+— fuel cards and freight bills, in our
+
+fuel card audit
+
+and
+
+carrier overcharge audit
+
+Collections
+
+— the money coming
+
+from brokers. This guide.
+
+Every one of these is a free spreadsheet you can run manually today — and each one is also something we automate, with the guarantee below.
+
+Frequently asked questions
+
+How do trucking companies track broker payments?
+
+Most small fleets rely on the factoring company's statement, which is the wrong place to look: the factor only tracks the invoices THEY funded, and their statement is typically two weeks behind. A proper carrier AR tracker is built the other way around — one tab per broker showing total outstanding, the oldest unpaid invoice, average days-to-pay over 12 months, and open short-pay disputes; plus a per-load tab with the rate-confirmation amount, invoiced date, amount paid, and any short-pay. The spreadsheet highlights an invoice YELLOW at net+7 days and RED at net+30, so you follow up before a 45-day term quietly becomes 75.
+
+What's the best free accounts receivable spreadsheet for small trucking fleets?
+
+A free Google Sheets workbook with two tabs. The per-broker tab lists every broker with their contact, MC number, payment terms, total outstanding, oldest unpaid invoice, 12-month average days-to-pay, open short-pay disputes, and a reliability score. The per-load tab is one row per load: load number, broker, rate-confirmation amount, invoice number, dates, amount paid, short-pay amount, factoring company, and dispute status. A dashboard tab sums total AR, breaks it down by broker, buckets it by age, and projects weekly cash-in. Conditional formatting flags past-due invoices so nothing falls through the cracks. It handles fleets up to roughly 15-20 trucks before a TMS makes more sense.
+
+How do I dispute a freight broker short-pay?
+
+Dispute it fast and with documents. The 5-minute process: Day 1, spot the short-pay in your AR tracker the week it happens and flag it. Day 3, send a short follow-up email to the broker's accounts-payable contact with the rate confirmation, the POD, and the exact amount of the short-pay. Day 7, if there's no resolution, send a formal dispute with the rate-con and POD attached and a specific dollar figure owed. The key is catching it in week one — a $175 lumper deduction you never approved is recoverable on day three and usually refused on day ninety.
+
+How long should a trucking company wait for broker payment before following up?
+
+Don't wait at all past the agreed term. Most broker agreements are net-30 to net-45, so your tracker should flag an invoice YELLOW at net+7 (a courtesy check-in) and RED at net+30 (a formal demand). A single polite follow-up at net+7 recovers a surprising share of "forgotten" invoices, and it's far cheaper than discovering at day 90 that the broker never processed the rate confirmation. The rule of thumb: if payment is more than a week past the agreed term, you should already have an email thread open.
+
+Which freight brokers pay fastest?
+
+That's a question your own data should answer, not a public list — payment speed varies by broker, by lane, and over time. That's exactly why the reliability score in the AR tracker matters: it calculates each broker's score from 12 months of days-to-pay, short-pay frequency, and dispute resolution, then ranks them. A broker that averages 52 days and short-pays often gets a RED score, and you demand quick-pay or COD before taking their next load. A broker that pays in 25 days without disputes gets a GREEN score and first call on your trucks.
+
+When should a trucking company use TMS software for AR instead of spreadsheets?
+
+Below roughly 10 trucks, a free spreadsheet is the right tool and often more flexible than a TMS you're not fully using. Between 10 and 25 trucks, an entry-level TMS (Rose Rocket, ITS Dispatch, AscendTMS, Axon) with a factoring or AR module starts to pay for itself because manual entry across hundreds of invoices a month produces its own errors. Above 25 trucks, a full TMS is close to mandatory. The deciding signal is time, not truck count: when reconciliation takes 3+ hours a week and errors are creeping in, it's time to upgrade.
+
+Related posts
+
+Logistics
+
+Stop Losing $8,000/Year to Settlement Errors: A Free Driver Pay Reconciliation Template for Small Fleets
+
+Logistics
+
+You Give Every Driver a Fuel Card and Just Trust They're Not Filling Up Their Personal Truck — Here's the $25K Audit System
+
+Logistics
+
+Carriers Overcharged Your 12-Truck Fleet $12,000 Last Year and You Paid Every Dime — The 5-Minute Audit
+
+What if every broker invoice reconciled itself — rate con, POD, and payment — automatically?
+
+We build the automated version of this system for small fleets: broker AR tracking, short-pay detection, and a weekly aging report that tells your office exactly which invoices to chase. Backed by our $30K-in-90-days guarantee.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Stop Losing $8,000/Year to Settlement Errors: A Free Driver Pay Reconciliation Template for Small Fleets
+
+You Give Every Driver a Fuel Card and Just Trust They're Not Filling Up Their Personal Truck — Here's the $25K Audit System
+
+Carriers Overcharged Your 12-Truck Fleet $12,000 Last Year and You Paid Every Dime — The 5-Minute Audit
+
+
+URL: https://www.jobsdonelabs.ai/blog/trucking-broker-ar-tracking-spreadsheet-free/
+
+---
+
 # You're Losing $200,000 a Year in Unpaid Detention
 
 Logistics & Trucking
@@ -22281,6 +22616,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Finished the Load 47 Days Ago and the Broker Still Hasn't Paid — Here's the Free Carrier AR Tracker
+
 You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It
 
 You Give Every Driver a Fuel Card and Just Trust They're Not Filling Up Their Personal Truck — Here's the $25K Audit System
@@ -22758,6 +23095,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Finished the Load 47 Days Ago and the Broker Still Hasn't Paid — Here's the Free Carrier AR Tracker
+
 Stop Losing $8,000/Year to Settlement Errors: A Free Driver Pay Reconciliation Template for Small Fleets
 
 How to Automate Dispatch and Paperwork for a Trucking Company
@@ -22964,6 +23303,8 @@ Yes — and you should start without buying anything. Every fuel card provider (
 Related reading
 
 If you found this useful, you'll want these too:
+
+You Finished the Load 47 Days Ago and the Broker Still Hasn't Paid — Here's the Free Carrier AR Tracker
 
 Stop Losing $8,000/Year to Settlement Errors: A Free Driver Pay Reconciliation Template for Small Fleets
 
