@@ -7895,6 +7895,8 @@ Missed One Calibration Date? The Free ISO 9001 Calibration Tracking System That 
 
 Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufacturers
 
+Three of Your 47 Suppliers Cause 80% of Your Line Stoppages — Free Supplier Quality Scorecard
+
 Stop guessing what's eating your production capacity
 
 Jobs Done Labs builds custom downtime tracking and production visibility systems for small manufacturers — Google Sheets dashboards, automated OEE reporting, and CMMS integration that works at your scale. Free audit: we'll map your current downtime tracking (or lack of it), show you the 2–3 fixes with the highest ROI, and estimate how much capacity you're leaving on the table. No software pitch. Backed by the $30K-in-90-days guarantee: if we don't find at least $30K in recoverable production capacity, you pay nothing.
@@ -9557,6 +9559,8 @@ Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufactu
 Suppliers Are Late Again and It's Costing $1,000/Week — How to Track Supplier Delivery Without Software
 
 Your Shop Has 12 Machines But Only One Is The Bottleneck
+
+Three of Your 47 Suppliers Cause 80% of Your Line Stoppages — Free Supplier Quality Scorecard
 
 
 URL: https://www.jobsdonelabs.ai/blog/manufacturing-quality-metrics-defect-rate-fpy-tracker/
@@ -20153,6 +20157,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Three of Your 47 Suppliers Cause 80% of Your Line Stoppages — Free Supplier Quality Scorecard
+
 Your Shop Floor Runs at 97% Yield — Free Quality Metrics Tracker (Defect Rate & FPY)
 
 Your Shop Has 12 Machines But Only One Is The Bottleneck — Free Constraint Analysis Spreadsheet
@@ -20175,6 +20181,299 @@ Book your free audit →
 
 
 URL: https://www.jobsdonelabs.ai/blog/supplier-delivery-tracking-manufacturing-spreadsheet/
+
+---
+
+# Which Suppliers Ship Bad Parts? Free Quality Tracker
+
+Manufacturing & Industrial
+
+Three of Your 47 Suppliers Cause 80% of Your Line Stoppages — But You Can't Prove It. Here's the Free Spreadsheet That Shows Exactly Which Vendors Are Costing You $1,200 an Hour.
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 28, 2026
+
+Key takeaways
+
+You track whether suppliers deliver on time — but not whether the parts are any good. A free four-tab supplier quality spreadsheet (weighted score, defect log, CAR tracker) tells you which vendors are actually costing you line-down dollars, gets suppliers to respond to corrective actions, and gives you the data to fire the ones that won't improve.
+
+Mike runs a 40-person machine shop. He has 47 active suppliers — raw material, fasteners, plating, heat treat. His delivery tracker tells him which ones show up late. But delivery is only half the story. Three of those suppliers ship bad parts, and Mike has no systematic way to prove which three.
+
+Here's how it plays out, every month: a bad batch of fasteners reaches the line, production stops for two hours while purchasing scrambles, the production manager screams at purchasing, purchasing calls the supplier, the supplier sends replacements and a credit, and everyone forgets about it — until the same supplier ships another bad batch next month. Nobody is tracking that three suppliers account for 80% of the stoppages, because nobody is tracking supplier
+
+quality
+
+at all.
+
+Mike looked at the software. SAP Ariba. vendorscoreit. signalx. They're built for enterprises with dedicated supplier-quality departments — not for a small manufacturer whose "quality department" is the production manager with a clipboard. Mike doesn't need a procurement platform. He needs to know which suppliers ship bad parts, and what it's costing him.
+
+The problem isn't that you don't have software.
+
+It's that your supplier quality lives in tribal memory — "don't order fasteners from them, they're always out of spec." When the person holding that memory is out, the bad parts flow through unchecked. This guide shows you how to replace that memory with a spreadsheet system you can build this afternoon, for $0.
+
+What supplier quality failures actually cost
+
+Most shops only count the visible cost: the credit the supplier issues for the bad parts. That's the smallest number in the picture. The real cost of a supplier quality failure has four parts, and you're eating all of them:
+
+Line-down labor:
+
+Idle operators and machine time at full shop rate while production is stopped. At $800–1,500/hour for a stopped line, a single two-hour stoppage is $1,600–3,000.
+
+Schedule recovery:
+
+The overtime, rework, and expedited replacement parts needed to get the delayed job back on schedule.
+
+Scrap and rework:
+
+The parts that got machined before the defect was caught, now worthless or needing rework.
+
+Your customer's late penalty:
+
+The job that shipped late because the line was down — and the customer trust that went with it.
+
+Failure scenario
+
+Events per year
+
+Cost per event
+
+Annual cost
+
+1 bad supplier, occasional
+
+1–2
+
+$1,500–3,000
+
+$1,500–6,000
+
+3 bad suppliers (the typical shop)
+
+2–3 each
+
+$1,500–3,000
+
+$9,000–27,000
+
+Unmanaged, no tracking at all
+
+unknown
+
+unmeasured
+
+$21,600+ (typical)
+
+The numbers are illustrative, but the pattern is universal: three bad suppliers × 2–3 stoppages each × $1,200/hour × ~2 hours ≈ $21,600/year — and you absorb it silently because you can't prove which vendor caused which stoppage. A quality scorecard catches this in quarter one.
+
+The free supplier quality tracking spreadsheet
+
+This system uses four tabs — built in Google Sheets or Excel — to turn supplier quality from tribal memory into something visible and impossible to argue with. Here's what each tab does:
+
+Tab 1 — Supplier Directory
+
+The master list of every supplier you buy from. Columns: Supplier Name, Contact Name, Phone/Email, Lead Time, Category (raw material, hardware, plating, heat treat, packaging), and a Quality Notes free-text field ("aluminum had burr issues in Q2"). This is the reference sheet — build it once, update it quarterly.
+
+Tab 2 — Quality Log
+
+The workhorse. Every received shipment gets a row. Columns: Date, PO#, Supplier, Part, Quantity Received, Quantity Rejected, Defect Rate %, On-Time (yes/no), Line-Down Events (count), Downtime Hours, Disposition (accept / reject / sort / scrap). This is where the raw data lives — every rejected batch and every stoppage gets logged the day it happens, before it's forgotten.
+
+Tab 3 — Supplier Scorecard
+
+The accountability tab. One row per supplier with a weighted quality score (0–100) computed from four factors:
+
+Factor
+
+Weight
+
+What it measures
+
+Defect rate
+
+40%
+
+Rejected ÷ received, per supplier
+
+On-time delivery
+
+30%
+
+% of shipments arriving on the promised date
+
+CAR responsiveness
+
+20%
+
+Corrective actions requested vs. completed
+
+Line-down events
+
+10%
+
+How many times this supplier stopped your line
+
+Add a tier column (A = 85+, B = 70–84, C = below 70) and use conditional formatting so C-tier rows turn red automatically. When you open the sheet, the vendors costing you money are already highlighted.
+
+Tab 4 — CAR Log
+
+Corrective action requests. Columns: Supplier, Date Opened, Issue Description, Root Cause (their answer), Corrective Action, Date Completed, Follow-Up Needed. This is your paper trail — the record that proves you told the supplier, gave them a chance to fix it, and documented whether they did.
+
+The SCAR that actually gets a response
+
+Most corrective action requests go nowhere because they're vague. "Your parts are bad, fix it" gets ignored — it's a complaint, not a request. The SCAR (Supplier Corrective Action Request) that gets a response is specific, quantified, and names the downstream consequence:
+
+Subject: SCAR #12 — Wrong thread pitch on PO#2381, 340 pieces
+
+Supplier: [Name]
+
+Part: M8 x 1.25 hex bolts
+
+Quantity affected: 340 pieces
+
+Nonconformance: 340 pieces received with M8 x 1.0 thread pitch instead of the ordered M8 x 1.25. Discovered at receiving inspection on [date].
+
+Impact: 2.3 hours of line downtime, $2,760 in idle labor and schedule recovery, and a delayed shipment to our customer.
+
+Request: Root-cause analysis and corrective action plan within 10 business days, including the inspection step that would have caught the pitch mismatch before shipment.
+
+If we do not receive a corrective action plan by [date], we will begin qualifying an alternate source for this part.
+
+The difference between this and "bad parts" is specificity: the exact nonconformance, the exact quantity, the measured cost, and a consequence. Suppliers respond to quantified requests because they can't argue with the number — and because "we'll begin qualifying an alternate source" is a real threat.
+
+The quarterly supplier review in 30 minutes
+
+Once a quarter, sort the Scorecard by quality score and run this meeting. The spreadsheet
+
+the agenda:
+
+Invite the bottom three.
+
+Sort by score, invite the three lowest-scoring suppliers to a 15-minute call. Don't invite 20 suppliers to a two-hour meeting nobody wants to attend.
+
+Lead with their score.
+
+"Your quality score this quarter was 62. Defect rate 4.8%, two line-down events, and one CAR we never heard back on." The data starts the conversation.
+
+Give A-tier more volume.
+
+The suppliers scoring 90+ should get a bigger share of your business. Tell them why: "Your defect rate is 0.3% and you've never stopped our line. We're moving more volume to you."
+
+Set the next quarter's bar.
+
+For every B- and C-tier supplier, agree on a specific target: defect rate under 2%, zero line-downs, or a CAR response within 10 days.
+
+Thirty minutes, once a quarter. That's the entire maintenance cost for a system that stops $21,600/year in preventable line-downs.
+
+When to fire a supplier
+
+The scorecard gives you the criteria, so the decision is factual instead of emotional. Fire a supplier when any two of these are true:
+
+Quality score below 70 for two consecutive quarters.
+
+One bad quarter is an anomaly; two is a pattern.
+
+Two or more line-down events in a single quarter.
+
+This supplier is actively stopping your production, not just delivering marginal parts.
+
+Unresponsive to two or more CARs.
+
+The defect rate matters less than whether they fix it. A supplier who ignores your corrective action requests will never improve.
+
+Before you fire them, always qualify a second source with a trial order — otherwise you're swapping a bad supplier for an unproven one, or worse, no supplier at all. The Supplier Directory tab should already list backup candidates. When you've given a supplier two quarters to improve and they haven't, firing them isn't a rash decision — it's following the data.
+
+And for the supplier that
+
+does
+
+perform — 99% on-time, near-zero defects, responds to every CAR within a day — the scorecard is your retention tool. Send them their score once a year: "0.3% defect rate, zero line-downs in 2026. We notice, we appreciate it, and here's more volume."
+
+Beat the enterprise tools with depth, not budget
+
+You don't need vendorscoreit or signalx for this. Those tools are built for procurement departments managing hundreds of suppliers across multiple sites — the "small manufacturer with 47 suppliers and a production manager doing double duty" problem is exactly where a spreadsheet wins. The enterprise tools do the same math with a prettier dashboard and a $500/month price tag. Your competitive advantage is that you can actually
+
+run
+
+a 30-minute quarterly review — something a 10,000-part enterprise can't do.
+
+The spreadsheet isn't the point — the review is.
+
+A scorecard nobody opens once a quarter is just another file. The system only works because the weighted score, the red highlighting, and the CAR log make the 30-minute review so easy there's no excuse to skip it.
+
+Do this Monday: build the system in 2 hours
+
+6 steps to a working supplier quality scorecard by Monday afternoon
+
+Create the four tabs.
+
+New Google Sheet: Supplier Directory, Quality Log, Scorecard, CAR Log. Use the column layouts above.
+
+Populate the Supplier Directory.
+
+List every active supplier — name, contact, lead time, category. Thirty minutes of data entry you do once.
+
+Enter the last 90 days of quality data.
+
+Pull rejected-material records, receiving logs, and any line-down notes. Even partial history beats no history.
+
+Set up the weighted score formula.
+
+Defect rate × 40% + on-time × 30% + CAR response × 20% + line-downs × 10%. Add conditional formatting so C-tier rows turn red.
+
+Write one SCAR.
+
+Pick the supplier with the worst defect rate and send a specific, quantified corrective action request this week. Use the template above.
+
+Schedule the quarterly review.
+
+Recurring calendar event, 30 minutes, sort by score, invite the bottom three.
+
+Total time to build: 2 hours. Total maintenance: 30 minutes per quarter. ROI: $21,600/year in preventable line-downs, starting the first time you catch a bad batch before it stops production.
+
+Frequently asked questions
+
+How do I track supplier quality without expensive procurement software?
+
+Use a four-tab spreadsheet system: a Supplier Directory, a Quality Log, a Scorecard, and a CAR Log. For a manufacturer with under 50 active suppliers and one person managing purchasing, a spreadsheet is the correct tool — procurement platforms like SAP Ariba or SourceDay are built for dedicated purchasing departments and start at $200–400/month.
+
+How do I score and rank suppliers for a small manufacturing business?
+
+Score each supplier on a weighted formula: defect rate (40%), on-time delivery (30%), corrective-action responsiveness (20%), and line-down events (10%). Multiply each metric by its weight, sum to a 0–100 score, then tier as A (85+), B (70–84), or C (below 70) with conditional formatting that highlights C-tier red.
+
+How much does a supplier quality failure actually cost in downtime?
+
+A line-down event costs roughly $800–1,500 per hour in idle labor, lost throughput, and schedule recovery. Three bad suppliers causing 2–3 line-downs each per year works out to $21,600+ in annual waste — before counting expedited replacement parts or late penalties to your own customers.
+
+How do I write a corrective action request suppliers respond to?
+
+Lead with the specific nonconformance and its measured impact. "340 pieces with the wrong thread pitch caused 2.3 hours of downtime and $2,760" gets a response; "bad parts" gets ignored. Include the PO number, the measured defect, the downstream consequence, and a firm deadline for a corrective action plan.
+
+When should a small manufacturer fire a supplier?
+
+Fire a supplier when they score below 70 for two consecutive quarters, cause 2+ line-down events in a single quarter, or fail to respond to 2+ corrective action requests. Always qualify a second source with a trial order first, so you're not left without supply.
+
+How do I set up a supplier scorecard in a spreadsheet?
+
+Create four tabs (Directory, Quality Log, Scorecard, CAR Log), enter the last 90 days of quality data, set up the weighted score formula with conditional formatting, write one SCAR this week, and schedule a 30-minute quarterly review sorted by score.
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Suppliers Are Late Again and It's Costing $1,000/Week — How to Track Supplier Delivery Without Software
+
+Your Shop Floor Runs at 97% Yield — Free Quality Metrics Tracker (Defect Rate & FPY)
+
+Your Machines Keep Breaking Down and Nobody's Tracking It — The $0 System That Tells You What's Costing You Money
+
+Stop paying $1,200 an hour for bad suppliers you can't prove
+
+Book a free 15-minute audit. We'll map your supplier quality workflow, show you exactly which vendors are causing your line-downs, and build automations that log every rejected batch and generate your scorecard automatically — covered by our $30K-recovered-in-90-days guarantee. If documented recovery doesn't reach $30K, you pay nothing.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/supplier-quality-scorecard-manufacturing-spreadsheet-free/
 
 ---
 
