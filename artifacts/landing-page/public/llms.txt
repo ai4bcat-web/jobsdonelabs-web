@@ -62,6 +62,7 @@
 - [Refill Chaos Costs Your Practice $41,750/Year](https://www.jobsdonelabs.ai/blog/prescription-refill-request-tracking-system/): Your practice loses $41K+/year to broken refill chaos. This free 5-tab tracking system stops patients from running out of medication with no EHR add-on needed.
 
 ## Home Services
+- [Small Business AI Automation ROI: A Worked Example](https://www.jobsdonelabs.ai/blog/ai-automation-roi-small-business-worked-example/): Real ROI math: a 10-person business saves $9,100/year on a $2,000 build. Worked example with cost comparison table and payback period.
 - [Where'd Your $15K Go? Free Amazon Fee Reconciliation](https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadsheet-free/): Amazon dashboard says $52K. Bank has $37K. Free spreadsheet tracks every fee per SKU — referral, FBA, storage, ads — so you know what's actually profitable.
 - [Stop Losing Billable Hours to Admin](https://www.jobsdonelabs.ai/blog/billable-hours-time-audit-professional-services/): Solo professionals lose $75K+/year to admin busywork. Free time-audit spreadsheet reveals the leak. Automate/delegate/eliminate — recover 45–90 min/day at $0.
 - [Automation Pricing: What Small Businesses Pay](https://www.jobsdonelabs.ai/blog/business-process-automation-cost-small-business/): Real automation costs for small businesses: free templates ($0), no-code ($20-200/mo), custom builds ($5K-30K). Free calculator + honest ROI breakdown.
