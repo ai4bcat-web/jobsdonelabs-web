@@ -7929,6 +7929,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Patient Payment Plan Tracker — Free Spreadsheet for Medical Practices
+
 Your Practice Wrote Off $87,000 in Denied Claims Last Year — Free Appeal Tracker Spreadsheet
 
 Stop Losing Referred Patients: Free Loop-Closure Tracker for Small Practices
@@ -10680,6 +10682,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Patient Payment Plan Tracker — Free Spreadsheet for Medical Practices
 
 Free Payer Rate Comparison Spreadsheet for Medical Practices
 
@@ -14053,6 +14057,413 @@ URL: https://www.jobsdonelabs.ai/blog/patient-care-gap-recall-tracking-system/
 
 ---
 
+# Medical Practice Patient Balance Tracker
+
+14 Months Ago a Patient Signed Your $50/Month Payment Agreement. She Hasn't Paid Since — and You Just Found Out. Here's the Free Tracking Spreadsheet That Makes Sure That Never Happens Again.
+
+Ryne Bandolik
+
+· August 30, 2026 ·
+
+Healthcare & Medical Practices
+
+Your front desk hands every self-pay patient a one-page "Payment Agreement" form. The patient signs it, the front desk makes a copy, and the original goes into a manila folder in the filing cabinet. That folder now holds 47 active payment agreements — some dating back 18 months. Nobody has opened it since March. Three patients have missed 5+ consecutive payments. One owes $1,400 that will never be collected because nobody noticed until the balance was 14 months old. And your practice manager just discovered it while looking for a W-9.
+
+This isn't negligence. It's structural. Your practice management system tracks insurance AR beautifully — claim status, payer response, EOB posting. But patient payment plans? They live outside the system entirely. The PM software wasn't built for "Maria owes $50/month for 12 months starting June 3rd — is she paying?" So your staff bridges the gap with paper, and paper has no memory.
+
+The $22,000 invisible patient AR problem
+
+Medical practices collect roughly 94% of insurance AR within 90 days. Patient AR? The collection rate drops to 40% after 90 days, and to under 15% after 120 days. A 3-provider practice with 200 active payment agreements averaging $400 each carries $80,000 in patient AR at any moment. If 60% of balances over 90 days are never collected, that's $22,000 in permanent write-offs — every year — from agreements that were perfectly good when they were signed. The spreadsheet system below catches every overdue payment before it hits the 90-day cliff and costs $0.
+
+Why your practice management system can't track patient payment plans (and what to do about it)
+
+Your PM system handles insurance billing because the workflow is standardized: submit claim, receive EOB, post payment, appeal denial. Patient payment plans, by contrast, are a custom arrangement every time — $50/month for 10 months, $75/month for 8 months, $125/month for 6 months, sometimes with a down payment, sometimes interest-free, sometimes with a payment holiday in December when the patient asked nicely. There's no standard EDI transaction for "Maria paid $40 instead of $50 this month and promised to catch up next month."
+
+The spreadsheet bridges the gap between what your PM system does (post individual payments) and what you need to know (is this agreement on track, behind, or abandoned?). It's not a replacement for your PM system — it's the reconciliation layer that your PM system was never designed to include.
+
+The tracking system walkthrough: 4 tabs that replace the filing cabinet
+
+Build this system once — about 45 minutes — and your monthly patient AR review goes from "flip through 47 paper folders and make notes on a legal pad" to "open a spreadsheet, sort by days overdue, and hand a one-page call list to your front desk."
+
+Tab 1: Active Agreements Ledger
+
+This is the master list. Every active payment agreement gets one row. When an agreement is fully paid, cut the row and paste it into Tab 4 (Paid/Closed).
+
+Column
+
+What Goes In It
+
+Formula / Tip
+
+A: Patient Name
+
+Last, First
+
+B: Agreement Date
+
+MM/DD/YYYY — date the patient signed
+
+C: Total Amount
+
+e.g., $600.00
+
+Format as currency
+
+D: Monthly Payment
+
+e.g., $50.00
+
+Format as currency
+
+E: Number of Payments
+
+e.g., 12
+
+F: Payments Received
+
+Manual count — update each month from Tab 2
+
+Data validation: whole number
+
+G: Total Collected
+
+Auto-calculated
+
+=D2*F2
+
+H: Balance Remaining
+
+Auto-calculated
+
+=C2-G2
+
+. Conditional formatting: green if $0, yellow if <25% of total, red if >50%.
+
+I: Last Payment Date
+
+MM/DD/YYYY — update from Tab 2
+
+J: Days Since Last Payment
+
+Auto-calculated
+
+=TODAY()-I2
+
+K: Status
+
+Dropdown: Current, 30 Days Late, 60 Days Late, 90+ Days Late, Paid in Full
+
+Conditional formatting: green/yellow/orange/red. Update monthly based on Col J.
+
+L: Patient Phone
+
+(xxx) xxx-xxxx
+
+M: Email
+
+patient@email.com
+
+N: Notes
+
+Free text — "promised to pay double next month," "lost job — reduced to $25/mo," "sent to collections 8/15"
+
+Tab 2: Payment Log
+
+Every patient payment gets logged here. Your front desk or biller enters payments as they're posted in the PM system — the log is the cross-reference that tells you whether the payment was received AND whether it matched the agreement amount.
+
+Column
+
+What Goes In It
+
+A: Date Received
+
+MM/DD/YYYY
+
+B: Patient Name
+
+From Active Agreements
+
+C: Amount Paid
+
+e.g., $50.00
+
+D: Expected Amount
+
+From Active Agreements Col D — use VLOOKUP on patient name
+
+E: Shortfall
+
+Auto-calculated:
+
+=D2-C2
+
+. Positive number = underpayment. Flag rows where this is >$0.
+
+F: Payment Method
+
+Dropdown: Cash, Check, Credit Card, Online Portal, Mail
+
+G: PM System Ref #
+
+The payment/transaction ID from your practice management system — so you can trace back if needed
+
+Tab 3: Monthly AR Dashboard
+
+This tab pulls from the Active Agreements Ledger and Payment Log. Update takes 30 seconds — refresh the formulas and you have a practice-owner-ready snapshot. Give this to your practice owner the first Monday of every month.
+
+Active agreements:
+
+count of rows in Tab 1 where Status ≠ "Paid in Full"
+
+Total patient AR outstanding:
+
+SUM of Balance Remaining (Col H) for active agreements
+
+Total collected this month:
+
+SUM of Amount Paid in Tab 2 for payments dated this month
+
+Agreements current (<30 days since last payment):
+
+count where Col J < 30
+
+Agreements 30–59 days late:
+
+count where Col J is 30–59
+
+Agreements 60–89 days late:
+
+count where Col J is 60–89
+
+Agreements 90+ days late — COLLECTION RISK:
+
+count where Col J ≥ 90. These balances have a <15% probability of collection. Flag for immediate action or write-off decision.
+
+Largest single overdue balance:
+
+MAX of Balance Remaining for agreements 30+ days late
+
+Underpayments this month:
+
+count of rows in Tab 2 where Shortfall > $0
+
+Tab 4: Paid / Closed Agreements
+
+When an agreement is paid in full — or written off, sent to collections, or the patient transfers out — cut the row from Tab 1 and paste it here. Add a "Closure Reason" column (Paid in Full, Transferred Out, Deceased, Sent to Collections, Written Off — Uncollectible). This is your audit trail for year-end AR reporting and for defending write-off decisions if your accountant asks.
+
+The 15-minute monthly review protocol
+
+Here's the timeline that replaces the 2-hour "flip through the filing cabinet" ritual:
+
+Time Block
+
+Action
+
+Output
+
+Min 0–3
+
+Open Tab 2 (Payment Log). For each payment posted in the PM system this month, enter it into the log. If the amount is less than the expected monthly payment, flag the row.
+
+Updated payment log
+
+Min 3–6
+
+Open Tab 1 (Active Agreements). For each patient with a payment logged this month, update Col F (Payments Received), Col I (Last Payment Date). Col J (Days Since Last Payment) auto-updates.
+
+Updated agreement statuses
+
+Min 6–10
+
+Update Status column (Col K) for all agreements: sort by Days Since Last Payment, flag everything 30+, 60+, 90+.
+
+Prioritized overdue list
+
+Min 10–13
+
+Update Tab 3 (Dashboard). Note: total outstanding AR, count of agreements at each aging tier, largest overdue balance. Compare to last month — is AR going up or down?
+
+Dashboard for practice owner
+
+Min 13–15
+
+Print the 30+ day overdue list. Hand it to the front desk with instructions: call every patient on this list today. Script below.
+
+Call list — ready for outreach
+
+Fifteen minutes. Once a month. The person who used to spend 2 hours digging through paper folders now spends 15 minutes updating a spreadsheet — and the remaining 1 hour 45 minutes goes back to actually calling patients and collecting money.
+
+The overdue patient call script: collect money without sounding like a collections agency
+
+These are your patients — people who came to you for care and who, in most cases, intended to pay. They got busy, they forgot, they had an unexpected expense, or they assumed the practice would bill them (even though the agreement says they're responsible). The call isn't adversarial — it's a reminder from someone they trust.
+
+Scenario
+
+Script
+
+30 days late — first contact
+
+"Hi [Patient], this is [Name] from Dr. [Name]'s office. I was reviewing accounts this morning and noticed your monthly payment for [month] hasn't come through yet. Everything okay? ... Great. Would you like to make that payment now over the phone, or would it be easier if I send you a payment link?"
+
+60 days late — second contact
+
+"Hi [Patient], this is [Name] again from Dr. [Name]'s office. I wanted to check in — it looks like we're now two months behind on the payment agreement from [date]. I know things come up and I want to make sure this doesn't become a bigger issue. Can we work out a plan? Even a partial payment this week would keep your account current."
+
+90 days late — final contact before write-off
+
+"Hi [Patient], this is [Name] from Dr. [Name]'s office. I'm calling because your account is now 90 days past due on the payment agreement. I need to update our records — are you still able to continue with this plan, or has your situation changed? ... If we don't hear from you by [date 10 days out], we'll need to close this agreement and the remaining balance will be handled according to our financial policy. I'd much rather work this out with you directly. Can we set up a payment for this week?"
+
+The 90-day cliff is real — here's the math
+
+Patient balances under 30 days have an 85% collection probability. At 60 days, it drops to 55%. At 90 days, it's under 15%. The difference between catching a $400 balance at day 35 vs day 95 is roughly $280 in actual collected dollars — per account. For a practice with 47 active agreements, the monthly 15-minute dashboard review prevents an average of $1,800 in permanent write-offs every single month.
+
+How to handle the three most common patient payment problems
+
+1. "I can't afford the $50 this month — can I pay $25?"
+
+Say yes. Document it. A patient who pays $25/month for 20 months is infinitely better than a patient who stops paying entirely because $50 feels impossible. In Tab 2 (Payment Log), enter $25 and note "reduced to $25/mo per patient request 8/15" in Tab 1 Col N. The agreement isn't broken — it's modified. The spreadsheet tracks both the original terms and the actual payment history, so you always know what's happening.
+
+2. The patient who sends sporadic payments with no pattern
+
+Some patients pay $100 one month, $0 the next two, $75 the month after. The Total Collected (Col G) vs Balance Remaining (Col H) tells you whether they're roughly on track — even if the month-to-month is chaotic. As long as the agreement is moving toward zero over a reasonable timeframe, don't micromanage the payment cadence. Flag them only when 90+ days pass with zero payments.
+
+3. "I switched insurance — why am I still getting bills?"
+
+This patient had a deductible or non-covered service when they signed the agreement. Their new insurance doesn't change the past balance. Explain it clearly: "The agreement covers services you received on [date] when you had [old insurance]. Your new plan is great — but it doesn't apply retroactively. Your balance from that visit is still [amount]." Document the conversation in Tab 1 Col N. If the patient refuses to pay, that's a practice-policy decision (write-off vs collections) — but at least you know exactly what's happening, which the filing cabinet system never told you.
+
+When to upgrade from the spreadsheet
+
+The spreadsheet system works for practices managing fewer than 200 active payment agreements. Beyond that — or if you're experiencing any of these — consider dedicated automation:
+
+200+ active payment agreements.
+
+At this volume, the monthly 15-minute review stretches to 45+ minutes, and tracking individual patient communications becomes unwieldy.
+
+Multiple locations or providers with separate agreement workflows.
+
+If each provider handles payment plans differently, a unified system with role-based access and standardized workflows eliminates inconsistency.
+
+You're sending patient statements manually.
+
+If someone on your team spends 3–5 hours per month printing, folding, and mailing patient statements, automation can generate and send them automatically — saving that time entirely.
+
+You've had a patient dispute a balance and couldn't produce documentation.
+
+If you've ever been in a situation where a patient said "I already paid that" and you couldn't prove otherwise because the paper folder was incomplete, you need timestamped, audit-ready payment tracking.
+
+Free
+
+The Spreadsheet System
+
+Best for:
+
+Practices with <200 active payment agreements, 1–5 providers, managing patient AR without a dedicated billing coordinator.
+
+Setup:
+
+45 minutes.
+
+Monthly maintenance:
+
+15 minutes.
+
+Cost:
+
+$0.
+
+Prevents:
+
+$1,200–$2,500/month in permanent write-offs by catching overdue accounts before the 90-day collection cliff.
+
+Custom automation
+
+What Jobs Done Labs builds
+
+Best for:
+
+Practices with 100–500 active payment agreements, 3–15 providers, or anyone spending 5+ hours/month on patient AR reconciliation.
+
+Setup:
+
+48 hours from kickoff to live.
+
+Monthly maintenance:
+
+5 minutes — the system auto-flags overdue accounts, auto-generates the call list, and auto-updates the dashboard.
+
+Cost:
+
+$2,500–$7,000 one-time build.
+
+Pays for itself in:
+
+3–5 months through recovered patient AR + 15–25 hours/month of staff time reclaimed.
+
+Includes: automated overdue alerts at 30/60/90 days, patient statement generation, payment reminder emails/texts, monthly AR aging dashboard, and a 30-minute team training call.
+
+Patient payment platform
+
+CareCredit, PatientPay, AccessOne, etc.
+
+Best for:
+
+Practices with 500+ active payment agreements, hospital-affiliated practices, or practices that want to outsource patient financing entirely.
+
+Cost:
+
+2.5–5% per transaction or $200–$600/month platform fee.
+
+Setup:
+
+2–8 weeks including PM system integration.
+
+When it makes sense:
+
+When the cost of manual tracking exceeds the platform fees — typically around 500+ active agreements or when you want to offer patients 0% financing without carrying the receivable risk yourself. Below this threshold, the spreadsheet or custom automation delivers better ROI.
+
+Frequently Asked Questions
+
+How much does it cost to automate patient payment tracking?
+
+JobsDone Labs builds custom payment tracking automation typically in the $2,500–$7,000 range as a one-time build. At the low end, that's a smart spreadsheet with automated overdue alerts and monthly AR aging reports. At the high end, it's a full system that pulls your PM/EHR patient balance data, sends automated payment reminders, flags accounts approaching 90 days, and generates the collection call list. The system pays for itself in 3–5 months through recovered patient AR. You can also start with our free tracking template immediately — no cost, no commitment — and upgrade when you're ready.
+
+How long does it take to set up the patient balance tracker?
+
+The free spreadsheet template takes about 45 minutes to set up — pull your outstanding patient balance report from your practice management system, paste it into the Active Agreements Ledger, and you're tracking same-day. A full custom automation from JobsDone Labs typically takes 48 hours from kickoff to live. There's no months-long implementation cycle; you're collecting overdue balances by the end of the week.
+
+How does the $30K guarantee work for medical practices?
+
+JobsDone Labs guarantees $30K+ in net profit recovery within 90 days of going live, or you pay nothing. For medical practices this typically comes from three sources: recovered patient AR — most 3+ provider practices have $15K–$40K in uncollected patient balances, and a tracking system typically recovers 40–60% within 90 days; staff time reallocation — the monthly reconciliation that takes 6–10 hours gets replaced by a 15-minute dashboard review; and avoided write-offs — patient balances past 120 days are virtually uncollectible, so catching them at 60–75 days prevents permanent revenue loss. We document the baseline during your free audit so the improvement is measurable.
+
+What industries does JobsDone Labs serve?
+
+We build automation and tracking systems across seven core industries: healthcare and medical practices, logistics and trucking, manufacturing, home services and trades, professional services, retail and e-commerce, and mortgage and lending. Our healthcare practice serves private medical practices (1–20 providers), dental practices, physical therapy clinics, and behavioral health practices. If your business runs on spreadsheets, email, and manual processes, we can help.
+
+What's the ROI of a patient payment tracker vs hiring a billing coordinator?
+
+Hiring a part-time billing coordinator costs $32,000–$45,000/year in salary, benefits, and payroll taxes — and they still need a system to track 200+ active payment agreements. The free spreadsheet template cuts the monthly reconciliation from 6–10 hours to 45 minutes at zero cost. A full custom automation from JobsDone Labs (one-time $2,500–$7,000) auto-flags overdue accounts, generates patient statements, and produces the weekly collection call list — saving 20–30 hours per month of staff time plus recovering $8,000–$25,000/year in previously uncollected patient balances. That's roughly $20,000–$45,000/year in combined savings with a payback period under 3 months. Compared to hiring a billing coordinator at $38K/year, the automation pays for itself in the first quarter and doesn't require managing another employee.
+
+Free patient AR audit
+
+We'll review your current patient AR aging report, calculate how much you're losing to uncollected payment agreements, and give you a 1-page recovery blueprint — free, 15 minutes, no obligation.
+
+Book a free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Your Biggest Payer Pays You 22% Less for the Same Office Visit — Free Rate Comparison Spreadsheet
+
+Your Practice Wrote Off $87,000 in Denied Claims Last Year — Free Appeal Tracker
+
+Cut Insurance Verification Time in Half: A Front Desk Workflow That Doesn't Cost $900/Month
+
+
+URL: https://www.jobsdonelabs.ai/blog/patient-payment-plan-tracking-spreadsheet-medical-practice-free/
+
+---
+
 # Stop Losing Referred Patients: Free Tracker
 
 Healthcare & Medical Practices
@@ -14545,6 +14956,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Patient Payment Plan Tracker — Free Spreadsheet for Medical Practices
 
 Medical Claims Denial Appeal Tracking Spreadsheet
 
