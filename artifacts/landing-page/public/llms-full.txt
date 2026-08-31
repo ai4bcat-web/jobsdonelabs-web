@@ -721,6 +721,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Have $12K in Returns Your Vendors Never Credited — Free RTV Chargeback Tracker
+
 Manual Data Entry Is the Silent Killer of Your E-Commerce Business
 
 Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It)
@@ -12905,6 +12907,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Have $12K in Returns Your Vendors Never Credited — Free RTV Chargeback Tracker
+
 Amazon Took $15,000 in Fees Last Quarter — Free Fee Reconciliation Spreadsheet
 
 Manual Data Entry Is the Silent Killer of Your E-Commerce Business
@@ -16756,6 +16760,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Have $12K in Returns Your Vendors Never Credited — Free RTV Chargeback Tracker
+
 Manual Data Entry Is the Silent Killer of Your E-Commerce Business — The 5-Level System (Starting at $0)
 
 Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It, Honestly)
@@ -16764,6 +16770,257 @@ Stop Copying Data Between Systems: How Small Businesses Eliminate Manual Data En
 
 
 URL: https://www.jobsdonelabs.ai/blog/returns-processing-time-ecommerce-automation/
+
+---
+
+# Recover Vendor Credits: Free RMA Chargeback Tracker
+
+Retail & E-Commerce
+
+You Have $12,000 in Defective Product Sitting in Your Returns Corner — and Half the RMAs Have Already Expired. Here's the Free Tracker That Gets Your Money Back Before the Vendor "Never Received It."
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 31, 2026
+
+Key takeaways
+
+The typical e-commerce seller has $12K in RTV product and recovers only 35%. That's $7,800 in unrecovered vendor credits every year. The fix isn't software — it's a 4-tab spreadsheet that tracks every RMA, flags deadlines before they expire, and gives you a 3-email follow-up sequence that actually gets vendors to issue credits. Total cost: $0. Setup time: under 2 hours.
+
+The RTV pile that's costing you $7,200 a year
+
+Walk into any e-commerce warehouse and you'll see it: the returns corner. It's a growing pile of defective product, damaged shipments, wrong-item deliveries, and customer returns that need to go back to the vendor. Some of it has been there since January.
+
+The math is ugly. A typical small e-commerce seller with $500K–$2M in annual revenue has $12,000–$15,000 in return-to-vendor product at any given time. Here's what happens to it:
+
+35% gets recovered.
+
+The RMAs that got opened immediately, shipped with the right paperwork, and followed up on. These credits come through.
+
+25% expires on the loading dock.
+
+The vendor's RMA window was 30 days. Nobody checked. The deadline passed. Now the vendor won't accept the return even if you ship it.
+
+25% gets shipped but never credited.
+
+The product went back. The tracking shows delivered. But nobody followed up, the vendor "never received it," and the credit never posted.
+
+15% shouldn't have been an RTV in the first place.
+
+The return shipping cost more than the item was worth, or the vendor doesn't accept returns for that reason code, and the product should have been liquidated instead.
+
+The gap between recovering 35% and recovering 85% — which is achievable with systematic tracking — is $6,000–$7,500 per year. That's not theoretical. That's real money sitting in a corner, depreciating, while the vendor's RMA clock ticks down.
+
+The root cause isn't laziness.
+
+It's that every vendor has a different RMA process, a different return window, a different restocking fee, and a different point of contact. Without a tracker, you're relying on memory — and memory doesn't scale past 5 open RMAs.
+
+The free RTV vendor returns tracker
+
+This is a 4-tab spreadsheet built in Google Sheets (or Excel). No software. No subscription. No API keys. You download it, fill in your vendors and open RMAs, and it tells you exactly which credits are at risk and which vendor to call today.
+
+The 4 tabs
+
+Vendor Directory.
+
+One row per supplier: company name, contact person, email, phone, RMA window (days), restocking fee (%), return shipping policy (prepaid label vs. you pay), and notes. This is your single source of truth for every vendor's return rules so you stop hunting through old emails.
+
+RMA Log.
+
+The workhorse tab. One row per return: vendor, RMA number, date issued, return window (auto-calculated from Vendor Directory), RMA deadline date, item/SKU, quantity, unit cost, total value, reason code (defective/damaged/wrong item/customer return), ship date, carrier, tracking number, chargeback status (pending/submitted/received/expired), credit amount, net recovery (credit minus return shipping), and notes. Conditional formatting highlights rows where the deadline is within 5 days (yellow) or expired (red).
+
+Recovery Dashboard.
+
+Auto-calculated from the RMA Log: total RTV value outstanding, total credits received ($), recovery rate (%), pending RMAs, at-risk RMAs (deadline within 5 days), expired RMAs, and per-vendor recovery breakdown. The dashboard tells you in 30 seconds which vendor to call today.
+
+Reason-Code Analysis.
+
+Pivot table by vendor and reason code: how many units returned, total value, and which reason codes dominate. One supplier with 40% of returns coded as "defective" has a quality problem. One with 70% coded as "wrong item" has a picking problem. This data changes the conversation with the vendor from "hey can I get a credit" to "22% of your shipments were defective last quarter — here's the data."
+
+The 3-email RMA follow-up sequence that gets vendors to actually issue the credit
+
+Most vendors aren't malicious — they're busy. Your RMA is one of hundreds they process each month. The vendors who issue credits fastest are the ones who get a clear, documented follow-up with specific dollar amounts and deadlines. Here's the sequence:
+
+Email 1: Shipment confirmation (send day of return shipment)
+
+Subject:
+
+RMA #{{RMA-12345}} — Return shipment confirmation — {{$847.50 credit}}
+
+Body:
+
+"[Contact name], confirming that RMA #{{number}} shipped today via {{carrier}}. Tracking: {{link}}. This covers {{quantity}} units of {{SKU}} — {{reason}}. Expected credit: {{$amount}}. Delivery ETA: {{date}}. I'll follow up once tracking confirms delivery. Thanks — [Your name]"
+
+Why it works:
+
+You've put the RMA number AND the dollar amount in the subject line. The vendor can't claim they didn't know the value. The tracking link is right there. And you've set the expectation that you'll follow up.
+
+Email 2: Delivery confirmation + credit request (send 2 days after delivery)
+
+Subject:
+
+Re: RMA #{{RMA-12345}} — Delivered {{date}} — Credit processing timeline?
+
+Body:
+
+"Hi [Contact name], tracking shows this RMA was delivered {{date}} at {{time}}, signed by {{name}}. Can you confirm receipt and let me know when the credit will be processed? The total is {{$amount}}. Appreciate it — [Your name]"
+
+Why it works:
+
+You're replying to the same thread so the full history is visible. You've cited the delivery proof (signed by, date, time). And you're asking for a timeline, not just "did you get it."
+
+Email 3: 48-hour deadline reminder (send if no response after 3 business days)
+
+Subject:
+
+Re: RMA #{{RMA-12345}} — Deadline {{date}} — {{$amount}} credit pending
+
+Body:
+
+"Hi [Contact name], following up on RMA #{{number}} — tracking confirms delivery {{date}}. The RMA deadline is {{deadline date}} ({{N}} days from now). I need the {{$amount}} credit processed before the window closes. If there's an issue on your end — wrong address, missing paperwork, anything — please let me know and I'll fix it immediately. Thanks — [Your name]"
+
+Why it works:
+
+You've named the deadline. You've named the dollar amount again. You've offered to fix any issue on your end (which preempts the "we never got the right paperwork" excuse). And you've been professional — not aggressive — through all three emails.
+
+Copy these templates into your tracker.
+
+The Vendor Directory tab can hold the contact email, and the RMA Log triggers the sequence: when you mark a row as "shipped," it's Email 1 day. When tracking shows delivered, it's Email 2 day. When 3 business days pass with no response, it's Email 3 day.
+
+RTV by reason code — which suppliers have a defect problem
+
+After 3–6 months of tracking, the Reason-Code Analysis tab reveals patterns you can't see from memory. Here's what a real RMA log typically shows:
+
+Reason Code
+
+What it means
+
+Action
+
+Defective
+
+Product arrived with a manufacturing flaw — doesn't work, wrong specs, cosmetic damage out of the box
+
+This is the vendor's problem. Track per-supplier. One vendor with 40%+ defect-rate RTVs gets put on a quality improvement plan — or replaced.
+
+Damaged in Transit
+
+Product was fine when it left the vendor but arrived damaged
+
+File a carrier claim first. If carrier denies, check whether the vendor's packaging was inadequate. Recurring damage from the same vendor = packaging problem they need to fix.
+
+Wrong Item Shipped
+
+You ordered SKU A, they shipped SKU B
+
+One-off is human error. Five wrong-item returns from the same vendor in 6 months = picking/packing process failure. They need to fix their warehouse, not just issue credits.
+
+Customer Return
+
+Your customer returned it — not the vendor's fault
+
+These aren't vendor-chargeback candidates unless the vendor offers a customer-return program. Most of these go to your own liquidation/resale process, not back to the vendor.
+
+One supplier with 40% defect-rate RTVs is costing you more than the credit value. They're costing you customer satisfaction (your buyer received a defective product), return shipping, and the labor to process the return. The data from the Reason-Code Analysis tab gives you the leverage to say: "In the last 6 months, 22% of your shipments were defective, costing us $1,800 in return shipping alone. We need to discuss quality improvement or we'll need to qualify a second source."
+
+When to RTV vs liquidate vs write off
+
+Not every return in the corner belongs in the RTV process. Some should be liquidated. Some should be written off. The tracker helps you make that call systematically instead of emotionally. Here's the decision framework:
+
+Action
+
+When
+
+Example
+
+RTV (Return to Vendor)
+
+Vendor accepts returns for this reason code, RMA window is still open, and return shipping is less than 25% of the item's value
+
+$120 wholesale cost, $18 return shipping (15% of value), 14 days left on the RMA window. Ship it — you'll recover $102 net.
+
+Liquidate
+
+Product is in sellable condition, vendor won't accept the return (wrong reason code or expired RMA), and you can recover 30-50% of wholesale cost through a local liquidator, eBay, or bundle sale
+
+$45 wholesale cost, vendor RMA expired, product is functional but box is damaged. List as "open box" on eBay at $22, recover $18 after fees. Better than $0.
+
+Write Off
+
+Vendor RMA expired AND product is defective/unresellable AND value is under $50 — don't spend $30 in labor chasing a $12 credit
+
+$18 wholesale cost, product doesn't work, vendor won't accept it. Write it off. The labor to argue with the vendor costs more than the item is worth.
+
+Don't chase sunk costs.
+
+The spreadsheet is for future cash, not past mistakes. A SKU you bought for $40 two years ago is worth what someone will pay for it today — not $40. Mark down to market price, take the cash, reinvest in top-selling inventory. The money is already gone; the question is how much of it you can get back.
+
+"But my vendors all have different processes" — here's how to handle it
+
+Yes, they do. That's exactly why you need the Vendor Directory tab. Fill it in once per vendor, and the RMA Log auto-populates the return window and contact info for every new return. Here's what you're capturing:
+
+RMA window:
+
+15 days? 30 days? 60 days? The tracker counts down from the issue date and highlights when the deadline approaches.
+
+Restocking fee:
+
+Some vendors charge 15%, some 25%, some none. This affects your net recovery calculation — a $100 item with a 25% restocking fee nets $75, and if return shipping is $18, you're at $57. Is it worth it?
+
+Return shipping policy:
+
+Does the vendor provide a prepaid label? If yes, your cost is $0. If no, you're paying — and that cost needs to be subtracted from the expected credit to calculate true net recovery.
+
+Contact method:
+
+Some vendors want RMAs submitted through a portal. Some want email. Some want a phone call first. Record it once and the whole team knows.
+
+Frequently asked questions
+
+How do I track RTV returns without software?
+
+Use a 4-tab spreadsheet: Vendor Directory (every supplier's rules), RMA Log (one row per return with deadline tracking), Recovery Dashboard (total outstanding, at-risk, and expired), and Reason-Code Analysis (which vendors have quality problems). For under 50 active vendors, a spreadsheet is the right tool. Dedicated RMA software starts at $200–500/month and is overkill for most small e-commerce operations.
+
+How do I get vendors to issue RMA credits on time?
+
+The 3-email sequence: (1) Shipment confirmation with the RMA number, dollar amount, and tracking link — send same day. (2) Delivery confirmation with a request for credit processing timeline — send 2 days after delivery. (3) Deadline reminder 48 hours before the RMA window closes. Vendors respond to a documented paper trail with specific dollar amounts. They ignore "hey did you get the return" emails.
+
+What's the difference between an RMA and an RTV?
+
+An RMA (Return Merchandise Authorization) is the permission — the number the vendor gives you to send product back. An RTV (Return to Vendor) is the actual return shipment and the chargeback that follows. Most sellers are good at getting RMAs but bad at tracking whether the RTV chargeback actually became a credit. That gap is where the money disappears.
+
+How much do e-commerce sellers lose on unmanaged vendor returns?
+
+The typical seller has $12K–$15K in RTV product and recovers ~35%. At 85% recovery — achievable with systematic tracking — that's an additional $6,000–$7,500/year. Each unrecovered RMA with an expired deadline is a 100% write-off.
+
+When should I liquidate returned product instead of sending it back?
+
+Liquidate when: (a) the vendor doesn't accept returns for that reason code, (b) return shipping exceeds 25% of the item's value, (c) the RMA window has expired, or (d) the vendor charges a restocking fee that makes the net recovery too low. For items under $50 with expired RMAs, don't spend $30 in labor chasing a $12 credit — liquidate locally.
+
+How do I track which suppliers have the highest defect rates?
+
+Tag every RTV with a reason code. After 3–6 months, filter by supplier and reason code. A supplier with 40% of returns coded as "defective" has a quality problem. This data turns the conversation from "can I get a credit?" into "22% of your shipments were defective last quarter — here's the data, and here's what we need to change."
+
+We'll build your entire vendor returns workflow — free
+
+In 15 minutes, we'll map your current RTV process across every supplier, identify the 3 biggest credit-recovery gaps, and give you a complete Google Sheets tracker plus the 3-email follow-up sequence — customized to your vendors. You walk away with a system. No obligation, no pitch.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Returns Processing Eating Your Time? How E-Commerce Brands Cut Returns Workflow from Hours to Minutes
+
+You Sell on Shopify, Amazon, and Walmart — and Product Info Is Different on Every Channel
+
+Amazon Took $15,000 in Fees Last Quarter and You Can't Explain Where It Went — Free Reconciliation System
+
+Pick/Pack Errors Cost You $54,000 Last Year — The $0 Warehouse Accuracy System
+
+
+URL: https://www.jobsdonelabs.ai/blog/rtv-return-to-vendor-chargeback-tracking-ecommerce/
 
 ---
 
@@ -26462,6 +26719,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+You Have $12K in Returns Your Vendors Never Credited — Free RTV Chargeback Tracker
 
 You're Losing $80,000 a Year Quoting Jobs by Feel
 
