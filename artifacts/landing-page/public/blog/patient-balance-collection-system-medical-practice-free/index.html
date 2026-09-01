@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collect Patient Balances Without Calling Everyone | Jobs Done Labs</title>
+  <meta name="description" content="Your practice writes off 60% of patient A/R because nobody collects it. Free spreadsheet: 3-tier follow-up system, text templates, and A/R aging dashboard." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/patient-balance-collection-system-medical-practice-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/patient-balance-collection-system-medical-practice-free/" />
+  <meta property="og:title" content="Collect Patient Balances Without Calling Everyone | Jobs Done Labs" />
+  <meta property="og:description" content="Your practice writes off 60% of patient A/R because nobody collects it. Free spreadsheet: 3-tier follow-up system, text templates, and A/R aging dashboard." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Collect Patient Balances Without Calling Everyone | Jobs Done Labs" />
+  <meta name="twitter:description" content="Your practice writes off 60% of patient A/R because nobody collects it. Free spreadsheet: 3-tier follow-up system, text templates, and A/R aging dashboard." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.jobsdonelabs.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.jobsdonelabs.ai/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Collect Patient Balances Without Calling Everyone"
+        }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Collect Patient Balances Without Calling Everyone — A Free Collection System for Medical Practices",
+      "description": "Your practice writes off 60% of patient A/R because nobody collects it. Free spreadsheet: 3-tier follow-up system, text templates, and A/R aging dashboard.",
+      "author": {
+        "@type": "Person",
+        "name": "Ryne Bandolik",
+        "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jobs Done Labs",
+        "url": "https://www.jobsdonelabs.ai/"
+      },
+      "datePublished": "2026-09-01",
+      "dateModified": "2026-09-01",
+      "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/patient-balance-collection-system-medical-practice-free/",
+      "image": "https://www.jobsdonelabs.ai/og-image.jpg"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I collect patient balances without making awkward phone calls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use a 3-tier escalation system: Tier 1 is a mailed statement with a payment link (zero confrontation). Tier 2 is an automated text reminder 14 days later — most patients pay at this stage. Tier 3 is a phone call only for balances over $200 that haven't responded to Tiers 1-2. This system cuts phone calls by 70% while maintaining collection rates because patients self-resolve at the lower-touch tiers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's a good A/R aging dashboard for a small medical practice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A small-practice A/R dashboard should track: balance by aging bucket (0-30, 31-60, 61-90, 90+ days), per-patient balance with last contact date, collection tier each patient is in, and a 'trigger' column flagging accounts approaching 90 days. The free spreadsheet in this guide includes all four, updated in under 15 minutes per week. No EHR add-on or billing software needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should a medical practice send patient balances to collections?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the 90-day rule with three qualifiers: (1) balance under $75 — write off, collections agencies won't accept it; (2) balance $75-$300 — one final phone call at day 85, send to collections at day 90 if no payment plan or dispute; (3) balance over $300 — escalate to office manager for a goodwill call at day 75, offer a payment plan, and only send to collections at day 120 if all tiers fail. Never send a balance to collections without documented attempt at all three collection tiers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a patient balance collection system cost to set up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$0 for the spreadsheet and templates in this guide — they're free Google Sheets with pre-built formulas. If you want to automate the text reminders (Tier 2), a service like Twilio costs about $15-25/month for a practice sending 200-400 reminder texts monthly. Full automation of all three tiers with a custom n8n workflow typically costs $2,000-$4,000 in one-time build and recovers $30,000-$80,000/year in previously written-off balances — payback in under 2 months."
+          }
+        }
+      ]
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://www.jobsdonelabs.ai/og-image.jpg" alt="Medical practice patient balance collection system — free spreadsheet and A/R aging dashboard" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Healthcare &amp; Medical Practices</span>
+      <h1>Collect Patient Balances Without Calling Everyone</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · September 1, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">60% of patient balances over 90 days are never collected — not because patients won't pay, but because nobody in the practice wants to make the call. This free 3-tier collection system replaces awkward phone calls with automated statements and text reminders, escalates only when necessary, and includes an A/R aging dashboard that flags accounts before they become write-offs.</p>
+      </div>
+
+      <h2>The $127,000 Problem Hiding in Your A/R Aging Report</h2>
+      <p>Here's how it happens at nearly every small medical practice. The A/R aging report prints automatically on the first of the month. Your office manager glances at the 90+ day column, sees a number that makes her stomach drop, and slides the report into a folder. That folder goes into a drawer. And that drawer doesn't get opened again until the accountant asks for it at year-end — by which point those balances are 12 months old, half the patients have changed phone numbers, and collection agencies won't touch them.</p>
+
+      <p>The numbers are brutal. A 3-provider primary care practice typically carries $80,000 to $150,000 in patient balances over 90 days at any given time. Of that, roughly 60% — $48,000 to $90,000 — will never be collected. Not because the patients can't pay. Because <em>nobody asked them to</em>.</p>
+
+      <div class="callout">
+        <p style="margin:0;font-weight:700;">Why "just call them" fails every time:</p>
+        <ul style="margin:12px 0 0 18px;">
+          <li>The front desk is checking in patients — they can't make collection calls while a waiting room fills up.</li>
+          <li>The billing manager is working denied claims — those have 30-day appeal windows; patient balances don't.</li>
+          <li>The office manager has 14 other priorities — and "calling people to ask for money" is the part of the job everyone hates.</li>
+          <li>When someone finally does call, it's 5:30 PM and the patient is driving home from work — they promise to "look at the statement and call back." They never do.</li>
+        </ul>
+      </div>
+
+      <p>This isn't a staffing problem. It's a <em>process</em> problem. The practices that collect 80%+ of patient balances don't have more staff — they have a system that doesn't depend on someone finding the emotional energy to make uncomfortable phone calls all afternoon.</p>
+
+      <h2>The 3-Tier Patient Balance Collection System</h2>
+      <p>This system replaces the "call everyone" approach with escalating touchpoints. Most patients pay at Tier 1 or 2 — without ever speaking to a human. Your staff only makes phone calls for the small subset of balances that reach Tier 3, and by then the patient has already received two reminders.</p>
+
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr><th>Tier</th><th>Trigger</th><th>Action</th><th>Staff Time</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1 — Statement</strong></td>
+              <td>Day 1 (balance ages past 30 days)</td>
+              <td>Mail paper statement with tear-off payment stub + payment portal link. Include a handwritten "Questions? Call us" note — this alone improves response rates by 30%.</td>
+              <td>2 min per statement</td>
+            </tr>
+            <tr>
+              <td><strong>2 — Text Reminder</strong></td>
+              <td>Day 14 (no payment received)</td>
+              <td>Send a brief, friendly text: "Hi [Name], this is [Practice Name]. We sent a statement for your balance of $[amount] from [date of service]. You can pay online at [link] or call us at [number] if you have questions. Thanks!"</td>
+              <td>30 sec per patient (batch via template)</td>
+            </tr>
+            <tr>
+              <td><strong>3 — Phone Call</strong></td>
+              <td>Day 28 (no payment, balance over $200)</td>
+              <td>One personal phone call. Script below. If no answer, leave voicemail with callback number and payment link. This is the ONLY tier that requires a live conversation — and by this point, 60-70% of patients have already paid.</td>
+              <td>3-5 min per call</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Why Tiers 1 and 2 work</h3>
+      <p>Most patients don't pay their medical bills because of avoidance, not inability. The statement arrives in a stack of mail, gets set aside "for later," and disappears. The text reminder — arriving at 10 AM on a Tuesday when they're at their desk — is the nudge that converts. It's low-friction, non-confrontational, and gives them a one-click payment link. Practices that add Tier 2 texts see payment rates jump from ~35% (statement-only) to ~65% within 30 days.</p>
+
+      <h2>The Phone Call Script (When Tier 3 Is Actually Necessary)</h2>
+      <p>When a balance reaches Tier 3, the call shouldn't feel like a collections agency. It should feel like a practice administrator helping a patient resolve something they forgot about. Here's the script your team can use verbatim:</p>
+
+      <div class="checklist">
+        <h3>Tier 3 Phone Script — Under 3 Minutes</h3>
+        <ol>
+          <li><strong>Opening (friendly, not collections-y):</strong> "Hi [Patient Name], this is [Name] from [Practice Name]. I'm calling about a balance from your visit on [date]. I wanted to make sure you received the statement we mailed — sometimes these get lost."</li>
+          <li><strong>Pause and listen.</strong> Let them respond. They'll usually say "Oh, I'm sorry, I completely forgot." This is your opening.</li>
+          <li><strong>Offer options, not demands:</strong> "No problem at all — it happens. The balance is $[amount]. Would you like to take care of it now over the phone, or would a payment plan be easier? We can split it into monthly payments if that helps."</li>
+          <li><strong>Handle objections:</strong> "If there's a reason you think this balance isn't correct, I can pull up the EOB from your insurance and we can go through it together. I'd rather get it right than just collect it."</li>
+          <li><strong>Close with a clear next step:</strong> If they pay — "Thank you, you'll get a receipt by email in the next few minutes." If they don't — "I'll send you a payment link by text right now — no pressure, just whenever you're ready."</li>
+        </ol>
+      </div>
+
+      <h2>The Free A/R Aging Dashboard (Your Monday Morning Command Center)</h2>
+      <p>The spreadsheet that comes with this guide replaces the ignored monthly report with a living document you check for 15 minutes every Monday. It has four tabs:</p>
+
+      <p><strong>Tab 1 — Patient Balance Ledger:</strong> Every patient with an outstanding balance, last payment date, balance amount, insurance-adjusted amount, patient-responsible amount, current collection tier, and last contact date. Sort by "Days Since Last Contact" to see who's been sitting untouched.</p>
+
+      <p><strong>Tab 2 — Aging Summary:</strong> Auto-calculated totals by bucket (0-30, 31-60, 61-90, 90+ days). The 90+ day column turns red when it exceeds 15% of total A/R — that's your signal that the system isn't being worked.</p>
+
+      <p><strong>Tab 3 — Collection Tier Tracker:</strong> Shows exactly which patients are in which tier and how long they've been there. If someone has been at "Tier 1" for 45 days, the row highlights — that means nobody mailed the statement or nobody logged it. Catch process breakdowns before they become write-offs.</p>
+
+      <p><strong>Tab 4 — Payment Plan Monitor:</strong> For patients on payment plans: monthly amount, due date, payment history, and a "missed payment" flag. If a patient misses two consecutive payments, the plan is flagged for review — don't let a $50/month plan turn into a $600 balance that's 6 months delinquent.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>15-minute Monday routine:</strong> Open the dashboard. Sort Tab 1 by "Days Since Last Contact" descending. Mail Tier 1 statements for anyone past 30 days (10 min). Send Tier 2 texts for anyone at day 14 with no payment (3 min). Note the 2-3 Tier 3 calls your office manager needs to make this week (2 min). Done. The folder stays empty and the 90+ day column stays small.</p>
+      </div>
+
+      <h2>When to Send to Collections (And When to Just Write It Off)</h2>
+      <p>Not every balance is worth chasing — and not every chase-worthy balance should go to collections. Use this decision tree:</p>
+
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr><th>Balance Amount</th><th>Action</th><th>Timeline</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Under $75</strong></td>
+              <td>Write off after Tiers 1-2. Collection agencies won't accept balances this small, and the staff time to work them exceeds the recovery.</td>
+              <td>At 90 days</td>
+            </tr>
+            <tr>
+              <td><strong>$75–$300</strong></td>
+              <td>Run all 3 tiers. One final goodwill call at day 85. If no payment plan or dispute, send to collections at day 90 — but ONLY if there's documented Tier 1 AND Tier 2 contact.</td>
+              <td>90 days</td>
+            </tr>
+            <tr>
+              <td><strong>Over $300</strong></td>
+              <td>Run all 3 tiers. At day 75, escalate to office manager for a personal goodwill call. Offer a payment plan before mentioning collections. If no resolution, send to collections at day 120 — never before.</td>
+              <td>120 days</td>
+            </tr>
+            <tr>
+              <td><strong>Patient disputes the charge</strong></td>
+              <td>Pull the EOB immediately. If the charge is correct, explain the insurance adjustment clearly. If it's an error, adjust it. Never send a disputed balance to collections — it will backfire and the patient will never return.</td>
+              <td>Resolve before aging</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>The golden rule:</strong> Never send a patient balance to collections without documented attempts at all three tiers. If a patient files a complaint and you can't show that you mailed a statement, sent a text, AND made a phone call, the collection will be reversed and your practice will look predatory. Document everything in the dashboard.</p>
+
+      <h2>Text and Email Templates Your Front Desk Can Use Today</h2>
+
+      <h3>Tier 2 Text Reminder (Send 14 days after statement)</h3>
+      <div class="callout">
+        <p style="margin:0;font-family:monospace;font-size:15px;">Hi {{Patient First Name}}, this is {{Practice Name}}. We sent a statement for your balance of ${{Amount}} from your visit on {{Date of Service}}. You can view and pay online here: {{Payment Link}}. If you have questions about this balance or need to set up a payment plan, just reply to this text or call us at {{Phone}}. No rush — we just want to make sure you got the statement. Thanks!</p>
+      </div>
+
+      <h3>Tier 2 Email Reminder (Alternative to text — send same day)</h3>
+      <div class="callout">
+        <p style="margin:0;font-family:monospace;font-size:15px;">Subject: Quick note about your {{Practice Name}} balance<br><br>Hi {{Patient First Name}},<br><br>I wanted to make sure the statement we mailed reached you — mail has a way of disappearing. Your balance from {{Date of Service}} is ${{Amount}} and you can take care of it online here: {{Payment Link}}.<br><br>If you'd prefer to set up monthly payments instead of paying all at once, just reply to this email and I'll get that arranged. No problem at all.<br><br>If you believe this balance isn't correct, please let me know — I'd rather get it right than just collect it.<br><br>Thanks,<br>{{Staff Name}}<br>{{Practice Name}}<br>{{Phone}}</p>
+      </div>
+
+      <h2>How to Set This Up Without Buying Software</h2>
+      <p>The complete system — dashboard, templates, and workflow — runs on free tools:</p>
+      <ul>
+        <li><strong>Google Sheets</strong> for the A/R aging dashboard. Share it with your office manager and billing lead. The pre-built formulas auto-calculate aging buckets, flag past-due balances, and highlight accounts stuck at a tier for too long.</li>
+        <li><strong>Your practice management system's statement feature</strong> for Tier 1. Most PM systems (Athena, eClinicalWorks, AdvancedMD) can batch-print statements with payment links. If yours can't, mail merge from the spreadsheet.</li>
+        <li><strong>Your front desk's existing phone or Google Voice</strong> for Tier 2 texts. Send them manually from a practice-dedicated Google Voice number — it takes 30 seconds per patient when you batch them on Wednesday afternoons. Or use Twilio ($15-25/month for 200-400 texts) with a simple Zapier automation.</li>
+        <li><strong>A recurring Monday 8:30 AM calendar block</strong> for the 15-minute dashboard review. This is the most important piece. Without the recurring block, the system falls apart in week 3.</li>
+      </ul>
+
+      <p>If you want to fully automate Tiers 1 and 2 — auto-generated statements, scheduled text reminders, dashboard updates — that's exactly the kind of workflow automation Jobs Done Labs builds for medical practices. A custom n8n automation handling all three tiers typically costs $2,000-4,000 in one-time build and recovers $30,000-80,000/year in previously written-off balances. Payback in under 2 months.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>What if a patient says they never received the statement?</h3>
+        <p>This is the most common objection — and it's usually true. Mail gets lost, addresses change, statements get buried. This is exactly why Tier 2 exists. When a patient says "I never got a statement," don't argue. Say: "That happens all the time — let me send you a payment link by text right now so you can see the details. What's the best number?" The text includes the balance, date of service, and a payment link. Problem solved without confrontation.</p>
+
+        <h3>How do I handle a patient who's genuinely unable to pay?</h3>
+        <p>Offer a payment plan immediately — the spreadsheet's Tab 4 is built for this. A $300 balance at $25/month takes a year to clear, but $25/month is $300 more than $0. Don't shame the patient. Don't mention collections. Say: "I completely understand — medical bills add up. Would $25 a month work? I can set that up right now and you won't hear from us about this again as long as the payments come through." Document the plan in Tab 4 and flag it for monitoring.</p>
+
+        <h3>Won't patients get annoyed by collection texts?</h3>
+        <p>Not if the tone is right. The template above reads like a helpful reminder from a practice administrator, not a collections notice. It includes "No rush" and an invitation to ask questions. Practices that use this exact template report fewer complaints than when they made phone calls — patients <em>prefer</em> a low-pressure text they can handle on their own time over an unexpected phone call during work hours. Just don't send more than two texts total (initial + one follow-up 14 days later).</p>
+
+        <h3>What's the difference between this and what a billing service does?</h3>
+        <p>A billing service handles insurance claims — coding, submission, denial follow-up. Most billing services explicitly exclude patient balance collection from their scope, or charge an additional percentage (typically 5-8% of collections) for it. This system fills the gap between "insurance paid their portion" and "the practice actually received the patient's portion." It's the last mile of the revenue cycle, and it's the mile most practices never run.</p>
+      </section>
+
+      <div class="cta-box">
+        <h2>Stop writing off patient balances that would have paid</h2>
+        <p>If your practice is carrying six figures in patient A/R and the monthly aging report goes into a drawer unread, this system will change that in one Monday morning session. And if you want the whole thing automated — statements, texts, dashboard updates, and escalation triggers — that's what we build.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/patient-payment-plan-tracking-spreadsheet-medical-practice-free/" style="font-weight:600;color:#1466FF;text-decoration:none">14 Months Ago a Patient Signed Your $50/Month Payment Agreement. She Hasn't Paid Since — Here's the Free Tracker.</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/medical-claims-denial-appeal-tracking-spreadsheet-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Practice Wrote Off $87,000 in Denied Claims Last Year. Here's the Free Appeal Tracker That Turns Denials Into Paid Claims.</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/manual-prior-authorization-workflow-small-practice/" style="font-weight:600;color:#1466FF;text-decoration:none">16 Hours a Week on Prior Authorizations and You Still Can't Afford the Software — The Manual PA Workflow</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>

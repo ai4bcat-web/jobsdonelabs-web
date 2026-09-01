@@ -9022,6 +9022,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Collect Patient Balances Without Calling Everyone — The Free Collection System for Medical Practices
+
 Your Practice Wrote Off $87,000 in Denied Claims Last Year — Free Appeal Tracker Spreadsheet
 
 Cut Insurance Verification Time in Half: A Front Desk Workflow That Doesn't Cost $900/Month
@@ -10684,6 +10686,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Collect Patient Balances Without Calling Everyone — The Free Collection System for Medical Practices
 
 Patient Payment Plan Tracker — Free Spreadsheet for Medical Practices
 
@@ -13504,6 +13508,263 @@ URL: https://www.jobsdonelabs.ai/blog/organize-load-confirmations-without-tms/
 
 ---
 
+# Collect Patient Balances Without Calling Everyone
+
+Healthcare & Medical Practices
+
+Collect Patient Balances Without Calling Everyone
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 1, 2026
+
+Key takeaways
+
+60% of patient balances over 90 days are never collected — not because patients won't pay, but because nobody in the practice wants to make the call. This free 3-tier collection system replaces awkward phone calls with automated statements and text reminders, escalates only when necessary, and includes an A/R aging dashboard that flags accounts before they become write-offs.
+
+The $127,000 Problem Hiding in Your A/R Aging Report
+
+Here's how it happens at nearly every small medical practice. The A/R aging report prints automatically on the first of the month. Your office manager glances at the 90+ day column, sees a number that makes her stomach drop, and slides the report into a folder. That folder goes into a drawer. And that drawer doesn't get opened again until the accountant asks for it at year-end — by which point those balances are 12 months old, half the patients have changed phone numbers, and collection agencies won't touch them.
+
+The numbers are brutal. A 3-provider primary care practice typically carries $80,000 to $150,000 in patient balances over 90 days at any given time. Of that, roughly 60% — $48,000 to $90,000 — will never be collected. Not because the patients can't pay. Because
+
+nobody asked them to
+
+Why "just call them" fails every time:
+
+The front desk is checking in patients — they can't make collection calls while a waiting room fills up.
+
+The billing manager is working denied claims — those have 30-day appeal windows; patient balances don't.
+
+The office manager has 14 other priorities — and "calling people to ask for money" is the part of the job everyone hates.
+
+When someone finally does call, it's 5:30 PM and the patient is driving home from work — they promise to "look at the statement and call back." They never do.
+
+This isn't a staffing problem. It's a
+
+process
+
+problem. The practices that collect 80%+ of patient balances don't have more staff — they have a system that doesn't depend on someone finding the emotional energy to make uncomfortable phone calls all afternoon.
+
+The 3-Tier Patient Balance Collection System
+
+This system replaces the "call everyone" approach with escalating touchpoints. Most patients pay at Tier 1 or 2 — without ever speaking to a human. Your staff only makes phone calls for the small subset of balances that reach Tier 3, and by then the patient has already received two reminders.
+
+Tier
+
+Trigger
+
+Action
+
+Staff Time
+
+1 — Statement
+
+Day 1 (balance ages past 30 days)
+
+Mail paper statement with tear-off payment stub + payment portal link. Include a handwritten "Questions? Call us" note — this alone improves response rates by 30%.
+
+2 min per statement
+
+2 — Text Reminder
+
+Day 14 (no payment received)
+
+Send a brief, friendly text: "Hi [Name], this is [Practice Name]. We sent a statement for your balance of $[amount] from [date of service]. You can pay online at [link] or call us at [number] if you have questions. Thanks!"
+
+30 sec per patient (batch via template)
+
+3 — Phone Call
+
+Day 28 (no payment, balance over $200)
+
+One personal phone call. Script below. If no answer, leave voicemail with callback number and payment link. This is the ONLY tier that requires a live conversation — and by this point, 60-70% of patients have already paid.
+
+3-5 min per call
+
+Why Tiers 1 and 2 work
+
+Most patients don't pay their medical bills because of avoidance, not inability. The statement arrives in a stack of mail, gets set aside "for later," and disappears. The text reminder — arriving at 10 AM on a Tuesday when they're at their desk — is the nudge that converts. It's low-friction, non-confrontational, and gives them a one-click payment link. Practices that add Tier 2 texts see payment rates jump from ~35% (statement-only) to ~65% within 30 days.
+
+The Phone Call Script (When Tier 3 Is Actually Necessary)
+
+When a balance reaches Tier 3, the call shouldn't feel like a collections agency. It should feel like a practice administrator helping a patient resolve something they forgot about. Here's the script your team can use verbatim:
+
+Tier 3 Phone Script — Under 3 Minutes
+
+Opening (friendly, not collections-y):
+
+"Hi [Patient Name], this is [Name] from [Practice Name]. I'm calling about a balance from your visit on [date]. I wanted to make sure you received the statement we mailed — sometimes these get lost."
+
+Pause and listen.
+
+Let them respond. They'll usually say "Oh, I'm sorry, I completely forgot." This is your opening.
+
+Offer options, not demands:
+
+"No problem at all — it happens. The balance is $[amount]. Would you like to take care of it now over the phone, or would a payment plan be easier? We can split it into monthly payments if that helps."
+
+Handle objections:
+
+"If there's a reason you think this balance isn't correct, I can pull up the EOB from your insurance and we can go through it together. I'd rather get it right than just collect it."
+
+Close with a clear next step:
+
+If they pay — "Thank you, you'll get a receipt by email in the next few minutes." If they don't — "I'll send you a payment link by text right now — no pressure, just whenever you're ready."
+
+The Free A/R Aging Dashboard (Your Monday Morning Command Center)
+
+The spreadsheet that comes with this guide replaces the ignored monthly report with a living document you check for 15 minutes every Monday. It has four tabs:
+
+Tab 1 — Patient Balance Ledger:
+
+Every patient with an outstanding balance, last payment date, balance amount, insurance-adjusted amount, patient-responsible amount, current collection tier, and last contact date. Sort by "Days Since Last Contact" to see who's been sitting untouched.
+
+Tab 2 — Aging Summary:
+
+Auto-calculated totals by bucket (0-30, 31-60, 61-90, 90+ days). The 90+ day column turns red when it exceeds 15% of total A/R — that's your signal that the system isn't being worked.
+
+Tab 3 — Collection Tier Tracker:
+
+Shows exactly which patients are in which tier and how long they've been there. If someone has been at "Tier 1" for 45 days, the row highlights — that means nobody mailed the statement or nobody logged it. Catch process breakdowns before they become write-offs.
+
+Tab 4 — Payment Plan Monitor:
+
+For patients on payment plans: monthly amount, due date, payment history, and a "missed payment" flag. If a patient misses two consecutive payments, the plan is flagged for review — don't let a $50/month plan turn into a $600 balance that's 6 months delinquent.
+
+15-minute Monday routine:
+
+Open the dashboard. Sort Tab 1 by "Days Since Last Contact" descending. Mail Tier 1 statements for anyone past 30 days (10 min). Send Tier 2 texts for anyone at day 14 with no payment (3 min). Note the 2-3 Tier 3 calls your office manager needs to make this week (2 min). Done. The folder stays empty and the 90+ day column stays small.
+
+When to Send to Collections (And When to Just Write It Off)
+
+Not every balance is worth chasing — and not every chase-worthy balance should go to collections. Use this decision tree:
+
+Balance Amount
+
+Action
+
+Timeline
+
+Under $75
+
+Write off after Tiers 1-2. Collection agencies won't accept balances this small, and the staff time to work them exceeds the recovery.
+
+At 90 days
+
+$75–$300
+
+Run all 3 tiers. One final goodwill call at day 85. If no payment plan or dispute, send to collections at day 90 — but ONLY if there's documented Tier 1 AND Tier 2 contact.
+
+90 days
+
+Over $300
+
+Run all 3 tiers. At day 75, escalate to office manager for a personal goodwill call. Offer a payment plan before mentioning collections. If no resolution, send to collections at day 120 — never before.
+
+120 days
+
+Patient disputes the charge
+
+Pull the EOB immediately. If the charge is correct, explain the insurance adjustment clearly. If it's an error, adjust it. Never send a disputed balance to collections — it will backfire and the patient will never return.
+
+Resolve before aging
+
+The golden rule:
+
+Never send a patient balance to collections without documented attempts at all three tiers. If a patient files a complaint and you can't show that you mailed a statement, sent a text, AND made a phone call, the collection will be reversed and your practice will look predatory. Document everything in the dashboard.
+
+Text and Email Templates Your Front Desk Can Use Today
+
+Tier 2 Text Reminder (Send 14 days after statement)
+
+Hi {{Patient First Name}}, this is {{Practice Name}}. We sent a statement for your balance of ${{Amount}} from your visit on {{Date of Service}}. You can view and pay online here: {{Payment Link}}. If you have questions about this balance or need to set up a payment plan, just reply to this text or call us at {{Phone}}. No rush — we just want to make sure you got the statement. Thanks!
+
+Tier 2 Email Reminder (Alternative to text — send same day)
+
+Subject: Quick note about your {{Practice Name}} balance
+
+Hi {{Patient First Name}},
+
+I wanted to make sure the statement we mailed reached you — mail has a way of disappearing. Your balance from {{Date of Service}} is ${{Amount}} and you can take care of it online here: {{Payment Link}}.
+
+If you'd prefer to set up monthly payments instead of paying all at once, just reply to this email and I'll get that arranged. No problem at all.
+
+If you believe this balance isn't correct, please let me know — I'd rather get it right than just collect it.
+
+Thanks,
+
+{{Staff Name}}
+
+{{Practice Name}}
+
+{{Phone}}
+
+How to Set This Up Without Buying Software
+
+The complete system — dashboard, templates, and workflow — runs on free tools:
+
+Google Sheets
+
+for the A/R aging dashboard. Share it with your office manager and billing lead. The pre-built formulas auto-calculate aging buckets, flag past-due balances, and highlight accounts stuck at a tier for too long.
+
+Your practice management system's statement feature
+
+for Tier 1. Most PM systems (Athena, eClinicalWorks, AdvancedMD) can batch-print statements with payment links. If yours can't, mail merge from the spreadsheet.
+
+Your front desk's existing phone or Google Voice
+
+for Tier 2 texts. Send them manually from a practice-dedicated Google Voice number — it takes 30 seconds per patient when you batch them on Wednesday afternoons. Or use Twilio ($15-25/month for 200-400 texts) with a simple Zapier automation.
+
+A recurring Monday 8:30 AM calendar block
+
+for the 15-minute dashboard review. This is the most important piece. Without the recurring block, the system falls apart in week 3.
+
+If you want to fully automate Tiers 1 and 2 — auto-generated statements, scheduled text reminders, dashboard updates — that's exactly the kind of workflow automation Jobs Done Labs builds for medical practices. A custom n8n automation handling all three tiers typically costs $2,000-4,000 in one-time build and recovers $30,000-80,000/year in previously written-off balances. Payback in under 2 months.
+
+Frequently asked questions
+
+What if a patient says they never received the statement?
+
+This is the most common objection — and it's usually true. Mail gets lost, addresses change, statements get buried. This is exactly why Tier 2 exists. When a patient says "I never got a statement," don't argue. Say: "That happens all the time — let me send you a payment link by text right now so you can see the details. What's the best number?" The text includes the balance, date of service, and a payment link. Problem solved without confrontation.
+
+How do I handle a patient who's genuinely unable to pay?
+
+Offer a payment plan immediately — the spreadsheet's Tab 4 is built for this. A $300 balance at $25/month takes a year to clear, but $25/month is $300 more than $0. Don't shame the patient. Don't mention collections. Say: "I completely understand — medical bills add up. Would $25 a month work? I can set that up right now and you won't hear from us about this again as long as the payments come through." Document the plan in Tab 4 and flag it for monitoring.
+
+Won't patients get annoyed by collection texts?
+
+Not if the tone is right. The template above reads like a helpful reminder from a practice administrator, not a collections notice. It includes "No rush" and an invitation to ask questions. Practices that use this exact template report fewer complaints than when they made phone calls — patients
+
+prefer
+
+a low-pressure text they can handle on their own time over an unexpected phone call during work hours. Just don't send more than two texts total (initial + one follow-up 14 days later).
+
+What's the difference between this and what a billing service does?
+
+A billing service handles insurance claims — coding, submission, denial follow-up. Most billing services explicitly exclude patient balance collection from their scope, or charge an additional percentage (typically 5-8% of collections) for it. This system fills the gap between "insurance paid their portion" and "the practice actually received the patient's portion." It's the last mile of the revenue cycle, and it's the mile most practices never run.
+
+Stop writing off patient balances that would have paid
+
+If your practice is carrying six figures in patient A/R and the monthly aging report goes into a drawer unread, this system will change that in one Monday morning session. And if you want the whole thing automated — statements, texts, dashboard updates, and escalation triggers — that's what we build.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+14 Months Ago a Patient Signed Your $50/Month Payment Agreement. She Hasn't Paid Since — Here's the Free Tracker.
+
+Your Practice Wrote Off $87,000 in Denied Claims Last Year. Here's the Free Appeal Tracker That Turns Denials Into Paid Claims.
+
+16 Hours a Week on Prior Authorizations and You Still Can't Afford the Software — The Manual PA Workflow
+
+
+URL: https://www.jobsdonelabs.ai/blog/patient-balance-collection-system-medical-practice-free/
+
+---
+
 # Patient Care Gap Recall Spreadsheet
 
 Your Diabetic Patients Are Overdue for A1C Checks — Here's the Care Gap System That Catches Every One Before Your MIPS Score Tanks
@@ -14456,6 +14717,8 @@ Book a free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Collect Patient Balances Without Calling Everyone — The Free Collection System for Medical Practices
 
 Your Biggest Payer Pays You 22% Less for the Same Office Visit — Free Rate Comparison Spreadsheet
 
