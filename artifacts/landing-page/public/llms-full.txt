@@ -721,6 +721,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your #2 Bestseller Was Out of Stock for 11 Days — Free Stockout Prevention Tracker
+
 You Have $12K in Returns Your Vendors Never Credited — Free RTV Chargeback Tracker
 
 Manual Data Entry Is the Silent Killer of Your E-Commerce Business
@@ -17471,6 +17473,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your #2 Bestseller Was Out of Stock for 11 Days and Nobody Noticed — Free Stockout Prevention Tracker
+
 You Have $12K in Returns Your Vendors Never Credited — Free RTV Chargeback Tracker
 
 Manual Data Entry Is the Silent Killer of Your E-Commerce Business — The 5-Level System (Starting at $0)
@@ -17721,6 +17725,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Your #2 Bestseller Was Out of Stock for 11 Days — Free Stockout Prevention Tracker
 
 Returns Processing Eating Your Time? How E-Commerce Brands Cut Returns Workflow from Hours to Minutes
 
@@ -19760,6 +19766,251 @@ Suppliers Are Late Again and It's Costing $1,000/Week — Free Supplier Scorecar
 
 
 URL: https://www.jobsdonelabs.ai/blog/small-manufacturing-production-scheduling-guide/
+
+---
+
+# Free Stockout Prevention Tracker: Never Run Out Again
+
+Retail & E-Commerce
+
+Your #2 Bestseller Was Out of Stock for 11 Days and Nobody Noticed. Here's the Stockout Prevention Tracker That Fixes It.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 4, 2026
+
+Key takeaways
+
+A single 11-day stockout on a $4,200/month SKU costs $1,540 in lost sales — not counting the customers who switch to competitors and never come back. This free reorder point spreadsheet uses lead time, daily sales velocity, and safety stock to tell you
+
+what
+
+to rebuy
+
+before
+
+the shelf is empty. Add a 5-minute Monday review, ABC item classification, and actual (not quoted) supplier lead times — and you've killed the #1 silent revenue leak in retail.
+
+What a stockout actually costs
+
+The direct math is brutal: a SKU doing $4,200/month that's out of stock for 11 days loses $1,540 in sales you'll never recover. But the real damage runs deeper.
+
+On Amazon, a stockout tanks your Best Sellers Rank and keyword position — and the ranking penalty persists for
+
+weeks
+
+after you restock because the algorithm treats your listing as unreliable. On Shopify, repeat customers who hit an "out of stock" page open a competitor's tab and often never come back. Across both channels, stockouts tell the marketplace that your product isn't reliable — and algorithms penalize unreliability.
+
+The hidden multiplier:
+
+A customer who buys from you every 6 weeks and hits a stockout on week 6 doesn't just skip one order. They find a substitute, and if that substitute arrives on time and works fine, you've lost
+
+permanent
+
+repeat revenue — not just $1,540 from one incident. The lifetime value of that customer evaporates because of a spreadsheet you didn't have.
+
+For a small retailer with 50-100 SKUs, stockouts typically drain 5-10% of potential annual revenue — quietly, invisibly, because nobody's tracking what
+
+would have sold
+
+if the shelf weren't empty.
+
+The free stockout prevention spreadsheet
+
+You don't need inventory software to stop stockouts. You need a spreadsheet that answers one question every Monday morning:
+
+which SKUs need a purchase order right now?
+
+Here's what the spreadsheet tracks, per SKU:
+
+Product name and SKU code
+
+— link to your catalog
+
+Supplier
+
+— with contact info and typical minimum order quantity
+
+Lead time (actual, not quoted)
+
+— more on this below, but track real days-to-delivery, not the supplier's brochure number
+
+Average daily sales
+
+— calculated from your last 90 days of order data
+
+Current stock on hand
+
+— updated weekly (or daily for A-items)
+
+Reorder point
+
+— formula: (avg daily sales × lead time) + safety stock
+
+Days of stock remaining
+
+— current stock ÷ avg daily sales
+
+Action status
+
+— green (OK), yellow (REORDER NOW — at or below reorder point), red (CRITICAL — less than 3 days of stock remaining)
+
+Safety stock calculator:
+
+For a new product with uncertain demand, set safety stock at 50% of lead-time demand. Example: 3 units/day × 7-day lead time = 21 units of lead-time demand. Safety stock = 10 units. Reorder point = 21 + 10 = 31 units. After 3-4 reorder cycles, adjust safety stock based on actual sales variance — if demand is steady, drop to 25%; if it swings by 40% month-to-month, keep it at 50% or higher.
+
+Conditional formatting is the engine.
+
+Set the "Days of stock" column to highlight yellow at ≤7 days and red at ≤3 days. When you open the sheet Monday morning, your eyes go straight to the red cells — those are the SKUs that need a purchase order
+
+today
+
+. No scanning 50 rows; the color does the triage.
+
+ABC analysis: protect your A-items first
+
+Not all stockouts are equal. Running out of your #2 bestseller costs $1,540 in 11 days. Running out of SKU #47 — which sells 2 units a month — is a rounding error. The spreadsheet needs to know the difference.
+
+ABC analysis ranks every SKU by revenue contribution:
+
+A-items (top 20% of SKUs, ~80% of revenue):
+
+Never stock out. Review inventory weekly, build extra safety stock. These are your business — protect them first.
+
+B-items (middle 30%, ~15% of revenue):
+
+Monitor bi-weekly. Stockouts are painful but recoverable. Standard safety stock is fine.
+
+C-items (bottom 50%, ~5% of revenue):
+
+Stockout acceptable. Reorder when convenient, not urgent. Don't tie up cash in safety stock for SKUs that barely move.
+
+How to run ABC analysis in 15 minutes
+
+Export your last 90 days of sales by SKU (your e-commerce platform can do this)
+
+Sort by total revenue, highest to lowest
+
+Add a "cumulative revenue %" column — each row's revenue as a percentage of total
+
+Assign A to SKUs that make up the first 80% of cumulative revenue, B to the next 15%, C to the remainder
+
+Recalculate quarterly — product mixes shift, and last quarter's B-item might be this quarter's A-item
+
+Once classified, add the ABC tier to your reorder point spreadsheet. Now Monday morning's review tells you not just
+
+what
+
+to reorder, but
+
+what matters most
+
+The 5-minute weekly review
+
+The spreadsheet is only as good as the review cadence. Here's the routine that makes it work:
+
+Monday morning, 5 minutes.
+
+Open the sheet. Sort by "days of stock remaining," ascending. The red and yellow rows are at the top.
+
+For every yellow or red A-item:
+
+Place a purchase order immediately. Don't wait for the supplier's email — initiate.
+
+For B-items in yellow:
+
+Place a PO this week. For B-items in red: PO today.
+
+For C-items:
+
+Note them. Place POs when you have a batch order that meets the supplier's minimum. A stockout on a C-item is acceptable — don't pay rush shipping for an SKU that generates $50/month.
+
+Fifty SKUs, five minutes. The key is doing it
+
+every week
+
+— not "when you remember." Put it on your calendar. Monday at 9 AM. The spreadsheet does the math; your job is to act on the colors.
+
+Lead time is the hidden killer
+
+Most stockout prevention advice says "use the supplier's quoted lead time." But a supplier who quotes 7 days and consistently delivers in 10-14 will stock you out every single time — because your reorder point was calculated around 7 days, and 10 days of demand already cleared your safety stock by the time goods arrive.
+
+Track actual lead times, not quoted.
+
+In your spreadsheet, add two columns: "PO date" and "goods received date." After 3-4 orders from the same supplier, calculate the real average. You'll typically find it's 30-50% longer than the quote. Adjust your reorder point to use the
+
+actual
+
+number.
+
+Real example:
+
+A Shopify seller's main supplier quoted "5-7 business days." Actual tracking over 6 orders: 9, 11, 8, 10, 13, and 9 days. Average: 10 days. The seller was planning around 7 days — meaning every reorder was 3 days late. Those 3 days burned through the safety stock, causing 4 stockouts in 6 months. Fixing the lead-time number in the spreadsheet eliminated stockouts without changing anything else.
+
+Update lead times quarterly. Suppliers change — shipping lanes shift, production schedules fill up, and the quote from 18 months ago is no longer accurate. The spreadsheet stays current when the numbers stay current.
+
+When to graduate from spreadsheets to inventory software
+
+The free reorder point spreadsheet handles 50-100 SKUs effortlessly. But it's not forever. Here are the three signals that say it's time to upgrade:
+
+100+ active SKUs across multiple channels.
+
+When the Monday review takes more than an hour because you're cross-referencing Shopify, Amazon, and Etsy inventory levels, the spreadsheet's manual data entry is costing more than a $50-200/month tool would.
+
+Multi-warehouse or 3PL inventory.
+
+The spreadsheet works for one location. The moment you're splitting inventory across warehouses, FBA, and a 3PL — and need real-time sync — you need software.
+
+Stockouts or over-ordering cost you $1,000+/month.
+
+If the spreadsheet is catching 90% of problems but the 10% it misses still bleeds four figures a month, the software pays for itself in prevented losses alone.
+
+Until you hit one of these thresholds: the spreadsheet is free, it works, and it's better than what 80% of small retailers are doing right now (which is nothing — guessing when to reorder based on memory and shelf glances).
+
+Frequently asked questions
+
+How is a reorder point spreadsheet different from my e-commerce platform's low-stock alerts?
+
+Platform alerts are reactive — they tell you when stock is already low and you might be too late. A reorder point spreadsheet is proactive: it calculates how many days of stock remain based on
+
+your actual sales velocity
+
+and tells you to reorder
+
+before
+
+the low-stock alert triggers. The difference is the lead-time buffer. If your supplier takes 10 days and your platform alerts at 5 units, you're already 5 days into a stockout by the time goods arrive. The spreadsheet catches it at 10+ days of buffer.
+
+What if my sales are seasonal? Won't the reorder point be wrong half the year?
+
+Use a rolling 90-day average for daily sales velocity, recalculated monthly. During Q4 holiday spikes, the 90-day window naturally captures the ramp-up. During January lulls, it captures the slowdown. If your business has extreme seasonality (e.g., 70% of revenue in 8 weeks), create a separate "peak season" version of the spreadsheet with higher safety stock and shorter review intervals — switch to it 2 weeks before the season starts.
+
+Do I need separate spreadsheets for FBA inventory vs. my own warehouse?
+
+Start with separate tabs in the same spreadsheet — one for FBA, one for your warehouse or 3PL. The formulas are identical; the inventory counts and lead times differ. FBA lead times include the time it takes Amazon to check in and distribute your inventory across fulfillment centers, which adds 3-7 days beyond supplier shipping time. Factor that into your FBA-tab lead time.
+
+Can I use this for a wholesale or B2B business?
+
+Yes, but with one adjustment: wholesale orders tend to be lumpy — one $5,000 PO from a retailer rather than 50 individual consumer orders. Replace "average daily sales" with "average weekly sales" and set your review cadence to weekly. For businesses where a single large PO can deplete inventory instantly, add a "max single-order quantity" column and set a trigger: if any pending order is >50% of current stock, flag it for immediate review regardless of the reorder point calculation.
+
+Stop guessing when to reorder
+
+The free spreadsheet is your first line of defense. But if you're managing inventory across Shopify, Amazon, and a 3PL — and the Monday review is creeping past 30 minutes — we build automated reorder alert systems that pull live data from every channel and tell you what to buy before you run out. No software pitch, no lock-in. Just automation that works.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Returns Processing Eating Your Time? How E-Commerce Brands Cut Returns Workflow from Hours to Minutes
+
+Amazon Took $15,000 in Fees Last Quarter and You Can't Explain Where It Went — Here's the Free Reconciliation System
+
+You Have $12,000 in Defective Product Sitting in Your Returns Corner — and Half the RMAs Have Already Expired. Here's the Free Tracker That Gets Your Money Back
+
+
+URL: https://www.jobsdonelabs.ai/blog/stockout-prevention-reorder-point-spreadsheet-retail-free/
 
 ---
 

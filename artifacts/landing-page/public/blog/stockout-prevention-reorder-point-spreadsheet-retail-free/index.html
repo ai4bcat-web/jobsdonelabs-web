@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Stockout Prevention Tracker: Never Run Out Again | Jobs Done Labs</title>
+  <meta name="description" content="Your bestseller out of stock for 11 days = $1,540 lost. Free reorder point spreadsheet: ABC analysis, safety stock, auto-alerts. Never miss a restock again." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/stockout-prevention-reorder-point-spreadsheet-retail-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/stockout-prevention-reorder-point-spreadsheet-retail-free/" />
+  <meta property="og:title" content="Free Stockout Prevention Tracker: Never Run Out Again | Jobs Done Labs" />
+  <meta property="og:description" content="Your bestseller out of stock for 11 days = $1,540 lost. Free reorder point spreadsheet: ABC analysis, safety stock, auto-alerts. Never miss a restock again." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Stockout Prevention Tracker: Never Run Out Again | Jobs Done Labs" />
+  <meta name="twitter:description" content="Your bestseller out of stock for 11 days = $1,540 lost. Free reorder point spreadsheet: ABC analysis, safety stock, auto-alerts. Never miss a restock again." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <!-- ARTICLE JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your #2 Bestseller Was Out of Stock for 11 Days and Nobody Noticed. Here's the Stockout Prevention Tracker That Fixes It.",
+    "description": "Your bestseller out of stock for 11 days = $1,540 lost. Free reorder point spreadsheet: ABC analysis, safety stock, auto-alerts. Never miss a restock again.",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/"
+    },
+    "datePublished": "2026-09-04",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai"
+    }
+  }
+  </script>
+  <!-- FAQPAGE JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I prevent stockouts without inventory software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a free reorder point spreadsheet. For each SKU, track: supplier, lead time in days, average daily sales, current stock, and a reorder point calculated as (lead time × daily sales) + safety stock. When current stock drops below the reorder point, place a purchase order immediately. A 30-minute Monday review of 50 SKUs replaces the need for inventory software until you exceed roughly 100 active SKUs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a stockout actually cost a small retail business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A single 11-day stockout on a SKU that generates $4,200/month costs roughly $1,540 in direct lost sales. But the real cost is higher: lost ranking velocity on marketplaces like Amazon and Etsy, customers who switch to a competitor and never come back, and the opportunity cost of tying up cash in slow-moving inventory instead of restocking bestsellers. For most small retailers, stockouts silently drain 5-10% of potential annual revenue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate reorder points for my products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reorder point = (average daily sales × supplier lead time in days) + safety stock. For example: a SKU selling 3 units/day with a 7-day supplier lead time and 5 units of safety stock needs a reorder point of (3 × 7) + 5 = 26 units. When inventory hits 26, place a reorder. The safety stock buffer accounts for sales spikes and supplier delays — start with 25-50% of lead-time demand and adjust quarterly based on actual performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is ABC inventory analysis and how do I do it in a spreadsheet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ABC analysis ranks your SKUs by revenue contribution: A-items are the top 20% of SKUs generating ~80% of revenue (never stock these out — check weekly), B-items are the middle 30% generating ~15% of revenue (monitor bi-weekly), and C-items are the bottom 50% generating ~5% of revenue (stockout is acceptable, reorder when convenient). In a spreadsheet, sort by total revenue per SKU descending, calculate cumulative revenue %, and assign categories. Recalculate quarterly as product mix shifts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I track supplier lead times to prevent stockouts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Track actual lead times, not the supplier's quoted lead time. In your reorder point spreadsheet, add a column that records the date each PO was placed and the date goods actually arrived. After 3-4 orders from the same supplier, you'll have a realistic average — which is often 30-50% longer than the quote. Adjust your reorder point calculation quarterly using the actual average lead time. A supplier who quotes 7 days but consistently delivers in 10-14 will stock you out every time if you plan around 7."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I switch from spreadsheets to inventory management software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Three signals: (1) you're managing 100+ active SKUs across multiple sales channels and the weekly review takes more than 1 hour, (2) you have inventory in multiple warehouses or 3PL locations and need real-time sync, or (3) you're losing more than $1,000/month to stockouts or over-ordering that the spreadsheet isn't catching. Until you hit one of these thresholds, a well-maintained reorder point spreadsheet is free and works — software at $50-200/month only pays for itself when the spreadsheet's manual overhead exceeds the subscription cost."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- BREADCRUMBLIST JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.jobsdonelabs.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.jobsdonelabs.ai/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Free Stockout Prevention Tracker: Never Run Out Again"
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="/og-image.jpg" alt="Stockout prevention reorder point spreadsheet — free inventory management template for small retailers" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Retail &amp; E-Commerce</span>
+      <h1>Your #2 Bestseller Was Out of Stock for 11 Days and Nobody Noticed. Here's the Stockout Prevention Tracker That Fixes It.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · September 4, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A single 11-day stockout on a $4,200/month SKU costs $1,540 in lost sales — not counting the customers who switch to competitors and never come back. This free reorder point spreadsheet uses lead time, daily sales velocity, and safety stock to tell you <em>what</em> to rebuy <em>before</em> the shelf is empty. Add a 5-minute Monday review, ABC item classification, and actual (not quoted) supplier lead times — and you've killed the #1 silent revenue leak in retail.</p>
+      </div>
+
+      <h2>What a stockout actually costs</h2>
+
+      <p>The direct math is brutal: a SKU doing $4,200/month that's out of stock for 11 days loses $1,540 in sales you'll never recover. But the real damage runs deeper.</p>
+
+      <p>On Amazon, a stockout tanks your Best Sellers Rank and keyword position — and the ranking penalty persists for <em>weeks</em> after you restock because the algorithm treats your listing as unreliable. On Shopify, repeat customers who hit an "out of stock" page open a competitor's tab and often never come back. Across both channels, stockouts tell the marketplace that your product isn't reliable — and algorithms penalize unreliability.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The hidden multiplier:</strong> A customer who buys from you every 6 weeks and hits a stockout on week 6 doesn't just skip one order. They find a substitute, and if that substitute arrives on time and works fine, you've lost <em>permanent</em> repeat revenue — not just $1,540 from one incident. The lifetime value of that customer evaporates because of a spreadsheet you didn't have.</p>
+      </div>
+
+      <p>For a small retailer with 50-100 SKUs, stockouts typically drain 5-10% of potential annual revenue — quietly, invisibly, because nobody's tracking what <em>would have sold</em> if the shelf weren't empty.</p>
+
+      <h2>The free stockout prevention spreadsheet</h2>
+
+      <p>You don't need inventory software to stop stockouts. You need a spreadsheet that answers one question every Monday morning: <em>which SKUs need a purchase order right now?</em></p>
+
+      <p>Here's what the spreadsheet tracks, per SKU:</p>
+
+      <ul>
+        <li><strong>Product name and SKU code</strong> — link to your catalog</li>
+        <li><strong>Supplier</strong> — with contact info and typical minimum order quantity</li>
+        <li><strong>Lead time (actual, not quoted)</strong> — more on this below, but track real days-to-delivery, not the supplier's brochure number</li>
+        <li><strong>Average daily sales</strong> — calculated from your last 90 days of order data</li>
+        <li><strong>Current stock on hand</strong> — updated weekly (or daily for A-items)</li>
+        <li><strong>Reorder point</strong> — formula: (avg daily sales × lead time) + safety stock</li>
+        <li><strong>Days of stock remaining</strong> — current stock ÷ avg daily sales</li>
+        <li><strong>Action status</strong> — green (OK), yellow (REORDER NOW — at or below reorder point), red (CRITICAL — less than 3 days of stock remaining)</li>
+      </ul>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Safety stock calculator:</strong> For a new product with uncertain demand, set safety stock at 50% of lead-time demand. Example: 3 units/day × 7-day lead time = 21 units of lead-time demand. Safety stock = 10 units. Reorder point = 21 + 10 = 31 units. After 3-4 reorder cycles, adjust safety stock based on actual sales variance — if demand is steady, drop to 25%; if it swings by 40% month-to-month, keep it at 50% or higher.</p>
+      </div>
+
+      <p><strong>Conditional formatting is the engine.</strong> Set the "Days of stock" column to highlight yellow at ≤7 days and red at ≤3 days. When you open the sheet Monday morning, your eyes go straight to the red cells — those are the SKUs that need a purchase order <em>today</em>. No scanning 50 rows; the color does the triage.</p>
+
+      <h2>ABC analysis: protect your A-items first</h2>
+
+      <p>Not all stockouts are equal. Running out of your #2 bestseller costs $1,540 in 11 days. Running out of SKU #47 — which sells 2 units a month — is a rounding error. The spreadsheet needs to know the difference.</p>
+
+      <p>ABC analysis ranks every SKU by revenue contribution:</p>
+
+      <ul>
+        <li><strong>A-items (top 20% of SKUs, ~80% of revenue):</strong> Never stock out. Review inventory weekly, build extra safety stock. These are your business — protect them first.</li>
+        <li><strong>B-items (middle 30%, ~15% of revenue):</strong> Monitor bi-weekly. Stockouts are painful but recoverable. Standard safety stock is fine.</li>
+        <li><strong>C-items (bottom 50%, ~5% of revenue):</strong> Stockout acceptable. Reorder when convenient, not urgent. Don't tie up cash in safety stock for SKUs that barely move.</li>
+      </ul>
+
+      <div class="checklist">
+        <h3>How to run ABC analysis in 15 minutes</h3>
+        <ol>
+          <li>Export your last 90 days of sales by SKU (your e-commerce platform can do this)</li>
+          <li>Sort by total revenue, highest to lowest</li>
+          <li>Add a "cumulative revenue %" column — each row's revenue as a percentage of total</li>
+          <li>Assign A to SKUs that make up the first 80% of cumulative revenue, B to the next 15%, C to the remainder</li>
+          <li>Recalculate quarterly — product mixes shift, and last quarter's B-item might be this quarter's A-item</li>
+        </ol>
+      </div>
+
+      <p>Once classified, add the ABC tier to your reorder point spreadsheet. Now Monday morning's review tells you not just <em>what</em> to reorder, but <em>what matters most</em>.</p>
+
+      <h2>The 5-minute weekly review</h2>
+
+      <p>The spreadsheet is only as good as the review cadence. Here's the routine that makes it work:</p>
+
+      <ol>
+        <li><strong>Monday morning, 5 minutes.</strong> Open the sheet. Sort by "days of stock remaining," ascending. The red and yellow rows are at the top.</li>
+        <li><strong>For every yellow or red A-item:</strong> Place a purchase order immediately. Don't wait for the supplier's email — initiate.</li>
+        <li><strong>For B-items in yellow:</strong> Place a PO this week. For B-items in red: PO today.</li>
+        <li><strong>For C-items:</strong> Note them. Place POs when you have a batch order that meets the supplier's minimum. A stockout on a C-item is acceptable — don't pay rush shipping for an SKU that generates $50/month.</li>
+      </ol>
+
+      <p>Fifty SKUs, five minutes. The key is doing it <em>every week</em> — not "when you remember." Put it on your calendar. Monday at 9 AM. The spreadsheet does the math; your job is to act on the colors.</p>
+
+      <h2>Lead time is the hidden killer</h2>
+
+      <p>Most stockout prevention advice says "use the supplier's quoted lead time." But a supplier who quotes 7 days and consistently delivers in 10-14 will stock you out every single time — because your reorder point was calculated around 7 days, and 10 days of demand already cleared your safety stock by the time goods arrive.</p>
+
+      <p><strong>Track actual lead times, not quoted.</strong> In your spreadsheet, add two columns: "PO date" and "goods received date." After 3-4 orders from the same supplier, calculate the real average. You'll typically find it's 30-50% longer than the quote. Adjust your reorder point to use the <em>actual</em> number.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Real example:</strong> A Shopify seller's main supplier quoted "5-7 business days." Actual tracking over 6 orders: 9, 11, 8, 10, 13, and 9 days. Average: 10 days. The seller was planning around 7 days — meaning every reorder was 3 days late. Those 3 days burned through the safety stock, causing 4 stockouts in 6 months. Fixing the lead-time number in the spreadsheet eliminated stockouts without changing anything else.</p>
+      </div>
+
+      <p>Update lead times quarterly. Suppliers change — shipping lanes shift, production schedules fill up, and the quote from 18 months ago is no longer accurate. The spreadsheet stays current when the numbers stay current.</p>
+
+      <h2>When to graduate from spreadsheets to inventory software</h2>
+
+      <p>The free reorder point spreadsheet handles 50-100 SKUs effortlessly. But it's not forever. Here are the three signals that say it's time to upgrade:</p>
+
+      <ol>
+        <li><strong>100+ active SKUs across multiple channels.</strong> When the Monday review takes more than an hour because you're cross-referencing Shopify, Amazon, and Etsy inventory levels, the spreadsheet's manual data entry is costing more than a $50-200/month tool would.</li>
+        <li><strong>Multi-warehouse or 3PL inventory.</strong> The spreadsheet works for one location. The moment you're splitting inventory across warehouses, FBA, and a 3PL — and need real-time sync — you need software.</li>
+        <li><strong>Stockouts or over-ordering cost you $1,000+/month.</strong> If the spreadsheet is catching 90% of problems but the 10% it misses still bleeds four figures a month, the software pays for itself in prevented losses alone.</li>
+      </ol>
+
+      <p>Until you hit one of these thresholds: the spreadsheet is free, it works, and it's better than what 80% of small retailers are doing right now (which is nothing — guessing when to reorder based on memory and shelf glances).</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>How is a reorder point spreadsheet different from my e-commerce platform's low-stock alerts?</h3>
+        <p>Platform alerts are reactive — they tell you when stock is already low and you might be too late. A reorder point spreadsheet is proactive: it calculates how many days of stock remain based on <em>your actual sales velocity</em> and tells you to reorder <em>before</em> the low-stock alert triggers. The difference is the lead-time buffer. If your supplier takes 10 days and your platform alerts at 5 units, you're already 5 days into a stockout by the time goods arrive. The spreadsheet catches it at 10+ days of buffer.</p>
+
+        <h3>What if my sales are seasonal? Won't the reorder point be wrong half the year?</h3>
+        <p>Use a rolling 90-day average for daily sales velocity, recalculated monthly. During Q4 holiday spikes, the 90-day window naturally captures the ramp-up. During January lulls, it captures the slowdown. If your business has extreme seasonality (e.g., 70% of revenue in 8 weeks), create a separate "peak season" version of the spreadsheet with higher safety stock and shorter review intervals — switch to it 2 weeks before the season starts.</p>
+
+        <h3>Do I need separate spreadsheets for FBA inventory vs. my own warehouse?</h3>
+        <p>Start with separate tabs in the same spreadsheet — one for FBA, one for your warehouse or 3PL. The formulas are identical; the inventory counts and lead times differ. FBA lead times include the time it takes Amazon to check in and distribute your inventory across fulfillment centers, which adds 3-7 days beyond supplier shipping time. Factor that into your FBA-tab lead time.</p>
+
+        <h3>Can I use this for a wholesale or B2B business?</h3>
+        <p>Yes, but with one adjustment: wholesale orders tend to be lumpy — one $5,000 PO from a retailer rather than 50 individual consumer orders. Replace "average daily sales" with "average weekly sales" and set your review cadence to weekly. For businesses where a single large PO can deplete inventory instantly, add a "max single-order quantity" column and set a trigger: if any pending order is >50% of current stock, flag it for immediate review regardless of the reorder point calculation.</p>
+      </section>
+
+      <div class="cta-box">
+        <h2>Stop guessing when to reorder</h2>
+        <p>The free spreadsheet is your first line of defense. But if you're managing inventory across Shopify, Amazon, and a 3PL — and the Monday review is creeping past 30 minutes — we build automated reorder alert systems that pull live data from every channel and tell you what to buy before you run out. No software pitch, no lock-in. Just automation that works.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/returns-processing-time-ecommerce-automation/" style="font-weight:600;color:#1466FF;text-decoration:none">Returns Processing Eating Your Time? How E-Commerce Brands Cut Returns Workflow from Hours to Minutes</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/amazon-seller-fee-reconciliation-spreadsheet-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Amazon Took $15,000 in Fees Last Quarter and You Can't Explain Where It Went — Here's the Free Reconciliation System</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/rtv-return-to-vendor-chargeback-tracking-ecommerce/" style="font-weight:600;color:#1466FF;text-decoration:none">You Have $12,000 in Defective Product Sitting in Your Returns Corner — and Half the RMAs Have Already Expired. Here's the Free Tracker That Gets Your Money Back</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
