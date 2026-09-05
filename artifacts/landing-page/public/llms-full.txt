@@ -2404,6 +2404,249 @@ URL: https://www.jobsdonelabs.ai/blog/construction-daily-report-legal-protection
 
 ---
 
+# Stop Losing Billable Weeks to Client Onboarding
+
+Professional Services
+
+You Finally Closed the Deal — Then Spent 2 Weeks Playing Email Tag Just to Get the Files You Need to Start. Here's the Free Consulting Project Kickoff Checklist That Gets Everything in One Shot.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 5, 2026
+
+Key takeaways
+
+The typical consulting onboarding burns 2 weeks of non-billable time across 14 emails chasing logins, brand assets, stakeholder lists, and past reports. The fix is a single structured intake document sent immediately after contract signing — it recovers $24,000/year in billable time for a consultant billing $250/hr across 12 engagements. Use our free 3-phase kickoff checklist: pre-kickoff scope gathering, kickoff week asset collection, and Week 1 parallel gap-filling. Stop letting onboarding eat your margin before the work even starts.
+
+The 14-Email Problem: Why Client Onboarding Eats Your Margin Before the Work Starts
+
+Every new consulting engagement starts the same way. You send an email asking for five things. The client sends three. You follow up. They send two more — plus a Google Drive link with 47 files, 38 of which are irrelevant. Then on day three you realize you forgot to ask for their brand guidelines. By the time you have everything, the project is already two weeks behind and you still haven't billed a single hour.
+
+This isn't a one-off. It's the structural cost of fragmented client intake. Every back-and-forth email costs 5-10 minutes of context-switching. Across 14 emails, that's 2-3 hours of pure coordination work. Multiply by 12 engagements per year and you're looking at 36+ hours of non-billable admin — the equivalent of an entire workweek that generates exactly zero revenue. At $250/hr, that's $9,000/year evaporating before you even open the first deliverable.
+
+Speed-to-revenue is the real metric.
+
+Every day of onboarding delay is a day you're not billing. A consultant who shortens onboarding from 10 business days to 3 days gains 7 billable days per engagement — at $2,000/day, that's $14,000 in recovered revenue per client.
+
+But the 14-email problem isn't just about lost billable hours. It's also about client experience. Your first interaction after winning the work is a disorganized scramble for information. The client — who just signed a $15,000 engagement — now wonders whether the delivery phase will be equally chaotic. First impressions matter, and a fragmented intake process sends exactly the wrong signal.
+
+The Free Consulting Project Kickoff Checklist: One Document, Everything at Once
+
+The fix isn't more emails or a better follow-up system. The fix is a single structured intake document that asks for everything in one shot — sent immediately after contract signing, with a 48-hour deadline and automated reminders. Clients complete it in one sitting instead of across 14 fragmented emails. You get everything you need on Day 1 instead of Day 14.
+
+The Complete Client Intake Checklist
+
+Section 1: Scope & Engagement Setup
+
+Signed scope of work / statement of work (must-have — no work starts without this)
+
+Engagement start date confirmation
+
+Primary point of contact (name, title, phone, email)
+
+Billing setup: invoicing contact, payment terms, purchase order number if required
+
+Section 2: Access & Credentials
+
+Login credentials for all relevant systems (CRM, analytics, project management, file storage, code repositories)
+
+VPN or remote access instructions if applicable
+
+Slack/Teams channel creation or invitation
+
+WiFi credentials if working on-site
+
+Section 3: Stakeholders & Team
+
+Full stakeholder roster: name, title, role in project, email, phone
+
+Decision-maker identification — who has final sign-off authority?
+
+Key subject matter experts you'll need access to
+
+Communication preferences per stakeholder (email summary, Slack real-time, weekly video call)
+
+Section 4: Brand Assets & Materials
+
+Brand guidelines / style guide (PDF or link)
+
+Logo files (SVG + PNG, full-color + monochrome)
+
+Font files or font stack specifications
+
+Brand color palette (HEX or Pantone values)
+
+Approved imagery / photography library access
+
+Section 5: Past Work & Context
+
+Past relevant deliverables or reports from previous engagements
+
+Any prior analyses, audits, or assessments relevant to this project
+
+Previous consultant's handoff documentation if applicable
+
+Internal documentation or SOPs that inform the work
+
+The "We Can't Start Until" Minimum Viable Intake
+
+The checklist above is comprehensive — but you  don't need everything on Day 1. The secret for fast onboarding is separating must-have from nice-to-have and starting work with the minimum viable information while the rest comes in parallel.
+
+Minimum viable intake — only 3 things before Day 1:
+
+1. Signed scope of work (legal necessity)
+
+2. Login credentials for core systems you'll access in Week 1
+
+3. Stakeholder contact list with roles (so you know who to call)
+
+Everything else — brand assets, past reports, secondary stakeholder preferences — can be gathered in parallel during Week 1 while work begins. The key insight: you don't need the brand guidelines to start auditing their sales process. You need access to the CRM and the stakeholder list. Don't let the absence of nice-to-haves block the must-starts.
+
+This simultaneous-start approach recovers 7-10 business days per engagement. Instead of waiting two weeks for perfect information, you're producing deliverables by Day 5 while the asset collection wraps up in the background. Clients see momentum immediately — which builds trust faster than any kickoff deck ever could.
+
+The Client-Facing Checklist: Send THIS, Not 5 Separate Emails
+
+The intake document is only useful if clients actually fill it out. The standard approach — five emails each asking for a different category — produces a 20-40% completion rate because clients triage emails and the low-priority ones (brand assets, past reports) get buried.
+
+The fix is simple: one document, one link, one deadline. Send a single Google Doc or Notion page with every requested category in one place. The psychology shifts from "I'll get to that email later" to "I'll knock this out in one sitting." Completion rates jump from ~40% to ~85%.
+
+The Client-Facing Intake Email Template (send immediately after contract signing)
+
+Subject:
+
+[Project Name] — Project Kickoff: One Intake Form to Get Us Started
+
+Body:
+
+Hi [Client Contact],
+
+Excited to get started on [Project Name]. To hit the ground running, I've put everything we need into a single intake form — it should take about 20 minutes to complete. You can save your progress and come back to it.
+
+[Link to Intake Document]
+
+Th three things I need before our first working session:
+
+The signed scope of work (attach or confirm)
+
+Login credentials for [System A, System B] (use the secure sharing link in the form)
+
+Your stakeholder roster with contact info and roles
+
+Everything else can come during Week 1 while we get moving — no need to wait for perfect information.
+
+I'll send a reminder at the 24-hour mark if anything's still outstanding. Looking forward to this.
+
+Best,
+
+[Your Name]
+
+The 3-Phase Intake Process: Pre-Kickoff → Kickoff Week → Week 1 Parallel Fill
+
+Most consultants treat onboarding as a single monolithic phase — "we're onboarding until we're not." That's why it drags on for two weeks with no clear endpoint. Breaking intake into three distinct phases creates momentum, sets expectations, and recovers billable time.
+
+Phase
+
+Timing
+
+What Gets Collected
+
+Billable Work Status
+
+Phase 1: Pre-Kickoff
+
+Before contract signing
+
+High-level scope, preliminary stakeholder list, engagement type classification
+
+No billable work yet — this is sales-to-delivery handoff
+
+Phase 2: Kickoff Week
+
+Days 1-5 after signing
+
+Signed SOW, core login credentials, full stakeholder roster, billing setup, brand assets
+
+Discovery work begins with must-have information
+
+Phase 3: Week 1 Parallel
+
+Days 3-7 after signing
+
+Past reports, secondary system access, SME introductions, communication preferences
+
+Full billable work underway
+
+— gaps filled async while deliverables progress
+
+The critical shift happens between Phase 2 and Phase 3: you stop waiting for perfect information to start working. If you have access to the CRM and the stakeholder list, you can begin the sales process audit on Day 2 while the client's brand team uploads the logo files. The two workstreams — intake completion and deliverable production — run in parallel instead of sequentially.
+
+A consultant billing $250/hr who shortens onboarding from 10 days to 3 days gains 7 billable days per engagement. At 12 engagements per year, that's 84 additional billable days — roughly $168,000 in recovered revenue — with zero additional sales effort. The intake process isn't admin overhead; it's revenue acceleration.
+
+Pro tip: Put an onboarding deadline in your contract.
+
+Add one line: "Engagement start date is the later of [contract date] or the date Client completes the Project Kickoff Checklist." When clients understand that delays in their intake delay the deliverables they're paying for, compliance goes from ~40% to ~90% overnight. They stop treating your intake form as optional homework and start treating it as the first step of the project.
+
+Frequently asked questions
+
+What should I ask a new consulting client before starting a project?
+
+Before starting any consulting engagement, collect the signed scope of work, login credentials for all relevant systems, and a stakeholder contact list with roles and communication preferences. Everything else — brand assets, past reports, and detailed requirements — can be gathered in parallel during the first week. The minimum viable intake is three items: signed scope, credentials, and stakeholder roster.
+
+How do I create a client intake checklist for my consulting business?
+
+Build a single client-facing document that asks for everything at once: brand assets (logos, fonts, colors), login credentials (with sharing instructions), past deliverables and reports, full stakeholder list with roles and contact info, preferred communication cadence, billing details, and scope confirmation. Send this as one PDF or Google Doc instead of 5-10 separate emails. Use our free template above as a starting point — customize the categories to your specific engagement type (strategy consulting, implementation, agency creative, or technical advisory).
+
+How do I stop chasing clients for documents and logins?
+
+Replace multiple emails with a single structured intake document. Send it immediately after contract signing and set a 48-hour deadline. Automate reminders — one at 24 hours, one at 48 hours, one escalation to the project sponsor at 72 hours. Add an onboarding deadline to your contract: the engagement clock starts when the client completes their intake, not when the contract is signed. When clients understand that delays cost them billable time, compliance jumps from ~40% to ~90%.
+
+What's the fastest way to onboard a new consulting client?
+
+Use a 3-phase intake process. Phase 1 (pre-kickoff, before contract signing): collect high-level scope and stakeholder list. Phase 2 (kickoff week): gather assets, logins, past reports using a single intake document with a 48-hour deadline. Phase 3 (Week 1): fill gaps in parallel with starting work — don't wait for perfect information. The key is separating must-have (signed scope, credentials, stakeholders) from nice-to-have (brand assets, past reports). Start working with the must-haves; gather the rest alongside. This recovers 7-10 business days per engagement.
+
+How do I prevent onboarding delays from eating into my billable time?
+
+Three fixes: First, include an onboarding deadline in your contract — the engagement clock starts when the client completes their intake, not when the contract is signed. Second, use a single structured intake document instead of sequential emails so clients can complete everything in one sitting. Third, start working with the minimum viable information (signed scope, credentials, stakeholder list) and gather the rest in parallel. A consulting firm billing $250/hr that saves 1 week of onboarding per engagement at 12 engagements per year recovers $24,000 in billable time — without selling a single additional engagement.
+
+What information do I need from a client before starting an engagement?
+
+You need a signed scope of work, login credentials for all systems you'll access, stakeholder contact list with roles, brand guidelines and assets, past relevant reports or deliverables, communication preferences (Slack, email, weekly calls), and billing setup. The critical three — scope, credentials, stakeholders — must be collected before Day 1. Everything else can be gathered during the first week while work begins in parallel. Don't let the perfect be the enemy of the started.
+
+Related posts
+
+Professional Services
+
+Stop Losing $2,500/Month on Retainer Overages
+
+Professional Services
+
+You Had 14 Proposals Out Last Month and Followed Up on 3
+
+Professional Services
+
+Chasing Clients for Documents Is Eating Your Billable Hours
+
+Stop letting client onboarding eat your margin
+
+We build custom intake automation for consulting firms — automated reminder sequences, secure credential portals, and intake-to-project-management handoffs that cut onboarding from 2 weeks to 2 days. Book a free 30-minute audit and we'll map your current intake process against the 3-phase model.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Stop Losing $2,500/Month on Retainer Overages — A Free Tracker for Consultants
+
+You Had 14 Proposals Out Last Month and Followed Up on 3 — Free Pipeline Tracker
+
+Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
+
+
+URL: https://www.jobsdonelabs.ai/blog/consulting-client-onboarding-project-kickoff-checklist-free/
+
+---
+
 # You Spent 15 Hours on Estimates This Week and Landed
 
 Home Services & Trades
@@ -16083,6 +16326,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Finally Closed the Deal — Then Spent 2 Weeks Playing Email Tag — Free Consulting Project Kickoff Checklist
+
 Stop Losing $2,500/Month on Retainer Overages — Free Retainer Hours Tracker
 
 You Bill $350/Hour But Lose 90 Minutes a Day to Admin — Here's the Time-Audit System That Recovers $75,000/Year
@@ -17058,6 +17303,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Finally Closed the Deal — Then Spent 2 Weeks Playing Email Tag — Free Consulting Project Kickoff Checklist
+
 You Bill $350/Hour But Lose 90 Minutes a Day to Admin — Here's the Time-Audit System That Recovers $75,000/Year
 
 Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
@@ -18020,6 +18267,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+You Finally Closed the Deal — Then Spent 2 Weeks Playing Email Tag — Free Consulting Project Kickoff Checklist
 
 Stop Losing $2,500/Month on Retainer Overages — Free Retainer Hours Tracker
 
