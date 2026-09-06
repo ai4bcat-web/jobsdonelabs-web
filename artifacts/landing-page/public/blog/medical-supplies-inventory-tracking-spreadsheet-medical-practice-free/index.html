@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Medical Supplies Inventory for Small Practices | JobsDone Labs</title>
+  <meta name="description" content="Expired flu vaccines cost small practices thousands each year. Free inventory spreadsheet with expiry alerts, par-level reorder, and vaccine lot tracking — $0." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/medical-supplies-inventory-tracking-spreadsheet-medical-practice-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/medical-supplies-inventory-tracking-spreadsheet-medical-practice-free/" />
+  <meta property="og:title" content="Free Medical Supplies Inventory for Small Practices | JobsDone Labs" />
+  <meta property="og:description" content="Expired flu vaccines cost small practices thousands each year. Free inventory spreadsheet with expiry alerts, par-level reorder, and vaccine lot tracking — $0." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Medical Supplies Inventory for Small Practices" />
+  <meta name="twitter:description" content="Expired flu vaccines cost small practices thousands each year. Free inventory spreadsheet with expiry alerts, par-level reorder, and vaccine lot tracking — $0." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "You Threw Away $2,400 in Expired Flu Vaccines Last Season — The Free Medical Practice Inventory System That Flags What's About to Expire Before It's Too Late",
+    "description": "A small practice carries $5K-$15K in vaccine inventory alone — with a 12-month shelf life and strict cold-chain storage requirements. This guide provides a complete medical supplies inventory spreadsheet: par-level reorder triggers, 30/60/90-day expiry alerts, vaccine lot tracking with temperature log integration, and a 3-person weekly counting rotation that gives total inventory visibility in 90 minutes per week — all for $0.",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-09-06",
+    "dateModified": "2026-09-06",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/medical-supplies-inventory-tracking-spreadsheet-medical-practice-free/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I track medical supplies in a small practice?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Use the free spreadsheet in this guide with five tabs: Supplies Ledger (every item with par level, current on-hand, lot number, expiration date, storage location, reorder vendor, and unit cost), Expiry Dashboard (30/60/90-day alert columns that auto-flag items approaching expiration), Reorder Queue (items below par level, sorted by vendor lead time), Vaccine Inventory (lot tracking, temperature log cross-reference, CDC allocation deadlines), and Weekly Count Schedule (rotates among 3 staff members — each spends 30 min/week counting their assigned section). Total setup: 2-3 hours. Weekly maintenance: 90 minutes split across 3 people." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the best way to manage vaccine inventory in a doctor's office?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Vaccine inventory needs three layers of control: (1) Lot tracking — every vial's lot number, manufacturer, and expiration date logged when received. Use FIFO protocol (oldest lots used first) so nothing expires on the shelf. (2) Temperature monitoring — a min/max thermometer log checked twice daily. If the fridge goes above 46F or below 35F, every affected vial must be quarantined until the manufacturer confirms viability. One power outage can destroy $5K-$15K in inventory. (3) Expiry window buffer — order flu vaccine to arrive 2-3 weeks before administration season begins, and flag any lot with less than 60 days remaining for return or write-off. The spreadsheet in this guide tracks all three automatically." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I prevent medical supplies from expiring?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Three disciplines stop supply waste: (1) FIFO (First In, First Out) — physically shelve new stock behind existing stock, and the spreadsheet auto-sorts by expiry date so the oldest item is always used first. (2) The 30-day alert — the spreadsheet formula (=IF(days_until_expiry<30,\"USE OR LOSE\",\"\")) highlights items expiring within 30 days. Flagged items get used immediately, returned to vendor if unopened, or written off. (3) Par-level discipline — set seasonally adjusted par levels (2x normal for flu season October-March) and reorder when on-hand drops below par, not when someone notices the shelf is empty. Practices that implement all three typically cut supply waste by 40-60% in the first year." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I set par levels for a medical practice?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Calculate par levels using your practice's last 12 months of consumption data: (1) For each supply item, find the average monthly usage. (2) Add 20% as a safety buffer. (3) Adjust seasonally — double the par level for flu-season items (vaccines, swabs, PPE) from October through March. (4) Factor in vendor lead time — if McKesson ships in 2 days and you use 3 boxes of gloves per week, set par at 2 boxes (enough to cover the 2-day lead time plus one unexpected spike). (5) Review par levels quarterly — a new provider joining the practice or a new service line changes consumption patterns. The Reorder Queue tab in the free spreadsheet auto-calculates all of this and flags 5 items closest to their reorder trigger every Monday morning." }
+      },
+      {
+        "@type": "Question",
+        "name": "What should be in a medical practice inventory spreadsheet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A medical practice inventory spreadsheet needs five tabs: (1) Supplies Ledger — item name, category (vaccine/medication/supply/PPE/office), par level, current on-hand qty, lot number, expiration date, storage location, reorder vendor, last order date, unit cost, and days-until-expiry. (2) Expiry Dashboard — color-coded 30/60/90-day alerts for every item with an expiration date. (3) Reorder Queue — items below par level sorted by vendor lead time, with vendor contact info and typical order quantity. (4) Vaccine Inventory — CDC allocation tracking, temperature log cross-reference, lot/batch recall lookup. (5) Weekly Count Schedule — a 3-person rotation assigning different supply categories to different staff members on different days so the entire inventory gets counted weekly in 90 total minutes across the team." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much vaccine inventory should a small practice keep on hand?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A small practice (2-10 providers) should keep 2-4 weeks of vaccine inventory on hand based on appointment volume, not a flat quantity. Calculate: (appointments per week where vaccination is indicated) × (2-4 weeks) = target on-hand. For flu season, order in 3 waves (September delivery for early demand, October for peak, November for late-season) rather than one bulk order — this reduces expiration risk. Store at 35-46F with twice-daily temperature checks. Any vial exposed to out-of-range temperatures must be quarantined and the manufacturer contacted before use. The spreadsheet tracks order waves, appointment counts, temperature logs, and expiry dates in one view." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Free Medical Supplies Inventory for Small Practices", "item": "https://www.jobsdonelabs.ai/blog/medical-supplies-inventory-tracking-spreadsheet-medical-practice-free/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(11,13,18,.55); margin-bottom:24px; }
+    .byline a { color:rgba(11,13,18,.55); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    blockquote { border-left:4px solid var(--accent); margin:24px 0; padding:12px 20px; background:#fff; font-size:15px; color:rgba(11,13,18,.75); }
+    .hero-img { width:100%; max-height:420px; object-fit:cover; margin-bottom:32px; display:block; background:#ddd; }
+    .stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:28px 0; }
+    .stat-card { background:#fff; padding:24px; text-align:center; }
+    .stat-card .num { font-family:'Anton',sans-serif; font-size:1.8rem; color:var(--accent); display:block; }
+    .stat-card .label { font-size:13px; colo:rgba(11,13,18,.55); margin-top:6px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .checklist { background:#fff; padding:24px 28px; margin:20px 0; }
+    .checklist li { padding:8px 0; border-bottom:1px solid var(--line); }
+    .checklist li:last-child { border-bottom:none; }
+    .comparison { margins:20px 0; }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); background:var(--cream); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; text-align:center; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box p { color:rgba(244,239,227,.75); font-size:15px; max-width:520px; margin-left:auto; margin-right:auto; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:12px; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    .related-reading ul { list-style:none; padding:0; margin:0; }
+    .related-reading li { margin-bottom:10px; padding-left:0; }
+    .related-reading a { font-weight:600; color:var(--accent); text-decoration:none; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+    a { color:var(--accent); }
+    @media (max-width:640px) {
+      .stat-grid { grid-template-columns:1fr; }
+      .wrap { padding:32px 16px 64px; }
+    }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img class="hero-img" src="/og-image.jpg" alt="Medical practice supplies inventory spreadsheet on a laptop with vaccine vials and medical supplies on a clinic desk" loading="eager" />
+
+      <span class="kicker">Healthcare &amp; Medical Practices</span>
+      <h1>You Threw Away $2,400 in Expired Flu Vaccines Last Season — The Free Medical Practice Inventory System That Flags What's About to Expire Before It's Too Late</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · September 6, 2026 · 9 min read</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A small practice carries $5K-$15K in vaccine inventory alone — and 40 doses expiring in the fridge costs $240-$480 in preventable waste. This guide gives you a complete medical supplies inventory spreadsheet with lot tracking, expiry alerts, par-level reorder triggers, and a 3-person weekly counting rotation that takes 90 minutes total — all for $0.</p>
+      </div>
+
+      <p><strong>It's a Tuesday in April.</strong> Your practice manager opens the vaccine fridge to pull doses for the afternoon's flu shot appointments — and finds 40 expired doses from the season that ended six weeks ago. Nobody checked. Nobody flagged them. The log on the fridge door said the temperature was fine, but nobody cross-referenced it against the actual inventory. At $6 per dose (CDC bulk price), that's $240 in the trash. At private-pay vaccine rates ($150/dose), you're looking at $6,000.</p>
+
+      <p>But the vaccines are just the visible loss. The real cost is everything ELSE in your supply closet that expired because nobody was tracking it: the $180 box of PPE gowns that sat behind the new shipment for 8 months, the suture kits that expired because a vendor shipped old stock and nobody validated the lot numbers on receipt, the sample medications that aged out while the drug rep dropped off fresh ones every month.</p>
+
+      <p><strong>Your practice's supply closet is a $10,000+ asset</strong> that's managed by whoever notices they're running out of something. When three different staff members mention the glove supply is low, someone places a McKesson order. When a patient asks for a vaccine that expired last month, the nurse writes "need to order" on a sticky note that disappears by Wednesday. There's no system — just a network of individual habits and hope.</p>
+
+      <p>This guide replaces the sticky-note network with a single spreadsheet that takes 90 minutes per week across 3 people — and catches every expiring item 30 days before you lose the money.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="num">$5K-$15K</span>
+          <span class="label">Vaccine inventory value in a 2-10 provider practice — 12-month shelf life</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">$3K-$8K</span>
+          <span class="label">Annual medical supply waste from expired/unreconciled stock</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">90 min</span>
+          <span class="label">Total weekly inventory maintenance with the 3-person rotation system</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">$0</span>
+          <span class="label">Cost of the spreadsheet in this guide — 2-3 hours to set up</span>
+        </div>
+      </div>
+
+      <h2>The $10,000 supply closet nobody manages</h2>
+
+      <p>Medical practice inventory is invisible until it's gone. Supplies sit on shelves, vaccines sit in a dedicated fridge, samples sit in a cabinet — all tracked by whoever notices they're low. The practice manager orders when 3 people mention they're out of something. The result is predictable: stockouts during flu season (when demand doubles and the McKesson order takes 3 days) AND expired stock in April when the season ends and nobody did the post-season reconciliation.</p>
+
+      <p>Here's what a small practice (2-10 providers) is actually carrying, even if nobody's counting:</p>
+
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr><th>Category</th><th>Typical On-Hand Value</th><th>Replacement Frequency</th><th>Expiry Risk</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Vaccines</strong> (flu, TDAP, shingles, HPV, pneumococcal)</td>
+              <td>$5,000-$15,000</td>
+              <td>Seasonal (flu), quarterly (routine)</td>
+              <td><strong>HIGH</strong> — 12-month shelf life, cold-chain dependent</td>            </tr>
+            <tr>
+              <td><strong>Medications</strong> (injectables, samples, emergency)</td>
+              <td>$2,000-$5,000</td>
+              <td>Monthly/quarterly</td>
+              <td><strong>HIGH</strong> — 6-24 month expiry, lot-dependent</td>
+            </tr>
+            <tr>
+              <td><strong>Clinical supplies</strong> (gloves, syringes, bandages, sutures, swabs)</td>
+              <td>$1,500-$3,000</td>
+              <td>Weekly/monthly</td>
+              <td><strong>LOW</strong> — 2-5 year shelf life, but high-volume consumption</td>
+            </tr>
+            <tr>
+              <td><strong>PPE</strong> (gowns, masks, face shields, shoe covers)</td>
+              <td>$800-$2,000</td>
+              <td>Monthly</td>
+              <td><strong>MEDIUM</strong> — 3-5 year shelf life, seasonal demand spikes</td>
+            </tr>
+            <tr>
+              <td><strong>Office supplies</strong> (forms, toner, paper, cleaning)</td>
+              <td>$500-$1,000</td>
+              <td>Monthly</td>
+              <td><strong>LOW</strong> — no expiry, but stockouts are disruptive</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>That's <strong>$9,800-$26,000 in supplies sitting in your practice right now</strong>. And without a system, a percentage of it is expiring every month — silently, invisibly, written off as "shrinkage" on a P&L line item nobody looks at.</p>
+
+      <h2>The free medical practice inventory spreadsheet: what's in it</h2>
+
+      <p>We built this spreadsheet for the 4-provider practice whose "inventory system" is the office manager's memory and a whiteboard that hasn't been updated since 2024. It's one workbook with five tabs — everything you need to never lose a vial to expiration again:</p>
+
+      <div class="checklist">
+        <ol>
+          <li><strong>SUPPLIES LEDGER tab:</strong> One row per inventory item — category (Vaccine / Medication / Clinical Supply / PPE / Office), item name, manufacturer, par level (minimum quantity before reorder), current quantity on hand, unit of measure (vial/box/case/each), lot number, expiration date, days-until-expiry (auto-calculated), storage location (Fridge A / Fridge B / Cabinet C / Supply Closet / Exam Room 3), reorder vendor, vendor item number, last order date, last order quantity, unit cost, and total current value. Sort by any column — the expiry sort is your Monday morning priority view.</li>
+          <li><strong>EXPIRY DASHBOARD tab:</strong> Every item with an expiration date, color-coded: <span style="color:#D34E24;font-weight:700;">RED if &lt; 30 days</span> (use immediately or return), <span style="color:#E6A817;font-weight:700;">YELLOW if 30-60 days</span> (prioritize FIFO), <span style="color:#2E8B57;font-weight:700;">GREEN if &gt; 60 days</span>. Open this on Monday morning, address every red row before Friday, and you'll never throw away expired flu vaccine again.</li>
+          <li><strong>REORDER QUEUE tab:</strong> Items below par level, auto-sorted by vendor lead time. McKesson (2 days) items at the top, Henry Schein (3 days) next, Amazon Business (1 day) last. Each row shows: current on-hand, par level, typical order quantity (based on 12-month average), vendor, vendor contact info, and last order date. </li>
+          <li><strong>VACCINE INVENTORY tab:</strong> Lot-level tracking for every vaccine: lot number, manufacturer, expiration date, doses received, doses administered, doses remaining, storage location, temperature log cross-reference (fridge ID, min/max temp today, out-of-range flag), CDC allocation wave (for flu), and return eligibility window. When a manufacturer issues a lot recall, you can look up exactly how many affected doses you have and where they are — in 30 seconds instead of 2 hours of fridge-scouring.</li>
+          <li><strong>WEEKLY COUNT SCHEDULE tab:</strong> The rotation schedule that makes inventory maintenance a 90-minute/week team activity instead of one person's second job. Three staff members (1 MA, 1 RN, 1 front desk) each count their assigned section on their assigned day: Monday — MA counts clinical supplies; Wednesday — RN counts vaccines and medications; Friday — front desk counts PPE and office supplies. Each count takes 30 minutes. Any discrepancies (on-hand doesn't match the ledger) get flagged for the practice manager to investigate Friday afternoon.</li>
+        </ol>
+      </div>
+
+      <blockquote>
+        <strong>"The expiration alert column paid for this spreadsheet the first time it flagged a $900 vaccine lot with 28 days left."</strong><br/>
+        — What every practice manager says after the first month of using a real inventory system instead of hope
+      </blockquote>
+
+      <h2>The 30-day expiry alert — stop finding expired stock by accident</h2>
+
+      <p>The core formula in the Expiry Dashboard tab is deceptively simple:</p>
+
+      <div class="callout">
+        <p style="margin:0;font-family:monospace;font-size:15px;"><strong>=IF(days_until_expiry&lt;30,"⚠️ USE OR LOSE",IF(days_until_expiry&lt;60,"⚠️ PRIORITY — use before newer stock","OK"))</strong></p>
+        <p style="margin:8px 0 0;font-size:14px;color:rgba(11,13,18,.55);">This one formula replaces the "nobody noticed" system your practice has been running on. Monday morning, sort the Expiry Dashboard by the alert column. Every "USE OR LOSE" item gets addressed before Friday.</p>
+      </div>
+
+      <p>Here's what addressing a flagged item actually means:</p>
+
+      <ul>
+        <li><strong>Vaccines with 30-60 days remaining:</strong> Prioritize in the appointment schedule. Move these lots to the front of the fridge with a "USE FIRST" sticker. Alert providers: "We have 12 doses of lot XXXX expiring March 15 — please use these before lot YYYY when both are clinically appropriate."</li>
+        <li><strong>Vaccines with &lt;30 days:</strong> If unopened, contact the manufacturer or distributor about return eligibility (McKesson accepts returns on unexpired product within 30 days of expiration for most vaccines). If return isn't possible, write off and document the lot number/loss for your inventory reconciliation. The financial loss hurts — but it's $240 for 40 doses you catch at day 28 vs $240 for 40 doses you discover expired 6 weeks ago AND now have to explain to your accountant why inventory doesn't match the purchase orders.</li>
+        <li><strong>Medications with &lt;60 days:</strong> Rotate to the front of the medication cabinet. If it's a sample medication from a drug rep, check whether the rep will swap unexpired stock (most will — it's part of their quarterly visit routine).</li>
+        <li><strong>PPE/clinical supplies with &lt;60 days:</strong> These have longer shelf lives but the alert still matters — it means you're carrying too much stock or someone ordered a bulk shipment when the par level was fine. Adjust the par level down for next quarter.</li>
+      </ul>
+
+      <h2>The par-level reorder system — never run out of gloves during flu season</h2>
+
+      <p>Par levels are the minimum quantity you need on hand to cover the time between placing an order and receiving it, PLUS a safety buffer. Set them once, adjust them quarterly, and let the spreadsheet tell you what to order:</p>
+
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Avg Weekly Usage</th><th>Vendor Lead Time</th><th>Par Level (Normal)</th><th>Par Level (Flu Season Oct-Mar)</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Exam gloves (box of 100)</td>
+              <td>8 boxes</td>
+              <td>2 days (McKesson)</td>
+              <td>4 boxes</td>
+              <td>8 boxes</td>
+            </tr>
+            <tr>
+              <td>Flu vaccine doses</td>
+              <td>40 doses</td>
+              <td>4-8 weeks (CDC allocation)</td>
+              <td>160 doses (4-week supply)</td>
+              <td>240 doses (6-week supply in October)</td>
+            </tr>
+            <tr>
+              <td>3mL syringes (box of 100)</td>
+              <td>3 boxes</td>
+              <td>2 days (McKesson)</td>
+              <td>2 boxes</td>
+              <td>4 boxes</td>
+            </tr>
+            <tr>
+              <td>Sterile 4x4 gauze pads</td>
+              <td>2 boxes</td>
+              <td>3 days (Henry Schein)</td>
+              <td>2 boxes</td>
+              <td>3 boxes</td>
+            </tr>
+            <tr>
+              <td>N95 masks (box of 20)</td>
+              <td>1 box</td>
+              <td>2 days (McKesson)</td>
+              <td>2 boxes</td>
+              <td>3 boxes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Flu season adjustment rule:</strong> From October 1 through March 31, double the par level for any item whose consumption spikes during respiratory season. Set a calendar reminder for September 15 to review and update seasonal pars. Set another for April 1 to dial them back down — otherwise you'll order flu-season quantities in May and have a year's supply of swabs gathering dust.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Vaccine ordering protocol:</strong> Order flu vaccine in 3 waves, not one bulk shipment. Wave 1 (September delivery): 40% of projected season doses — covers early demand and ensures you have stock when patients start asking. Wave 2 (October delivery): 30% — peak demand buffer. Wave 3 (November delivery): 30% — late-season and walk-ins. This reduces the risk of carrying 200 expired doses in April because you over-ordered in August. The spreadsheet tracks doses by lot and wave — you'll know exactly how many doses from each wave are still on hand at any point.</p>
+      </div>
+
+      <h2>The 3-person inventory responsibility rotation</h2>
+
+      <p>Inventory doesn't need a dedicated inventory manager. It needs a system where three people spend 30 minutes each per week counting their assigned section — and everyone knows whose section is whose:</p>
+
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr><th>Day</th><th>Person</th><th>Section</th><th>What They Count</th><th>Time</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Monday</strong></td>
+              <td>Medical Assistant</td>
+              <td>Clinical Supplies</td>
+              <td>Gloves, syringes, bandages, sutures, swabs, exam table paper, speculums, otoscope covers, pulse ox probes</td>
+              <td>30 min</td>
+            </tr>
+            <tr>
+              <td><strong>Wednesday</strong></td>
+              <td>RN / Nurse</td>
+              <td>Vaccines &amp; Medications</td>
+              <td>Every vaccine lot in every fridge (count doses, verify lot numbers match ledger, record fridge min/max temp from log), sample medications cabinet, injectable medications</td>
+              <td>30 min</td>
+            </tr>
+            <tr>
+              <td><strong>Friday</strong></td>
+              <td>Front Desk</td>
+              <td>PPE &amp; Office</td>
+              <td>Masks, gowns, face shields, shoe covers, cleaning supplies, patient forms, toner, paper, clipboards, pens</td>
+              <td>30 min</td>
+            </tr>
+          </tbody        </table>
+      </div>
+
+      <p><strong>Friday afternoon reconciliation:</strong> The practice manager spends 15 minutes reviewing the week's counts. Any item where the physical count doesn't match the ledger gets investigated: was a box opened without being logged? Did a vendor ship a different quantity than what's on the packing slip? Did someone borrow supplies from Exam Room 3 to restock Exam Room 1 without updating the count? Fix the discrepancy, update the ledger, and close the week. Next Monday morning, the cycle starts fresh with an accurate count.</p>
+
+      <p>Total time investment: <strong>105 minutes per week</strong> across 4 people (3 counters × 30 min + practice manager × 15 min). Return on that time: $240-$6,000 in prevented vaccine waste + $500-$2,000 in prevented supply waste + zero stockouts during flu season + lot-level recall lookup in 30 seconds instead of 2 hours.</p>
+
+      <h2>How to handle a vaccine fridge failure</h2>
+
+      <p>One power outage. One fridge door left ajar overnight. One compressor failure on a Saturday when nobody's in the office until Monday. The contents of that fridge — $5,000-$15,000 in vaccines — are now in limbo. Here's the protocol (print this and tape it to the fridge):</p>
+
+      <ol>
+        <li><strong>Do NOT discard anything.</strong> The vaccines may still be viable. Manufacturer stability data often shows efficacy for days or weeks outside of recommended storage — but only the manufacturer can authorize use after a temperature excursion.</li>
+        <li><strong>Quarantine immediately.</strong> Move all affected vials to a separate, temperature-monitored container. Label clearly: "QUARANTINED — DO NOT USE — Temperature excursion [date/time]." Do NOT mix quarantined vials with unaffected stock.</li>
+        <li><strong>Check the temperature log.</strong> What was the min/max temperature during the excursion? How long was the fridge out of range? The manufacturer will need: make/model of fridge, duration of excursion, min and max temperatures reached, and lot numbers of all affected product.</li>
+        <li><strong>Call the manufacturer (not the distributor).</strong> McKesson and Henry Schein distribute vaccines but don't make them. Look up the manufacturer's medical affairs line (Sanofi Pasteur: 1-800-VACCINE, Merck: 1-800-672-6372, GSK: 1-888-825-5249, Pfizer: 1-800-438-1985). Tell them exactly what happened — they'll reference their stability data and tell you which lots are safe to use and which must be discarded.</li>
+        <li><strong>Document everything.</strong> If you file an insurance claim for spoiled vaccine inventory, you'll need: date/time of excursion, temperature log data, manufacturer's written determination, list of affected lot numbers and quantities, and the replacement value. The spreadsheet's Vaccine Inventory tab has all of this pre-organized — export to PDF, attach to the claim, done.</li>
+        <li><strong>Replace the fridge.</strong> If the failure was equipment-related (compressor, seal, thermostat), replace the unit. A new medical-grade refrigerator costs $1,500-$3,000. One excursion that destroys $10,000 in vaccines costs $10,000. The math is not complicated.</li>
+      </ol>
+
+      <h2>FAQ</h2>
+
+      <h3>How much does medical supply waste actually cost a small practice?</h3>
+      <p>A 2-10 provider practice loses $3,000-$8,000 per year in expired supplies and unreconciled inventory, based on practice management benchmarks. Vaccine waste alone: a practice administering 800 flu shots per season with a 5% waste rate loses 40 doses at $6-$150 per dose = $240-$6,000. Add expired medications, PPE that sat behind a new shipment, and vendor over-shipments that were never flagged — the total is typically 2-4% of annual supply spend. For a practice spending $100K/year on supplies, that's $2,000-$4,000 in preventable waste. The spreadsheet takes 2-3 hours to set up and costs $0. It pays for itself in the first month of flu season.</p>
+
+      <h3>How is this different from inventory management in my EHR?</h3>
+      <p>Most EHR inventory modules are designed for billing (tracking which supply was used during which encounter for charge capture), not for supply chain management. They don't typically track lot numbers, expiry dates across all storage locations, par levels with seasonal adjustments, or vendor lead times. And they require a login, navigation through 4 menus, and per-item data entry — which is why they're not used consistently. The spreadsheet is a single workbook that opens in 3 seconds, sorts by expiry in 1 click, and shows the entire inventory picture on one screen. For practices that do use EHR inventory seriously, the spreadsheet still serves as the weekly reconciliation source — it's faster for the counting rotation, and the counts feed into the EHR monthly.</p>
+
+      <h3>What's the ROI timeline for automating this tracking system?</h3>
+      <p>A manual spreadsheet takes 2-3 hours to set up and about 105 minutes per week across 4 people to maintain (3 counters at 30 min each + 15 min practice manager review). A fully automated system — with barcode scanning for receiving, fridge temperature sensors that text you when the temp goes out of range, automated reorder emails to McKesson when items hit par level, and lot-recall lookup against FDA and manufacturer databases — takes 3-5 weeks to build and reduces the weekly maintenance to under 30 minutes. For a practice losing $3,000-$8,000/year in supply waste, preventing even half of that covers the automation cost in 12-18 months. Jobs Done Labs builds these systems against a hard ROI target — and every engagement is covered by the $30K-recovered-in-90-days guarantee: if documented savings don't reach $30K, you pay nothing.</p>
+
+      <h3>How do I handle vaccine lot recalls?</h3>
+      <p>When a manufacturer issues a vaccine lot recall, you need to answer three questions in under 30 minutes: (1) Do I have any product from that lot? (2) Where is it — which fridge, which shelf? (3) How many doses do I have, and have any been administered? The Vaccine Inventory tab answers all three in one lookup. Search by lot number — every vial from that lot appears with its location, doses received, doses administered, doses remaining, and temperature history. Quarantine the remaining doses immediately, report the lot status to the manufacturer per their recall instructions, and document the disposition. Without lot-level tracking, a recall means pulling every vial from every fridge, reading every label, and hoping you didn't administer any recalled doses — a 2-3 hour panic that the spreadsheet turns into a 5-minute search.</p>
+
+      <h3>How do I set par levels if I've never tracked usage before?</h3>
+      <p>If you don't have historical consumption data, start with a 4-week manual count. Every Monday for 4 weeks, count every item and log the current on-hand quantity. At the end of the month, calculate: average weekly usage = (Week1 starting count — Week4 ending count + any orders received) ÷ 4. Set par level = (average weekly usage × vendor lead time in weeks) + 20% safety buffer. After 3 months of tracking, adjust pars based on actual consumption patterns. If an item triggers the reorder alert more than twice between scheduled orders, raise the par. If an item sits above par for 8+ weeks, lower it. The spreadsheet tracks reorder frequency automatically in the Reorder Queue tab — you'll see patterns within the first quarter.</p>
+
+      <div class="cta-box">
+        <h2>Stop finding expired vaccines by accident</h2>
+        <p>Book a free 30-minute automation audit. We'll map your practice's supply chain end-to-end — from McKesson ordering to fridge temperature monitoring to lot-recall readiness — and show you exactly where your inventory system is bleeding money. No pitch, no pressure. You keep the map either way.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0">
+            <a href="/blog/prescription-refill-request-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Patients Run Out of Meds Every Weekend Because the Refill Request Sat in a Fax Machine for 4 Days — The Free Prescription Refill Tracking System</a>
+          </li>
+          <li style="margin-bottom:10px;padding-left:0">
+            <a href="/blog/medical-waste-compliance-inspection-documentation-system/" style="font-weight:600;color:#1466FF;text-decoration:none">The Medical Waste Inspector Showed Up Unannounced And You Couldn't Produce A Single Training Log — The Free Compliance Documentation System</a>
+          </li>
+          <li style="margin-bottom:10px;padding-left:0">
+            <a href="/blog/patient-payment-plan-tracking-spreadsheet-medical-practice-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Practice Carries $45,000 in Patient Payment Plans and Nobody's Tracking Who Missed Their Payment This Month — The Free A/R Dashboard</a>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    &copy; 2026 Jobs Done Labs &middot; <a href="/">Home</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
