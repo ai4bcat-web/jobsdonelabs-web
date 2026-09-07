@@ -9554,6 +9554,8 @@ Suppliers Are Late Again and It's Costing $1,000/Week — Free Supplier Scorecar
 
 Your Raw Material Shelf Is a Guessing Game — Free Inventory System
 
+You're Throwing Away $21,000 in Aluminum Drops — Free Manufacturing Scrap Tracker
+
 
 URL: https://www.jobsdonelabs.ai/blog/manufacturing-job-costing-without-erp/
 
@@ -10220,8 +10222,193 @@ Your Shop Has 12 Machines But Only One Is The Bottleneck
 
 Three of Your 47 Suppliers Cause 80% of Your Line Stoppages — Free Supplier Quality Scorecard
 
+You're Throwing Away $21,000 in Aluminum Drops — Free Manufacturing Scrap Tracker
+
 
 URL: https://www.jobsdonelabs.ai/blog/manufacturing-quality-metrics-defect-rate-fpy-tracker/
+
+---
+
+# Manufacturing Scrap Tracker: Stop Wasting $21K/Year
+
+Manufacturing
+
+You're Throwing Away $21,000 a Year in Aluminum Drops — Here's the Free Manufacturing Scrap Tracker That Shows You Exactly What's in the Recycling Bin
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 7, 2026
+
+Key takeaways
+
+Most small shops estimate scrap at 2-3%. Actual measured rates are 5-8% — the gap is pure profit leakage. A 15-person CNC shop buying 10,000 lbs of aluminum monthly at $3.50/lb loses $21,000/year at a 5% scrap rate. The free spreadsheet in this guide logs every scrap event by material, machine, reason, and cost — and the 15-minute weekly scrap huddle that reduces waste 30-50% in 90 days.
+
+The $21,000 you didn't know you were losing
+
+Here's the math that most shop owners never run. A 15-person CNC shop buys 10,000 pounds of aluminum sheet every month at $3.50/lb. That's $35,000/month — $420,000/year — in raw material alone, and that's before you add stainless, tool steel, and brass.
+
+At a 5% average scrap rate, which is conservative for a job shop running small batches, that's 500 pounds of aluminum hitting the recycling bin every month. 500 lbs x $3.50 = $1,750/month. Times 12 months = $21,000/year. In material you paid for, received, moved through the shop, and then threw away without it ever becoming a sellable part.
+
+But here's the thing: most shops estimate their scrap rate at 2-3%. "We're pretty clean," they say. "Our guys don't waste much." When they actually measure it, the number is almost always 5-8%. The gap between what you think you're losing and what you're actually losing is somewhere between $8,400 and $25,200 a year — for a single material, on a single shift.
+
+The scrap vs. defect distinction
+
+Your quality metrics tracker already measures DEFECTS — finished parts that fail inspection. Scrap is different. Scrap is raw material that never becomes a finished part at all: aluminum drops too small to fixture, mis-cut blanks, setup waste from the first three parts of every run, and machine crashes that turn a $45 billet into a paperweight. Defects are a quality problem. Scrap is a material yield problem — and it's measured upstream, at the raw material level, not at final inspection.
+
+The free manufacturing scrap tracking spreadsheet
+
+This isn't a generic "waste log" from a template mill. It's built specifically for machine shops and small manufacturers running CNC mills, lathes, and press brakes — where scrap is measured in pounds and dollars, not "units disposed."
+
+The spreadsheet logs every scrap event with these fields:
+
+Date and shift
+
+— first shift, second shift, or weekend. You need to know if one shift is generating 60% of the scrap.
+
+Machine or cell
+
+— is it the old Haas VF-2 that keeps blowing tolerances on the first part? Or the new DMG that's dialed in? Machine-level tracking tells you where to send the maintenance crew.
+
+Material type and grade
+
+— AL 6061-T6, SS 304, A36 steel, C360 brass. Different materials have different costs per pound and different recycling values. You can't manage what you don't categorize.
+
+Part number being produced
+
+— is Part #447 always scrapping at 12% while Part #228 runs at 2%? That's a programming or fixturing issue, not a material issue.
+
+Scrap quantity
+
+— in pounds or units, whichever makes sense for your shop.
+
+Scrap reason category
+
+— setup waste, mis-cut/dimensional error, machine error/tool wear, material defect (supplier issue), or drop/remnant too small to fixture.
+
+Material cost per pound
+
+— pulled from your last purchase order, updated monthly.
+
+Total scrap cost
+
+— auto-calculated: quantity x cost/lb. This number, accumulated over a month, is the conversation starter for your Friday huddle.
+
+Disposition
+
+— recycled (and separated by material type for maximum recovery), re-melted in-house, or landfill.
+
+The dashboard tab auto-calculates: weekly scrap by material type, scrap by reason category (Pareto chart — which categories cause 80% of your dollar losses?), scrap cost trend (week-over-week, is it getting better or worse?), scrap as a percentage of raw material purchased, and estimated recovery value from recycling.
+
+The 5 scrap categories every shop should track
+
+Not all scrap is created equal. Until you categorize it, you're treating a $10,000/year setup waste problem the same as a $500/year machine error. Here are the five categories — and the typical share of total scrap each one represents:
+
+1. Setup waste (8-15% of total scrap).
+
+The first two or three parts of every production run. You're dialing in offsets, checking tolerances, proving out the program. Those parts are almost never sellable. The fix isn't to eliminate setup waste — it's to minimize it with standardized setup procedures, dedicated setup stock (cheaper material for first-article inspection), and optimized tool paths that reduce the number of test cuts.
+
+2. Mis-cuts and dimensional errors (25-35% of total scrap).
+
+Wrong dimensions caught at first-piece inspection — or worse, caught after running 20 parts. Usually a programming error, a fixture shift, or an operator who loaded the wrong program. This is the most preventable category: better setup checklists, offline program verification, and in-process probing catch these before they become 20 scrapped parts instead of 2.
+
+3. Machine error and tool wear (20-30% of total scrap).
+
+The end mill dulled mid-run and nobody noticed until the surface finish went to hell. Or the coolant line clogged and the tool overheated. Or the machine lost position after a power bump. These are maintenance and monitoring problems — and they're why machine-level scrap tracking matters. If one machine accounts for 40% of your scrap, that machine needs a PM — or a replacement.
+
+4. Material defect — supplier quality (5-10% of total scrap).
+
+The aluminum had inclusions. The steel was the wrong hardness. The bar stock was undersized. This ties directly into your supplier quality scorecard. If Supplier B's 6061 is consistently generating more scrap than Supplier A's, you now have data — not a feeling — to take to the purchasing conversation.
+
+5. Drops and remnants (15-25% of total scrap).
+
+Pieces that are too small to fixture but big enough that better nesting would have saved them. A 3" x 4" drop of 1/2" aluminum plate isn't useful for a 6" part, but it might be perfect for a 2" x 3" bracket. This category is a nesting optimization problem — and tracking it by part number often reveals opportunities to nest smaller parts in the dead space of larger blanks.
+
+The scrap-to-recycling-revenue connection
+
+Here's something most small shops overlook: your scrap bin isn't just a cost — it's a revenue stream if you handle it right.
+
+Aluminum scrap sells to recyclers for $0.50-0.70/lb. Stainless steel for $0.30-0.50/lb. Carbon steel for $0.05-0.10/lb. A shop generating 500 lbs/month of aluminum scrap should be recovering $250-350/month from a recycler — that's $3,000-4,200/year. Steel scrap at 300 lbs/month adds another $18-36/month.
+
+But most small shops throw everything in a single mixed bin. A mixed-bin recycler pays the lowest rate — sometimes $0.05-0.10/lb regardless of material — because they have to sort it. The difference between a separated aluminum bin and a mixed bin on 500 lbs/month is roughly $200-300/month — $2,400-3,600/year — just for putting a second barrel next to the machine.
+
+The scrap tracking spreadsheet includes a disposition field and a recovery value calculator. When you know you're generating 500 lbs of aluminum scrap a month, you can call three recyclers, get quotes for clean separated aluminum, and negotiate. Most shops don't do this because they don't know how much scrap they're generating by material type. The spreadsheet changes that.
+
+The weekly scrap huddle — 15 minutes that saves $1,000/month
+
+The spreadsheet isn't the fix. The spreadsheet is a mirror. The fix is the 15-minute conversation you have every Friday afternoon when you look at what it's telling you.
+
+Here's the format. Every Friday at 3:30 PM, the shop supervisor and the lead machinist sit down with the scrap log for the week. They answer three questions:
+
+What were the top 3 scrap events by cost this week?
+
+Not by weight — by cost. A 2-pound piece of 6061 at $3.50/lb is $7. A 40-pound piece of A36 at $0.50/lb is $20. Prioritize the dollars.
+
+What's the root cause for each?
+
+Is the Haas VF-2 drifting out of tolerance on the first part of every run? That's a warm-up procedure problem, not a scrap problem. Did we run a new operator on Part #447 without a setup checklist? That's a training gap.
+
+What's the action item, who owns it, and when is it due?
+
+"Check Haas VF-2 spindle warm-up procedure — Mike, by Tuesday." "Write setup checklist for Part #447 — Steve, by Wednesday." One action item per top event. Tracked week-over-week.
+
+Shops that run this huddle for 90 days consistently reduce scrap 30-50%. The reason isn't the spreadsheet. The reason is that for the first time, someone is looking at the scrap data every single week and someone's name is attached to fixing it. Visibility plus accountability equals reduction. It's the simplest lean manufacturing principle there is — and it costs $0.
+
+The 30-60-90 day scrap reduction roadmap
+
+Day 1-30:
+
+Start logging every scrap event. Don't change anything yet — just measure. At the end of month one, you'll have your baseline scrap rate by material and by machine.
+
+Day 31-60:
+
+Attack the #1 scrap category by cost. If setup waste is your biggest dollar loss, implement standardized setup checklists and dedicated setup stock. Run the weekly huddle.
+
+Day 61-90:
+
+You should see a 20-30% reduction from your baseline. Now layer in the recycling optimization: separate bins by material type, call recyclers for quotes, and start recovering 20-30% of your scrap cost through recycling revenue. At this point you're both reducing scrap generation AND capturing value from what's still generated.
+
+Frequently asked questions
+
+How do I track manufacturing scrap and waste?
+
+Use a per-event scrap log that records date, shift, machine, material type, part number, scrap quantity, reason category (setup waste, mis-cut, machine error, material defect, drop/remnant), and cost per pound. Track weekly totals by material and reason. The free spreadsheet in this guide handles all of this with a dashboard that shows scrap cost trend and recycling recovery value.
+
+What's a normal scrap rate for a CNC machine shop?
+
+Most small shops estimate their scrap rate at 2-3%. Actual measured rates are typically 5-8%. The gap between estimate and reality is pure profit leakage. World-class shops target under 2%, but 3-5% is realistic for a job shop running varied parts in small batches. The key is measuring it — you can't improve what you don't track.
+
+How do I calculate material yield in manufacturing?
+
+Material yield = (finished part weight / raw material weight used) x 100. For example, if you start with 100 lbs of aluminum and produce 85 lbs of finished parts, your yield is 85%. Track yield by material type because different materials have different cost implications. A 5% yield improvement on $35K/month in aluminum purchases saves $1,750/month.
+
+Can I sell my manufacturing scrap metal?
+
+Yes. Aluminum scrap sells for $0.50-0.70/lb, stainless steel for $0.30-0.50/lb, and carbon steel for $0.05-0.10/lb. Separate scrap by material type for maximum recovery — mixed bins pay the lowest rate. A shop generating 500 lbs/month of aluminum scrap should recover $250-350/month from a recycler.
+
+How do I reduce setup scrap waste in small-batch manufacturing?
+
+Setup waste accounts for 8-15% of total scrap. Reduce it by standardizing setup procedures with checklists, using dedicated setup stock for first-article inspection, optimizing tool paths to minimize test cuts, and running a weekly scrap huddle where the supervisor and lead machinist review top scrap events by cost and assign corrective actions.
+
+We build the systems. You run the shop.
+
+If the spreadsheet shows you're losing $21K/year to scrap — or you already know the number and just need someone to build the automated tracking, alerts, and dashboards — we build the system that captures every scrap event at the machine, auto-calculates trends, and delivers the Friday huddle report before you sit down. Free 30-minute audit. No software pitch — just a plan.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Your Shop Floor Runs at 97% Yield — But the Accountant's Scrap Report Says 82%. Here's the Free Quality Metrics Tracker.
+
+Your Raw Material Shelf Is a Guessing Game — A Free Inventory Management System for Small Shops
+
+Three of Your 47 Suppliers Cause 80% of Your Line Stoppages — Free Supplier Quality Scorecard
+
+You're Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet System
+
+
+URL: https://www.jobsdonelabs.ai/blog/manufacturing-scrap-waste-reduction-tracking/
 
 ---
 
@@ -20193,6 +20380,8 @@ Suppliers Are Late Again and It's Costing $1,000/Week — Free Supplier Scorecar
 
 Paper Batch Records Failed Your FDA Audit — Free GMP Templates & Lot Traceability System
 
+You're Throwing Away $21,000 in Aluminum Drops — Free Manufacturing Scrap Tracker
+
 
 URL: https://www.jobsdonelabs.ai/blog/small-manufacturer-inventory-management-system/
 
@@ -23142,6 +23331,8 @@ Suppliers Are Late Again and It's Costing $1,000/Week — How to Track Supplier 
 Your Shop Floor Runs at 97% Yield — Free Quality Metrics Tracker (Defect Rate & FPY)
 
 Your Machines Keep Breaking Down and Nobody's Tracking It — The $0 System That Tells You What's Costing You Money
+
+You're Throwing Away $21,000 in Aluminum Drops — Free Manufacturing Scrap Tracker
 
 Stop paying $1,200 an hour for bad suppliers you can't prove
 
