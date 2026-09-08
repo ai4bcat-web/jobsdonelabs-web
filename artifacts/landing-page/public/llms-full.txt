@@ -1068,6 +1068,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Which Clients Make You Money? Free Per-Client Profitability Analysis Spreadsheet
+
 Stop Losing $2,500/Month on Retainer Overages — Free Retainer Hours Tracker
 
 Small Business AI Automation: Should You Hire an Agency or Build It Yourself?
@@ -2644,6 +2646,295 @@ Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
 
 
 URL: https://www.jobsdonelabs.ai/blog/consulting-client-onboarding-project-kickoff-checklist-free/
+
+---
+
+# Which Clients Make You Money? Free Profitability Tool
+
+Professional Services
+
+You Fired a Client and Your Revenue Dropped $18K — But Your Take-Home INCREASED. Here's the Free Spreadsheet That Shows You Which Clients Are Actually Profitable.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 8, 2026
+
+Key takeaways
+
+Revenue does not equal profit. A $15K/year client who emails 40 times a month and needs 3 revision rounds can be your least profitable account — while a $12K/year client with zero drama generates 3x the margin. Our free per-client profitability spreadsheet calculates your true effective hourly rate for every account so you know exactly who to fire, who to reprice, and who to protect.
+
+The client you love who's actually your worst financial decision
+
+Every consulting firm has one: the client who pays on time, never complains, and has been with you for years. They're pleasant to work with. They refer business. They feel like a partner.
+
+Now run the numbers.
+
+That client sends 40 emails a month. Each email takes you 5 minutes to read, think about, and reply to. That's 200 minutes — 3.3 hours — of non-billable communication overhead every single month. At a $250/hour billable rate, you're losing $825/month just answering their emails.
+
+They also request 3 revision rounds on every deliverable. Each revision round averages 2 hours. That's 6 extra hours per deliverable, twice a month = 12 hours/month. At $250/hour, that's another $3,000/month in unrecovered time.
+
+Their engagement is a $15,000/year retainer. Sounds healthy — until you subtract the $825/month in communication overhead ($9,900/year) and the $3,000/month in revision costs ($36,000/year). Your $15,000 client is costing you $45,900 in billable time. You're paying $30,900 a year for the privilege of working with them.
+
+Revenue is vanity. Profitability is sanity.
+
+The $18K/year client you fired was probably your most profitable move. Most consultants who run this analysis for the first time discover that their favorite client — the one they'd never consider firing — is actually their biggest money loser.
+
+The free per-client profitability calculator
+
+This spreadsheet does the math your gut can't. Enter six numbers per client and it calculates your true effective hourly rate, ranks every account by profitability, and assigns each one an A/B/C grade. It takes 10 minutes to set up and under 60 seconds to update each month.
+
+Here's what the tracker captures for every client:
+
+Monthly revenue
+
+— retainer, project fees, or hourly billing total for the month
+
+Billable hours logged
+
+— actual time spent on deliverables and client-facing work
+
+Communication overhead hours
+
+— emails, Slack messages, calls, check-in meetings (the hidden time sink)
+
+Revision hours
+
+— time spent on change requests, rework, and scope additions you didn't bill for
+
+Direct costs
+
+— subcontractors, tools, travel, or materials specific to this client
+
+Strategic value score
+
+— referrals generated, portfolio credibility, industry access (1-5 scale)
+
+The dashboard auto-calculates:
+
+Effective hourly rate
+
+= Monthly revenue ÷ (billable + communication + revision hours)
+
+Profit margin %
+
+= (Revenue − Direct Costs) ÷ Revenue × 100
+
+A/B/C grade
+
+— A = profitable + low-maintenance, B = mixed, C = unprofitable
+
+All-client ranked view
+
+— sorted from highest to lowest effective rate, so you see at a glance who's worth keeping
+
+Blended effective rate
+
+— your actual hourly rate across all clients combined, the number that matters most
+
+The benchmark that changes everything:
+
+A healthy consulting practice runs a blended effective rate of 65%+ of your standard billable rate. If you bill $250/hour and your blended effective rate across all clients is $140, you're losing 44% of your capacity. The A/B/C grading system identifies exactly which clients are dragging that number down.
+
+The 40-email client profitability killer
+
+Let's quantify the hidden cost of communication overhead. This is the single biggest blind spot in consulting firm economics — and the spreadsheet makes it impossible to ignore.
+
+Client type
+
+Emails/month
+
+Hours lost
+
+Cost at $250/hr
+
+Annual drain
+
+Low-touch (5 emails)
+
+0.4
+
+$100
+
+$1,200
+
+Average (15 emails)
+
+1.3
+
+$325
+
+$3,900
+
+High-touch (40 emails)
+
+3.3
+
+$825
+
+$9,900
+
+Revise-o-saurus (60+ emails + 3 revisions)
+
+60+
+
+5.0+
+
+$1,250+
+
+$15,000+
+
+A "Revise-o-saurus" client on a $2,000/month retainer is actually costing you $1,250 in communication and revision time — leaving $750/month in real profit, an effective rate of $60/hour. That's less than a junior associate at a midsize firm. The spreadsheet flags this in red.
+
+The A/B/C client tier system
+
+Once the spreadsheet calculates your effective hourly rate per client, it assigns each one a tier. This is how you turn data into decisions:
+
+A-tier: Profitable + low-maintenance — PROTECT
+
+Effective hourly rate is at or above your standard billable rate
+
+Communication overhead under 10% of total hours
+
+Zero revision rounds or revisions billed separately
+
+Action: send a thank-you note, ask for a referral, never let them churn
+
+B-tier: Mixed — OPTIMIZE
+
+Either profitable but high-maintenance, or low-maintenance with thin margins
+
+Effective hourly rate is 50-90% of standard billable rate
+
+Action: profitable but high-maintenance → raise rates or reduce scope. Low-maintenance but thin margins → upsell additional services or consolidate into a higher retainer
+
+C-tier: Unprofitable — FIRE, REPRICE, OR RESTRUCTURE
+
+Effective hourly rate under 50% of standard billable rate
+
+Communication + revision hours exceed billable hours
+
+Direct costs consume 40%+ of revenue
+
+Action: you have 60 days to either raise rates significantly, cut scope to bare minimum, or fire them and replace with an A-tier client
+
+Recalculate quarterly. Clients migrate between tiers — a B-tier client can become A-tier after a rate increase, and an A-tier client can slide to C-tier as their demands grow. The spreadsheet makes this visible before it becomes a crisis.
+
+The when-to-fire-a-client decision matrix
+
+Firing a client is the hardest decision in consulting — but the data makes it clear. Here's the four-option decision matrix the spreadsheet enables:
+
+Option
+
+When to use
+
+Expected outcome
+
+Raise rates
+
+Client is profitable but margin is thin. They value your work but you're undercharging for the overhead.
+
+60% accept the increase. The 40% who leave were never profitable at the old rate either — they self-select out.
+
+Reduce scope
+
+Client's core work is valuable but communication/revision overhead is killing margin. You want to keep them but not the 40-email months.
+
+Set a communication cap (2 check-ins/month), revision limit (1 round included, additional billed hourly), and email response SLA (24 business hours).
+
+Fire and replace
+
+Client is unprofitable at any reasonable rate. They consume 3x the hours of a comparable account with no strategic upside.
+
+Most solo consultants replace a C-tier client with an A-tier one within 60 days. Net take-home pay increases even if gross revenue drops.
+
+Keep for strategic value
+
+Client is unprofitable on paper but provides referrals worth 2-3x their revenue, portfolio credibility that wins bigger deals, or access to an industry you're building in.
+
+Track the strategic value separately in the spreadsheet. If referrals drop, reclassify to C-tier and fire. Strategic value is real but temporary — reassess every 6 months.
+
+The re-investment calculator
+
+This is where the numbers get emotional — in a good way. Firing a client feels like losing money. The spreadsheet proves the opposite.
+
+Here's the math from a real consulting firm (anonymized, scaled to illustrate):
+
+Metric
+
+Before firing C-client
+
+After firing + replacing
+
+Annual revenue
+
+$198,000
+
+$210,000
+
+Total hours worked
+
+2,800
+
+2,200
+
+Blended effective rate
+
+$70.71/hr
+
+$95.45/hr
+
+Take-home (after costs)
+
+$148,000
+
+$168,000
+
+Weekly hours
+
+Stress level (1-10)
+
+Revenue went up $12,000. Hours dropped by 600. Take-home increased by $20,000. And the consultant got 14 hours of their life back every week. That's what happens when you replace a C-tier client with an A-tier one: you work less, earn more, and stop dreading Monday mornings.
+
+The 80/20 rule of consulting profitability:
+
+80% of your profit comes from 20% of your clients — but 80% of your stress comes from a different 20%. The spreadsheet separates the two groups so you can keep the profit-generators and systematically eliminate the stress-generators.
+
+Frequently asked questions
+
+How often should I run the profitability analysis?
+
+Monthly for the first quarter, then quarterly after that. The first run will surface surprises — clients you assumed were profitable who aren't, and smaller accounts that are quietly carrying the firm. After the initial cleanup (rate increases, scope reductions, firings), quarterly is enough to catch drift. Set a calendar reminder for the first Monday of each quarter.
+
+What if all my clients show as unprofitable?
+
+This is more common than you'd think — especially for solo consultants undercharging because they're afraid of losing clients. If every client is C-tier, your rates are too low, not your clients are too demanding. Benchmark against industry rates (your local AMA, consulting association, or LinkedIn peer groups). Raise rates across the board by 20-30%. The clients who stay become profitable at the new rate. The ones who leave free up capacity for better-fit accounts.
+
+Do I include internal meetings in client profitability?
+
+Yes. If your team spends 2 hours a week in internal status meetings about a specific client, that time belongs to that client's profitability calculation. The rule: any hour you or your team spends that wouldn't exist if the client didn't exist gets allocated to that client. This includes internal reviews, partner check-ins, and handoff meetings between team members.
+
+How do I handle clients who are seasonal or project-based?
+
+Annualize their numbers. For a project-based client: total the revenue and hours across the full project lifecycle, then divide by the number of months the project spanned to get a monthly average. For seasonal clients (tax season for CPAs, Q4 for e-commerce consultants): calculate profitability for the active months only, then note "seasonal" in the strategic value column. Seasonal clients can be highly profitable per active month — but you need enough of them to cover the full year.
+
+Stop subsidizing your worst clients
+
+Most consulting firms have never run a per-client profitability analysis. The ones who do find $30,000-$80,000 in hidden losses within the first quarter — money they're giving away to high-maintenance clients while their best accounts subsidize the gap. Download the free spreadsheet, run it once, and you'll know exactly which clients to protect and which ones are quietly burning your margin.
+
+Get the free spreadsheet →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Stop Losing Billable Hours to Admin: The Free Time-Audit That Recovers 45-90 Minutes a Day
+
+Your Retainer Is Running Out and Nobody Told the Client: Free Hour Tracking for Consulting Engagements
+
+You Quoted a Fixed Fee and They Added 12 Things: The Free Scope Creep Tracker That Pays for Itself
+
+
+URL: https://www.jobsdonelabs.ai/blog/consulting-client-profitability-analysis-spreadsheet-free/
 
 ---
 
@@ -17877,6 +18168,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Which Clients Make You Money? Free Per-Client Profitability Analysis Spreadsheet
+
 You Finally Closed the Deal — Then Spent 2 Weeks Playing Email Tag — Free Consulting Project Kickoff Checklist
 
 You Bill $350/Hour But Lose 90 Minutes a Day to Admin — Here's the Time-Audit System That Recovers $75,000/Year
@@ -18841,6 +19134,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Which Clients Make You Money? Free Per-Client Profitability Analysis Spreadsheet
 
 You Finally Closed the Deal — Then Spent 2 Weeks Playing Email Tag — Free Consulting Project Kickoff Checklist
 
