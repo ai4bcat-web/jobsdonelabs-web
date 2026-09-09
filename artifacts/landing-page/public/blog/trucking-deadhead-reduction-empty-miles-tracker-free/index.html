@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cut Empty Miles: Free Deadhead Tracker for Fleets | Jobs Done Labs</title>
+  <meta name="description" content="Small fleet deadhead at 16%? That's $450K/year burned on empty miles. Free tracker + lane heatmap to measure it, then cut it. No TMS needed." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-deadhead-reduction-empty-miles-tracker-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-deadhead-reduction-empty-miles-tracker-free/" />
+  <meta property="og:title" content="Cut Empty Miles: Free Deadhead Tracker for Fleets | Jobs Done Labs" />
+  <meta property="og:description" content="Small fleet deadhead at 16%? That's $450K/year burned on empty miles. Free tracker + lane heatmap to measure it, then cut it. No TMS needed." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cut Empty Miles: Free Deadhead Tracker for Fleets | Jobs Done Labs" />
+  <meta name="twitter:description" content="Small fleet deadhead at 16%? That's $450K/year burned on empty miles. Free tracker + lane heatmap to measure it, then cut it. No TMS needed." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Your Trucks Ran 18,000 Empty Miles Last Month. Here's the Free Deadhead Tracker That Shows You Which Lanes Are Bleeding Your Margins.",
+    "description": "A small fleet running 16 percent deadhead burns $450K per year on empty miles: fuel, driver pay, and tractor depreciation with zero revenue. Most fleet owners do not even know their deadhead percentage because nobody is tracking it. This guide covers: how to calculate your true deadhead cost, a free spreadsheet tracker that measures deadhead by lane pair and truck, a lane-pair profitability heatmap that reveals which routes actually make money, the 50-mile backhaul rule for capturing missed reloads, and a reduction target dashboard that coaches specific behavior instead of just yelling about too many empty miles. No TMS needed. Zero dollars to start.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-09-09",
+    "dateModified": "2026-09-09",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/trucking-deadhead-reduction-empty-miles-tracker-free/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I reduce deadhead miles in my trucking fleet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Start by measuring your baseline. Track every trip: loaded miles, empty miles to the next pickup, and the deadhead percentage per lane pair. Most fleet owners do not know their deadhead percentage. They just know it feels high. Once you have data, apply the 50-mile backhaul rule: for every delivery, check DAT or Truckstop for available loads within 50 miles of the delivery point. Capturing even 25 percent of missed backhauls typically reduces deadhead from 16 percent to 12 percent. Then address systemic causes: negotiate round-trip rates on high-deadhead lanes, build broker relationships in your delivery cities, and coach drivers and dispatchers on specific lane pairs where the data shows repeated empty returns." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good deadhead percentage for a small trucking company?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Industry benchmarks: 10 to 12 percent deadhead is considered good for a small fleet of 5 to 20 trucks running irregular-route operations. 15 to 18 percent is average and where most small fleets land. Above 20 percent is a red flag. It means either your lanes are inherently imbalanced, your dispatcher does not have time for backhaul planning, or your broker relationships in delivery cities are weak. The best small fleets get to 8 to 10 percent deadhead by specializing in balanced lane pairs and building dense broker networks in their delivery regions. But do not obsess over the national average. Deadhead varies enormously by region: Northeast lanes often run 8 to 10 percent deadhead because freight density is high; Mountain West lanes can run 20 to 25 percent because freight is imbalanced." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do empty miles cost per mile?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The fully loaded operating cost per mile for a Class 8 tractor-trailer in 2026 is approximately two dollars to two dollars and twenty cents per mile, according to the American Transportation Research Institute Operational Costs of Trucking report. This includes fuel at 55 to 75 cents per mile, driver pay at 60 to 85 cents per mile, tractor depreciation at 25 to 35 cents per mile, trailer depreciation at 10 to 15 cents per mile, maintenance at 15 to 25 cents per mile, insurancee at 10 to 20 cents per mile, and tires at 5 cents per mile. Every empty mile burns that full cost with zero offsetting revenue. A 10-truck fleet running 18,000 empty miles per month at two dollars and ten cents per mile burns thirty seven thousand eight hundred dollars per month. Nearly half a million dollars per year on miles that contribute nothing to the business." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I find backhaul loads for my trucks?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Use load boards like DAT and Truckstop to search for loads originating within 50 miles of your delivery point, filtered by your equipment type and preferred rate. Set up automated alerts: DAT Lane Search and Truckstop Saved Searches refresh automatically and notify you of new loads matching your criteria. Build direct broker relationships in your top three to five delivery cities: call five brokers per city, introduce your fleet, and ask to be on their call list when they have loads originating there. Offer competitive backhaul rates. A dollar eighty per mile backhaul still beats two dollars and ten cents per mile deadhead by three dollars and ninety cents per mile net. Finally, negotiate round-trip rates with shippers on lane pairs where backhauls are consistently hard to find." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between deadhead and empty miles?",
+        "acceptedAnswer": { "@type": "Answer", "text": "In trucking, deadhead miles and empty miles mean the same thing: miles a truck travels without a loaded trailer. No freight, no revenue. The term deadhead comes from the idea of a dead or empty trailer being pulled. Both terms refer to the repositioning miles between dropping one load and picking up the next. The only distinction some fleets make: empty miles refers to the specific miles between drop-off and pickup, tracked per trip, while deadhead percentage is the KPI. Empty miles divided by total miles, expressed as a percentage. For example: a truck runs 100,000 total miles in a month, of which 16,000 are empty. Deadhead percentage equals 16,000 divided by 100,000 equals 16 percent." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Cut Empty Miles: Free Deadhead Tracker for Fleets", "item": "https://www.jobsdonelabs.ai/blog/trucking-deadhead-reduction-empty-miles-tracker-free/" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --accent-deep:#0D4FC5; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--ink); color:var(--cream); text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--ink); color:var(--cream); font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,2.8rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:rgba(11,13,18,.55); margin-bottom:24px; }
+    .byline a { color:rgba(11,13,18,.55); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .comparison { margin:28px 0; }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid rgba(11,13,18,.1); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    a { color:var(--accent-deep); }
+    .related-reading { margin-top:48px; border-top:1px solid rgba(11,13,18,.1); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+<img src="https://images.unsplash.com/photo-1601584115197-04e6ed9e47cd?w=1200&q=80" alt="Truck on highway at sunset" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Logistics &amp; Trucking</span>
+      <h1>Your Trucks Ran 18,000 Empty Miles Last Month. Here Is the Free Deadhead Tracker That Shows You Which Lanes Are Bleeding Your Margins.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · September 9, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A 10-truck fleet at 16 percent deadhead burns four hundred fifty thousand dollars per year on empty miles: fuel, driver pay, and tractor depreciation with zero revenue. Most fleet owners do not even know their deadhead percentage because nobody is tracking it. This guide covers the deadhead calculator that measures miles by lane pair and truck, the lane-profit heatmap that reveals which routes actually make money, the 50-mile backhaul rule for capturing missed reloads, and a reduction target dashboard that coaches specific behavior instead of just yelling about too many empty miles. The full system costs zero dollars. No TMS needed.</p>
+      </div>
+
+      <h2>The Four Hundred Fifty Thousand Dollar Deadhead Problem: You Are Probably Burning More Than You Think</h2>
+      <p>Ask a fleet owner what their deadhead percentage is. Most will pause, um, and say ten to fifteen percent, I think. Almost all of them are wrong. Without a dedicated tracking system, deadhead is invisible. It is the silent margin killer that no one measures because no one has time.</p>
+
+      <p>Here is the math that shocks most fleet owners when they finally run the numbers:</p>
+
+      <div class="callout">
+        <p style="margin:0; font-family:'Anton',sans-serif; font-size:1.2rem; line-height:1.3;">10 trucks times 100,000 total miles per year times 16 percent deadhead equals 160,000 empty miles per year. At two dollars and ten cents per mile operating cost, that is three hundred thirty six thousand to four hundred fifty three thousand six hundred dollars per year. Burning fuel, paying drivers, and wearing out equipment for miles that generate zero revenue.</p>
+      </div>
+
+      <p>A missed reload happens like this: a driver delivers in Dallas at 11 AM. Your dispatcher planned to find them a backhaul to Houston, but at 10:30 a different driver got a flat tire in Oklahoma. The dispatcher spent the next hour on the phone with the tire service and the broker. By the time they got back to the Dallas driver at noon, the good backhauls were gone. The driver deadheads to Houston empty. 240 miles times two dollars and ten cents per mile equals five hundred four dollars burned. Multiply that across your fleet, and a few missed reloads per week adds up to six figures per year.</p>
+
+      <p>Another pattern: lanes that look profitable but are not. A lane paying three thousand five hundred dollars from Atlanta to Miami looks great on the rate confirmation. But when you add the 350 deadhead miles to the next pickup in Orlando at seven hundred thirty five dollars cost, the true profit drops to two thousand seven hundred sixty five dollars. A cheaper lane that pays two thousand eight hundred dollars with only 50 deadhead miles nets two thousand six hundred ninety five dollars. Nearly identical profit with less work. The deadhead tracker reveals which lanes actually make you money and which ones just look good on paper.</p>
+
+      <h2>The Free Deadhead Tracker Spreadsheet: Measure It Before You Fix It</h2>
+      <p>You cannot reduce deadhead you are not measuring. The free tracker is built around five tabs:</p>
+
+      <div class="checklist">
+        <h3>The 5-Tab Deadhead Tracking System</h3>
+        <ol>
+          <li><strong>Trip Log</strong> — Every trip, record: origin, destination, loaded miles, empty miles to next pickup, deadhead percent, lane pair, revenue for the loaded leg, cost of the empty leg, and net profit per round-trip. This is the raw data that feeds everything else.</li>
+          <li><strong>Lane-Pair Profit Heatmap</strong> — Group trips by lane pair (Atlanta to Miami, Chicago to Denver, et cetera). Calculate: average loaded revenue, average deadhead miles, average deadhead cost, and net profit per lane pair. Color-code: green lanes are profitable after deadhead, yellow lanes are break-even, red lanes lose money after deadhead. The heatmap is the single most important view. It shows you which lanes to grow and which to fix or drop.</li>
+          <li><strong>Truck Deadhead Report</strong> — Deadhead percent by truck, deadhead cost year to date, and deadhead trend over time. A truck consistently running 22 percent deadhead while the fleet average is 16 percent has a route-planning problem or a dispatcher problem.</li>
+          <li><strong>Driver Deadhead Report</strong> — Deadhead percent by driver. Some drivers are better at finding backhauls than others. Some lanes they run just have worse backhaul availability. The data separates the driver from the lane.</li>
+          <li><strong>Weekly Dashboard</strong> — Deadhead percent, deadhead miles, deadhead cost, and year to date run rate all in one view. Below target line is green; above is red. Shows week-over-week trend and the gap between actual and target.</li>
+        </ol>
+      </div>
+
+      <h2>The Lane-Pair Profitability Heatmap: Stop Confusing Revenue With Profit</h2>
+      <p>A three thousand five hundred dollar lane that requires 350 deadhead miles is not a three thousand five hundred dollar lane. It is a two thousand seven hundred sixty five dollar lane. The heatmap makes this visible for every lane pair your fleet runs, every week.</p>
+
+      <div class="comparison">
+        <table>
+          <thead><tr><th>Lane Pair</th><th>Loaded Revenue</th><th>Deadhead Miles</th><th>Deadhead Cost</th><th>Net Profit</th><th>Verdict</th></tr></thead>
+          <tbody>
+            <tr><td>Atlanta to Miami</td><td>three thousand five hundred dollars</td><td>350 (Orlando to next pickup)</td><td>seven hundred thirty five dollars</td><td>two thousand seven hundred sixty five dollars</td><td style="color:#f0b429">Warning: Break-even</td></tr>
+            <tr><td>Chicago to Indianapolis</td><td>two thousand eight hundred dollars</td><td>50</td><td>one hundred five dollars</td><td>two thousand six hundred ninety five dollars</td><td style="color:#22c55e">Good: Profitable</td></tr>
+            <tr><td>Denver to Salt Lake City</td><td>four thousand two hundred dollars</td><td>420 (remote backhaul)</td><td>eight hundred eighty two dollars</td><td>three thousand three hundred eighteen dollars</td><td style="color:#22c55e">Good: Profitable</td></tr>
+            <tr><td>Dallas to Houston</td><td>one thousand nine hundred dollars</td><td>240 (no backhaul plan)</td><td>five hundred four dollars</td><td>one thousand three hundred ninety six dollars</td><td style="color:#ef4444">Bad: Needs fixing</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The Chicago to Indianapolis lane looks worse on the rate confirmation (two thousand eight hundred versus three thousand five hundred), but the net profit is nearly identical because there is almost no deadhead. The heatmap reveals the truth: a lane revenue is a vanity metric. Net profit after deadhead is the metric that matters.</p>
+
+      <h2>The 50-Mile Backhaul Rule: Capture 25 Percent of Missed Reloads, Save One Hundred Thirteen Thousand Dollars Per Year</h2>
+      <p>Here is the insight from real fleet data: 40 percent of your deadhead miles are on lanes where a load was available within 50 miles of your delivery point. The dispatcher just did not have time to look.</p>
+
+      <p>The 50-mile backhaul rule is simple: for every delivery, before the driver deadheads home, check DAT and Truckstop for available loads within 50 miles of the delivery point. Even capturing 25 percent of those missed backhauls, one out of four deadhead legs that currently go empty, reduces deadhead from 16 percent to 12 percent. On a 10-truck fleet, that is one hundred thirteen thousand dollars per year in savings.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The 50-mile check takes less than three minutes.</strong> The dispatcher opens DAT, enters the delivery zip code, sets a 50-mile radius, and scans for loads matching the fleet equipment and preferred rate. If a load exists: book it, even at one dollar eighty cents per mile. A one dollar eighty cent per mile backhaul beats two dollars ten cents per mile deadhead by three dollars ninety cents per mile net. If no load exists within 50 miles: the truck deadheads, and the lane goes on a watchlist for long-term fix. Either build broker relationships in that city or stop accepting outbound loads there.</p>
+      </div>
+
+      <h2>The Deadhead Reduction Target Dashboard: Coach the Specific Behavior, Do Not Just Yell About Empty Miles</h2>
+      <p>We need to reduce deadhead is not a plan. It is a wish. The dashboard turns the wish into specific, trackable actions:</p>
+
+      <div class="checklist">
+        <h3>Weekly Dashboard Questions</h3>
+        <ul>
+          <li><strong>What was this week deadhead percent?</strong> If above target: which lanes caused it? Check the lane-pair heatmap for red lanes and yellow lanes that shifted red.</li>
+          <li><strong>Which dispatcher shift had the highest deadhead?</strong> Was it a specific shift (Friday afternoons, Monday mornings) or a specific dispatcher? Coach the behavior. Maybe Friday afternoons need a dedicated backhaul-planning window before the dispatcher leaves for the weekend.</li>
+          <li><strong>Which truck had the highest deadhead?</strong> One truck at 22 percent deadhead while the fleet is at 14 percent means that truck routes are wrong, or the driver is not following the backhaul plan, or the lanes they are assigned are deadhead-heavy. The fix is different for each root cause.</li>
+          <li><strong>How many missed backhauls were captured this week?</strong> Track the 50-mile backhaul rule compliance. The dispatcher should be able to point to specific loads that were booked that would have been missed without the check.</li>
+        </ul>
+      </div>
+
+      <p>After four weeks of running the tracker, a fleet owner should be able to say: Our deadhead was 16 percent. We switched to 50-mile backhaul checks, built broker relationships with three new brokers in Dallas and Atlanta, and negotiated round-trip rates on two high-deadhead lanes. Now we are at 11 percent. A five-point improvement that saved one hundred forty one thousand dollars this year. That is a plan. Not a wish.</p>
+
+      <h2>Systemic Deadhead Causes: Fix the Operating Model, Not Just the Dispatching</h2>
+      <p>The deadhead tracker will reveal patterns that are not the dispatcher fault. These require structural changes to your operating model:</p>
+
+      <ol>
+        <li><strong>Imbalanced lanes.</strong> If you are running Atlanta to Miami loads every day but your customers in Miami are not shipping back to Atlanta, you are structurally deadhead-heavy. Fixes: A, recruit customers in Miami for outbound freight. B, build broker relationships in Orlando, Tampa, and Jacksonville, expanding your within 50 miles radius from one city to four. C, negotiate round-trip rates where the customer pays a premium for the outbound leg in exchange for a discounted backhaul rate. Or in really tough lanes, D, stop serving the lane unless the outbound rate covers the deadhead cost.</li>
+        <li><strong>No backhaul planning time.</strong> If the dispatcher is handling 60 to 70 loads per week solo, they have zero time for backhaul research. The deadhead percent is 16 because they are running a triage operating model. Put out the biggest fire first. Fix: automate load board refreshes and driver check-ins (see the dispatch overwhelm guide below) to free up 15 to 20 hours per week for backhaul planning.</li>
+        <li><strong>Drivers who refuse backhauls.</strong> Some drivers want to deadhead home. Family, pet, preferred routes. The deadhead tracker shows the cost of that preference. If a driver with 25 percent deadhead says I do not like taking loads out of Dallas, the data shows that preference costs forty four thousand dollars per year. The conversation changes from the driver is picky to the driver preferences are costing forty four thousand dollars per year. Is their other value worth it?</li>
+        <li><strong>Seasonal imbalanes.</strong> Produce season, holiday peaks, and weather closures create temporary deadhead spikes. The tracker shows the seasonal pattern so you can plan ahead: beef up backhaul broker calls in October to November before the holiday rush, and identify January to February as the annual deadhead nadir where every lane is hard.</li>
+      </ol>
+
+      <section class="faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <h3>How do I reduce deadhead miles in my trucking fleet?</h3>
+        <p>Start by measuring your baseline. Track every trip: loaded miles, empty miles to the next pickup, and the deadhead percentage per lane pair. Most fleet owners do not know their deadhead percentage. They just know it feels high. Once you have data, apply the 50-mile backhaul rule: for every delivery, check DAT or Truckstop for available loads within 50 miles of the delivery point. Capturing even 25 percent of missed backhauls typically reduces deadhead from 16 percent to 12 percent. Then address systemic causes: negotiate round-trip rates on high-deadhead lanes, build broker relationships in your delivery cities, and coach drivers and dispatchers on specific lane pairs where the data shows repeated empty returns.</p>
+
+        <h3>What is a good deadhead percentage for a small trucking company?</h3>
+        <p>Industry benchmarks: 10 to 12 percent deadhead is considered good for a small fleet of 5 to 20 trucks running irregular-route operations. 15 to 18 percent is average and where most small fleets land. Above 20 percent is a red flag. It means either your lanes are inherently imbalanced (more freight into a region than out), your dispatcher does not have time for backhaul planning, or your broker relationships in delivery cities are weak. The best small fleets get to 8 to 10 percent deadhead by specializing in balanced lane pairs and building dense broker networks in their delivery regions. But do not obsess over the national average. Deadhead varies enormously by region: Northeast lanes often run 8 to 10 percent deadhead because freight density is high; Mountain West lanes can run 20 to 25 percent because freight is imbalanced.</p>
+
+        <h3>How much do empty miles cost per mile?</h3>
+        <p>The fully loaded operating cost per mile for a Class 8 tractor-trailer in 2026 is approximately two dollars to two dollars twenty cents per mile, according to the American Transportation Research Institute Operational Costs of Trucking report. This includes fuel at fifty five to seventy five cents per mile, driver pay at sixty to eighty five cents per mile, tractor depreciation at twenty five to thirty five cents per mile, trailer depreciation at ten to fifteen cents per mile, maintenance at fifteen to twenty five cents per mile, insurance at ten to twenty cents per mile, and tires at five cents per mile. Every empty mile burns that full two dollars ten cents per mile with zero offsetting revenue. A 10-truck fleet running 18,000 empty miles per month at two dollars ten cents per mile burns thirty seven thousand eight hundred dollars per month. Nearly half a million dollars per year on miles that contribute nothing to the business.</p>
+
+        <h3>How do I find backhaul loads for my trucks?</h3>
+        <p>Use load boards (DAT, Truckstop) to search for loads originating within 50 miles of your delivery point, filtered by your equipment type and preferred rate. Set up automated alerts. DAT Lane Search and Truckstop Saved Searches refresh automatically and notify you of new loads matching your criteria. Build direct broker relationships in your top three to five delivery cities: call five brokers per city, introduce your fleet, and ask to be on their call list when they have loads originating there. Offer competitive backhaul rates. A one dollar eighty cent per mile backhaul still beats two dollars ten cents per mile deadhead by three dollars ninety cents per mile net. Finally, negotiate round-trip rates with shippers on lane pairs where backhauls are consistently hard to find.</p>
+
+        <h3>What is the difference between deadhead and empty miles?</h3>
+        <p>In trucking, deadhead miles and empty miles mean the same thing: miles a truck travels without a loaded trailer. No freight, no revenue. The term deadhead comes from the idea of a dead (empty) trailer being pulled. Both terms refer to the repositioning miles between dropping one load and picking up the next. The only distinction some fleets make: empty miles refers to the specific miles between drop-off and pickup, tracked per trip, while deadhead percentage is the KPI. Empty miles divided by total miles, expressed as a percentage. For example: a truck runs 100,000 total miles in a month, of which 16,000 are empty. Deadhead percentage equals 16,000 divided by 100,000 equals 16 percent.</p>
+      </section>
+
+      <div class="cta-box">
+        <h2>We Build the Full Dispatch Plus Deadhead Reduction Stack</h2>
+        <p>We do not just hand you a spreadsheet. We shadow your dispatcher for a day, map every repetitive task, quantify what the deadhead and dispatch overwhelm is costing you, and build the automations that recover those hours. Every build is scoped against a hard ROI target and covered by our thirty thousand dollars recovered in ninety days guarantee. If the system we build does not recover or save at least thirty thousand dollars in documented bottom-line impact within ninety days of deployment, you pay nothing.</p>
+        <a class="btn" href="/contact">Book your free audit arrow right</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-detention-pay-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">You Are Losing Two Hundred Thousand Dollars a Year in Unpaid Detention and You Do Not Even Know It</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/ifta-fuel-tax-spreadsheet-template-free/" style="font-weight:600;color:#1466FF;text-decoration:none">IFTA Fuel Tax Spreadsheet: File Your Quarterly Report Without Paying for Software</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/truck-fleet-maintenance-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Fleet Maintenace System Is Two Spreadsheets and a Whiteboard. The Five Level Fix.</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-dispatcher-overwhelm-automation-guide/" style="font-weight:600;color:#1466FF;text-decoration:none">Dispatcher Overwhelmed? How Small Fleets Handle Fifty Plus Loads Without Hiring</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    Copyright 2026 Jobs Done Labs. <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
