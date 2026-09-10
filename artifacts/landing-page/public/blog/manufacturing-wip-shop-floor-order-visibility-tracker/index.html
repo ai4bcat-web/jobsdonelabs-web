@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WIP Tracker: Know Where Every Job Is Right Now | Jobs Done Labs</title>
+  <meta name="description" content="Your shop floor goes dark at 5 PM. Free WIP tracker — know every job's work center, status, and ship date in 5 minutes instead of a 2-hour floor walk." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/manufacturing-wip-shop-floor-order-visibility-tracker/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/manufacturing-wip-shop-floor-order-visibility-tracker/" />
+  <meta property="og:title" content="WIP Tracker: Know Where Every Job Is Right Now" />
+  <meta property="og:description" content="Your shop floor goes dark at 5 PM. Free WIP tracker — know every job's work center, status, and ship date in 5 minutes instead of a 2-hour floor walk." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WIP Tracker: Know Where Every Job Is Right Now" />
+  <meta name="twitter:description" content="Your shop floor goes dark at 5 PM. Free WIP tracker — know every job's work center, status, and ship date in 5 minutes instead of a 2-hour floor walk." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+
+  <!-- BLOGPOSTING JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Your Shop Floor Is a Black Box After 5 PM. Here's the Free WIP Tracker That Shows You Exactly Where Every Job Is Right Now.",
+    "description": "A 20-person shop running 40 active jobs with zero real-time tracking loses 100 to 180 thousand dollars per year in visibility-related waste. Free WIP tracker spreadsheet with work-center routing, operation sequencing, and stuck-job early warning.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "sameAs": "https://www.linkedin.com/in/rynebandolik/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai"
+    },
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/manufacturing-wip-shop-floor-order-visibility-tracker/"
+  }
+  </script>
+
+  <!-- FAQPAGE JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I track work in progress on a manufacturing shop floor without ERP software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a WIP tracker spreadsheet with one row per active job. Track job number, customer, part name, quantity, due date, current work center, operation sequence, and status per operation (not started, in progress, complete, stuck). A dashboard shows jobs behind schedule, jobs stuck over 24 hours at one operation, and jobs due this week with incomplete operations — all in a 5-minute daily check instead of a 2-hour floor walk."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a WIP tracker and why does a small manufacturer need one?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A WIP (Work In Progress) tracker is a real-time visibility tool that shows exactly where every job is on your shop floor — which work center it is at, what operation it is on, and how long it has been there. A small manufacturer needs one because without it, the shop floor is a black box after hours: the owner cannot answer 'where is my order' when a customer calls, stuck jobs go undetected for days, and production problems compound silently until they become missed shipments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I give customers accurate ship dates in a job shop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the WIP tracker to pull up the job in seconds. Tell the customer the current operation ('It is at welding — operation 4 of 7'), the estimated completion date based on remaining operations and standard queue times, and offer to text when it ships. This replaces the 'let me walk out to the floor and call you back' response with a confident, specific answer that builds trust and earns repeat orders."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I run a daily production standup meeting for a small manufacturing shop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pull the WIP tracker 15 minutes before the meeting. Identify: which jobs are behind schedule, which jobs are stuck, which work centers are overloaded, and which jobs need to ship today. The 15-minute meeting replaces the 45-minute walkaround. Come prepared with the data — the tracker tells you what needs attention before anyone says a word."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between production scheduling and WIP tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Production scheduling plans what work happens when — it is the forward-looking plan. WIP tracking shows what is actually happening right now — it is the real-time status. Scheduling tells you 'Job 1437 should be at welding by Thursday.' WIP tracking tells you 'Job 1437 is still at saw on Friday — and has been stuck there for 3 days.' You need both: scheduling to plan, and WIP tracking to catch when reality diverges from the plan."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BREADCRUMBLIST JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.jobsdonelabs.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.jobsdonelabs.ai/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "WIP Tracker: Know Where Every Job Is Right Now",
+        "item": "https://www.jobsdonelabs.ai/blog/manufacturing-wip-shop-floor-order-visibility-tracker/"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <span class="kicker">Manufacturing</span>
+      <h1>Your Shop Floor Is a Black Box After 5 PM. Here's the Free WIP Tracker That Shows You Exactly Where Every Job Is Right Now.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · September 10, 2026</p>
+
+      <img src="/og-image.jpg" alt="Manufacturing WIP shop floor order visibility tracker spreadsheet" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A 20-person shop with 40 active jobs and zero real-time tracking loses one hundred thousand to one hundred eighty thousand dollars per year in visibility-related waste — floor walks, missed shipments, and lost customers. This free WIP tracker gives you a 5-minute dashboard that replaces the 2-hour walkaround: know which jobs are behind, which are stuck, and what ships tomorrow — before the customer calls.</p>
+      </div>
+
+      <h2>The one hundred eighty thousand dollar visibility problem</h2>
+
+      <p>At 5 PM, the shop floor goes dark. The owner drives home with no idea what shipped, what is stuck, or which jobs are behind. The production manager is the only person who knows the real status — and he is one sick day away from operational chaos.</p>
+
+      <p>A 20-person shop running 40 active jobs with zero real-time tracking loses money every single day through visibility gaps that compound silently. Here is what it actually costs:</p>
+
+      <ul>
+        <li><strong>Floor walks:</strong> Two hours per day of the owner or production manager physically walking the floor asking "where are we on this" — 500 hours per year at seventy five dollars per hour loaded labor = thirty seven thousand five hundred dollars.</li>
+        <li><strong>Missed shipments:</strong> One job per month that falls through the cracks because nobody noticed it was stuck. Two thousand dollars in expedited shipping plus five hundred dollars in customer goodwill damage. That is thirty thousand dollars per year.</li>
+        <li><strong>Lost customers:</strong> One major customer lost every two years because of chronic late deliveries. That customer was worth fifty thousand to one hundred thousand dollars in annual revenue. The WIP tracker could have caught the pattern six months before they left.</li>
+        <li><strong>Total:</strong> One hundred thousand to one hundred eighty thousand dollars per year in visibility-related losses — all preventable with a system that takes one hour to set up.</li>
+      </ul>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The whiteboard-and-post-it reality:</strong> At the typical small manufacturer, production status lives on a whiteboard that gets erased at shift change, on post-it notes that fall off the workstation, and in the production manager's head. Nobody else knows what is happening — not the sales team promising delivery dates, not the purchasing manager ordering materials, and certainly not the owner calling in after hours to check on a hot job. The WIP tracker replaces all of it with a single source of truth.</p>
+      </div>
+
+      <h2>The free WIP tracker spreadsheet</h2>
+
+      <p>The tracker is a Google Sheets or Excel workbook with two tabs: one for job-level tracking and one for the daily dashboard. It costs zero dollars and takes about an hour to set up — populate your current active jobs, define your work centers, and you are running.</p>
+
+      <p><strong>Job tracking tab — one row per active job:</strong></p>
+
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr><th>Field</th><th>What you track</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Job number</td><td>Your internal job or order number</td></tr>
+            <tr><td>Customer</td><td>Company name and contact</td></tr>
+            <tr><td>Part name</td><td>What you are making</td></tr>
+            <tr><td>Quantity</td><td>Total units on this order</td></tr>
+            <tr><td>Due date</td><td>When the customer expects it</td></tr>
+            <tr><td>Current work center</td><td>Saw, CNC, weld, paint, assembly, QC, shipping — wherever the job physically sits right now</td></tr>
+            <tr><td>Operation sequence</td><td>Op 10 Saw → Op 20 CNC → Op 30 Weld → Op 40 Paint → Op 50 Assembly → Op 60 QC → Op 70 Ship</td></tr>
+            <tr><td>Status per operation</td><td>Not started / In progress / Complete / Stuck (with reason)</td></tr>
+            <tr><td>Hours at current op</td><td>How long the job has been sitting at this station</td></tr>
+            <tr><td>Queue time</td><td>Standard expected time between operations — when a job exceeds 1.5x, it gets flagged</td></tr>
+            <tr><td>Est. completion date</td><td>Calculated from remaining operations × standard times</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Dashboard tab — the one-page view you check in 5 minutes:</strong></p>
+
+      <ul>
+        <li><strong>Jobs by status:</strong> Count of jobs at each work center and each operation status — instant picture of where work is concentrated.</li>
+        <li><strong>Jobs behind schedule:</strong> Red (over 3 days late), yellow (1 to 3 days late), green (on track or ahead). The red items are your morning action list.</li>
+        <li><strong>Jobs stuck over 24 hours:</strong> Any job sitting at one operation for more than 1.5x the standard queue time — the early warning that something is wrong.</li>
+        <li><strong>Jobs due this week with incomplete operations:</strong> Forward-looking alert: these orders are supposed to ship within 5 days but are not finished — act now.</li>
+        <li><strong>Total WIP value:</strong> Sum of all active job values — know how much cash is tied up on the floor right now.</li>
+      </ul>
+
+      <h2>The 15-minute morning standup from a spreadsheet</h2>
+
+      <p>Every morning at 7:45 AM, pull the WIP tracker. In 5 minutes you know exactly what needs attention:</p>
+
+      <ol>
+        <li><strong>Which jobs are behind schedule?</strong> The dashboard shows red and yellow — start there.</li>
+        <li><strong>Which jobs are stuck?</strong> Any job flagged as sitting at one operation for over a day gets investigated. Is the work center overloaded? Did the operator call in sick? Is a tool broken?</li>
+        <li><strong>Which work centers are overloaded?</strong> Too many jobs piling up at CNC? Move a cross-trained operator there. The tracker shows concentration before it becomes a bottleneck.</li>
+        <li><strong>Which jobs need to ship today?</strong> Final check — are the shipping-priority jobs at QC or shipping? If not, something went wrong and you catch it at 8 AM, not at 4 PM when the truck is waiting.</li>
+      </ol>
+
+      <p>The 15-minute meeting replaces the 45-minute walkaround. The production manager comes prepared. The owner knows before the customer calls. And when the production manager is out sick, the tracker still has all the answers — the shop floor is never a black box.</p>
+
+      <h2>The "where is my order" customer response system</h2>
+
+      <p>Customer calls: "Where is my order?"</p>
+
+      <p>Without the tracker, the answer is "Let me walk out to the floor and call you back." That call-back takes 20 to 45 minutes. The customer waits. Trust erodes. Every call is a fire drill.</p>
+
+      <p>With the tracker, the answer takes 30 seconds. Pull up the job. The screen shows: "Job 1437 — at welding, operation 4 of 7. Estimated completion Thursday. I will text you when it ships."</p>
+
+      <p>The customer gets a confident, specific answer — not a promise to "check and get back to you." Trust goes up. Repeat orders increase. The tracker turns every customer call from a fire drill into a 30-second status check. Over the course of a year, that is hundreds of hours saved and a reputation for reliability that earns repeat business.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The real reason customers leave:</strong> It is rarely because the work is bad. It is because they cannot get a straight answer about when their order will ship. They call, they wait, they call again — and eventually they find a shop that answers the phone with a real status update. The WIP tracker gives you that answer. It is the cheapest customer retention tool in manufacturing.</p>
+      </div>
+
+      <h2>The stuck-job early warning system</h2>
+
+      <p>The most expensive problem on a shop floor is not a machine breakdown — it is a job that is stuck and nobody notices for five days. By the time the customer calls wondering where their order is, the job has been sitting at one work center all week while everyone walked past it.</p>
+
+      <p>The tracker flags stuck jobs before they become missed shipments:</p>
+
+      <ul>
+        <li><strong>Yellow flag:</strong> Any job sitting at one operation for more than 1.5x the standard queue time. Something might be wrong — investigate.</li>
+        <li><strong>Red flag:</strong> Any job sitting at one operation for more than 3x the standard queue time. Something is definitely wrong — act now.</li>
+      </ul>
+
+      <p>The flag triggers action: Is the work center overloaded? Did the operator call in sick? Is a tool broken? Is raw material missing? Is there a quality hold that nobody communicated? Catch problems on day one, not day five when the customer is screaming.</p>
+
+      <p>A shop that catches stuck jobs within 24 hours instead of 5 days recovers four days of production time per incident. At two stuck jobs per month, that is ninety six days of recovered capacity per year — the equivalent of adding half a machine without spending a dollar on equipment.</p>
+
+      <h2>The visual WIP board — bring the tracker to the floor</h2>
+
+      <p>Print the dashboard once per shift and post it on the shop floor. Every operator can see: which jobs are priority, which are behind, and what is coming next. The visual board does three things:</p>
+
+      <ol>
+        <li><strong>Operators self-prioritize.</strong> They can see the red jobs without the production manager telling them. They pull the next job without asking "what should I work on next."</li>
+        <li><strong>Peer accountability.</strong> When Job 1437 has been at welding for three days and the welder sees it on the board flagged red, he does not need a manager to tell him it is a problem — the board told him.</li>
+        <li><strong>Cross-shift continuity.</strong> The second shift walks in, looks at the board, and knows exactly which jobs are in progress and where. No handover meeting required. The board is the handover.</li>
+      </ol>
+
+      <h2>How to set up the WIP tracker in 60 minutes</h2>
+
+      <div class="checklist">
+        <h3>Setup checklist</h3>
+        <ol>
+          <li><strong>Create the spreadsheet.</strong> Google Sheets or Excel — free either way. Make two tabs: Job Tracker and Dashboard.</li>
+          <li><strong>List your work centers.</strong> Write down every station a job passes through, in order. Saw → CNC → Deburr → Weld → Paint → Assembly → QC → Ship. Your shop may have more or fewer — use your actual routing.</li>
+          <li><strong>Enter active jobs.</strong> Start with every job currently on the floor. Job number, customer, part, quantity, due date, current work center, current operation, status. This takes about 20 minutes the first time — you know your jobs.</li>
+          <li><strong>Set standard queue times.</strong> How long should a job sit at each operation under normal conditions? These do not need to be perfect — start with estimates and refine over the first two weeks. The tracker will reveal the real times.</li>
+          <li><strong>Build the dashboard formulas.</strong> COUNTIF for jobs by status. Conditional formatting for red/yellow/green. SUM for WIP value. The template has these pre-built — just copy the formulas.</li>
+          <li><strong>Assign the update owner.</strong> One person updates the tracker once per shift — 10 minutes, end of shift. Could be the production manager, a lead operator, or a shift supervisor. The key: one person owns it, so it always gets done.</li>
+        </ol>
+      </div>
+
+      <p>That is it. One hour total. No software to install. No ERP to implement. No consultants. Just a spreadsheet that tells you where every job is right now.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>How do I track work in progress on a manufacturing shop floor without ERP software?</h3>
+        <p>Use a WIP tracker spreadsheet with one row per active job. Track job number, customer, part name, quantity, due date, current work center, operation sequence, and status per operation (not started, in progress, complete, stuck). A dashboard shows jobs behind schedule, jobs stuck over 24 hours at one operation, and jobs due this week with incomplete operations — all in a 5-minute daily check instead of a 2-hour floor walk.</p>
+
+        <h3>What is a WIP tracker and why does a small manufacturer need one?</h3>
+        <p>A WIP (Work In Progress) tracker is a real-time visibility tool that shows exactly where every job is on your shop floor — which work center it is at, what operation it is on, and how long it has been there. A small manufacturer needs one because without it, the shop floor is a black box after hours: the owner cannot answer "where is my order" when a customer calls, stuck jobs go undetected for days, and production problems compound silently until they become missed shipments.</p>
+
+        <h3>How do I give customers accurate ship dates in a job shop?</h3>
+        <p>Use the WIP tracker to pull up the job in seconds. Tell the customer the current operation ("It is at welding — operation 4 of 7"), the estimated completion date based on remaining operations and standard queue times, and offer to text when it ships. This replaces the "let me walk out to the floor and call you back" response with a confident, specific answer that builds trust and earns repeat orders.</p>
+
+        <h3>How do I run a daily production standup meeting for a small manufacturing shop?</h3>
+        <p>Pull the WIP tracker 15 minutes before the meeting. Identify: which jobs are behind schedule, which jobs are stuck, which work centers are overloaded, and which jobs need to ship today. The 15-minute meeting replaces the 45-minute walkaround. Come prepared with the data — the tracker tells you what needs attention before anyone says a word.</p>
+
+        <h3>What is the difference between production scheduling and WIP tracking?</h3>
+        <p>Production scheduling plans what work happens when — it is the forward-looking plan. WIP tracking shows what is actually happening right now — it is the real-time status. Scheduling tells you "Job 1437 should be at welding by Thursday." WIP tracking tells you "Job 1437 is still at saw on Friday — and has been stuck there for 3 days." You need both: scheduling to plan, and WIP tracking to catch when reality diverges from the plan.</p>
+      </section>
+
+      <div class="cta-box">
+        <h2>Stop walking the floor asking where jobs are</h2>
+        <p>You built your shop to make things — not to spend 10 hours a week walking around asking "where are we on this." If you want to replace the whiteboard-and-post-it chaos with a system that tells you exactly where every job is in 5 minutes — and you want it built specifically for your shop's work centers, not a generic template — we will build it with you in one afternoon.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/small-manufacturing-production-scheduling-guide/" style="font-weight:600;color:#1466FF;text-decoration:none">The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/manufacturing-production-bottleneck-constraint-analysis/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Shop Has 12 Machines But Only One Is The Bottleneck — And You're About To Spend $150,000 On The Wrong Machine</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/shift-handover-log-spreadsheet-manufacturing-free-template/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Second Shift Just Scrapped 40 Parts Because the First Shift's Whiteboard Said Nothing. Here's the Shift Handover Log That Ends It.</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    &copy; 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>

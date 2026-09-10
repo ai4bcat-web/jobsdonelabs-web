@@ -10190,6 +10190,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+WIP Tracker: Know Where Every Job Is Right Now — The Free Shop Floor Visibility System
+
 Your Shop Floor Runs at 97% Yield — Free Quality Metrics Tracker (Defect Rate & FPY)
 
 Your Second Shift Scrapped 40 Parts Because the Whiteboard Said Nothing — Free Shift Handover Log
@@ -10702,6 +10704,265 @@ You're Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet Syste
 
 
 URL: https://www.jobsdonelabs.ai/blog/manufacturing-scrap-waste-reduction-tracking/
+
+---
+
+# WIP Tracker: Know Where Every Job Is Right Now
+
+Manufacturing
+
+Your Shop Floor Is a Black Box After 5 PM. Here's the Free WIP Tracker That Shows You Exactly Where Every Job Is Right Now.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 10, 2026
+
+Key takeaways
+
+A 20-person shop with 40 active jobs and zero real-time tracking loses one hundred thousand to one hundred eighty thousand dollars per year in visibility-related waste — floor walks, missed shipments, and lost customers. This free WIP tracker gives you a 5-minute dashboard that replaces the 2-hour walkaround: know which jobs are behind, which are stuck, and what ships tomorrow — before the customer calls.
+
+The one hundred eighty thousand dollar visibility problem
+
+At 5 PM, the shop floor goes dark. The owner drives home with no idea what shipped, what is stuck, or which jobs are behind. The production manager is the only person who knows the real status — and he is one sick day away from operational chaos.
+
+A 20-person shop running 40 active jobs with zero real-time tracking loses money every single day through visibility gaps that compound silently. Here is what it actually costs:
+
+Floor walks:
+
+Two hours per day of the owner or production manager physically walking the floor asking "where are we on this" — 500 hours per year at seventy five dollars per hour loaded labor = thirty seven thousand five hundred dollars.
+
+Missed shipments:
+
+One job per month that falls through the cracks because nobody noticed it was stuck. Two thousand dollars in expedited shipping plus five hundred dollars in customer goodwill damage. That is thirty thousand dollars per year.
+
+Lost customers:
+
+One major customer lost every two years because of chronic late deliveries. That customer was worth fifty thousand to one hundred thousand dollars in annual revenue. The WIP tracker could have caught the pattern six months before they left.
+
+Total:
+
+One hundred thousand to one hundred eighty thousand dollars per year in visibility-related losses — all preventable with a system that takes one hour to set up.
+
+The whiteboard-and-post-it reality:
+
+At the typical small manufacturer, production status lives on a whiteboard that gets erased at shift change, on post-it notes that fall off the workstation, and in the production manager's head. Nobody else knows what is happening — not the sales team promising delivery dates, not the purchasing manager ordering materials, and certainly not the owner calling in after hours to check on a hot job. The WIP tracker replaces all of it with a single source of truth.
+
+The free WIP tracker spreadsheet
+
+The tracker is a Google Sheets or Excel workbook with two tabs: one for job-level tracking and one for the daily dashboard. It costs zero dollars and takes about an hour to set up — populate your current active jobs, define your work centers, and you are running.
+
+Job tracking tab — one row per active job:
+
+Field
+
+What you track
+
+Job number
+
+Your internal job or order number
+
+Customer
+
+Company name and contact
+
+Part name
+
+What you are making
+
+Quantity
+
+Total units on this order
+
+Due date
+
+When the customer expects it
+
+Current work center
+
+Saw, CNC, weld, paint, assembly, QC, shipping — wherever the job physically sits right now
+
+Operation sequence
+
+Op 10 Saw → Op 20 CNC → Op 30 Weld → Op 40 Paint → Op 50 Assembly → Op 60 QC → Op 70 Ship
+
+Status per operation
+
+Not started / In progress / Complete / Stuck (with reason)
+
+Hours at current op
+
+How long the job has been sitting at this station
+
+Queue time
+
+Standard expected time between operations — when a job exceeds 1.5x, it gets flagged
+
+Est. completion date
+
+Calculated from remaining operations × standard times
+
+Dashboard tab — the one-page view you check in 5 minutes:
+
+Jobs by status:
+
+Count of jobs at each work center and each operation status — instant picture of where work is concentrated.
+
+Jobs behind schedule:
+
+Red (over 3 days late), yellow (1 to 3 days late), green (on track or ahead). The red items are your morning action list.
+
+Jobs stuck over 24 hours:
+
+Any job sitting at one operation for more than 1.5x the standard queue time — the early warning that something is wrong.
+
+Jobs due this week with incomplete operations:
+
+Forward-looking alert: these orders are supposed to ship within 5 days but are not finished — act now.
+
+Total WIP value:
+
+Sum of all active job values — know how much cash is tied up on the floor right now.
+
+The 15-minute morning standup from a spreadsheet
+
+Every morning at 7:45 AM, pull the WIP tracker. In 5 minutes you know exactly what needs attention:
+
+Which jobs are behind schedule?
+
+The dashboard shows red and yellow — start there.
+
+Which jobs are stuck?
+
+Any job flagged as sitting at one operation for over a day gets investigated. Is the work center overloaded? Did the operator call in sick? Is a tool broken?
+
+Which work centers are overloaded?
+
+Too many jobs piling up at CNC? Move a cross-trained operator there. The tracker shows concentration before it becomes a bottleneck.
+
+Which jobs need to ship today?
+
+Final check — are the shipping-priority jobs at QC or shipping? If not, something went wrong and you catch it at 8 AM, not at 4 PM when the truck is waiting.
+
+The 15-minute meeting replaces the 45-minute walkaround. The production manager comes prepared. The owner knows before the customer calls. And when the production manager is out sick, the tracker still has all the answers — the shop floor is never a black box.
+
+The "where is my order" customer response system
+
+Customer calls: "Where is my order?"
+
+Without the tracker, the answer is "Let me walk out to the floor and call you back." That call-back takes 20 to 45 minutes. The customer waits. Trust erodes. Every call is a fire drill.
+
+With the tracker, the answer takes 30 seconds. Pull up the job. The screen shows: "Job 1437 — at welding, operation 4 of 7. Estimated completion Thursday. I will text you when it ships."
+
+The customer gets a confident, specific answer — not a promise to "check and get back to you." Trust goes up. Repeat orders increase. The tracker turns every customer call from a fire drill into a 30-second status check. Over the course of a year, that is hundreds of hours saved and a reputation for reliability that earns repeat business.
+
+The real reason customers leave:
+
+It is rarely because the work is bad. It is because they cannot get a straight answer about when their order will ship. They call, they wait, they call again — and eventually they find a shop that answers the phone with a real status update. The WIP tracker gives you that answer. It is the cheapest customer retention tool in manufacturing.
+
+The stuck-job early warning system
+
+The most expensive problem on a shop floor is not a machine breakdown — it is a job that is stuck and nobody notices for five days. By the time the customer calls wondering where their order is, the job has been sitting at one work center all week while everyone walked past it.
+
+The tracker flags stuck jobs before they become missed shipments:
+
+Yellow flag:
+
+Any job sitting at one operation for more than 1.5x the standard queue time. Something might be wrong — investigate.
+
+Red flag:
+
+Any job sitting at one operation for more than 3x the standard queue time. Something is definitely wrong — act now.
+
+The flag triggers action: Is the work center overloaded? Did the operator call in sick? Is a tool broken? Is raw material missing? Is there a quality hold that nobody communicated? Catch problems on day one, not day five when the customer is screaming.
+
+A shop that catches stuck jobs within 24 hours instead of 5 days recovers four days of production time per incident. At two stuck jobs per month, that is ninety six days of recovered capacity per year — the equivalent of adding half a machine without spending a dollar on equipment.
+
+The visual WIP board — bring the tracker to the floor
+
+Print the dashboard once per shift and post it on the shop floor. Every operator can see: which jobs are priority, which are behind, and what is coming next. The visual board does three things:
+
+Operators self-prioritize.
+
+They can see the red jobs without the production manager telling them. They pull the next job without asking "what should I work on next."
+
+Peer accountability.
+
+When Job 1437 has been at welding for three days and the welder sees it on the board flagged red, he does not need a manager to tell him it is a problem — the board told him.
+
+Cross-shift continuity.
+
+The second shift walks in, looks at the board, and knows exactly which jobs are in progress and where. No handover meeting required. The board is the handover.
+
+How to set up the WIP tracker in 60 minutes
+
+Setup checklist
+
+Create the spreadsheet.
+
+Google Sheets or Excel — free either way. Make two tabs: Job Tracker and Dashboard.
+
+List your work centers.
+
+Write down every station a job passes through, in order. Saw → CNC → Deburr → Weld → Paint → Assembly → QC → Ship. Your shop may have more or fewer — use your actual routing.
+
+Enter active jobs.
+
+Start with every job currently on the floor. Job number, customer, part, quantity, due date, current work center, current operation, status. This takes about 20 minutes the first time — you know your jobs.
+
+Set standard queue times.
+
+How long should a job sit at each operation under normal conditions? These do not need to be perfect — start with estimates and refine over the first two weeks. The tracker will reveal the real times.
+
+Build the dashboard formulas.
+
+COUNTIF for jobs by status. Conditional formatting for red/yellow/green. SUM for WIP value. The template has these pre-built — just copy the formulas.
+
+Assign the update owner.
+
+One person updates the tracker once per shift — 10 minutes, end of shift. Could be the production manager, a lead operator, or a shift supervisor. The key: one person owns it, so it always gets done.
+
+That is it. One hour total. No software to install. No ERP to implement. No consultants. Just a spreadsheet that tells you where every job is right now.
+
+Frequently asked questions
+
+How do I track work in progress on a manufacturing shop floor without ERP software?
+
+Use a WIP tracker spreadsheet with one row per active job. Track job number, customer, part name, quantity, due date, current work center, operation sequence, and status per operation (not started, in progress, complete, stuck). A dashboard shows jobs behind schedule, jobs stuck over 24 hours at one operation, and jobs due this week with incomplete operations — all in a 5-minute daily check instead of a 2-hour floor walk.
+
+What is a WIP tracker and why does a small manufacturer need one?
+
+A WIP (Work In Progress) tracker is a real-time visibility tool that shows exactly where every job is on your shop floor — which work center it is at, what operation it is on, and how long it has been there. A small manufacturer needs one because without it, the shop floor is a black box after hours: the owner cannot answer "where is my order" when a customer calls, stuck jobs go undetected for days, and production problems compound silently until they become missed shipments.
+
+How do I give customers accurate ship dates in a job shop?
+
+Use the WIP tracker to pull up the job in seconds. Tell the customer the current operation ("It is at welding — operation 4 of 7"), the estimated completion date based on remaining operations and standard queue times, and offer to text when it ships. This replaces the "let me walk out to the floor and call you back" response with a confident, specific answer that builds trust and earns repeat orders.
+
+How do I run a daily production standup meeting for a small manufacturing shop?
+
+Pull the WIP tracker 15 minutes before the meeting. Identify: which jobs are behind schedule, which jobs are stuck, which work centers are overloaded, and which jobs need to ship today. The 15-minute meeting replaces the 45-minute walkaround. Come prepared with the data — the tracker tells you what needs attention before anyone says a word.
+
+What is the difference between production scheduling and WIP tracking?
+
+Production scheduling plans what work happens when — it is the forward-looking plan. WIP tracking shows what is actually happening right now — it is the real-time status. Scheduling tells you "Job 1437 should be at welding by Thursday." WIP tracking tells you "Job 1437 is still at saw on Friday — and has been stuck there for 3 days." You need both: scheduling to plan, and WIP tracking to catch when reality diverges from the plan.
+
+Stop walking the floor asking where jobs are
+
+You built your shop to make things — not to spend 10 hours a week walking around asking "where are we on this." If you want to replace the whiteboard-and-post-it chaos with a system that tells you exactly where every job is in 5 minutes — and you want it built specifically for your shop's work centers, not a generic template — we will build it with you in one afternoon.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System
+
+Your Shop Has 12 Machines But Only One Is The Bottleneck — And You're About To Spend $150,000 On The Wrong Machine
+
+Your Second Shift Just Scrapped 40 Parts Because the First Shift's Whiteboard Said Nothing. Here's the Shift Handover Log That Ends It.
+
+
+URL: https://www.jobsdonelabs.ai/blog/manufacturing-wip-shop-floor-order-visibility-tracker/
 
 ---
 
@@ -19707,6 +19968,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+WIP Tracker: Know Where Every Job Is Right Now — The Free Shop Floor Visibility System
+
 Track Machine Downtime Without Software — The Free System for Small Manufacturers
 
 The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System
@@ -20867,6 +21130,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+WIP Tracker: Know Where Every Job Is Right Now — The Free Shop Floor Visibility System
 
 Your Second Shift Scrapped 40 Parts Because the Whiteboard Said Nothing — Free Shift Handover Log
 
