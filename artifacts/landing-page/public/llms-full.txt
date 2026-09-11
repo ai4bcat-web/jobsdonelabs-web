@@ -1082,6 +1082,8 @@ Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
 
 Clients Won't Use Your Portal? Free Adoption Playbook With Onboarding Sequences
 
+Who's Available? Free Consulting Capacity Planner — See Who Is Overloaded and Who Is on the Bench Before the Next Project
+
 
 URL: https://www.jobsdonelabs.ai/blog/billable-hours-time-audit-professional-services/
 
@@ -2933,8 +2935,261 @@ Your Retainer Is Running Out and Nobody Told the Client: Free Hour Tracking for 
 
 You Quoted a Fixed Fee and They Added 12 Things: The Free Scope Creep Tracker That Pays for Itself
 
+Who's Available? Free Consulting Capacity Planner — See Who Is Overloaded and Who Is on the Bench Before the Next Project
+
 
 URL: https://www.jobsdonelabs.ai/blog/consulting-client-profitability-analysis-spreadsheet-free/
+
+---
+
+# Who's Available? Free Consulting Capacity Planner
+
+Professional Services
+
+Three of Your Consultants Are Working 65-Hour Weeks While Two Sit on the Bench. Here's the Free Capacity Planner That Shows Who Is Actually Available Before You Say Yes to the Next Project.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 11, 2026
+
+Key takeaways
+
+The Monday morning resource fight is a capacity planning failure, not a people problem. A free consulting capacity spreadsheet — one tab per consultant with weekly availability, allocated hours, and skills — replaces the 90-minute partner argument with one dashboard that shows who is available, who is overloaded, and what skills your bench actually has. The 90-day forward view tells you whether you can actually staff the next project before you say yes to it.
+
+The Monday morning resource fight
+
+It is 9:00 AM Monday. Three partners sit around a conference table with coffee and a list of five active projects and two new RFPs due Friday. The senior architect — the one person who knows the financial services client inside and out — is already at 110 percent capacity running two concurrent engagements. Two junior consultants finished their last project two weeks ago and have been on the bench doing internal research. One mid-level consultant is burning out doing 65-hour weeks.
+
+Nobody knows who has availability this week because nobody has a single view of capacity. The partner with the loudest voice wins the senior architect for their project. The bench stays invisible. The burnout deepens. And two consultants who could be billable right now are instead updating the firm's website.
+
+This is not a people problem. It is a capacity planning problem — and it costs a 12-person consulting firm roughly two hundred forty thousand dollars a year in unbillable bench time and preventable turnover. Every Monday this cycle continues because the firm runs on memory and spreadsheets nobody updates.
+
+The capacity math:
+
+Two bench consultants at one hundred twenty thousand dollars salary with zero billable hours for six weeks costs the firm about twenty eight thousand dollars in salary alone — not counting the lost revenue they could have generated at a one hundred eighty dollar effective hourly rate. The senior architect burn-out replacement cost: three to six months of lost billings plus recruiting fees plus ramp time for a new hire. A capacity planner that costs zero dollars and takes thirty minutes to set up prevents both.
+
+The free consulting capacity planning spreadsheet
+
+This is a working Google Sheets or Excel template — not a SaaS demo, not a per-seat subscription, not a promise. It has five tabs and answers the questions every partner asks on Monday morning.
+
+Here is what each consultant tab captures:
+
+Consultant name and role
+
+— partner, senior consultant, associate, specialist
+
+Primary and secondary specialties
+
+— financial services, healthcare, data analytics, change management, strategy
+
+Weekly capacity hours
+
+— default 40, adjustable for part-time or reduced schedules
+
+Currently allocated hours
+
+— total hours committed to active projects this week
+
+Available hours
+
+— auto-calculated: capacity minus allocated equals available
+
+Current project assignments with end dates
+
+— which projects, what role, and when they wrap up
+
+Utilization percentage
+
+— allocated divided by capacity, color-coded green (under 80), yellow (80 to 100), red (over 100)
+
+The dashboard tab shows the whole firm at a glance:
+
+Firm-wide utilization percentage
+
+— are you at 75 percent and healthy, or 95 percent and about to break?
+
+Over-capacity alerts
+
+— anyone above 100 percent is flagged in red with their project load listed
+
+Bench depth by skill
+
+— how many available people have expertise in each practice area
+
+Top-5 available consultants this week
+
+— sorted by available hours, highest first
+
+Consecutive over-capacity tracker
+
+— anyone above 100 percent for 3-plus weeks gets an escalation flag
+
+The burnout dashboard
+
+Burnout is not a feeling — it is a number. When a consultant crosses 110 percent utilization for four consecutive weeks, they are not working harder. They are deteriorating. Quality slips. Client relationships fray. They take sick days. And then they quit.
+
+Here is what the burnout tracker in the spreadsheet flags:
+
+Consecutive weeks over 100 percent
+
+— 1 week is a crunch, 3 weeks is a pattern, 5-plus weeks is a retention emergency
+
+Hours-worked versus hours-allocated gap
+
+— the scary number: someone allocated at 40 hours who is actually working 55 because scope creep and client demands are invisible to the allocation sheet
+
+Project count per consultant
+
+— a consultant on 4 concurrent projects splitting focus is less effective and more stressed than someone running 1 project at full depth
+
+Cost of losing a burned-out consultant:
+
+three to six months of lost billings at one hundred eighty dollars per hour times one thousand two hundred billable hours per year equals two hundred sixteen thousand dollars in lost annual revenue — plus fifty thousand to seventy five thousand dollars in recruiting and ramp costs. The burnout dashboard costs zero dollars and prevents this by flagging the problem when it is still fixable with a workload rebalance or a contractor hire.
+
+The skills matrix — stop saying "only she can do financial services"
+
+Single points of failure are the quietest risk in a consulting firm. When only one person can deliver a financial services engagement, the firm has no redundancy. That person gets sick, or leaves, or gets staffed on a conflicting project — and the firm is scrambling.
+
+The skills matrix tab maps every consultant against every competency the firm sells:
+
+Consultant
+
+Financial Services
+
+Healthcare
+
+Data Analysis
+
+Facilitation
+
+Salesforce
+
+Sarah (Sr. Architect)
+
+Marcus (Consultant)
+
+Emily (Consultant)
+
+James (Associate) — BENCH
+
+Rating scale: 1 equals aware (can discuss), 2 equals can do with supervision, 3 equals can lead independently, 4 equals can train others.
+
+This table immediately reveals:
+
+Sarah is the single point of failure for financial services and facilitation.
+
+If she leaves or burns out, the firm loses its two highest-revenue practice areas overnight. The fix: cross-train Marcus on financial services (he is already a 2 — three months of supervised client work takes him to a 3) and identify a backup facilitator.
+
+James is on the bench but has foundation-level skills in financial services and healthcare.
+
+He is not unavailable — he is under-deployed. Assign him as a junior resource on the next financial services engagement under Sarah and he becomes billable and builds depth simultaneously.
+
+Emily is the Salesforce expert.
+
+If the firm is winning Salesforce-related work, she is critical. If not, her skill is an underutilized asset the firm could be marketing.
+
+The cross-training plan the matrix enables:
+
+For every skill with only one person rated 3 or 4, identify someone rated 2 and build a 90-day supervised ramp plan. The cost of cross-training — a few hours of shadowing and review per week — is trivial compared to the cost of losing the only person who can deliver a practice area.
+
+The 90-day forward view
+
+This is the tab that turns capacity planning from a rear-view mirror into a windshield. It overlays three data sources:
+
+Projects ending
+
+— which engagements wrap up in the next 90 days, freeing which consultants and how many hours
+
+Pipeline deals
+
+— which proposals are outstanding, what skills they require, estimated start dates, and confidence level (high, medium, low)
+
+Gap analysis
+
+— for each pipeline deal, does the firm have available capacity with the right skills on the right dates?
+
+Pipeline Deal
+
+Est. Start
+
+Skills Needed
+
+Confidence
+
+Capacity Gap?
+
+Healthcare client — strategy engagement
+
+Oct 15
+
+Healthcare (3+), Facilitation (3+)
+
+High
+
+YES — Marcus finishes Oct 8, available. Sarah is booked. Cross-train Marcus on facilitation or bring in contractor.
+
+Bank merger — change management
+
+Nov 1
+
+Financial Services (3+), Change Mgmt (3+)
+
+Medium
+
+YES — Sarah is the only 3+ in both. If this deal closes, Sarah hits 130 percent. Pipeline says do not take more work until we resolve Sarah's capacity.
+
+Manufacturing — data migration
+
+Sep 25
+
+Data Analysis (3+)
+
+Low
+
+NO — Emily (4) and Marcus (4) both have capacity. Green light if this converts.
+
+The 90-day forward view prevents the most expensive mistake a small firm can make: saying yes to a project and then realizing nobody can actually do the work. The spreadsheet shows the gap before you sign the SOW — so you can either staff it, delay it, or decline it on terms that preserve the relationship.
+
+Frequently asked questions
+
+How often should I update the capacity planner?
+
+Weekly, on Friday afternoon or Monday morning before the resource meeting. Each consultant updates their tab in under 5 minutes: change project allocations if assignments shifted, update hours worked versus allocated, and note any changes to project end dates. The dashboard auto-refreshes. The first setup takes 30 minutes — after that, weekly updates take less than 5 minutes per consultant.
+
+What if we do not have enough people to staff the pipeline?
+
+You have three options, and the spreadsheet makes the decision visible instead of guessing: (1) bring in a contractor for the skills gap — faster and cheaper than a full-time hire for a single project; (2) delay the project start date until capacity frees up — most clients will wait 4 to 6 weeks for a trusted firm rather than start over with a new vendor; (3) decline the project — better to protect existing client relationships and team health than to over-commit and deliver poor work. Option three is hard but the spreadsheet makes it a data decision, not a fear decision.
+
+Does this replace project management software?
+
+No — it complements it. Project management tools like Asana, Monday, or ClickUp track tasks and deadlines within a project. The capacity planner answers a different question: "across all projects, who has bandwidth?" A 12-person firm needs both: the PM tool for delivery and the capacity spreadsheet for staffing decisions. They feed each other: the PM tool tells you when projects end (feeding the forward view), and the capacity planner tells you who to assign to the next project (feeding the PM tool).
+
+How do I handle part-time or fractional consultants?
+
+Set their weekly capacity hours to their contracted hours — 20, 24, or 30 instead of 40. The utilization percentage will calculate correctly against their adjusted capacity. The dashboard shows them alongside full-time consultants so their availability is visible. One nuance: a fractional consultant at 90 percent utilization is just as overloaded as a full-time consultant at 90 percent — the color-coding treats them equally. Do not be tempted to allocate a 20-hour consultant at 30 hours just because they are "only part time."
+
+What is the difference between billable utilization and total utilization?
+
+Billable utilization equals client-facing hours divided by total capacity — the number that drives revenue. Total utilization includes billable hours plus internal projects, business development, firm management, and professional development. Partners should target 50 to 65 percent billable utilization because they carry business development and firm operations. Delivery consultants should target 70 to 80 percent billable. Track both numbers in the spreadsheet: if billable utilization is below target but total utilization is high, your team is spending too much time on internal work and not enough on revenue-generating projects.
+
+Stop guessing who is available
+
+Every Monday you lose 90 minutes arguing over who gets the senior architect. Two consultants sit on the bench and one is burning out doing 65-hour weeks — and nobody knows because nobody has the numbers. Download the free capacity planning spreadsheet, set it up once in under 30 minutes, and walk into your next resource meeting with one dashboard that answers the only question that matters: who is actually available?
+
+Get the free spreadsheet →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Which Clients Make You Money? Free Client Profitability Spreadsheet for Consulting Firms
+
+Stop Losing $2,500/Month on Retainer Overages — A Free Tracker for Consultants
+
+You Bill $350/Hour But Lose 90 Minutes a Day to Admin. Here's the Time-Audit That Recovers $75,000/Year.
+
+
+URL: https://www.jobsdonelabs.ai/blog/consulting-firm-resource-capacity-planning-spreadsheet-free/
 
 ---
 
@@ -17464,6 +17719,8 @@ Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
 
 Chasing Clients for Documents Is Eating Your Billable Hours — Here's How Firms Stop
 
+Who's Available? Free Consulting Capacity Planner — See Who Is Overloaded and Who Is on the Bench Before the Next Project
+
 
 URL: https://www.jobsdonelabs.ai/blog/proposal-pipeline-tracking-spreadsheet-consulting-free/
 
@@ -18440,6 +18697,8 @@ You Bill $350/Hour But Lose 90 Minutes a Day to Admin — Here's the Time-Audit 
 Scope Creep Is Bleeding Your Margins — Free Tracker & Change Order Scripts
 
 You Had 14 Proposals Out Last Month and Followed Up on 3 — Here's the Pipeline Tracker
+
+Who's Available? Free Consulting Capacity Planner — See Who Is Overloaded and Who Is on the Bench Before the Next Project
 
 Want this automated so you don't have to open a spreadsheet?
 
