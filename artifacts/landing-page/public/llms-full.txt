@@ -9087,6 +9087,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Track Every Overtime Dollar by Job and Machine — The Free Spreadsheet That Shows Where Your OT Is Going
+
 Your Second Shift Scrapped 40 Parts Because the Whiteboard Said Nothing — Free Shift Handover Log
 
 Your Shop Has 12 Machines But Only One Is The Bottleneck — Free Constraint Analysis Spreadsheet
@@ -9817,6 +9819,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Front Desk Spends 3 Hours a Day on Phone Tag While Patients Stack Up in the Waiting Room. Here Is the Free Call Management System That Gives Them Back 10 Hours a Week.
+
 Your Practice Lost $27,000 Last Year to No-Shows — Here's a Free System That Gets 40% of Them Back on the Schedule
 
 Collect Patient Balances Without Calling Everyone — The Free Collection System for Medical Practices
@@ -10090,6 +10094,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Track Every Overtime Dollar by Job and Machine — The Free System That Shows Where Your OT Goes
+
 Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufacturers
 
 Your Shop Has 12 Machines But Only One Is The Bottleneck — Free Constraint Analysis Spreadsheet
@@ -10106,6 +10112,231 @@ You're Throwing Away $21,000 in Aluminum Drops — Free Manufacturing Scrap Trac
 
 
 URL: https://www.jobsdonelabs.ai/blog/manufacturing-job-costing-without-erp/
+
+---
+
+# Track Every Overtime Dollar by Job and Machine
+
+Manufacturing
+
+You Paid 21 Thousand 840 Dollars in Overtime Premium Last Year and Cannot Connect a Single Dollar to a Specific Job or Machine. Here Is the Free Tracking System That Shows You Where Your Overtime Is Actually Going.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 13, 2026
+
+Key takeaways
+
+A fifty-person shop running ten hours of overtime per week at a 42 dollar per hour loaded rate pays approximately 21 thousand 840 dollars per year in overtime premium alone. The hidden costs — fatigue-driven quality issues, higher injury rates, burnout-driven turnover — push the real cost to 40 to 60 thousand dollars per year. Most shops cannot tell you which jobs, machines, or events are driving that overtime. This free spreadsheet system connects every overtime hour to its root cause so you fix the problems instead of paying time-and-a-half forever.
+
+The overtime black hole — by the numbers
+
+Walk through any small or mid-size manufacturing shop on a Saturday morning and you will see the same scene: a skeleton crew running catch-up work from the week. Nobody knows exactly which jobs they are catching up on or why those jobs fell behind. The payroll report shows overtime hours. The financials show overtime premium. But the connection between a specific machine breakdown on Tuesday and the Saturday overtime shift it caused — that connection does not exist in any system.
+
+Here is what the numbers actually look like for a typical fifty-person job shop or small manufacturer.
+
+Visible overtime cost:
+
+Ten hours of overtime per week across fifty employees at a 42 dollar per hour loaded rate. The overtime premium — the extra 50 percent above straight time — is 14 dollars per OT hour. Ten hours per week times 52 weeks times 14 dollars equals 7 thousand 280 dollars per employee per year. That is 21 thousand 840 dollars across the floor. And that is just the premium. The total overtime payroll — straight time plus premium — is roughly 109 thousand dollars per year.
+
+Hidden cost number one — quality:
+
+Studies consistently show scrap and rework rates climb 3 to 5 percentage points on overtime shifts. A shop producing 1 point 2 million dollars in annual output with a 2 percent baseline scrap rate sees that jump to 5 to 7 percent on OT hours. At 24 thousand dollars per percentage point of scrap, a 3-point increase across 20 percent of production hours adds roughly 14 thousand 400 dollars in additional scrap cost per year.
+
+Hidden cost number two — safety and turnover:
+
+Extended shifts correlate with higher injury rates. One recordable injury costs 7 thousand to 15 thousand dollars in direct medical and workers compensation costs, and 4 to 6 times that in indirect costs. Separately, operators working consistent overtime are 2 point 3 times more likely to leave within 12 months. Replacing a skilled machinist costs 1 point 5 to 2 times annual salary — 75 thousand to 100 thousand dollars for a 50 thousand dollar position. Even one turnover event driven by overtime burnout wipes out years of overtime premium savings.
+
+The real number:
+
+Add the visible premium, the scrap increase, and a prorated share of turnover risk, and unmanaged overtime costs a fifty-person shop between 40 thousand and 60 thousand dollars per year. The shop that knows which jobs and machines are driving overtime can cut that number by 35 to 45 percent. The shop that does not know keeps paying it.
+
+The free overtime tracking spreadsheet
+
+The tracking system has two parts: a daily OT event log and a dashboard that rolls up the data into decisions.
+
+The OT event log
+
+captures one row per overtime occurrence. Each row records:
+
+Date and shift.
+
+When did the overtime happen? Day shift staying late? Night shift coming in on Saturday?
+
+Hours and employees.
+
+How many OT hours, and how many people worked them? A three-person crew working four hours of overtime is twelve OT labor hours.
+
+Job number and machine.
+
+Which job were they working on? Which machine? This is the connecting tissue — it links the overtime to the specific production event that caused it.
+
+OT reason category.
+
+The most important field in the spreadsheet. Choose from: Breakdown (machine down, catch-up required), Scheduling error (too many jobs loaded into the same window), Rush order (customer demanded faster turnaround), Absenteeism (short-staffed on a critical machine), Material delay (parts arrived late, compressed production window), or Other.
+
+Root cause notes.
+
+One sentence of context. "Machine 3 spindle bearing failed at 2pm Tuesday" is actionable. "Behind on work" is not.
+
+The dashboard
+
+auto-calculates from the event log:
+
+Overtime hours by week and month
+
+Overtime cost by job number
+
+Overtime cost by machine
+
+Overtime cost by reason category (the chart that tells you what to fix)
+
+Overtime as a percentage of straight-time hours
+
+Top five overtime-driving jobs
+
+Overtime trend versus production volume (is OT tracking with output, or rising independently?)
+
+Setup takes about ninety minutes. Daily entry takes two minutes per OT event. After four weeks, you have enough data to see patterns. After eight weeks, you have enough data to act.
+
+Why the reason category matters
+
+Most shops track overtime hours. Almost none track overtime
+
+reasons
+
+. Without the reason category, all overtime looks the same — a cost to be minimized. With the reason category, overtime becomes a diagnostic signal. When 45 percent of overtime is breakdown-driven, the fix is preventive maintenance, not "work fewer hours." When 30 percent is scheduling-driven, the fix is load leveling, not asking people to work faster. The reason category is what turns overtime from a cost problem into a management problem — and management problems are solvable.
+
+The OT root-cause matrix — connect overtime to what actually caused it
+
+After eight weeks of tracking, the data tells a story. Here is the story it typically tells in a small manufacturing shop.
+
+Breakdown-driven overtime: 40 to 50 percent.
+
+Machine 3 goes down Tuesday afternoon. The crew catches up Wednesday and Thursday by staying two hours late each day. The overtime event log shows eight OT hours attributed to Machine 3, reason code "Breakdown." When you see the same machine appearing in the top five overtime-driving machines month after month, the machine is the problem — not the schedule, not the crew, not the customer. Fix: preventive maintenance schedule, track mean time between failures, stock critical spare parts. The machine downtime tracking spreadsheet tells you which machines are failing and why.
+
+Scheduling-driven overtime: 25 to 35 percent.
+
+Four hot jobs land on Monday morning. Everything else gets pushed. By Thursday, three regular jobs are behind and need weekend catch-up. The event log shows overtime spread across multiple jobs and machines, reason code "Scheduling error." The pattern is consistent: overtime spikes in the second half of the week as schedule compression catches up. Fix: level-load production across the week, stagger hot-job intake (no more than one hot job per day), use a production scheduling system that shows WIP visibility so you can see bottlenecks forming before they create overtime.
+
+Rush-order-driven overtime: 10 to 15 percent.
+
+A key customer calls Thursday afternoon. They need 200 units by Tuesday. The shop runs Saturday. The event log shows overtime attributed to the rush job number, reason code "Rush order." This overtime is not waste — it is a business decision. But you should know what it costs. Track rush-order overtime separately and include it in the job cost estimate for future rush quotes. If the customer will not pay a rush surcharge that covers the overtime premium, the shop is subsidizing the customer's poor planning.
+
+Absenteeism-driven overtime: 5 to 10 percent.
+
+The only operator qualified on Machine 7 calls in sick. The backup operator works a double shift to keep the machine running. The event log shows overtime attributed to Machine 7, reason code "Absenteeism." Fix: cross-train operators across two to three machines each. Maintain a 15 percent capacity buffer so one absence does not force overtime. Track absenteeism-driven OT separately — it is a leading indicator of burnout. When absenteeism-driven OT rises for three consecutive months, the crew is telling you they are at capacity.
+
+After eight weeks, you know your shop's actual overtime mix — not what you think it is, but what the data says it is. That changes everything.
+
+The OT improvement playbook — fix root causes, not symptoms
+
+Once the root-cause matrix tells you which two categories drive most of your overtime, you stop managing overtime and start managing the problems that create it. Here is the playbook for each category.
+
+If breakdowns are your number one OT driver
+
+Implement a preventive maintenance schedule on the top three overtime-driving machines. Start with weekly inspections: belt tension, lubrication, bearing temperature, unusual vibration. Log every inspection result. Track mean time between failures. When MTBF drops below a threshold for a specific machine, schedule a maintenance window before the machine schedules one for you — in the form of a breakdown that costs four hours of production and eight hours of overtime catch-up.
+
+Stock critical spare parts for those top three machines. A 50 dollar bearing that takes three days to order costs 2 thousand 100 dollars in overtime while the machine is down. Keep one on the shelf.
+
+Cross-reference with the machine downtime tracking spreadsheet. If Machine 3 appears in both the top downtime drivers AND the top overtime drivers, that machine is your single highest-ROI improvement target. One machine, two problems, one fix.
+
+If scheduling errors are your number one OT driver
+
+Implement a simple production scheduling board — physical or digital — that shows every job, its due date, its current status, and which machine it runs on. When four jobs all hit the same machine in the same three-day window, the board makes the conflict visible on Monday, not Thursday when overtime is the only escape valve.
+
+Adopt a hot-job intake rule: no more than one hot job per day, and hot jobs get a dedicated slot, not an add-on to an already-full schedule. When a customer calls with a rush, the answer is "we can start Thursday" instead of "we will figure it out." The customer who demands Tuesday delivery pays a rush surcharge that covers the overtime. The customer who can wait until Thursday gets standard pricing. Let the customer decide what urgency is worth.
+
+Link to the production scheduling system. When scheduling is visible, scheduling-driven overtime drops 20 to 30 percent within the first month — simply because the conflicts are visible before they become crises.
+
+If absenteeism is your number one OT driver
+
+Cross-train every operator on at least two machines. The goal is that no single machine depends on a single operator. When the only person who can run Machine 7 calls in sick, Machine 7 stops — and the overtime to catch up is guaranteed.
+
+Maintain a 15 percent capacity buffer. If your shop runs at 100 percent of theoretical capacity, any disruption — one absence, one late material delivery, one machine issue — creates overtime. A 15 percent buffer absorbs normal variability without overtime. The buffer costs 15 percent in theoretical throughput. It saves 21 thousand dollars in overtime premium, reduced scrap, and avoided turnover. The math favors the buffer.
+
+The OT approval workflow — make overtime a conscious decision
+
+In most shops, overtime is the default. A job falls behind. The supervisor says "stay late." Nobody asks whether the overtime is necessary, what it will cost, or whether there is an alternative. Overtime happens because it is easier than making a decision.
+
+The fix is an OT approval workflow — a simple pre-approval form that takes sixty seconds to complete and makes overtime a deliberate choice.
+
+The pre-approval form asks five questions:
+
+Job number and machine.
+
+What work is the overtime for?
+
+Hours requested and employees.
+
+How many hours, and who is working them?
+
+Reason for overtime.
+
+Pick from the same reason categories as the event log. This connects the approval to the tracking — you can see whether approved overtime matches the reasons that actually show up in the data.
+
+Expected output.
+
+What will be produced during the overtime hours? Be specific: "Complete 150 units of Job 4521 through Machine 3."
+
+Alternatives considered.
+
+Can the work wait until tomorrow? Can another shift cover it? Can a different machine run it during regular hours?
+
+The post-approval audit, done weekly:
+
+For each approved overtime event, did the overtime achieve the expected output? If three Saturday shifts were approved to catch up on a specific job and only one achieved its output target, the overtime was not the problem — the estimate was. Track approval rate versus total overtime hours. When overtime requires a sixty-second approval form, shops typically see overtime hours drop 15 to 25 percent simply because "let us just work Saturday" becomes a decision instead of a reflex.
+
+The approval form is not bureaucracy. It is a forcing function. It forces the question "is this overtime actually the best answer?" before the overtime happens rather than after it shows up on the payroll report.
+
+Frequently asked questions
+
+How long does it take to set up the overtime tracking spreadsheet?
+
+About ninety minutes. The spreadsheet is pre-built with the event log columns, the reason category dropdowns, and the dashboard formulas. You spend the time customizing it: entering your machine names, job number format, employee list, and loaded labor rate. After setup, daily entry takes two minutes per overtime event.
+
+What if my shop does not have job numbers?
+
+Use work order numbers, customer names, or part numbers instead. The key is that every overtime hour connects to
+
+something
+
+— a specific piece of work, a specific machine, a specific event. If your shop has no tracking at all, start with machine and reason category. You can add job-level tracking as a second phase once the basic data is flowing.
+
+How soon will I see results from tracking overtime?
+
+You will see pattern data after four weeks of consistent tracking. Most shops can identify their top two overtime drivers within eight weeks. The actual reduction in overtime hours takes longer because it requires operational changes (implementing preventive maintenance, adjusting scheduling, cross-training). Expect overtime premium to drop 15 to 25 percent within three months from the approval workflow alone. The full 35 to 45 percent reduction requires six to twelve months of root-cause fixes.
+
+Do I need special software to track overtime?
+
+No. The system described here runs in Google Sheets or Excel. The event log is a simple table. The dashboard uses SUMIFS and pivot tables — standard spreadsheet functions. The only integration point is pulling labor hours from your payroll system, and that can be done manually once per pay period. Many shops run this system on a shared Google Sheet that supervisors update from their phones on the shop floor.
+
+Is some overtime actually good for a manufacturing business?
+
+Yes. A small amount of overtime — 5 to 10 percent of total labor hours — provides production flexibility. It lets you absorb demand spikes, accommodate key customer rush orders, and cover short-term absences without hiring. The problem is not overtime itself. The problem is
+
+unmanaged
+
+overtime — overtime that happens because Saturday shifts are the default, not because a deliberate decision was made. The tracking system helps you distinguish between strategic overtime (we chose to run Saturday to meet a customer deadline at a 30 percent rush surcharge) and reactive overtime (nobody knows why we are here on Saturday again).
+
+Stop paying overtime premium without knowing why
+
+The free overtime tracking spreadsheet takes ninety minutes to set up and two minutes per day to maintain. After eight weeks, you will know exactly which jobs, machines, and root causes are driving your overtime — and you will have a playbook to fix each one. If you want help building the system for your specific shop or want to automate the tracking so it feeds directly into your production dashboard, we build that.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Machine Downtime Tracking for Small Manufacturers — The Free System That Tells You Which Machines Are Killing Your Schedule
+
+You Are Losing 80 Thousand Dollars a Year Quoting Jobs by Feel — The Free Spreadsheet System That Tells You Exactly What Every Job Costs
+
+Small Manufacturing Production Scheduling — A Guide That Actually Works When You Do Not Have an ERP
+
+
+URL: https://www.jobsdonelabs.ai/blog/manufacturing-overtime-cost-tracking-spreadsheet-free/
 
 ---
 
@@ -14965,6 +15196,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Front Desk Spends 3 Hours a Day on Phone Tag While Patients Stack Up in the Waiting Room. Here Is the Free Call Management System That Gives Them Back 10 Hours a Week.
+
 Your Practice Lost $27,000 Last Year to No-Shows — Here's a Free System That Gets 40% of Them Back on the Schedule
 
 16 Hours a Week on Prior Authorizations and You Still Can't Afford the Software — The Manual PA Workflow
@@ -16402,6 +16635,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Your Front Desk Spends 3 Hours a Day on Phone Tag While Patients Stack Up in the Waiting Room. Here Is the Free Call Management System That Gives Them Back 10 Hours a Week.
 
 Collect Patient Balances Without Calling Everyone — The Free Collection System for Medical Practices
 
@@ -21584,6 +21819,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Track Every Overtime Dollar by Job and Machine — The Free OT Tracking System for Manufacturers
 
 WIP Tracker: Know Where Every Job Is Right Now — The Free Shop Floor Visibility System
 
