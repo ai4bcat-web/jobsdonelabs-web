@@ -2408,6 +2408,267 @@ URL: https://www.jobsdonelabs.ai/blog/construction-daily-report-legal-protection
 
 ---
 
+# Client Owes 22K and Won't Pay? Free AR Aging Fix
+
+Professional Services
+
+Your Biggest Client Owes You 22 Thousand Dollars and It Has Been 75 Days Since You Sent the Invoice. Here Is the Free AR Aging System That Gets You Paid Without Destroying the Relationship.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 14, 2026
+
+Key takeaways
+
+A consulting firm with 500 thousand dollars in annual revenue and a 35-day average DSO carries roughly 48 thousand dollars in receivables at any time. At 8 percent cost of capital, floating that 48 thousand dollars costs 3,840 dollars per year. The free AR aging spreadsheet in this guide shows you exactly how much working capital is trapped in other people's bank accounts — and the 5-step escalation ladder gets it back without making you the bad guy.
+
+The 48 Thousand Dollars You Are Lending Your Clients for Free
+
+You finished a 22 thousand dollar project in June. It is now September. You have sent four reminder emails. Every response is the same: "So sorry — it is in AP. I will chase it."
+
+You cannot afford to lose this client. But you also cannot float 22 thousand dollars indefinitely. And this is not your only overdue invoice — there are seven others, ranging from 15 to 90 days past due, totaling another 26 thousand dollars. You have 48 thousand dollars sitting in other people's bank accounts and no system to get it back.
+
+Here is what that costs you, in real numbers. A consulting firm with 500 thousand dollars in annual revenue and a 35-day average days sales outstanding (DSO) carries roughly 48 thousand dollars in receivables at any moment. At an 8 percent cost of capital — what you would earn deploying that cash into growth, hiring, or simply a interest-bearing account — floating 48 thousand dollars costs 3,840 dollars per year. The single 75-day outlier client represents an interest-free loan you never approved.
+
+The real cost of slow-paying clients
+
+A 60 thousand dollar per year client who pays at 75 days and consumes 15 percent more PM time than average is actually a 48 thousand dollar client when you factor in cost of capital plus project management overhead. The AR aging report tells you which clients are profitable in cash — not just on paper.
+
+The existing professional services posts on this site cover the entire consulting lifecycle — billable hours, retainers, scope creep, client onboarding, proposals, profitability analysis, capacity planning — but none of them answer the question that keeps you up at night:
+
+"The invoice went out 60 days ago and I still have not been paid. What do I do?"
+
+This post closes that loop. The free AR aging spreadsheet gives you a single-pane view of every outstanding invoice, who owes what, how overdue it is, and what to do next. The escalation ladder turns collections from an emotional confrontation into a pre-written system. And the late-fee and payment-term framework prevents the problem from recurring with your next engagement.
+
+The Free Professional Services AR Aging Spreadsheet
+
+This is not a generic invoice tracker. It is built for consulting firms and professional services businesses — where relationships matter, where the biggest clients are often the worst payers, and where you need a system that gets you paid without burning bridges.
+
+The spreadsheet has two tabs: a per-invoice tracker and a management dashboard.
+
+The Invoice Tracker Tab
+
+Each row is one outstanding invoice. The columns track everything you need to manage collections systematically:
+
+Client name and project.
+
+Which client and which engagement the invoice belongs to. Group by client to see their total outstanding balance.
+
+Invoice number, date, and due date.
+
+The three data points that anchor every follow-up conversation.
+
+Invoice amount.
+
+The dollar value outstanding.
+
+Days outstanding.
+
+Auto-calculated from invoice date to today. No manual counting.
+
+Aging bucket.
+
+0-30 days, 31-60 days, 61-90 days, or 90 plus days. Color-coded: green, yellow, orange, red. One glance tells you which invoices are approaching the danger zone.
+
+Follow-up count.
+
+How many times you have contacted this client about this invoice. Prevents the "I think I already sent three emails but I am not sure" problem.
+
+Last contact date.
+
+When you last reached out and what happened.
+
+Promised payment date.
+
+If the client said "it will go out Friday the 18th," log it. If Friday passes and the payment is not there, you know exactly which promise was broken.
+
+Escalation level.
+
+Current step on the escalation ladder (1 through 5). Determines what action to take next.
+
+Notes.
+
+Free-text field for context — "AP manager changed, resend to new contact," "waiting on client approval of final deliverable," etc.
+
+The Dashboard Tab
+
+One view that replaces the stack of mental sticky notes:
+
+Total outstanding AR.
+
+The big number. How much money is sitting in other people's accounts right now.
+
+Weighted-average DSO.
+
+Your average collection time across all invoices. Track this month over month — a declining DSO means your system is working.
+
+Top 10 overdue balances.
+
+Ranked by amount. Shows you exactly which invoices to chase first for the biggest cash impact.
+
+Aging distribution.
+
+What percentage of your AR is in each bucket (0-30, 31-60, 61-90, 90 plus). If the 61-90 bucket is growing month over month, your follow-up system is not aggressive enough.
+
+DSO trend.
+
+Month-over-month line chart. The single best indicator of whether your collections process is improving or deteriorating.
+
+Client risk scores.
+
+Auto-calculated based on payment history. Green clients pay within 30 days. Yellow clients average 31-60 days or have one broken promise. Red clients average 60 plus days or have two or more broken promises.
+
+Set it up in 15 minutes. Update it weekly in under 5 minutes. The ROI is measured in thousands of dollars of accelerated cash flow.
+
+The 5-Step Escalation Ladder — Get Paid Without Being the Bad Guy
+
+Most consultants avoid collections because it feels confrontational. The solution is not to get tougher — it is to stop relying on willpower and use a system instead. The escalation ladder turns "chasing payment" into a pre-written sequence. Each step has a script. You do not have to decide what to say — you just execute the next step.
+
+Step 1 — Day 1: Automated "Invoice Attached for Your Records"
+
+Send this the moment the invoice goes out. It is not a follow-up — it is a receipt. It sets the expectation that payment tracking has begun.
+
+"Hi [Contact] — your invoice [INV-###] for [Project Name] is attached. Total: [Amount], due [Date]. Let me know if you need anything else to process this. Thanks!"
+
+Step 2 — Day 15: Friendly "Checking In"
+
+Fifteen days after the due date. Assume good intent. "Maybe it got buried." Re-attach the invoice. Offer help.
+
+"Hi [Contact] — checking in on invoice [INV-###] ([Amount]), which was due on [Date]. Anything you need from my side to get this processed? Re-attached here for convenience. Thanks!"
+
+Step 3 — Day 30: Direct Call Plus Copy to AP
+
+Thirty days past due. Email is not working. Pick up the phone. Call your champion — the person who hired you and values the work. After the call, send a follow-up email copying their AP contact if you have it.
+
+"Hi [Contact] — following up on our call just now. As discussed, invoice [INV-###] for [Amount] (now 30 days past due) needs to be processed this week. I have copied [AP Contact] here. Please let me know if there is a PO number or approval needed that I can help provide. Thanks for moving this forward."
+
+Step 4 — Day 45: Formal Past-Due Notice
+
+Forty-five days past due. The tone shifts from "friendly reminder" to "formal notice." Invoke your late-fee clause. Reference the work-pause provision in your engagement letter.
+
+"Hi [Contact] — Invoice [INV-###] for [Amount] is now 45 days past due. Per our engagement letter dated [Date], late fees of 1.5 percent per month began accruing on day 31 and the outstanding balance is now [Amount + Late Fee]. Per our terms, work on [Project] will pause if the account is not current by [Date — 15 days from now]. I want to avoid that — please let me know today what is needed to process payment. I am available by phone at [Number] if a quick call is easier."
+
+Step 5 — Day 60: Work Pauses Until Account Is Current
+
+Sixty days past due. You have sent four reminders. You have called. The formal notice has expired. The engagement letter provision kicks in. Work stops. This is not an emotional reaction — it is a contract term both parties agreed to.
+
+"Hi [Contact] — as outlined in my notice of [Date], work on [Project] is now paused pending payment of invoice [INV-###] ([Amount] plus accrued late fees). I value our relationship and want to resume work as soon as this is resolved. Please send payment confirmation to [Email] and I will restart immediately. If there is a dispute or concern about the invoice itself, I am ready to discuss — please call me at [Number]."
+
+Every step is pre-written so it is a system, not an emotional reaction. You are not "being aggressive" — you are following the agreed-upon process. The spreadsheet tracks which step each invoice is on so you never have to guess what to send next.
+
+The Late-Fee and Payment-Term Framework Your Engagement Letter Is Missing
+
+Standard "net 30" is toothless without consequences. Most consulting engagement letters specify when payment is due but are silent on what happens when it is late. That silence is expensive.
+
+Add these three clauses to your next engagement letter:
+
+Three clauses that change payment behavior
+
+1. Late fee:
+
+"Invoices not paid within 30 days of the invoice date are subject to a late fee of 1.5 percent per month (18 percent annual) on the outstanding balance. Late fees begin accruing on day 31."
+
+2. Right to pause work:
+
+"The Consultant reserves the right to pause all work on this engagement if any invoice remains unpaid 45 days past its due date. Work will resume within one business day of payment confirmation."
+
+3. Retainer conversion option:
+
+"For clients with two or more late payments in a 12-month period, the Consultant may require conversion to a retainer billing model with automatic monthly payment for all future engagements."
+
+The 1.5 percent monthly late fee (18 percent annual) is legal in all 50 US states when properly disclosed in a signed agreement. It compensates you for the cost of capital and creates a financial incentive for on-time payment that "net 30" alone does not.
+
+How to Introduce These Terms to Existing Clients
+
+You do not need to have a confrontational "new policy" meeting. Send a brief email before the next engagement:
+
+"Hi [Client] — we are standardizing our billing practices across all engagements. Starting with our next project, our payment terms include a 1.5 percent monthly late fee on balances past 30 days. This aligns our billing with industry standards and ensures our team can focus on delivering great work instead of chasing payments. The new terms are reflected in the engagement letter attached. No action needed — just flagging so you are aware. Appreciate you!"
+
+Most clients accept this without pushback. Those who push back are often the ones who planned to pay late — and the conversation itself is valuable data for your client risk score.
+
+The Client-by-Client Payment Risk Score
+
+Not all clients pay the same way. The spreadsheet automatically calculates a risk score for each client based on their payment history:
+
+Green — pays within 30 days, no broken promises.
+
+These clients get standard net-30 terms. No special handling needed. They are your best accounts — protect them.
+
+Yellow — average 31 to 60 days DSO or one broken payment promise.
+
+These clients get automated reminders starting at day 7 instead of day 15. Have a conversation about retainer conversion at the next renewal. A yellow client who converts to retainer becomes a green client overnight.
+
+Red — average 60 plus days DSO or two or more broken promises.
+
+These clients require prepayment or retainer on the next engagement. If they refuse, you have a decision: accept that you are effectively their bank (and price accordingly — add 15 to 20 percent to compensate for the float), or fire them and replace with a client who pays on time.
+
+The "fire the client" calculator
+
+A 60 thousand dollar per year client who pays at 75 days DSO is actually a 48 thousand dollar client when you factor in 3,840 dollars in cost of capital plus 15 percent more project management overhead (another 9,000 dollars). Run this math on every red client. Sometimes the highest-revenue client is your worst account — and firing them increases your take-home pay even as your top line drops. The profitability post on this site shows you how to run the full calculation; this AR aging report shows you who to run it on.
+
+How to Build the Whole System in Under an Hour
+
+This is not theory. Here is the step-by-step implementation plan:
+
+Download the free AR aging spreadsheet template.
+
+The link is at the bottom of this post. Make a copy. It takes 15 minutes to populate with your current outstanding invoices.
+
+Update your engagement letter.
+
+Add the three clauses (late fee, right to pause work, retainer conversion option). Use them on your next new engagement. Notify existing clients per the email template above before their next project.
+
+Set a 15-minute weekly AR review.
+
+Every Friday morning. Open the spreadsheet. Sort by days outstanding. Execute the escalation ladder on every invoice that moved into a new bucket. Fifteen minutes a week replaces hours of ad-hoc worrying.
+
+Track your DSO monthly.
+
+If it is declining — the system is working. If it is flat — tighten the escalation ladder (shorten the intervals between steps). If you started above 45 days, aim for 35 days within two billing cycles.
+
+Frequently asked questions
+
+How do I get consulting clients to pay on time?
+
+The root cause of late payments is almost never the client's AP department — it is the absence of a systematic follow-up process on your side. Fix it with three things: (1) an AR aging report that shows every outstanding invoice by days overdue so nothing falls through the cracks, (2) a pre-written escalation ladder (friendly reminder at day 15, direct call at day 30, formal past-due notice at day 45, work-pause provision at day 60) so follow-up is automatic instead of emotional, and (3) payment terms with teeth — a 1.5 percent monthly late fee and a right-to-pause-work clause in your engagement letter. Most consulting firms that implement all three see DSO drop from 45-60 days to 25-35 days within two billing cycles.
+
+What should an AR aging report for a consulting firm include?
+
+Client name, project, invoice number, invoice date, due date, amount, days outstanding, aging bucket (0-30, 31-60, 61-90, 90+), follow-up count, last contact date, promised payment date, escalation level, and notes. The dashboard should show total outstanding AR, weighted-average DSO, top 10 overdue balances, aging distribution chart, DSO trend over time, and client risk scores. Our free spreadsheet includes all of these.
+
+How do I handle a client who is 90 days past due?
+
+Send a final demand letter via certified mail with a 7-business-day deadline citing your late-fee clause. If the engagement is ongoing, invoke your right-to-pause-work provision and stop all active work. Offer a payment plan only if the client has genuine cash-flow issues and you want to preserve the relationship. If no response after the certified letter, send the account to collections or small claims court. Document every contact, promise, and broken promise — courts and collection agencies need the paper trail.
+
+Should I charge late fees to consulting clients?
+
+Yes — but only if disclosed upfront in your engagement letter. A 1.5 percent monthly late fee (18 percent annual) is legal in all 50 US states when properly disclosed and is the industry standard for professional services. The late fee compensates you for the cost of floating the receivable and creates a financial incentive for on-time payment. Most clients accept it without pushback when introduced as a standard billing practice rather than a punishment.
+
+What is a normal DSO for a professional services firm?
+
+The median DSO for professional services firms is 35 to 45 days. Top-quartile firms operate at 25 to 30 days. Bottom-quartile firms run 55 to 75 days. If your DSO is above 45 days, you are in the bottom half. A 10-day DSO improvement on 500 thousand dollars in annual revenue frees up roughly 14 thousand dollars in cash. The fastest fix: the AR aging spreadsheet plus escalation ladder plus a late-fee clause in your engagement letter.
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Which Consulting Clients Are Actually Profitable? Free Profitability Analysis Spreadsheet
+
+Stop Losing 2,500 Dollars Per Month on Retainer Overages — Free Tracker for Consultants
+
+Scope Creep Is Bleeding Your Margins — Free Tracker and Change Order Scripts
+
+Stop Lending Your Clients Money for Free
+
+Every day an invoice sits unpaid is a day you are financing someone else's business. If you are tired of being your clients' bank — and ready to build a system that gets you paid on time without burning relationships — we can help you automate the entire collections workflow. From AR aging dashboards to automated escalation emails to retainer conversion funnels.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/consulting-ar-aging-get-clients-to-pay-spreadsheet-free/
+
+---
+
 # Stop Losing Billable Weeks to Client Onboarding
 
 Professional Services
@@ -2928,6 +3189,8 @@ Get the free spreadsheet →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Client Owes 22K and Won't Pay? Free AR Aging System — Get Paid Without Destroying the Relationship
 
 Stop Losing Billable Hours to Admin: The Free Time-Audit That Recovers 45-90 Minutes a Day
 
@@ -19118,6 +19381,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Client Owes 22K and Won't Pay? Free AR Aging System — Get Paid Without Destroying the Relationship
+
 Which Clients Make You Money? Free Per-Client Profitability Analysis Spreadsheet
 
 You Finally Closed the Deal — Then Spent 2 Weeks Playing Email Tag — Free Consulting Project Kickoff Checklist
@@ -20086,6 +20351,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Client Owes 22K and Won't Pay? Free AR Aging System — Get Paid Without Destroying the Relationship
 
 Which Clients Make You Money? Free Per-Client Profitability Analysis Spreadsheet
 
