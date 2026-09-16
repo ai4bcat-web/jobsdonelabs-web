@@ -721,6 +721,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+340 Units Unsold for 16 Months — Free Dead Stock Tracker That Spots Aging Inventory Before It Bleeds You Dry
+
 Your #2 Bestseller Was Out of Stock for 11 Days — Free Stockout Prevention Tracker
 
 You Have $12K in Returns Your Vendors Never Credited — Free RTV Chargeback Tracker
@@ -6611,6 +6613,333 @@ Stop Losing Track of Estimates: A Free Job Tracking Spreadsheet for Small Contra
 
 
 URL: https://www.jobsdonelabs.ai/blog/customer-no-show-prevention-home-service-appointment-system/
+
+---
+
+# Free Dead Stock Tracker — Find Aging Inventory Fast
+
+Retail & E-Commerce
+
+340 Units of That Product Haven't Sold in 16 Months and You're Paying Storage Fees on Inventory You Forgot You Had. Here Is the Free Dead Stock Tracker That Finds Aging Inventory Before It Bleeds You Dry.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 16, 2026
+
+Key takeaways
+
+Dead stock — inventory with zero sales in 12+ months — costs 30-50% of its value per year in storage fees, tied-up capital, and eventual liquidation losses. A typical e-commerce seller has 15-25% of SKUs as dead or dying and only discovers it at year-end. This free dead stock identification spreadsheet classifies every SKU into aging brackets, calculates carrying cost, and provides a liquidate-vs-hold decision calculator — so you catch slow-movers at 90 days (when you have options) rather than 365 days (when liquidation is the only path).
+
+The hidden cost of dead stock
+
+A seller we worked with had 340 units of a product that hadn't sold in 16 months. The inventory value was roughly forty-seven thousand dollars. They discovered it during the annual inventory review — 16 months after it stopped selling.
+
+Here is what those 16 months actually cost:
+
+Storage fees:
+
+At a typical 3PL rate of 75 cents to $1.50 per cubic foot per month, 340 units occupying 200 cubic feet cost $150-300/month. That's $2,400-4,800 in storage over 16 months. If this was Amazon FBA, the standard storage fee of 83 cents per cubic foot per month jumps to $2.40+ per cubic foot after 271 days — the long-term storage surcharge punishes you for holding on.
+
+Tied-up working capital:
+
+The approximately forty-seven thousand dollars spent on that inventory could have been buying bestsellers that turn 4-6x per year. Instead, it was sitting on a shelf earning nothing. The opportunity cost — what that capital could have earned if deployed into selling inventory — is roughly nine thousand to fourteen thousand dollars over 16 months at a 30% gross margin.
+
+Liquidation haircut:
+
+Dead stock sells for 10-30 cents on the dollar. That forty-seven thousand dollar inventory block becomes four thousand seven hundred to fourteen thousand dollars in recovery. The rest is a write-off.
+
+Total real cost:
+
+Adding storage (roughly $4,000) plus tied-up capital opportunity (roughly $11,000) plus the liquidation haircut (approximately $35,000) = roughly fifty thousand dollars in total cost on inventory that originally cost forty-seven thousand dollars. The dead stock didn't just lose value — it consumed more value than it started with.
+
+This is the pattern at almost every e-commerce business we see. The average seller has 15-25% of SKUs as dead or slow-moving, and most discover it at year-end when the accountant does inventory valuation. By then, the damage is done — 12 months of storage fees and a liquidation decision made under pressure.
+
+The fix isn't a better year-end process. It's a monthly inventory aging review that catches products at 90 days of no sales — when you can still run a promotion, create a bundle, or adjust pricing — rather than at 365 days when liquidation is the only option left.
+
+Dead stock percentage as % of total inventory value — the silent margin killer.
+
+If your total inventory is worth five hundred thousand dollars and dead stock is 20% (one hundred thousand dollars), you're bleeding roughly thirty to fifty thousand dollars per year in storage plus tied-up capital. That's 6-10% of your total inventory value — gone every year — to products that stopped selling. The businesses that track this number monthly keep it under 5%. The businesses that check it yearly find it at 20%+.
+
+The free dead stock identification spreadsheet
+
+This is the tracker that replaces the year-end surprise with a monthly dashboard. It lives in Google Sheets (or Excel) and pulls from a simple export of your selling platform's inventory report.
+
+Per-SKU tracking (Tab 1 — Inventory Aging):
+
+Basic identifiers:
+
+Product name, SKU code, category, supplier name
+
+Inventory position:
+
+Quantity on hand, unit cost, total inventory value (QOH × unit cost)
+
+Sales velocity:
+
+Date of last sale, days since last sale (calculated automatically from today's date), average monthly units sold over the last 6 months, months of supply remaining at current velocity
+
+Aging bracket — auto-classified:
+
+0–90 days: HEALTHY
+
+— selling normally, no action needed
+
+91–180 days: SLOW
+
+— hasn't sold in 1–2 quarters, review listing quality, pricing, and keywords
+
+181–365 days: AGING
+
+— approaching dead, run a promotion or create a bundle within 30 days
+
+365+ days: DEAD
+
+— liquidate, donate, or dispose. Do not pay another month of storage.
+
+Carrying cost:
+
+Monthly storage cost per unit (from your 3PL rate card or Amazon fee schedule), total storage cost accrued since last sale, annualized carrying cost as % of inventory value
+
+Dashboard (Tab 2 — Summary):
+
+Total dead stock value (365+ days, no sales)
+
+Dead stock as % of total inventory value — target: under 5%
+
+Aging stock value (91–365 days, no sales) — target: under 10%
+
+Storage cost year-to-date on dead and aging inventory
+
+Top 10 dead SKUs by inventory value — these are your liquidation priority list
+
+Aging trend month-over-month — is dead stock growing or shrinking?
+
+Inventory turnover rate (cost of goods sold ÷ average inventory) — target: 4–6x per year
+
+Set this up once, spend 15 minutes per month maintaining it.
+
+Export your inventory report from Shopify, Amazon, or your 3PL. Paste into Tab 1. The aging brackets auto-classify. The dashboard updates. Fifteen minutes, once a month, replaces the two-week year-end scramble and the forty-seven-thousand-dollar discovery you wish you had made 12 months earlier.
+
+The aging inventory early warning system — catch slow-movers before they become dead stock
+
+The spreadsheet is the tool. The early warning system is the process. Here is the 4-stage escalation that turns a monthly review into a profit-preservation habit:
+
+Stage 1: 90 days with no sale — yellow flag
+
+The product has not sold in a quarter. It's not dead yet — but it's on the path.
+
+Review the listing:
+
+Is the title optimized? Are there at least 5 images? Is the description current? On Amazon, check for suppressed listings or missing category attributes.
+
+Check pricing:
+
+Has a competitor undercut you by 15%+? Run a quick competitor price check on the top 5 listings for the same product.
+
+Check search visibility:
+
+On Amazon, check the Search Query Performance report for this ASIN. On Shopify, check which search terms are driving traffic.
+
+Action:
+
+Fix any listing issues. If pricing is the problem, test a 10% price reduction for 30 days.
+
+Stage 2: 180 days with no sale — orange flag
+
+The product has not sold in two full quarters. Passive fixes haven't worked. It's time for active intervention.
+
+Run a promotion:
+
+20-30% off for 14 days. If it moves at the discounted price, you have a pricing problem (your regular price is too high for the market).
+
+Create a bundle:
+
+Pair the slow-mover with a bestseller at a package discount. "Buy [bestseller] + get [slow-mover] at 40% off." Bundles clear aging inventory while protecting the bestseller's price perception.
+
+Test a new channel:
+
+List it on a different marketplace (eBay, Walmart, Etsy) where the customer base might value it differently.
+
+Action deadline:
+
+If none of these move units within 30 days, proceed to Stage 3.
+
+Stage 3: 270 days with no sale — red flag
+
+This is the last-chance checkpoint. If the product has not sold after three promotional attempts and nine months, it's almost certainly dead.
+
+Deep discount:
+
+40-50% off for a final 14-day push. If it sells, great — you recovered some value. If it does not sell, accept the signal.
+
+FBA removal order:
+
+If this is Amazon FBA, create a removal order BEFORE the 365-day mark to avoid long-term storage fees. Even if you store it in your own warehouse for now, you stop the FBA fee clock.
+
+Donate for tax write-off:
+
+Many sellers overlook this. Donating dead inventory to a qualified charity lets you deduct the cost basis (what you paid for it) — not the current market value. Consult your accountant.
+
+Stage 4: 365 days with no sale — dead
+
+The product has not sold in 12+ months. It's dead stock. Every month you hold it costs you storage fees. The decision is no longer "can I sell this?" — it's "how do I recover the most remaining value with the least additional cost?"
+
+Liquidate:
+
+Bulk-sell to a liquidator at 10-30% of retail. Accept the haircut and move on. The carrying cost of holding longer exceeds the incremental recovery from waiting.
+
+Dispose:
+
+If liquidators won't take it (niche product, no secondary market), dispose of it. The storage fees you stop paying are the return.
+
+Record the loss:
+
+Write down the inventory on your books. The tax benefit (inventory write-down) partially offsets the loss.
+
+The liquidate-vs-hold decision calculator
+
+This is the math that makes the decision objective instead of emotional. Most sellers hold dead stock because "I paid forty-seven thousand dollars for it — I can't just throw it away." The calculator translates that emotional resistance into actual numbers.
+
+Input
+
+Value
+
+Notes
+
+Current inventory value
+
+$5,000
+
+Quantity × unit cost
+
+Monthly storage cost
+
+$45
+
+From 3PL rate card or FBA fee schedule
+
+Estimated liquidation recovery rate
+
+20%
+
+10-30% typical; higher for branded goods, lower for commodity
+
+Months you would hold before liquidating
+
+One more year of "maybe it will sell"
+
+Scenario
+
+Calculation
+
+Result
+
+Hold for 12 more months, then liquidate
+
+$5,000 inventory value − ($45 × 12 months storage) − ($5,000 × 80% liquidation haircut)
+
+-$3,540
+
+— net loss
+
+Liquidate now
+
+$5,000 × 20% recovery
+
+$1,000
+
+— net recovery
+
+Holding for 12 more months loses $3,540. Liquidating now recovers $1,000. The difference is $4,540 in your pocket.
+
+This math gets worse the longer the product has already been dead. If storage has already cost you $540 over the last 12 months, you're making a decision about the NEXT 12 months. The sunk cost of the inventory purchase and the storage you've already paid is irrelevant — those are gone either way. The only question is: what happens to the NEXT $540 in storage fees?
+
+The only times holding beats liquidating:
+
+(1) The product is genuinely seasonal — ski gear in June that reliably sells in November. If you have 3 years of seasonal data showing a consistent Q4 spike, hold. (2) You have a confirmed promotion plan — a specific email blast, influencer campaign, or marketplace deal scheduled within 60 days. (3) Storage cost is near zero — you own the warehouse, have excess capacity, and the marginal cost of holding one more pallet is essentially zero. In all other cases, the calculator will tell you to liquidate. Listen to it.
+
+The inventory health scorecard — one page, once a month, every month
+
+The spreadsheet produces the aging data. The early warning system tells you what to do at each stage. The scorecard tells you whether the whole system is improving or getting worse. Here are the five numbers to track month over month:
+
+Metric
+
+Target
+
+Why it matters
+
+Dead stock % of total inventory value
+
+Under 5%
+
+Above 10% means you are overbuying, under-reviewing, or both. Every point above 5% is roughly 30-50 cents per dollar of dead inventory value lost per year.
+
+Aging stock % (91-365 days, no sales)
+
+Under 10%
+
+This is your pipeline of future dead stock. If aging stock is growing month-over-month, dead stock will grow 3-6 months later. Fix the pipeline.
+
+Inventory turnover (COGS ÷ avg inventory)
+
+4-6x per year
+
+Below 3x means you are carrying too much inventory relative to sales. Either reduce order quantities or increase sales velocity.
+
+Storage cost as % of inventory value (annualized)
+
+Under 8%
+
+Above 8% means storage is eating your margin. For every one hundred thousand dollars in inventory, $8,000+/year goes to storage — before you sell a single unit.
+
+Dead stock recovery rate
+
+Track trend
+
+What % of dead stock value did you recover through liquidation, donation write-off, or last-chance promotions? Track improvement quarter over quarter. Even going from 15% recovery to 25% recovery is thousands of dollars back in the business.
+
+Print this scorecard. Put it on the wall. Review it the first Monday of every month. It takes 5 minutes. The alternative — discovering dead stock at year-end — takes weeks of forensic accounting and ends with a liquidation fire sale.
+
+Frequently asked questions
+
+How do I find dead stock in my inventory?
+
+Start with a simple date-of-last-sale report from your selling platform — Shopify, Amazon, or your 3PL dashboard. Pull every SKU, sort by days since last sale descending, and flag anything with zero sales in the last 90 days. Then classify into aging brackets: 0-90 days (healthy), 91-180 days (slow-moving — watch), 181-365 days (aging — act now), and 365+ days (dead — liquidate). A free spreadsheet with this classification built in takes 30 minutes to set up and replaces the quarterly surprise when the accountant does inventory valuation.
+
+What is the difference between dead stock and slow-moving inventory?
+
+Slow-moving inventory still sells — just slowly. Maybe 1-2 units per month instead of 20. Dead stock has completely stopped selling, typically defined as no sales in 12+ months. The distinction matters because the fix is different: slow-moving inventory gets a promotion, a bundle, or a price adjustment. Dead stock gets liquidated — sold in bulk at 10-30 cents on the dollar, donated for a tax write-off, or disposed of. The key is catching slow-moving inventory BEFORE it becomes dead stock. At 90 days of no sales, you have options. At 365 days, you only have liquidation.
+
+How much does dead stock cost an e-commerce business?
+
+Dead stock costs in three ways: storage fees (typically 75 cents to $1.50 per cubic foot per month at a 3PL, or 83 cents per cubic foot per month for Amazon FBA standard storage — rising sharply at 271+ days for long-term storage surcharges), tied-up working capital (the cash you spent on the inventory could be buying products that actually sell), and eventual liquidation loss (dead stock sells for 10-30% of retail value — a $10,000 inventory block becomes $1,000-3,000 in recovery). The total real cost is 30-50% of the inventory's value per year it sits unsold.
+
+Should I liquidate dead stock or keep holding it?
+
+Run the liquidate-vs-hold calculation: multiply your monthly storage cost by the number of months you are willing to hold, then compare against the estimated liquidation recovery. A $500 product with $45/month in storage fees costs $540 to hold for 12 months — a net loss of $40. Liquidating now at 20% recovery nets $100. The holding decision loses money; liquidating gains money. The math almost always favors liquidating once a product hits 180+ days of no sales, unless (a) the product is seasonal with a predictable peak, (b) you have a specific promotion planned, or (c) storage costs are near zero (your own warehouse with excess capacity).
+
+How do I prevent dead stock from accumulating?
+
+Prevention has three layers. Layer 1 — purchasing discipline: never reorder a SKU without checking current inventory + sales velocity. The reorder point spreadsheet (linked in Related Reading) prevents overbuying. Layer 2 — monthly aging review: the first Monday of every month, pull a date-of-last-sale report and flag anything at 90+ days with no sales. Run a promotion, test a price drop, or create a bundle. Layer 3 — supplier terms: negotiate minimum order quantities down, ask for consignment on new products, or split orders with other retailers. The goal is to catch slow-movers at 90 days — when you have options — rather than at 365 days when liquidation is the only path.
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Your Number Two Bestseller Was Out of Stock for 11 Days and Nobody Noticed — the Stockout Prevention Tracker That Fixes It
+
+Amazon Took $15,000 in Fees Last Quarter and You Can't Explain Where It Went — the Free Reconciliation System
+
+You Sell on Shopify, Amazon, and Walmart — and Product Info Is Different on Every Channel Because You're Copy-Pasting From a Spreadsheet
+
+Dead stock draining your margin?
+
+We build custom inventory health dashboards that pull from Shopify, Amazon, and your 3PL — auto-classifying aging SKUs, calculating carrying costs, and flagging liquidation candidates before they hit the 365-day mark. Free 30-minute audit.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/ecommerce-dead-stock-aging-inventory-identification-spreadsheet-free/
 
 ---
 
@@ -15232,6 +15561,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+340 Units Unsold for 16 Months — Free Dead Stock Tracker That Spots Aging Inventory Before It Bleeds You Dry
+
 You Have $12K in Returns Your Vendors Never Credited — Free RTV Chargeback Tracker
 
 Amazon Took $15,000 in Fees Last Quarter — Free Fee Reconciliation Spreadsheet
@@ -22610,6 +22941,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+340 Units Unsold for 16 Months — Free Dead Stock Tracker That Spots Aging Inventory Before It Bleeds You Dry
 
 Returns Processing Eating Your Time? How E-Commerce Brands Cut Returns Workflow from Hours to Minutes
 
