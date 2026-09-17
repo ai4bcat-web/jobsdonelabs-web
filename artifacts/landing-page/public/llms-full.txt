@@ -2399,6 +2399,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Have 40 Open Permits Across 4 Job Sites and One Just Expired — The Free Permit Tracker That Keeps Every Project on Schedule
+
 You Did the Work and They're Refusing to Pay — The 5-Point Service Verification System
 
 Your Sub's Insurance Expired 3 Weeks Ago and You Just Found Out at 10pm — The Free COI Compliance System
@@ -2407,6 +2409,275 @@ Lumber Prices Blew Your Remodel Budget — The 6-Tab Profit Leak Detector
 
 
 URL: https://www.jobsdonelabs.ai/blog/construction-daily-report-legal-protection-system/
+
+---
+
+# Free Permit Tracking Spreadsheet for GCs
+
+Home Services & Trades
+
+You Have 40 Open Permits Across 4 Job Sites and One Just Expired Because Nobody Called for Inspection. Here Is the Free Permit Tracker That Keeps Every Project on Schedule.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 17, 2026
+
+Key takeaways
+
+One missed inspection equals approximately three thousand six hundred dollars in re-application fees, trade rescheduling, and carrying costs. A GC with four projects and forty active permits is one forgotten phone call away from a scheduling disaster. This free permit tracking spreadsheet gives you a per-project dashboard, inspection trigger calendar mapped to your construction schedule, a municipality cheat sheet for every city you work in, and a permit closeout checklist that gets your CO ready. No software needed — just a spreadsheet and fifteen minutes a week.
+
+The three thousand six hundred dollar missed inspection — by the numbers
+
+Here is how it happens. You pull a rough-in permit for a commercial build-out in a suburb of Chicago. The permit is valid for one hundred eighty days. Your superintendent schedules the rough-in inspection for week twelve, but the plumbing sub is running three days behind. He pushes the inspection to the following week. Then the electrician needs another two days. By the time the walls are ready for inspection, it is week sixteen. Nobody checks the permit expiration date because the project is moving and everyone assumes someone else is tracking it.
+
+Week twenty-one. The inspector shows up for the final and notices the rough-in permit expired three weeks ago. He red-tags the job. Now you are looking at:
+
+Three hundred fifty dollars
+
+in permit re-application fees.
+
+Two to three weeks
+
+of reprocessing time while the building department reviews the original plans again.
+
+One thousand five hundred dollars
+
+in trade rescheduling costs as you push the plumber, electrician, and drywall crew to new dates.
+
+One thousand seven hundred fifty dollars
+
+in carrying costs: general conditions, trailer rental, temp utilities, loan interest, and your superintendent standing around waiting for a piece of paper.
+
+Total: approximately three thousand six hundred dollars. For one permit. On one project.
+
+If you are running four projects and each has ten to twelve permits, you are one forgotten phone call away from a fifteen thousand dollar month. And the worst part: the person who was supposed to track this was you.
+
+This is not a hypothetical.
+
+Municipal building departments do not send expiration reminders. They do not call your superintendent. The permit is your responsibility, and the penalty for forgetting is paid entirely by you. The free spreadsheet in this guide makes sure you never pay it again.
+
+The free construction permit tracker spreadsheet
+
+The spreadsheet is built around one principle: every permit has a lifecycle, and every lifecycle has trigger dates that someone needs to act on. You do not need another SaaS subscription. You need a system that tells you, every Monday morning, exactly which permits need attention across every active project. Here is what each project tab contains:
+
+Per-project permit log columns
+
+Permit type
+
+— Building, electrical, plumbing, mechanical, fire suppression, demolition, grading, sewer tap, signage, occupancy. Dropdown per project so you can customize for the scope.
+
+Permit number
+
+— The reference number the building department assigned. This is what you cite when you call for inspection.
+
+Issuing authority
+
+— City of Elmhurst, Village of Oak Brook, Cook County. Different rules apply per jurisdiction.
+
+Application date
+
+— When the permit was submitted. Useful for tracking how long each municipality takes to process.
+
+Approval date
+
+— When the permit was issued. The expiration clock starts here.
+
+Expiration date
+
+— Auto-calculated based on the validity period for that municipality. This is the column that saves you three thousand six hundred dollars.
+
+Inspections required
+
+— Rough-in, above-ceiling, final. List every inspection this permit requires before closeout.
+
+Inspection status
+
+— Not scheduled, scheduled, passed, failed, re-inspection needed. Color-coded so a red cell jumps off the screen.
+
+Trigger event
+
+— The construction milestone that determines when this inspection should be called. "After drywall hung," "after underground plumbing complete," "before concrete pour."
+
+Notes
+
+— Inspector name, phone number, re-inspection fee amount, special instructions.
+
+The four-project permit heatmap
+
+The master dashboard tab aggregates all four projects into one view. It is a color grid: each row is a permit, each column is a project, and the cell color tells you the status instantly.
+
+Green:
+
+Permit active, inspections on schedule, no action needed.
+
+Yellow:
+
+Expiration within thirty days, inspections not yet scheduled. Needs attention this week.
+
+Red:
+
+Expiration within fourteen days, inspection still not called. Drop everything and call the building department today.
+
+Blue:
+
+Permit closed out, final inspection passed, CO ready.
+
+The heatmap takes under fifteen seconds to scan on a Monday morning. Your eye goes straight to the red cells. You know exactly which project is at risk and which permit needs the phone call. This replaces the whiteboard, the text messages, and the mental list that lives only in your superintendent's head.
+
+The inspection trigger calendar
+
+The problem with permit tracking is not that you do not know permits expire. The problem is that inspections are tied to construction milestones, and construction milestones move. The plumbing rough-in inspection is supposed to happen after underground plumbing is complete. But underground plumbing finished early because the excavation sub showed up ahead of schedule, and nobody updated the permit tracker. Now the inspection window is open but nobody called because the spreadsheet still says "not triggered yet."
+
+The trigger calendar solves this. For each inspection, you set two fields:
+
+Trigger event:
+
+The construction phase that must be complete before the inspection is called. This is specific: "After basement slab pour," not "when foundation work is done."
+
+Target call date:
+
+The date you estimate the trigger will fire based on the current project schedule. This date updates weekly when the superintendent reviews the schedule.
+
+The calendar auto-flags any inspection where the target call date has passed and the inspection status is still "not scheduled." It also flags inspections where the trigger event is complete but the inspection was not called within five business days. This five-day grace period is intentional — it catches the "we were waiting on the plumber" scenarios before the permit expiration becomes a crisis.
+
+The five-day rule.
+
+Most building departments require twenty-four to forty-eight hours advance notice for an inspection. The five-day window means: if the trigger event fired on Monday and you have not called by Friday, the flag goes up. Monday morning you call. The inspection happens Tuesday or Wednesday. The permit never gets within thirty days of expiration without an inspection on the calendar.
+
+The municipality cheat sheet
+
+Every city is different. The suburb of Elmhurst requires forty-eight hours notice for an inspection and charges seventy-five dollars for a re-inspection. The village of Oak Brook requires twenty-four hours notice and charges one hundred fifty dollars for a re-inspection. The city of Chicago has its own entire universe of rules. If your superintendent is calling for inspections in four different municipalities, he cannot keep all of this in his head.
+
+The cheat sheet tab in the spreadsheet gives you one row per municipality with the rules that matter:
+
+Cheat sheet fields per municipality
+
+Permit validity period
+
+— How long permits are good for before they expire. Ranges from ninety days to two years.
+
+Inspection scheduling window
+
+— How far in advance you must call. Twenty-four hours, forty-eight hours, or "call before 3pm for next-day."
+
+Re-inspection fee
+
+— What it costs if an inspection fails and you need a second visit. Fifty to three hundred dollars depending on the city.
+
+Common rejection reasons
+
+— The things that particular inspector always flags. List them so the superintendent fixes them before the inspector arrives.
+
+Inspector contact
+
+— Name and phone number. Some cities let you request a specific inspector; others assign whoever is on rotation.
+
+Closeout requirements
+
+— What the city requires for a certificate of occupancy beyond just passing inspections: fire marshal sign-off, health department clearance, engineering letter, as-built survey.
+
+Build the cheat sheet once. Fill it out as you learn each city's quirks. By project three in Elmhurst, your superintendent has the cheat sheet open before he picks up the phone. He knows the inspector always checks the fire-stopping at penetrations and the accessibility clearances in the restrooms. He walks the site before the inspection and fixes those two things first. Pass rate goes up. Re-inspection fees go down.
+
+The permit closeout checklist
+
+The final inspection passed. The building is done. Your client wants the keys. But the building department will not issue the certificate of occupancy until every permit on the project is finalized. If one permit — the fire suppression permit, the sewer tap permit, the sign permit — is still open because nobody called for the final inspection, the CO is held up. Days turn into weeks. Your client is paying carrying costs on a building they cannot occupy because of a piece of paper.
+
+The closeout checklist tab catches this. Before you request the CO, run the checklist:
+
+All building permits finaled? Check the status column.
+
+Fire marshal sign-off obtained? Date and inspector name.
+
+Health department clearance? Required for food service, medical, and daycare occupancies.
+
+Engineering letter submitted? Some cities require a letter from the structural engineer certifying the building was constructed per plans.
+
+As-built survey complete? Required if the building footprint or site improvements changed during construction.
+
+Outstanding permit fees paid? Some cities hold the CO until all fees across all permits are cleared.
+
+Open corrections from prior inspections? Any inspection that passed "with notes" needs those notes resolved.
+
+One checklist. Fifteen minutes before you request the CO. It saves the three-week delay and the phone call from your client that starts with "I thought we were done."
+
+This pairs with your daily construction report.
+
+The daily report captures what happened on site today — weather, crew, subs, materials, visitors, safety incidents. The permit tracker captures what needs to happen to keep the project on schedule. Together they give you a complete operational picture: the daily report documents the past, the permit tracker manages the future. If you do not have a daily reporting system yet, see
+
+the free construction daily report system
+
+that pairs with this spreadsheet.
+
+How to set up the permit tracker in under two hours
+
+You do not need to build this from scratch. The free spreadsheet template is pre-built with all the tabs, formulas, and conditional formatting described above. Here is the setup sequence:
+
+Duplicate the template
+
+for your company. One master file.
+
+Create a project tab
+
+for each active project. Copy the permit log structure into each tab.
+
+Fill in the municipality cheat sheet
+
+for every city you currently work in. This takes thirty minutes the first time and five minutes per new city after that.
+
+Enter all open permits
+
+across all projects. This is the heavy lift: pulling permit numbers from the field, checking expiration dates, and populating the required inspections. It takes about an hour for a GC with four active projects.
+
+Set the trigger events
+
+for each required inspection. Walk the schedule with your superintendent and map each inspection to the construction milestone that triggers it.
+
+Bookmark the heatmap tab.
+
+This is your Monday morning dashboard. Open it, scan for red, and make the two or three phone calls that keep every project on schedule.
+
+Weekly maintenance: fifteen minutes. Update the trigger dates based on the actual construction schedule, add new permits as they are issued, close out permits as inspections pass. If you do this every Monday, you will never miss an inspection. If you skip a week, the yellow cells start appearing. If you skip two weeks, the red cells tell you exactly where the fire is.
+
+Frequently asked questions
+
+What happens if a building permit expires on a construction project?
+
+An expired permit triggers a re-application process that costs three hundred fifty to five hundred dollars in fees, requires two to three weeks of reprocessing time, and forces you to reschedule trades and extend carrying costs. For a typical GC with a general contractor overhead of roughly one thousand seven hundred fifty dollars per week in carrying costs and one thousand five hundred dollars in trade rescheduling, one expired permit costs approximately three thousand six hundred dollars total. Multiply that by forty permits across four active projects and the risk becomes existential.
+
+How do I track building permits across multiple construction sites?
+
+The free permit tracking spreadsheet uses a per-project dashboard system: each project gets its own tab with permit type, number, issuing authority, application date, approval date, expiration date, required inspections, and status. A master dashboard aggregates all projects and highlights permits expiring within thirty days. The inspection trigger calendar maps each required inspection to the construction schedule phase so nothing falls through the cracks.
+
+What is the difference between a permit tracker and a daily construction report?
+
+A daily construction report captures what happened on site today: weather, crew, subs, materials, visitors, safety issues. A permit tracker captures what needs to happen to keep the project on schedule: which permits are open, which inspections are due, which municipalities have different rules, and which permits are approaching expiration. They are complementary tools — the daily report documents the present; the permit tracker manages the future. A GC running multiple projects needs both.
+
+How do different municipalities handle construction permits differently?
+
+Every municipality has different rules: permit validity periods range from ninety days to two years, inspection scheduling windows vary from twenty-four hours to one week, re-inspection fees run from fifty dollars to three hundred dollars, and closeout requirements differ by city. A GC working across multiple suburbs must track these variations per project. The free spreadsheet includes a municipality cheat sheet tab where you record the specific rules for each city you work in so your superintendent knows exactly what to expect before calling for inspection.
+
+What permits does a general contractor need for a typical construction project?
+
+A typical ground-up or major renovation project requires: building permit, electrical permit, plumbing permit, mechanical permit, fire suppression permit, and possibly separate permits for demolition, grading, sewer tap, signage, and occupancy. A four-project GC can easily have forty or more active permits at any time. The permit tracker spreadsheet handles all permit types by letting you customize the permit-type dropdown for each project.
+
+Your permits are not going to track themselves
+
+Every Monday morning, one of your permits is thirty days closer to expiration. The spreadsheet tells you which one. The phone call takes ninety seconds. The alternative costs three thousand six hundred dollars and a very uncomfortable conversation with your client about why the building they paid for cannot be occupied yet. Download the free template now and spend fifteen minutes this afternoon loading your open permits. The system works starting Monday.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Your Spiral Notebook Cannot Fight a Lawsuit — The Free Construction Daily Report System
+
+You Have 18 Subs Emailing You Certificates and You Have No Idea Who Is Expired
+
+Your Field Crews Know Exactly How Much They Lost — 3 Weeks After the Job Closed
+
+
+URL: https://www.jobsdonelabs.ai/blog/construction-permit-inspection-tracking-spreadsheet-free/
 
 ---
 
@@ -4594,6 +4865,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+You Have 40 Open Permits Across 4 Job Sites and One Just Expired — The Free Permit Tracker That Keeps Every Project on Schedule
 
 Your Tech Made a 40-Minute Parts Run for a $6 Fitting — The Free Truck Stock Tracker That Ends It
 
@@ -24400,6 +24673,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+You Have 40 Open Permits Across 4 Job Sites and One Just Expired — The Free Permit Tracker That Keeps Every Project on Schedule
 
 Lumber Prices Blew Your Remodel Budget — The 6-Tab Cost Tracker
 

@@ -108,6 +108,7 @@
 ## Construction
 - [Your Foreman Is Filling Out Paper Timesheets in His](https://www.jobsdonelabs.ai/blog/construction-crew-time-tracking-paper-timesheet-system/): Your crews are losing 2-3 hours of billable time every week because foremen fill out timesheets from memory. Here's the paper timesheet system that captures...
 - [Free Construction Daily Report: Stop Losing Disputes](https://www.jobsdonelabs.ai/blog/construction-daily-report-legal-protection-system/): Your spiral notebook can't defend a $50K dispute. Free construction daily report spreadsheet with weather, crew, sub, photo & visitor logs — no software needed.
+- [Free Permit Tracking Spreadsheet for GCs](https://www.jobsdonelabs.ai/blog/construction-permit-inspection-tracking-spreadsheet-free/): One missed inspection costs thousands in fees and delays. Free GC permit tracker with per-project dashboard, inspection calendar, and municipality cheat sheet.
 
 ## Professional Services
 - [Clients Won't Use Your Portal? Free Adoption Playbook](https://www.jobsdonelabs.ai/blog/client-portal-adoption-stop-emailing-documents/): Clients keep emailing tax returns instead of using your secure portal. Free playbook: onboarding sequences, policy templates, automated reminders.
