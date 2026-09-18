@@ -25914,6 +25914,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Lost 3 Drivers? Free Trucking Retention Tracker with Stay Interviews
+
 Cut Empty Miles: Free Deadhead Tracker for Fleets
 
 Your Best Driver's Medical Card Expired Friday — The Free DOT Driver Certification Tracker for Small Fleets
@@ -26714,6 +26716,8 @@ Book your free audit arrow right
 Related reading
 
 If you found this useful, you will want these too:
+
+Lost 3 Drivers? Free Trucking Retention Tracker with Stay Interviews
 
 You Are Losing Two Hundred Thousand Dollars a Year in Unpaid Detention and You Do Not Even Know It
 
@@ -28106,6 +28110,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Lost 3 Drivers? Free Trucking Retention Tracker with Stay Interviews
+
 Your Driver Just Totaled a Guardrail at 2am — The FMCSA Compliance System That Keeps You Out of a $10,000 Hole
 
 Your Fleet Maintenance 'System' Is Two Spreadsheets, a Whiteboard, and Drivers Who Text You at 2 AM
@@ -28116,6 +28122,329 @@ You Haul 3 Hazmat Loads A Year And Think You Don't Need A Compliance Program —
 
 
 URL: https://www.jobsdonelabs.ai/blog/trucking-driver-certification-compliance-tracker/
+
+---
+
+# Lost 3 Drivers? Free Trucking Retention Tracker
+
+LOGISTICS & TRUCKING
+
+You Lost 3 Drivers in 6 Weeks at $30,000 and You Do Not Know Why Any of Them Left. Here Is the Free Driver Retention Tracker That Shows You What Is Actually Broken — Before the Next Resignation Letter Lands on Your Desk.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 18, 2026
+
+Key takeaways
+
+A twelve-truck fleet losing eight drivers per year at ten thousand dollars per replacement burns eighty thousand dollars annually in churn. That is one third of profit evaporating into a revolving door, and most fleet owners have zero root-cause data on why drivers leave.
+
+You will get: a free driver turnover tracker spreadsheet that captures tenure, reason, cost, and truck-idle days per departure; a stay interview template that catches issues six months before a resignation; a retention risk scorecard that flags which drivers need attention this month; and a structured exit interview that produces actionable data instead of vague "better opportunity" answers.
+
+The driver retention tracker completes the driver economics trilogy alongside the
+
+settlement pay reconciliation system
+
+and the
+
+deadhead reduction tracker
+
+. One tracks pay accuracy. One tracks empty miles. This one tracks people staying or leaving.
+
+The eighty-thousand-dollar revolving door — by the numbers
+
+Here is what driver churn actually costs a twelve-truck fleet. Start with the per-departure math:
+
+Recruiting:
+
+three thousand dollars in job board fees, recruiter time, and ad spend per hire.
+
+Orientation and training:
+
+two thousand dollars in trainer time, onboarding paperwork, and the first week of supervised runs.
+
+Lost productivity:
+
+three thousand dollars in empty truck days while the seat is vacant. A truck sitting at the yard generates zero revenue but still burns fixed costs: insurance, payment, parking.
+
+Sign-on and referral bonuses:
+
+two thousand dollars in incentives to fill the seat fast.
+
+That is ten thousand dollars per driver replaced. Eight replacements per year equals eighty thousand dollars in annual churn cost.
+
+Now put that number in context. A twelve-truck fleet at two million dollars in annual revenue and twelve percent net margin generates two hundred forty thousand dollars in profit. Eighty thousand dollars in churn cost represents thirty-three percent of annual profit — one third of everything the fleet owner worked for that year, gone to the revolving door.
+
+Industry benchmarks make this worse. Large truckload carriers routinely run ninety to over one hundred percent annualized turnover. Small fleets typically run thirty to sixty percent. But "typical" does not mean acceptable. At forty percent annualized turnover on twelve drivers, you are replacing five drivers per year at fifty thousand dollars. At sixty percent, you are replacing seven drivers at seventy thousand dollars. Every percentage point you reduce turnover saves roughly one thousand two hundred fifty dollars in annual replacement cost.
+
+The real cost goes beyond the spreadsheet. Every departure creates dispatch chaos: loads get reassigned, customers get delayed, and the remaining drivers pick up extra runs that push them closer to burnout. The dispatcher spends hours reworking the schedule instead of finding loads. The safety manager scrambles to transfer the departed driver's qualification file. And nobody asks the one question that would prevent the next departure: why did they actually leave?
+
+Most fleet owners cannot tell you their annualized turnover rate.
+
+They know it feels high. They know they are always hiring. But without a number, there is no target, no trendline, and no accountability. The first job of the retention tracker is to put a number on the problem. You cannot fix what you do not measure.
+
+The free driver turnover tracker spreadsheet
+
+The tracker has two layers: a per-driver departure log and a fleet dashboard. Together they turn anecdotes into data.
+
+Departure log — per driver who leaves
+
+For every driver who separates, capture:
+
+Driver name and hire date
+
+— tenure in months is the single most predictive retention metric. Drivers who make it past twelve months are far less likely to leave than drivers in months one through six.
+
+Departure date
+
+— track month-over-month and year-over-year departure patterns. A cluster of departures in January or right after annual reviews tells a different story than random attrition.
+
+Tenure in months
+
+— auto-calculated. The distribution of tenure at departure reveals whether you have a first-ninety-day problem (onboarding failure), a first-year problem (expectation mismatch), or a long-tenure departure problem (something changed).
+
+Reason category:
+
+pay, home time, equipment quality, dispatch relationship, family or personal, other. This is the most important column in the spreadsheet. After twelve months of data, you know the top reason your drivers leave — not what you
+
+think
+
+it is, but what the data says it is.
+
+Preventable?
+
+Yes or no. A driver who leaves because their spouse got a job in another state is not preventable. A driver who leaves because the truck broke down three times in two months and nobody fixed it is preventable. Tracking preventable versus non-preventable departures gives you your true retention improvement opportunity.
+
+Replacement cost
+
+— actual recruiting, orientation, lost productivity, and bonus costs for this specific departure.
+
+Replacement hire date
+
+— days from departure to replacement. Every empty day is lost revenue. Track the average and work it down.
+
+Truck-idle days
+
+— how many days the truck sat unpaid between the departing driver and the new hire. Fleet utilization suffers every time a driver leaves.
+
+Fleet dashboard
+
+The dashboard tab gives you a single view of retention health:
+
+Annualized turnover rate
+
+— drivers who left in the last twelve months divided by average driver count, times one hundred. Track monthly and watch the trendline.
+
+Turnover cost year to date
+
+— sum of all replacement costs this year. When the owner asks "what is turnover costing us," you have the number.
+
+Turnover by reason category
+
+— a bar chart showing pay departures versus home-time departures versus equipment departures versus dispatch-relationship departures. This tells you where to invest your retention budget. If equipment is the top reason, no amount of pay raises will fix it.
+
+Average tenure at departure
+
+— if drivers consistently leave at six to nine months, your onboarding and first-year experience need attention. If they leave at two to three years, something changed in the operation.
+
+Turnover by dispatcher
+
+— if one dispatcher has triple the departure rate of others, the data is telling you something the drivers already know.
+
+Turnover by truck age
+
+— do drivers assigned to older trucks leave faster? The data will tell you.
+
+Average truck-idle days per departure
+
+— the utilization cost of churn, separate from the dollar cost.
+
+The reason-category column is the most important data in the entire tracker.
+
+Without it, you know turnover is expensive. With it, you know
+
+exactly where
+
+to spend your retention effort. A fleet that discovers sixty percent of preventable departures are equipment-related can invest in newer trucks and measure the ROI in reduced turnover. A fleet that discovers the top reason is dispatch-relationship issues can retrain or reassign dispatchers. The reason column turns retention from a vague cultural problem into a solvable operational problem.
+
+The stay interview — ask before they leave
+
+Every ninety days, sit down with every driver for fifteen minutes. Not a performance review. Not a compliance check. A stay interview.
+
+Three questions:
+
+What would make you leave this company?
+
+Listen to the answer without defending. If the driver says "if I find a job with better home time," write it down. Do not argue that your home time is actually good. Do not promise to fix it on the spot. Just record it.
+
+What keeps you here?
+
+The positive side of the ledger. Maybe it is the pay. Maybe it is the dispatcher who treats them like a person. Maybe it is the fact that you fix equipment within twenty-four hours when something breaks. Knowing what keeps drivers here tells you what to protect.
+
+What is one thing we could fix by tomorrow that would make your job better?
+
+This question produces the quick wins. A broken seat adjuster. A dispatcher who never returns calls after five PM. A fuel card that gets declined at Pilot. Fix the small stuff fast, and drivers notice.
+
+Record the answers in the tracker under a "Stay Interviews" tab. After three rounds — nine months — you have a retention backlog as concrete as any maintenance backlog.
+
+The patterns emerge fast. When three drivers in a row answer question one with "the trucks are uncomfortable" or "the equipment is unreliable," you have an equipment problem, not a retention problem. When four drivers in a row answer question three with "the dispatcher never tells me what is happening when a load cancels," you have a communication problem. The stay interview catches these issues six months before they become a resignation letter on your desk.
+
+There is a secondary benefit that most fleet owners miss:
+
+the stay interview itself is a retention tool.
+
+Asking a driver what keeps them here and what would make them leave signals that their opinion matters. Drivers who feel heard are less likely to take the first recruiter call from a competing fleet. The interview is both diagnostic and therapeutic.
+
+The retention risk scorecard
+
+Score every driver monthly on a simple green-yellow-red system:
+
+Green — stable, low risk
+
+Tenure over twelve months
+
+No concerns raised in recent stay interviews
+
+Pay is competitive and accurate (verified by the settlement pay tracker)
+
+Home time is consistent and predictable
+
+Yellow — watch, at risk
+
+Mentioned a concern in a stay interview (equipment, pay, home time, dispatcher)
+
+Approaching the one-year mark (the most common departure window)
+
+Had a recent pay dispute or settlement error
+
+Equipment complaints that have not been addressed
+
+Reduced availability or declining to take extra loads
+
+Red — critical, imminent risk
+
+Expressed intent to leave in a stay interview
+
+Declined the most recent stay interview entirely
+
+Multiple unresolved complaints across multiple categories
+
+Has been observed talking to recruiters or updating a resume
+
+Focus retention effort on the yellows. They are saveable. A green driver does not need intervention; a red driver has probably already decided to leave. But a yellow driver — the one who mentioned uncomfortable equipment or unpredictable home time — that driver can be retained with a targeted fix. Saving one yellow driver saves ten thousand dollars. Saving three per year saves thirty thousand dollars.
+
+Update the scorecard monthly. Review it in the same operations meeting where you review the deadhead tracker and the maintenance schedule. Retention is an operational metric, not an HR afterthought.
+
+The exit interview that actually produces data
+
+Most exit interviews produce one answer: "better opportunity elsewhere." It is the most common and least useful departure reason in trucking because it reveals nothing. The structured exit interview is designed to break through the polite non-answer.
+
+Ask these five questions, and record the answers in the departure log:
+
+What would have had to change for you to stay?
+
+This is the inverse of "why are you leaving." It forces the driver to name something specific. "More home time." "Fewer breakdowns." "A dispatcher who actually communicates."
+
+What did your next employer offer that we did not?
+
+This tells you exactly where you lost the competitive battle. More pay per mile? Guaranteed weekend home time? A newer truck? Sign-on bonus? Knowing what your competitor offered gives you a retention budget benchmark.
+
+What was the worst part of driving for us?
+
+Direct and uncomfortable, but the answer is usually the most honest thing you will hear in the entire exit interview. It might be equipment. It might be a specific dispatcher. It might be the fuel card that never works.
+
+Would you recommend us to another driver?
+
+A yes or no question that tells you whether the departure was amicable or adversarial. Track the percentage of departing drivers who would recommend your fleet. If it drops below fifty percent, you have a reputation problem in addition to a retention problem.
+
+Is there anything else we should know?
+
+The open-ended closer. Sometimes the answer is nothing. Sometimes it is the most important piece of information in the entire interview.
+
+Record every answer in the tracker's departure log. After six to twelve months, the exit interview data becomes your retention improvement backlog. Three drivers named the same dispatcher as "the worst part"? That dispatcher needs coaching or reassignment. Four drivers said they left for guaranteed weekend home time? Your scheduling model needs to change.
+
+The exit interview only works if someone actually conducts it.
+
+Most small fleets skip the exit interview because the driver is already gone and the dispatcher is too busy covering the empty truck. Assign ownership: the safety manager, the operations manager, or the owner. Someone whose job description includes "conduct exit interview within forty-eight hours of every driver departure and record answers in the retention tracker." If nobody owns it, it does not happen.
+
+How the retention tracker fits into your existing driver operations toolset
+
+The driver retention tracker is not a standalone tool. It completes a three-part driver economics system alongside two existing free tools:
+
+Driver settlement pay reconciliation
+
+— verifies that every driver is paid accurately for every mile, every stop, and every accessorial. Pay accuracy is the number one retention factor, period. If your drivers cannot trust their settlement statements, no amount of stay interviews will keep them.
+
+Get the free settlement pay tracker here.
+
+Deadhead reduction tracker
+
+— measures empty miles by lane pair and truck, revealing which routes actually make money and which ones bleed margin. Deadhead is the silent killer of driver earnings: an empty mile is an unpaid mile for the driver too.
+
+Get the free deadhead tracker here.
+
+Driver retention tracker
+
+— this page. Captures why drivers leave, what keeps them here, and what it costs when they go. Without it, you are spending eighty thousand dollars per year on churn with no data on where the money went.
+
+Together, these three tools answer every question a fleet owner has about their driver economics: Are my drivers paid accurately? Are they running empty miles that reduce their earnings? Are they staying or leaving, and why?
+
+Two additional tools round out the driver lifecycle:
+
+Driver certification compliance tracker
+
+— ensures every driver's medical card, CDL, and endorsements are current and never lapse. A single expired medical card can sideline a driver for days.
+
+Get the free compliance tracker here.
+
+Fleet maintenance tracking system
+
+— equipment quality is consistently a top-three departure reason in exit interview data. A truck that breaks down three times in two months is not just a maintenance problem — it is a retention problem.
+
+Get the free maintenance tracker here.
+
+Frequently asked questions
+
+How do I reduce truck driver turnover in a small fleet?
+
+Start by measuring what you are losing. Track every driver departure: who left, how long they stayed, why they left, and what it cost to replace them. Most fleet owners cannot tell you their annualized turnover rate or the top reason drivers quit because nobody is collecting the data. Run stay interviews every ninety days with current drivers: ask what would make them leave, what keeps them here, and what one thing you could fix tomorrow. When three drivers in a row flag uncomfortable trucks or unpredictable home time, you have found your retention problem before anyone resigns. Score every driver green-yellow-red monthly, and focus retention effort on the yellows: they are saveable. A saved driver saves you ten thousand dollars in replacement cost.
+
+What is the average cost of replacing a truck driver?
+
+For a small fleet, replacing one driver costs approximately ten thousand dollars: three thousand in recruiting and job board fees, two thousand in orientation and training time, three thousand in lost productivity and empty truck days while the seat is vacant, and two thousand in sign-on or referral bonuses. A twelve-truck fleet losing eight drivers per year burns eighty thousand dollars annually in churn costs, which at typical small-fleet profit margins of twelve percent on two million dollars in revenue means one third of annual profit disappears into the revolving door. The true cost is often higher because it does not include the dispatch chaos, customer service failures, and remaining-driver burnout that follow every departure.
+
+What is a good driver turnover rate for a small fleet?
+
+Large truckload carriers routinely run ninety to over one hundred percent annualized turnover. Small fleets typically run thirty to sixty percent. A target of under forty percent annualized is achievable for a well-managed small fleet with competitive pay, predictable home time, well-maintained equipment, and a dispatcher who treats drivers like people rather than truck numbers. Track your rate monthly: drivers who left in the last twelve months divided by average driver count, multiplied by one hundred. If you are above sixty percent, you have a systemic retention problem that a spreadsheet alone will not fix, but your tracker will show you exactly where the problem is so you can address it.
+
+Why do truck drivers leave small fleets?
+
+The top reasons, in order of frequency: pay that does not match what was promised or what competitors offer, unpredictable home time that makes family life impossible, poorly maintained equipment that breaks down and costs the driver unpaid downtime, a dispatcher relationship that feels adversarial rather than collaborative, and lack of respect: being treated as a truck number rather than a person. The common thread is that all five are preventable. The driver retention tracker forces you to record a reason category for every departure, so after six to twelve months you have data rather than anecdotes. You may believe pay is the problem, but your data shows four of the last six departures flagged equipment quality as the primary reason.
+
+How do I conduct a stay interview with truck drivers?
+
+Schedule a fifteen-minute conversation with every driver every ninety days. Frame it as a check-in, not an interrogation. Ask three questions: What would make you leave this company? What keeps you here? What is one thing we could fix by tomorrow that would make your job better? Record the answers in the retention tracker. Do not argue, defend, or promise changes on the spot. Just listen and write it down. After three rounds of stay interviews, patterns emerge: three drivers mention the same uncomfortable truck seats, or four flag the same dispatcher communication issue. That is your retention backlog. The stay interview catches issues six months before they become a resignation letter. It also signals to drivers that their opinion matters, which is itself a retention tool.
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Driver Settlement Pay Reconciliation — Free Spreadsheet System
+
+Cut Empty Miles: Free Deadhead Tracker for Fleets
+
+Driver Certification Compliance: Free Tracker for Small Fleets
+
+Fleet Maintenance Tracking: Free Spreadsheet System
+
+Stop losing drivers to problems you could have fixed six months ago
+
+Jobs Done Labs builds the automation that catches retention issues before they become resignations. If your fleet is burning eighty thousand dollars a year on driver churn and you want a system that shows you exactly why and exactly what to fix, let us build it.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/trucking-driver-retention-turnover-tracker-free/
 
 ---
 
@@ -28394,6 +28723,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Lost 3 Drivers? Free Trucking Retention Tracker with Stay Interviews
 
 You Finished the Load 47 Days Ago and the Broker Still Hasn't Paid — Here's the Free Carrier AR Tracker
 
