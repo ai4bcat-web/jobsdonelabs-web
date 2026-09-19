@@ -36,6 +36,7 @@
 - [Pick/Pack Errors Cost You $54,000 Last Year — The $0](https://www.jobsdonelabs.ai/blog/warehouse-pick-pack-error-reduction-system/): Your pickers made 270 errors last month and it cost you $5,400. Here's the free phone-camera and scale system that cuts errors in half by Friday — no WMS...
 
 ## Manufacturing
+- [Amazon FBA Stranded Inventory? Free Tracker to Fix It](https://www.jobsdonelabs.ai/blog/amazon-fba-stranded-inventory-resolver-spreadsheet-free/): Amazon charges storage fees on FBA inventory you cannot sell. Free stranded inventory tracker: find every unsellable ASIN, fix listings, stop the bleed.
 - [ISO Missed Calibration Dates? Free Tracking System](https://www.jobsdonelabs.ai/blog/calibration-tracking-spreadsheet-iso-9001-manufacturing-free-template/): ISO flagged your missed calibration and wrote a finding. Free tracking spreadsheet — due-date alerts, OOT log, audit-ready reports. $0, one hour.
 - [You Don't Actually Know If Your Last Job Made Money](https://www.jobsdonelabs.ai/blog/contractor-job-costing-system-field-to-office/): QuickBooks job costing fails most small contractors because it's built for the office, not the truck. Here are the 4 numbers that tell you if a job was...
 - [Free Dead Stock Tracker — Find Aging Inventory Fast](https://www.jobsdonelabs.ai/blog/ecommerce-dead-stock-aging-inventory-identification-spreadsheet-free/): Got dead stock? Inventory that sits unsold costs you storage fees and tied-up capital every month. Free tracker spots aging SKUs before they bleed you dry.

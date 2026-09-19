@@ -399,6 +399,249 @@ URL: https://www.jobsdonelabs.ai/blog/ai-automation-roi-small-business-worked-ex
 
 ---
 
+# Amazon FBA Stranded Inventory? Free Tracker to Fix It
+
+Retail & E-Commerce
+
+Amazon FBA Stranded Inventory? Free Tracker to Fix It
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 19, 2026
+
+Key takeaways
+
+Amazon charges monthly storage fees on stranded FBA inventory — inventory that exists in the warehouse but has no active listing and cannot be sold. Most sellers are not notified when ASINs become stranded. A typical hundred-thousand-dollar FBA seller has 2 to 5 percent of inventory stranded at any time. The free stranded inventory tracker in this guide downloads the report from Seller Central, tracks resolution status per ASIN, calculates the storage fees you are paying on unsellable products, and alerts when new items become stranded — all in a single spreadsheet.
+
+The eight thousand four hundred dollar stranded inventory problem
+
+You sent inventory to Amazon FBA. The listing was active. It was selling. Then one day — without a notification, without an alert, without anything — the listing was suppressed. A category change went through. A required field was added. The ASIN was merged. And your inventory is still sitting in the fulfillment center, accruing storage fees every single day, completely unsellable.
+
+This is not hypothetical. A seller doing one hundred thousand dollars in annual FBA revenue — a modest, real number — can expect 2 to 5 percent of their inventory to become stranded in any given year. At 3 percent, that is three thousand dollars in inventory sitting in warehouses that cannot be sold. And Amazon charges storage fees on it the entire time: roughly 0.83 dollars per cubic foot per month, surging to 2.40 dollars per cubic foot in Q4. After 365 days, long-term storage fees kick in at 6.90 dollars per cubic foot or 0.15 dollars per unit — whichever is greater.
+
+A stranded product at 12 months does not just tie up your capital — it costs you 3 to 5 times its monthly storage rate in cumulative fees. And you were never told it was stranded.
+
+The silent bleed
+
+Amazon sends zero notifications for most stranding events. The Fix Stranded Inventory page in Seller Central is buried three clicks deep. Most sellers discover stranded inventory months after it happens — when they reconcile storage fees or during year-end accounting.
+
+The free FBA stranded inventory tracker spreadsheet
+
+This is a free Google Sheets template you copy and use today. No paid tools. No SaaS subscriptions. Paste the Stranded Inventory Report from Seller Central and the tracker classifies every ASIN by stranding reason, tracks resolution progress, and calculates what you are paying in storage fees while you wait.
+
+The tracker covers per ASIN:
+
+ASIN and SKU
+
+— which exact product is stranded
+
+Product title
+
+— what the listing was called
+
+Date stranded
+
+— how long the inventory has been unsellable
+
+Stranding reason
+
+— pricing error, listing suppression, ASIN merge, category change, or listing closed
+
+Quantity stranded
+
+— how many units are affected
+
+Unit cost
+
+— what you paid for the inventory
+
+Total inventory value not sellable
+
+— quantity × unit cost
+
+Days stranded
+
+— auto-calculated from the date stranded
+
+Monthly storage cost
+
+— estimated from standard-size or oversize cubic footage
+
+Long-term storage threshold
+
+— how many days until the 365-day mark triggers LTSF
+
+Resolution action required
+
+— relist, reprice, removal order, or dispose
+
+Resolution status
+
+— not started, in progress, resolved, or escalated
+
+The
+
+dashboard
+
+sheet gives you a one-screen view:
+
+Total stranded inventory value
+
+— sum of all unsellable units at cost
+
+Monthly storage cost on stranded items
+
+— what you are paying while nothing sells
+
+Days-to-resolution average by reason
+
+— which stranding types you fix fastest
+
+Stranded inventory trend
+
+— are strandings increasing or decreasing month to month
+
+Long-term storage deadline calendar
+
+— which ASINs need action before they hit the 365-day mark
+
+The stranded inventory resolution workflow
+
+Staring at a list of 12 stranded ASINs does not fix them. The resolution workflow tells you exactly what to do for each stranding reason — no guessing, no forum searching, no support tickets to Seller Central.
+
+Step 1: Download the stranded inventory report
+
+Go to Seller Central → Inventory → Inventory Reports → Stranded Inventory Report. Download as CSV. This report contains every ASIN currently stranded, the stranding reason, quantity, days stranded, and condition.
+
+Step 2: Paste into the spreadsheet — auto-classify
+
+Paste the CSV into the 'Raw Data' tab. The tracker auto-classifies each ASIN by stranding reason and populates the resolution dashboard. Green = easy fix (pricing, relist). Yellow = medium effort (category approval, ASIN merge). Red = requires removal order or dispose.
+
+Step 3: Fix each ASIN by reason
+
+Pricing errors:
+
+Amazon thinks your price is too high or low versus competitors. Check the competitive price in Seller Central, update your price or create a sale. Usually resolves in 10 minutes.
+
+Listing suppressions:
+
+A required field was added or a policy changed. Go to the Listing Quality Dashboard, identify the suppressed field, fill it in or update it. Most suppressions take under 2 minutes to fix — you just did not know they existed.
+
+Category changes:
+
+Amazon recategorized the product and you lost listing approval. Request category approval in Seller Central — the process takes 24-48 hours but the inventory is unsellable during the wait.
+
+ASIN merges:
+
+Amazon merged your ASIN with another listing. Reconcile your inventory with the correct merged ASIN. If the merge was an error, open a case with Seller Support to split the listing.
+
+Listing closed:
+
+Relist the ASIN from the Manage Inventory page. If it will not relist, create a removal order — do not let inventory sit stranded accruing LTSF.
+
+Step 4: Track resolution time
+
+Enter the date you fixed the listing. The tracker calculates days from stranded to resolved. Target: resolve every stranding within 7 days. The longer inventory sits stranded, the more storage fees you pay and the closer it gets to LTSF territory.
+
+The monthly stranded inventory audit — 5 minutes, once a month
+
+You do not need to check every day. The monthly audit catches every new stranding and prevents the backlog from building up:
+
+Set a calendar reminder
+
+for the first Monday of every month.
+
+Download the Stranded Inventory Report
+
+from Seller Central.
+
+Paste it into the tracker.
+
+New strandings appear highlighted — they were not in last month's export.
+
+Fix every new ASIN.
+
+Use the resolution workflow above. Most take under 10 minutes.
+
+Check existing open strandings.
+
+Are any approaching 365 days? Escalate those to removal orders immediately.
+
+Total time: 5 minutes a month once the system is in place. Annual savings: roughly six hundred to twelve hundred dollars in avoided storage fees plus three thousand to eight thousand dollars in recovered inventory value that would have sat stranded otherwise.
+
+What you recover
+
+The storage fees are the visible cost. The bigger number is the inventory you recover: every ASIN you relist goes back to selling. A stranded ASIN doing one thousand dollars a month in revenue that gets found and relisted in month 2 rather than month 12 recovers ten months of lost sales. The tracker pays for itself on the first stranding.
+
+The FBA inventory health command center
+
+The stranded inventory tracker by itself stops the bleed from unsellable inventory. Combined with two companion posts already published on Jobs Done Labs, you get complete FBA inventory and financial visibility — three tabs, zero monthly cost:
+
+Fee reconciliation (monthly):
+
+The
+
+Amazon seller fee reconciliation spreadsheet
+
+tracks every fee per SKU — referral, FBA, storage,, ads, and returns — so you know which products are actually profitable.
+
+Dead stock / aging inventory (monthly):
+
+The
+
+dead stock tracker
+
+identifies slow-moving sellable inventory before it becomes a problem — catch aging SKUs at 90 days, not 365.
+
+Stranded inventory (weekly):
+
+This tracker — find every unsellable ASIN and fix it before the storage fees and long-term storage surcharges destroy your margin.
+
+Together these three spreadsheets give you complete FBA inventory health: what is selling profitably (fee reconciliation), what is selling but moving too slowly (dead stock), and what cannot be sold at all (stranded inventory). Every dollar sitting in Amazon warehouses is accounted for.
+
+Frequently asked questions
+
+What is stranded inventory on Amazon FBA?
+
+Stranded inventory is FBA stock that exists in Amazon's warehouse but has no active listing. It cannot be sold because the listing is suppressed (missing required fields, policy violation), a pricing error blocks it, the ASIN was merged with another listing, or a category change removed the listing approval. Amazon charges monthly storage fees on stranded inventory the same as sellable inventory — and you may not be notified when inventory becomes stranded.
+
+How do I find stranded inventory in Amazon Seller Central?
+
+Go to Seller Central → Inventory → Manage Inventory → Fix Stranded Inventory. This page shows every stranded ASIN with the stranding reason. You can also download the Stranded Inventory Report from Inventory Reports for a CSV that includes quantity, days stranded, and condition. This is the report you paste into the free stranded inventory tracker spreadsheet to begin resolution.
+
+How much does stranded inventory cost in Amazon storage fees?
+
+Amazon charges the same monthly storage fee on stranded inventory as sellable inventory: approximately 0.83 dollars per cubic foot per month for standard-size items (January through September), rising to 2.40 dollars per cubic foot in October through December. After 365 days in the fulfillment center, the inventory incurs long-term storage fees of 6.90 dollars per cubic foot or 0.15 dollars per unit, whichever is greater. A stranded product sitting for 12 months can cost 3 to 5 times its monthly storage rate in cumulative fees.
+
+How do I fix stranded inventory on Amazon?
+
+Each stranded ASIN requires a resolution based on the reason. Pricing errors: update the price or create a sale. Listing suppressions: identify the suppressed field from the listing quality dashboard and fix it — usually takes under 2 minutes. Category changes: request category approval. ASIN merges: reconcile with the correct merged ASIN. Listing closed: relist the ASIN or create a removal order. The workflow section above has the full step-by-step for each reason.
+
+How do I prevent inventory from becoming stranded on Amazon?
+
+Run a monthly stranded inventory audit: download the stranded inventory report from Seller Central, paste it into the free tracker, and resolve every ASIN within 7 days. Set up listing alerts in Seller Central to notify you of listing suppressions and pricing errors. Review category requirements quarterly — Amazon updates them without warning. The monthly audit takes 5 minutes once the system is in place.
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Your Inventory Has Not Sold in 16 Months and You Are Paying Storage Fees on Products You Forgot You Had — the Free Dead Stock Tracker
+
+Amazon Took Fifteen Thousand Dollars in Fees Last Quarter and You Cannot Explain Where It Went — the Free Reconciliation System
+
+Your Number Two Bestseller Was Out of Stock for 11 Days and Nobody Noticed — the Stockout Prevention Tracker That Fixes It
+
+Stranded inventory bleeding your FBA margin?
+
+We build custom inventory health dashboards that pull stranded inventory, dead stock, and fee data from Seller Central — auto-classifying every ASIN by status, calculating storage costs, and alerting before long-term storage fees trigger. Free 30-minute audit. We will look at your Seller Central together and find every dollar sitting in warehouses that cannot be sold.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/amazon-fba-stranded-inventory-resolver-spreadsheet-free/
+
+---
+
 # Where'd Your $15K Go? Free Amazon Fee Reconciliation
 
 Retail & E-Commerce Operations
@@ -720,6 +963,8 @@ The core stack is free: Google Sheets for the tracker, Amazon's Date Range Repor
 Related reading
 
 If you found this useful, you'll want these too:
+
+Amazon FBA Stranded Inventory? Free Tracker — Find & Fix Unsellable ASINs Before Storage Fees Drain You
 
 340 Units Unsold for 16 Months — Free Dead Stock Tracker That Spots Aging Inventory Before It Bleeds You Dry
 
@@ -7198,6 +7443,8 @@ Prevention has three layers. Layer 1 — purchasing discipline: never reorder a 
 Related reading
 
 If you found this useful, you'll want these too:
+
+Amazon FBA Stranded Inventory? Free Tracker to Fix It — Find Every Unsellable ASIN Before Storage Fees Bleed You Dry
 
 Your Number Two Bestseller Was Out of Stock for 11 Days and Nobody Noticed — the Stockout Prevention Tracker That Fixes It
 
