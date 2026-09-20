@@ -2915,6 +2915,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+You Spent $800,000 on Subcontractors Last Year and Cannot Tell Me Which Ones Were Late — The Free Subcontractor Scorecard
+
 Your Spiral Notebook Cannot Fight a Lawsuit — The Free Construction Daily Report System
 
 You Have 18 Subs Emailing You Certificates and You Have No Idea Who Is Expired
@@ -5110,6 +5112,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+You Spent $800,000 on Subcontractors Last Year and Cannot Tell Me Which Ones Were Late — The Free Subcontractor Scorecard
 
 You Have 40 Open Permits Across 4 Job Sites and One Just Expired — The Free Permit Tracker That Keeps Every Project on Schedule
 
@@ -24576,6 +24580,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Spent $800,000 on Subcontractors Last Year and Cannot Tell Me Which Ones Were Late — The Free Subcontractor Scorecard
+
 Your Spiral Notebook Can't Fight a Lawsuit — The Free Construction Daily Report System
 
 You Have 18 Subs Emailing You Certificates and You Have No Idea Who's Expired
@@ -24921,6 +24927,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Spent $800,000 on Subcontractors Last Year and Cannot Tell Me Which Ones Were Late — The Free Subcontractor Scorecard
+
 You Have 40 Open Permits Across 4 Job Sites and One Just Expired — The Free Permit Tracker That Keeps Every Project on Schedule
 
 Lumber Prices Blew Your Remodel Budget — The 6-Tab Cost Tracker
@@ -24939,6 +24947,313 @@ You Spent 15 Hours on Estimates This Week and Landed 2 Jobs — Here's the Real 
 
 
 URL: https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/
+
+---
+
+# Free Subcontractor Performance Scorecard for GCs
+
+Construction & Trades
+
+You Spent $800,000 on Subcontractors Last Year and Cannot Tell Me Which Ones Were Late, Which Ones Did Bad Work, and Which Ones You Would Hire Again. Here Is the Free Subcontractor Scorecard That Shows You Who Earns the Next Call.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 20, 2026
+
+Key takeaways
+
+A general contractor spending eight hundred thousand dollars a year on subcontractors without a performance scorecard is choosing rehires based on memory and the last phone call. The free spreadsheet in this guide gives you per-project per-sub evaluations, an aggregate performance dashboard, a bid-leveling calculator that reveals the true cost of the cheap sub, and trend detection that catches a declining sub before they fail on a two hundred thousand dollar scope. Total setup time: under one hour. Cost: zero dollars.
+
+The Eighty Thousand Dollar Subcontractor Blind Spot
+
+A general contractor at two million dollars in annual revenue typically spends approximately eight hundred thousand dollars per year on subcontractors across electrical, plumbing, drywall, roofing, concrete, and finishing trades. If ten percent of that spend goes to underperforming subcontractors through schedule delays, rework, and punch-list churn, that is eighty thousand dollars a year in preventable cost.
+
+And yet most small to mid-size general contractors make the rehire decision based on memory and the last conversation. The electrical sub who was two weeks late on the school renovation nine months ago? You forgot. The drywall sub whose punch-list ran to forty seven items on the medical office build? You hired them again because they picked up the phone on the first ring and their bid was four thousand dollars lower.
+
+Without a scorecard, every rehire decision is a bet. With a scorecard, it is math.
+
+The real pain:
+
+"My company wants all the project managers to fill out a paper review form for our subcontractors every quarter so they can keep track of performance for future work." That is from an active thread on r/ConstructionManagers. Nine detailed answers from GCs who are all trying to solve the same problem with paper forms and quarterly meetings. One commenter summed it up: "We use the same three electrical subs but one is always two days late, another has three times the punch-list items, and I do not actually know if the third one is any good because I have never measured."
+
+The Free Subcontractor Performance Scorecard Spreadsheet
+
+The scorecard spreadsheet has four tabs, each built for a specific phase of the subcontractor management lifecycle. You do not need procurement software, a construction management platform, or a dedicated vendor management person. You need a Google Sheet and thirty minutes per completed project to fill it in.
+
+Tab 1 — Per-Project Per-Sub Evaluation
+
+For every subcontractor on every project, capture ten data points at project close:
+
+Trade
+
+— electrical, plumbing, drywall, roofing, concrete, framing, HVAC, flooring, painting, finishing
+
+Contract amount
+
+— the awarded bid value
+
+Final amount
+
+— actual total including change orders
+
+Budget variance percentage
+
+— how far the final amount deviated from the contract
+
+Schedule variance in days
+
+— actual completion date minus scheduled completion date
+
+Inspection pass rate
+
+— number of inspections passed on first attempt divided by total inspections
+
+Punch-list count per ten thousand dollars of contract
+
+— a normalized metric so you can compare a fifty thousand dollar electrical sub to a twelve thousand dollar painting sub
+
+Communication rating, one to five
+
+— did they return calls, flag issues early, and coordinate with other trades
+
+Safety incidents
+
+— any recordable incident on this project
+
+Would hire again, yes or no
+
+— the gut-check that matters most
+
+Each sub-project combination gets one row. After five projects with the same electrical sub across eighteen months, you have five rows of quantitative performance data where you previously had a vague feeling.
+
+Tab 2 — Aggregate Performance Dashboard
+
+The dashboard rolls up every row from Tab 1 into a single view ranked by trade. For each subcontractor you see:
+
+Composite score
+
+— a weighted average of the five core metrics. Budget variance and schedule variance carry the highest weight because they hit the bottom line directly. Communication and inspection pass rate carry moderate weight because they predict future performance. Punch-list count carries lower weight because it varies significantly by trade and project complexity.
+
+Project count
+
+— how many projects this sub has completed for you, which matters because a four-point-eight score across seven projects is more reliable than a four-point-eight score across one project
+
+Twelve-month trend line
+
+— is the score improving, stable, or declining
+
+Total estimated delay and rework cost
+
+— the spreadsheet calculates this from schedule variance multiplied by your daily general conditions cost plus punch-list items multiplied by your average punch-list resolution cost
+
+Rank within trade
+
+— first, second, third among all electrical subs, all plumbing subs, and so on
+
+Tab 3 — Bid-Leveling Calculator
+
+The bid-leveling tab takes low-bid-is-best and replaces it with true-cost-is-best. Here is how it works:
+
+You are awarding a forty thousand dollar electrical package for a new office build. Three subs bid:
+
+Bidder
+
+Bid Amount
+
+Historical Score
+
+Avg Delay Cost/Project
+
+Avg Rework Cost/Project
+
+True Cost
+
+Sub A
+
+42,000 dollars
+
+4.6 / 5
+
+0 dollars
+
+0 dollars
+
+42,000 dollars
+
+Sub B
+
+38,000 dollars
+
+3.1 / 5
+
+2,100 dollars
+
+1,800 dollars
+
+41,900 dollars
+
+Sub C
+
+45,000 dollars
+
+4.8 / 5
+
+0 dollars
+
+0 dollars
+
+45,000 dollars
+
+Sub A and Sub B are essentially tied on true cost. But Sub A delivers zero headaches: no schedule slip, no rework, no missed inspections. Sub B saves four thousand dollars on the bid and costs three thousand nine hundred dollars in delay and rework, plus the soft cost of your superintendent spending twelve hours managing punch-list resolution. The spreadsheet makes the argument for you: Sub A at forty two thousand dollars is the best value.
+
+The bid-leveling calculator is the single feature that pays for the entire spreadsheet on the first project you use it for. When an owner or project stakeholder pushes back on why you did not take the lowest bid, you have a one-page analysis showing exactly why the low bid was not the low cost.
+
+Tab 4 — Trend Detection Dashboard
+
+A subcontractor who was four-point-eight for three years and drops to three-point-nine over the last six months is not having a bad quarter. They are in decline, and the decline will accelerate. The trend detection dashboard flags this pattern automatically:
+
+Declining score flag
+
+— any sub whose twelve-month trend line shows a drop of more than one full point triggers a yellow alert. More than two full points triggers a red alert.
+
+Rising punch-list flag
+
+— any sub whose punch-list count per ten thousand dollars has doubled over the last three projects triggers a yellow alert. This is the earliest warning sign of a declining sub, often appearing six to twelve months before schedule or budget problems surface.
+
+Cold sub flag
+
+— any sub you have not hired in twelve months who previously had strong scores. Maybe they are still good and you forgot about them. Maybe their best foreman left and the replacement is not as sharp. The flag prompts a check-in call before you write them off.
+
+The trend dashboard catches the decline at project three when a conversation can still fix it. Without it, you discover the problem at project six when the sub fails on a large scope and you are explaining to the owner why the project is three weeks behind schedule.
+
+The Per-Trade Leaderboard
+
+Filter the aggregate dashboard by trade and you get a leaderboard that makes rehire decisions objective instead of political. For electrical subs:
+
+Rank
+
+Subcontractor
+
+Score
+
+Projects
+
+Avg Punch List / 10K
+
+Safety Incidents
+
+Trend
+
+Allied Electric
+
+4.6
+
+1.2
+
+Stable
+
+Capital Power
+
+4.1
+
+2.8
+
+Declining
+
+Metro Wiring
+
+3.1
+
+4.7
+
+Declining
+
+Metro Wiring has been getting worse across four projects, has two safety incidents, and averages nearly five punch-list items per ten thousand dollars of contract. They are not getting the next call. Capital Power is on the edge: three projects, declining trend, higher punch-list count. One conversation now might save the relationship. Allied Electric is your go-to electrical sub and they should know it: a quarterly lunch, a handwritten note when their projects close, and first look at your upcoming pipeline.
+
+The First Thirty Minutes — What to Do Right Now
+
+You do not need to go back and score every sub on every project from the last five years. Start with the three projects that are currently active or just completed:
+
+Setup checklist
+
+Copy the spreadsheet template
+
+into your Google Drive. Rename it "Sub Scorecard — [Your Company Name]."
+
+List your active subs.
+
+On Tab 1, add one row for every subcontractor currently on an active project. You should have roughly ten to twenty rows for a typical mid-size GC.
+
+Score the last completed project for each.
+
+Fill in the ten data points from memory or your project closeout notes. Partial data is better than no data. If you do not know the exact punch-list count, estimate it and mark the row with a "needs verification" note.
+
+Check the dashboard.
+
+Tab 2 will auto-populate. You will see your first leaderboard immediately. One sub will already stand out as your best. One will already stand out as your worst. You probably already knew which ones they were, but now you have numbers backing it up.
+
+Schedule the first quarterly review.
+
+Put a thirty-minute recurring meeting on your calendar for the first Friday after each quarter closes. Open Tab 2, review the leaderboard, identify any declining subs, and decide who gets the next call and who does not.
+
+Total time: less than one hour. After that, each new project adds roughly fifteen minutes of data entry at closeout. For a GC running six to ten projects per year, that is roughly two to three hours of annual maintenance in exchange for eighty thousand dollars in underperformance cost avoidance.
+
+The sister post for manufacturing:
+
+This spreadsheet is the construction-industry version of the same concept. If you run a manufacturing operation, the
+
+supplier quality scorecard
+
+uses the identical weighted-scoring approach for raw material and component vendors. Same principle: stop guessing which vendor is costing you money and start measuring.
+
+Frequently asked questions
+
+How do I evaluate subcontractor performance objectively?
+
+Use the five weighted metrics from Tab 1: budget variance, schedule variance, inspection pass rate, punch-list count per ten thousand dollars of contract, and communication rating. Score every sub on every project. After five projects with the same sub across eighteen months, you have twenty five data points where you previously had a gut feeling. The aggregate dashboard removes recency bias: the sub who was great last month but terrible for the previous six months gets an honest average, not a pass based on their most recent project.
+
+What metrics should a subcontractor scorecard track?
+
+Track ten metrics per sub per project: trade, contract amount, final amount, budget variance percentage, schedule variance in days, inspection pass rate, punch-list count per ten thousand dollars, communication rating on a one-to-five scale, safety incidents, and a would-hire-again flag. Seven of these ten are quantitative. Three (communication, safety, would-hire-again) capture the things that spreadsheets often miss. Together they give you a complete picture that neither numbers alone nor gut feel alone can provide.
+
+How do I compare subcontractor bids beyond just the price?
+
+The bid-leveling calculator in Tab 3 adds each bidder's historical delay cost and rework cost to their bid amount to produce a true cost per bidder. A low bid of thirty eight thousand dollars from a sub with a three-point-one score and a history of two thousand one hundred dollars in average delay cost plus one thousand eight hundred dollars in average rework cost has a true cost of approximately forty one thousand nine hundred dollars. Compare that to a forty two thousand dollar bid from a four-point-six sub with no history of delays or rework. The spreadsheet makes the argument quantitatively: the higher bid is the better value.
+
+How often should I update subcontractor performance scores?
+
+Three checkpoints per project: fifty percent completion for a mid-project pulse check, within one week of substantial completion for the final evaluation, and at the thirty-day warranty walkthrough for any post-completion issues. The mid-project check is the highest-leverage update: a sub who was excellent for three years but whose last six months show slipping scores needs a conversation at project three, not after project six fails.
+
+What is the difference between a subcontractor scorecard and subcontractor paperwork management?
+
+A subcontractor paperwork management system tracks documents: COIs, W-9s, contracts, and expiration dates. Our
+
+free paperwork management system
+
+handles the compliance side. A subcontractor scorecard tracks performance: quality, schedule, budget, and communication. The paperwork system tells you whether a sub is legally cleared to work. The scorecard tells you whether you want them to work. A GC running multiple projects needs both.
+
+Want This Built Into Your Operations?
+
+This spreadsheet is the starting point. If you want the scorecard automated so project managers fill it out on their phone at project close and you get a real-time dashboard with trend alerts, we build that. Fixed scope, fixed price, small-business budget.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You Have 18 Subs Emailing You Certificates and You Have No Idea Who's Expired
+
+Your Sub's Insurance Expired 3 Weeks Ago and You Just Found Out at 10pm — The Free COI Compliance System
+
+Three of Your 47 Suppliers Cause 80% of Your Line Stoppages — the Free Supplier Quality Scorecard
+
+Your Field Crews Know Exactly How Much They Lost — 3 Weeks After the Job Closed
+
+You Have 40 Open Permits Across 4 Job Sites and One Just Expired — the Free Permit Tracker
+
+
+URL: https://www.jobsdonelabs.ai/blog/subcontractor-performance-scorecard-tracking-spreadsheet-free/
 
 ---
 
@@ -25963,6 +26278,8 @@ Create four tabs (Directory, Quality Log, Scorecard, CAR Log), enter the last 90
 Related reading
 
 If you found this useful, you'll want these too:
+
+You Spent $800,000 on Subcontractors Last Year — The Free Subcontractor Scorecard (Construction)
 
 Suppliers Are Late Again and It's Costing $1,000/Week — How to Track Supplier Delivery Without Software
 

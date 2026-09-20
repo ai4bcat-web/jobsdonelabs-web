@@ -106,6 +106,7 @@
 - [Stop Missing Customer Calls — Cost + 7 Fixes](https://www.jobsdonelabs.ai/blog/stop-missing-customer-calls-small-business-guide/): Missed calls cost service businesses $200+ each. Free revenue calculator, text-back auto-reply setup, and 7 fixes to capture every lead — starting at $0.
 - [Track Subcontractor Insurance Without Software](https://www.jobsdonelabs.ai/blog/subcontractor-coi-insurance-compliance-tracking-system/): Missed COI expiration cost a GC $140K. Free 4-tab spreadsheet to track sub insurance, auto-calc reminders, and stop coverage gaps — no SaaS needed.
 - [You're a GC, Not a Filing Clerk — How to Tame](https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/): 'We're meant to be building things, but I feel like a bloody filing clerk.' If you're a small GC buried in COIs, W-9s, lien waivers, and contracts across...
+- [Free Subcontractor Performance Scorecard for GCs](https://www.jobsdonelabs.ai/blog/subcontractor-performance-scorecard-tracking-spreadsheet-free/): A GC with zero subcontractor performance tracking is operating blind. Free scorecard spreadsheet to rank every sub by budget variance, schedule, and quality.
 
 ## Construction
 - [Your Foreman Is Filling Out Paper Timesheets in His](https://www.jobsdonelabs.ai/blog/construction-crew-time-tracking-paper-timesheet-system/): Your crews are losing 2-3 hours of billable time every week because foremen fill out timesheets from memory. Here's the paper timesheet system that captures...
