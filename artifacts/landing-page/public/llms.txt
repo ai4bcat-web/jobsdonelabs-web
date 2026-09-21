@@ -59,7 +59,7 @@
 
 ## Healthcare
 - [16 Hours a Week on Prior Authorizations and You Still](https://www.jobsdonelabs.ai/blog/manual-prior-authorization-workflow-small-practice/): Small medical practices lose $35K–$45K per year in staff time on prior authorizations — and every software 'solution' costs more than the problem. Here's...
-- [Free Medical Claims Appeal Tracker Spreadsheet](https://www.jobsdonelabs.ai/blog/medical-claims-denial-appeal-tracking-spreadsheet-free/): 5-15% of claims are denied and most expire before appeal. Free tracker with deadline calendar, reason-code guide, and template letters.
+- [Free Denial & RCM Dashboard for Medical Practices](https://www.jobsdonelabs.ai/blog/medical-claims-denial-appeal-tracking-spreadsheet-free/): Free RCM dashboard for small practices: track denials, AR aging, patient balances, and payer performance in one spreadsheet.
 - [Stop Front Desk Phone Tag: Free Medical Call Tracker](https://www.jobsdonelabs.ai/blog/medical-practice-front-desk-call-overload-reduction-system/): Front desk spending 3+ hours a day on phone tag while patients stack up? Free call tracker shows peak hours, cuts calls 40 percent. No new phone system needed.
 - [Your New Provider Can't Bill for 5 Months and You're](https://www.jobsdonelabs.ai/blog/medical-practice-provider-credentialing-tracking-system/): Growing medical practices lose $30K+ per new provider in unbillable time while credentialing applications sit in payer queues for 90-150 days. Here's the...
 - [Medical Records Request Tracking Spreadsheet](https://www.jobsdonelabs.ai/blog/medical-records-request-tracking-system/): Your office manager spends 8-10 hrs/week on medical records requests with no system. Free tracking template + HIPAA-compliant workflow for small practices.
