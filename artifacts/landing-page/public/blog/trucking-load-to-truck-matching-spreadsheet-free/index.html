@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Load-to-Truck Matching Spreadsheet | Jobs Done Labs</title>
+  <meta name="description" content="Free load-to-truck matching spreadsheet for small fleets: score truck-load pairs on RPM, deadhead, and HOS fit. Stop the whiteboard guessing." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-load-to-truck-matching-spreadsheet-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-load-to-truck-matching-spreadsheet-free/" />
+  <meta property="og:title" content="Free Load-to-Truck Matching Spreadsheet | Jobs Done Labs" />
+  <meta property="og:description" content="Free load-to-truck matching spreadsheet for small fleets: score truck-load pairs on RPM, deadhead, and HOS fit. Stop the whiteboard guessing." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Load-to-Truck Matching Spreadsheet | Jobs Done Labs" />
+  <meta name="twitter:description" content="Free load-to-truck matching spreadsheet for small fleets: score truck-load pairs on RPM, deadhead, and HOS fit. Stop the whiteboard guessing." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.jobsdonelabs.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.jobsdonelabs.ai/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Load-to-Truck Matching System",
+        "item": "https://www.jobsdonelabs.ai/blog/trucking-load-to-truck-matching-spreadsheet-free/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Free Load-to-Truck Matching Spreadsheet for Small Fleets",
+    "description": "Free load-to-truck matching spreadsheet for small fleets: score truck-load pairs on RPM, deadhead, and HOS fit. Stop the whiteboard guessing.",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.linkedin.com/in/rynebandolik/"
+    },
+    "datePublished": "2026-09-22",
+    "dateModified": "2026-09-22",
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai"
+    }
+  }
+  </script>
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I match loads to trucks without a TMS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can match loads to trucks without a TMS using a free Google Sheets spreadsheet. Set up columns for each available load (pickup city, delivery city, rate, rate per mile, deadhead miles to pickup, equipment required, pickup window) and each truck (current location, available time, HOS remaining, equipment type). Score every truck-load pair on revenue per mile, deadhead-to-pickup distance, HOS fit, and equipment match. The best combination maximizes revenue per mile across the fleet — not just the highest-dollar load. This replaces the whiteboard-and-memory approach most dispatchers use and costs nothing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is revenue per mile and why does it matter more than total revenue?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Revenue per mile (RPM) is the load rate divided by total miles driven, including deadhead miles to pickup. A $2,800 load from Chicago to Denver at 1,000 miles is $2.80 per mile. A $1,900 load from Chicago to St. Louis at 300 miles is $6.33 per mile. Total revenue says pick the Denver load. RPM says pick St. Louis — you can run three St. Louis turns in the time it takes to do one Denver round trip. RPM-first dispatch typically increases fleet revenue by 8-15 percent without adding a single truck because it surfaces the hidden cost of long-haul repositioning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I account for hours of service when dispatching loads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Track each driver's remaining drive time and on-duty time in the load-matching spreadsheet. Before assigning a load, check: drive time to pickup plus loaded drive time must be less than or equal to remaining drive hours, with at least 30 minutes of on-duty time reserved for loading and unloading. If Truck 7 has 2 hours 45 minutes of drive time remaining and the pickup is 2 hours 15 minutes away, they will arrive with only 30 minutes to load — not enough. Dispatch the second-best match instead. A load assigned to a driver who runs out of hours 45 minutes from delivery costs more in service failure than any RPM advantage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between deadhead and suboptimal load matching?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Deadhead is the empty miles a truck drives between loads — tracked by a deadhead reduction spreadsheet. Suboptimal load matching is the loaded miles that could have been more profitable: a truck runs a $2.10 per mile load into Dallas while another truck deadheads empty out of Dallas at the same time because the dispatcher never saw the connection. Deadhead tracking catches the empty miles after the bad decision. Load matching prevents the bad decision before the truck moves. Together they form a fleet efficiency system: load matching maximizes revenue on loaded miles, deadhead tracking minimizes the empty miles between them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I optimize load assignments for a small truck fleet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Optimize load assignments for a small fleet by scoring every available load against every available truck on four criteria: revenue per mile (higher is better), deadhead miles to pickup (lower is better), HOS fit (remaining drive time must cover pickup distance plus loaded distance plus 30 minutes), and equipment match (reefer, flatbed, hazmat). The highest-scoring truck-load pair gets assigned first, then the next highest among remaining trucks and loads. Run this optimization every time a new batch of loads arrives — typically 2-4 times per day for a 12-truck fleet. The spreadsheet automates the scoring; the dispatcher makes the final call."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://www.jobsdonelabs.ai/og-image.jpg" alt="Load-to-truck matching dispatch spreadsheet showing revenue-per-mile optimization and HOS window checker for small truck fleets" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Logistics &amp; Trucking</span>
+      <h1>You Matched a Load Into Dallas at $2.10 a Mile While Another Truck Deadheaded Empty Out of Dallas at the Exact Same Time — and Your Dispatcher Never Saw It. Here Is the Free Load-Matching System That Finds $56,000 a Year Hiding on Your Whiteboard.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · September 22, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A dispatcher managing 12 trucks times 60-plus loads per week is making 900-plus truck-load match decisions from memory and a whiteboard. At 80 percent match quality, 600 suboptimal assignments per year leave roughly fifty six thousand dollars in preventable revenue loss on the whiteboard. This free Google Sheets load-to-truck matching system scores every truck-load pair on revenue per mile, deadhead distance, HOS fit, and equipment match — so the best combination surfaces automatically, not when the driver calls from the pickup asking where to go next.</p>
+      </div>
+
+      <h2>The fifty six thousand dollar whiteboard problem</h2>
+
+      <p>Walk into the dispatch office of any 12-truck fleet and you will see the same thing: a whiteboard covered in truck numbers, driver names, load IDs, and pickup times — crossed out, rewritten, smudged beyond recognition by Tuesday afternoon. It is the central nervous system of the operation. And it is wrong roughly 20 percent of the time.</p>
+
+      <p>Here is the math. A 12-truck fleet running 250 working days per year assigns roughly 3,000 loads annually. If the whiteboard produces an 80 percent match quality — a generous estimate for any fleet running without a TMS — that means 600 suboptimal assignments per year. The average suboptimal assignment penalty is approximately 15 percent revenue-per-mile loss on a five hundred dollar average load, or seventy five dollars per bad match. But the real cost is higher because a bad match creates a ripple: a truck delivered to the wrong city now needs a repositioning deadhead for the next load.</p>
+
+      <ul>
+        <li>600 suboptimal loads per year times seventy five dollars in direct RPM loss equals forty five thousand dollars.</li>
+        <li>Plus repositioning deadhead miles created by bad matches: roughly eleven thousand dollars in additional fuel and driver pay.</li>
+        <li>Plus the service failures — missed pickup windows, angry brokers, lost lanes — that do not show up on any spreadsheet: call it another five thousand dollars in lost business.</li>
+        <li><strong>Total preventable loss: approximately fifty six thousand dollars per year.</strong></li>
+      </ul>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Here is what makes this problem invisible:</strong> The deadhead tracker catches the empty miles AFTER the bad match. The fuel card audit catches the diesel burned on the repositioning. The settlement system catches the driver pay for the deadhead leg. All three systems are working perfectly — registering the cost of a decision that was already wrong the moment the dispatcher said "take this one." The load-matching spreadsheet prevents the bad decision before any of those downstream costs ever appear.</p>
+      </div>
+
+      <h2>The free load-to-truck matching spreadsheet</h2>
+
+      <p>The spreadsheet replaces the whiteboard with a scoring system that surfaces the best truck-load combination automatically. It has four tabs: Available Loads, Truck Status, the Best-Match Matrix, and a Weekly Dispatch Calendar.</p>
+
+      <div class="checklist">
+        <h3>Tab 1 — Available Loads column layout</h3>
+        <ul>
+          <li><strong>Load ID</strong> — from the broker or load board.</li>
+          <li><strong>Pickup city/state</strong> and <strong>Delivery city/state</strong> — the two points that define the loaded miles.</li>
+          <li><strong>Pickup window</strong> — the date and time range the shipper will load you.</li>
+          <li><strong>Delivery deadline</strong> — when the load must arrive.</li>
+          <li><strong>Equipment required</strong> — dry van, reefer, flatbed, step deck, power-only.</li>
+          <li><strong>Rate</strong> — the total linehaul amount offered.</li>
+          <li><strong>Loaded miles</strong> — pickup to delivery distance.</li>
+          <li><strong>Rate per mile</strong> — auto-calculated: rate divided by loaded miles.</li>
+          <li><strong>Deadhead miles to pickup</strong> — distance from each available truck to the pickup. Populated by the matrix in Tab 3.</li>
+        </ul>
+      </div>
+
+      <div class="checklist">
+        <h3>Tab 2 — Truck Status column layout</h3>
+        <ul>
+          <li><strong>Truck ID</strong> — unit number.</li>
+          <li><strong>Driver</strong> — name.</li>
+          <li><strong>Current location</strong> — city and state where the truck is right now, updated after every delivery.</li>
+          <li><strong>Available time</strong> — when the truck can accept the next load (after unloading, after mandatory 10-hour break).</li>
+          <li><strong>HOS remaining</strong> — drive hours left in the current cycle.</li>
+          <li><strong>Equipment type</strong> — dry van, reefer, flatbed. What the truck is pulling.</li>
+          <li><strong>Driver preference</strong> — any standing requests (no Northeast, prefers Southeast, home every other weekend).</li>
+          <li><strong>Status</strong> — loaded and rolling, unloading, available, out of service.</li>
+        </ul>
+      </div>
+
+      <div class="checklist">
+        <h3>Tab 3 — The Best-Match Matrix</h3>
+        <p>This is the engine. Every available truck is a row. Every available load is a column. Each cell scores the pair on four criteria, each weighted:</p>
+        <ol>
+          <li><strong>Revenue per mile (weight: 40 percent).</strong> RPM equals rate divided by loaded miles. If the truck must deadhead 200 miles to pickup, the effective RPM is rate divided by (loaded miles plus deadhead miles). Higher RPM scores higher.</li>
+          <li><strong>Deadhead to pickup (weight: 25 percent).</strong> The distance from the truck's current location to the pickup. Shorter deadhead scores higher. Any deadhead over 150 miles gets a penalty flag — is this load worth repositioning for?</li>
+          <li><strong>HOS fit (weight: 25 percent).</strong> Does the driver have enough remaining drive time to reach the pickup AND complete the loaded miles? If Truck 7 has 2 hours 45 minutes of drive time remaining and the pickup is 2 hours 15 minutes away, the driver arrives with 30 minutes — not enough to load and deliver. The HOS checker flags this BEFORE dispatch.</li>
+          <li><strong>Equipment match (weight: 10 percent).</strong> Does the truck's equipment match the load requirement? Van for van, reefer for reefer. Mismatches get a zero score for the pair.</li>
+        </ol>
+        <p><strong>Color coding:</strong> Green — optimal match (score above 85). Yellow — acceptable (score 70-85). Red — avoid (score below 70 or HOS warning triggered).</p>
+      </div>
+
+      <h2>The revenue-per-mile optimizer — stop chasing total revenue, start chasing RPM</h2>
+
+      <p>The whiteboard makes dispatchers chase the biggest dollar number. But total revenue is the wrong metric — and it is costing your fleet twelve to eighteen percent in preventable RPM loss every month.</p>
+
+      <p>Here is a real example from a 12-truck reefer fleet in the Midwest:</p>
+
+      <div class="comparison">
+        <table>
+          <tr>
+            <th></th>
+            <th>Load A</th>
+            <th>Load B</th>
+          </tr>
+          <tr>
+            <td><strong>Route</strong></td>
+            <td>Chicago to Denver</td>
+            <td>Chicago to St. Louis</td>
+          </tr>
+          <tr>
+            <td><strong>Loaded miles</strong></td>
+            <td>1,000</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td><strong>Rate</strong></td>
+            <td>$2,800</td>
+            <td>$1,900</td>
+          </tr>
+          <tr>
+            <td><strong>RPM</strong></td>
+            <td>$2.80/mile</td>
+            <td>$6.33/mile</td>
+          </tr>
+          <tr>
+            <td><strong>Round trip time</strong></td>
+            <td>3 days (with DH back)</td>
+            <td>1 day</td>
+          </tr>
+          <tr>
+            <td><strong>Revenue per day</strong></td>
+            <td>$933</td>
+            <td>$1,900</td>
+          </tr>
+          <tr>
+            <td><strong>3-day revenue potential</strong></td>
+            <td>$2,800</td>
+            <td>$5,700 (3 St. Louis turns)</td>
+          </tr>
+        </table>
+      </div>
+
+      <p>Revenue says pick Load A — the Denver run is almost a thousand dollars more on paper. RPM says pick Load B — you can run three St. Louis turns in the time it takes to do one Denver round trip, and each St. Louis turn pays $6.33 per mile versus Denver's $2.80. The dispatch decision that looked like a nine hundred dollar win on the whiteboard was actually a twenty nine hundred dollar loss in real fleet productivity.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The RPM-first rule:</strong> Before assigning any load, calculate the effective RPM (rate divided by loaded miles plus deadhead miles to pickup). Sort every available load by effective RPM. Assign the highest-RPM loads first — but only to trucks whose HOS window and equipment match. A $3,200 load at $3.20 per mile with 150 miles deadhead beats a $4,500 load at $2.10 per mile with 300 miles deadhead — every time. The spreadsheet does this sort automatically.</p>
+      </div>
+
+      <h2>The HOS window checker — the hidden reason your best match fails</h2>
+
+      <p>The RPM matrix might say Truck 7 is the perfect match for Load 42. But Truck 7 has 2 hours 45 minutes of drive time remaining and the pickup is 2 hours 15 minutes away. The driver arrives with 30 minutes on the clock — not enough to load, much less deliver. The load is assigned, the driver runs out of hours 60 miles from the receiver, the delivery misses the appointment window, the broker deducts two hundred fifty dollars from the rate, and the driver is furious.</p>
+
+      <p>The HOS checker prevents this by flagging any match where the driver's remaining drive time minus (deadhead to pickup plus loaded miles) leaves fewer than 60 minutes of buffer. The formula:</p>
+
+      <div class="callout">
+        <p style="margin:0;font-family:monospace;font-size:15px">HOS buffer = Remaining drive hours — (Deadhead hours to pickup + Loaded drive hours)<br><br><strong>Green:</strong> buffer greater than 2 hours — plenty of margin.<br><strong>Yellow:</strong> buffer 1-2 hours — tight but doable if everything goes perfectly.<br><strong>Red:</strong> buffer less than 1 hour — do NOT dispatch this load to this truck.</p>
+      </div>
+
+      <p>When a red HOS warning fires, the matrix automatically highlights the second-best match. Truck 4 has 6 hours 15 minutes of drive time remaining and scores 82 on the RPM matrix — dispatch Truck 4, save Truck 7 for a short-haul load tomorrow when their clock resets. The fleet loses zero revenue, the delivery stays on time, and the driver does not spend the night in a rest area 60 miles from the receiver.</p>
+
+      <h2>The dispatch calendar view — one week, one screen, zero conflicts</h2>
+
+      <p>The fourth tab is a Monday-through-Sunday calendar grid. Each truck is a row. Each assigned load is a colored block spanning the pickup-to-delivery window. Overlapping blocks turn red — a scheduling conflict that means you promised two loads to the same truck at the same time. Gaps turn yellow — idle time where the truck has no assignment and could be repositioned or loaded.</p>
+
+      <p>The calendar catches three problems the whiteboard cannot:</p>
+
+      <ol>
+        <li><strong>Double-booked trucks.</strong> When two dispatchers working different boards assign loads to the same truck for the same window. The calendar shows the overlap in red instantly.</li>
+        <li><strong>Utilization gaps.</strong> Truck 9 has nothing on Wednesday. That is 24 hours of fixed costs (truck payment, insurance, parking) with zero revenue. Find a load or reposition the truck to a better market before Wednesday arrives — not after the day is wasted.</li>
+        <li><strong>Driver home-time conflicts.</strong> The driver preference column in Tab 2 feeds into the calendar. If a driver has "home every other weekend" and you just assigned a Friday load delivering Monday in another state, the calendar flags it — before the driver quits over it.</li>
+      </ol>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The 15-minute dispatch huddle:</strong> Every morning at 0700, the dispatcher opens the spreadsheet. Tab 3 shows every truck's status after overnight deliveries. Tab 1 shows every available load from the overnight load boards. The matrix auto-scores every pair. The dispatcher reviews the green matches, eyeballs the yellows, and makes the final call on any judgment-call situations (a favorite lane for a veteran driver, a broker who always pays late). Total time: 15 minutes. The rest of the day, the dispatcher handles exceptions — not matching 900 combinations from a whiteboard.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>How do I match loads to trucks without a TMS?</h3>
+        <p>Use a free Google Sheets spreadsheet with columns for each available load (pickup city, delivery city, rate, rate per mile, deadhead miles to pickup, equipment required, pickup window) and each truck (current location, available time, HOS remaining, equipment type). Score every truck-load pair on revenue per mile, deadhead distance, HOS fit, and equipment match. The best combination maximizes RPM across the fleet — not just the highest-dollar load. This replaces the whiteboard-and-memory approach most dispatchers use and costs nothing.</p>
+
+        <h3>What is revenue per mile and why does it matter more than total revenue?</h3>
+        <p>Revenue per mile (RPM) is the load rate divided by total miles driven, including deadhead to pickup. A $2,800 Chicago-to-Denver load at 1,000 miles is $2.80 per mile. A $1,900 Chicago-to-St. Louis load at 300 miles is $6.33 per mile. Total revenue says pick Denver. RPM says pick St. Louis — you can run three turns in the time it takes to do one Denver round trip. RPM-first dispatch typically increases fleet revenue by 8-15 percent without adding a single truck.</p>
+
+        <h3>How do I account for hours of service when dispatching loads?</h3>
+        <p>Track each driver's remaining drive time and on-duty time in the spreadsheet. Before assigning a load, verify that drive time to pickup plus loaded drive time is less than or equal to remaining drive hours, with at least 60 minutes of buffer. If a driver has 2 hours 45 minutes remaining and the pickup is 2 hours 15 minutes away, they arrive with only 30 minutes — not enough. Dispatch the second-best match instead. A load assigned to a driver who runs out of hours costs more in service failure than any RPM advantage.</p>
+
+        <h3>What is the difference between deadhead and suboptimal load matching?</h3>
+        <p>Deadhead is the empty miles a truck drives between loads — the cost of repositioning. Suboptimal load matching is the loaded miles that could have been more profitable: a truck runs a $2.10 per mile load into Dallas while another truck deadheads empty out of Dallas at the same time because the dispatcher never saw the connection. Deadhead tracking catches the empty miles after the bad decision. Load matching prevents the bad decision before the truck moves. Together they form a fleet efficiency system.</p>
+
+        <h3>How do I optimize load assignments for a small truck fleet?</h3>
+        <p>Optimize by scoring every available load against every available truck on four criteria: revenue per mile (higher is better), deadhead miles to pickup (lower is better), HOS fit (remaining drive time must cover pickup plus loaded distance plus buffer), and equipment match. The highest-scoring pair gets assigned first, then the next highest among remaining trucks and loads. Run this optimization 2-4 times per day as new loads arrive. The spreadsheet automates the scoring; the dispatcher makes the final call on judgment situations like driver lane preferences or broker payment history.</p>
+      </section>
+
+      <div class="cta-box">
+        <h2>Your whiteboard is costing you fifty six thousand dollars a year</h2>
+        <p>The load-matching spreadsheet above costs zero dollars and replaces the whiteboard with automated scoring. If your fleet needs help building the spreadsheet — or wants a custom dispatch workflow that integrates with your load boards and ELD data — we build those. Starting at zero dollars for the assessment.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-deadhead-reduction-empty-miles-tracker-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Stop Losing Money on Empty Miles — The Free Deadhead Tracker for Small Fleets</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-driver-retention-turnover-tracker-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Why Your Drivers Quit and Which Ones Stay — The Free Driver Retention Tracker</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-driver-settlement-pay-reconciliation-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Drivers Are Owed $2,300 in Unpaid Detention — The Free Settlement Reconciliation System That Finds It</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-dispatcher-overwhelm-automation-guide/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Dispatcher Is Drowning in Paperwork — Here Is the Automation System That Gives Them 12 Hours Back Every Week</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-dock-scheduling-spreadsheet-small-fleet/" style="font-weight:600;color:#1466FF;text-decoration:none">Stop Waiting 4 Hours at the Dock — The Free Dock Scheduling System for Small Fleets</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    &copy; 2026 Jobs Done Labs &middot; <a href="/">Home</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
