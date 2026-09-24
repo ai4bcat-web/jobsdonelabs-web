@@ -2154,6 +2154,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Patient Portal Costs $12K and Only 22% of Patients Use It — Free Adoption Fix
+
 You Bill $350/Hour But Lose 90 Minutes/Day to Admin — Free Time-Audit System
 
 How Much Does Business Process Automation Cost? Honest Price Breakdown for Small Companies
@@ -13851,6 +13853,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+Your Patient Portal Costs $12K and Only 22% of Patients Use It — Free Fix
+
 Cut EHR Charting in Half — The Free Documentation Time Audit Spreadsheet
 
 Nurse Phone Triage Documentation System: Track Every Clinical Call
@@ -18129,6 +18133,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Patient Portal Costs $12K and Only 22% of Patients Use It — Free Adoption Fix
+
 Your Front Desk Spends 3 Hours a Day on Phone Tag While Patients Stack Up in the Waiting Room. Here Is the Free Call Management System That Gives Them Back 10 Hours a Week.
 
 Collect Patient Balances Without Calling Everyone — The Free Collection System for Medical Practices
@@ -18538,6 +18544,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Patient Portal Costs $12K and Only 22% of Patients Use It — Free Fix
+
 Free Medical Supplies Inventory for Small Practices — Stop Losing $2,400 to Expired Vaccines
 
 Collect Patient Balances Without Calling Everyone — The Free Collection System for Medical Practices
@@ -18550,6 +18558,227 @@ Cut Insurance Verification Time in Half: A Front Desk Workflow That Doesn't Cost
 
 
 URL: https://www.jobsdonelabs.ai/blog/patient-payment-plan-tracking-spreadsheet-medical-practice-free/
+
+---
+
+# Your $12K Portal Has 22% Adoption. Fix It for Free.
+
+Healthcare
+
+Your Patient Portal Costs $12,000 a Year and Only 22% of Patients Use It — and Every One of the 3,120 Patients Who Still Call Instead of Using the Portal Costs Your Front Desk 8 Minutes. Here Is the Free System That Doubles Adoption in 90 Days.
+
+Ryne Bandolik
+
+· Jobs Done Labs · Sep 24, 2026
+
+Key takeaways
+
+A 3-provider practice spends $12,000 per year on a patient portal that less than a quarter of patients actually use. Every 10 percent shift from phone to portal reclaims 25 hours of front desk time per month. The free adoption tracker spreadsheet segments patients by age, enrollment status, and communication preference, then guides a 30-day playbook that targets the right patients each week. No new software, no vendor contract — a spreadsheet and a structured enrollment process.
+
+The twelve thousand dollar ghost portal
+
+Here is the math for a typical 3-provider primary care practice. You pay roughly twelve thousand dollars per year for your patient portal — the license fee bundled into your EHR contract. The portal can do appointment scheduling, prescription refills, bill pay, and secure messaging. And yet 22 percent of your four thousand active patients have ever logged in.
+
+That means three thousand one hundred twenty patients still call for everything. They call to schedule appointments. They call to refill prescriptions. They call to ask what their balance is. They call because no one ever told them the portal could handle it in thirty seconds.
+
+The cost of those calls compounds quickly. A portal appointment booked instead of called saves 8 minutes. A portal refill saves 5 minutes. A portal bill pay saves 3 minutes. A portal secure message saves 4 minutes of phone tag. Shift just 25 percent of those callers to portal tasks — 780 patients, each averaging 4 encounters per year, each saving 5 minutes — and you reclaim 433 hours of front desk time annually. At a staff cost of roughly twenty two dollars per hour fully loaded, that is approximately nine thousand five hundred dollars in recovered capacity, every year, just from getting patients to use the tool you already pay for.
+
+Your portal is not broken. It was never launched. The enrollment email went out once in 2022. No one follows up. The front desk does not mention it at check-in because they are too busy answering the phones. And the phones ring because the portal sits unused. That is the loop this system breaks.
+
+The free portal adoption tracker spreadsheet
+
+The core of the system is a Google Sheets spreadsheet that tracks every active patient through the adoption funnel. Here is what it tracks, per patient:
+
+Patient demographics:
+
+name, MRN, age group (under 40, 40 to 64, 65 plus), primary provider
+
+Portal account status:
+
+account created yes or no, date enrolled, last login date, login frequency (weekly, monthly, quarterly, never)
+
+Task routing:
+
+how does this patient currently schedule appointments (phone, portal, in-person), refill prescriptions, pay bills, and send messages?
+
+Contact preference:
+
+text, email, phone, or in-person only — because sending an email enrollment link to a patient who only answers the phone is a waste of time
+
+The dashboard tab aggregates everything into an adoption dashboard:
+
+Overall adoption rate
+
+with a month-over-month trend line
+
+Adoption by age group
+
+— the heatmap that reveals exactly which segment is holding adoption down
+
+Adoption by provider
+
+— because Dr. Chen's patients might be at 38 percent while Dr. Williams's are at 14 percent, and that gap tells you whose front desk staff needs a different enrollment script
+
+Enrollment-to-first-use conversion rate
+
+— how many patients who created an account actually used it within 30 days? If this number is low, the enrollment process works but the portal itself provides no immediate value
+
+Tasks migrated to portal
+
+— appointments, refills, payments, and messages handled through the portal versus phone, so you can measure the front desk time reclaimed
+
+The spreadsheet takes roughly 90 minutes to populate initially — pulling patient data from your EHR's export function and mapping it to the tracker columns. After that, it is 15 minutes per week to update. No IT integration. No vendor contract. A shared Google Sheet that your front desk lead owns.
+
+Why this works when the EHR's built-in portal report does not:
+
+Most EHRs will tell you how many portal accounts exist. They will not tell you which patients use those accounts, which patients tried once and never returned, which age groups are falling behind, or which provider's panel has the lowest adoption rate. The EHR gives you a head count. This tracker gives you a strategy.
+
+The 30-day adoption playbook
+
+The tracker tells you who is not using the portal. The playbook tells you how to reach them. Here is the four-week structure:
+
+Week 1: The appointment confirmation moment
+
+This is the single highest-converting moment for portal enrollment. When a patient confirms an appointment (by text or phone), the confirmation message includes a personalized portal enrollment link. The message reads: "Your appointment is confirmed for Tuesday at 10am. Save 8 minutes at check-in by completing your pre-visit forms in the patient portal: [link]." Thirty five to forty percent of patients who receive this link will enroll — because they are already thinking about their visit and the portal solves an immediate pain point (paperwork).
+
+Week 2: Front desk scripts that enroll, not inform
+
+Most front desk staff say "We have a patient portal, would you like to sign up?" That is an information offer, and patients say no. The winning script is an action offer: "Let me book your follow-up right now in the portal while you are here — it takes ninety seconds and you will get automatic reminders." Train staff on three scripts: the check-in script (enrollment offer), the check-out script (immediate task demonstration), and the phone script (for patients who call to schedule — redirect to portal with a specific benefit). Post the scripts at every front desk station.
+
+Week 3: The post-visit summary that sells the portal
+
+Every patient receives a printed or emailed post-visit summary. Add a prominent box to that summary listing three things the patient can do in the portal right now: (1) view their lab results from today's visit when they are ready, (2) request a refill without calling, and (3) send a non-urgent question to their provider. Each item includes the portal URL and a QR code. This turns the summary from a compliance document into an enrollment driver.
+
+Week 4: In-person enrollment for patients 65 and older
+
+Patients over 65 enroll at less than half the rate of patients under 40 when sent a link alone. The fix is in-person: a staff member with a tablet walks the patient through account creation during check-in. It takes 3 to 5 minutes. For patients without smartphones, print portal credentials on a wallet card. For patients who do not use computers, designate a family caregiver as a proxy portal user. One dedicated enrollment session per week (a Tuesday morning, targeting 5 patients) brings the 65-plus adoption rate from roughly 15 percent toward 30 percent in a quarter.
+
+The target after 90 days:
+
+From 22 percent overall adoption to 45 percent. Under-40 segment: 55 percent to 65 percent. Age 40 to 64 segment: 30 percent to 45 percent. 65-plus segment: 15 percent to 30 percent. These are realistic targets — practices that follow a structured enrollment playbook consistently hit them within a quarter.
+
+The patient segment adoption heatmap
+
+One-size-fits-all enrollment fails because a twenty eight year old on a smartphone and a seventy two year old who does not use email need completely different approaches. The heatmap breaks your patient panel into segments and shows adoption by group:
+
+Age Group
+
+Typical Starting Adoption
+
+90-Day Target
+
+Best Enrollment Method
+
+Under 40
+
+55 percent
+
+65 percent
+
+Text link at appointment confirmation
+
+40 to 64
+
+30 percent
+
+45 percent
+
+Front desk script plus post-visit summary QR code
+
+65 plus
+
+15 percent
+
+30 percent
+
+In-person enrollment at check-in with staff assistance
+
+The heatmap reveals something most practices miss: your under-40 adoption at 55 percent is actually below potential. These patients live on their phones — they should be at 65 to 70 percent. The gap is that no one ever sent them the enrollment link at the right moment. The Week 1 text-to-enroll campaign closes that gap in thirty days. Meanwhile your 65-plus panel at 15 percent will never adopt through digital outreach alone — they need in-person help, and the tracker shows you exactly which 25 patients to target this month.
+
+The "who to target this week" priority list
+
+Most practices fail at portal adoption because they try to enroll everyone at once. They send a mass email to four thousand patients, get a 2 percent response, and conclude "our patients do not want the portal." The reality is that mass outreach is the least effective method — the patients who would enroll already did. The patients who remain are the ones who need a targeted approach.
+
+The tracker generates a weekly priority list automatically. The sorting logic:
+
+Filter:
+
+Portal-eligible (not already enrolled) plus high phone utilization (3 or more phone encounters in the past 90 days) plus no portal account
+
+Sort:
+
+By phone encounter count descending — the patients who call the most are the ones who would benefit most from portal access
+
+Select:
+
+The top 25 patients on the sorted list
+
+Segment:
+
+Split the 25 by age group and assign the appropriate enrollment method (text link for under 40, front desk script for 40 to 64, in-person for 65 plus)
+
+Execute:
+
+Target 5 patients per day for 5 days. By the end of the week, 25 new portal users are enrolled
+
+Repeat this cycle monthly. Over 12 months, that is 300 newly enrolled patients — a 10 percent increase in overall adoption from the priority list alone, before the playbook campaigns even kick in.
+
+The 5-minute weekly portal adoption check-in
+
+Open the tracker dashboard. What is the overall adoption rate this week versus last week?
+
+Which age group had the lowest enrollment this week? Assign one targeted action for that group next week.
+
+How many of the 25 patients targeted last week actually enrolled? If fewer than 15, the enrollment method needs adjustment — try a different message or time of day.
+
+Check the enrollment-to-first-use rate. If new enrollees are not logging in within 30 days, their first experience was disappointing — add a "what to do first" guide to the enrollment confirmation.
+
+Did any provider's panel show a drop in adoption? That provider's staff may have stopped offering portal enrollment — a quick reminder script fixes it.
+
+Frequently asked questions
+
+How do I get patients to use the patient portal instead of calling?
+
+The single highest-converting moment is at appointment confirmation: send a text-to-enroll link when the patient confirms their visit. That moment captures 35 to 40 percent of new portal enrollments. Supplement with front desk scripts ("Let me book your follow-up right now in the portal while you are here"), post-visit summary handouts with portal features highlighted, and in-person enrollment for patients over 65 at check-in. A structured 30-day playbook targeting one segment per week can double adoption from 22 percent to 45 percent in 90 days.
+
+What is a good patient portal adoption rate for a medical practice?
+
+The national average for independent primary care practices is 25 to 35 percent portal adoption. Practices with dedicated enrollment workflows achieve 45 to 55 percent. The top quartile — practices that integrate portal enrollment into every patient touchpoint — reaches 60 to 70 percent. A rate below 20 percent typically indicates the portal exists but was never actively promoted beyond the initial launch email. Every 10 percent increase in adoption saves approximately 25 hours of front desk time per month.
+
+How do I enroll elderly patients in the patient portal?
+
+Patients over 65 enroll at less than half the rate of patients under 40 when sent a digital link alone. The fix is in-person enrollment at check-in: have a staff member walk the patient through account creation on a tablet in the waiting room (3 to 5 minutes per patient). For patients without smartphones, print their portal credentials on a wallet card and show them how to access it from a home computer. For patients who do not use computers at all, designate a family caregiver as a proxy portal user. This in-person approach raises the 65-plus adoption rate from roughly 15 percent to 30 percent or higher.
+
+Why do not patients use patient portals?
+
+The top reasons patients ignore portals: (1) they never received a clear enrollment invitation — the link was buried in a generic welcome email, (2) the enrollment process requires too many steps (username, password, security questions, two-factor authentication), (3) older patients are not comfortable with the technology and were never offered in-person help, (4) the portal provides no immediate value — patients do not see what is in it for them until they log in, and (5) staff never mention the portal during visits, so patients assume it is optional or unimportant. Each of these has a specific fix in the adoption playbook.
+
+How much front desk time does patient portal adoption save?
+
+Each portal-based task saves measurable staff time: portal appointment booking saves 8 minutes per call versus phone scheduling, portal prescription refill saves 5 minutes, portal bill pay saves 3 minutes, and portal secure messaging saves 4 minutes per message versus phone tag. For a 3-provider practice shifting 25 percent of callers to portal tasks: 780 fewer calling patients times 4 encounters per year times 5 minutes saved average equals 433 hours reclaimed per year. At a front desk loaded hourly cost of roughly twenty two dollars, that is approximately nine thousand five hundred dollars in recovered staff capacity annually — more than the portal license costs in the first place.
+
+Want this portal adoption system automated for your practice?
+
+We build custom workflows that pull patient data from your EHR, populate the adoption tracker automatically, and send targeted enrollment messages to the right patients at the right time. No new software license. No ongoing subscription. A one-time build that hands you the keys.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Your Front Desk Spends 3 Hours a Day on Phone Tag — Here Is the Free System That Gives Them Back 10 Hours a Week
+
+Your Practice Lost $27,000 Last Year to No-Shows — Here Is a Free System That Gets 40% of Them Back
+
+14 Months Ago a Patient Signed Your $50/Month Payment Agreement — Free Tracker
+
+Your Consulting Clients Still Email Documents Instead of Using the Portal — Free Fix
+
+Prescription Refill Request Tracking System — Stop Losing Refill Requests
+
+
+URL: https://www.jobsdonelabs.ai/blog/patient-portal-adoption-rate-tracker-medical-practice-free/
 
 ---
 
@@ -19609,6 +19838,8 @@ Book your audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Your Patient Portal Costs $12K and Only 22% of Patients Use It — Free Adoption Fix
 
 Free Medical Supplies Inventory for Small Practices — Stop Losing $2,400 to Expired Vaccines
 
