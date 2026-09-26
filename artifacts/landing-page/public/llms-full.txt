@@ -2469,6 +2469,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Have Four Stitches on a Guy's Hand and You Didn't Record It — The Free Safety Compliance System for Small Contractors
+
 When to Roll a Truck at 3am: An After-Hours Emergency Triage System
 
 Your Sub's Insurance Expired 3 Weeks Ago and You Just Found Out — The Free COI Compliance System
@@ -2646,7 +2648,9 @@ Book your free audit →
 
 Related reading
 
-If you found this useful, you'll want these too:
+If you found this useful, you will want these too:
+
+You Have Four Stitches on a Guy's Hand and You Didn't Record It — The Free Safety Compliance System for Small Contractors
 
 You Have 40 Open Permits Across 4 Job Sites and One Just Expired — The Free Permit Tracker That Keeps Every Project on Schedule
 
@@ -2918,6 +2922,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+You Have Four Stitches on a Guy's Hand and You Didn't Record It — The Free Safety Compliance System for Small Contractors
 
 You Spent $800,000 on Subcontractors Last Year and Cannot Tell Me Which Ones Were Late — The Free Subcontractor Scorecard
 
@@ -10288,6 +10294,123 @@ Your Diabetic Patients Are Overdue for A1C Checks — Here's the Care Gap System
 
 
 URL: https://www.jobsdonelabs.ai/blog/insurance-verification-workflow-front-desk-free/
+
+---
+
+# Free OSHA Safety System for Small Contractors
+
+Home Services & Trades
+
+You Have Four Stitches on a Guy's Hand and You Didn't Record It — and That $15,625 OSHA Fine Is One Inspection Away. Here Is the Free Safety Compliance System for Small Contractors That Does Everything a Safety Manager Would Do for $0.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 26, 2026
+
+Key takeaways
+
+The average OSHA penalty is $15,625 per violation — and a serious injury without documentation becomes a willful violation at 10x that amount. The OSHA 300 log is legally required for any contractor with 11+ employees, yet most small GCs do not know they need one. This free 5-tab safety compliance spreadsheet combines the OSHA 300 log, a 52-week toolbox talk scheduler with pre-loaded topics, a 40-point site inspection checklist, an incident report form, and a compliance calendar into one system. Thirty minutes of setup today gets you more compliant than 70% of small contractors.
+
+The $15,625 gambling problem
+
+Here is what most small GCs do not realize: OSHA fines are not the worst-case scenario. The worst-case scenario is a serious injury on your job site — and when the inspector asks for your safety records, you hand them a blank spiral notebook and a handful of toolbox talk sheets with no dates and no signatures.
+
+At that point, what was a $15,625 serious violation becomes a willful violation. The penalty multiplies by 10. And the $156,250 fine is still not the real cost. The real cost is the jobs you can no longer bid because you cannot produce a safety record. General contractors, municipalities, and commercial developers increasingly require proof of safety documentation as a pre-qualification requirement. No safety record means no bid. No bid means no work. No work means the business is done.
+
+Here is what the OSHA 300 log actually requires: every work-related injury or illness that requires medical treatment beyond first aid, results in days away from work, restricted work, or transfer to another job, involves loss of consciousness, or is a significant injury or illness diagnosed by a physician must be recorded within 7 calendar days. The form must be retained for 5 years. And if you have 11 or more employees at any point during the calendar year, you are required to maintain it — construction is NOT exempt.
+
+The gambling problem is this: most small contractors go years without an OSHA inspection and assume they never will get one. Then a framing crew member falls off a ladder and breaks an arm. The hospital reports it. OSHA shows up two days later. And the contractor discovers — in real time, with an inspector standing in the job trailer — that they have zero documentation proving they ever gave a ladder safety talk, ever inspected the fall protection, or ever trained anyone on anything. That moment costs them everything.
+
+The free safety compliance spreadsheet — 5 tabs, one system
+
+This is not a collection of five separate PDFs you print from OSHA.gov and stuff in a binder. It is one Google Sheets file with five interlocking tabs designed to be the single source of truth for your company's safety program. Every tab feeds the dashboard. Every entry is dated. Every record is retrievable in under 30 seconds.
+
+Tab 1 — OSHA 300 Log
+
+Date of injury, employee name, job title, where the incident occurred, injury/illness description, classification (injury, skin disorder, respiratory condition, poisoning, hearing loss, all other illnesses), number of days away from work, number of days restricted or transferred, and whether it is an injury or illness. The DART rate (Days Away, Restricted, or Transferred) is auto-calculated so you always know whether your incident rate is above or below the industry average for your NAICS code. The industry average for residential building construction is 2.9 per 100 full-time workers — if your number is higher, the spreadsheet flags it so you can investigate before OSHA does.
+
+Tab 2 — 52-Week Toolbox Talk Scheduler
+
+Pre-loaded with one topic per week for an entire year. Week 1: Fall Protection. Week 2: Ladder Safety. Week 3: Electrical Safety. Week 4: Personal Protective Equipment. Week 5: Scaffold Safety. Week 6: Trenching and Excavation. Week 7: Hazard Communication. Week 8: Fire Prevention. Week 9: Hand and Power Tool Safety. Week 10: Struck-By Hazards. The full 52-week rotation cycles through every major construction hazard category, with built-in seasonal topics such as Heat Illness Prevention in July, Cold Weather Safety in December, and Holiday Safety in late December. Each row includes the topic, a 1-paragraph talking point summary, the date held, and attendee names. Missed weeks are automatically flagged. After one year: 52 documented safety meetings proving a culture of safety.
+
+Tab 3 — Site Safety Inspection Checklist
+
+A 40-point checklist organized into six categories: (1) General Housekeeping — clear walkways, proper material storage, adequate lighting, trash and debris removal; (2) Fall Protection — guardrails on any leading edge above 6 feet, harness tie-off points, hole covers in place, warning lines at 6 feet for roofing work; (3) Electrical Safety — GFCI protection on all temporary power, extension cords without cuts or exposed wire, lockout/tagout procedures for energized work; (4) Excavations — protective systems for any trench deeper than 5 feet, spoil piles at least 2 feet from the edge, ladder access every 25 feet in trenches 4 feet or deeper; (5) Ladders and Scaffolds — 4-to-1 setup angle, secure footing on level ground, guardrails and toeboards on scaffolds above 10 feet; (6) PPE — hard hats, safety glasses, high-visibility vests, steel-toe boots, hearing protection in areas above 85 dBA. Per item: pass, fail, or N/A, with a notes field for corrective actions. One inspection per week per active job site takes 15 minutes.
+
+Tab 4 — Incident Report Form
+
+Who was injured, what happened, when and where it happened, who witnessed it, what was the injury or illness, what treatment was provided, and what corrective action was taken. This is the document that proves you responded appropriately. Without it, the narrative is controlled by the plaintiff's attorney. With it, you have a contemporaneous record written before anyone knew there would be a dispute. The form is structured so a foreman can complete it immediately after addressing the injury, while the details are fresh — not three weeks later from a lawyer's office.
+
+Tab 5 — Compliance Calendar
+
+Training expiration dates for every employee (OSHA 10, OSHA 30, first aid/CPR, forklift certification, rigging and signaling, confined space). OSHA 300A posting deadline reminder (February 1 through April 30 every year). Annual summary due date. State-specific requirements such as your state OSHA plan if you are not in a federal OSHA state. The calendar auto-flags anything within 30 days of expiration so you never discover a lapsed certification during an inspection.
+
+Why one system instead of five separate documents:
+
+OSHA does not just ask whether you have safety documentation. They ask whether the documentation is organized, whether employees know where to find it, and whether it is actually being used. Five PDFs from OSHA.gov stuffed in a binder that nobody opens for 11 months fails that test. One spreadsheet opened every Monday morning passes it. The system is not about checking a compliance box — it is about building the habit of safety documentation until it becomes as automatic as putting on a hard hat.
+
+The 52-week toolbox talk library — 10 minutes every Monday that proves you are not negligent
+
+The most common question on every OSHA inspection report is: "Do you conduct regular safety training?" If your answer is "we talk about safety on the job" with no documentation, the inspector writes down "no." If your answer is "here are 37 signed toolbox talk sheets from the last 37 weeks" — that answer puts you in a different category of employer. The inspector now sees a company that takes safety seriously, and penalty reductions for good-faith compliance become available.
+
+The system is simple: every Monday morning, before the huddle ends, the foreman prints the week's 1-page topic from the spreadsheet. It takes 60 seconds to read aloud. The crew discusses it for 9 minutes. Everyone signs. The foreman files the sheet in the job binder or takes a photo and saves it to the project folder. Ten minutes total. After 52 weeks: 52 documented safety meetings. After 5 years: 260 documented safety meetings covering every hazard category in construction. That is what a safety culture looks like on paper — and what keeps you in business when something goes wrong.
+
+The "you will sleep better tonight" compliance dashboard
+
+The dashboard tab distills everything into one screen. At a glance, you can see: your current DART rate versus the industry average for your NAICS code, the number of days since the last recordable incident, upcoming training expirations in the next 30 days, open corrective actions from the most recent site inspections, and whether the OSHA 300A posting deadline is approaching. Green means inspection-ready. Red means fix today. This is the screen you pull up the moment someone tells you OSHA is on site. It tells you exactly what you have and what you need — before the inspector asks.
+
+The first 30 minutes — what to do right now
+
+You do not need to fill out five tabs perfectly before you can start. Here is the minimum viable compliance system that gets you more protected than 70% of small contractors in the first 30 minutes:
+
+Print the OSHA 300 log (5 minutes).
+
+Fill in any known incidents from memory — a partial record with approximate dates is 100 times better than an empty one. Write "estimated" next to anything you are unsure of. OSHA cares about good-faith effort, and partial compliance is the starting point for full compliance.
+
+Print this week's toolbox talk (5 minutes).
+
+The spreadsheet gives you a 1-page topic. Hold the talk at tomorrow morning's huddle. Log who attended. File the sheet.
+
+Do one site walk with the inspection checklist (15 minutes).
+
+Walk your most active job site with the 40-point checklist. Do not try to fix everything — just check every item and write down what needs attention. You now have a baseline. Next week you have a comparison.
+
+Fill in the compliance calendar with known expirations (5 minutes).
+
+List every employee who has OSHA 10, OSHA 30, first aid/CPR, or any equipment certification. Enter their expiration dates. The calendar will remind you 30 days before anything lapses.
+
+Thirty minutes. That is the difference between zero documentation and a functioning safety program. Next Monday, do the toolbox talk. The following Monday, do another. By the time you have done this for a month, the system runs on habit — and you are no longer gambling every day that nothing happens.
+
+Frequently asked questions
+
+Do I really need an OSHA 300 log if I only have 4 employees?
+
+If you never exceed 10 employees at any point during the calendar year, and your NAICS code is not in a high-hazard category, you are partially exempt from the requirement to maintain the OSHA 300 log. However, you are still required to report any workplace fatality within 8 hours and any inpatient hospitalization, amputation, or eye loss within 24 hours. And if a general contractor or commercial client requires safety documentation as a pre-qalification requirement — which is increasingly standard — the partial exemption does not help you when you cannot produce records. The spreadsheet costs nothing to maintain. In the 11th employee you hire, the requirement triggers immediately.
+
+How long do I need to keep safety records?
+
+OSHA requires the 300 log, the 300A annual summary, and the 301 incident reports to be retained for 5 years following the end of the calendar year they cover. Training records such as toolbox talk sign-in sheets should be kept for the duration of employment plus 5 years. Certifications such as OSHA 10/30 should be kept for the duration of employment. The spreadsheet format makes retention trivial — one file per year, saved in a cloud folder, backed up automatically.
+
+What happens if I get inspected and my records are incomplete?
+
+The inspector will note the deficiency and include it in the citation. Incomplete records are typically cited as an other-than-serious violation with a maximum penalty of $16,131. However, incomplete records also eliminate your ability to claim good-faith compliance, which is one of the four factors OSHA uses to reduce penalties by up to 85% for small employers. So the records problem compounds: you get cited for the records themselves, AND you pay full price on every other citation because you cannot demonstrate good faith. Complete records are penalty insurance.
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Your Spiral Notebook Cannot Fight a Lawsuit — The Free Construction Daily Report System
+
+Your Sub's Insurance Expired 3 Weeks Ago and You Just Found Out at 10pm — The Free COI Compliance System
+
+You Have 40 Open Permits Across 4 Job Sites and One Just Expired — The Free Permit Tracker
+
+Your Foreman Is Filling Out Paper Timesheets in His Truck at 6PM — The Fill-It-Now System
+
+You Spent $800,000 on Subcontractors Last Year — The Free Subcontractor Scorecard
+
+
+URL: https://www.jobsdonelabs.ai/blog/job-site-safety-compliance-contractor-osha-free/
 
 ---
 
@@ -25407,6 +25530,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Have Four Stitches on a Guy's Hand and You Didn't Record It — The Free Safety Compliance System for Small Contractors
+
 You Spent $800,000 on Subcontractors Last Year and Cannot Tell Me Which Ones Were Late — The Free Subcontractor Scorecard
 
 Your Spiral Notebook Can't Fight a Lawsuit — The Free Construction Daily Report System
@@ -26068,6 +26193,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+You Have Four Stitches on a Guy's Hand and You Didn't Record It — The Free Safety Compliance System for Small Contractors
 
 You Have 18 Subs Emailing You Certificates and You Have No Idea Who's Expired
 
