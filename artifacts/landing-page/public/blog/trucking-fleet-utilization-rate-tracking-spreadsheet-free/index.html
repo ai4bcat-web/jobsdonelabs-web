@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Fleet Utilization Tracker for Small Fleets | Jobs Done Labs</title>
+  <meta name="description" content="15-truck fleet at 65% utilization loses $283K/month to idle hours. Deadhead reports catch none of it. Free fleet utilization tracker spreadsheet. No TMS needed." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-fleet-utilization-rate-tracking-spreadsheet-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-fleet-utilization-rate-tracking-spreadsheet-free/" />
+  <meta property="og:title" content="Free Fleet Utilization Tracker for Small Fleets | Jobs Done Labs" />
+  <meta property="og:description" content="15-truck fleet at 65% utilization loses $283K/month to idle hours. Deadhead reports catch none of it. Free fleet utilization tracker spreadsheet. No TMS needed." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Fleet Utilization Tracker for Small Fleets | Jobs Done Labs" />
+  <meta name="twitter:description" content="15-truck fleet at 65% utilization loses $283K/month to idle hours. Deadhead reports catch none of it. Free fleet utilization tracker spreadsheet. No TMS needed." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+
+  <!-- BlogPosting JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Fleet Utilization Tracker: Find Where Every Idle Hour Goes",
+    "description": "A 15-truck fleet at 65 percent utilization loses two hundred eighty three thousand five hundred dollars per month in idle-truck revenue — and deadhead repots catch none of it because a sitting truck shows zero miles. This guide covers: how to calculate your true utilization rate, a free per-truck spreadsheet tracker with idle-time root cause analysis across five categories, the utilization-versus-deadhead decision matrix that tells you whether to fix routing or dispatch first, a fix-it-this-week priority list targeting the top three trucks, and a driver scorecard that shows which drivers are waiting the longest between loads. No TMS needed. Zero dollars to start.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "sameAs": "https://www.linkedin.com/in/rynebandolik/"
+    },
+    "datePublished": "2026-09-27",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.jobsdonelabs.ai/og-image.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good fleet utilization rate for a small trucking company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A good fleet utilization rate for a small trucking fleet is 80 to 85 percent — meaning trucks are moving (loaded or empty) for 80 to 85 percent of available hours. Below 75 percent indicates a serious idle-time problem. The national average for small fleets is roughly 65 to 70 percent, which means most fleet owners are losing twenty to thirty percent of potential revenue to idle trucks. Every percentage point improvement on a 15-truck fleet is worth roughly four thousand three hundred dollars per month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is fleet utilization rate calculated for trucking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fleet utilization rate equals total hours trucks spent driving (loaded plus empty) divided by total available hours, multiplied by 100. Available hours equal number of trucks times 24 hours times days in the period. For example: a 15-truck fleet with 10,800 available hours in a 30-day month where trucks drove 7,020 hours has a 65 percent utilization rate. The remaining 3,780 hours are idle — waiting at shippers, sitting for dispatch, in maintenance, or parked because of HOS limits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between deadhead tracking and utilization tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Deadhead tracking measures EMPTY MILES — how many miles trucks run without a load generating revenue. Utilization tracking measures IDLE HOURS — how many hours trucks sit not moving at all. A truck sitting in the yard for eight hours shows zero miles and is invisible to deadhead reports, but it loses seventy five dollars per hour in potential revenue. You need both: deadhead catches empty moving, utilization catches sitting still. Together they give you a complete picture of fleet efficiency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main causes of low fleet utilization?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The five main causes of low fleet utilization are: (1) dispatch lag — trucks waiting hours between loads because dispatch is overwhelmed or using slow load boards, (2) shipper delays — detention at docks that does not always get invoiced, (3) maintenance timing — unscheduled repairs or PMs scheduled during peak demand, (4) HOS exhaustion — drivers running out of hours and forced to park, and (5) dead zones — lanes with no backhaul freight. Each root cause needs a different fix. Dispatch lag needs automation. Shipper delays need data to negotiate. Maintenance needs scheduling. HOS exhaustion needs better route planning. Dead zones need lane diversification."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does fleet utilization software cost for a small trucking company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Commercial fleet utilization and telematics software costs two hundred to eight hundred dollars per month per truck (three thousand to twelve thousand dollars per month for a 15-truck fleet). The free spreadsheet in this guide costs zero dollars and takes roughly two hours to set up. It provides per-truck utilization dashboards, idle-time root cause analysis, driver scorecards, and a utilization-versus-deadhead decision matrix — the same analysis that paid platforms deliver, without the monthly subscription."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.jobsdonelabs.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.jobsdonelabs.ai/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Free Fleet Utilization Tracker for Small Fleets"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://image.s.unsplash.com/photo-1601584115198-9d1a5f5a5a5c?w=1200&q=80" alt="Trucks parked in a fleet yard, representing idle assets and untapped revenue for small trucking companies" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Logistics &amp; Trucking</span>
+      <h1>Your Trucks Sat Idle for 3,780 Hours Last Month at two hundred eighty three thousand five hundred dollars in Lost Revenue — and Your Deadhead Report Did Not Catch Any of It Because a Sitting Truck Shows Zero Miles. Here Is the Free Fleet Utilization Tracker That Shows You Where Every Hour Goes.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · September 27, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A 15-truck fleet running at 65 percent utilization loses roughly two hundred eighty three thousand dollars per month in idle-truck revenue — money that deadhead trackers never catch because sitting trucks show zero miles. This free fleet utilization tracker spreadsheet shows you exactly how many hours each truck sits idle, which root cause is responsible (dispatch lag, shipper delay, maintenance, HOS, or dead zones), and which three trucks to fix first to recover the biggest chunk of lost revenue. No TMS needed — zero dollars to start, roughly two hours to set up.</p>
+      </div>
+
+      <h2>The two hundred eighty three thousand dollar idle-truck problem</h2>
+      <p>Most fleet owners track miles. They know their deadhead percentage, their loaded-mile average, their revenue per mile. But miles tell you where the truck WENT. They do not tell you where the truck WAS NOT.</p>
+      <p>Here is the math that deadhead reports miss entirely:</p>
+      <ul>
+        <li><strong>15 trucks times 24 hours times 30 days</strong> equals 10,800 total available truck-hours per month.</li>
+        <li><strong>At 65 percent utilization</strong>, trucks are only moving for 7,020 hours. The remaining 3,780 hours are idle.</li>
+        <li><strong>At seventy five dollars per hour</strong> in lost revenue opportunity (conservative estimate — most fleets lose more), those 3,780 idle hours equal roughly two hundred eighty three thousand five hundred dollars in missed revenue per month.</li>
+        <li><strong>That is 3.4 million dollars per year</strong> in revenue your trucks COULD have produced if they were moving instead of sitting.</li>
+      </ul>
+      <p>And the deadhead report says everything is fine — because a sitting truck shows zero miles. Zero miles means zero deadhead. The metric that is supposed to catch fleet inefficiency is blind to its biggest component.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Deadhead tracks empty MOVING. Utilization tracks NOT MOVING.</strong> You need both. Deadhead catches the miles your trucks run without a load. Utilization catches the hours your trucks sit without moving. Together, they form the most complete fleet efficiency analysis available for free. Without utilization tracking, you are managing half of your waste problem.</p>
+      </div>
+
+      <h2>The free fleet utilization tracker spreadsheet</h2>
+      <p>The tracker is a Google Sheets workbook with four tabs that you can copy and start using today. No macros. No integrations. Just data entry and automatic calculations.</p>
+
+      <h3>Tab 1: Per-Truck Daily Log</h3>
+      <p>One row per truck per day. Columns include:</p>
+      <ul>
+        <li><strong>Truck ID and driver name</strong> — so you can spot driver-specific utilization patterns.</li>
+        <li><strong>Hours driving loaded</strong> — the hours that generate revenue.</li>
+        <li><strong>Hours driving empty</strong> — deadhead miles converted to hours (deadhead is still MOVING — it counts toward utilization).</li>
+        <li><strong>Hours at shipper or receiver</strong> — detention that eats into available driving hours.</li>
+        <li><strong>Hours waiting for dispatch</strong> — the single largest idle-time category for most small fleets. Dispatcher overwhelmed, load board slow, or no loads available.</li>
+        <li><strong>Hours in maintenance</strong> — scheduled PMs and unscheduled repairs. A truck in the shop is an idle truck.</li>
+        <li><strong>Hours driver off-duty or HOS exhausted</strong> — mandatory rest, but if it happens mid-route because of poor planning, it is a utilization problem.</li>
+        <li><strong>Total utilization rate</strong> — auto-calculated: (loaded hours plus empty hours plus detention hours) divided by 24, times 100. A truck that drove 14 hours and spent 3 hours at a dock has 71 percent utilization for that day.</li>
+      </ul>
+
+      <h3>Tab 2: Fleet Dashboard</h3>
+      <p>Auto-populated from the daily log. Shows at a glance:</p>
+      <ul>
+        <li><strong>Utilization by truck</strong> — ranked best to worst. Which three trucks are dragging down your average?</li>
+        <li><strong>Utilization by day of week</strong> — are Mondays worse than Wednesdays? That tells you something about your dispatch load distribution.</li>
+        <li><strong>Utilization by driver</strong> — some drivers hustle, others wait. The dashboard makes it visible.</li>
+        <li><strong>Monthly trend</strong> — is utilization improving or getting worse? A line chart that updates automatically.</li>
+      </ul>
+
+      <h3>Tab 3: Idle-Time Root Cause Analysis</h3>
+      <p>The five categories that consume your idle hours, broken down by truck and by week:</p>
+      <ul>
+        <li><strong>Dispatch lag</strong> — time between completing one load and getting assigned the next. The fix: load-board automation, pre-booked reloads, or a dedicated after-hours dispatcher.</li>
+        <li><strong>Shipper or receiver delay</strong> — detention time that you may not be billing. The fix: detention tracking system (see related reading below) plus data to renegotiate with chronic offenders.</li>
+        <li><strong>Maintenance</strong> — scheduled PMs are fine. Unscheduled repairs that happen during peak demand window are a scheduling problem, not a maintenance problem.</li>
+        <li><strong>HOS exhaustion</strong> — driver ran out of hours before reaching a reload point. The fix: route planning that accounts for Hours of Service limits before dispatch assigns the load.</li>
+        <li><strong>Dead zone or no freight</strong> — the truck is in a lane with zero backhaul demand. The fix: lane diversification or repositioning empty (which shows up as deadhead, not idle — the two metrics connect here).</li>
+      </ul>
+
+      <h2>The five reaons your trucks sit idle</h2>
+      <p>Each root cause has a different fix. The tracker tells you WHICH root cause dominates — so you apply the right fix instead of guessing.</p>
+
+      <h3>1. Dispatch lag — the biggest lever for small fleets</h3>
+      <p>When one dispatcher manages fifteen trucks using DAT, Truckstop, and a whiteboard, the time between loads grows. A dispatcher who takes forty five minutes to find and assign a reload creates forty five minutes of idle time per truck per load. Across fifteen trucks running two loads each per day, that is twenty two hours of idle time per day — purely from dispatch lag.</p>
+      <p><strong>The fix:</strong> Load-board automation tools that pre-filter loads by lane and rate, auto-alerts for backhauls matching your equipment, and a pre-booked reload target (every truck should have its next load assigned before it drops the current one). The dispatcher overwhelm guide in related reading covers this in depth.</p>
+
+      <h3>2. Shipper delays — the one you can invoice</h3>
+      <p>Detention at docks is the only idle-time category that can generate revenue. Most small fleets do not bill detention consistently because they do not track it consistently. The tracker logs every detention hour — so you have data to invoice, and data to identify which shippers are chronic offenders.</p>
+
+      <h3>3. Maintenance timing — the schedule problem</h3>
+      <p>A truck in for a PM during peak freight demand is a utilization loss. A truck in for an unscheduled repair because the PM was skipped to chase revenue is an even bigger utilization loss. The tracker shows maintenance hours by day — overlay that with your revenue-per-day data and you can see whether your maintenance schedule is costing you more than it is saving you.</p>
+
+      <h3>4. HOS exhaustion — the planning failure</h3>
+      <p>A driver who runs out of hours at 2 PM two hundred miles from the nearest reload is not a driver problem — it is a dispatch planning problem. The tracker flags patterns: which drivers consisently exhaust hours mid-route, and on which lanes. That data tells dispatch to stop assigning 700-mile loads to drivers with nine hours remaining.</p>
+
+      <h3>5. Dead zones — the lane problem</h3>
+      <p>Some lanes have zero backhaul demand. A truck that delivers into a dead zone will sit — or deadhead out. The utilization tracker quantifies EXACTLY how many hours each dead zone costs you per month. That number pays for the empty repositioning miles, or it tells you to stop accepting loads into that lane at current rates.</p>
+
+      <h2>The utilization-versus-deadhead decision matrix</h2>
+      <p>Once you have both metrics — utilization rate from this tracker and deadhead percentage from the deadhead tracker — you can place your fleet into one of four quadrants and know exactly what to fix first:</p>
+
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr><th>Quadrant</th><th>Utilization</th><th>Deadhead</th><th>Diagnosis</th><th>Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Optimized</strong></td><td>High (80%+)</td><td>Low (&lt;12%)</td><td>Your fleet is running efficiently. Monitor and maintain.</td><td>Protect margins. Do not over-expand into lanes that will disrupt this balance.</td></tr>
+            <tr><td><strong>Ruting problem</strong></td><td>High (80%+)</td><td>High (16%+)</td><td>Trucks are moving — but too much of the movement is empty. You need backhuls.</td><td>Use deadhead tracker lane heatmap. Invest in backhaul relationships. Raise rates on empty backhaul lanes.</td></tr>
+            <tr><td><strong>Dispatch problem</strong></td><td>Low (&lt;70%)</td><td>Low (&lt;12%)</td><td>Trucks are sitting between loads. Dispatch is the bottleneck.</td><td>Automate load-board searching. Add a dispatcher or after-hours coverage. Speed up reload assignment to under 30 minutes.</td></tr>
+            <tr><td><strong>Both broken</strong></td><td>Low (&lt;70%)</td><td>High (16%+)</td><td>Your fleet has both idle-time and empty-mile problems. Fix utilization FIRST — it recovers more revenue per improvement point.</td><td>Fix idle time (dispatch, shipper delays). Once utilization is above 75 percent, then address deadhead. Fixing both simultaneusly dilutes effort.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>The fix-it-this-week priority list</h2>
+      <p>Not all trucks contribute equally to your utilization problem. The tracker's fleet dashboard ranks trucks by idle hours. In most fleets, the three worst trucks represent roughly seventy percent of the idle-time gap. Fix those three first.</p>
+
+      <div class="checklist">
+        <h3>Week 1 action plan</h3>
+        <ol>
+          <li><strong>Set up the tracker</strong> — two hours. Enter last week's data to establish a baseline utilization rate.</li>
+          <li><strong>Identify your worst three trucks</strong> — the ones with the most idle hours. The dashboard auto-ranks them.</li>
+          <li><strong>Root-cause each one</strong> — is the problem dispatch lag, shipper delay, or something else? The root cause analysis tab tells you.</li>
+          <li><strong>Apply ONE fix per truck</strong> — do not try to fix everything at once. If truck 14 is idle because of dispatch lag, assign the dispathcer a dedicated reload-search window for that truck.</li>
+          <li><strong>Re-measure Friday afternoon</strong> — did utilization improve? The weekly trend chart shows you.</li>
+        </ol>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequenly asked questions</h2>
+
+        <h3>What is a good fleet utilization rate for a small trucking company?</h3>
+        <p>A good fleet utilization rate for a small trucking fleet is 80 to 85 percent — meaning trucks are moving for 80 to 85 percent of available hours. Below 75 percent indicates a serious idle-time problem. The national average for small fleets is roughly 65 to 70 percent, which means most fleet owners are losing twenty to thirty percent of potential revenue to idle trucks. Every percentage point improvement on a 15-truck fleet is worth roughly four thousand three hundred dollars per month.</p>
+
+        <h3>How is fleet utilization rate calculated for trucking?</h3>
+        <p>Fleet utilization rate equals total hours trucks spent driving (loaded plus empty) divided by total available hours, multiplied by 100. Available hours equal number of trucks times 24 hours times days in the period. For example: a 15-truck fleet with 10,800 available hours in a 30-day month where trucks drove 7,020 hours has a 65 percent utilization rate. The remaining 3,780 hours are idle.</p>
+
+        <h3>What is the difference between deadhead tracking and utilization tracking?</h3>
+        <p>Deadhead tracking measures EMPTY MILES — how many miles trucks run without a load generating revenue. Utilization tracking measures IDLE HOURS — how many hours trucks sit not moving at all. A truck sitting in the yard for eight hours shows zero miles and is invisible to deadhead reports. You need both metrics for complete fleet efficiency visibility.</p>
+
+        <h3>How much does fleet utilization software cost for a small trucking company?</h3>
+        <p>Commercial fleet utilization and telematics software costs two hundred to eight hundred dollars per month per truck. For a 15-truck fleet, that is three thousand to twelve thousand dollars per month. The free spreadsheet in this guide costs zero dollars and takes roughly two hours to set up, providing the same analysis — per-truck dashboards, root cause breakdowns, and decision matrixes — without the monthly subscription.</p>
+
+        <h3>What should I fix first — deadhead or utilization?</h3>
+        <p>Almost always utilization. A one percent improvement in utilization on a 15-truck fleet recovers roughly four thousand three hundred dollars per month. Deadhead improvement typically yields less per percentage point. The utilization-versus-deadhead matrix in this guide tells you exactly which to fix based on your specific numbers. For most small fleets with utilization below 75 percent, fixing idle time generates faster ROI than chasing empty miles.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/trucking-deadhead-reduction-empty-miles-tracker-free/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <div class="title">Cut Empy Miles: Free Deadhead Tracker for Fleets</div>
+          </a>
+          <a class="related-card" href="/blog/trucking-load-to-truck-matching-spreadsheet-free/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <div class="title">Free Load-Matching System: Find 56K Hiding on Your Whitebord</div>
+          </a>
+          <a class="related-card" href="/blog/trucking-dock-scheduling-spreadsheet-small-fleet/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <div class="title">Fleets Lose 32K/Yr to Dock Wait Time — The One-Page Fix</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Idle trucks do not have to be the cost of doing busines</h2>
+        <p>You are already collecting the data. The tracker just organizes it so you can see which three trucks to fix first. If your fleet utilization is below 75 percent, the fastest way to add revenue is not more trucks or more loads — it is making the trucks you already own move more hours per day. And if you want help building a dispatch automtion system that cuts reload lag from forty five minutes to five, we build those systems for small fleets.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-deadhead-reduction-empty-miles-tracker-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Cut Empty Miles: Free Deadhead Tracker for Small Fleets</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-load-to-truck-matching-spreadsheet-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Trucks Matched Suboptimally — Here Is the Free Load-Matching System</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/truck-fleet-maintenance-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Fleet Maintenance Tracking: The 5-Level System for Small Fleets</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-driver-retention-turnover-tracker-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Driver Retention: Free Tracker for Small Fleets</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    &copy; 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
