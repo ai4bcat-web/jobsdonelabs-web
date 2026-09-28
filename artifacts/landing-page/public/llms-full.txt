@@ -1835,6 +1835,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Machinists Spent 47 Hours Hunting for Tools — Free Tool Crib Inventory Spreadsheet
+
 Track Machine Downtime Without Software — The Free System for Small Manufacturers
 
 Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufacturers
@@ -10758,6 +10760,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Machinists Spent 47 Hours Hunting for Tools — Free Tool Crib Inventory Spreadsheet
+
 Track Every Overtime Dollar by Job and Machine — The Free Spreadsheet That Shows Where Your OT Is Going
 
 Your Second Shift Scrapped 40 Parts Because the Whiteboard Said Nothing — Free Shift Handover Log
@@ -12852,6 +12856,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Your Machinists Spent 47 Hours Hunting for Tools — Free Tool Crib Inventory Spreadsheet
 
 Your Shop Floor Runs at 97% Yield — But the Accountant's Scrap Report Says 82%. Here's the Free Quality Metrics Tracker.
 
@@ -23952,6 +23958,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Machinists Spent 47 Hours Hunting for Tools — Free Tool Crib Inventory Spreadsheet
+
 You're Losing $80,000 a Year Quoting Jobs by Feel
 
 Stop Typing Sales Orders Twice — Free QuickBooks-to-Shop-Floor Sync Playbook
@@ -27233,6 +27241,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Machinists Spent 47 Hours Hunting for Tools — Free Tool Crib Inventory Spreadsheet
+
 You Spent $800,000 on Subcontractors Last Year — The Free Subcontractor Scorecard (Construction)
 
 Suppliers Are Late Again and It's Costing $1,000/Week — How to Track Supplier Delivery Without Software
@@ -27251,6 +27261,193 @@ Book your free audit →
 
 
 URL: https://www.jobsdonelabs.ai/blog/supplier-quality-scorecard-manufacturing-spreadsheet-free/
+
+---
+
+# Free Tool Crib Inventory & Check-Out Spreadsheet
+
+Manufacturing
+
+Your Machinists Spent 47 Hours Last Year Hunting for Tools That Were Sitting in Someone Else's Toolbox. Here Is the Free Tool Crib Spreadsheet That Shows You Where Every Tool Is Right Now.
+
+Ryne Bandolik
+
+· Jobs Done Labs · September 28, 2026
+
+Key takeaways
+
+A 15-person machine shop loses roughly twelve thousand to eighteen thousand dollars every year in misplaced tools, overnight replacement orders, and production downtime while machinists hunt for the right cutter. This free tool crib spreadsheet replaces the chaos with a simple check-out and check-in system that shows you where every tool is, who has it, when it is due back, and whether you need to reorder — a system that pays for itself on the very first prevented production stoppage.
+
+The eighteen-thousand-dollar tool graveyard
+
+The math on misplaced tools hits harder than most shop owners expect. A single carbide end mill that walks away from the tool crib at forty dollars is not a forty-dollar loss. The replacement costs forty dollars, overnight shipping adds eighty-five, and the machine sits idle for two hours while the operator waits — at seventy-five dollars per hour of lost production. That is a one-hundred-twenty-five-dollar problem from a single missing tool.
+
+Scale that across a 15-person shop with two hundred plus cutting tools, inserts, collets, and gauges in circulation, and the annual bleed reaches twelve thousand to eighteen thousand dollars. Employees grab a new tool instead of finding the existing one because there is no system telling them where the existing one lives. Expedited replacement orders happen monthly because a tool breaks mid-job and nobody tracked that the spare drawer was empty. Production stops while a machinist walks the floor asking "anybody seen the half-inch carbide rougher?"
+
+Enterprise CMMS platforms like Fiix, MaintainX, and UpKeep solve this problem for large plants — at thirty to sixty dollars per user per month, plus implementation. A 15-person shop looking at a nine-hundred-dollar monthly software bill will keep using the Post-it note system instead. The spreadsheet below bridges that gap: zero monthly cost, one-time setup of roughly two hours, five minutes of weekly maintenance.
+
+The free tool crib inventory spreadsheet
+
+This is not a generic asset tracking log. It is built specifically for a manufacturing tool crib, with the fields and views that matter when a job is waiting on a tool. The spreadsheet tracks every tool across six dimensions:
+
+What the spreadsheet tracks, per tool
+
+Tool ID and description
+
+— unique identifier plus what the tool actually is (half-inch carbide end mill, ER32 collet, M6 thread gauge)
+
+Location
+
+— which drawer, cabinet, or shelf the tool lives in when it is not checked out
+
+Current holder
+
+— which employee has the tool right now, with the job number they are using it on
+
+Condition on return
+
+— sharp, worn, damaged, or needs calibration. This triggers the replacement-or-repair workflow before the next checkout
+
+Calibration due date
+
+— for gauges, micrometers, and any tool that drifts out of tolerance over time. Block checkout if the calibration window has closed
+
+Reorder point and supplier
+
+— minimum quantity before the cell turns red. Supplier name, part number, unit cost, and lead time all in one row
+
+The dashboard view:
+
+Open the sheet on Monday morning and see, in one glance: tools currently checked out and by whom, overdue returns (past the expected return time), items below reorder point, and calibration deadlines approaching in the next 30 days. That five-minute Monday review replaces the hour of floor-walking that used to kick off every week.
+
+The check-out and check-in system
+
+Every tool movement gets a one-line entry. Machinist walks up to the crib, takes a tool, logs three things: tool ID, their name, and the job number. Thirty seconds. When they return it, they log one more thing: condition. Another fifteen seconds.
+
+The condition field is where the spreadsheet earns its keep. If a half-inch end mill comes back marked "worn," the crib manager knows to order a replacement before the next job needs it — not after the tool snaps mid-cut and production halts. If a micrometer comes back past its calibration date, the checkout is blocked and the gauge goes to the calibration shelf instead of back into circulation.
+
+The system also catches a quieter problem: tools that leave the crib and never come back. When Friday rolls around and the "currently checked out" column shows three tools still out since Tuesday, the foreman has a short list of exactly which tools to recover and from whom. Before the spreadsheet, those three tools were simply gone — written off as "somebody probably needed them" and silently replaced.
+
+The reorder trigger dashboard
+
+Running out of a consumable tool mid-production is a self-inflicted wound. The shop knows exactly how many inserts, end mills, and drill bits it burns through each month — but that knowledge lives in the foreman's head, not in a system. When the foreman is out sick, the replacements do not get ordered, and a job stalls.
+
+The reorder dashboard removes the single point of failure. Every tool has a minimum quantity. When stock drops below the threshold, the row turns red. The weekly review takes five minutes: scan for red rows, place the orders, reset the flags. No more "I was going to tell you we ran out of the quarter-inch carbide inserts."
+
+Real-world example:
+
+A 20-person CNC shop in Ohio ran through its full stock of a specialty chamfer mill during a large production run because no one noticed the drawer was down to two units — the last two broke within an hour of each other. The replacement had a five-day lead time. The job shipped four days late. A reorder flag at five units would have caught the shortage with a full week of buffer.
+
+The tool cost by job report
+
+Most shops know their labor cost per job and their material cost per job. Almost none know their tooling cost per job — which tools did this job consume, and what did they cost? The check-out system makes this visible for the first time.
+
+Every tool checkout is tagged with a job number. At month-end, the spreadsheet totals tool cost per job and divides by job revenue. The report surfaces the jobs where tooling is eating margin: a job that generates five thousand dollars in revenue but burns four hundred dollars in consumable tooling is running at eight percent tool cost when the shop average is three percent. That is a process problem — wrong tool grade, wrong speeds and feeds, or a part design that chews through cutters — and it was invisible before tool-level tracking existed.
+
+This data also informs tool purchasing decisions. If Job 1047 destroyed fourteen end mills across three runs, upgrading from an uncoated carbide to an AlTiN-coated grade that costs thirty percent more but lasts four times longer changes the math entirely. The spreadsheet gives you the numbers to make that call with a purchase order, not a guess.
+
+Why this beats the CMMS on value for small shops
+
+Capability
+
+Enterprise CMMS
+
+This Spreadsheet
+
+Monthly cost, 15 users
+
+Four hundred fifty to nine hundred dollars
+
+Zero dollars
+
+Tool check-out and check-in
+
+Yes, with barcode scanning
+
+Yes, manual entry (thirty seconds)
+
+Condition tracking on return
+
+Yes
+
+Yes
+
+Calibration due-date alerts
+
+Yes
+
+Yes, conditional formatting
+
+Reorder-point dashboard
+
+Yes, with auto-PO generation
+
+Yes, manual review (five minutes per week)
+
+Job-level tool cost allocation
+
+Often an add-on module
+
+Built in from day one
+
+Setup time
+
+Days to weeks with implementation
+
+Two to three hours
+
+Training required
+
+Vendor-led sessions
+
+Fifteen-minute walkthrough
+
+The CMMS is the right answer for a hundred-person plant with a dedicated maintenance department and a procurement team. For the shop where the owner is also the quoting engineer, the production scheduler, and the person who orders cutting tools, the spreadsheet delivers the same core value — visibility into where tools are and what they cost — without the SaaS overhead.
+
+Frequently asked questions
+
+How much money do small machine shops lose to misplaced tools?
+
+A 15-person machine shop typically loses twelve thousand to eighteen thousand dollars per year in misplaced tools, replacement orders with overnight shipping, and production downtime while machinists hunt for tools. A single forty-dollar end mill that cannot be found becomes a one-hundred-twenty-five-dollar loss: forty for the replacement, eighty-five for overnight shipping, and two hours of machine downtime at seventy-five dollars per hour.
+
+What features should a tool crib spreadsheet include?
+
+A manufacturing tool crib spreadsheet needs five core features: tool ID and description tracking, employee check-out and check-in logging, tool condition assessment on return, calibration due-date monitoring, and reorder-point alerts. Advanced features include per-job tool cost allocation and a dashboard showing overdue returns, low stock, and calibration deadlines in one view.
+
+Do I need a CMMS for tool crib management?
+
+No. Enterprise CMMS platforms like Fiix, MaintainX, and UpKeep charge thirty to sixty dollars per user per month and are overkill for shops with fewer than fifty employees. A well-designed free spreadsheet with check-out and check-in tracking, condition monitoring, and reorder alerts handles tool crib management for small manufacturing teams without the monthly SaaS cost.
+
+How does tool cost allocation by job work?
+
+Every time a tool is checked out, the spreadsheet logs the job number alongside the tool ID and employee name. At month-end, total tooling cost per job is compared against job revenue. This identifies which jobs consume disproportionate tooling — flagging process problems and upgrade opportunities that were invisible without per-job tracking.
+
+How long does it take to set up a tool crib tracking system?
+
+Initial setup takes about two to three hours: catalog every tool with a unique ID, description, location, and minimum quantity. After setup, daily check-out and check-in logging takes each machinist roughly thirty seconds per tool. The reorder dashboard review takes the shop foreman approximately five minutes per week.
+
+Stop losing tools — and thousands of dollars — starting this week
+
+Jobs Done Labs builds custom automation that connects your tool crib spreadsheet to your purchasing system, your job schedule, and your accounting software — so reorders trigger automatically and tool costs hit the right job P&L without any manual data entry. If you are ready to move from spreadsheet to system, we handle the build.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Manufacturing Scrap & Waste Reduction Tracking Spreadsheet (Free)
+
+Machine Downtime Tracking System for Small Manufacturers (Free Spreadsheet)
+
+ISO 9001 Calibration Tracking Spreadsheet for Manufacturers (Free)
+
+Free Supplier Quality Scorecard Spreadsheet for Small Manufacturers
+
+Small Manufacturer Inventory Management System (Free Spreadsheet)
+
+
+URL: https://www.jobsdonelabs.ai/blog/tool-crib-mro-inventory-spreadsheet-small-manufacturing-free/
 
 ---
 
