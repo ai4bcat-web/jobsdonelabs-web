@@ -7780,6 +7780,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
+
 Stop Missing Customer Calls — The Real Cost, a Free Revenue Calculator, and 7 Fixes That Work for Any Service Business
 
 Losing Leads Because You Can't Respond Fast Enough? Here's How Contractors Fix It
@@ -9142,6 +9144,207 @@ URL: https://www.jobsdonelabs.ai/blog/fda-batch-record-lot-traceability-template
 
 ---
 
+# Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
+
+Home Services & Trades
+
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 2, 2026
+
+Key takeaways
+
+Your dispatcher is routing 8 techs on a whiteboard and you are losing 2 calls a day to drive time — at $250 per call that is $130,000 a year. This free dispatch spreadsheet gives you a daily schedule board with color-coded slots, tech-by-zone assignment, emergency call reservation, and a weekly efficiency dashboard. It replaces 80 percent of a $150/month SaaS dispatch tool at zero dollars and takes 30 minutes to set up.
+
+The whiteboard math
+
+A dispatcher routing 8 technicians across a metro area without zones or software makes two expensive decisions every hour: which tech to send and in what order. Gut-feel routing adds an average of 15 minutes of windshield time per call. Across 40 calls a day, that is 10 hours of excess drive time — at $150 per hour loaded cost, you are burning $1,500 a day on windshields. Add two missed calls because the closest tech was 25 minutes away and the customer called someone else, and you are at $2,000 a day. Multiply by 250 working days, and the whiteboard is costing you half a million dollars a year in preventable waste.
+
+The real cost of no dispatch system
+
+An 8-tech HVAC shop doing 40 calls a day loses 10 hours of technician time to inefficient routing. At $150/hour loaded cost, that is $1,500/day. Two missed calls at $250 each adds $500. Total preventable loss: $2,000 per day, $500,000 per year. The free spreadsheet in this guide costs nothing and cuts routing waste by 30 to 40 percent in the first month.
+
+The free field service dispatch spreadsheet — 5 tabs, one system
+
+This is not a generic calendar template. The spreadsheet is built specifically for home service dispatch: HVAC, plumbing, electrical, and any trade that runs multiple techs across a service area. Five tabs replace the whiteboard, the Post-it notes, the text messages, and the gut-feel routing.
+
+Tab
+
+What it replaces
+
+What it does
+
+Daily Schedule Board
+
+Whiteboard and paper route sheets
+
+Each technician gets a row. Each time slot gets a cell. Color-coded: white for scheduled, blue for en route, green for on site, gray for complete. One glance tells you where every tech is.
+
+Tech-by-Zone Assignment
+
+Dispatcher gut feel
+
+Divide your service area into 3 to 5 geographic zones. Assign each technician a primary zone. Jobs in that zone land on that tech first. Drive time drops 30 to 40 percent in the first month.
+
+Emergency Slot Reservation
+
+Frantic 8am phone-route scramble
+
+Reserve 1 to 2 open slots per zone each day. If an emergency call comes in at 11am, the slot is waiting. If it is still open at 2pm, fill it from the backlog. No more bumping scheduled customers for emergencies.
+
+Drive Time Estimator
+
+Guessing
+
+Enter job addresses per zone. The estimator calculates average drive time between jobs in that zone. After one month of data, you know which zones are tight (10-12 minutes between stops) and which are sprawled (20+ minutes).
+
+Weekly Dispatch Dashboard
+
+No visibility at all
+
+Calls per tech per day, average drive time, on-time arrival percentage, emergency response time, overtime trend, revenue per tech per day. Every KPI a dispatcher needs, updated automatically as you fill the board.
+
+The tech-by-zone assignment system
+
+Most small shops assign jobs by "who is free next." That sounds logical — it keeps every tech busy. But it ignores geography. A tech finishing a job on the north side of town gets assigned a call on the south side because the south-side tech is still on their previous job. Now both techs are crisscrossing the metro area, burning fuel and time.
+
+Zone assignment fixes this structurally.
+
+Instead of matching the next free tech to the next waiting call, you match every job to the zone it lives in, and every technician to a primary zone. Here is how to set it up:
+
+Plot your last 90 days of job addresses on a map.
+
+Drop a pin for every service call. Look for natural clusters — neighborhoods, suburbs, industrial parks where you get the most calls.
+
+Draw zone boundaries along natural dividers.
+
+Highways, rivers, county lines. You want 3 to 5 zones for an 8-tech shop. Each zone should have roughly equal call volume — check your pin map to confirm.
+
+Assign each technician a primary zone.
+
+Senior techs get the highest-volume zones. Newer techs get secondary zones or act as floaters covering PTO and sick days.
+
+Schedule zone-first, availability-second.
+
+When a call comes in, check the zone first. If the zone tech is available, they get it. If they are booked, the floater or adjacent-zone tech takes it — but the default is zone-first.
+
+Measure after one month.
+
+Average drive time should drop 30 to 40 percent. On-time arrival rate should rise above 85 percent. If a zone is not performing, redraw the boundaries.
+
+The Tab 2 Zone Assignment Board in the spreadsheet tracks all of this. Each zone lists its primary tech, secondary/backup tech, average drive time, on-time percentage, and call volume. When a zone's on-time rate dips, you see it immediately — not three months later when a customer survey mentions it.
+
+The emergency call slot reservation
+
+Every HVAC shop knows the 4pm Friday no-cool call. Or the 7am Monday no-heat call in January. Emergencies are a fact of life in field service. The problem is not the emergencies — it is that most shops handle them by bumping scheduled customers, creating a cascade of reschedules that derails the entire week.
+
+The fix is simpler than it sounds: reserve the slots before you need them.
+
+Each zone gets 1 to 2 reserved emergency slots per day. On the dispatch board, these slots are marked in orange and left empty. If no emergency call comes in by 2pm, you release the slot and fill it from the day's backlog — warranty callbacks, quote follow-ups, or a preventive maintenance visit that is coming due. The customer who was scheduled for 2pm never gets bumped because the 2pm slot was never booked in the first place.
+
+One 12-tech plumbing shop using this system reported that emergency bumping dropped from 8 to 10 reschedules per week to 1 or 2. The weekly reschedule cascade — where a bumped Monday customer pushes into Tuesday, which pushes into Wednesday, which becomes a disaster on Friday — simply stopped happening. The reserved slots absorbed the emergencies, and the scheduled customers stayed scheduled.
+
+The dispatch efficiency dashboard
+
+Most small shops measure dispatcher performance by one metric: "did the calls get done?" But "done" hides a lot of waste. A tech who drives 3 hours to complete 4 calls looks the same as a tech who drives 1 hour to complete 6 calls — both got their calls done. The dashboard surfaces what "done" actually cost.
+
+Six metrics the dashboard tracks every week
+
+Calls per tech per day
+
+— Target: 5 to 7 for HVAC, 3 to 5 for plumbing, 5 to 8 for electrical. Below-target techs may have a routing problem, a skill gap (taking too long on jobs), or a zone with too much drive time.
+
+Average drive time between jobs
+
+— Target: under 18 minutes in suburban zones, under 25 minutes in rural zones. If a zone is consistently above target, the boundaries are wrong or the tech is not zone-staying.
+
+On-time arrival percentage
+
+— Target: 85 percent or higher. Anything below 80 percent tells you the schedule is overbooked or drive-time estimates are too optimistic.
+
+Emergency response time
+
+— Target: under 60 minutes from call to on-site. If it is consistently above 60, the emergency slots are in the wrong zones or there are not enough of them.
+
+Overtime hours per tech
+
+— Target: under 5 hours per week. Rising overtime means the schedule is overloaded — either add a tech or reduce daily call volume per tech.
+
+Revenue per tech per day
+
+— This is the north star. If routing improves but revenue does not, you are routing efficiently to the wrong jobs. Use this to identify which zones and which call types generate the most revenue and prioritize them.
+
+The first 30 minutes
+
+You do not need to implement all five tabs on day one. Most of the value comes from the Daily Schedule Board and the Zone Assignment Board — those two tabs alone cut routing waste by 25 to 30 percent. Here is the 30-minute setup sequence:
+
+Minutes 1 to 10: Set up the Daily Schedule Board.
+
+List your technicians down the left column. Across the top, create time slots (8am to 9am, 9am to 10am, and so on through 4pm). Fill in today's scheduled jobs. Color-code them as you go: scheduled is white, en route is blue, on site is green, complete is gray.
+
+Minutes 11 to 20: Draw your zone map.
+
+Pull up Google Maps. Drop pins for the job addresses you serviced this week. Draw 3 to 5 rough zones around the clusters. Do not overthink the boundaries — you will adjust them after one month of data.
+
+Minutes 21 to 25: Assign techs to zones.
+
+Write each technician's name next to their zone on the Zone Assignment Board. The senior tech gets the busiest zone.
+
+Minutes 26 to 30: Reserve tomorrow's emergency slots.
+
+Mark 1 to 2 slots per zone as emergency reserves on tomorrow's board. Leave them empty. At 2pm tomorrow, if they are still empty, fill them from the backlog.
+
+That is it. Thirty minutes, and you have a dispatch system that replaces the whiteboard, the Post-it notes, and the gut-feel routing. In a month, measure the drive-time reduction and see whether you are getting back 8 to 10 hours of technician time per day. If you are, the spreadsheet just paid for itself about 1,800 times over.
+
+Frequently asked questions
+
+How do I schedule field service technicians efficiently?
+
+Efficient technician scheduling has three parts: zone-based routing (divide your service area into 3 to 5 zones, assign technicians to primary zones so drive time drops 30 to 40 percent), a daily dispatch board that shows every technician's time slots with color-coded status, and an emergency-call reservation system that holds 1 to 2 open slots per zone until mid-afternoon. The free dispatch spreadsheet in this guide implements all three in one system.
+
+How do I route HVAC technicians to minimize drive time?
+
+Minimize HVAC technician drive time with zone assignment: divide your metro area into geographic zones, assign each technician a primary zone, and schedule jobs within that zone sequentially. For a typical 8-tech shop, zone-based routing saves about 10 hours per day in aggregate windshield time. The spreadsheet has a tech-by-zone assignment board and a drive-time estimator so you can see the savings before you implement.
+
+What is the best free field service scheduling tool?
+
+For a shop with 1 to 3 technicians, a simple Google Calendar works. For 4 to 12 technicians, a structured dispatch spreadsheet (like the free one in this guide) with daily boards, zone assignments, and emergency-slot reservations replaces 80 percent of what paid SaaS tools do at zero dollars per month. For larger operations with 15 or more technicians, a paid routing tool like OptimoRoute or ServiceTitan becomes necessary because manual scheduling cannot keep up with the dispatch volume.
+
+How many calls per day should a field service technician handle?
+
+A field service technician should handle 4 to 8 calls per day depending on trade. HVAC technicians typically run 4 to 6 calls with drive time included. Plumbers average 3 to 5 calls because jobs run longer. Electricians handle 5 to 7 shorter calls. Target 6 to 7 billable hours out of an 8-hour shift, with the remaining 1 to 2 hours for drive time, parts runs, and admin.
+
+How do I set up service zones for my HVAC business?
+
+Plot every job address from the last 90 days on a map, draw natural boundaries (highways, rivers, county lines) that group addresses into 3 to 5 clusters of roughly equal volume, and assign each technician a primary zone. After one month, measure: drive time should drop 30 to 40 percent, on-time arrival rate should rise above 85 percent, and emergency response time should fall below 60 minutes.
+
+Stop routing on a whiteboard
+
+Your dispatcher is losing 2 calls a day to drive time. This spreadsheet fixes the routing — but the phone system that captures those calls, the lead follow-up that converts them, and the invoicing that gets you paid are also leaking revenue. Book a free 30-minute audit and we will map every leak in your service business, from dispatch to deposit.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You Have 3 No-Shows Today and Your Techs Are Standing Around at $150 an Hour — The Free Prevention System That Recovers $45,000 a Year
+
+Your Tech Drove 45 Minutes Back to the Shop for a $12 Capacitor — The Free Truck Stock System That Keeps Every Part on the Truck
+
+Your After-Hours Phone Rings 22 Times a Night and You Answer 4 of Them — The Free Emergency Call Triage System That Captures Every Lead
+
+You Installed 200 Systems and You Do Not Know Which Ones Are About to Fail — The Free Lifecycle Tracker That Makes Every Expiring Warranty a Replacement Sale
+
+Your Office Manager Takes 4 Hours to Respond to a Lead That Your Competitor Called Back in 6 Minutes — The Free Lead Response System
+
+
+URL: https://www.jobsdonelabs.ai/blog/field-service-dispatch-scheduling-spreadsheet-free/
+
+---
+
 # Freight Claim System That Gets Small Carriers Paid
 
 Logistics & Trucking
@@ -9840,6 +10043,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
 
 Your Tech Made a 40-Minute Parts Run for a $6 Fitting — The Free Truck Stock Tracker That Ends It
 
@@ -23415,6 +23620,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
 
 Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix
 
