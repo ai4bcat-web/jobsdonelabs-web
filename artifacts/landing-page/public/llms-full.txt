@@ -11043,19 +11043,19 @@ URL: https://www.jobsdonelabs.ai/blog/job-site-safety-compliance-contractor-osha
 
 ---
 
-# Track Machine Downtime Without Software
+# Machine Downtime Tracking & Prevention
 
 Manufacturing
 
-Your Machines Keep Breaking Down and Nobody's Tracking It. Here's the $0 System That Tells You Exactly What's Costing You Money.
+Your Machines Keep Breaking Down and Nobody's Tracking It. Part 1 Shows You What's Costing You Money. Part 2 Stops the Breakdowns Before They Happen.
 
 Ryne Bandolik
 
-· Jobs Done Labs · August 8, 2026
+· Jobs Done Labs · Updated October 4, 2026
 
 Key takeaways
 
-A 10-machine shop with 2 hours/month of unmeasured downtime per machine is losing $36,000/year — and most shops underestimate their downtime by 3–6×. This guide gives you a complete $0 downtime tracking system in Google Sheets: operator logging with reason codes, automatic weekly Pareto analysis, simplified OEE tracking with 5 data points, and a structured improvement cadence. The system takes 2 hours to set up and 15 minutes/week to analyze. No CMMS, no software budget, no IT department required.
+This guide now has two parts. Part 1 (tracking): a 10-machine shop with 2 hours/month of unmeasured downtime per machine is losing $36,000/year — and most shops underestimate their downtime by 3-6x. The $0 Google Sheets system logs every stoppage with reason codes, runs weekly Pareto analysis, and tracks simplified OEE with 5 data points. Part 2 (prevention — NEW): a complete PM scheduling system — asset registry, interval-based due-date calculator, cost-of-deferral modeling that shows skipping a $200 oil change costs $15,000 in spindle failure, and a PM compliance dashboard. Together, tracking plus prevention forms the complete maintenance management resource. No CMMS, no software budget, no IT department required.
 
 The hidden cost of untracked downtime
 
@@ -11361,6 +11361,196 @@ The counterintuitive truth about downtime
 
 The shops with the worst downtime aren't the ones with the oldest machines — they're the ones that don't measure it at all. A 30-year-old Bridgeport with a well-executed PM schedule and systematic downtime tracking will outperform a brand-new 5-axis CNC that nobody's monitoring. The system is more important than the equipment.
 
+PART 2: Preventative Maintenance Scheduling
+
+Stop the Downtime Before It Happens
+
+Part 1 gave you the system to track every stoppage. Now Part 2 gives you the system to prevent those stoppages from happening in the first place. Together, tracking plus prevention is the complete maintenance management resource — the proactive half that turns your downtime data into a maintenance schedule that catches every service before it is overdue.
+
+The free PM scheduling system that catches every service before it is overdue
+
+A 15-machine shop has 15 different PM schedules. CNC #1 needs an oil change every 500 hours. CNC #2 needs spindle bearing inspection every 2,000 hours. The compressor needs a belt check monthly. The forklift needs hydraulic service quarterly. The HVAC needs filter changes biannually. Plus annual DOT and compliance inspections on any shop vehicles. If the shop runs 8,000 production hours per year and a critical machine goes down for 5 days because an oil change was missed, the cost is staggering: at $120/hour burden rate plus $8,000 in rush parts plus $5,000 in overtime to catch up on late customer orders, that is $15,000 to $25,000 in preventable downtime cost from one missed PM on one machine.
+
+The PM scheduling spreadsheet has four components that work together:
+
+The asset registry — know what you are maintaining
+
+Every machine goes into the registry with six fields:
+
+Machine Name
+
+— the operator-facing label ("CNC Mill #3," "Compressor — Main")
+
+Serial Number
+
+— from the manufacturer's data plate, for service calls and warranty claims
+
+Department
+
+— where the machine lives (Machining, Assembly, Finishing)
+
+Criticality
+
+— A (production stops if this machine is down — no backup), B (production slows but continues — alternate machine available), C (non-critical support equipment)
+
+Replacement Cost
+
+— what it costs to replace this machine if it is destroyed by neglect. This number makes the PM ROI real.
+
+Current Hour Meter
+
+— the running-hours reading at last check, for interval-based PMs
+
+The criticality rating drives priority. An A-rated machine with an overdue PM gets immediate attention. A C-rated machine with an overdue PM goes on next week's list. The hour-meter field is updated monthly — operators read the meter during the last shift of the month and enter it in the Sheet.
+
+The PM task library — every service, every machine, every interval
+
+For each machine, define every PM task with five fields:
+
+Task Description
+
+— specific and actionable ("Replace spindle oil and filter," not "Service spindle")
+
+Interval Type
+
+— Hours (running time), Cycles (parts produced), or Calendar (days since last service)
+
+Interval Value
+
+— the number (every 500 hours, every 90 days, every 10,000 cycles)
+
+Last Service Date
+
+— when this task was last completed
+
+Last Service Reading
+
+— the hour meter or cycle counter at the last service, for interval-based calculations
+
+The spreadsheet auto-calculates four fields that tell you exactly where you stand:
+
+Next Due Date
+
+— Last Service Date + Interval Value (in days). For hour-based intervals: ((Last Service Reading + Interval Value minus Current Hour Meter) divided by average daily hours) + Today.
+
+Due Status
+
+— OK (more than 14 days out), Upcoming (due within 14 days), or Overdue (past the due date). Color-coded green, yellow, red so the dashboard is scannable in 10 seconds.
+
+Days Overdue
+
+— negative means upcoming, positive means overdue. Zero means due today.
+
+Risk Level
+
+— combines Criticality and Due Status. A-Criticality + Overdue = Critical Risk (needs immediate attention). C-Criticality + Upcoming = Low Risk (schedule for next week).
+
+PM scheduling dashboard — what you check every Monday morning
+
+Overdue PMs
+
+— sorted by risk level. Any A-Criticality machine with an overdue PM gets a maintenance tech assigned today.
+
+Upcoming PMs This Week
+
+— tasks due in the next 7 days. Assign them to specific techs and specific shifts so they do not get lost in the daily chaos.
+
+PM Compliance Rate
+
+— this month: completed PMs divided by scheduled PMs, as a percentage. Target: 90%+. Track this monthly and share it at the all-hands meeting.
+
+The cost-of-deferral calculator — what skipping a PM actually costs
+
+Every PM task has a deferral cost, and the calculator makes it visible. The logic is straightforward: skipping a PM accelerates wear on a component. The component fails earlier than its expected life. The replacement cost plus the production downtime cost is the deferral cost. The formula:
+
+Deferral Cost = (Replacement Parts + Labor + Production Downtime Cost) x (Deferred Days / Expected Life Remaining)
+
+Worked example — CNC spindle oil change:
+
+PM cost: $200 (oil, filter, 1 hour of tech time).
+
+Replacement cost if spindle seizes: $18,000 (new spindle + labor + realignment).
+
+Production downtime: 4 days at $150/hour, 8 hours/day = $4,800.
+
+Total failure cost: $18,000 + $4,800 = $22,800.
+
+Expected life with regular PMs: 15,000 hours (~7.5 years at 2,000 hours/year).
+
+If PM is deferred by 500 hours (3 months), bearing wear accelerates and the spindle fails at 6,000 hours instead of 15,000.
+
+Deferred Days equivalent: 500 hours / 8 hours per day = 62.5 days.
+
+Expected Life Remaining at last PM: 15,000 hours / 8 hours per day = 1,875 days.
+
+Deferral Cost = $22,800 x (62.5 / 1,875) = $760.
+
+The $200 oil change deferred 3 months costs $760 in accelerated failure — a
+
+3.8:1 penalty
+
+on the deferred PM. And that is the conservative estimate. In practice, accelerated wear is nonlinear — the 500-hour deferral may reduce spindle life by far more than 500 hours. The calculator uses conservative linear estimates so it never overstates the risk.
+
+The cost-of-deferral number is what changes behavior. Telling a supervisor "do not skip PMs" is a rule. Showing them "skipping this $200 oil change will cost you $760 in accelerated spindle failure — and that is the best-case scenario" is a decision framework. The supervisor can still defer the PM if production pressure demands it — but now they know the price tag.
+
+The shift from reactive to proactive — how the PM system connects to the downtime tracker
+
+Part 1 tracks every downtime event: date, machine, duration, cause, cost. Part 2 schedules PMs to prevent those events. The two spreadsheets together create a feedback loop:
+
+Monthly review:
+
+Compare PM compliance rate (from Part 2) against unplanned downtime hours (from Part 1). A shop at 90% PM compliance typically has 60-70% less unplanned downtime than a shop at 50% compliance. The data proves the ROI of maintenance to anyone who asks — including the owner who approved the maintenance budget.
+
+Root cause feed:
+
+When Part 1 shows a spike in "Mechanical" downtime on Machine #4, check Part 2. Is Machine #4 behind on PMs? If yes, the root cause is a scheduling gap, not a machine defect — fix the PM system, not the machine. If Machine #4 is current on all PMs and still failing, the root cause is a design or operational issue — investigate the machine itself.
+
+PM interval optimization:
+
+If Machine #7 has zero unplanned downtime and its PMs are always clean (no issues found during service), the PM interval may be too frequent. Extend it from 500 hours to 750 hours and re-evaluate after 3 months. Conversely, if Machine #2 has recurring failures between PMs, the interval is too long — shorten it.
+
+The PM compliance dashboard — prove PMs work with 3 numbers
+
+The monthly PM compliance report fits on one page and uses three numbers anyone can understand:
+
+Metric
+
+Formula
+
+Target
+
+What It Tells You
+
+PM Compliance Rate
+
+Completed PMs / Scheduled PMs (monthly)
+
+90%+
+
+Are we doing the maintenance we planned? Below 70% means the schedule is unrealistic or maintenance is not prioritized.
+
+Unplanned Downtime Hours
+
+From Part 1 downtime tracker
+
+Declining month-over-month
+
+Is the PM program actually preventing breakdowns? If compliance is high but downtime is not dropping, the PMs are the wrong tasks — revise the task library.
+
+Total Maintenance Cost
+
+PM labor + repair labor + parts
+
+Stable or declining as % of revenue
+
+Is the PM program cost-effective? A well-run PM program shifts cost from repair labor (expensive, urgent) to PM labor (cheap, scheduled). Total cost may stay flat while downtime drops — that is a win.
+
+Share these three numbers at the monthly all-hands. When the team sees "PM compliance was 94% last month and unplanned downtime dropped from 18 hours to 7 hours — that is why we shipped every order on time for the first time in 8 months," the cultural shift from reactive to proactive becomes self-reinforcing.
+
+The complete system — when both parts work together
+
+Part 1 catches every failure after it happens and tells you what to fix. Part 2 schedules every service before it is overdue and tells you what a skip will cost. A shop running both systems has something most small manufacturers never achieve: a closed loop. Every downtime event feeds the PM schedule. Every PM completion reduces future downtime events. The spreadsheet is $0. The discipline is the hard part — but compared to a $15,000 spindle replacement, discipline is cheap.
+
 Frequently asked questions
 
 How do I calculate machine downtime cost?
@@ -11383,19 +11573,43 @@ How much does machine downtime really cost a small manufacturer?
 
 For a 10-machine shop: $36,000/year in direct production loss at minimum. Real case: a 12-machine CNC shop discovered 22 hrs/week of unplanned downtime (6× estimated), fixed the top 2 causes in 30 days, and recovered $127,500/year in production capacity — without buying new equipment or software.
 
+What is the difference between preventative maintenance and reactive maintenance?
+
+Preventative maintenance (PM) is scheduled service on a time or usage interval — oil changes every 500 hours, belt inspections every 3 months, bearing replacements at 2,000 hours. Reactive maintenance is fixing something after it breaks. The cost difference is enormous: a $200 oil change done on schedule prevents a $15,000 spindle replacement when the bearings seize from contaminated oil. Reactive maintenance costs 3-9x more than preventative across the equipment lifecycle. The shops with the lowest downtime are not the ones with the newest machines — they are the ones with the best PM compliance. A shop at 90% PM compliance typically has 60-70% less unplanned downtime than a shop at 50% compliance.
+
+How do I create a PM schedule for a small machine shop?
+
+Start with an asset registry: list every machine with make, model, serial number, department, and replacement cost. Build a PM task library per machine — define interval type (hours, cycles, calendar), interval value, and task description for each service. Record last service date and current hour-meter reading. The spreadsheet auto-calculates next due date, due status, and risk level. A 15-machine shop can set up a complete PM schedule in a single afternoon using a free Google Sheets template. The critical discipline is checking the dashboard every Monday morning and assigning upcoming PMs to maintenance techs for the week.
+
+How much does CMMS software cost for a small manufacturer?
+
+CMMS software ranges from $35 to $100 per user per month. MaintainX starts at $16/user/month for basic plans but PM scheduling and reporting features are in the $40/user/month tier. Fiix by Rockwell Automation runs $40-75/user/month. Limble is $35-70/user/month. For a 5-user shop, that is $200-500/month or $2,400-$6,000/year. The free Google Sheets PM system described here delivers 80% of the functionality (asset registry, interval-based scheduling, overdue alerts, compliance dashboard) at $0. Graduate to CMMS only when the spreadsheet becomes the bottleneck — typically when you exceed 20 machines, run multiple shifts, or need ISO/AS9100-compliant audit trails.
+
+What happens if I skip a scheduled PM on a CNC machine?
+
+Skipping a PM is gambling with the most expensive asset in the shop. A skipped $200 oil change on a CNC spindle does not cause immediate failure — damage accumulates silently over 6-12 months as contaminated oil accelerates bearing wear. When the spindle seizes, repair cost is $12,000-25,000 (replacement spindle, labor, realignment) plus 3-7 days of lost production. That single skipped PM cost the shop $15,000-25,000 — a 75:1 to 125:1 ROI on doing the PM on time. The cost-of-deferral calculator quantifies the risk for every PM task so the decision to skip is not a guess.
+
+How do I calculate the ROI of preventative maintenance?
+
+PM ROI = (Cost of avoided failures) / (Cost of PM program). Track three numbers: PM compliance rate, unplanned downtime hours per month, and total maintenance cost (PM labor + repair labor + parts). A shop at 90% PM compliance typically sees 60-70% less unplanned downtime than a shop at 50% compliance. Example: a 12-machine shop at 50% compliance with 22 hours/week of downtime at $150/hour = $3,300/week. Improving to 90% compliance drops downtime to roughly 7 hours/week = $1,050/week. Weekly savings: $2,250. Annual savings: $112,500. PM program cost: roughly 4 hours/week of maintenance tech time at $30/hour = $120/week or $6,240/year. PM ROI: $112,500 / $6,240 = 18:1. The spreadsheet tracks all three numbers automatically.
+
 Related reading
 
 If you found this useful, you'll want these too:
 
-Your Machinists Spent 47 Hours Hunting for Tools — Free Tool Crib Inventory Spreadsheet
+You Know Revenue But Not Profit Per Job — The Free Job Costing Spreadsheet That Shows You Where the Money Goes
 
 Track Every Overtime Dollar by Job and Machine — The Free Spreadsheet That Shows Where Your OT Is Going
+
+Your Best Supplier Just Missed Their 4th Ship Date — Free Supplier Delivery Tracking Spreadsheet
+
+Your Machinists Spent 47 Hours Hunting for Tools — Free Tool Crib Inventory Spreadsheet
 
 Your Second Shift Scrapped 40 Parts Because the Whiteboard Said Nothing — Free Shift Handover Log
 
 Your Shop Has 12 Machines But Only One Is The Bottleneck — Free Constraint Analysis Spreadsheet
 
-The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System
+The Whiteboard That Runs Production Is Killing Your On-Time Delivery — A Scheduling System
 
 Missed One Calibration Date? The Free ISO 9001 Calibration Tracking System That Keeps Every Instrument Current
 
@@ -11403,9 +11617,9 @@ Cut Quality Inspection Paperwork in Half: A Shop Floor Guide for Small Manufactu
 
 Three of Your 47 Suppliers Cause 80% of Your Line Stoppages — Free Supplier Quality Scorecard
 
-Stop guessing what's eating your production capacity
+Stop guessing what is eating your production capacity
 
-Jobs Done Labs builds custom downtime tracking and production visibility systems for small manufacturers — Google Sheets dashboards, automated OEE reporting, and CMMS integration that works at your scale. Free audit: we'll map your current downtime tracking (or lack of it), show you the 2–3 fixes with the highest ROI, and estimate how much capacity you're leaving on the table. No software pitch. Backed by the $30K-in-90-days guarantee: if we don't find at least $30K in recoverable production capacity, you pay nothing.
+Jobs Done Labs builds custom downtime tracking, PM scheduling, and production visibility systems for small manufacturers — Google Sheets dashboards, automated OEE reporting, and CMMS integration that works at your scale. Free audit: we will map your current maintenance tracking (or lack of it), identify the 2-3 fixes with the highest ROI, and estimate how much capacity you are leaving on the table. No software pitch. Backed by the $30K-in-90-days guarantee: if we do not find at least $30K in recoverable production capacity, you pay nothing.
 
 Book your free audit →
 
@@ -12397,6 +12611,8 @@ How Jobs Done Labs recovers $30K+ in 90 days for small manufacturers — guarant
 Related reading
 
 If you found this useful, you'll want these too:
+
+Track and Prevent Machine Downtime — The Free Tracking and PM Scheduling System
 
 Track Every Overtime Dollar by Job and Machine — The Free System That Shows Where Your OT Goes
 
@@ -27843,6 +28059,8 @@ The $30K guarantee works the same way for supplier tracking as for every other a
 Related reading
 
 If you found this useful, you'll want these too:
+
+Track and Prevent Machine Downtime — The Free Tracking and PM Scheduling System
 
 Three of Your 47 Suppliers Cause 80% of Your Line Stoppages — Free Supplier Quality Scorecard
 
