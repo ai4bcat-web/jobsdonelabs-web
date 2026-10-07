@@ -31337,6 +31337,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+$18K to Hire 1 Driver? Free Recruiting Cost Tracker — Source Attribution That Works
+
 Your New Driver Just Climbed Into the Cab and Nobody Collected the I-9 — Free 15-Document Driver Onboarding Checklist
 
 Lost 3 Drivers? Free Trucking Retention Tracker with Stay Interviews
@@ -31628,6 +31630,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+$18K to Hire 1 Driver? Free Recruiting Cost Tracker — See Which Sources Actually Stay
+
 Driver Medical Card Expired? The Free DOT Compliance Tracker That Flags Expirations Before the Audit
 
 Lost 3 Drivers? Free Trucking Retention Tracker — Find Out Why Before You Lose Number 4
@@ -31636,6 +31640,245 @@ Stop Losing $8,000/Year to Driver Settlement Errors: Free Pay Reconciliation Tem
 
 
 URL: https://www.jobsdonelabs.ai/blog/trucking-driver-onboarding-paperwork-checklist-spreadsheet-free/
+
+---
+
+# $18K to Hire 1 Driver? Free Recruiting Cost Tracker
+
+LOGISTICS & TRUCKING
+
+You Spent Eighteen Thousand Dollars on Driver Recruiting Last Quarter, Hired Four Drivers, and Only One Is Still Driving After Ninety Days — You Just Paid Eighteen Thousand Dollars for One Truck Driver and You Do Not Even Know Which Job Board Sent the Three That Quit. Here Is the Free Recruiting Cost Tracker That Tells You Exactly Which Sources Produce Drivers Who Stay and Which Ones Are Burning Your Money.
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 7, 2026
+
+Key takeaways
+
+A small fleet that spends eighteen thousand dollars on job board ads, hires four drivers, and keeps only one past ninety days has effectively paid eighteen thousand dollars for a single surviving driver. The cheaper hire is not always the better hire.
+
+You will get: a free driver recruiting cost tracker that captures spend, applicants, interviews, hires, and retention by source; a cost-per-hire and cost-per-surviving-driver calculator; a source-ranking dashboard that shows which boards are worth the money; and a referral program ROI calculator that proves a bonus beats job board spending.
+
+This tracker completes the driver lifecycle alongside the
+
+driver retention tracker
+
+and the
+
+driver onboarding checklist
+
+. Retention tells you why drivers leave. Onboarding gets them compliant. This one measures what it costs to find them in the first place.
+
+The eighteen-thousand-dollar one-driver recruiting disaster
+
+Here is the math that every fleet owner skips. You run job board ads, sort through applications, run background checks and drug tests, schedule interviews, make offers, and sign new drivers. At the end of the quarter you look at the books and see eighteen thousand dollars of recruiting spend and four new hires. Feels fine. Four drivers for eighteen thousand dollars, right?
+
+Wrong.
+
+Ninety days later, three of those four drivers are gone. One failed a drug test on a random screen. One quit because the home time was not what the recruiter promised. One took a signing bonus from a bigger fleet across town. You are left with one driver out of four, which means you did not pay four thousand five hundred dollars per driver. You paid eighteen thousand dollars for one driver.
+
+The core problem is that
+
+cost per hire is the wrong number.
+
+The only number that matters is cost per surviving driver: what you spend divided by the number of hires who are still driving after ninety days.
+
+Source
+
+Cost per hire
+
+90-day retention
+
+Cost per surviving driver
+
+Job board A
+
+$4,000
+
+80%
+
+$5,000
+
+Job board B
+
+$2,500
+
+20%
+
+$12,500
+
+Referral program
+
+$1,500
+
+90%
+
+$1,667
+
+Look at that table closely. Job board B looks cheaper on paper: twenty five hundred dollars per hire versus four thousand. But because only twenty percent of its hires survive ninety days, each surviving driver from job board B actually costs twelve thousand five hundred dollars. The cheap hire was two and a half times more expensive than the expensive hire. If you only ever look at cost per hire, you will keep spending money on the worst source in your mix and wonder why your fleet feels like a revolving door.
+
+Most fleet owners cannot tell you their cost per surviving driver.
+
+They know their quarterly recruiting spend. They know how many drivers they hired. They have no idea how many of those hires are still there after ninety days, which source each one came from, or which source produced the driver who has been with the fleet for four years. Without source-to-retention attribution, every recruiting dollar is a guess.
+
+The free driver recruiting cost tracker spreadsheet
+
+The tracker has three layers: a per-source spend log, a hire ledger, and a source-ranking dashboard. Together they turn your recruiting budget from a guess into a data-backed decision.
+
+Per-source spend log
+
+For every recruiting source you use, capture the spend by month:
+
+Source name
+
+— Indeed, a Facebook drivers group, your own referral program, a CDL school partnership, a billboard. Anything that can send you a driver gets its own row.
+
+Monthly spend
+
+— ad budget, posting fees, recruiter time at an hourly rate, background check costs, drug test costs, and any sign-on bonus paid. Be honest about recruiter time; if your dispatcher spends ten hours a week screening applicants, that is real money.
+
+Applicants
+
+— how many completed applications each source delivered. This is your top-of-funnel number.
+
+Screens and interviews
+
+— how many applicants survived to a phone screen and an interview. A source that sends one hundred applicants but only two qualified ones is worse than a source that sends ten applicants and six qualified ones.
+
+Offers and hires
+
+— how many offers you extended and how many were accepted.
+
+Hire ledger — tag every driver at the source
+
+The single most important habit in this system is source attribution at the moment of application. When a new applicant comes in, ask one question:
+
+where did you hear about this job?
+
+Tag them in the ledger the moment they apply, not months later when their source is forgotten.
+
+For every hire, record:
+
+Source
+
+— the tag captured at application time.
+
+Hire date
+
+— when they actually started.
+
+30-day status
+
+— still driving, or gone. Failures in the first thirty days are usually screening failures: a drug test that should have caught something, a background red flag, a mismatch that should have shown up at interview.
+
+90-day status
+
+— still driving, or gone. This is the number that feeds cost per surviving driver.
+
+Reason for departure
+
+, if applicable — the same reason categories as the retention tracker. A source that consistently sends drivers who quit over home time is selling you drivers based on a promise you cannot keep.
+
+Source-ranking dashboard
+
+The dashboard rolls everything up into one ranked table you can review quarterly:
+
+Cost per applicant
+
+— total spend divided by applicants. Flags cheap-but-useless sources early.
+
+Cost per hire
+
+— total spend divided by hires. The number everyone already looks at, but only one row of truth.
+
+Cost per surviving driver
+
+— total spend divided by hires still driving at ninety days. The number that actually matters.
+
+90-day retention by source
+
+— the percentage of each source's hires still driving after ninety days.
+
+Safety record by source
+
+— if you have the data, do drivers from source A fail more drug tests or accumulate more violations than drivers from source B? A source that sends clean, safe drivers is worth paying more for.
+
+Review the dashboard quarterly and act on it. Cut the bottom two sources and shift that budget to the top two. If job board B has a twenty percent retention rate, stop spending there regardless of how cheap its cost per hire looks.
+
+The referral program that beats every job board
+
+Referred drivers retain at sixty to seventy percent higher rates than job board hires. They show up knowing what the job actually is, because they heard about it from a driver who already does it. They have a reputation to protect with the person who referred them. They are more likely to pass the drug test and background check because the referring driver does not want to vouch for a liability.
+
+Here is the ROI math. A fifteen hundred dollar referral bonus, paid in two installments, with a ninety percent ninety-day retention rate, produces a cost per surviving driver of about sixteen hundred sixty seven dollars. Compare that to job board B at twelve thousand five hundred dollars. The referral program delivers a surviving driver for about thirteen percent of the cost of your worst job board.
+
+Structure the bonus in two payments
+
+Referral bonus payout
+
+First half
+
+after the new driver completes thirty days.
+
+Second half
+
+after the new driver completes ninety days.
+
+No payout
+
+if the driver leaves before thirty days.
+
+Announce it
+
+to every current driver at safety meetings and on the settlement statement.
+
+A staged payout protects you from paying for a driver who quits in week one, and it gives the referring driver a reason to check in on the new hire during the critical first ninety days. That check-in is itself a retention mechanism you are not paying a dime extra for.
+
+The ninety-day retention scoreboard by source
+
+Run the numbers every quarter and watch the patterns emerge. When eighty percent of job board A hires fail the drug test, stop using job board A for local runs that attract more casual applicants. When your referral program has a zero percent failure rate, double the bonus. When a niche CDL school partnership keeps turning out drivers who stay two years, build that relationship into your primary pipeline.
+
+The scoreboard turns recruiting from a monthly panic into a managed investment. You will know, with data, which sources are worth reinvesting in and which are burning your money.
+
+Recruiting cost and retention are two halves of the same problem.
+
+The
+
+retention tracker
+
+tells you why drivers leave, so you can fix the leaks. This tracker tells you which sources produce drivers who stay, so you can stop funding the leaks. Run them together: fix churn with the retention data, then measure recruiting spend against the surviving drivers it actually produces.
+
+Frequently asked questions
+
+What is the average cost to hire a truck driver?
+
+For a small fleet, recruiting one truck driver typically costs between three thousand and eight thousand dollars once you add job board ads, recruiter time, orientation, drug testing, and sign-on bonuses. The number that matters is not cost per hire but cost per surviving driver: divide your spend by the hires still driving after ninety days. A cheap hire who quits fast costs far more than an expensive hire who stays.
+
+How do I calculate cost per hire for CDL drivers?
+
+Add every recruiting dollar spent by source, from job board ads to recruiter time and sign-on bonuses. Divide by the number of hires that source produced for cost per hire. Then divide by the number of those hires still driving after ninety days for cost per surviving driver. The second number reveals which sources are actually worth the money.
+
+How much should I offer as a driver referral bonus?
+
+A referral bonus of one thousand to two thousand dollars, paid in two stages, is the standard that moves current drivers to recruit their network. Pay half at thirty days and half at ninety days. Because referred drivers retain at sixty to seventy percent higher rates, a fifteen hundred dollar bonus that produces a driver who stays two years beats a four thousand dollar job board hire who quits inside ninety days.
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Lost 3 Drivers? Free Trucking Retention Tracker
+
+Free 15-Document Driver Onboarding Checklist
+
+Free Driver Pay Reconciliation Template
+
+Stop guessing which recruiting source is worth the money
+
+Jobs Done Labs builds the automation that attributes every hire back to its source and shows you, at a glance, which sources produce drivers who stay. If your fleet is burning eighteen thousand dollars a quarter on recruiting and you cannot say which board your best driver came from, let us build the system that tells you.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/trucking-driver-recruiting-cost-per-hire-tracker-free/
 
 ---
 
@@ -31943,6 +32186,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+$18K to Hire 1 Driver? Free Recruiting Cost Tracker — Find Which Job Boards Actually Work
+
 Your New Driver Just Climbed Into the Cab and Nobody Collected the I-9 — Free 15-Document Driver Onboarding Checklist
 
 Your Trucks Sat Idle for 3,780 Hours? Free Fleet Utilization Tracker
@@ -32243,6 +32488,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+$18K on Recruiting, 1 Surviving Driver — Free Cost-Per-Hire Tracker
 
 Your New Driver Just Climbed Into the Cab and Nobody Collected the I-9 — Free 15-Document Driver Onboarding Checklist
 
