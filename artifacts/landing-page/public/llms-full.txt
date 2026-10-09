@@ -3441,6 +3441,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Law Firm Client Intake: Free Workflow & Templates — Stop Losing Clients to Slow Response
+
 Stop Scope Creep Before the Project Starts — Free Prevention Playbook
 
 Capture Consulting Lessons Before They Walk Out — Free KM System
@@ -9665,6 +9667,167 @@ Your Driver Just Totaled a Guardrail at 2am — The FMCSA Compliance System That
 
 
 URL: https://www.jobsdonelabs.ai/blog/freight-damage-claim-tracking-spreadsheet-small-carrier/
+
+---
+
+# Free HIPAA Spreadsheet: 5-Tab Compliance Tracker
+
+Healthcare & Medical Practices
+
+An OCR Investigator Just Requested Your HIPAA Compliance Documentation for the Last 6 Years — and Right Now Your 'System' Is a Manila Folder in a Filing Cabinet With a Sticky Note That Says 'HIPAA Stuff.' That Folder Is Worth Up to Seventy-One Thousand One Hundred Sixty-Two Dollars Per Violation. Here Is the Free HIPAA Compliance Tracking Spreadsheet That Documents Every Patient Authorization, Security Incident, Business Associate Agreement, Staff Training, and Risk Assessment.
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 9, 2026
+
+Key takeaways
+
+HIPAA violations now carry penalties of one hundred forty-one to seventy-one thousand one hundred sixty-two dollars per violation, with a two point one million dollar annual cap. Most medical practices keep compliance documentation in physical folders, email threads, and sticky notes — exactly what OCR auditors flag first. This free five-tab spreadsheet covers the five documentation categories OCR asks for in every investigation: patient authorization log, breach incident log, BA agreement tracker, staff training compliance, and security risk assessment. Set it up in a single afternoon, archive annually as PDF, and hand the auditor a spreadsheet instead of a panic attack.
+
+The Seventy-One Thousand Dollar Manila Folder
+
+In 2025, OCR resolved twenty-three percent more HIPAA cases than the previous year and collected fourteen point two million dollars in settlements. The penalty range now sits at one hundred forty-one to seventy-one thousand one hundred sixty-two dollars per violation category per calendar year, capped at two point one million dollars annually. The most common violations OCR finds are not sophisticated data breaches — they are documentation failures: missing business associate agreements, no breach notification process, incomplete security risk assessments, and authorization logs that do not exist. A practice manager who receives an OCR patient complaint notification letter and cannot produce a breach log, authorization records, or BA agreement catalog within the response window is in exactly the position OCR expects them to be in — and the settlement demand letter will reflect that.
+
+The healthcare SaaS industry has built a five hundred to two thousand dollar per year subscription business around this fear. HIPAA One (Compliancy Group), Accountable HQ, and SecurityMetrics dominate page one of Google for "HIPAA compliance software" — and their pricing is calibrated to the anxiety level of a practice manager who just received an OCR letter. For a three-provider practice, that is fifteen hundred dollars per year, forty-five hundred dollars over three years — for what is fundamentally a documentation tracking exercise. The free spreadsheet in this guide covers the exact same five documentation categories that paid SaaS platforms track, and the monthly dashboard printout gives you the same "good faith compliance effort" evidence an auditor wants to see.
+
+What OCR actually asks for
+
+In every HIPAA investigation, the OCR data request letter asks for five categories of documentation: (1) patient authorization and disclosure records, (2) breach incident logs and risk assessments, (3) business associate agreements for all vendors handling PHI, (4) staff HIPAA training records with attestation, and (5) the most recent security risk assessment with remediation plan. If you cannot produce all five within the thirty-day response window, the investigator does not need to find a violation — the absence of documentation IS the violation.
+
+The Free HIPAA Compliance Tracking Spreadsheet — Five Tabs, Zero Dollars
+
+The spreadsheet is a single workbook with five tabs, each mapped to one of the five OCR documentation categories. You can set up the entire workbook in a single afternoon — roughly three to four hours for a practice that has never centrally tracked HIPAA documentation. After the initial setup, maintenance is roughly thirty minutes per week: log new authorizations as they happen, update BA agreements when they renew, and run the monthly compliance dashboard in ten minutes at the end of each month.
+
+Tab 1 — Patient Authorization Log
+
+Every disclosure of protected health information that is not for treatment, payment, or healthcare operations requires patient authorization — and the authorization must be documented, even if the disclosure is permitted. This tab tracks: patient name, date of disclosure, what was disclosed, to whom, purpose of disclosure, authorization expiration date, and revocation status. OCR investigators will ask for this log first — it is the most common documentation gap in small practices. A practice that discloses PHI to attorneys, employers, life insurers, or schools without logging those disclosures is documenting its own violations.
+
+Tab 2 — Breach Incident Log With Five-Factor Risk Assessment
+
+Every impermissible access, use, or disclosure of PHI must be logged and run through the five-factor risk assessment required by the Breach Notification Rule. This tab captures: date discovered, description of incident, number of individuals potentially affected, and the five-factor assessment: (a) nature and extent of PHI involved, (b) who received or accessed the PHI, (c) whether PHI was actually acquired or viewed, (d) extent of mitigation, and (e) the persons involved. The spreadsheet auto-scores low, medium, or high probability of compromise based on your inputs. Low probability means notification is not required — but the assessment itself must be documented. Medium or high probability triggers the notification cascade: affected individuals within sixty days, HHS/OCR within sixty days (or annually for breaches of fewer than five hundred), and media notification for breaches of five hundred or more. The tab also tracks notification status, OCR report filing date, and corrective action taken.
+
+Tab 3 — Business Associate Agreement Tracker
+
+A typical small medical practice works with eight to twelve vendors that handle PHI: EHR vendor, billing service, shredding company, IT support, cloud backup, email provider, patient portal, answering service, and potentially a collection agency, transcription service, and document storage company. Each one requires a business associate agreement — and missing even one BAA is the number one finding in every OCR investigation. This tab tracks: vendor name, service provided, agreement date, expiration date, renewal trigger, whether the BAA is on file, and the date of the most recent security assessment. A sixty-day auto-flag column highlights agreements approaching expiration. The renewal calendar view shows all upcoming deadlines in one place so you do not discover a lapsed BAA when the investigator asks for it.
+
+Tab 4 — Staff Training Compliance
+
+HIPAA requires that all workforce members receive training on privacy and security policies within a reasonable time after hire, and that training is documented with attestation. This tab tracks: employee name, role, training topic, date completed, next due date, quiz or competency score, and attestation status. The dashboard flags any employee whose training has lapsed and calculates the overall practice training compliance percentage — OCR expects ninety percent or higher. Annual refresher training for all staff, documented in this tab, is one of the strongest "good faith compliance effort" signals you can show an auditor.
+
+Tab 5 — Security Risk Assessment (SRA) Tracker
+
+The SRA is not a one-time exercise — it must be reviewed and updated at least annually, or whenever there is a material change to your practice's technology environment (new EHR, new patient portal, office move, server migration). This tab tracks: risk identified, category (administrative, physical, technical), likelihood rating, impact rating, current controls, mitigation plan, responsible person, target date, and status. The SRA must cover all locations where PHI is stored or transmitted — on-premises servers, cloud services, workstations, mobile devices, email, fax, and paper records. A practice that completed an SRA three years ago and has not touched it since will fail an OCR audit as thoroughly as a practice that never did one.
+
+The Five-Factor Breach Risk Assessment — Built Into Tab 2
+
+The Breach Notification Rule requires that every impermissible use or disclosure of PHI be evaluated under a five-factor risk assessment to determine whether the incident constitutes a notifiable breach. The five factors, as defined by HHS/OCR guidance, are:
+
+Nature and extent of PHI involved:
+
+What types of identifiers were exposed? Clinical information, financial data, and sensitive diagnoses carry higher risk than demographic data alone.
+
+The unauthorized person who used the PHI or to whom the disclosure was made:
+
+Was it another healthcare provider (who has independent HIPAA obligations) or an unknown third party? A misdirected fax to another doctor's office is different from a laptop stolen from a coffee shop.
+
+Whether the PHI was actually acquired or viewed:
+
+Was the email opened? Was the laptop accessed? If there is forensic evidence that PHI was not actually viewed, the risk score drops.
+
+Extent to which the risk to the PHI has been mitigated:
+
+Did you recover the device? Did the recipient confirm deletion? Was the fax retrieved and destroyed? Document every mitigation action taken.
+
+The persons involved:
+
+Internal workforce member versus external party. A nurse who accidentally accessed the wrong chart and immediately reported it is a different risk profile from an unknown external actor.
+
+Each factor is scored on a one-to-five scale in the spreadsheet. The composite score translates to a probability assessment: low (notification not required, but documentation is), medium (notification required — affected individuals plus HHS), or high (notification required — affected individuals, HHS, and media if five hundred or more affected). The critical documentation rule: run the five-factor assessment for EVERY incident, even if the conclusion is low probability with no notification required. OCR wants to see the thinking — the absence of an assessment for an incident that did not result in notification is itself a red flag that the practice is not conducting assessments at all.
+
+The BA Agreement Renewal Calendar — Never Miss an Expiration Again
+
+Business associate agreements do not renew automatically in most cases — and the vendors who send BAAs with auto-renewal clauses are often the same vendors whose agreements have not been reviewed in five years and still reference the 2013 Omnibus Rule as "recent." The renewal calendar in Tab 3 works on a simple principle: every BAA has an expiration date, and sixty days before that date, the cell turns yellow. It turns red at thirty days. At zero days, the agreement has lapsed — and every day the practice operates without a current BAA is a separate violation period.
+
+For an eight-to-twelve vendor practice, this means tracking eight to twelve separate deadlines. A spreadsheet that auto-sorts by days-to-expiration makes it trivially easy: attack the reds first, then the yellows. The renewal process itself — contacting the vendor, reviewing the updated agreement for scope changes, obtaining signature, and filing — takes roughly two to four weeks. The sixty-day warning window gives you time to complete the process before the agreement lapses. This is not complicated — but without a tracking system, it is invisible until the investigator asks.
+
+BAA Status
+
+Visual Signal
+
+Action Required
+
+Current (31+ days)
+
+Green
+
+None — review at next quarterly check
+
+Expiring (16-30 days)
+
+Yellow
+
+Contact vendor, initiate renewal
+
+Critical (0-15 days)
+
+Red
+
+Urgent renewal — escalated to practice manager
+
+Expired
+
+Red + bold
+
+Immediate remediation — document gap period
+
+The Monthly Compliance Dashboard — Print, File, Survive
+
+Once per month, print the compliance dashboard and file it. This is not a suggestion — it is the single most valuable piece of evidence you can hand an OCR investigator. The dashboard shows, at a glance: authorizations log current (yes/no), breach log reviewed (yes/no), BA agreements all current (yes/no, with count), staff training compliance percentage, and SRA last reviewed date. A green/yellow/red visual status on each category means the practice manager can see, in thirty seconds, whether the practice is audit-ready. Any red status is a compliance gap that needs immediate attention. The printed dashboard, filed monthly, demonstrates a pattern of active compliance monitoring — exactly the "good faith compliance effort" that OCR uses as a mitigating factor in penalty determinations.
+
+For a practice that has never centrally tracked HIPAA documentation, the first month's dashboard will almost certainly show red in multiple categories. That is expected — the dashboard reveals the gaps that have been invisible. Month two should show improvement. By month three, the dashboard should be consistently green. An auditor reviewing twelve consecutive months of green dashboards has a fundamentally different impression than one looking at a practice that scrambled to assemble documentation in the thirty days after receiving the OCR letter.
+
+Frequently asked questions
+
+What HIPAA documentation does a medical practice need to maintain?
+
+A medical practice must maintain: patient authorization logs tracking every disclosure of PHI, a breach incident log with five-factor risk assessments for every impermissible access or disclosure, business associate agreements for every vendor handling PHI (eight to twelve for a typical practice), staff HIPAA training records with attestation and completion dates, and a security risk assessment reviewed at least annually. The free spreadsheet in this guide covers all five categories in a single workbook designed to match what OCR data request letters ask for.
+
+How do I conduct a HIPAA security risk assessment?
+
+An SRA follows the HHS/ONC SRA Tool methodology: identify every location where PHI is stored or transmitted (EHR, cloud backup, workstations, mobile devices, email, fax, paper records), assess threats and vulnerabilities for each location, rate likelihood and impact on a one-to-five scale, document current security controls, and create a remediation plan for gaps. The free spreadsheet includes an SRA tracker tab that walks through each step — the framework matches what an OCR auditor will check for, and completing it is strong evidence of a compliance program in operation.
+
+What is a business associate agreement and who needs one?
+
+A business associate agreement (BAA) is a legally required contract between a covered entity and any vendor that creates, receives, maintains, or transmits PHI. This includes your EHR vendor, billing service, shredding company, IT support, cloud backup, email provider, patient portal, answering service, collection agency, and transcription service. A practice that has not identified and documented BA agreements for every vendor handling PHI is missing the single most commonly cited HIPAA violation — and the free BAA tracker tab in the spreadsheet makes this gap visible in minutes.
+
+How long do I need to keep HIPAA compliance documentation?
+
+HIPAA requires retention of compliance documentation for six years from the date of creation or the date when it was last in effect, whichever is later. This applies to authorization logs, breach assessments, BA agreements, training records, and SRA documentation. The free spreadsheet is designed to be printed or exported as PDF monthly and archived — the printed dashboards, stacked in a binder by year, are exactly what an auditor expects to see and are admissible as evidence of a compliance program in continuous operation.
+
+What triggers a HIPAA breach notification requirement?
+
+A breach notification is triggered when impermissible access, use, or disclosure of unsecured PHI occurs and the incident does not fall under a regulatory exception. You must conduct a five-factor risk assessment: nature of PHI, who accessed it, whether PHI was actually acquired or viewed, extent of mitigation, and persons involved. Low probability of compromise means notification is not required but the assessment must be documented. Medium or high probability requires notification to affected individuals within sixty days and to HHS/OCR within the same timeframe (or annually for breaches under five hundred individuals). Breaches of five hundred or more also require media notification. The five-factor assessment is built into Tab 2 of the free spreadsheet.
+
+Compliance Does Not Have to Cost Fifteen Hundred Dollars a Year
+
+The five-tab spreadsheet covers every documentation category an OCR investigator will ask for — and it costs zero dollars. If your practice has compliance gaps you cannot close with a spreadsheet alone, we build custom automation that integrates with your EHR and practice management software. Free thirty-minute audit, no obligation.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Two of Your Medical Assistants Called In Sick Again This Friday — Here Is the Free Staff Call-Out Tracker That Shows You the Pattern Before It Happens Again
+
+Cut EHR Charting in Half — The Free Documentation Time Audit Spreadsheet That Works With Any EHR
+
+Medical Records Requests Are Eating 8 Hours of Your Office Manager's Week — Here Is the Tracking System That Fixes It
+
+Your Waste Manifests Are in a Shoebox and the State Inspector Just Called — The Free Inspection-Ready Documentation System
+
+
+URL: https://www.jobsdonelabs.ai/blog/hipaa-compliance-tracking-spreadsheet-medical-practice-free/
 
 ---
 
@@ -16052,6 +16215,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+An OCR Investigator Requested Your HIPAA Docs. Here Is the Free 5-Tab Compliance Spreadsheet That Survives an Audit.
+
 Your Front Desk Spends 3 Hours a Day on Phone Tag While Patients Stack Up in the Waiting Room. Here Is the Free Call Management System That Gives Them Back 10 Hours a Week.
 
 Your Practice Lost Twenty-Seven Thousand Dollars Last Year to No-Shows — Here Is a Free System That Gets 40 Percent of Them Back on the Schedule
@@ -16683,6 +16848,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+HIPAA Compliance Tracking Spreadsheet — Free 5-Tab System for Medical Practices
+
 Your Practice Wrote Off $87,000 in Denied Claims Last Year — Free Appeal Tracker Spreadsheet
 
 Stop Losing Referred Patients: Free Loop-Closure Tracker for Small Practices
@@ -17312,6 +17479,8 @@ Book your audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+HIPAA Compliance Tracking Spreadsheet — Free 5-Tab System for Medical Practices
 
 Free Medical Supplies Inventory for Small Practices — Stop Losing $2,400 to Expired Vaccines
 
@@ -21482,6 +21651,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+HIPAA Compliance Tracking Spreadsheet — Free 5-Tab System for Medical Practices
+
 Your Front Desk Spends 3 Hours a Day on Phone Tag. Here Is the Free Call Management System.
 
 16 Hours a Week on Prior Authorizations and You Still Cannot Afford the Software — The Manual PA Workflow
@@ -24179,6 +24350,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Law Firm Client Intake: Free Workflow & Templates — Stop Losing Clients to Slow Response
+
 Stop Scope Creep Before the Project Starts — Free Consultant's Prevention Playbook With SOW Clauses and Weekly Scope-Check Ritual
 
 Where Do Your Best Clients Come From? Free Consulting Referral Pipeline Tracker
@@ -26331,6 +26504,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Law Firm Client Intake: Free Workflow & Templates — Stop Losing Clients to Slow Response
 
 Proposal Pipeline Tracker: Know Who to Call Today — Free Spreadsheet
 
