@@ -12812,6 +12812,279 @@ URL: https://www.jobsdonelabs.ai/blog/manual-prior-authorization-workflow-small-
 
 ---
 
+# You're Losing Money on Jobs You Don't Know About
+
+Manufacturing
+
+You Quoted the Acme Bracket Job at Fourteen Dollars and Fifty Cents Per Unit. Actual Cost Was Seventeen Dollars and Twenty Cents. On Five Thousand Units, That Is Thirteen Thousand Five Hundred Dollars You Lost — and You Did Not Know Until the P-and-L Came Out Three Weeks After the Job Shipped. Here Is the Free Job Cost Variance Tracker That Catches Losing Jobs While They Are Still Running.
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 10, 2026
+
+Key takeaways
+
+Most small job shops reconcile costs at month-end — three to six weeks after the job shipped. By then, the money is gone. A job cost variance tracker compares actual material, labor, overhead, and outside processing costs against your original quote in real time, as costs come in. This guide includes a free spreadsheet with per-job variance tracking, root cause categorization, and a quote accuracy scorecard that tells you which types of work you consistently underprice. The companion post on
+
+job costing without an ERP
+
+covers how to estimate. This post covers how to verify whether your estimates were right — and if not, why.
+
+The Thirteen Thousand Five Hundred Dollar Blind Spot
+
+A 25-person CNC machine shop runs 60 active jobs at any time. Quoting is done by the owner based on experience — "feels like fourteen fifty a unit." Materials are ordered. Labor is tracked on paper time cards. Overhead is allocated at a standard rate. The job ships, the customer pays the invoice, and everyone moves on to the next job.
+
+Fast forward three to six weeks. The month-end P-and-L arrives. The accountant has reconciled material invoices, labor hours from time cards, and overhead. The Acme bracket job that was quoted at fourteen dollars and fifty cents per unit? Actual material cost was seven dollars and ten cents — copper prices moved 15 percent. Actual labor was five dollars and ninety cents — the new operator ran at 60 percent of the standard rate. Actual overhead was four dollars and twenty cents — the machine needed unexpected maintenance. Total actual cost: seventeen dollars and twenty cents per unit. A loss of two dollars and seventy cents per unit.
+
+On five thousand units, that is thirteen thousand five hundred dollars — gone. One job. The shop has 60 active jobs. How many others are bleeding right now, and nobody knows because the P-and-L will not arrive for another three weeks?
+
+The average quoting error in small shops is 15 to 25 percent on unfamiliar jobs.
+
+A 20 percent error on a fourteen-dollar-fifty-cent part is two dollars and ninety cents per unit. On five thousand units, that is fourteen thousand five hundred dollars. The existing costing post on this site covers how to
+
+estimate
+
+. This post covers how to
+
+verify
+
+the estimate — and if it is wrong, catch it before it compounds into five- and six-figure losses.
+
+The Free Job Cost Variance Spreadsheet
+
+The spreadsheet tracks every active job across four cost categories — material, labor, overhead, and outside processing — and compares each one to the original quote in real time. Here is what it captures:
+
+Field
+
+What goes in it
+
+Why it matters
+
+Job number & customer
+
+Your internal job ID and the customer name
+
+Links variance data to your existing job tracking system
+
+Part number & quantity
+
+The part being produced and the total unit count
+
+Variance per unit is what determines profit or loss — not total variance
+
+Quote date & ship date
+
+When the quote was issued and when the job actually left the floor
+
+Material prices change between quote and order — the time gap drives variance
+
+Quoted material cost
+
+The material cost per unit you built into the quote
+
+This is the baseline. Every variance starts here.
+
+Actual material cost
+
+Material receipts (invoice price divided by units purchased)
+
+Entered as soon as the material invoice arrives — not at month-end
+
+Quoted labor hours × rate
+
+Estimated hours per unit × standard shop rate
+
+If your standard rate is aspirational, every job will show a labor variance
+
+Actual labor hours × rate
+
+Actual hours logged on time cards × actual loaded rate
+
+Updated weekly from time card data — catch the new operator on day three, not week four
+
+Quoted overhead
+
+Your standard overhead allocation per unit
+
+Most shops use a flat rate. Reality is lumpier.
+
+Actual overhead
+
+Real overhead costs allocated (maintenance events, utility spikes, consumables)
+
+If a machine needs unexpected repair mid-job, the overhead cost changes
+
+Outside processing
+
+Quoted vs actual for plating, heat treating, coating, or any subcontracted step
+
+Subcontractor invoices often arrive weeks after the job ships
+
+Variance (dollars and percent)
+
+Auto-calculated: actual minus quote, per line item and total
+
+Green (less than 5 percent), yellow (5 to 15 percent), red (over 15 percent)
+
+Root cause
+
+Dropdown: material price change, labor efficiency, overhead, scope change, rework, other
+
+The root cause column is the most important field. Without it, you know you lost money but not why.
+
+The Root Cause Waterfall — Why the Variance Happened
+
+Knowing that a job lost money is step one. Knowing
+
+why
+
+— and whether the same reason is bleeding other jobs — is where the tracker earns its keep. The spreadsheet includes a root cause categorization field for every variance line item. Here are the categories and what each one tells you about your quoting process:
+
+Material price change.
+
+Raw material costs moved between the quote date and the purchase date. Copper, steel, aluminum, and resins fluctuate. If 40 percent of your variances fall into this bucket, your quoting process needs a raw-material price index that updates monthly — or a clause in your quotes that passes material surcharges through to the customer.
+
+Labor efficiency.
+
+The operator who actually ran the job was slower than the standard rate you used in the quote. This is common on first-time jobs, complex setups, or when a new hire replaces an experienced operator. If 30 percent of variances are labor efficiency, your standard labor rates are too optimistic — or you need to track operator-specific efficiency so you can quote based on who will run the job.
+
+Overhead allocation.
+
+Your standard overhead rate did not account for something: unexpected machine maintenance mid-job, a utility spike, or consumable tooling that wore out faster than expected. This category tends to produce lumpy, unpredictable variances. Track it to identify machines that need preventive maintenance — a companion post on
+
+machine downtime tracking
+
+covers that in depth.
+
+Scope change.
+
+The customer asked for a modification after the quote was issued — a different finish, tighter tolerance, additional feature — and nobody updated the quote or issued a change order. The shop did the extra work for free. This is not a costing problem. It is a quoting-discipline problem.
+
+Rework or scrap.
+
+A percentage of units were rejected and had to be remade. The material and labor to remake them was never in the quote. Scrap rates above three percent are a red flag — our
+
+manufacturing scrap tracker
+
+helps identify patterns by machine, operator, and material.
+
+After 20 jobs tracked, the patterns become impossible to ignore.
+
+You will know exactly which part families you quote accurately and which ones you are consistently low on. You will know whether your material pricing assumptions are current or stale. And you will know which customers' jobs carry the highest variance risk — so you can price accordingly on the next quote.
+
+The Quote Accuracy Scorecard
+
+The tracker includes a scorecard tab that rolls up variance data by job type, part family, and customer. After tracking 20 jobs, the scorecard reveals:
+
+Which part families you quote well.
+
+Average variance below three percent means your estimating process works for these jobs. Protect this. Standardize the quoting template.
+
+Which part families you consistently underquote.
+
+Average variance above 10 percent across three or more jobs in the same family means your standard rates are wrong for this type of work. Stop quoting these jobs at the old rates — or stop taking them.
+
+Which customers' jobs carry the highest variance.
+
+Some customers request frequent mid-job changes, provide incomplete prints, or have tighter tolerances than your shop is tooled for. The scorecard assigns a variance-risk rating per customer so sales can price accordingly.
+
+New versus repeat jobs.
+
+First-time jobs almost always carry higher variance than repeats. The scorecard tracks this explicitly — so you can build a "first-time premium" into your quoting model for unfamiliar work.
+
+The Real-Time Variance Dashboard
+
+The dashboard tab gives you a one-page view of every active job and its current variance status:
+
+Green — variance below five percent.
+
+The quote was accurate. Keep running. No action needed.
+
+Yellow — variance five to 15 percent.
+
+Investigate the root cause. Is this a one-time problem (material price spike, training gap) or a structural pricing error? If structural, adjust the remaining units if possible — and update your quoting model before the next similar job.
+
+Red — variance above 15 percent.
+
+Stop and assess. On a five-thousand-unit job, a 15 percent variance on a fourteen-dollar-fifty-cent part is two dollars and eighteen cents per unit — nearly eleven thousand dollars in additional cost if the job runs to completion. Call the customer. Explain the variance honestly — material price change, unexpected complexity, scope drift. Negotiate a revised price or a reduced scope. Running all five thousand units at a loss because you are uncomfortable having the conversation compounds the damage five thousand times over.
+
+The dashboard updates as actual costs come in.
+
+A material receipt entered today updates the variance calculation today — not at month-end. A time card logged Friday updates the labor variance Friday. The goal is to know which jobs are in trouble
+
+this week
+
+, while there is still time to do something about it.
+
+How This Connects to Your Quoting Process
+
+The job cost variance tracker is the second half of a complete cost management loop. The first half — estimating the job correctly — is covered in our companion post on
+
+job costing without an ERP system
+
+. Together, the two posts form a closed loop:
+
+Quote the job
+
+using the costing spreadsheet (companion post). Build your estimate from material, labor, overhead, and outside processing line items — not from "feels like fourteen fifty."
+
+Track actual costs
+
+using the variance tracker (this post). As material arrives, labor hours are logged, and overhead events occur, enter the actual costs into the tracker.
+
+Compare and adjust.
+
+The variance dashboard shows which jobs are on track, which are drifting, and which are already underwater. Catch problems this week — not at month-end.
+
+Feed the scorecard back into quoting.
+
+After 20 jobs, the quote accuracy scorecard tells you which part families, materials, and customers consistently produce variance. Use that data to tighten your quotes on the next round.
+
+Most shops operate with steps one and four disconnected — the owner quotes from experience, the accountant reconciles at month-end, and the two data sets never meet. The variance tracker connects them. The owner who quoted "feels like fourteen fifty" now has data that says "your actual cost on bracket jobs is averaging sixteen eighty — your quotes need to start at seventeen dollars or you are losing money on every unit."
+
+Frequently asked questions
+
+How do I track actual manufacturing costs against my original quote?
+
+Create a per-job variance tracker with four cost categories: material, labor, overhead, and outside processing. For each, compare your quoted cost per unit against the actual cost per unit as receipts and time logs come in. Use the free spreadsheet included in this guide — it auto-calculates variance in dollars and percentage for every line item and flags any job exceeding a five percent variance so you can investigate before the job ships.
+
+What causes job cost variances in small manufacturing shops?
+
+The five most common root causes are: material price changes (raw material costs shift between quote and purchase), labor efficiency gaps (a new or slower operator takes longer than the standard rate assumes), overhead allocation surprises (unexpected machine maintenance or utility spikes), scope changes the customer requested but nobody updated the quote for, and rework or scrap that requires running extra units. The tracker includes a root cause field for every variance so patterns emerge over time.
+
+How do I improve my quoting accuracy?
+
+Track actual-versus-estimated costs for at least 20 jobs and build a quote accuracy scorecard organized by part family or job type. The scorecard reveals which types of work you consistently underquote. If 40 percent of your variances are material price changes, add a raw-material price index to your quoting process. If 30 percent are labor efficiency, your standard labor rates need adjustment. Each root cause category points to a specific fix in your quoting workflow.
+
+What is a normal cost variance percentage in manufacturing?
+
+World-class manufacturers operate below three percent variance on standard jobs. The average small job shop runs 10 to 20 percent variance on unfamiliar or first-time work. A 15 percent variance on a fifty-thousand-dollar job is seven thousand five hundred dollars in unexpected cost — enough to wipe out the profit margin on three or four smaller jobs. The first goal is simply to measure: most shops have never tracked variance at all and are shocked by what the data reveals in the first 90 days.
+
+Should I stop a job if actual costs are exceeding the quote?
+
+It depends on the variance magnitude and the customer relationship. Below five percent variance: flag it, finish the job, and adjust your quoting model for next time. Between five and 15 percent: investigate root cause immediately — is this a one-time problem or a structural pricing error? Call the customer if scope changed. Above 15 percent: stop and assess. You are likely losing money on every additional unit. Call the customer, explain the variance honestly, and negotiate a revised price or a reduced scope. Continuing to run at a 15-plus-percent loss on thousands of units compounds the damage fast.
+
+Stop losing money on jobs you do not know about
+
+If your shop is running 60 active jobs and reconciling costs at month-end, you are operating blind for 25 to 30 days at a time. The free job cost variance tracker shows you which jobs are profitable and which are bleeding — this week, not three weeks after they shipped. Want help setting it up for your specific shop floor? We build custom cost-tracking automations that pull data from your existing systems so the dashboard updates itself.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You are Losing Eighty Thousand Dollars a Year Quoting Jobs by Feel — The Free Spreadsheet System
+
+You are Throwing Away Twenty-One Thousand Dollars a Year in Aluminum Drops — Here Is the Free Manufacturing Scrap Tracker
+
+You Paid Twenty-One Thousand Eight Hundred Forty Dollars in Overtime Premium Last Year and Cannot Connect a Single Dollar to a Specific Job
+
+
+URL: https://www.jobsdonelabs.ai/blog/manufacturing-job-cost-variance-tracker-free/
+
+---
+
 # You're Losing $80,000 a Year Quoting Jobs by Feel
 
 June 22, 2026 — Manufacturing
@@ -13058,6 +13331,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Job Cost Variance Tracker: Catch Losing Jobs Before They Ship — Free Actual-vs-Estimated Spreadsheet
+
 Track and Prevent Machine Downtime — The Free Tracking and PM Scheduling System
 
 Track Every Overtime Dollar by Job and Machine — The Free System That Shows Where Your OT Goes
@@ -13294,6 +13569,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+Job Cost Variance Tracker: Compare Actual Costs to Your Quote in Real Time — Free Spreadsheet
 
 Machine Downtime Tracking for Small Manufacturers — The Free System That Tells You Which Machines Are Killing Your Schedule
 
@@ -14145,6 +14422,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Job Cost Variance Tracker: Find Losing Jobs Before They Ship — Free Spreadsheet
 
 Your System Says You Have 500 Units But the Shelf Has 12 — Free Cycle Counting Spreadsheet
 
