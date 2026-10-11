@@ -7784,6 +7784,286 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Home Services & Trades
+
+You Paid a Tech to Sit in Traffic for an Appointment Nobody Kept. Here's the Free No-Show Prevention System That Cuts Missed Appointments in Half.
+
+Ryne Bandolik
+
+· Jobs Done Labs · August 17, 2026
+
+Key takeaways
+
+A 15% no-show rate on 100 appointments a month burns $2,000–$4,000 a month in payroll, fuel, and empty slots — before counting the tech who could have been billing someone else.
+
+The fix is a 3-touch reminder sequence — text at booking, email 48 hours out, call the day of — plus a free no-show tracking spreadsheet that surfaces repeat offenders.
+
+Repeat offenders get a clear deposit policy, not a punishment: three no-shows in 90 days, and future appointments require a card-on-file.
+
+Under 50 appointments a month, the spreadsheet wins. Over 50, scheduling software pays for itself in recovered slots within two months.
+
+What Every No-Show Actually Costs You
+
+Here's a scene every home-service owner has lived: two techs roll out for a 9am call. The customer isn't home. Doesn't answer the phone. You've paid both techs, burned the fuel, and locked a slot that a paying customer would have taken. That one ghost cost you $300 in payroll and gas with zero revenue attached.
+
+The single no-show is annoying. The compounding no-show is what quietly bleeds the business dry. Run the math:
+
+The empty-slot math
+
+Truck roll cost: $75–$150 per trip (fuel, wear, drive time). Tech hourly: $25–$40 × the slot length. Lost revenue from the empty slot. Reschedule overhead. Team morale. A shop running 100 appointments a month at a 15% no-show rate burns
+
+$2,000–$4,000 a month
+
+on nothing — before the tech-hours that could have been billing a real job.
+
+Notice the difference between this leak and a slow lead response (covered in our
+
+lead response guide
+
+): slow response loses you a job you never had. A no-show costs you money you already spent. The good news is that no-show prevention is one of the few operational fixes that costs nothing and pays back the same month.
+
+The 4 Reasons Customers Don't Show
+
+No-shows feel personal, but they almost never are. Across the trades — HVAC, plumbing, electrical, cleaning, pest control, landscaping — the same four patterns account for nearly every missed appointment:
+
+Reason
+
+What Happened
+
+The Fix
+
+They forgot
+
+Booked a week ago, the appointment never re-entered their head. The most common reason by a wide margin.
+
+The 3-touch reminder sequence — the fix that single-handedly recovers the most no-shows.
+
+No reminder was ever sent
+
+The office was too busy to call, or reminders go out only when someone remembers.
+
+Automate the reminders so they fire without a human. Free tools below.
+
+No commitment was given
+
+The customer said "sure, pencil me in" — a soft maybe, not a firm yes.
+
+Require an explicit YES confirmation at booking and again 24 hours out. Soft maybes get waitlisted, not scheduled.
+
+They found someone faster
+
+Your lead response was slow, and a competitor booked them first. They just didn't call to cancel.
+
+This is a
+
+lead response problem
+
+, not a no-show problem — fix speed-to-answer and this shrinks with it.
+
+The 3-Touch Reminder Sequence That Works
+
+This is the highest-leverage move in the entire guide. It costs nothing, takes under a minute per appointment, and reliably drops a 22% no-show rate down to single digits.
+
+Touch 1 — text at booking
+
+Sent the moment the appointment is scheduled, while the customer is still thinking about it:
+
+"Hi [name], [Company] is confirmed for [day] at [time]. Reply YES to confirm, or reply RESCHEDULE if that time no longer works. – [Tech/Office name]"
+
+Touch 2 — email reminder 48 hours out
+
+Two days before, send a short email that tells them what to expect and how to reschedule without friction:
+
+"Hi [name], quick reminder that we'll be there [day] at [time]. The tech will call when they're 20 minutes out. Need to change it? Reply to this email or call [number] — it takes 30 seconds."
+
+Touch 3 — call the day of
+
+The morning of the job, a 45-second call (or voicemail) that confirms the customer is home and ready:
+
+"Hi [name], it's [name] from [Company]. Just confirming for [time] today — we're on our way soon. Give me a quick call back if anything changed."
+
+The secret isn't the words — it's the
+
+timing
+
+. Each touch catches the customer at a different moment of forgetfulness: the booking text locks in commitment, the 48-hour email catches the "oh right, that's this week," and the day-of call catches the "oh no, that's today." Keep every message under three sentences and personable. A reminder that reads like a robot gets ignored; a reminder that reads like a person gets answered.
+
+The Free No-Show Tracking Spreadsheet
+
+Reminders stop the casual no-shows. The tracker stops the chronic ones — the three customers who account for half your empty slots. If you're not logging no-shows, you can't see the pattern, and every ghost blends into "just one of those things."
+
+Columns on the no-show tracker
+
+Scheduled date
+
+— when the appointment was booked for.
+
+Customer name & phone
+
+— so the repeat-offender row is one click from a call.
+
+Tech
+
+— spots any per-tech pattern (a specific tech may be over-booking or double-booking).
+
+Reminder sent?
+
+— yes/no. If no-shows cluster on "no," the reminder sequence is the bottleneck.
+
+Confirmed?
+
+— did they reply YES to the booking text or 24-hour check?
+
+Showed?
+
+— yes/no. The field that feeds the no-show rate.
+
+Rescheduled?
+
+— a reschedule is not a no-show; track it separately.
+
+Reason & follow-up notes
+
+— the raw material for fixing your process.
+
+Two formulas make the sheet work. A
+
+rolling no-show rate
+
+recalculates per tech, per week, and per customer — so you can see at a glance whether the problem is one customer, one tech, or one day of the week. And a
+
+repeat-offender flag
+
+: conditional formatting turns any customer red after three no-shows in 90 days. That red row is your deposit list, no detective work required.
+
+If this spreadsheet structure feels familiar, it should — it's the same "one row per record, flags at the top" pattern as our
+
+estimate tracking spreadsheet
+
+. One workbook, two tabs, and you've closed the loop from estimate to booked appointment to actual arrival.
+
+The Repeat-Offender Playbook
+
+The red rows in your tracker are where no-show prevention actually pays. These are the customers who cost you real money, repeatedly — and the fix isn't to stop serving them, it's to require commitment.
+
+The 3-strikes deposit policy
+
+Strike 1
+
+— no-show, no call. Log it, send a polite "we missed you" note offering to reschedule.
+
+Strike 2
+
+— log it. Mention at the next booking that "we'll need a card on file to hold this time."
+
+Strike 3
+
+— flagged red in the tracker. Future appointments require a deposit or card-on-file, period.
+
+The email is short and clear — not passive-aggressive, just the math:
+
+"Hi [name], we've held three appointments for you over the past few months that weren't kept. To keep your future appointments protected, we now require a [amount] deposit to confirm — it's fully applied to your invoice when we arrive, and refundable if you need to cancel with 24 hours' notice. Here's why: it lets us hold the slot and the tech for you. Here's the link to book."
+
+The deposit exists to create commitment, not to punish. Most companies find the deposit eliminates the repeat behavior entirely — the customer either shows up or stops booking, and both outcomes stop the bleed.
+
+How to Fill the Slot When It Happens Anyway
+
+No system is perfect. A percentage of no-shows will survive even the best reminder sequence, so the second half of prevention is what you do with the empty slot. A recovered slot turns a loss into a near-wash.
+
+The waitlist + job jar system
+
+Build a waitlist.
+
+Every time a customer says "call if anything opens up," write it down. Keep a list of 3–5 nearby customers per service area who want in sooner than their booked date.
+
+Same-day-fill text blast.
+
+The moment a no-show is confirmed, text the waitlist: "A slot just opened today in [area]. First to reply YES gets it." One message, filled in minutes.
+
+Keep a job jar.
+
+A running list of off-day tasks — truck restock, equipment maintenance, follow-up calls on pending estimates. When a slot dies, the tech's recovered hour goes to the job jar instead of the break room.
+
+The waitlist has a bonus effect: it quietly fixes your lead response too, because the people on it are warm leads who already said yes. If you're losing the first response race, a waitlist of warm "call me if anything opens up" names is a second chance at the job.
+
+When to Automate
+
+The free system has a clear ceiling. Here's the honest math on when to stop doing it by hand:
+
+Signal
+
+What It Means
+
+50+ appointments a month
+
+At this volume, manual reminders take real office hours. Scheduling software (ServiceTitan, Housecall Pro, Jobber) auto-fires the 3-touch sequence, takes deposits, and tracks no-show rates — usually paying for itself in recovered slots within two months.
+
+Multiple techs and service areas
+
+The spreadsheet handles one or two techs cleanly. Three-plus techs across two-plus areas is where routing and reminders get tangled enough that software saves more than it costs.
+
+You're personally sending every reminder
+
+If the owner is the reminder system, the system breaks whenever the owner gets busy. That's the moment to hand it to software or a lightweight automation.
+
+Until you hit one of those signals, the spreadsheet and manual reminders produce the same outcome with zero SaaS cost. And when you do upgrade, the 3-touch sequence and the deposit policy carry straight into the new tool — because they were never about the software, they were about the process.
+
+Frequently asked questions
+
+How do I reduce no-shows at my home service business?
+
+Three moves cut missed appointments in half without spending anything. First, send a 3-touch reminder sequence — a text at booking, an email reminder 48 hours out, and a phone call the day of. Second, log every no-show in a free spreadsheet so repeat offenders surface instead of blending into the noise. Third, require a deposit or card-on-file for customers who have no-showed three times in 90 days. The reminder sequence alone typically brings a 15% no-show rate down to 6–8%.
+
+What's a good no-show rate for HVAC and plumbing companies?
+
+A healthy home-service company runs between 5% and 10% no-shows. Above 15% and you are losing real money — at 100 appointments a month, a 15% no-show rate burns roughly $2,000–$4,000 a month in payroll, fuel, and empty slots. The gap between a 6% and a 15% rate is rarely price or market — it is almost always the absence of reminders and a repeat-offender policy.
+
+How do I set up free appointment reminders?
+
+Use the tools you already pay for. A booking text goes out the moment the appointment is scheduled. An email reminder goes 48 hours before with what to expect and how to reschedule. A same-day phone call goes out the morning of the job. All three are free through your phone, your email client, or Google Calendar — no scheduling software required under 50 appointments a month.
+
+Should I charge a no-show fee?
+
+Only for repeat offenders, and only with clear warning first. Charging every first-time no-show drives away good customers who simply forgot. Instead, flag customers who no-show three times in 90 days in your tracking spreadsheet, then send a clear notice: going forward, appointments require a deposit or card-on-file. The deposit is refundable when the customer shows — it exists to create commitment, not to punish. Most companies find a small deposit eliminates the repeat behavior entirely.
+
+How do I track no-shows in a spreadsheet?
+
+Build one row per appointment with columns for scheduled date, customer, phone, tech, reminder sent, confirmed, showed, rescheduled, reason, and follow-up notes. Add a rolling no-show rate formula that recalculates per tech, per week, and per customer. Use conditional formatting so any customer with three no-shows in 90 days turns red — that red row is your repeat-offender list. A free Google Sheets tracker handles this in under an hour to build.
+
+When should I switch from a spreadsheet to scheduling software?
+
+Cross 50 appointments a month and scheduling software pays for itself. Tools like ServiceTitan, Housecall Pro, and Jobber auto-send reminder sequences, take deposits, and track no-show rates without a human touching a spreadsheet — usually paying for themselves within two months in recovered slots. Below 50 appointments a month, the spreadsheet plus manual reminders produces the same outcome with zero SaaS cost. The threshold is volume, not preference.
+
+What's the $30K recovery guarantee Jobs Done Labs offers?
+
+Jobs Done Labs builds the automated version of these operational systems — appointment confirmation, reminder sequences, no-show tracking, and slot-fill workflows — and backs them with a $30K-in-90-days guarantee: if documented recovery and cost savings combined don't reach $30,000 within 90 days, you pay nothing. The free spreadsheet and reminder templates in this guide are the manual version of the same system — start there, and when appointment volume grows past what a spreadsheet handles, the guarantee covers the automated build.
+
+Related posts
+
+Home Services
+
+Stop Missing Customer Calls — The Real Cost, a Free Revenue Calculator, and 7 Fixes That Work for Any Service Business
+
+Home Services
+
+Losing Leads Because You Can't Respond Fast Enough? Here's How Contractors Fix It
+
+Home Services
+
+Stop Losing Track of Estimates: A Free Job Tracking Spreadsheet for Small Contractors
+
+What if every appointment confirmed itself — reminders, no-show tracking, and slot-fill — without your office lifting a finger?
+
+We build the automated version of this system for home-service operators: confirmation texts, the 3-touch reminder sequence, automatic no-show logging, and same-day slot-fill. Backed by our $30K-in-90-days guarantee.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+How to Never Lose a Review When Your Tech Is Late — Free SMS Templates
+
 Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
 
 Stop Missing Customer Calls — The Real Cost, a Free Revenue Calculator, and 7 Fixes That Work for Any Service Business
@@ -9336,6 +9616,192 @@ Related reading
 
 If you found this useful, you will want these too:
 
+Home Services & Trades
+
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 2, 2026
+
+Key takeaways
+
+Your dispatcher is routing 8 techs on a whiteboard and you are losing 2 calls a day to drive time — at $250 per call that is $130,000 a year. This free dispatch spreadsheet gives you a daily schedule board with color-coded slots, tech-by-zone assignment, emergency call reservation, and a weekly efficiency dashboard. It replaces 80 percent of a $150/month SaaS dispatch tool at zero dollars and takes 30 minutes to set up.
+
+The whiteboard math
+
+A dispatcher routing 8 technicians across a metro area without zones or software makes two expensive decisions every hour: which tech to send and in what order. Gut-feel routing adds an average of 15 minutes of windshield time per call. Across 40 calls a day, that is 10 hours of excess drive time — at $150 per hour loaded cost, you are burning $1,500 a day on windshields. Add two missed calls because the closest tech was 25 minutes away and the customer called someone else, and you are at $2,000 a day. Multiply by 250 working days, and the whiteboard is costing you half a million dollars a year in preventable waste.
+
+The real cost of no dispatch system
+
+An 8-tech HVAC shop doing 40 calls a day loses 10 hours of technician time to inefficient routing. At $150/hour loaded cost, that is $1,500/day. Two missed calls at $250 each adds $500. Total preventable loss: $2,000 per day, $500,000 per year. The free spreadsheet in this guide costs nothing and cuts routing waste by 30 to 40 percent in the first month.
+
+The free field service dispatch spreadsheet — 5 tabs, one system
+
+This is not a generic calendar template. The spreadsheet is built specifically for home service dispatch: HVAC, plumbing, electrical, and any trade that runs multiple techs across a service area. Five tabs replace the whiteboard, the Post-it notes, the text messages, and the gut-feel routing.
+
+Tab
+
+What it replaces
+
+What it does
+
+Daily Schedule Board
+
+Whiteboard and paper route sheets
+
+Each technician gets a row. Each time slot gets a cell. Color-coded: white for scheduled, blue for en route, green for on site, gray for complete. One glance tells you where every tech is.
+
+Tech-by-Zone Assignment
+
+Dispatcher gut feel
+
+Divide your service area into 3 to 5 geographic zones. Assign each technician a primary zone. Jobs in that zone land on that tech first. Drive time drops 30 to 40 percent in the first month.
+
+Emergency Slot Reservation
+
+Frantic 8am phone-route scramble
+
+Reserve 1 to 2 open slots per zone each day. If an emergency call comes in at 11am, the slot is waiting. If it is still open at 2pm, fill it from the backlog. No more bumping scheduled customers for emergencies.
+
+Drive Time Estimator
+
+Guessing
+
+Enter job addresses per zone. The estimator calculates average drive time between jobs in that zone. After one month of data, you know which zones are tight (10-12 minutes between stops) and which are sprawled (20+ minutes).
+
+Weekly Dispatch Dashboard
+
+No visibility at all
+
+Calls per tech per day, average drive time, on-time arrival percentage, emergency response time, overtime trend, revenue per tech per day. Every KPI a dispatcher needs, updated automatically as you fill the board.
+
+The tech-by-zone assignment system
+
+Most small shops assign jobs by "who is free next." That sounds logical — it keeps every tech busy. But it ignores geography. A tech finishing a job on the north side of town gets assigned a call on the south side because the south-side tech is still on their previous job. Now both techs are crisscrossing the metro area, burning fuel and time.
+
+Zone assignment fixes this structurally.
+
+Instead of matching the next free tech to the next waiting call, you match every job to the zone it lives in, and every technician to a primary zone. Here is how to set it up:
+
+Plot your last 90 days of job addresses on a map.
+
+Drop a pin for every service call. Look for natural clusters — neighborhoods, suburbs, industrial parks where you get the most calls.
+
+Draw zone boundaries along natural dividers.
+
+Highways, rivers, county lines. You want 3 to 5 zones for an 8-tech shop. Each zone should have roughly equal call volume — check your pin map to confirm.
+
+Assign each technician a primary zone.
+
+Senior techs get the highest-volume zones. Newer techs get secondary zones or act as floaters covering PTO and sick days.
+
+Schedule zone-first, availability-second.
+
+When a call comes in, check the zone first. If the zone tech is available, they get it. If they are booked, the floater or adjacent-zone tech takes it — but the default is zone-first.
+
+Measure after one month.
+
+Average drive time should drop 30 to 40 percent. On-time arrival rate should rise above 85 percent. If a zone is not performing, redraw the boundaries.
+
+The Tab 2 Zone Assignment Board in the spreadsheet tracks all of this. Each zone lists its primary tech, secondary/backup tech, average drive time, on-time percentage, and call volume. When a zone's on-time rate dips, you see it immediately — not three months later when a customer survey mentions it.
+
+The emergency call slot reservation
+
+Every HVAC shop knows the 4pm Friday no-cool call. Or the 7am Monday no-heat call in January. Emergencies are a fact of life in field service. The problem is not the emergencies — it is that most shops handle them by bumping scheduled customers, creating a cascade of reschedules that derails the entire week.
+
+The fix is simpler than it sounds: reserve the slots before you need them.
+
+Each zone gets 1 to 2 reserved emergency slots per day. On the dispatch board, these slots are marked in orange and left empty. If no emergency call comes in by 2pm, you release the slot and fill it from the day's backlog — warranty callbacks, quote follow-ups, or a preventive maintenance visit that is coming due. The customer who was scheduled for 2pm never gets bumped because the 2pm slot was never booked in the first place.
+
+One 12-tech plumbing shop using this system reported that emergency bumping dropped from 8 to 10 reschedules per week to 1 or 2. The weekly reschedule cascade — where a bumped Monday customer pushes into Tuesday, which pushes into Wednesday, which becomes a disaster on Friday — simply stopped happening. The reserved slots absorbed the emergencies, and the scheduled customers stayed scheduled.
+
+The dispatch efficiency dashboard
+
+Most small shops measure dispatcher performance by one metric: "did the calls get done?" But "done" hides a lot of waste. A tech who drives 3 hours to complete 4 calls looks the same as a tech who drives 1 hour to complete 6 calls — both got their calls done. The dashboard surfaces what "done" actually cost.
+
+Six metrics the dashboard tracks every week
+
+Calls per tech per day
+
+— Target: 5 to 7 for HVAC, 3 to 5 for plumbing, 5 to 8 for electrical. Below-target techs may have a routing problem, a skill gap (taking too long on jobs), or a zone with too much drive time.
+
+Average drive time between jobs
+
+— Target: under 18 minutes in suburban zones, under 25 minutes in rural zones. If a zone is consistently above target, the boundaries are wrong or the tech is not zone-staying.
+
+On-time arrival percentage
+
+— Target: 85 percent or higher. Anything below 80 percent tells you the schedule is overbooked or drive-time estimates are too optimistic.
+
+Emergency response time
+
+— Target: under 60 minutes from call to on-site. If it is consistently above 60, the emergency slots are in the wrong zones or there are not enough of them.
+
+Overtime hours per tech
+
+— Target: under 5 hours per week. Rising overtime means the schedule is overloaded — either add a tech or reduce daily call volume per tech.
+
+Revenue per tech per day
+
+— This is the north star. If routing improves but revenue does not, you are routing efficiently to the wrong jobs. Use this to identify which zones and which call types generate the most revenue and prioritize them.
+
+The first 30 minutes
+
+You do not need to implement all five tabs on day one. Most of the value comes from the Daily Schedule Board and the Zone Assignment Board — those two tabs alone cut routing waste by 25 to 30 percent. Here is the 30-minute setup sequence:
+
+Minutes 1 to 10: Set up the Daily Schedule Board.
+
+List your technicians down the left column. Across the top, create time slots (8am to 9am, 9am to 10am, and so on through 4pm). Fill in today's scheduled jobs. Color-code them as you go: scheduled is white, en route is blue, on site is green, complete is gray.
+
+Minutes 11 to 20: Draw your zone map.
+
+Pull up Google Maps. Drop pins for the job addresses you serviced this week. Draw 3 to 5 rough zones around the clusters. Do not overthink the boundaries — you will adjust them after one month of data.
+
+Minutes 21 to 25: Assign techs to zones.
+
+Write each technician's name next to their zone on the Zone Assignment Board. The senior tech gets the busiest zone.
+
+Minutes 26 to 30: Reserve tomorrow's emergency slots.
+
+Mark 1 to 2 slots per zone as emergency reserves on tomorrow's board. Leave them empty. At 2pm tomorrow, if they are still empty, fill them from the backlog.
+
+That is it. Thirty minutes, and you have a dispatch system that replaces the whiteboard, the Post-it notes, and the gut-feel routing. In a month, measure the drive-time reduction and see whether you are getting back 8 to 10 hours of technician time per day. If you are, the spreadsheet just paid for itself about 1,800 times over.
+
+Frequently asked questions
+
+How do I schedule field service technicians efficiently?
+
+Efficient technician scheduling has three parts: zone-based routing (divide your service area into 3 to 5 zones, assign technicians to primary zones so drive time drops 30 to 40 percent), a daily dispatch board that shows every technician's time slots with color-coded status, and an emergency-call reservation system that holds 1 to 2 open slots per zone until mid-afternoon. The free dispatch spreadsheet in this guide implements all three in one system.
+
+How do I route HVAC technicians to minimize drive time?
+
+Minimize HVAC technician drive time with zone assignment: divide your metro area into geographic zones, assign each technician a primary zone, and schedule jobs within that zone sequentially. For a typical 8-tech shop, zone-based routing saves about 10 hours per day in aggregate windshield time. The spreadsheet has a tech-by-zone assignment board and a drive-time estimator so you can see the savings before you implement.
+
+What is the best free field service scheduling tool?
+
+For a shop with 1 to 3 technicians, a simple Google Calendar works. For 4 to 12 technicians, a structured dispatch spreadsheet (like the free one in this guide) with daily boards, zone assignments, and emergency-slot reservations replaces 80 percent of what paid SaaS tools do at zero dollars per month. For larger operations with 15 or more technicians, a paid routing tool like OptimoRoute or ServiceTitan becomes necessary because manual scheduling cannot keep up with the dispatch volume.
+
+How many calls per day should a field service technician handle?
+
+A field service technician should handle 4 to 8 calls per day depending on trade. HVAC technicians typically run 4 to 6 calls with drive time included. Plumbers average 3 to 5 calls because jobs run longer. Electricians handle 5 to 7 shorter calls. Target 6 to 7 billable hours out of an 8-hour shift, with the remaining 1 to 2 hours for drive time, parts runs, and admin.
+
+How do I set up service zones for my HVAC business?
+
+Plot every job address from the last 90 days on a map, draw natural boundaries (highways, rivers, county lines) that group addresses into 3 to 5 clusters of roughly equal volume, and assign each technician a primary zone. After one month, measure: drive time should drop 30 to 40 percent, on-time arrival rate should rise above 85 percent, and emergency response time should fall below 60 minutes.
+
+Stop routing on a whiteboard
+
+Your dispatcher is losing 2 calls a day to drive time. This spreadsheet fixes the routing — but the phone system that captures those calls, the lead follow-up that converts them, and the invoicing that gets you paid are also leaking revenue. Book a free 30-minute audit and we will map every leak in your service business, from dispatch to deposit.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+How to Never Lose a Review When Your Tech Is Late — Free SMS Templates
+
 You Have 3 No-Shows Today and Your Techs Are Standing Around at $150 an Hour — The Free Prevention System That Recovers $45,000 a Year
 
 Your Tech Drove 45 Minutes Back to the Shop for a $12 Capacitor — The Free Truck Stock System That Keeps Every Part on the Truck
@@ -10210,6 +10676,386 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Home Services & Trades
+
+When to Roll a Truck at 3am: An After-Hours Emergency Triage System for HVAC, Plumbing, and Electrical Contractors
+
+By Ryne Bandolik · Jobs Done Labs · July 11, 2026
+
+It's 3:17am on a Saturday. Your phone rings. A customer's basement has two inches of water and they're panicking. You have 60 seconds to decide: do you wake up your on-call tech — paying them 1.5x their hourly rate with a 4-hour minimum, roughly $360-480 in labor alone — or do you tell the customer it can wait until 7am?
+
+That 60-second decision is the highest-stakes moment in your day. Get it wrong one way and you burn $500 on a condensation drip that needed $12 in insulation — plus a 1-star Google review from a furious homeowner who can't believe they paid $500 for "tightening a pipe." Get it wrong the other way and you leave a cracked heat exchanger leaking carbon monoxide until morning.
+
+Most contractors make this call by gut feel. And gut feel is expensive. The HVAC owner in Minneapolis who dispatches on "how panicked they sound" racked up $14,000 in unnecessary truck rolls last year. The plumber in Phoenix who defaults to "wait until morning" lost two $8,000/year commercial accounts after missing actual emergencies. Neither had a system — they had a coin flip wrapped in adrenaline.
+
+The entire after-hours call industry is built to sell you something: call-answering services ($200-800/month for a receptionist who can't tell a burst pipe from a dripping faucet), field service management platforms ($200-400/month for scheduling software that assumes you already decided to dispatch), or biometric time clocks ($2,000+ for hardware your crews will resent). None of them solve the actual problem:
+
+you need a decision framework, not another monthly subscription.
+
+The reframe:
+
+You don't need someone to answer the phone — you need to know WHEN to dispatch. The system below costs $0 to implement, takes 2 hours to set up, and the math is simple: prevent 2 unnecessary truck rolls per month and you've saved $8,600-11,500/year. Prevent one missed emergency that would have cost you a $5,000/year commercial account and the system has paid for itself 100 times over. After-hours triage isn't a cost problem — it's a decision-quality problem.
+
+Why every page-1 search result gets this wrong
+
+Search "after hours emergency call triage for contractors" and you'll find: (1) answering services pitching 24/7 live receptionists who follow your script but can't perform actual diagnostic triage, (2) FSM platforms listing "after-hours call management" as a checkbox feature buried inside a $200+/month suite, and (3) trade publication blog posts with advice like "set clear expectations with customers" — zero operational detail. What you won't find: a tiered emergency classification system with trade-specific diagnostic questions, a weather-adjusted urgency matrix, a dispatch cost calculator that makes the economics visible, or customer communication scripts for both outcomes ("we're dispatching now" AND "this can wait — here's what to do in the meantime"). This is that system.
+
+The 3-tier emergency triage system: Red, Yellow, Green
+
+Tier
+
+Action
+
+When to use
+
+Examples
+
+RED
+
+Dispatch immediately
+
+No questions. Roll now.
+
+Active property damage worsening by the minute. Life safety risk. Inventory loss exceeding $5,000 with no backup.
+
+Burst pipe flooding finished space. Sewage backup. Gas smell or CO alarm. Complete heat loss below 20°F with vulnerable occupants. Electrical sparking/smoking. Commercial refrigeration failure with $8K+ inventory.
+
+YELLOW
+
+Dispatch on next available tech
+
+Within 2-4 hours, possibly at standard rate if near shift start.
+
+System failure affecting habitability but no active property damage. Moderate temperatures. Partial outage.
+
+No heat/AC but indoor temp 50-80°F. Water heater failure with no leak. Partial power outage in one room. Clogged drain backing up slowly. AC failure during moderate weather.
+
+GREEN
+
+Schedule next business day
+
+Provide self-help instructions over phone. Schedule follow-up callback in 60 minutes.
+
+Issue already contained by customer. No safety risk. No active water. Cosmetic or convenience issue.
+
+Dripping faucet. Running toilet. Condensation drip (bucketed). Routine maintenance request. Estimate request. "Weird noise" with no performance symptoms.
+
+The 5 diagnostic questions per trade
+
+Before you classify the call, you need specific information. These questions are designed to be asked by anyone answering the after-hours phone — a dispatcher, an owner, or a spouse covering the line. They're ordered by urgency: if question 1 triggers RED, you stop and dispatch.
+
+HVAC calls
+
+Is there a gas smell or is a CO detector alarming?
+
+RED if yes — may need fire department first.
+
+Is there active water coming from the unit or ceiling, and is it worsening?
+
+RED if yes and worsening. If contained with a bucket and not rising, YELLOW.
+
+What's the indoor temperature right now?
+
+Below 50°F or above 90°F with vulnerable occupants (elderly, infants, medical conditions) = YELLOW to RED depending on weather. Between 50-80°F = YELLOW.
+
+Can you see ice on the outdoor unit or indoor coils?
+
+Possible freeze-up — YELLOW. Shut off the unit, let it thaw until morning. If the homeowner needs cooling urgently, upgrade to RED.
+
+Has the system been making unusual noises? Describe them.
+
+Banging, screeching, or grinding = potential mechanical failure — YELLOW. Humming or clicking = likely electrical — YELLOW. Occasional thump = probably normal expansion/contraction — GREEN.
+
+Plumbing calls
+
+Is water actively flowing and are you unable to stop it? Where is the main shut-off valve?
+
+RED if can't stop flow. Walk the caller to the shut-off valve — many homeowners don't know where it is.
+
+Is the water clean or sewage?
+
+Sewage = RED — health hazard. Clean water from supply line = severity depends on volume and location.
+
+How many inches of standing water and is it rising?
+
+Rising water = RED. Static or contained = YELLOW or GREEN depending on volume.
+
+Do you have any other working bathroom?
+
+If yes, a single toilet clog or sink issue can be YELLOW/GREEN. If no — only bathroom in the house — YELLOW.
+
+Is the water near electrical outlets or appliances?
+
+RED if water + electricity. Tell them to shut off the breaker to the affected area immediately.
+
+Electrical calls
+
+Is there sparking, smoking, or a burning smell?
+
+RED. Tell them to evacuate and call 911 if visible flames.
+
+Is the entire house out or just one room?
+
+One room or circuit = YELLOW — likely a tripped breaker; troubleshoot over the phone first. Whole house = check with utility first, then YELLOW if it's on your side.
+
+Is there water involved?
+
+RED if water + electricity. Shut off the main breaker if safe to reach the panel.
+
+Are any switches or outlets hot to the touch?
+
+YELLOW — shut off that breaker, dispatch within 4 hours. This is a fire risk.
+
+Has anyone received a shock?
+
+RED — 911 first if injured. Then dispatch electrician to identify the fault before anyone re-enters.
+
+Critical:
+
+The person answering the phone doesn't need to be a technician. They need a laminated card with these 5 questions per trade, the Red/Yellow/Green classification table, and the authority to dispatch on RED without calling you. If you're the owner and you take every after-hours call yourself, you're the single point of failure — and you're burning out. The system works when the decision framework works without you.
+
+The customer value overlay: when loyalty changes the math
+
+The triage decision isn't purely technical. Before you decide, check the caller against your customer database:
+
+$5,000/year commercial account with 5 locations?
+
+A YELLOW plumbing call at their headquarters may be worth a RED dispatch. They're not paying you $5,000/year to wait until morning.
+
+Maintenance agreement customer paying $299/year?
+
+Their YELLOW call might get upgraded — you've promised them priority service.
+
+Customer who spent $12,000 on a system replacement last year?
+
+They've earned some goodwill. A borderline YELLOW/RED call goes RED.
+
+First-time caller from a Google search?
+
+Pure technical triage applies. But document the outcome — this could be the start of a relationship.
+
+Document the rationale every time. If a customer later questions why you dispatched at 2am for what turned out to be a minor issue, you can point to: "Based on your description of active water flowing from the ceiling and your status as a $299/year maintenance customer, our triage protocol called for immediate dispatch. Here's what the tech found." The paper trail turns a complaint into a demonstration of your process.
+
+The weather-adjusted dispatch matrix
+
+The same symptom gets a different decision based on outdoor temperature. Here's the quick lookup:
+
+Symptom
+
+Outdoor temp > 80°F
+
+50–80°F
+
+20–50°F
+
+< 20°F
+
+No heat
+
+GREEN
+
+GREEN
+
+YELLOW
+
+RED (pipes freeze in 2-4 hours)
+
+No AC
+
+YELLOW/RED*
+
+GREEN
+
+GREEN
+
+GREEN
+
+No hot water
+
+GREEN
+
+GREEN
+
+YELLOW
+
+YELLOW
+
+* RED if elderly occupants, infants, or medical conditions; YELLOW otherwise.
+
+The dispatch cost calculator: what a 3am truck roll actually costs
+
+Most owners underestimate the true cost of an after-hours dispatch because they only count the technician's overtime pay. Here's the full math for an 8-technician shop:
+
+Tech overtime:
+
+$28/hr × 1.5 × 4-hour minimum = $168
+
+Loaded labor cost (taxes, insurance, workers' comp):
+
++25-40% = $42-67
+
+Fuel cost:
+
+$0.65/mile × 30-mile round trip average = $20
+
+Vehicle maintenance allocation:
+
+$0.15/mile × 30 miles = $5
+
+Dispatcher/admin time:
+
+20 minutes × $25/hr loaded = $8
+
+Direct cost per dispatch:
+
+$243-268
+
+Next-day productivity drag:
+
+15% efficiency loss for fatigued tech = $40-60 in lost billable output
+
+True cost per dispatch:
+
+$283-328
+
+At 3 unnecessary dispatches per month, that's $849-984/month — or $10,188-11,808/year — in avoidable cost. And this doesn't include the cost of a 1-star review from a customer who paid $500 for a $12 fix.
+
+Customer communication scripts for every outcome
+
+DISPATCH script (RED)
+
+"Based on what you're describing — [specific symptom] — this is something we need to address tonight. [Tech name] is on his way from [location]. He'll be there in approximately [ETA] minutes. His name is [name] and he drives a [color] [vehicle]. While you wait: [specific instruction — shut off water at the main valve, move valuables away from the affected area, do NOT use affected electrical outlets]. His number is [phone] if you need to reach him directly. I'll call you in 20 minutes to confirm his ETA is holding."
+
+WAIT UNTIL MORNING script (YELLOW/GREEN)
+
+"Based on what you're describing, this doesn't appear to require an emergency dispatch tonight. Here's what I recommend you do right now to manage the situation: [specific DIY instructions — place a bucket under the drip, turn off the water supply valve behind the toilet, shut off the breaker to the affected room]. I have you on the schedule for [first available slot — 7:00am tomorrow]. [Tech name] will call you 30 minutes before arrival. If anything changes overnight — if the water starts flowing faster, if you smell gas, if the temperature drops below [X] — call me back immediately at this number and I will dispatch someone. You're not being dismissed — we're making the smart call based on what you're telling us, and we're committed to getting this fixed as soon as it's safe and practical. I'll call you back in 60 minutes to check in."
+
+The 60-minute callback is the difference between "they didn't care enough to come out" and "they made the right call AND checked on me." It costs you 2 minutes and earns you a customer for life.
+
+How to track triage accuracy (so you actually get better)
+
+Every after-hours call gets logged in a simple sheet:
+
+After-Hours Call Log — 6 columns
+
+Date/Time.
+
+When the call came in.
+
+Customer.
+
+Name, account status (maintenance agreement? commercial? first-time?).
+
+Symptom described.
+
+What the caller reported, in their words.
+
+Triage decision.
+
+RED / YELLOW / GREEN, plus rationale (which question triggered the classification).
+
+Actual outcome.
+
+What did the tech find when they arrived (or the next morning)?
+
+Was the triage correct?
+
+YES / NO. If NO: what was missed and why.
+
+Monthly review: calculate your triage accuracy rate (correct triages ÷ total triages), unnecessary dispatch rate (RED calls that turned out to be GREEN), and missed emergency rate (GREEN calls that should have been RED). Target: >90% triage accuracy within 3 months. If you're below 70%, your diagnostic questions need refinement — likely you're not asking enough follow-ups before classifying.
+
+When to upgrade: red flags that mean you need a professional answering service
+
+The triage system works best when call volume is manageable. When it's not:
+
+20+ after-hours calls/week.
+
+An owner can't sustain manual triage at this volume while also running the business during the day.
+
+Triage accuracy below 70% despite using the system.
+
+Emotional decision-making is overriding the framework — you need an impartial third party on the phones.
+
+Missed emergencies occurring at any frequency.
+
+One CO leak that wasn't caught is one too many.
+
+Owner burnout.
+
+If you're dreading the phone, sleeping with it on silent, or waking up at 4am panicked that you missed a call — you need help, not a better spreadsheet.
+
+$50,000+ in annual emergency revenue.
+
+At this level, a dedicated on-call dispatcher or professional answering service is cost-justified.
+
+Do this week: your after-hours triage system in 2 hours
+
+5 moves to stop gambling on after-hours calls
+
+Print the triage decision matrix.
+
+One laminated card per person who might answer the after-hours phone. Red/Yellow/Green table + the 5 diagnostic questions for each trade you service.
+
+Train the rotation.
+
+Run through 5 real after-hours calls from the last 6 months. Classify each one using the system. Compare to what you actually did. Discuss where the system would have made a different — and better — call.
+
+Set up the call log.
+
+A simple Google Sheet with the 6 columns above. Every after-hours call gets logged, no exceptions. This is your triage accuracy data.
+
+Practice the two scripts.
+
+Role-play the DISPATCH script and the WAIT UNTIL MORNING script until they feel natural. The words matter — a panicked customer needs to hear calm competence.
+
+Schedule the first monthly review.
+
+Put it on the calendar for 30 days from now. Pull the call log. Calculate triage accuracy. Adjust the diagnostic questions based on what you learned.
+
+Total setup time: 2 hours. Total cost: one laminator sheet. Annual savings: $10,000-25,000 in avoided unnecessary dispatches — plus the revenue from emergencies you no longer miss.
+
+Frequently asked questions
+
+How much does an after-hours service call actually cost my business?
+
+For a typical 8-technician HVAC or plumbing shop, a single after-hours dispatch costs $283-328 in true cost: technician overtime (1.5x hourly with a 4-hour minimum), loaded labor (taxes, insurance, workers' comp), fuel, vehicle wear, admin time, and next-day productivity drag from a fatigued technician. At 3 unnecessary dispatches per month, that's $10,188-11,808/year in avoidable costs. A proper triage system that prevents just 2 unnecessary truck rolls per month pays for itself 100 times over. Jobs Done Labs builds automated after-hours triage systems during a free audit, backed by the
+
+$30K Guarantee
+
+: if documented recovery doesn't reach $30K in 90 days, you pay nothing.
+
+What's the difference between a call-answering service and actual emergency triage?
+
+Call-answering services (Ruby, AnswerConnect, PATLive, VoiceNation) cost $200-800/month and provide live receptionists who follow a script you write. They do NOT triage — they can't distinguish a condensation drip from a burst pipe, assess whether freezing temperatures change the urgency of a no-heat call, or factor in customer lifetime value when deciding whether to wake up your on-call tech. Actual triage requires trade-specific diagnostic questions, a tiered classification system, weather-adjusted urgency assessment, and customer value overlay. A $400/month answering service plus a triage framework you build beats a $400/month service alone — and costs less than one unnecessary dispatch.
+
+How long does it take to implement an after-hours triage system?
+
+The manual version — a printed decision matrix, 5 diagnostic questions per trade, and a triage call log — takes about 2 hours to set up and train your on-call rotation. The automated version (call intake form → triage algorithm → auto-dispatch or schedule-next-day) is what Jobs Done Labs builds during a 48-hour automation engagement. Either way, the ROI is measured in weeks: prevent one unnecessary $400 dispatch and the system has paid for itself. Prevent one missed emergency that would have resulted in property damage or a lost customer, and the system's value is measured in tens of thousands.
+
+Does the $30K guarantee cover after-hours dispatch automation?
+
+Yes. The $30K-recovered-in-90-days guarantee covers all operational automation we build — including after-hours triage and dispatch. We calculate documented savings from: avoided unnecessary truck rolls (dispatch cost × prevented dispatches), recovered emergency revenue (jobs you would have lost without proper triage), reduced customer churn (retained accounts that would have left after a bad after-hours experience), and reduced admin time (hours saved from manual call logging and dispatch coordination). If the documented total across all automations doesn't reach $30K within 90 days, you pay nothing.
+
+What if I'm a one-man shop — does triage even apply to me?
+
+Even more so. When you're the only person answering the phone AND running jobs during the day, every after-hours call is stealing sleep you can't recover. The triage system works the same — the 5 diagnostic questions and Red/Yellow/Green matrix — but for a solo operator, the value is even higher because your fatigue directly impacts your daytime billable work. The 60-minute callback after a YELLOW or GREEN call is especially critical: it's how you show a customer you care without burning yourself out. Setup takes 2 hours and costs $0 — the same as for an 8-tech shop. The difference: for you, preventing 2 unnecessary dispatches per month doesn't just save money — it saves the energy that keeps your business running.
+
+What industries besides HVAC and plumbing does the triage system work for?
+
+The Red/Yellow/Green framework adapts to any trade that fields emergency calls: electrical contractors (sparking, smoking, power loss), roofing (active leak during rain, tarp-able damage), appliance repair (refrigeration failure with inventory at risk vs. non-critical appliance), garage door (door stuck open = RED for security, stuck closed but car inside = YELLOW), locksmiths (locked out in dangerous weather or with child/pet inside = RED, locked out in mild conditions = GREEN), pest control (active infestation causing health risk vs. routine treatment), and restoration/water damage (active water flow = RED, contained damage = YELLOW). The diagnostic questions change per trade, but the decision logic is the same: active property damage, life safety, and inventory at risk = RED. Habitability impact without active damage = YELLOW. Convenience or contained issue = GREEN.
+
+Stop gambling on every 3am phone call
+
+Book a free 15-minute audit. We'll map your current after-hours call flow — how calls come in today, where the triage decisions break, and what automation would look like for your exact trade and call volume. No pitch, no pressure. You keep the decision matrix either way.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+How to Never Lose a Review When Your Tech Is Late — Free SMS Templates
 
 Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
 
@@ -24659,6 +25505,271 @@ Your Agency Spends 40+ Hours a Month Hand-Building Client Reports — Here's the
 
 
 URL: https://www.jobsdonelabs.ai/blog/scope-creep-tracker-fixed-fee-consulting-change-order/
+
+---
+
+# How to Never Lose a Review When Your Tech Is Late
+
+Home Services & Trades
+
+How to Never Lose a Review When Your Tech Is Late
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 11, 2026
+
+Key takeaways
+
+One bad review from an uncommunicated delay costs 10 to 15 lost leads per month — roughly eleven thousand to sixteen thousand dollars a year. The fix is not perfect scheduling (that is impossible). The fix is a six-stage SMS template system that turns every late tech into a customer who feels informed, respected, and still leaves five stars. Below: the exact templates, the delay-handling flowchart, the review-timing guide, and the ROI math that makes the thirty-minute setup worth it.
+
+The one-star review that cost you 15 leads this month
+
+A customer takes the morning off work to wait for your tech. The two-hour arrival window comes and goes. At 11:15am, 45 minutes past the window, the customer calls your office. Nobody answers — the dispatcher is on another line. At 11:45am the customer leaves a one-star review: "Took the morning off work. Nobody showed up. Nobody called. Unprofessional."
+
+Here is what actually happened: the tech was on the previous job, which ran 90 minutes long because the customer added two extra repairs. Your dispatcher knew this at 9:30am — 105 minutes before the review was posted. Nobody texted the waiting customer. The tech arrived at 12:20pm, did excellent work, and the customer paid the invoice without complaint. But the one-star review is permanent.
+
+The math on that one review: ninety-three percent of customers read reviews before calling a service business. Companies rated below 4.0 stars lose 40 to 60 percent of clicks to higher-rated competitors. If your average job is 300 dollars and you close30 percent of leads, one bad review costs roughly 1,350 dollars per month in lost revenue. Over a year: 16,200 dollars. From one review. One text could have prevented it.
+
+Why "my techs are never late" is not the solution:
+
+Forty percent of service calls run late. The jobs before yours ran long, traffic was bad, the parts house was backed up. Late arrivals are an operations problem. One-star reviews from late arrivals are a
+
+communication
+
+problem. Fix the communication, and late arrivals become "they kept me updated the whole time — really professional" instead of "nobody called."
+
+The free customer communication template pack: 6 stages, exact words
+
+Every service call has six natural communication moments. Send the right message at each one, and the customer feels informed and in control — even when things go wrong. Copy and paste these into a shared Google Doc your dispatcher keeps open all day. Each template takes 15 seconds to personalize.
+
+Stage 1: Day-before confirmation (send between 4pm and 6pm the day before)
+
+Hi [Name], this is [Company] confirming your [service type] appointment tomorrow, [date]. Your tech [Tech name] will arrive between [window start] and [window end]. You will get a text when they are on the way. Reply STOP to opt out.
+
+Why this works:
+
+Day-before confirmation cuts no-shows by 30 to 50 percent. It also gives the customer your number so tomorrow's texts are not from an unknown sender. For customers who booked more than a week ago, this is the difference between "oh right, the plumber is coming" and "who is this person at my door?"
+
+Stage 2: On the way (send when tech leaves previous job)
+
+Hi [Name], [Tech name] is on the way to your [service type] appointment. ETA: [time] based on current traffic. See you soon!
+
+Why this works:
+
+This is the most important text in the sequence. It converts an abstract "between 8am and 10am" into a concrete "Chris is 18 minutes away." The customer can wrap up what they are doing, put the dog away, and unlock the gate. It also functions as a second confirmation — if the customer forgot about the appointment, this is their reminder with enough time to be ready.
+
+Stage 3: Running late (send immediately when delay exceeds 15 minutes)
+
+Hi [Name], quick update — [Tech name] is running about [X] minutes behind schedule. The previous job took longer than expected. Their new ETA is [new time]. We will text again when they are 10 minutes away. Thank you for your patience — we will make sure you are taken care of today.
+
+Why this works:
+
+This is the template that prevents the one-star review. Three things happen in the customer's mind when they get this text: (1) "Okay, someone knows I exist," (2) "I have a new time so I can plan," (3) "They said 'we will make sure you are taken care of' — I trust them." The apology is embedded without being groveling. The commitment ("we will make sure") re-establishes reliability.
+
+Stage 4: Ten minutes out (send when tech is 10 min away)
+
+Hi [Name], [Tech name] is 10 minutes away. See you soon!
+
+Why this works:
+
+The final heads-up. For customers who have been waiting (especially after a delay), this is the signal that the waiting is over. The tone is upbeat and brief — do not re-apologize, do not re-explain the delay. The delay is in the past. The tech is almost there.
+
+Stage 5: Job complete (send within 30 minutes of job finishing)
+
+Hi [Name], we just finished your [service type]. [Tech name] says [one-line summary of what was done, any findings, any next steps]. Your invoice will arrive by email shortly. If you have any questions, reply to this text or call us at [phone]. Thank you for choosing [Company]!
+
+Why this works:
+
+This closes the loop. The customer knows what was done and what to expect next. The "reply to this text" line keeps the conversation channel open for questions. The one-line summary from the tech is the most valuable part — it proves the tech actually communicated with the office about the job, which builds trust for the next step.
+
+Stage 6: Review request (send 2 to 3 hours after job complete, same day)
+
+Hi [Name], glad we could help with your [service type] today. If you have a moment, a quick review helps other homeowners find us: [review link]. It means a lot to our team. Thank you!
+
+Why this works:
+
+The timing is critical. Send immediately after job completion, and the customer feels pressured. Send the next day, and the goodwill has faded. Two to three hours post-completion is the sweet spot: the customer has had time to experience the result (the AC is cold, the leak is fixed) but the positive feeling is still fresh. The language is gratitude-based ("it means a lot to our team"), not transactional.
+
+Do not send a review request if:
+
+(a) the job had unresolved issues, (b) the tech was more than 2 hours late without a clear resolution, (c) the customer expressed dissatisfaction during the job, or (d) the customer did not answer the door or interact with the tech. A review request on a bad experience amplifies the negative. Skip it, flag the job for a manager follow-up call instead, and earn the review after you have fixed the problem.
+
+The delay handling decision flowchart
+
+When a tech runs late, the dispatcher has about 60 seconds to decide what to communicate and to whom. The flowchart below makes it a binary decision, not a judgment call:
+
+Delay communication flowchart
+
+Tech reports delay.
+
+Dispatcher confirms: (a) how many minutes behind? (b) what caused it? (c) can the rest of the day's jobs be adjusted to absorb this delay without cascading?
+
+Delay under 30 minutes:
+
+Send Stage 3 (Running Late) text to the next customer. Adjust the Stage 2 (On the Way) trigger to fire when the tech is actually leaving. No other action needed.
+
+Delay 30 to 90 minutes:
+
+Send Stage 3 text to the next customer. Call the customer after the text if the delay will push the appointment past the original window end time. Offer: (a) wait with updated ETA, (b) reschedule to a same-day later slot if available, or (c) reschedule to tomorrow with priority placement. Log what the customer chose.
+
+Delay over 90 minutes:
+
+Same as above, plus: offer a discount (10 to15 percent or a flat 25 to 50 dollars off) proactively in the phone call. "Mr. Smith, Chris is running about two hours behind and I want to be upfront with you — that is not the experience we aim for. We would like to take 15 percent off today's service as a thank-you for your flexibility. Does the new 3:30pm time still work, or should we reschedule?" The offer costs 30 to 75 dollars and saves a review that costs 1,350 dollars a month.
+
+Customer cannot be reached (text and call, no response after 15 min):
+
+Proceed with tech dispatch. The communication attempt is documented. If the customer leaves a negative review later, the record of attempted contact is your response: "We texted at 10:22am and called at 10:30am to let you know — we are sorry we could not reach you." This is far stronger than silence.
+
+The review-request timing guide
+
+Not all jobs should generate a review request at the same interval. Match the timing to the job type and the customer experience:
+
+Job type
+
+When to request
+
+Channel
+
+Notes
+
+Quick fix (under 60 min, on time)
+
+1 to 2 hours after completion
+
+SMS
+
+Fast, easy job. Strike while satisfaction is highest.
+
+Standard job (1 to 4 hours, on time)
+
+2 to 3 hours after completion
+
+SMS
+
+Default timing. Customer has experienced the result but is not yet onto the next thing.
+
+Major install (4+ hours, on time)
+
+Next morning, 8am to 9am
+
+Email then SMS
+
+Let the customer enjoy the new system overnight. Morning request framed around "how is everything working this morning?"
+
+Job ran late but was handled well
+
+3 to 4 hours after completion
+
+SMS (gentle)
+
+Add an extra sentence: "We know the schedule shifted today — thank you for rolling with it." Acknowledge the inconvenience without rehashing it.
+
+Job ran late and customer was frustrated
+
+Skip review request entirely
+
+Manager follow-up call
+
+A review request here is asking for a one-star review. Instead: manager calls within 24 hours to check in and make it right. Earn the review after you have fixed the relationship.
+
+The communication ROI calculator
+
+Here is the math that makes a thirty-minute template setup worth it. Plug in your own numbers to see your specific savings:
+
+Line item
+
+Without templates
+
+With templates
+
+Average monthly jobs
+
+200
+
+200
+
+Jobs that run late (40 percent)
+
+Late jobs where customer is NOT notified
+
+60 (75 percent)
+
+10 (12 percent)
+
+Negative reviews per month from uncommunicated delays
+
+4 to 6
+
+0 to 1
+
+Lost leads per negative review (monthly)
+
+10 to15
+
+10 to15 (for the 0 to 1 that still happen)
+
+Lost revenue per month (300 dollars avg job, 30 percent close rate)
+
+3,600 to 8,100 dollars
+
+0 to 1,350 dollars
+
+Annual cost of poor communication
+
+43,200 to 97,200 dollars
+
+0 to 16,200 dollars
+
+Annual savings from templates
+
+27,000 to 97,200 dollars
+
+Assumptions: 5-tech shop, 200 jobs/month, 300 dollars average ticket, 30 percent lead close rate, 40 percent of jobs run late, 93 percent of customers read reviews, businesses below 4.0 stars lose 40 to 60 percent of clicks. Your numbers will vary — plug in your own average ticket, close rate, and job volume to calculate your specific savings.
+
+What this means in plain English:
+
+A five-tech shop running two hundred jobs a month is losing somewhere between three thousand six hundred and eight thousand one hundred dollars a month in lost leads from bad reviews caused by uncommunicated delays. The templates above cost zero dollars, take thirty minutes to set up in a shared Google Doc, and add roughly two minutes of dispatcher time per job. The ROI on that thirty-minute setup is somewhere between 27,000 and 97,200 dollars per year. There is no operational fix with a higher return on time invested.
+
+Frequently asked questions
+
+What should I text a customer when my technician is running late?
+
+Send a text as soon as you know the tech will be more than15 minutes behind. Include the tech's name, the new ETA, a brief honest reason, and what you are doing about it. Template: "Hi [Name], [Tech name] is running about [X] minutes behind — the previous job took longer than expected. New ETA: [time]. We will text again when they are10 minutes away. Thank you for your patience." The key is proactivity. A customer who gets an unprompted update is far less likely to leave a negative review than one who waits in silence.
+
+How do I ask customers for reviews without sounding pushy?
+
+Time the request to when satisfaction is highest:2 to3 hours after job completion, when the customer has experienced the result but the positive feeling is still fresh. Keep it short and gratitude-based: "Hi [Name], glad we could help today. If you have a moment, a quick review helps other homeowners find us: [link]. It means a lot to our team." Never ask for a review if the job had issues. Skip it, have a manager call, and earn the review after you have fixed the problem.
+
+How much does a single bad review cost my service business?
+
+Roughly 1,350 dollars per month in lost revenue, or 16,200 dollars per year. This is based on: one bad review causes 10 to15 lost leads per month (93 percent of customers read reviews, and businesses below 4.0 stars lose 40 to 60 percent of clicks), with an average job value of 300 dollars and a 30 percent lead close rate. Your specific cost will vary based on your average ticket and close rate, but the bottom line is constant: one bad review costs significantly more than any single job earns.
+
+Should I use SMS or email to communicate with service customers?
+
+SMS. Open rates are 98 percent for text messages versus 20 percent for email. Average response time is 90 seconds versus90 minutes. For time-sensitive service updates (running late, on the way, job complete), SMS is the only channel that reaches the customer in time to matter. Use email for invoices, receipts, service agreements, and post-job surveys. The templates above are designed for SMS; adapt them for email by adding your logo and a slightly more formal tone.
+
+What if my techs are never late — do I still need these templates?
+
+Yes — for two reasons. First, every shop has late arrivals sometimes, and the first time it happens without a communication system is the day you earn a permanent one-star review. Having the templates ready means your dispatcher does not have to think about what to say under pressure — they copy, paste, personalize, and send in 15 seconds. Second, the on-the-way, job-complete, and review-request templates improve the customer experience even when everything runs perfectly. Customers who receive proactive updates rate their experience higher than customers who receive great service in silence. Communication is not just damage control — it is a competitive advantage.
+
+These templates work — but what if they sent themselves?
+
+Every template above requires a human to copy, pase, personalize, and send. At two minutes per job across two hundred jobs a month, that is six and a half hours of dispatcher time — time that could be spent taking emergency calls, re-routing techs, and solving real problems. We build custom automations that connect your dispatching software to your SMS platform so these texts fire automatically when a tech's status changes. Customer gets the same message. Dispatcher gets six hours back per week.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You Paid a Tech to Sit in Traffic for an Appointment Nobody Kept. Here Is the Free No-Show Prevention System.
+
+Your Phone Rang at 2am and You Answered. Here Is the Free Emergency Call Triage System That Separates 'My AC is Making a Weird Noise' from 'My Basement is Flooding.'
+
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
+
+
+URL: https://www.jobsdonelabs.ai/blog/service-customer-communication-sms-templates-free/
 
 ---
 
