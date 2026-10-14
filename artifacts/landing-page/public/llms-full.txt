@@ -2438,6 +2438,321 @@ URL: https://www.jobsdonelabs.ai/blog/client-portal-adoption-stop-emailing-docum
 
 ---
 
+# Crew Done Early? Route the Next Job in 60 Seconds
+
+Home Services & Trades
+
+Your Crew Finished Early and Went Home — Here Is the Free Crew Coordination Spreadsheet That Routes Them to the Next Job in 60 Seconds
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 14, 2026
+
+Key takeaways
+
+When a crew finishes at 2 PM fifteen minutes from your next job but drives forty five minutes to the shop instead — because nobody told them about the next job — you pay for ninety minutes of non-billable windshield time at forty five dollars per hour, times four crew members. That is two hundred seventy dollars in one afternoon. Multiply by two hundred working days and you are watching eighteen thousand dollars evaporate in unnecessary drive time. This free crew coordination spreadsheet fixes it: a status dashboard that shows where every crew is right now, a nearest-next-job router that matches finished crews to open work by zip code and trade skills, a crew-to-crew handoff log so nothing gets lost between shifts, and a utilization tracker that shows you which crews are earning their hours and which ones are driving.
+
+The Eighteen Thousand Dollar Windshield Tax: Why Your Crews Go Home When They Could Be Earning
+
+Here is a Tuesday you have lived: The framing crew finishes the Anderson job at 2 PM. The Johnson job is a fifteen-minute drive away. The foundation is poured, the lumber is on site, and the crew of four could frame the garage walls before 5 PM. But nobody tells them. The GC is on another site. The office manager is handling a supplier dispute. The foreman texts "all done" and the response is a thumbs-up emoji. The crew goes home. Tomorrow morning, instead of driving fifteen minutes from Anderson, they will drive forty five minutes from the shop. Thirty extra minutes times four guys is two hours of non-billable drive time at forty five dollars per hour. Ninety dollars. One day. One crew.
+
+Across four crews, this happens roughly twice per week per crew. Eight occurrences per week. Ninety dollars per occurrence times eight times per week times fifty weeks: thirty six thousand dollars in windshield tax. And that is before you count the lost billable hours — the two hours that crew could have been framing instead of driving.
+
+The windshield tax in one number:
+
+A four-person crew driving forty five minutes to the shop instead of fifteen minutes to the next job wastes two hours of non-billable time. At forty five dollars per hour for four crew members, that is two hundred seventy dollars in a single afternoon. This happens because your whiteboard says "Anderson — finish by 4 PM" but the crew finished at 2 PM and nobody had a plan for what happens next.
+
+The Four Tabs That Replace "Just Go Home" With "Go to Johnson"
+
+This free Google Sheets crew coordination spreadsheet has four tabs, each solving one piece of the finish-early problem. Together, they turn the question "what is Crew 3 doing right now?" into a sixty-second check instead of a series of phone calls that nobody has time to make.
+
+Tab 1: Crew Status Dashboard (Where Is Everyone Right Now?)
+
+The first problem is visibility. You do not know which crews finished early, which ones are running behind, and which ones are waiting on an inspection. The status dashboard gives every crew one status, updated by text or a quick call to the office:
+
+On site — on schedule:
+
+Crew is working, on track to finish at estimated time. No action needed.
+
+On site — ahead of schedule:
+
+Crew will finish early. This is the flag that triggers the next-job router. Without this flag, nobody knows the crew has extra capacity until they text "we are heading home."
+
+On site — behind schedule:
+
+Crew is delayed. The next job they were supposed to start tomorrow may need to be re-assigned. Flag this early so the office can adjust.
+
+Waiting on inspection:
+
+Crew cannot proceed until an inspector arrives. This is dead time that could be re-routed elsewhere. Flag the expected wait time.
+
+Waiting on materials:
+
+Material delivery is late. Same as inspection — dead time until the materials arrive. If the wait is more than sixty minutes, route the crew elsewhere.
+
+Finished — available for next job:
+
+Crew is done and ready for the next assignment. This is the status that triggers the router. If no next job is available, crew returns to shop or goes home — but at least that decision is made intentionally, not by default.
+
+The dashboard uses color coding: green for on-schedule or finished-and-routed, yellow for ahead-of-schedule or behind-schedule (watch), and red for any status that means dead time (waiting on inspection, waiting on materials, or finished with no next job). One glance at the red cells and you know where money is burning.
+
+Tab 2: Nearest-Next-Job Router (Who Goes Where Next?)
+
+When a crew flips to "finished — available," the router finds the best next assignment. It does not replace your production schedule — it fills the gaps your schedule did not expect. Here is how it works:
+
+Enter open jobs
+
+that can be started now (foundation is poured, materials on site, no predecessor task blocking).
+
+Enter each job's zip code
+
+and required trade skills (framing, electrical, finish carpentry, etc.).
+
+Enter each crew's current zip code
+
+(where they finished the last job) and trade skills.
+
+The router scores each crew-to-job pair
+
+on three criteria: travel distance from current location (fifteen minutes beats forty five), trade-skill match (a framing crew should not be routed to an electrical rough-in), and job priority (the Johnson job that has lumber on site and a truss delivery Thursday beats the Smith job that has not had the foundation inspected yet).
+
+The top-scored match
+
+is the recommended next assignment. A dispatcher or GC makes the final call, but the spreadsheet does the sixty seconds of math that turns "nobody knows" into "send Crew 3 to Johnson."
+
+Crew
+
+Current Location
+
+Trades
+
+Open Job
+
+Drive Time
+
+Trade Match
+
+Score
+
+Crew 3 (framing)
+
+Anderson — zip 75001
+
+Framing, rough carpentry
+
+Johnson — garage walls
+
+15 min
+
+Exact match
+
+28 / 30
+
+Crew 3 (framing)
+
+Anderson — zip 75001
+
+Framing, rough carpentry
+
+Smith — interior trim
+
+45 min
+
+Partial match
+
+12 / 30
+
+Crew 2 (electrical)
+
+Clark — zip 75005
+
+Electrical rough-in
+
+Johnson — garage walls
+
+25 min
+
+No match
+
+5 / 30
+
+The router does not make the decision — it surfaces the math so the decision takes sixty seconds instead of fifteen minutes of phone tag. And because the scorecard is visible, everyone can see why Crew 3 went to Johnson instead of Smith.
+
+Tab 3: Crew-to-Crew Handoff Log (What Does the Next Crew Need to Know?)
+
+When one crew finishes and another crew picks up the same job tomorrow, critical information dissolves in the gap. A framing crew knows that master bedroom wall number three is one quarter inch out of square and needs shimming — but they went home at 3 PM and the finish carpentry crew arriving at 7 AM has no idea. They shim the drywall, the baseboard does not sit flush, and the homeowner calls about a gap. Forty five minutes of rework because one sentence was never conveyed.
+
+The handoff log is a one-row-per-job running log that any crew can read before starting work:
+
+Job:
+
+Which job site this note applies to.
+
+From crew:
+
+Which crew left the note.
+
+What the next crew needs to know:
+
+The specific issue. "Master bedroom wall #3 is 1/4 inch out of square — shim before drywall." Not "walls look good."
+
+Photo reference:
+
+A cell-phone photo filename or link showing the issue. "See image IMG_4821 — north wall, laser level shows gap."
+
+Priority:
+
+Must-read-before-starting, good-to-know, or FYI.
+
+Resolved:
+
+Checkbox that the next crew marks when they have addressed the issue.
+
+This replaces the text-message grapevine where a foreman sends a blurry photo to the GC who forwards it to the next foreman with the caption "this wall???". One log. One row per issue. No lost information.
+
+Tab 4: Crew Utilization Tracker (Are Your Crews Earning or Driving?)
+
+The utilization tracker answers the question you cannot answer from timesheets alone: what percentage of paid hours were actually billable? A crew that clocks eight hours but spent two hours driving between sites has only seventy five percent utilization. At forty five dollars per hour times four crew members, two hours of non-billable time costs three hundred sixty dollars. That is not overtime or material waste — it is pure routing waste.
+
+Week
+
+Crew
+
+Total Hours Paid
+
+Billable Hours
+
+Drive/Wait Hours
+
+Utilization Rate
+
+Weekly Windshield Tax
+
+Oct 6-10
+
+Crew 3 (framing)
+
+160
+
+128
+
+80%
+
+$1,440
+
+Oct 6-10
+
+Crew 1 (foundation)
+
+160
+
+144
+
+90%
+
+$720
+
+Oct 6-10
+
+Crew 4 (finish)
+
+160
+
+112
+
+70%
+
+$2,160
+
+The tracker makes utilization visible per crew, per week, per month. The goal is not one hundred percent — some non-billable time is unavoidable. The goal is to know which crews consistently fall below eighty percent and ask: is the problem the crew (slow), the schedule (overstaffing), or the routing (too much windshield time)? The spreadsheet answers which one it is.
+
+How to Deploy This in One Week (Without Buying Software)
+
+The 5-day launch plan
+
+Day 1 — Monday:
+
+Copy the spreadsheet template to your Google Drive. Enter all active crews (name, trade skills, current job, expected finish). Enter all open jobs with zip codes and required trades. This takes forty five minutes.
+
+Day 2 — Tuesday:
+
+Brief your foremen. The new expectation: when a crew is going to finish early, text the office. The office updates the status dashboard. The crew gets their next assignment before they pack up. No extra paperwork for the crew — they just text instead of deciding to go home.
+
+Day 3 — Wednesday:
+
+Run the router for the first time. When a crew texts "finishing early," pull up the router, find the best match, and send them. Even if the match is not perfect, you are building the muscle. The crew sees that finishing early means earning more, not going home early.
+
+Day 4 — Thursday:
+
+Start the handoff log. Ask each foreman for one thing the next crew needs to know about the job they are leaving. Write it in the log. Tell the arriving crew where to find it.
+
+Day 5 — Friday:
+
+Fill in the utilization tracker for the week. Look at the numbers. Which crew had the most drive time? Why? Is it a routing problem, a crew problem, or a schedule problem? Decide one change for next week.
+
+By Friday, you have five days of real data on crew status, routing decisions, handoff notes, and utilization. You will know more about your crews' actual working time than you learned in the last six months of timesheet review. And you built it in a spreadsheet, not a twelve thousand dollar construction management platform.
+
+Frequently asked questions
+
+What is a crew coordination spreadsheet and why do I need one?
+
+A crew coordination spreadsheet tracks where every crew is right now — on-site, finished, delayed, or waiting on inspection — identifies the nearest next job when a crew finishes early, and routes them there before they drive back to the shop. Without one, crews finishing early go home and drive from the shop the next day instead of from the current job site. This windshield tax — extra drive time from poor routing — costs a typical four-person crew roughly ninety dollars per day in wasted labor. Over two hundred working days, that is eighteen thousand dollars. The spreadsheet pays for itself in one week of avoided windshield time. It does not replace your production schedule or your project management software — it fills the real-time gap between "the schedule says 4 PM" and "the crew actually finished at 2 PM."
+
+How is this different from a regular construction schedule or whiteboard?
+
+A whiteboard or Gantt chart tells you where crews are supposed to be. This spreadsheet tells you where they are right now and where they should go next when plans change. The difference is real-time status versus a static plan. Plans change constantly — inspections run long, materials are late, a crew finishes framing two hours ahead of schedule. A static schedule does not adapt; a whiteboard in the office does not help the foreman at the job site. The crew coordination spreadsheet gives the foreman one thing to do — text "ahead of schedule" — and the office one thing to do — route them to the next job. Two people, two actions, sixty seconds. No software license required.
+
+How much money does better crew routing actually save?
+
+For a general contractor running four crews, the savings break into two categories. First: avoided windshield tax. When a crew finishing at 2 PM at Site A could start Site B fifteen minutes away but instead drives forty five minutes to the shop and then forty five minutes to Site B the next morning, you pay four crew members for ninety minutes of non-billable drive time instead of fifteen minutes. At forty five dollars per hour, that is two hundred seventy dollars in one afternoon. Second: recovered billable hours. Routing a finished crew to the next job turns non-billable windshield time into billable work. Across four crews doing this eight times per month, that is roughly six thousand dollars per month in recovered labor — seventy two thousand dollars per year. The spreadsheet pays for itself in under a week. The harder number to measure is schedule compression: when Johnson's garage walls get done Tuesday instead of Wednesday, the entire project timeline pulls forward one day. One day saved across four projects per year means your crews complete roughly one extra project annually without adding headcount.
+
+What if my crews do not have smartphones or cell service on site?
+
+Two backups cover this. First: the foreman calls the office at a scheduled check-in time — 11 AM and 3 PM. The status dashboard gets updated during those two windows, not in real time. You lose some responsiveness but still capture finish-early events within a few hours. Second: the foreman notes the handoff issue on the paper daily report (see our
+
+free construction daily report system
+
+) and the office transcribes it into the handoff log at end of day. The coordination still happens — just on a two-hour cycle instead of instantly. The spreadsheet is the record; it does not require real-time connectivity to be useful. Most crews do have phones, and a text takes ten seconds. The barrier is usually habit, not technology.
+
+Does this spreadsheet replace construction project management software like Procore or Buildertrend?
+
+No, and it is not trying to. Procore and Buildertrend handle the project — RFIs, submittals, drawings, budget. This spreadsheet handles the gap between the project plan and the daily reality of where your crews actually are and where they should go next. It is a coordination layer, not a project management layer. Most GCs running two to six million dollars in revenue have a project schedule (even if it is a whiteboard) but zero real-time crew coordination. The spreadsheet fills that gap for zero dollars. If you already have Procore and your crews are still driving forty five minutes past open jobs, the problem is not the software you own — it is that nobody pulls the real-time status into a routing decision. This spreadsheet lives alongside your project software, not instead of it.
+
+Related posts
+
+Home Services
+
+Your Foreman Is Filling Out Paper Timesheets in His Truck at 6PM — The Fill-It-Now System
+
+Construction
+
+Your Spiral Notebook Cannot Fight a Lawsuit — The Free Construction Daily Report System
+
+Field Service
+
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
+
+Stop paying the windshield tax this week
+
+Download the free spreadsheet, enter your crews and open jobs on Monday, and route your first finished-early crew by Wednesday. If you want help building a system that pulls crew locations from your foremen's texts automatically — updating the dashboard and routing without anyone touching a spreadsheet — we build that too. But the free spreadsheet gets you running this week, for zero dollars.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Your Foreman Is Filling Out Paper Timesheets in His Truck at 6PM and You Are Losing Eight Thousand Four Hundred Fifty Dollars a Year in Forgotten Hours — The Fill-It-Now System
+
+Your Spiral Notebook Cannot Fight a Lawsuit — The Free Construction Daily Report System
+
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet With Zone Assignments, Daily Board, and Emergency Slots
+
+
+URL: https://www.jobsdonelabs.ai/blog/construction-crew-coordination-task-handoff-spreadsheet-free/
+
+---
+
 # Your Foreman Is Filling Out Paper Timesheets in His
 
 Home Services & Trades
@@ -2736,6 +3051,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Your Crew Finished Early and Went Home — Here Is the Free Crew Coordination Spreadsheet That Routes Them to the Next Job in 60 Seconds
+
 You Have Four Stitches on a Guy's Hand and You Didn't Record It — The Free Safety Compliance System for Small Contractors
 
 When to Roll a Truck at 3am: An After-Hours Emergency Triage System
@@ -2916,6 +3233,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+Your Crew Finished Early and Went Home — Here Is the Free Crew Coordination Spreadsheet That Routes Them to the Next Job in 60 Seconds
 
 You Have Four Stitches on a Guy's Hand and You Didn't Record It — The Free Safety Compliance System for Small Contractors
 
@@ -10066,6 +10385,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+Your Crew Finished Early and Went Home — Here Is the Free Crew Coordination Spreadsheet That Routes Them to the Next Job in 60 Seconds
 
 How to Never Lose a Review When Your Tech Is Late — Free SMS Templates
 
@@ -27116,275 +27437,6 @@ Related reading
 If you found this useful, you will want these too:
 
 Amazon Took Fifteen Thousand Dollars in Fees — Where Did It Go? Free Reconcilation Spreadsheet
-
-Dead Stock Tracker: Find Aging Inventory Before It Bleeds You Dry
-
-Shopify Payouts Never Match QuickBooks? Here Is Why and How to Fix It
-
-
-URL: https://www.jobsdonelabs.ai/blog/sku-profitability-analysis-ecommerce-spreadsheet-free/
-
----
-
-# Your Products Look Profitable. Your Bank Disagrees.
-
-Retail & E-Commerce
-
-How to Find Out Which Products Are Actually Making Money (Free SKU Profitability Calculator)
-
-Ryne Bandolik
-
-· Jbs Done Labs · October 13, 2026
-
-Key takeaways
-
-Your Shopify or Amazon dashbord shows revenue growing — not profit. After COGS, shipping, fulfillment, returns, and ad spend, many of your top-selling SKUs may be losing money on every unit. This free spreadsheet pulls all six cost categories together so you see true margin per product. Once you have the real numbers, the Kil/Keep/Grow framework tells you exactly what to do with each SKU: cut the losers, protect the winners, and doubl down on what works.
-
-The Revenue Trap: When Growing Sales Means Shrinking Profits
-
-An eight hundred SKU e-commerce brand doing two point four million dollars in annual revenue discovered that sixty percent of their revenue came from products with negative margins. They had been funding losses with volume for eighteen months — and the Shopify dashbord never told them.
-
-This is not unusual. The dashbord reports gross sales. It subtracts discounts and refunds, sure. But it does not subtract your landed product cost. It does not subtract the shipping label you bought. It does not subtract the pick-pack fee your 3PL charged. It does not subtract the cost of the unit that got returned and could not be resold. And it certainly does not subtract the Facebook ad you ran to sell that particular SKU.
-
-What the dashbord calls "revenue" and what your bank account calls "deposits" are two completely different numbers. The gap between them is where your profit lives — or dies.
-
-The sixty-forty trap in one sentence:
-
-Sixty percent of your revenue could be coming from SKUs that lose money after all costs, and your dashbord will cheerfully report them as winners. The only way to know is to calculate true cost per SKU — yourself
-
-True Cost Per SKU: The Six Numbers Your Dashbord Does Not Show You
-
-Here are the six cost categories that separate phantom profit from real profit. Most e-commerce operators track two or three of them. Tracking all six is what turns a revenue report into a profitability report.
-
-Cost Category
-
-What It Includes
-
-Typical Range
-
-1. Landed COGS
-
-Unit cost from supplier plus inbound freight plus duties plus tariffs. Not just the unit price — the fully landed cost to get the product to your warehose.
-
-twenty to sixty percent of retail price
-
-2. Outbound Shipping
-
-What you pay for the shipping label, not what you charge the customer. If you charge nine dollars ninety nine for shipping but the label costs twelve dollars, that two dollar one cent loss hits your margin.
-
-five to fifteen dollars per order
-
-3. Fulfillment Fees
-
-3PL pick-pack fees, FBA fees, warehose receiving, and any special handling or kitting charges. These are per-unit fees that scale with volume.
-
-two to eight dollars per unit
-
-4. Return Costs
-
-Return shipping, restocking labor, inspection, repackaging, and the write-off cost of units that cannot be resold. For apparel, this can be twenty to thirty percent of units sold.
-
-fifteen to thirty-five percent of return rate × unit cost
-
-5. Ad Spend Attribution
-
-Amazon PPC or Meta ads allocated to specific SKUs. Not total ad spend divided by total orders — that averages your winners with your losers. Per-SKU attribution.
-
-five to twenty-five percent of unit price
-
-6. Marketplace Fees
-
-Amazon referral fee (typically fifteen percent), Shopify transaction fee, payment processor fee, and any channel-specific fees. These are percentage-based and non-negotiable.
-
-three to seventeen percent of selling price
-
-Here is a worked example. A product selling for fifty dollars:
-
-Revenu: fifty dollars
-
-Landd COGS: minus twenty two dollars
-
-Outbound shipping cost: minus eight dollars
-
-Fulfillment fee: minus five dollars
-
-Return cost allocation: minus three dollars
-
-Ad spend attribution: minus seven dollars
-
-Marketplace fee (fifteen percent): minus seven dollars fifty cents
-
-Net profit: negative two dollars fifty cents per unit
-
-This product — which the dashbord calls a fifty dollar seller — actually loses two dollars fifty cents every time someone buys it. Sell ten thousand units and you have funded a twenty five thousand dollar loss with volume. And if this is your number two bestseller, you have been celebrating a disaster.
-
-Free SKU Profitability Spreadsheet — How It Works
-
-This Google Sheets template calculates true profit per SKU using the six cost categories above. You enter your order data once per month — exported from Shopify, Amazon, or your 3PL — and the sheet shows you which products earn money and which ones burn it.
-
-The spreadshee has four tabs:
-
-SKU Master:
-
-One row per SKU. Enter unit cost, landed COGS, shipping cost, fulfillment fee, return rate, and selling price. Columns auto-calculate gross margin, net margin, and margin percentage.
-
-Monthly P-and-L:
-
-Enter monthly units sold and ad spend per SKU. The sheet calculates monthly profit and flags negative-margin SKUs in red.
-
-Kil/Keep/Grow Dashbord:
-
-Every SKU is sorted into one of three buckets based on margin. One glance tells you which products to cut, which to protect, and which to doubl down on.
-
-Ad Spend ROI:
-
-For SKUs with attributed ad spend, calculates ROAS (return on ad spend) and flags products where ads cost more than the margin they generate.
-
-How to populate it — first time setup (approximately two to three hours)
-
-Export your orders
-
-from Shopify (Orders → Export → last thirty days) or Amazon (Reports → Fulfillment → All Orders). Save as CSV.
-
-Export your ad spend
-
-from Amazon Ads console or Meta Ads Manager. Break out spend by ASIN or product if possible. If not, allocate by percentage of revenue per SKU — it is better than ignoring ads entirely.
-
-Get your 3PL invoice
-
-for the same period. Your 3PL bill already breaks out pick-pack fees and storage by SKU. Use it.
-
-Enter your landed COGS
-
-for each SKU. Include what you pay the supplier, plus freight, plus duties — even if these come from separate invoices.
-
-Calculate your actual return rate
-
-per SKU over the last ninety days. Not your site-wide average — per-SKU. Your bestseller might have a two percent return rate while that one dress has twenty-eight percent.
-
-After the first setup, monthly refresh takes about ten minutes: drop in the new order and ad spend data, update any COGS changes, and the dashbord updates automatically.
-
-How to Pull Cost Data From Shopify, Amazon, and Your 3PL
-
-You do not need an API integration or a three hundred dollar per month analytics platform. You need three CSVs and one invoice. Here is where each number lives:
-
-Data Point
-
-Where to Find It
-
-Units sold per SKU
-
-Shopify: Analytics → Reports → Sales by Product. Amazon: Business Reports → Detailed Page Sales and Traffic by Child Item.
-
-Revenu per SKU
-
-Same report as above — use net sales (after discounts and refunds), not gross.
-
-Fulfillment fees
-
-Your 3PL's monthly invoice has per-unit pick-and-pack charges. For FBA sellers: Amazon Seller Central → Reports → Payments → Transaction View, filtered to FBA fees.
-
-Shipping cost
-
-Shopify: Orders → Export → includes shipping paid column. ShipStation or Pirate Ship: export by order and match to SKU.
-
-Return data
-
-Shopify: Analytics → Reports → Returns by Product. Amazon: Reports → Fulfillment → Customer Returns.
-
-Ad spend by product
-
-Amazon Ads: Campaign Manager → filter by advertised ASIN. Meta: if you run catalog ads, export by product ID. For brand campaigns, allocate by revenue share.
-
-The Kil/Keep/Grow Framework: What to Do When You See the Real Numbers
-
-Once the spreadshee is populated, every SKU falls into one of three buckets. Here is what to do with each:
-
-Bucket One: Kil (Negative margin after all costs)
-
-These SKUs lose money on every unit sold. They may be your volume darlings — your dashbord shows them as top sellers — but after COGS, shipping, fulfillment, returns, and ads, they are cash-negative. Options: raise the price (can you get away with it?), renegotiate supplier cost (can you hit a volume tier?), drop free shipping, reduce ad spend, or discontinue. Do not keep selling a product at a loss just because "it drives traffic." Traffic at a loss is not traffic — it is a subsidy you pay to customers.
-
-Bucket Two: Keep (Margin positive but thin — zero to fifteen percent)
-
-These products make money, but not much. They are fine as part of your catalog but should not be where you invest growth capital. Monitor these SKUs monthly — a supplier price increase of ten percent can push them from thin-profit to Kil in one cycle. If a Keep SKU also has high return rates, the combined economics may put it in Kil territory.
-
-Bucket Three: Grow (Margin over fifteen percent, strong unit economics)
-
-These are your real busness. Every marginal ad dollar should go here. These SKUs have enough margin to absorb ad spend, absorb occasional returns, and still leave net cash in the bank. Identify the common characteristics of your Grow SKUs — category, price point, supplier, customer demographic — and use that pattern to evaluate new products before you launch them.
-
-The hardest part:
-
-Your bestseller by revenue may be in the Kil bucket. Deleting a product that generates hundreds of thousands in topline revenue feels wrong — but if every unit sold costs more than it brings in, keeping it is the wrong decision. Revenue is vanity. Margin is sanity. This is not a motivational poster; it is math.
-
-Monthly Refresh: Ten Minutes to Know Your Numbers
-
-Here is the ten-minute monthly ritual that keeps your profitability view curent:
-
-Export orders
-
-for the trailing thirty days. Drop into the Monthly P-and-L tab.
-
-Update ad spend
-
-per SKU or allocate by revenue share. Ten minutes of honesty is better than zero minutes of precision.
-
-Check return rates
-
-— did any SKU's return rate spike? A jump from five percent to eighteen percent on a fifty dollar product with twenty dollar COGS means your per-unit profit dropped by six dollars fifty cents. Find out why.
-
-Review the Kil/Keep/Grow dashbord
-
-. Any SKUs that moved from Grow to Keep? Any from Keep to Kil? Act on the movers first.
-
-Spot-check three SKUs manually
-
-— the spreadshee is only as accurate as the data you feed it. Pick one Grow, one Keep, one Kil and trace the numbers back to source documents. If the category is right, the spreadshee is right.
-
-This is not a ninety-minute analytics marathon. It is a ten-minute discipline repeated twelve times a year that compounds into knowing your busness better than any dashbord can tell you.
-
-Frequently asked questions
-
-How do I calculate true profitability per SKU for my e-commerce store?
-
-True SKU profitability requires subtracting six cost categories from revenue: landed COGS (product plus inbound freight plus duties), outbound shipping (what you pay, not what you charge), fulfillment fees (3PL pick-pack or FBA fees), return costs (return shipping plus restocking plus damage write-off as a percentage of units sold), ad spend attribution (Amazon PPC or Meta ads allocated per SKU), and marketplace fees. Our free spreadshee handles all six categories and shows net margin per SKU. Most dashbords show you one or two of these; the gap is where profit disappears.
-
-Why does my Shopify dashbord show I am profitable when my bank account does not?
-
-Shopify reports gross sales minus discounts and refunds — it does not subtract cost of goods sold, shipping costs, fulfillment fees, marketplace fees, return costs, or advertising spend. A product selling for fifty dollars with a twenty-five dollar COGS, eight dollar shipping, five dollar fulfillment fee, and seven dollar ad spend generates five dollars in net profit — but Shopify shows the full fifty dollars in revenue. Multiply this gap across hundreds of SKUs and add return costs, and the dashbord profit can be phantom profit that never reaches your bank account. Our free spreadshee bridges this gap.
-
-How much does SKU profitability analysis software cost vs a spreadshee?
-
-SKU-level analytics Saas platforms like Triple Whale, Polar Analytics, and Glew range from one hundred to five hundred dollars per month. Shopify apps like Lifetimey and BeProfit cost twenty to one hundred dollars per month. Our free Google Sheets template costs zero dollars and takes approximately two to three hours to populate with your order data for the first time, then ten minutes per month to update. It does not auto-sync with Shopify — you will export CSVs — but for busnesses under two million in revenue testing whether they need paid analytics, free is the right first step. When you hit the point where manual CSV export is your botleneck, you know it is time to upgrade — and you will know exactly which metrics matter.
-
-What if my ad spend cannot be broken out by SKU?
-
-Allocate by percentage of revenue. If SKU A generates thirty percent of monthly revenue, assign it thirty percent of total brand ad spend. This is imperfect — some SKUs convert better from ads than others — but it is far better than excluding ad spend from your profitability calculation entirely. The goal of the free spreadshee is directionally correct numbers you can act on, not audit-grade precision. As you scale, invest in per-SKU ad attribution tooling.
-
-Related posts
-
-Retail Operations
-
-Amazon Took Fifteen Thousand Dollars in Fees — Where Did It Go? Free Reconciliation Spreadsheet
-
-Retail Inventory
-
-Dead Stock Tracker: Find Aging Inventory Before It Bleeds You Dry
-
-Retail Finance
-
-Shopify Payouts Never Match QuickBooks? Here Is Why and How to Fix It
-
-Stop guessing which products make money
-
-Download the free spreadshee, populate it with your last thirty days of orders, and see your true SKU-level profitability before the end of this week. If you want help building a system that updates itself — pulling order data, ad spend, and fulfillment fees into one live dashbord without monthly CSV exports — we build that too.
-
-Book your free audit →
-
-Related reading
-
-If you found this useful, you will want these too:
-
-Amazon Took Fifteen Thousand Dollars in Fees — Where Did It Go? Free Reconciliation Spreadsheet
 
 Dead Stock Tracker: Find Aging Inventory Before It Bleeds You Dry
 
