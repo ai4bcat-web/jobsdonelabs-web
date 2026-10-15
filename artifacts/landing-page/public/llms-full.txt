@@ -20868,6 +20868,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Free Trucking Dispatch Spreadsheet for Small Fleets — Load Board, Driver Assignment, Deadhead, and Daily P&L
+
 How to Automate Dispatch and Paperwork for a Trucking Company
 
 Your Drivers Turn in Paper PODs and Half Go Missing Before Billing — Here's the Fix
@@ -32627,6 +32629,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+Free Trucking Dispatch Spreadsheet for Small Fleets — Load Board, Driver Assignment, Deadhead, and Daily P&L
+
 Your Trucks Sat Idle for 3,780 Hours? Free Fleet Utilization Tracker — Shows Where Every Hour Goes
 
 Free Load-to-Truck Matching System
@@ -32901,6 +32905,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free Trucking Dispatch Spreadsheet for Small Fleets — Load Board, Driver Assignment, Deadhead, and Daily P&L
 
 Cut Empty Miles: Free Deadhead Tracker for Fleets
 
@@ -33233,6 +33239,335 @@ Book your free audit →
 
 
 URL: https://www.jobsdonelabs.ai/blog/trucking-dispatch-paperwork-automation/
+
+---
+
+# Free Trucking Dispatch Spreadsheet for Small Fleets
+
+Logistics & Trucking
+
+You Spent Three Hours Rebuilding Tomorrow's Dispatch Plan on a Whiteboard, and by 10 AM Two Loads Canceled and One Driver Called In Sick — Here Is the Free Trucking Dispatch Spreadsheet That Builds the Plan for Your Whole Fleet in Twenty Minutes and Re-Optimizes It in Five Every Time Something Changes
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 15, 2026
+
+Key takeaways
+
+A ten-truck fleet moving three hundred loads a month spends two to four hours every morning cross-referencing a Google Sheet of loads, a whiteboard of driver locations, and fourteen text messages. That is roughly twenty two thousand five hundred dollars a year in dispatch labor, plus uncovered loads from dispatch mistakes that leak forty thousand dollars or more a year. This free trucking dispatch spreadsheet has six tabs — load board, driver assignment matrix, deadhead calculator, rate-per-mile and profit-margin calculator, detention clock, and a daily fleet P&L snapshot — so the plan builds in twenty minutes and re-sorts in five when a load cancels or a driver calls in sick.
+
+The three-hour whiteboard tax
+
+Every small-fleet owner knows the scene. It is 5:47 AM and you are standing in front of a whiteboard covered in truck numbers, driver names, load IDs, pickup times, and rate confirmations — crossed out, rewritten, and smudged beyond recognition by Tuesday afternoon. One driver is on a reset. Another has a doctor's appointment at 2 PM. The only driver close to the Chicago pickup just texted "truck will not start." You cross-reference the whiteboard against the load board on your phone and the fourteen text messages from drivers, and you build tomorrow's plan one load at a time.
+
+Here is what that morning actually costs. A ten-truck fleet dispatching three hundred loads a month spends two to four hours a day on this. At a loaded dispatch cost of thirty dollars an hour, three hours a day across two hundred fifty working days is roughly twenty two thousand five hundred dollars a year — spent producing a plan that is already wrong by 10 AM.
+
+Then the plan breaks. Two loads cancel. One driver calls in sick. A broker calls with a "market adjustment" that cuts a rate by three hundred dollars. Every one of those events forces you to rebuild the plan from scratch, because the whiteboard has no memory, no math, and no way to re-sort the remaining loads. The uncovered-load cost is the silent killer: every day a truck sits empty because a dispatch mistake left it with no reload costs the fleet between one hundred fifty and five hundred dollars in lost revenue. Across a year, that compounds to forty thousand dollars on the low end — and six figures for fleets that regularly miss reloads.
+
+Why the whiteboard fails so predictably:
+
+It records a plan, not the inputs a plan depends on. It does not know each driver's remaining hours of service. It does not calculate deadhead to a pickup. It does not compute rate per mile after deadhead. It does not show whether today made money. It is a static list in a business that changes every hour. A dispatch spreadsheet holds all six inputs, runs the math, and re-sorts the moment anything changes — which is why the plan takes twenty minutes to build and five minutes to fix.
+
+The free trucking dispatch spreadsheet — six tabs, one screen
+
+This free Google Sheets workbook replaces the whiteboard with six linked tabs. Each tab solves one piece of the dispatch problem, and together they answer the three questions a dispatcher asks all day: what loads do I have, who can take them, and does this plan actually make money.
+
+Tab 1 — The load board
+
+The load board is where every load enters the system. One row per load, pasted in from your load board or the rate confirmation the broker emailed. The columns capture everything you need to dispatch without opening fourteen other windows:
+
+Load board columns
+
+Load ID
+
+— the broker's reference or rate-con number.
+
+Pickup city/state
+
+and
+
+delivery city/state
+
+— the two points that define the loaded miles.
+
+Pickup window
+
+and
+
+delivery deadline
+
+— the dates and times that must be met.
+
+Equipment required
+
+— dry van, reefer, flatbed, step deck, power-only.
+
+Rate
+
+— the total linehaul amount offered.
+
+Loaded miles
+
+— pickup-to-delivery distance.
+
+Weight
+
+— so you never assign a heavy load to a truck near its limit.
+
+Broker / MC number
+
+— so you know who you are hauling for before you commit.
+
+If your rate confirmations are currently a pile of forwarded emails, pair this tab with a
+
+load-confirmation filing system
+
+so the load board gets populated in seconds instead of minutes spent digging through an inbox.
+
+Tab 2 — The driver assignment matrix
+
+This is where the plan actually forms. Every driver is a row; every open load is a column. Each cell scores the driver-to-load pair on four criteria, so the best assignment surfaces automatically instead of being guessed from a whiteboard:
+
+Assignment scoring criteria
+
+Location fit (30 percent).
+
+How far is the driver from the pickup right now? The driver sitting fifty miles from the shipper beats the one two hundred miles away, because deadhead is real money.
+
+Hours of service fit (30 percent).
+
+Does the driver have enough remaining drive time to reach the pickup and complete the loaded miles with a buffer? If a driver has two hours forty five minutes left and the pickup is two hours fifteen minutes away, they arrive with thirty minutes — not enough to load. The matrix flags this before you commit.
+
+Equipment match (25 percent).
+
+Reefer for reefer, flatbed for flatbed. A mismatch scores zero.
+
+Home-time and preference (15 percent).
+
+Standing requests like "no Northeast" or "home every other weekend" feed in so you stop promising a Friday load that delivers in another state to a driver who needs to be home.
+
+For a deeper treatment of the matching logic itself — including the revenue-per-mile optimizer that catches two trucks crossing paths on opposite deadheads — see the companion
+
+load-to-truck matching spreadsheet
+
+. The dispatch workbook extends that single decision into a full-day plan.
+
+Tab 3 — The deadhead calculator
+
+Deadhead is the empty miles a truck drives between loads, and it is the single biggest hidden cost in dispatch. The deadhead calculator takes each driver's current location and each load's pickup point and computes the empty miles for every pair — so the assignment matrix can penalize long repositioning automatically.
+
+The rule is simple: a load that pays two thousand four hundred dollars but requires three hundred miles of deadhead is often worse than a load that pays two thousand one hundred dollars with fifty miles of deadhead. The calculator makes that comparison visible. If deadhead is a persistent bleed across your lanes, layer in the dedicated
+
+deadhead reduction tracker
+
+to find which lanes and which dispatch habits are creating the empty miles in the first place.
+
+Tab 4 — The rate-per-mile and profit-margin calculator
+
+Total revenue is the metric the whiteboard rewards. Rate per mile after deadhead is the metric that keeps you solvent. The calculator runs both numbers for every load, plus the margin after cost per mile.
+
+Load
+
+Rate
+
+Loaded mi
+
+Deadhead mi
+
+Total mi
+
+RPM
+
+Cost/mi
+
+Margin
+
+A — Chicago to Denver
+
+$2,400
+
+800
+
+150
+
+950
+
+$2.53
+
+$1.85
+
+$646
+
+B — Chicago to St. Louis
+
+$2,100
+
+300
+
+350
+
+$6.00
+
+$1.85
+
+$1,453
+
+Load A pays three hundred dollars more on paper, but Load B earns more than twice the margin per mile and can be run three times in the time it takes to do one Denver round trip. The calculator surfaces exactly this. Cost per mile comes from your own numbers — fuel, driver pay, factoring, insurance, and maintenance — and if you do not yet know your fleet's true cost per mile, the spreadsheet gives you a place to start collecting it.
+
+Tab 5 — The detention clock
+
+Every hour a driver sits at a dock waiting to load or unload is revenue the broker owes you and you are probably not collecting. The detention clock records arrival time, in-time, and out-time for each stop, calculates the free time (usually two hours) and the billable detention beyond it, and feeds the total straight into the daily P&L.
+
+Most small fleets lose tens of thousands of dollars a year in unpaid detention simply because nobody is writing down the clock times. The full workflow — capturing the times, invoicing the broker, and tracking who pays — is in the
+
+detention pay tracking system
+
+. The dispatch spreadsheet carries a compact version of the clock so detention never falls off the day's plan.
+
+Tab 6 — The daily fleet P&L snapshot
+
+The last tab answers the question the whiteboard never can: did today make money? It takes the assigned loads, their rates, the deadhead, the detention billed, and the cost per mile, and produces one line per truck and one total for the fleet:
+
+Truck
+
+Revenue
+
+Fuel
+
+Driver pay
+
+Detention billed
+
+Day margin
+
+304
+
+$2,850
+
+$620
+
+$810
+
+$180
+
+$1,600
+
+311
+
+$1,900
+
+$410
+
+$540
+
+$950
+
+287
+
+$0 (no reload)
+
+$180
+
+-$180
+
+Look at Truck 287. It delivered in the morning and sat the rest of the day because no reload was lined up — and that negative one hundred eighty dollars in driver pay for zero revenue is exactly the uncovered-load leak the whiteboard hides. The P&L snapshot makes it visible the same day, so you can fix the habit tomorrow instead of discovering it at month-end.
+
+What to do when a load cancels at 9:47 AM
+
+The moment that makes dispatch fall apart is the mid-morning cancellation. With a whiteboard, it means erasing half the board and starting over. With the spreadsheet, it is a five-minute re-sort:
+
+The five-minute re-optimization routine
+
+Mark the load canceled
+
+on the load board. This frees the truck it was assigned to.
+
+Re-run the assignment
+
+for that one truck against the remaining open loads. The matrix re-scores every option in seconds.
+
+Check the three options:
+
+re-assign to a nearby load (low deadhead, HOS still fits), reposition to a better freight market, or hold for the next confirmed load. The deadhead calculator and profit calculator put a number on each.
+
+Log the cancellation
+
+with the broker's name and MC number. Over time this becomes a broker-reliability record you can act on — a pattern the whiteboard will never show you.
+
+Confirm the change
+
+with the driver in one message, not fourteen.
+
+Step four matters more than most owners realize. A carrier who takes a three hundred dollar "market adjustment" three times in a month from the same broker needs data to prove the pattern before they can push back or blacklist the broker. The dispatch spreadsheet is where that data starts.
+
+How to build this in one weekend
+
+You do not need to adopt all six tabs on day one. Start with the load board and the assignment matrix — that alone replaces the whiteboard — then add the calculators and the P&L over the following weeks.
+
+The weekend launch plan
+
+Saturday:
+
+Copy the template to your Google Drive. Paste in the thirty to fifty loads you currently have confirmed, and list every truck and driver with their current location and hours of service. This takes about ninety minutes.
+
+Saturday afternoon:
+
+Build the assignment matrix. Enter the four scoring weights. Run it against tomorrow's loads and compare the result to what you would have assigned by hand. Note the differences — usually the matrix catches a deadhead or an HOS conflict you would have missed.
+
+Sunday:
+
+Add the deadhead calculator and the rate-per-mile calculator. Pull your cost-per-mile number from last month's fuel, pay, and maintenance records — or use a placeholder and refine it weekly.
+
+Monday morning:
+
+Run your first real dispatch in the spreadsheet instead of on the whiteboard. It will take forty five minutes the first day and twenty minutes by Wednesday.
+
+End of week one:
+
+Fill in the P&L snapshot for five days and look at the trucks that sat or deadheaded. Pick one change for next week.
+
+Frequently asked questions
+
+How do I build a dispatch plan without a TMS?
+
+Use a free Google Sheets workbook with six tabs: a load board, a driver assignment matrix, a deadhead calculator, a rate-per-mile and profit-margin calculator, a detention clock, and a daily fleet P&L snapshot. Each morning you paste in the new loads, the matrix scores every driver-to-load pair, and you assign the best matches top-down. The whole build takes about twenty minutes, and when a load cancels or a driver calls in sick, you re-sort the remaining loads in five minutes instead of starting the whiteboard over.
+
+What is the difference between a load-matching spreadsheet and a full dispatch spreadsheet?
+
+A load-matching spreadsheet answers one question: which truck should take which load right now, scored on rate per mile, deadhead, hours of service, and equipment. A full dispatch spreadsheet is the whole day. It starts with the load board, does the matching, then adds the deadhead calculator, the profit-margin check, the detention clock, and a daily P&L that shows whether today actually made money. Load matching is one tab inside dispatch. If you already use a load-matching system, the dispatch spreadsheet extends it backward to the load board and forward to profit.
+
+How do I calculate rate per mile and profit margin on a load?
+
+Rate per mile is the load rate divided by the total miles the truck will actually drive — loaded miles plus deadhead miles to the pickup. A two thousand four hundred dollar load moving eight hundred loaded miles with one hundred fifty deadhead miles is two dollars fifty three cents per mile, not three dollars. Profit margin subtracts your cost per mile — fuel, driver pay, factoring, insurance, and maintenance — from that rate. The spreadsheet runs both numbers automatically so you never accept a load that looks profitable on total revenue but loses money after deadhead and cost per mile.
+
+What do I do when a load cancels in the middle of the day?
+
+Mark the load canceled on the load board, which frees the assigned truck, then re-run the assignment for that one truck against the remaining open loads. The re-sort takes about five minutes. The three decisions are: re-assign to a nearby load (low deadhead, HOS still fits), reposition to a better freight market, or hold for the next confirmed load. The spreadsheet surfaces all three with their deadhead and profit numbers so the decision is made on math, not a gut call while the driver waits at the shipper. Log the cancellation with the broker's name so repeat offenders stop costing you a repositioning every month.
+
+How much time and money does a dispatch spreadsheet actually save?
+
+A ten-truck fleet that dispatches three hundred loads a month typically spends two to four hours a day on dispatch. Moving that work from a whiteboard to a spreadsheet cuts it to about twenty minutes a day, saving roughly two and a half hours daily. At a loaded dispatch cost of thirty dollars an hour across two hundred fifty working days, that is about eighteen thousand seven hundred fifty dollars a year in recovered labor. The bigger number is uncovered loads: every day a truck sits empty because a dispatch mistake left it with no reload costs between one hundred fifty and five hundred dollars in lost revenue, compounding to forty thousand dollars or more a year. The spreadsheet attacks both.
+
+Your whiteboard is costing you three hours every morning
+
+The six-tab dispatch spreadsheet above costs nothing and replaces the whiteboard with math. If you want a version that pulls loads from your load boards, driver locations from your ELD, and hours of service automatically — updating the plan without anyone touching a spreadsheet — we build those. But the free spreadsheet gets you dispatching in twenty minutes this week, for zero dollars.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You Matched a Load Into Dallas at $2.10 a Mile While Another Truck Deadheaded Empty Out of Dallas — Here Is the Free Load-Matching System That Finds $56,000 Hiding on Your Whiteboard
+
+You Are Losing $200,000 a Year in Unpaid Detention and You Do Not Even Know It
+
+Your Trucks Ran 18,000 Empty Miles Last Month — The Free Deadhead Tracker That Shows Which Lanes Are Bleeding Your Margins
+
+How to Organize Load Confirmations Without a TMS: The Zero-Dollar Filing System for Small Fleets
+
+
+URL: https://www.jobsdonelabs.ai/blog/trucking-dispatch-spreadsheet-free-small-fleet/
 
 ---
 
@@ -36716,6 +37051,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+Free Trucking Dispatch Spreadsheet for Small Fleets — Load Board, Driver Assignment, Deadhead, and Daily P&L
 
 Your Trucks Sat Idle 3,780 Hours? Free Fleet Utilization Tracker
 
