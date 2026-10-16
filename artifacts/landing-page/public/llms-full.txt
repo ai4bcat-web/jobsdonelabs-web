@@ -13479,6 +13479,8 @@ You Know Revenue But Not Profit Per Job — The Free Job Costing Spreadsheet Tha
 
 Track Every Overtime Dollar by Job and Machine — The Free Spreadsheet That Shows Where Your OT Is Going
 
+Free Manufacturing Skills Matrix — Find Every Single Point of Failure Before the Expert Calls In Sick
+
 Your Best Supplier Just Missed Their 4th Ship Date — Free Supplier Delivery Tracking Spreadsheet
 
 Your Machinists Spent 47 Hours Hunting for Tools — Free Tool Crib Inventory Spreadsheet
@@ -15010,6 +15012,8 @@ Machine Downtime Tracking for Small Manufacturers — The Free System That Tells
 
 You Are Losing 80 Thousand Dollars a Year Quoting Jobs by Feel — The Free Spreadsheet System That Tells You Exactly What Every Job Costs
 
+Free Manufacturing Skills Matrix — Find Every Single Point of Failure Before the Expert Calls In Sick
+
 Small Manufacturing Production Scheduling — A Guide That Actually Works When You Do Not Have an ERP
 
 
@@ -15358,6 +15362,8 @@ WIP Tracker: Know Where Every Job Is Right Now — The Free Shop Floor Visibilit
 Your Shop Floor Runs at 97% Yield — Free Quality Metrics Tracker (Defect Rate & FPY)
 
 Your Second Shift Scrapped 40 Parts Because the Whiteboard Said Nothing — Free Shift Handover Log
+
+Free Manufacturing Skills Matrix — Find Every Single Point of Failure Before the Expert Calls In Sick
 
 Track Machine Downtime Without Software — The Free System for Small Manufacturers
 
@@ -15873,6 +15879,195 @@ You're Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet Syste
 
 
 URL: https://www.jobsdonelabs.ai/blog/manufacturing-scrap-waste-reduction-tracking/
+
+---
+
+# Your Best CNC Operator Called In Sick
+
+Manufacturing
+
+Your Best CNC Operator Called In Sick on Monday Morning and the Forty-Five Thousand Dollar Rush Order Sat on the Machine All Day Because Nobody Else Knew the Setup Procedure — and You Had Three Other People Standing Around Waiting for Work. Here Is the Free Manufacturing Skills Matrix That Shows You Exactly Which Machines Have a Single Point of Failure, Which Skills to Cross-Train First, and What It Costs Every Time the Expert Is Out.
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 16, 2026
+
+Key takeaways
+
+Most small shops run on a handful of operators who are each the only person who can set up a given machine. When one of them is out, that machine sits idle — at a burden rate of one hundred twenty dollars an hour or more. A manufacturing skills matrix maps who can do what across every machine, flags the machines with a single point of failure, and ranks which skills to cross-train first by the dollar cost of idle time. This guide includes a free spreadsheet with the machine roster, the zero-to-four proficiency matrix, single-point-of-failure detection, and a training plan generator.
+
+The Single Point of Failure Hiding on Your Floor
+
+Picture a shop with eighteen people running twelve machines across four process areas. The best CNC operator — the one who can set up the Swiss lathe, dial in the program, and get the first good part off in under an hour — calls in sick on Monday morning. The rush order for Acme sits on the machine all day. Nobody else knows the setup procedure. The delivery deadline passes. Acme is furious, and the follow-on order worth eighty-five thousand dollars goes to a competitor.
+
+Now look at the floor while that machine sits idle. Three other people are standing around waiting for work. They are capable operators, but they were never trained on the Swiss lathe. They can run the machines they know — just not the one that matters right now. The machine sits idle at one hundred twenty dollars per hour in burden rate. Eight hours of idle time is nine hundred sixty dollars. Three sick days is two thousand eight hundred eighty dollars — plus the lost rush order, plus the damage to the customer relationship.
+
+A machine where only one person can perform setup is a single point of failure.
+
+It is not a skills problem you can see on a P-and-L — it is a risk that hides until the exact wrong Monday morning. The fix is not more overtime. It is cross-training, and cross-training starts with knowing who actually knows what. Right now, that knowledge lives in the owner's head and in a few mental notes. When the expert leaves, retires, or is out sick, that knowledge leaves with them.
+
+The Free Manufacturing Skills Matrix Spreadsheet
+
+The skills matrix is a grid: every machine and process area is a row, every operator is a column, and each cell scores how proficient that person is on that machine. Here is what the spreadsheet captures:
+
+Tab
+
+What it captures
+
+Why it matters
+
+Machine and process roster
+
+Every machine and process area, with the required skills: operate, set up, program, troubleshoot, and quality inspection
+
+You cannot cross-train what you have not listed. The roster is the inventory of skills your shop depends on.
+
+Operator proficiency matrix
+
+A zero-to-four score per operator per machine: zero is cannot do it, one is familiar, two is can operate, three is can set up, four is can train others
+
+This is the whole point of the exercise. The grid turns the owner's mental notes into something you can look at, update, and act on.
+
+Single-point-of-failure flags
+
+Auto-flag any machine where only one person scores a three or higher
+
+These red cells are your risk list. Every red cell is a machine that stops when one person is out.
+
+Cross-training priority score
+
+Hourly burden rate times idle hours times probability of absence — ranked highest risk first
+
+Tells you which skill gap to close first. Attack the biggest bar, not the one that is easiest to schedule.
+
+Shift coverage map
+
+Day shift versus night shift coverage for each machine
+
+A machine covered by two people on day shift and zero on night shift is a hidden single point of failure on second shift.
+
+Training plan generator
+
+Who needs training, on what machine, to bring the risk score below threshold
+
+Turns the analysis into a dated action plan you can hand to a supervisor.
+
+Detecting Single Points of Failure
+
+The detection rule is simple and it works:
+
+any machine where only one person scores a three or higher is a single point of failure.
+
+A level two (can operate) is not enough — if the machine needs a setup or a changeover, a level two operator cannot do it. A level four (can train others) is even better, because that person can be the one who closes the gap by teaching someone else.
+
+Here is the trap most shops fall into. They look at the matrix and say, "we have three people who run that machine," and feel safe. But all three are level two. None of them can do the setup. So when the one level four operator is out, the machine can run the parts already set up — and then it stops cold at the next changeover. Three level twos do not add up to one level four.
+
+Update the matrix on a rhythm. At minimum, review it quarterly. Update it immediately whenever someone is trained on a new machine, whenever someone leaves, and whenever you buy a new machine. A skills matrix that is six months out of date is worse than no matrix at all, because it gives you false confidence.
+
+Ranking What to Cross-Train First
+
+You cannot cross-train everyone on everything overnight. The cross-training priority score tells you where to start. For each single point of failure, multiply three numbers:
+
+Hourly burden rate.
+
+What does it cost per hour when that machine is idle? This is your fully loaded machine cost, not just the operator wage.
+
+Idle hours.
+
+How long would the machine sit if the sole expert were out? An eight-hour day, three sick days, or a two-week vacation are very different exposures.
+
+Probability of absence.
+
+How likely is the expert to be out? Someone with two weeks of vacation banked and a long commute has a higher absence risk than someone who lives next door.
+
+The math is not complicated, but it changes the conversation. Instead of "we should cross-train someone on the Swiss lathe someday," you get "the Swiss lathe carries a one hundred ninety-two thousand dollar annual exposure because one person at one hundred twenty dollars per hour is the only one who can set it up, and we have no backup." That number gets attention — and it gets a training budget approved.
+
+Shift Coverage: The Second Shift Blind Spot
+
+Most shops run their skills matrix against a single day-shift assumption. Then second shift starts and the picture changes. A machine that has two level three operators on day shift and zero on night shift is still a single point of failure — the failure just happens after five PM. The shift coverage map in the spreadsheet plots each machine against both shifts so you can see where the coverage actually breaks.
+
+This is where cross-training and scheduling meet. If your best operator only works days, and the big order needs a night run, the skills matrix shows you two things at once: which machine is at risk, and who is closest to being able to cover it. Cross-training the second-shift operator from level two to level three on one machine is often the single highest-ROI move a shop can make in a month.
+
+Building the Training Plan
+
+The training plan generator takes the ranked list of single points of failure and turns each one into a dated, assigned action. The format is deliberately plain: who is the trainee, what is the machine, what is the target level, who is the trainer, and what is the completion date. A supervisor can run it. A training plan only works if it survives contact with the floor, and a five-column table is the form most likely to survive.
+
+Set a realistic target. Cross-training an operator from level two to level three — from "can run the parts" to "can set up independently" — typically takes a few weeks of supervised setups, not a single afternoon. Pair the trainee with your level four operator during real changeovers. The sign-off is not a signature. It is the trainee completing a setup on their own, producing a first good part, and getting it past inspection. That is the moment you update the matrix and the red cell turns green.
+
+How the Skills Matrix Connects to Your Downtime and Overtime
+
+The skills matrix does not work in isolation. It is the workforce half of a three-part picture of why your machines are not producing:
+
+Skills matrix (this post)
+
+— shows you which machines stop because the only person who can run them is out.
+
+Machine downtime tracking
+
+— shows you which machines stop for mechanical and material reasons. When a "breakdown" is actually an absent operator, the downtime log and the skills matrix together reveal the true root cause.
+
+Overtime cost tracking
+
+— shows you how much you are paying to work around the constraint. When one person is the only one who can run a machine, the shop pays overtime to meet deadlines. Cross-train a second person and the overtime premium drops.
+
+There is a fourth connection worth naming: operator availability is itself a bottleneck, and
+
+constraint analysis
+
+is how you find it. A shop that runs constraint analysis and finds "the Swiss lathe" as the bottleneck but never asks who can actually run the Swiss lathe has only found half the problem. The skills matrix completes it. The
+
+shift handover log
+
+then closes the loop between shifts, so the coverage you built is not lost when the day crew walks out the door.
+
+Start this week, not after the next sick call.
+
+The spreadsheet takes about two hours to fill out the first time. Sit down with your lead machinist, list every machine, and score every operator. The red cells you find are the machines that will stop on the next bad Monday. You cannot cross-train before you know what to cross-train — so run the matrix first.
+
+Frequently asked questions
+
+How do I build a manufacturing skills matrix?
+
+List every machine and process area as a row, then list every operator as a column. At each intersection, score the operator from zero to four: zero means cannot do it, one means familiar, two means can operate, three means can set up, and four means can train others. Start with the machines that drive the most revenue and the operators who run them. The free spreadsheet in this guide includes the roster, the proficiency matrix, and the single-point-of-failure flag that turns red automatically when only one person scores a three or higher on a machine.
+
+What proficiency levels should I use in a skills matrix?
+
+A five-level scale works best for manufacturing: level zero is cannot perform the task, level one is familiar with the machine but not yet qualified, level two is can operate the machine to produce good parts, level three is can set up and change over the machine independently, and level four is can troubleshoot, optimize, and train others. The most important threshold is level three — a machine where only one person scores a three or higher is a single point of failure. When that person is out, the machine sits idle.
+
+How do I find single points of failure on my shop floor?
+
+Look for any machine or process where only one operator scores a level three or higher. That operator is a single point of failure. When they are sick, on vacation, or gone, that machine cannot run setup and changeover — which means it effectively stops producing. The free tracker auto-flags these machines by turning the cell red. Walk the matrix once per quarter and update it whenever someone is trained on a new machine or leaves the shop, so the flag always reflects reality.
+
+How do I decide which skills to cross-train first?
+
+Rank each single point of failure by its cost of idle time. Multiply the machine's hourly burden rate by the hours it would sit idle, then multiply by the probability the sole expert is out on any given day. A Swiss lathe at one hundred twenty dollars per hour that sits idle for eight hours costs nine hundred sixty dollars — and the risk is higher if that operator has a lot of vacation or sick time. Sort the list by highest dollar risk and cross-train the biggest bars first. The spreadsheet includes this cross-training priority score.
+
+What does a skills matrix have to do with overtime and downtime?
+
+Overtime and downtime are often two sides of the same problem. When only one person can run a machine, that machine either sits idle while they are out, or the shop pays overtime to run it when demand spikes. A skills matrix reveals the constraint. Cross-train a second operator to level three, and you remove both the idle time and the forced overtime. Our companion posts on machine downtime tracking and overtime cost tracking show you how to measure both of those costs so the skills matrix has a dollar value attached to it.
+
+How can Jobs Done Labs help me set up and automate skills tracking?
+
+We build the skills matrix for your specific shop floor, wire it to your production data so it stays current without manual updates, and set up the cross-training priority scorecard and training plan generator. A typical engagement runs a few weeks and starts with a free audit where we walk your floor, map your machines and people, and identify your single points of failure. Every engagement is backed by the thirty thousand dollar guarantee: if we cannot find at least thirty thousand dollars in recoverable production value, you pay nothing.
+
+Know who can run what before the next sick call
+
+If your shop floor runs on a few operators who are each the only person who can set up a given machine, you are one bad Monday away from an idle machine and a missed delivery. The free skills matrix shows you the single points of failure and what to cross-train first. Want help building it for your specific floor — and wiring it into your production data so it stays current automatically? We build that.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+Machine Downtime Tracking for Small Manufacturers — The Free System That Shows Which Machines Are Killing Your Schedule
+
+Track Every Overtime Dollar by Job and Machine — The Free Spreadsheet That Shows Where Your OT Is Going
+
+Your Shop Has Twelve Machines but Only One Is the Bottleneck — The Free Constraint Analysis Toolkit
+
+
+URL: https://www.jobsdonelabs.ai/blog/manufacturing-skills-matrix-cross-training-tracker-free/
 
 ---
 
