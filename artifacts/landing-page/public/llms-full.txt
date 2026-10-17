@@ -1250,6 +1250,279 @@ URL: https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadshe
 
 ---
 
+# Punch Items Still Broken After Re-Walk? Free Fix
+
+Construction & Architecture
+
+You Re-Walked the Building and Found 12 of 147 Punch Items Still Broken Because the GC Checked Them Off Without Looking — Here Is the Free Punch-List Closeout System With Side-by-Side Photo Verification, Auto-Escalation When Items Age Past 14 Days, and a Contractor Scorecard That Shows You Which Subs Actually Fix Things on the First Try
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 17, 2026
+
+Key takeaways
+
+A twelve-person architecture firm spends three hundred to six hundred admin hours per year on punch-list closeout — and eight to fifteen percent of items marked "complete" by the GC are still broken on re-walk. The free system below adds side-by-side photo verification so the GC cannot check off items without proof, auto-escalation when items sit unresolved past fourteen days, CSI-division routing to the correct subcontractor, and a contractor scorecard that shows which subs fix things on the first try and which ones make you re-walk the building four times.
+
+1. The 147-Item Clipboard Problem: Why Punch-List Closeout Burns Hundreds of Hours Per Project
+
+It is 6:30 PM. You are walking a fifty thousand square foot commercial building for the fourth time. Your clipboard has one hundred forty seven line items. You stopped trusting the GC's status updates three re-walks ago because every time you check a "completed" item — the handrail that was supposed to be re-anchored, the door closer that was supposed to be adjusted, the ceiling tile that was supposed to be replaced — the work was either not done at all or done so poorly it will fail again in six months.
+
+Here is what the typical punch-list closeout actually costs a twelve-person architecture firm:
+
+Fifteen to thirty admin hours per project
+
+— transcribing clipboard notes into Excel, formatting the list, emailing it to the GC, waiting days for a response, then re-walking to verify.
+
+Twenty projects per year
+
+— three hundred to six hundred hours annually of pure punch-list administration. At a blended billable rate of one hundred fifty dollars per hour, that is forty five thousand to ninety thousand dollars in non-billable closeout overhead.
+
+Three to six weeks per project
+
+— the verification loop (walk → list → GC fixes → re-walk → still broken → re-list → re-fix) stretches closeout from what should be a two-week sprint into a six-week slog.
+
+Eight to fifteen percent of GC "completed" items are still broken on re-walk
+
+— and every broken item means another re-walk, another list, another email, another week of delay.
+
+The root cause is not lazy contractors. It is a verification gap. The GC checks a box on a spreadsheet. You have no way to confirm the work was actually done until you physically re-walk the building — and by the time you do, days have passed, the contractor has moved on to the next project, and you are back at square one.
+
+The free static templates from SaaS vendors do not solve this.
+
+Eight companies — Vergo AI, Housecall Pro, Monday.com, Smartsheet, ProjectManager, Knowify, TemplateRegistry, and Jotform — all offer free punch-list templates. They are all the same thing: a blank spreadsheet with column headers. You fill it out, you check boxes, and you hope. None of them verify that the work was actually completed. None of them auto-escalate aging items. None of them tell you which subs keep failing re-walks. They are checklists — not closeout workflow tools.
+
+2. Side-by-Side Photo Verification: The GC Cannot "Check It Off" Without Uploading Proof
+
+The single biggest lever in punch-list closeout is requiring photographic proof before an item can be marked complete. Here is how it works:
+
+Original-issue photo:
+
+During your punch-list walk, take a photo of each item as it exists — the misaligned door, the missing sealant, the scratched window. This is the "before" image attached directly to the item in your spreadsheet.
+
+Verification photo required for completion:
+
+The GC cannot mark an item "Complete" without uploading a photo showing the fix. The "after" photo sits side by side with the "before" photo in the same row. You can spot-check from your desk without a site visit.
+
+Re-walk becomes spot-check:
+
+Instead of re-walking all one hundred forty seven items, you open the spreadsheet, scan the side-by-side photos, and flag the five to ten items where the "after" photo looks suspicious. You re-walk only those. The other one hundred thirty seven items were photo-verified in under ten minutes.
+
+This one change — requiring proof, not accepting checkmarks — cuts re-walk time by eighty to ninety percent. A six-week closeout becomes two to three weeks. Three hundred admin hours becomes eighty to one hundred twenty. And you stop dreading the fourth re-walk because there is no fourth re-walk.
+
+3. CSI-Division Responsible-Party Assignment: Route Every Item to the Correct Subcontractor Automatically
+
+Punch items do not belong to "the GC." They belong to specific subcontractors organized by CSI division:
+
+CSI Division
+
+Scope
+
+Typical Punch Items
+
+Division 03
+
+Concrete
+
+Spalling, cracking, joint sealant failures
+
+Division 05
+
+Metals
+
+Handrail mounting, loose stair nosings
+
+Division 06
+
+Wood / Plastics
+
+Scratched millwork, warped doors
+
+Division 07
+
+Thermal & Moisture
+
+Missing sealant, roof flashing gaps
+
+Division 08
+
+Doors & Windows
+
+Door closer adjustment, glass scratches
+
+Division 09
+
+Finishes
+
+Paint touch-up, drywall patches, ceiling tile replacement
+
+Division 12
+
+Furnishings
+
+Cabinet alignment, countertop seams
+
+In the free spreadsheet, every punch item gets a CSI division code on entry. The system auto-routes items to the correct subcontractor — the Division 08 items go to the door contractor, the Division 09 items go to the drywall and paint contractor, and so on. The GC gets one consolidated list per sub instead of one massive list they have to parse and redistribute. Items reach the person who can actually fix them, not a project manager who will forward them in three days.
+
+4. Aging Report With Auto-Escalation Triggers
+
+An unresolved punch item is not just incomplete — it is blocking final payment, certificate of occupancy, and project closeout. Every day it sits unresolved, the owner is paying carrying costs on a building they cannot occupy. Here is the aging auto-escalation system built into the spreadsheet:
+
+Days Open
+
+Status
+
+Action
+
+0 to 7 days
+
+Green — normal resolution window
+
+No action. Sub has reasonable time to schedule and complete the work.
+
+8 to 14 days
+
+Yellow — approaching stale
+
+Automated nudge to the GC: "14 items have been open more than 7 days. Please confirm scheduling."
+
+15 to 21 days
+
+Orange — escalation
+
+Automated escalation to the GC project executive: "9 items have been open more than 14 days. These are blocking closeout. Please provide a written completion schedule within 48 hours."
+
+22 plus days
+
+Red — critical
+
+Automated notice to the owner with a list of blocking items, which subs are responsible, and the impact on the occupancy timeline. This is the nuclear option — use it sparingly, but use it when necessary.
+
+The aging report runs automatically from the item creation date. You do not need to remember to escalate — the spreadsheet highlights items that have crossed each threshold and generates the email draft for you to forward. The GC learns quickly that items past fourteen days trigger an automatic nudge, and items past twenty one days get the project executive copied. Behavior changes because consequences are consistent and automatic.
+
+5. Contractor Scorecard: Which Subs Fix Things on the First Try?
+
+After three projects, you know which subcontractors produce clean work and which ones generate punch lists fifty items deep. But that knowledge lives in the project architect's head — not in a system anyone else can access. When the firm hires a new project architect, they have to learn all of it from scratch, one painful closeout at a time.
+
+The contractor scorecard in the free spreadsheet tracks four metrics per sub across every project:
+
+Resolution rate:
+
+What percentage of assigned punch items does this sub actually close within the agreed deadline? A sub at ninety five percent resolution within fourteen days is reliable. A sub at sixty percent is a problem.
+
+Average days-to-close:
+
+How quickly does this sub resolve items on average? One sub may close items in six days; another takes twenty two days for the same type of work. That gap matters when the owner is waiting to move in.
+
+Rework rate:
+
+What percentage of items marked "complete" by this sub are still broken on re-walk? A sub with a fifteen percent rework rate is costing you an extra re-walk every other project. A sub with a two percent rework rate is earning their next contract.
+
+Punch items per contract value:
+
+Normalized by contract size — a two hundred thousand dollar framing contract that generates ten punch items is very different from a fifty thousand dollar door contract that generates forty five punch items. Normalization lets you compare subs fairly.
+
+The scorecard changes pre-construction decisions.
+
+Before you award the next contract to the door sub who generated forty five punch items and took twenty two days to close them, you look at the scorecard. Maybe you call the sub who generated eight punch items and closed them in six days instead. The scorecard makes subcontractor selection data-driven instead of relationship-driven — and the subs who do clean work love it because it proves their value.
+
+6. Weekly Closeout Progress Report for the Owner
+
+The owner is paying carrying costs every day the building is not occupied. They want to know: when can we move in? The free spreadsheet generates a one-page weekly closeout progress report with:
+
+Percent complete:
+
+Items resolved / total items. Tracked week over week so the owner sees progress — or lack of it.
+
+Items remaining by CSI division:
+
+A bar chart showing which divisions still have open items. If Division 09 has forty two open items and everything else is under five, the owner knows exactly where the bottleneck is.
+
+Projected closeout date:
+
+Based on the current close rate (items resolved per week) and the remaining items. If you are closing twelve items per week and fifty items remain, the projection is four weeks. If the owner wants it in two, you have data to justify adding resources or escalating specific subs.
+
+Top three blocking items:
+
+The three items most likely to delay closeout, with the responsible sub and the current status. This gives the owner exactly what they need to have a productive conversation with the GC.
+
+This report takes ten minutes to generate from the spreadsheet. It replaces the two-hour Sunday evening scramble to compile a status email from scattered notes, text messages, and memory.
+
+7. The Setup: Two Hours to Build, Zero Dollars
+
+The punch-list closeout system runs in Google Sheets or Excel — no construction management software, no Procore subscription, no IT department. Here is what you need:
+
+Setup checklist
+
+Create the punch-list tab
+
+with columns: Item ID, Room/Area, CSI Division, Description, Original Photo (link or embedded), Responsible Sub, Date Opened, Due Date, Status (Open/In Progress/Complete/Disputed), Verification Photo, Verified By, Days Open (formula), Escalation Level (formula). Approximately twenty minutes.
+
+Create the photo-verification column pairs
+
+— Original Photo next to Verification Photo in side-by-side columns. Train the GC's project manager: an item cannot be marked Complete unless the Verification Photo cell contains a link or image. Ten minutes.
+
+Build the aging report
+
+— conditional formatting that colors items green/yellow/orange/red based on the Days Open formula from step one. Add the four escalation email templates in a separate tab. Twenty minutes.
+
+Build the contractor scorecard tab
+
+— one row per sub, columns for resolution rate, average days-to-close, rework rate, and punch items per one hundred thousand dollars of contract value. Formulas pull from the main punch-list tab. Thirty minutes.
+
+Build the weekly closeout report
+
+— a one-page summary tab with percent complete, items-by-division chart, projected closeout date, and top three blockers. Formulas auto-populate from the main tab. Twenty minutes.
+
+Share with the GC
+
+— give view or comment access to the GC's project manager. They update status, upload verification photos, and assign to subs. You monitor from the aging report. Five minutes.
+
+Total: approximately two hours to build. Total cost: zero dollars. The first project you close out with this system will save you between twenty and forty hours of re-walk and admin time — a ten-to-one return on the setup investment, conservatively.
+
+Frequently asked questions
+
+What if the GC refuses to upload verification photos?
+
+Then their items stay Open indefinitely and escalate to Red at twenty two days. The owner receives an automated notice listing every item the GC refuses to verify. Most GCs change their policy within one escalation cycle. The few who do not are the ones you should not hire on the next project — and the contractor scorecard will show that clearly.
+
+Does this system work for small renovation projects, not just large commercial buildings?
+
+Yes. A five thousand square foot office renovation with thirty punch items benefits just as much as a fifty thousand square foot new build with one hundred fifty items. The photo verification principle is the same — the scale is just smaller. The spreadsheet works for any project with more than ten punch items.
+
+How do I handle a punch item that is actually a scope change?
+
+Flag it as "Disputed — potential scope change" in the status column. The item moves to a separate Scope Change Review tab where you document why it was not in the original contract, what it would cost as a change order, and whether the owner wants to proceed. Do not let scope changes sit in the punch list — they will inflate your closeout metrics and confuse the aging report. Separate them immediately.
+
+Can multiple people on the project team access and update the spreadsheet at the same time?
+
+Yes — Google Sheets supports simultaneous editing by the architect, the GC, and the owner's representative if needed. Excel with OneDrive or SharePoint sharing works the same way. The aging formulas and scorecard calculations update in real time as items are marked complete and verification photos are added.
+
+What happens to the punch-list data after the project closes?
+
+Archive it. The completed punch list, with all before-and-after photos, becomes part of the project closeout documentation. It serves as proof that every item was addressed and photo-verified — useful if the owner reports an issue six months later and claims it was a punch-list item that was never fixed. You pull up the archived spreadsheet, find item number eighty three, and show the before-and-after photos with the verification date. Claim resolved in five minutes instead of a dispute that takes weeks.
+
+Close Out Projects in Two Weeks Instead of Six
+
+The spreadsheet system on this page costs zero dollars and takes two hours to build. If you are spending fifteen to thirty hours per project on punch-list admin and re-walking items the GC already "completed," this system pays for itself on the first closeout.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You Have 40 Open Permits Across 4 Job Sites and One Just Expired — The Free Permit Tracker That Keeps Every Project on Schedule
+
+You Spent $800,000 on Subcontractors Last Year and Cannot Tell Me Which Ones Were Late — The Free Scorecard That Shows You Who Earns the Next Call
+
+Scope Creep Is Bleeding Your Margins — Free Fix | Jobs Done Labs
+
+
+URL: https://www.jobsdonelabs.ai/blog/architecture-punch-list-closeout-photo-verification-free/
+
+---
+
 # Stop Losing Billable Hours to Admin
 
 Professional Services
@@ -3508,6 +3781,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+You Re-Walked the Building and Found 12 of 147 Punch Items Still Broken — The Free Punch-List Closeout System With Photo Verification
 
 You Have Four Stitches on a Guy's Hand and You Didn't Record It — The Free Safety Compliance System for Small Contractors
 
@@ -26260,6 +26535,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+You Re-Walked the Building and Found 12 of 147 Punch Items Still Broken — The Free Punch-List Closeout System With Photo Verification
+
 Law Firm Client Intake: Free Workflow & Templates — Stop Losing Clients to Slow Response
 
 Stop Scope Creep Before the Project Starts — Free Consultant's Prevention Playbook With SOW Clauses and Weekly Scope-Check Ritual
@@ -30589,6 +30866,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+You Re-Walked the Building and Found 12 of 147 Punch Items Still Broken — The Free Punch-List Closeout System With Photo Verification
 
 You Have Four Stitches on a Guy's Hand and You Didn't Record It — The Free Safety Compliance System for Small Contractors
 
