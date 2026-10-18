@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Load Cancellation Tracker: Stop Broker Rate Cuts | Jobs Done Labs</title>
+  <meta name="description" content="Brokers cut rates after you book and you eat the loss. Free load cancellation tracker: log every cancellation, expose repeat offenders, stop the bleed." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/trucking-load-cancellation-tracking-spreadsheet-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/trucking-load-cancellation-tracking-spreadsheet-free/" />
+  <meta property="og:title" content="Load Cancellation Tracker: Stop Broker Rate Cuts | Jobs Done Labs" />
+  <meta property="og:description" content="Brokers cut rates after you book and you eat the loss. Free load cancellation tracker: log every cancellation, expose repeat offenders, stop the bleed." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Load Cancellation Tracker: Stop Broker Rate Cuts | Jobs Done Labs" />
+  <meta name="twitter:description" content="Brokers cut rates after you book and you eat the loss. Free load cancellation tracker: log every cancellation, expose repeat offenders, stop the bleed." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+
+  <!-- BLOGPOSTING JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Load Cancellation Tracker: Stop Broker Rate Cuts | Jobs Done Labs",
+    "description": "Brokers cut rates after you book and you eat the loss. Free load cancellation tracker: log every cancellation, expose repeat offenders, stop the bleed.",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/" },
+    "publisher": { "@type": "Organization", "name": "Jobs Done Labs", "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/og-image.png" } },
+    "datePublished": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/trucking-load-cancellation-tracking-spreadsheet-free/"
+  }
+  </script>
+
+  <!-- FAQPAGE JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do load cancellations cost a small trucking fleet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 5-truck fleet running 150 loads per year with an 8-12 percent cancellation rate loses 12 to 18 loads annually. At an average loss of 300 to 500 dollars per cancellation from rate reductions and repositioning costs, the annual leak is 3,600 to 9,000 dollars. Larger fleets and higher cancellation rates multiply this significantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a load cancellation in trucking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A load cancellation happens when a broker cancels a booked load before pickup, or reduces the agreed rate after booking (a 'market adjustment' or rate reduction). Cancellations force carriers to either accept a lower rate, deadhead empty to find another load, or sit idle waiting for a replacement. Most carriers do not track these systematically, which means repeat-offender brokers face no consequences."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I track broker cancellations without a TMS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use our free load cancellation tracking spreadsheet. Log every cancellation: broker MC number, original rate, cancelled or reduced rate, rate difference, reason code, and recovery action. The spreadsheet auto-calculates broker reliability scores, total dollars lost per broker, and cancellation patterns by lane and season. It takes under 10 minutes per cancellation and costs zero dollars."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I recover money from a cancelled trucking load?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recovery is difficult but possible. The best defense is data: track every cancellation by broker MC number, build a pattern of repeat cancellations, and use that data to (1) negotiate with the broker for a cancellation fee in future contracts, (2) file a complaint with the Transportation Intermediaries Association if the broker is a TIA member, (3) notify your factoring company of unreliable brokers, and (4) report repeat offenders on load boards. The tracking spreadsheet builds the evidence you need for each of these steps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which brokers cancel loads most often?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cancellation rates vary by broker, lane, season, and market conditions. Without systematic tracking, carriers cannot answer this question. Our free spreadsheet includes a Broker Reliability Scorecard that auto-calculates cancellation rate, total dollars lost, and average loss per cancellation for every broker in your log. After 90 days of tracking, you will know exactly which brokers cost you money and which ones keep their word."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BREADCRUMBLIST JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Load Cancellation Tracker: Stop Broker Rate Cuts", "item": "https://www.jobsdonelabs.ai/blog/trucking-load-cancellation-tracking-spreadsheet-free/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=80" alt="Truck on highway at sunset — freight carrier managing load cancellations" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Logistics &amp; Trucking</span>
+      <h1>You Booked a Two Thousand Four Hundred Dollar Load for Friday Pickup, Repositioned Your Truck One Hundred Fifty Miles to the Shipper, and at 4 PM Thursday the Broker Called to Say the Rate Is Now Two Thousand One Hundred Dollars Because 'The Market Moved' — and You Took It Because the Alternative Was Deadheading Two Hundred Miles Home Empty. This Happens 12 Times a Year at an Average of Three Hundred Dollars Per Cancellation — and Right Now You Have No Idea Which Brokers Are Doing It to You Over and Over Again. Here Is the Free Load Cancellation Tracker That Exposes Every Broker's True Reliability and Builds the Data You Need to Blacklist the Repeat Offenders.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · October 18, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A 5-truck fleet loses three thousand six hundred to nine thousand dollars per year to load cancellations and rate reductions — and most carriers cannot tell you which broker did it or how many times. The free load cancellation tracker logs every cancellation by broker MC number, calculates per-broker reliability scores, totals the dollars lost, and reveals cancellation patterns by lane, season, and day of week. In 90 days, you will have the data to blacklist repeat offenders, negotiate cancellation fees, and stop booking loads from brokers who cost you money. Zero dollars, under 30 minutes to set up.</p>
+      </div>
+
+      <h2>The three thousand six hundred dollar cancellation leak nobody tracks</h2>
+
+      <p>Here is how it works. A broker posts a load at two thousand four hundred dollars. You book it, reposition your truck, and plan the rest of your week around that pickup. Thursday afternoon — sometimes Thursday evening — the broker calls. The rate is now two thousand one hundred. The market moved. Take it or leave it.</p>
+
+      <p>You take it. The alternative is deadheading two hundred miles home empty, burning fuel and earning zero. So you eat the three hundred dollar rate cut and move on. The broker thanks you and does the same thing to another carrier next week.</p>
+
+      <p>For a 5-truck fleet running 150 loads per year, an 8 to 12 percent cancellation and rate-reduction rate means 12 to 18 loads affected annually. At an average loss of three hundred to five hundred dollars per event — including the rate difference, repositioning cost, and driver downtime — that is <strong>three thousand six hundred to nine thousand dollars leaking out of your business every year</strong>. And most carriers have zero tracking. They cannot name the worst broker. They cannot prove the pattern. They just know the money is gone.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>One carrier lost three hundred dollars on a market adjustment three times in a single month from the same broker — and had no way to prove the pattern because every cancellation happened over the phone.</strong> The broker is still booking loads with that carrier today.</p>
+      </div>
+
+      <h2>The per-cancellation log: capture what happened before you forget</h2>
+
+      <p>The foundation of the tracker is the per-cancellation log. Every time a broker cancels a load or reduces the rate after booking, you record exactly what happened. The spreadsheet captures:</p>
+
+      <ul>
+        <li><strong>Date and time</strong> the cancellation or rate reduction occurred</li>
+        <li><strong>Broker name and MC number</strong> — the unique identifier that ties every cancellation to a specific broker</li>
+        <li><strong>Original rate</strong> you booked the load at</li>
+        <li><strong>Cancelled or reduced rate</strong> — what the broker offered after the change</li>
+        <li><strong>Rate difference</strong> — auto-calculated by the spreadsheet, this is the dollars you lost on this single event</li>
+        <li><strong>Reason code</strong> — market adjustment, shipper cancelled, load no longer available, rate renegotiation, other</li>
+        <li><strong>Lane</strong> — origin and destination, so you can spot lanes where cancellations cluster</li>
+        <li><strong>Recovery action taken</strong> — accepted lower rate, found replacement load, deadheaded home, filed complaint</li>
+        <li><strong>Deadhead miles</strong> driven as a result of the cancellation</li>
+        <li><strong>Driver downtime hours</strong> — time the driver sat idle waiting for a replacement</li>
+      </ul>
+
+      <p>Each entry takes under two minutes to fill out. After 90 days, you will have a complete record of every cancellation event — and the data to act on it.</p>
+
+      <h2>Broker reliability scorecard: who costs you money and who keeps their word</h2>
+
+      <p>The scorecard tab auto-aggregates every cancellation entry by broker MC number. For each broker you have ever booked with, it calculates:</p>
+
+      <ul>
+        <li><strong>Total loads booked</strong> with this broker</li>
+        <li><strong>Total cancellations</strong> and rate reductions</li>
+        <li><strong>Cancellation rate percentage</strong> — the single number that tells you how reliable this broker really is</li>
+        <li><strong>Total dollars lost</strong> across all cancellations with this broker</li>
+        <li><strong>Average dollars lost per cancellation</strong> — some brokers cancel with minor rate cuts, others gut your margin</li>
+        <li><strong>Reliability tier</strong> — Green (under 5 percent cancellation rate), Yellow (5 to 10 percent), Red (over 10 percent or over one thousand dollars in total losses)</li>
+      </ul>
+
+      <p>After three months of tracking, the scorecard tells you exactly which brokers earn your next phone call and which ones you should never book again. One carrier discovered that a broker they had used for years had a 22 percent cancellation rate — they had simply never added up the numbers.</p>
+
+      <h2>Cost-of-cancellation calculator: what each event actually costs your fleet</h2>
+
+      <p>The rate difference is only part of the cost. A cancellation triggers a cascade of hidden expenses that most carriers never quantify:</p>
+
+      <div class="checklist">
+        <h3>True cost of a cancellation</h3>
+        <ol>
+          <li><strong>Rate difference</strong> — the three hundred to five hundred dollar gap between the booked rate and the reduced or lost rate</li>
+          <li><strong>Deadhead recovery miles</strong> — repositioning the truck to find a replacement load, at your cost per mile</li>
+          <li><strong>Driver downtime hours</strong> — the driver sitting idle at your hourly cost of payroll, benefits, and truck payment</li>
+          <li><strong>Opportunity cost</strong> — the load you could have booked if you had not committed to this broker three days ago</li>
+          <li><strong>Schedule disruption</strong> — one cancelled Friday pickup can cascade into a missed Monday delivery and a lost reload</li>
+        </ol>
+      </div>
+
+      <p>The calculator tab in the spreadsheet lets you input your fleet's cost-per-mile, driver hourly cost, and typical reload value. It then auto-computes the true total cost of each cancellation — which is often double or triple the rate difference alone.</p>
+
+      <h2>Cancellation pattern analysis: spot the trends before they spot you</h2>
+
+      <p>Individual cancellations hurt. Patterns of cancellations are what sink your margins. The pattern analysis dashboard aggregates your cancellation log across four dimensions:</p>
+
+      <ul>
+        <li><strong>By broker</strong> — the reliability scorecard, ranked worst to best</li>
+        <li><strong>By lane</strong> — which origin-destination pairs have the highest cancellation rates? Certain lanes (especially high-volume corridors with many competing carriers) see far more rate reductions than others</li>
+        <li><strong>By day of week</strong> — do cancellations spike on Thursdays and Fridays when brokers realize they overpaid for weekend capacity? The data will tell you</li>
+        <li><strong>By season</strong> — are cancellations higher in January after the holiday freight rush? During produce season when reefer capacity tightens? The seasonal view helps you anticipate and price accordingly</li>
+      </ul>
+
+      <p>A carrier who tracked cancellations for six months discovered that 60 percent of their rate reductions happened on Thursday afternoons for Friday pickups in a single lane corridor. They adjusted by requiring a non-refundable booking deposit on that lane for Friday pickups — and cancellations dropped 70 percent.</p>
+
+      <h2>The recovery action checklist: what to do when a broker cancels</h2>
+
+      <p>Most carriers take the lower rate and move on. What they do not realize is that there is a sequence of actions you can take — in order — that builds pressure on repeat-offender brokers and recovers lost revenue over time:</p>
+
+      <div class="checklist">
+        <h3>Recovery action checklist — in order of escalation</h3>
+        <ol>
+          <li><strong>Log the cancellation immediately.</strong> Date, broker MC, original rate, new rate, reason given. Record it before you take any action — emotion fades, data stays.</li>
+          <li><strong>Negotiate a cancellation fee for the next load.</strong> When the same broker calls next week, say: "You cancelled on me last Thursday and it cost me four hundred dollars. If you want me to book this load, I need a seventy-five dollar cancellation guarantee." Many brokers will agree — they value reliability too.</li>
+          <li><strong>File a TIA complaint.</strong> If the broker is a member of the Transportation Intermediaries Association, the TIA has a formal complaint process for broker misconduct. Your cancellation log is the evidence.</li>
+          <li><strong>Notify your factoring company.</strong> Factors track broker payment behavior — they want to know about reliability problems too. Some factors maintain internal broker ratings and may adjust advance rates for high-cancellation brokers.</li>
+          <li><strong>Report on load boards.</strong> DAT and Truckstop allow carriers to rate brokers. A pattern of documented cancellations is the kind of information other carriers need.</li>
+          <li><strong>Blacklist the repeat offenders.</strong> After three cancellations from the same broker with no remediation, stop booking their loads. The money you lose on cancellations exceeds the revenue from their remaining loads.</li>
+        </ol>
+      </div>
+
+      <p>None of these steps work without data. The tracker gives you the data. The checklist tells you what to do with it.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The cancellation tracker paired with the broker AR tracker gives you complete broker profitability.</strong> You will know what every broker pays you AND what they cost you in cancellations. Subtract one from the other and you have the only number that matters: true broker profitability. See Related Reading below for the AR tracker.</p>
+      </div>
+
+      <h2>How to set up the tracker in under 30 minutes</h2>
+
+      <ol>
+        <li><strong>Make a copy of the spreadsheet.</strong> Save it to your Google Drive or download as Excel. Name it "Load Cancellation Tracker — [Your Fleet Name]."</li>
+        <li><strong>Enter your fleet baseline numbers.</strong> Cost-per-mile, driver hourly cost, and typical reload value go into the Calculator tab. These numbers drive the true-cost calculations.</li>
+        <li><strong>Bookmark the log tab on your dispatcher's browser.</strong> Every time a broker cancels or reduces a rate, the dispatcher opens the log tab, fills in 10 fields, and moves on. Two minutes per entry.</li>
+        <li><strong>Review the scorecard every Friday.</strong> Sort by cancellation rate, highest to lowest. The brokers at the top of that list are your problem. Decide which ones get a warning and which ones get blacklisted.</li>
+        <li><strong>Run the pattern analysis monthly.</strong> After 30 days of data, switch to the Pattern Analysis tab and look for lane, day-of-week, and seasonal trends. Adjust your booking strategy accordingly.</li>
+      </ol>
+
+      <p>That is it. No software to install, no monthly subscription, no integration with your TMS. A spreadsheet and a habit.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>What is the difference between a load cancellation and a rate reduction?</h3>
+        <p>A cancellation means the load is gone entirely — you repositioned for nothing. A rate reduction means the load still exists but at a lower price — you take a pay cut to keep the truck moving. The tracker records both, because both cost you money. Rate reductions are actually more common than outright cancellations, and because you still run the load, they are easier to forget. Track both in the same log.</p>
+
+        <h3>How long before I have enough data to act?</h3>
+        <p>You can spot patterns after 30 days — especially if a single broker cancels twice in that window. After 90 days and 12 to 15 cancellation entries, the scorecard is statistically meaningful. After six months, you will have enough data to make permanent blacklist decisions and adjust your lane pricing to account for cancellation risk.</p>
+
+        <h3>Do I need a lawyer to recover cancellation losses?</h3>
+        <p>In most cases, no. The recovery checklist (above) is designed to escalate without legal action: negotiation first, then industry complaint channels, then load board reporting, then blacklisting. Legal action is rarely cost-effective for individual cancellations. The goal of tracking is prevention — stop booking from unreliable brokers before they can cancel on you again.</p>
+
+        <h3>What if the broker says it was the shipper who cancelled?</h3>
+        <p>Record it anyway and log the reason code as "shipper cancelled." The scorecard still attributes it to the broker who booked the load — because you chose to trust that broker with your truck. If a broker consistently brings you shippers who cancel, that is still a broker reliability problem. Over time, the data will tell you whether the broker or a specific shipper is the root cause.</p>
+
+        <h3>Can I use this spreadsheet if I already have a TMS?</h3>
+        <p>Yes. Most TMS platforms track dispatched loads and completed loads, but very few have a dedicated cancellation log with broker-level reliability scoring. The spreadsheet fills that gap. If your TMS has a notes or custom fields feature, you can log cancellations there and periodically export to the spreadsheet for the scorecard and pattern analysis.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/trucking-broker-ar-tracking-spreadsheet-free/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <div class="title">Who Owes Your Fleet Money? Free Carrier AR Tracker</div>
+          </a>
+          <a class="related-card" href="/blog/trucking-deadhead-reduction-empty-miles-tracker-free/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <div class="title">Cut Empty Miles: Free Deadhead Tracker for Fleets</div>
+          </a>
+          <a class="related-card" href="/blog/trucking-freight-bill-audit-carrier-overcharge-system/">
+            <span class="cat">Logistics &amp; Trucking</span>
+            <div class="title">Freight Bill Audit: Catch Overcharges</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Stop bleeding money on cancellations you cannot prove</h2>
+        <p>Every cancellation you do not track is money you will never recover. Start logging today — the spreadsheet is free, the habit takes two minutes per event, and the data will change which brokers you trust with your trucks. Want to automate the whole thing so your dispatcher never has to fill out a spreadsheet? That is what we build.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-broker-ar-tracking-spreadsheet-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Who Owes Your Fleet Money? Free Carrier AR Tracker</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-deadhead-reduction-empty-miles-tracker-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Cut Empty Miles: Free Deadhead Tracker for Fleets</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/trucking-freight-bill-audit-carrier-overcharge-system/" style="font-weight:600;color:#1466FF;text-decoration:none">Freight Bill Audit: Catch Overcharges</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    &copy; 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
