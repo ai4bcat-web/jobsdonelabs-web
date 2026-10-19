@@ -1223,6 +1223,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Free Carrier Rate Comparison Spreadsheet — USPS, UPS, FedEx, DHL by Zone and Weight
+
 Your Products Look Profitable. Your Bank Disagrees. — Free SKU Profitability Calculator
 
 Amazon FBA Stranded Inventory? Free Tracker — Find & Fix Unsellable ASINs Before Storage Fees Drain You
@@ -9456,6 +9458,8 @@ Prevention has three layers. Layer 1 — purchasing discipline: never reorder a 
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free Carrier Rate Comparison — USPS, UPS, FedEx, DHL by Zone and Weight
 
 Your Products Look Profitable. Your Bank Disagrees. — Free SKU Profitability Calculator
 
@@ -20750,6 +20754,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Free Carrier Rate Comparison Spreadsheet — USPS, UPS, FedEx, DHL by Zone and Weight
+
 340 Units Unsold for 16 Months — Free Dead Stock Tracker That Spots Aging Inventory Before It Bleeds You Dry
 
 You Have $12K in Returns Your Vendors Never Credited — Free RTV Chargeback Tracker
@@ -27394,6 +27400,329 @@ Your Shop Has 12 Machines But Only One Is The Bottleneck — Free Constraint Ana
 
 
 URL: https://www.jobsdonelabs.ai/blog/shift-handover-log-spreadsheet-manufacturing-free-template/
+
+---
+
+# Free Carrier Rate Comparison Spreadsheet
+
+Retail & E-Commerce
+
+You Shipped 347 Orders Last Month and Paid $2,800 in Carrier Fees Without Ever Comparing Rates. You Suspect 30% of Those Packages Went With the Wrong Carrier Because Nobody Has Time to Check USPS, UPS, and FedEx for Every Single Label. Here Is the Free Carrier Rate Comparison Spreadsheet That Shows You Which Carrier Is Cheapest by Zone, Weight, and Dimensions Before You Buy the Label.
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 19, 2026
+
+Key takeaways
+
+Most small e-commerce brands default to one carrier for every package and lose three hundred to six hundred dollars monthly in avoidable overcharges. This free spreadsheet compares USPS, UPS, FedEx, and DHL rates side by side by zone, weight, and dimensions — so you pick the cheapest carrier for every label. Includes a dimensional weight audit, carrier performance scorecard, and a monthly shipping dashboard for carrier rate negotiations.
+
+The Fifteen to Twenty-Five Percent Shipping Overcharge You Do Not Know You Are Paying
+
+If you ship two hundred to four hundred orders per month and default to a single carrier, the math is brutal. A three-pound package from Chicago to Los Angeles (Zone 8) costs roughly eighteen dollars via UPS Ground but closer to eleven dollars via USPS Priority Mail. A five-pound package from Dallas to Miami (Zone 4) is thirteen dollars via FedEx but under ten dollars via UPS. Small differences compound fast.
+
+Here is what that looks like at scale for a five hundred thousand dollar per year brand shipping three hundred orders monthly:
+
+Scenario
+
+Monthly Cost
+
+Annual Cost
+
+All packages via UPS Ground (default)
+
+$2,800
+
+$33,600
+
+Thirty percent routed to cheapest carrier
+
+$2,380
+
+$28,560
+
+All packages via cheapest carrier (optimized)
+
+$2,100
+
+$25,200
+
+Annual savings: default vs optimized
+
+$8,400
+
+That is eight thousand four hundred dollars per year in pure margin recovery — not from selling more, not from raising prices. Just from putting each package on the right truck.
+
+The real cost goes deeper
+
+Carrier rates change quarterly. UPS raised ground rates five point nine percent in 2026. FedEx fuel surcharges fluctuate weekly. If you are not checking rates per shipment, you are leaving money on the table — and the leakage grows every quarter.
+
+Carrier Rate Lookup Table: USPS, UPS, FedEx, and DHL by Zone and Weight
+
+The spreadsheet starts with a carrier rate matrix — the foundational lookup table that powers every comparison. You enter your published or negotiated rates once per carrier, and the rest of the workbook auto-populates.
+
+The Carrier Rate tab covers these dimensions:
+
+Carrier columns:
+
+USPS Priority Mail, UPS Ground, FedEx Home Delivery, DHL eCommerce — each with rate data by zone (1-8) and weight tier (1-70 lbs in five-pound increments)
+
+Rate type selector:
+
+published retail rates vs your negotiated rates — toggle between them to see the spread and know whether renegotiating is worth it
+
+Fuel surcharge field:
+
+each carrier applies a weekly fuel surcharge percentage; the spreadsheet auto-adds it to the base rate so your comparison uses real-world total cost, not base-rate fantasy numbers
+
+Residential surcharge flag:
+
+USPS does not charge a residential surcharge; UPS and FedEx add roughly four dollars per residential delivery. The spreadsheet flags residential deliveries so you do not accidentally compare a surcharge-included UPS rate against a surcharge-free USPS rate
+
+Rate cards update quarterly. The spreadsheet includes a version date field and a reminder to check carrier rate-change announcements in January, April, July, and October.
+
+Per-Shipment Rate Comparison Calculator
+
+This is the tab you use every day. Plug in the details for a single shipment and the spreadsheet returns the cheapest carrier instantly.
+
+Input fields:
+
+Origin ZIP code
+
+— used to calculate the destination zone
+
+Destination ZIP code
+
+— the first three digits determine the zone
+
+Package weight
+
+(actual, in pounds and ounces)
+
+Package dimensions
+
+(length × width × height, in inches)
+
+Declared value
+
+(optional — triggers additional insurance comparison)
+
+Output:
+
+Rate grid:
+
+USPS, UPS, FedEx, and DHL side by side — base rate, fuel surcharge, residential surcharge (if applicable), and total landed cost
+
+Cheapest carrier highlighted
+
+in green — no guessing, no "UPS feels cheaper today"
+
+Savings column:
+
+cheapest rate vs the rate you would have paid using your default carrier — per-package savings, in dollars
+
+Example: Dallas to Miami, 4-pound package
+
+USPS Priority Mail: $10.85 · UPS Ground: $9.72 · FedEx Home Delivery: $12.40 · DHL eCommerce: $11.15. Cheapest: UPS Ground at $9.72. If your default was FedEx, this single package saves you $2.68. Multiply by one hundred similar shipments per month: two hundred sixty-eight dollars saved — from putting the same box on a different truck.
+
+Dimensional Weight Audit: Are You Paying for Empty Air?
+
+Dimensional weight pricing is the silent margin killer in e-commerce shipping. Every major carrier uses it: they calculate a "dimensional weight" based on your box volume and charge you the
+
+greater
+
+of actual weight or dimensional weight. If your box is larger than it needs to be, you literally pay for the empty space inside.
+
+The formula: (Length × Width × Height) ÷ DIM Divisor. The divisor is one hundred thirty-nine for USPS, UPS, and FedEx domestic shipments in 2026. A box measuring 18" × 14" × 10" has a DIM weight of (18 × 14 × 10) ÷ 139 = 18.1 pounds — even if the contents weigh four pounds.
+
+The DIM Weight Audit tab in the spreadsheet does three things:
+
+Calculates DIM weight
+
+for every package logged in the shipment log, using each carrier's current DIM divisor
+
+Flags packages where DIM weight exceeds actual weight
+
+— these are your oversize-box overpayers, and the spreadsheet shows exactly how many dollars each one is costing you
+
+Suggests a smaller box size
+
+by reducing one dimension incrementally and showing the rate difference — "if you used a 16" box instead of 18", you would save two dollars and forty cents per package"
+
+For a brand shipping three hundred orders per month, fixing oversized boxes typically saves one hundred fifty to three hundred dollars monthly — on top of the carrier-selection savings. These two levers compound.
+
+Carrier Performance Scorecard: Who Is Actually Getting Better?
+
+Rate is not the only factor. A carrier that is ten percent cheaper but delivers two days late twenty percent of the time costs you more in customer service tickets and reputation damage than the savings are worth. The spreadsheet includes a carrier performance dashboard that tracks the metrics you actually care about:
+
+Metric
+
+USPS
+
+UPS
+
+FedEx
+
+DHL
+
+On-time delivery rate
+
+__%
+
+__%
+
+__%
+
+__%
+
+Damage/loss rate
+
+__%
+
+__%
+
+__%
+
+__%
+
+Avg cost per package
+
+$___
+
+$___
+
+$___
+
+$___
+
+Cost trend (3-month)
+
+±__%
+
+±__%
+
+±__%
+
+±__%
+
+Customer complaint rate
+
+__%
+
+__%
+
+__%
+
+__%
+
+Log every shipment in the Shipment Log tab — date, carrier, tracking number, zone, weight, rate paid, and actual delivery date. The scorecard auto-aggregates. Within three months you have hard data on which carrier is cheapest, which is most reliable, and whether the cheapest is actually the best for your customers.
+
+One overlooked insight: watch the cost trend column. If UPS Ground climbed eight percent in three months while USPS stayed flat, you are being priced out of UPS on certain lanes — and the data tells you exactly when to shift volume.
+
+Monthly Shipping Dashboard
+
+The dashboard tab gives you a one-page view of your entire shipping operation — the numbers that matter when you negotiate rates, budget for Q4, or explain why the P&L shipping line keeps growing.
+
+Dashboard Metric
+
+This Month
+
+Last Month
+
+Change
+
+Total packages shipped
+
+Total shipping spend
+
+Average cost per package
+
+Spend by carrier: USPS
+
+Spend by carrier: UPS
+
+Spend by carrier: FedEx
+
+Spend by carrier: DHL
+
+Spend by zone (1-4 vs 5-8)
+
+Estimated carrier-selection savings
+
+Estimated DIM-weight savings
+
+The zone breakdown is particularly useful: if Zone 7-8 spend jumped forty percent while Zone 1-4 stayed flat, you likely added West Coast customers. That is good for revenue — but it means your average shipping cost per order is rising. The dashboard tells you before the P&L surprises you.
+
+Negotiation leverage
+
+When you call your UPS rep and say "my average cost per package is up eleven percent in six months and FedEx is consistently cheaper on Zones 5-8," you are not asking for a favor — you are armed with data. The rep knows you can shift volume. That is the negotiation position that gets you an additional eight to fifteen percent off published rates.
+
+How to Set This Up in Under Two Hours
+
+You do not need to integrate APIs, learn a new platform, or hire a consultant. The spreadsheet works offline and the setup is straightforward:
+
+Download the template
+
+— open the four-tab spreadsheet (Carrier Rates, Shipment Calculator, Shipment Log, Dashboard)
+
+Enter your rate cards
+
+— pull your current published or negotiated rates from each carrier's rate PDF and populate the Carrier Rates tab (one time, roughly thirty minutes)
+
+Log one week of shipments
+
+— use the Shipment Calculator tab for every label you buy this week. You do not need to go back and enter historical data
+
+Review the Dashboard
+
+— by Friday, you will see which carrier saves you money on which lanes. Next week, start routing accordingly
+
+Monthly review
+
+— export your shipping platform CSV once per month, paste into the Shipment Log, and let the dashboard aggregate
+
+The spreadsheet works for any e-commerce platform (Shopify, Amazon Seller Fulfilled, BigCommerce, WooCommerce) and any shipping platform (Shippo, ShipStation, Pirate Ship, EasyPost). It is carrier-agnostic by design — the rate cards are your data.
+
+Frequently asked questions
+
+How much money do small e-commerce brands lose by using the wrong shipping carrier?
+
+A brand shipping three hundred orders per month typically overpays by fifteen to twenty-five percent on roughly one hundred packages — roughly three hundred to six hundred dollars per month in avoidable overcharges. The right carrier depends on zone, weight, and dimensions; defaulting to a single carrier guarantees overpayment on roughly one-third of your packages.
+
+What is the cheapest shipping carrier for small e-commerce packages?
+
+There is no single cheapest carrier — it depends on the destination zone, package weight, and box dimensions. USPS Priority Mail is typically cheapest for lightweight packages to residential addresses, UPS Ground wins for heavier mid-zone shipments, and FedEx Home Delivery becomes competitive for packages over five pounds to commercial addresses. The free spreadsheet in this guide lets you compare all four carriers side by side for your actual package profile.
+
+How does dimensional weight affect shipping costs?
+
+Dimensional (DIM) weight is a pricing method carriers use where they charge based on package volume, not actual weight — whichever is greater. If your box is larger than it needs to be, you pay for empty air. The formula: (length × width × height) divided by the DIM divisor (typically 139 for USPS/UPS/FedEx domestic). The free spreadsheet includes a DIM weight audit that automatically flags packages where DIM weight exceeds actual weight, showing exactly how much you overpay for oversized boxes.
+
+Is it worth negotiating shipping rates directly with carriers?
+
+Yes, if you ship more than one hundred fifty packages per month. Carriers offer tiered discounts based on volume, and most small e-commerce brands qualify for rates ten to thirty percent below published retail. The key is going into the negotiation with data — your carrier performance scorecard shows on-time percentage, damage rate, and cost trend by carrier, which gives you leverage. The monthly dashboard provides the exact numbers you need to negotiate from a position of strength.
+
+How do I use this spreadsheet to compare carrier rates for my store?
+
+Enter your origin ZIP code, then for each shipment plug in the destination ZIP, package weight, and dimensions. The spreadsheet auto-calculates the zone, applies the DIM weight formula, and displays the estimated rate for USPS, UPS, FedEx, and DHL side by side — highlighting the cheapest option. The Carrier Rates tab stores rate card data by zone and weight tier so you can batch-compare across your entire shipping volume.
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Amazon Took $15,000 in Fees Last Quarter and You Cannot Explain Where It Went — Here Is the Free Reconciliation System
+
+340 Units Have Not Sold in 16 Months — Free Dead Stock Tracker That Finds Aging Inventory Before It Bleeds You Dry
+
+You Sell on Shopify, Amazon, and Walmart — Free Multi-Channel Catalog That Cuts Listing Labor by 70%
+
+Shipping costs eat margin quarterly — automate the busywork
+
+The carrier comparison spreadsheet stops the bleeding. If you want to take it further — automatically pulling carrier rates, syncing shipment data, and routing labels to the cheapest option without manual entry — we build that. Free audit, no pitch.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/shipping-carrier-rate-comparison-ecommerce-spreadsheet-free/
 
 ---
 
