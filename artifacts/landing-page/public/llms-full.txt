@@ -10665,6 +10665,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+A $25 Blower Motor Just Cost You $1,100 — Free Parts-Run Coordination Spreadsheet
+
 Your Crew Finished Early and Went Home — Here Is the Free Crew Coordination Spreadsheet That Routes Them to the Next Job in 60 Seconds
 
 How to Never Lose a Review When Your Tech Is Late — Free SMS Templates
@@ -21363,6 +21365,285 @@ URL: https://www.jobsdonelabs.ai/blog/organize-load-confirmations-without-tms/
 
 ---
 
+# $25 Part, $1,100 Cost: Free Parts-Run Coordination
+
+Home Services & Trades
+
+A twenty-five dollar blower motor just cost your shop one thousand one hundred dollars because it took five hours to get from the supply house to your tech. Your other three techs were on their own calls, your office manager was juggling twelve incoming lines, and nobody could run the part. Here is the free parts-run coordination spreadsheet that checks supply-house inventory, assigns the pickup to the nearest free person, and tells you exactly which customers you need to call right now.
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 20, 2026
+
+Key takeaways
+
+A five-tech HVAC shop loses roughly eight thousand five hundred to fifteen thousand dollars per year on mid-job parts runs — the emergency dashes to the supply house when a part that should have been on the truck is not. One severe incident — a twenty-five dollar blower motor that takes five hours to reach a stalled tech, kills a full call slot, and forces two customer reschedules — can cost over one thousand one hundred dollars by itself. The free parts-run coordination spreadsheet turns a ninety-minute panic into a fifteen-minute coordinated process: check which supply house has the part, assign the pickup to the nearest available person, calculate the schedule impact on every other call, and notify affected customers before they call you angry.
+
+The one thousand one hundred dollar parts-run tax
+
+Here is a scenario that plays out roughly ten to fifteen times per year in a typical five-tech HVAC or plumbing shop. It is 10:00 AM. Your lead tech is on the first call of the day — a no-cool diagnosis at a residential property twenty-five minutes from the shop. He finds a seized blower motor. The part is twenty-five dollars at the supply house. The supply house is twenty-five minutes from the job site. He has three more calls scheduled today at 11:30 AM, 2:00 PM, and 4:00 PM.
+
+If he drives to get the motor himself, he loses the 11:30 AM call entirely — that is one hundred seventy-five to two hundred fifty dollars in billable revenue gone. If your other three techs pick up the slack, they are all on their own calls in different parts of town. Your office manager could run the part, but she is handling twelve incoming customer calls, four of which are new leads. Nobody is free.
+
+Five hours later, the motor reaches the tech at 3:00 PM. He finishes the repair by 3:45 PM. The 2:00 PM and 4:00 PM calls are rescheduled to tomorrow — both customers are annoyed, one leaves a three-star review mentioning poor communication. The shop lost:
+
+One hundred seventy-five to two hundred fifty dollars in lost billable time from the killed 11:30 AM slot
+
+Seventy-five dollars in fuel, vehicle wear, and tech windshield time for the pickup (even if the office manager ran it)
+
+Three hundred to six hundred dollars in combined reschedule cost — the two bumped afternoon calls each lose roughly one hundred fifty to three hundred dollars in billable time when squeezed into an already-full tomorrow schedule
+
+One hundred fifty to three hundred fifty dollars in customer goodwill cost — the bad review costs ten to fifteen leads over the next three months, valued at roughly one hundred fifty dollars per lost lead
+
+Total: seven hundred to one thousand two hundred seventy-five dollars. From a twenty-five dollar part. For context, if this happens twelve times per year — a conservative estimate for a five-tech shop — the annual parts-run tax is between eight thousand four hundred and fifteen thousand three hundred dollars. That is pure waste that no amount of marketing spend can offset.
+
+Why this happens over and over:
+
+The part was genuinely not in the truck inventory. The truck might carry forty to sixty common parts, but a specific blower motor model for a fifteen-year-old Trane unit is not one of them. This is not an inventory failure — it is an execution failure. The shop knows the part is not on the truck, but has no systematic way to coordinate getting it to the tech without burning a full call slot. The free parts-run coordination spreadsheet is designed specifically for this situation.
+
+Supply-house inventory check: who has the part, right now
+
+The first wasted thirty minutes in every parts run is calling around to find which supply house actually has the part in stock. Your office manager calls Ferguson — out of stock. Calls Johnstone — they have it but at a higher price. Calls RSD — they have the OEM part at the right price but they are forty minutes from the tech. By the time she figures out where to send someone, thirty minutes have passed and the tech is still reading his phone on the customer's driveway.
+
+The parts-run spreadsheet replaces this with a pre-loaded supply-house contact sheet. For each of your trade's primary distributors, it tracks:
+
+Phone number and account number
+
+— no digging through a Rolodex while the customer watches
+
+Distance from the tech's current zone
+
+— not distance from the shop, because the shop is irrelevant when the tech is twenty-five miles away
+
+Typical stock for your most-ordered emergency parts
+
+— capacitors, contactors, blower motors, ignitors, gas valves, circuit boards, TXVs, reversing valves, limit switches
+
+Price range for common parts
+
+— so you know if Ferguson is quoting twenty percent above Johnstone before you send someone
+
+The inventory-check tab is a five-minute call workflow. The dispatcher or office manager calls the supply houses closest to the tech first, checks inventory, records price and ETA, and picks the best option. The next time that same part is needed, the spreadsheet already knows which supply house carries it — no calling around, no price comparison, no wasted thirty minutes.
+
+Five-minute inventory check process
+
+Identify the part:
+
+Tech texts part number and photo to dispatcher.
+
+Sort supply houses by distance from tech:
+
+Spreadsheet auto-ranks by miles-to-tech.
+
+Call the closest three:
+
+Ask: do you have this part? Price? How fast can someone pick it up if we send a person right now?
+
+Record in spreadsheet:
+
+Price, ETA, pickup location — this builds the permanent inventory map for next time.
+
+Hand off to pickup assignment:
+
+With inventory confirmed, move to the pickup-assignment matrix tab.
+
+Pickup-assignment matrix: who goes, based on actual availability
+
+Every shop defaults to one option: the stuck tech drives to get the part. This is almost always the most expensive option, because it kills a billable call slot and the tech's hourly rate is the highest in the shop. The pickup-assignment matrix ranks every available person by two numbers: dollar cost and minutes-to-tech. The lowest combination wins.
+
+Pickup option
+
+Cost per run
+
+Minutes to tech
+
+When to use
+
+Another tech between calls near the supply house
+
+Zero dollars marginal (already on the clock between calls)
+
+Fifteen to twenty-five
+
+First choice — always check the dispatch board
+
+Dedicated parts runner (shop apprentice or warehouse person)
+
+Twenty to thirty-five dollars (hourly wage for thirty to forty-five minutes)
+
+Twenty to thirty
+
+Best for shops that run enough parts to justify a runner
+
+Supply house paid delivery service
+
+Fifteen to fifty dollars depending on distance
+
+Thirty to sixty
+
+Best when nobody is free and the supply house offers it
+
+Office manager or admin staff
+
+Twenty-five to fifty dollars (hourly wage for forty-five to sixty minutes plus lost call-answering time)
+
+Twenty-five to forty
+
+Only when no tech is available and it will not drop incoming calls
+
+Stuck tech drives themselves
+
+Seventy-five to one hundred twenty-five dollars (hourly billable rate for the lost call plus fuel)
+
+Twenty-five to thirty
+
+Last resort — only when no other option exists
+
+The matrix works because it forces the dispatcher to check every option instead of defaulting to the worst one. In most shops, nobody even considers the second tech between calls because the dispatch board is a whiteboard and the dispatcher cannot see that Tech B finished early and is twelve minutes from the supply house. The spreadsheet's pickup-assignment tab connects to the day's dispatch board and shows who is actually free, right now, near the supply house.
+
+Schedule-impact calculator: which calls get bumped and by how much
+
+When the parts run adds forty-five to ninety minutes to the current job, the ripple effect hits every call scheduled after it. Without a calculator, the dispatcher guesses which calls to move and by how much — usually wrong, and usually too late to notify the customers. The schedule-impact tab maps the exact domino chain:
+
+Call A (current, stalled):
+
+Original end time 11:00 AM. New end time with parts run: 12:15 PM. Net delay: seventy-five minutes.
+
+Call B (11:30 AM slot):
+
+Cannot start until 12:45 PM after drive time. Original duration ninety minutes. New end time: 2:15 PM. Net delay: one hundred sixty-five minutes.
+
+Customer must be rescheduled entirely.
+
+Call C (2:00 PM slot):
+
+Can still start at 2:45 PM after drive time — only forty-five minutes late. Customer can be notified of a delay and kept on the schedule.
+
+Call D (4:00 PM slot):
+
+Unaffected. No notification needed.
+
+This takes the dispatcher roughly ninety seconds to fill in once the parts-run ETA is known. The output is a clear list: which customers need a "running late" call, which need a full reschedule, and which need no contact at all. Most shops skip this entirely — the dispatcher makes two calls (the two customers who call to complain), the other affected customers hear nothing, and the bad reviews roll in.
+
+Customer-notification scripts: what to say, in what order
+
+The parts-run spreadsheet includes four notification scripts, one for each severity level. The most important thing about these scripts is the order: when you have multiple affected customers, call them in priority order based on how badly they are affected, not in chronological order or the order their phone numbers appear in your system.
+
+Priority 1: Full reschedule (biggest impact)
+
+"Hi [Name], this is [Dispatcher] from [Company]. I need to let you know that our tech ran into an unexpected parts situation on the job before yours — the part we need is at the supply house and it is going to push things back further than we are comfortable making you wait. We want to reschedule you to [tomorrow morning at 8am or the earliest slot you have], and because of the inconvenience, we are waiving the service call fee on this appointment. Does tomorrow morning work?"
+
+Key elements: acknowledge the problem, own it without blaming the parts house, offer a specific new time — not "sometime tomorrow" — and give something concrete in return. The waived service call fee costs the shop roughly fifty to seventy-five dollars in margin. It is far cheaper than the one hundred fifty to three hundred fifty dollar cost of a bad review.
+
+Priority 2: Significant delay (same day, pushed back)
+
+"Hi [Name], quick update — [Tech Name] is running about forty-five minutes behind schedule because the job before yours needed an unexpected part from the supply house. Your new arrival window is [2:30 PM to 3:00 PM] instead of [1:30 PM]. Is that still okay? If not, I can get you in first thing tomorrow morning."
+
+Key elements: give the REASON (parts delay), the specific new time, and an OFF-RAMP option (tomorrow morning) so the customer feels in control. Most customers accept the delay when they are called before the original window closes.
+
+Priority 3: Minor delay (within the same window)
+
+"Hi [Name], just a heads up — [Tech Name] is running about fifteen to twenty minutes behind. He will be there closer to [2:15 PM] instead of [2:00 PM]. Just wanted to give you the courtesy update. See you soon!"
+
+Key elements: keep it light, specific, and frame it as a courtesy — not a crisis. Most customers appreciate the proactive communication even for minor delays.
+
+Priority 4: No impact (no call needed — but verify)
+
+If the schedule-impact calculator shows a call is unaffected, do not call the customer and introduce doubt where none existed. Mark it as "no notification" in the spreadsheet and move on. The worst outcome is calling a customer who was never going to be affected and making them nervous about your reliability.
+
+Parts-run cost tracker: what every run actually costs
+
+Most shops lump parts-run costs into general overhead and never see the per-incident number. When you do not track it, you do not fix it. The cost tracker tab logs every parts run with five line items:
+
+Part cost:
+
+The invoice price of the part from the supply house.
+
+Pickup labor cost:
+
+Minutes spent × hourly rate of whoever picked it up — tech, runner, or office staff.
+
+Lost billable time:
+
+The revenue from the call slot that the parts run ate. If Call B was a two hundred fifty dollar diagnostic that could not happen, that is two hundred fifty dollars in lost billable time.
+
+Reschedule cost:
+
+The squeezed-in-tomorrow penalty — the rescheduled job displaces another job or pushes a tech into overtime. Estimate at roughly half the original call value.
+
+Customer goodwill cost:
+
+Hard to quantify per incident, but the tracker assigns a flat one hundred fifty dollars per event where a customer was fully bumped and received poor communication — based on the estimated cost of the average three-star review (ten to fifteen lost leads at one hundred fifty dollars each).
+
+The monthly total from this tab is the number that gets the owner's attention. When a shop sees eight thousand four hundred dollars in parts-run waste over twelve months — all of it from rushing to supply houses for parts that could have been coordinated — the case for a permanent parts runner or a supply-house delivery account becomes a spreadsheet formula, not a gut feeling.
+
+The parts triad: prevent, plan, execute
+
+This spreadsheet handles the execution piece — the emergency parts run when the part is genuinely not on the truck and must be fetched mid-job. It is the third leg of a three-part parts management system that together eliminates the vast majority of mid-job parts chaos:
+
+Prevent:
+
+The free truck stock inventory tracker ensures every common part is on the truck before dispatch. It covers what SHOULD be on the truck — capacitors, contactors, common motors, standard fittings, and the top twenty parts per trade.
+
+Plan:
+
+The second-trip prevention system catches parts that cannot be carried in advance — oddball sizes, specialty components, one-off equipment — and builds a plan before the tech leaves the shop.
+
+Execute:
+
+This parts-run coordination spreadsheet handles what happens when prevention AND planning both fail — the one to three times per month when a tech genuinely needs a part that nobody could have predicted. It turns the panic into a process.
+
+Together, these three tools take a five-tech shop from roughly twelve emergency parts runs per year — costing between eight thousand four hundred and fifteen thousand three hundred dollars — to roughly three to four runs per year, each handled in under fifteen minutes of dispatch time. The annual savings: seven thousand to twelve thousand dollars.
+
+Frequently asked questions
+
+How much does a mid-job parts run actually cost a service business?
+
+One mid-job parts run costs roughly one hundred dollars in direct labor for the pickup, plus one hundred seventy-five to three hundred fifty dollars in lost billable time from the stalled call, fifty to seventy-five dollars in fuel and vehicle wear, and one hundred fifty to three hundred fifty dollars in rescheduled customer goodwill cost. Total: four hundred seventy-five to eight hundred seventy-five dollars per incident for a typical HVAC or plumbing shop. At two to three incidents per tech per month across five techs, that is eight thousand five hundred to fifteen thousand seven hundred fifty dollars per year. One severe incident — a twenty-five dollar blower motor that takes five hours to reach the tech — can cost over one thousand one hundred dollars by itself.
+
+What should a parts-run coordination spreadsheet include?
+
+A complete parts-run coordination spreadsheet needs five tabs: supply-house inventory check (who has the part, price, ETA, distance from tech), pickup-assignment matrix (nearest free person ranked by cost and minutes), schedule-impact calculator (which calls get bumped, by how much, notification priority), customer-notification scripts (what to say at each severity level), and the parts-run cost tracker (per-incident and monthly cost with trend analysis). Together these five tabs turn an emergency parts run from a ninety-minute panic into a fifteen-minute coordinated process.
+
+How do I check which supply house has the part without calling all of them?
+
+The most reliable method is to use each supply house's online inventory portal — most HVAC and plumbing distributors (Ferguson, Johnstone, RSD, Winsupply, Hajoca) have web-based stock check available to account holders. For shops without online access, the parts-run coordination spreadsheet includes a supply-house contact sheet: pre-loaded phone numbers, account numbers, and typical stock for common parts by trade. When a mid-job parts need arises, the dispatcher calls the supply houses closest to the tech first — not the ones closest to the shop — and checks inventory in under five minutes. The spreadsheet records which house had the part for next time.
+
+Who should pick up the part — the stuck tech, another tech, or the office?
+
+The pickup-assignment matrix answers this based on four factors: distance from supply house to tech, whether another tech is finishing a call near the supply house, whether the office manager or a dedicated runner is available, and what the supply house charges for delivery. The optimal order: another tech between calls near the supply house (zero marginal cost), a dedicated parts runner (hourly wage only), paid delivery service from the supply house (fifteen to fifty dollars), office staff only if they can be freed, and the stuck tech as a last resort. Each option is scored by dollar cost and minutes-to-tech.
+
+How do I tell a customer their appointment is getting pushed because of a parts run?
+
+Call them — do not text. Customers who receive a phone call are roughly four times less likely to leave a negative review than those who only receive a text. The parts-run spreadsheet includes four scripts for four situations: a full reschedule (waive the service call fee), a significant same-day delay (give the specific new window and an off-ramp option), a minor delay within the same window (keep it light — "courtesy update"), and no notification at all when the call is unaffected. Every script includes a specific new time — never "sometime tomorrow" — and offers something concrete for the biggest disruptions.
+
+How can I prevent parts runs from happening in the first place?
+
+Most emergency parts runs happen because a tech arrives without the right parts on the truck. The two companion tools address this directly: the free truck stock inventory tracker ensures every common part is on the truck before dispatch, and the second-trip prevention system catches the parts that genuinely cannot be carried in advance. Together, truck inventory plus second-trip prevention plus emergency parts-run coordination form a complete parts management system: prevent what you can, plan for what you cannot, and execute fast when the unplanned still happens.
+
+Stop losing one thousand dollars per parts run
+
+The free spreadsheet stops the bleeding today. But if your shop is losing over ten thousand dollars per year on parts-run chaos — or if the spreadsheet reveals a problem that is bigger than a free tool can solve — Jobs Done Labs builds custom automation that ties your supply-house inventory checks, dispatch board, and customer notification into one system that runs itself. No more calling five supply houses. No more guessing who picks up the part. No more customers finding out they were bumped when the tech never shows.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Your Tech Made a 40-Minute Parts Run for a $6 Fitting. Here Is the Free Truck Stock Tracker That Ends Mid-Job Supply-House Runs.
+
+Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here Is the $0 Fix
+
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
+
+How to Never Lose a Review When Your Tech Is Late
+
+
+URL: https://www.jobsdonelabs.ai/blog/parts-run-coordination-supply-house-pickup-spreadsheet-free/
+
+---
+
 # Collect Patient Balances Without Calling Everyone
 
 Healthcare & Medical Practices
@@ -26830,6 +27111,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+A $25 Blower Motor Just Cost You $1,100 — Free Parts-Run Coordination Spreadsheet
+
 You Paid a Tech to Sit in Traffic for an Appointment Nobody Kept. Here Is the Free No-Show Prevention System.
 
 Your Phone Rang at 2am and You Answered. Here Is the Free Emergency Call Triage System That Separates 'My AC is Making a Weird Noise' from 'My Basement is Flooding.'
@@ -27116,6 +27399,8 @@ Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
 Your Techs Made 15 Second Trips Last Month and It Cost You $1,500 — Here's the $0 Fix
 
 When to Roll a Truck at 3am: An After-Hours Emergency Triage System for HVAC, Plumbing, and Electrical Contractors
+
+A $25 Blower Motor Just Cost You $1,100 — Free Parts-Run Coordination Spreadsheet
 
 Your Field Crews Know Exactly How Much They Lost — 3 Weeks After the Job Closed
 
@@ -32873,6 +33158,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+A $25 Blower Motor Just Cost You $1,100 — Free Parts-Run Coordination Spreadsheet
 
 Your Tech Made a 40-Minute Parts Run for a $6 Fitting — The Free Truck Stock Tracker That Ends It
 
