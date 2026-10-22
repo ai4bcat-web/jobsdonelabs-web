@@ -1223,6 +1223,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Free MAP Violation Tracker — Stop Rogue Sellers Undercutting Your Brand
+
 Free Carrier Rate Comparison Spreadsheet — USPS, UPS, FedEx, DHL by Zone and Weight
 
 Your Products Look Profitable. Your Bank Disagrees. — Free SKU Profitability Calculator
@@ -16611,6 +16613,471 @@ URL: https://www.jobsdonelabs.ai/blog/manufacturing-wip-shop-floor-order-visibil
 
 ---
 
+# Free MAP Violation Tracker for Small Brands
+
+Retail & E-Commerce
+
+You Set Your MAP at Forty Nine Ninety Nine and DiscountKing99 Has Been Selling at Thirty Nine Ninety Nine for Three Weeks — You Have Emailed Them Four Times With No Response, Two of Your Wholesale Accounts Just Threatened to Drop Your Brand, and Your Entire Enforcement System Is a Folder Called 'MAP Violations' Full of Phone Screenshots. Here Is the Free MAP Monitoring Spreadsheet That Logs Every Violation by Seller, Calculates What Each One Is Costing You in Lost Buy Box Revenue, and Builds the Case File You Need for Amazon Brand Registry Enforcement.
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 22, 2026
+
+Key takeaways
+
+One rogue seller undercutting your MAP on Amazon can cost your brand eighty five thousand dollars a year in lost wholesale revenue — and right now your entire enforcement system is a folder of phone screenshots. This free spreadsheet gives you: a violation log that captures every rogue seller by marketplace and SKU, a repeat-offender dashboard that identifies who is costing you the most, a Buy Box revenue impact calculator, an enforcement action tracker with Amazon Brand Registry case file export, and an unauthorized seller list. No monthly subscription — set it up in under two hours.
+
+The eighty five thousand dollar wholesale account you lost to unenforced MAP
+
+Here is how it happens. You set MAP at forty nine dollars and ninety nine cents for your flagship product. A rogue seller — we will call them DiscountKing99 — lists it at thirty nine dollars and ninety nine cents and wins the Buy Box. Your authorized sellers see their sales evaporate. Two wholesale accounts call you in the same week: "Why should we carry your line when Amazon is undercutting us by ten dollars?" One of them drops your brand entirely. That account was worth eighty five thousand dollars a year.
+
+And you never even knew it was happening until the phone rang.
+
+This is not a hypothetical. Small and mid-sized brands lose tens of thousands of dollars every year to unenforced MAP — and the SaaS tools that monitor MAP violations cost five hundred to one thousand dollars per month. That is six thousand to twelve thousand dollars a year just to track rogue sellers. For a brand doing seven hundred fifty thousand dollars in annual revenue, that is nearly two percent of top-line revenue going to a monitoring tool.
+
+You do not need a SaaS dashboard. You need a system that:
+
+Logs every MAP violation by seller, marketplace, SKU, and date
+
+Identifies repeat offenders so you know who to prioritize
+
+Calculates the revenue impact of each violation on your Buy Box
+
+Tracks enforcement actions — emails sent, Brand Registry cases filed, outcomes
+
+Builds a case file you can export and submit to Amazon in minutes
+
+The spreadsheet below does all of this — and it is free.
+
+Who this is for
+
+Brand owners selling on Amazon, Shopify, Walmart, eBay, or Google Shopping who have a MAP policy but no systematic way to track violations. If you are currently using a Gmail folder labeled "MAP Violations" full of phone screenshots with prices circled in red, this is built for you.
+
+Section 1: MAP product registry — know what you are protecting
+
+Before you can track violations, you need a single source of truth for what MAP actually is on every product. The first tab of the spreadsheet is your product registry.
+
+What goes in the product registry:
+
+SKU
+
+— your internal product identifier
+
+Product name
+
+— the consumer-facing name
+
+ASIN / UPC / EAN
+
+— marketplace identifiers (one column per marketplace)
+
+MAP price
+
+— the minimum advertised price you set
+
+Wholesale cost
+
+— what authorized retailers pay you
+
+MSRP
+
+— suggested retail (for reference only — MAP is what you enforce)
+
+MAP policy date
+
+— when you last updated the policy for this SKU
+
+Penalty policy
+
+— first offense (warning letter), second offense (suspension), third offense (termination)
+
+This tab is your brand protection command center. Every violation you log will reference a SKU from this registry. When an authorized retailer says "I did not know the MAP changed," you point to this sheet.
+
+Section 2: Violation log — capture every rogue seller
+
+This is the heart of the system. Every time you spot a seller advertising below your MAP, you log it here. Over time, this log becomes your evidence file.
+
+What the violation log captures:
+
+Date detected
+
+— when you first saw the violation
+
+Seller name
+
+— the storefront name (e.g., DiscountKing99)
+
+Marketplace
+
+— Amazon, Walmart, eBay, Google Shopping, or other
+
+Listing URL
+
+— direct link to the violating listing
+
+SKU affected
+
+— reference to your product registry
+
+Advertised price
+
+— the price they are showing
+
+Dollars below MAP
+
+— calculated automatically (MAP minus advertised price)
+
+Percentage below MAP
+
+— how far under they are (e.g., 20 percent below)
+
+Holding Buy Box?
+
+— yes or no (check manually when you log)
+
+Screenshot link
+
+— a link to the screenshot you saved (Google Drive, Dropbox, or local file path)
+
+Status
+
+— open, enforcement sent, resolved, or escalated
+
+Pro tip: Screenshot everything
+
+Amazon Brand Registry and most marketplace enforcement teams require a screenshot or a link to the live listing as evidence. Before you send a single enforcement email, take a full-page screenshot showing the seller name, the advertised price, and the listing URL. Save it in a dated folder. Link it in the violation log. This one habit is the difference between a case that gets resolved in 48 hours and one that gets dismissed for "insufficient evidence."
+
+Section 3: Repeat-offender dashboard — who is costing you the most?
+
+Most rogue sellers are not one-time offenders. They test your enforcement response and, if you do nothing, they keep going. The repeat-offender dashboard aggregates your violation log and shows you exactly who to prioritize.
+
+The dashboard auto-calculates for each seller:
+
+Number of violations
+
+— total violations logged
+
+Worst violation
+
+— the deepest price cut (e.g., 12 dollars below MAP)
+
+Last violation date
+
+— are they still active?
+
+Estimated revenue impact
+
+— sum of lost Buy Box revenue across all violations (calculated from Section 4)
+
+Enforcement status
+
+— have you sent a warning? Filed a case? What was the outcome?
+
+Priority score
+
+— auto-ranked by total revenue impact (highest at the top)
+
+Sort by priority score every Monday morning. The seller at the top is costing your brand the most money. Start there.
+
+Section 4: Revenue-impact calculator — what each violation is actually costing you
+
+This is the number that motivates action. Most brand owners underestimate how much a MAP violation costs because they think only about the lost sale on the violating listing. The real cost is much larger.
+
+The revenue-impact calculator uses three inputs:
+
+Daily sales at MAP price
+
+— how many units per day this SKU sells through authorized channels
+
+Buy Box loss percentage
+
+— what share of Buy Box ownership you lose when a rogue seller undercuts (typically 40 to 60 percent)
+
+Days at violation price
+
+— how long the violation has been active
+
+Formula:
+
+Daily Sales × Buy Box Loss Percentage × Days at Violation Price × MAP Price = Estimated Lost Revenue
+
+Worked example:
+
+Your flagship SKU sells 5 units per day at forty nine dollars and ninety nine cents MAP. A rogue seller holds the Buy Box at thirty nine dollars and ninety nine cents for fourteen days. You lose 50 percent of Buy Box ownership.
+
+5 units × 50 percent loss × 14 days × forty nine dollars and ninety nine cents = approximately one thousand seven hundred fifty dollars in lost revenue from a single violation.
+
+Add the wholesale account risk — the customer who calls and says "I am dropping your line" — and the real cost of unenforced MAP becomes existential.
+
+The hidden cost: Brand erosion
+
+When customers see your product selling for ten dollars below MAP on Amazon, they begin to question whether your product is actually worth the MAP price. This brand erosion is hard to quantify but shows up over time in lower conversion rates, more discounting demands from retailers, and reduced wholesale orders. Every day a MAP violation goes unaddressed, your brand loses a little more pricing power.
+
+Section 5: Enforcement action tracker — from warning letter to Brand Registry case
+
+The fourth tab is your enforcement command center. Logging violations is step one. Acting on them — and tracking what happens — is what actually protects your brand.
+
+What the enforcement tracker captures:
+
+Violation ID
+
+— reference to the violation log entry
+
+Seller contacted
+
+— the rogue seller's storefront name
+
+Action taken
+
+— warning email sent, policy reminder, cease-and-desist, marketplace complaint filed
+
+Date of action
+
+— when you sent it
+
+Method
+
+— email, Amazon Brand Registry complaint, marketplace seller support ticket, legal letter
+
+Response received?
+
+— yes, no, or partial (did the seller respond?)
+
+Seller response
+
+— what they said (e.g., "price was a mistake — corrected")
+
+Price corrected?
+
+— did the advertised price return to MAP or above?
+
+Date resolved
+
+— when the violation was fully resolved
+
+Amazon Brand Registry case number
+
+— if a formal complaint was filed
+
+Outcome
+
+— resolved, escalated to legal, seller banned, or unresolved
+
+Enforcement escalation ladder
+
+Follow this sequence for every violation. Do not skip steps — marketplace enforcement teams expect documentation of good-faith attempts to resolve directly before they will intervene.
+
+First offense:
+
+Send a polite but firm email referencing your MAP policy and the specific violation. Include a screenshot of the listing. Ask them to adjust the price within 48 hours.
+
+Second offense (same seller):
+
+Send a formal cease-and-desist email. Reference the first violation and warn that continued non-compliance will result in suspension of their authorized reseller status and a complaint to the marketplace.
+
+Third offense (same seller):
+
+File an Amazon Brand Registry complaint citing trademark or copyright infringement where applicable. Attach the violation log showing the pattern of repeated violations. Simultaneously send the seller a termination-of-reseller-status letter.
+
+Ongoing (any seller):
+
+If a seller is not an authorized reseller and refuses to comply, escalate directly to the marketplace's intellectual property or brand protection team with your full case file.
+
+Section 6: Unauthorized seller list — know who should not be selling your product
+
+The final tab is a running list of every unauthorized seller you have encountered. This list serves two purposes: it prevents you from accidentally onboarding a known rogue seller as an authorized account, and it gives your sales team a blocklist for wholesale applications.
+
+Each unauthorized seller entry includes:
+
+Seller name
+
+— storefront or business name
+
+Marketplace(s)
+
+— where they are active
+
+First detected
+
+— when you first noticed them selling your product
+
+Products affected
+
+— which of your SKUs they are listing
+
+Contact attempted?
+
+— have you tried to reach them?
+
+Status
+
+— active (still selling), blocked (marketplace removed them), converted (became authorized), or unknown
+
+Notes
+
+— any relevant history or patterns
+
+How the six tabs work together
+
+Here is the Monday morning workflow — twenty minutes, once per week, and your MAP enforcement is no longer a Gmail folder:
+
+Product registry (Tab 1):
+
+Verify MAP prices are current. Update any policy changes.
+
+Violation log (Tab 2):
+
+Check your marketplaces for new violations. Log any you find — including screenshots.
+
+Repeat-offender dashboard (Tab 3):
+
+Sort by priority score. Who is costing you the most? That seller is your number one enforcement target this week.
+
+Revenue-impact calculator (Tab 4):
+
+For the top three offenders, run the numbers. Quantify what each is costing you. This is the data you take to your wholesale accounts when they ask why MAP is not being enforced.
+
+Enforcement action tracker (Tab 5):
+
+Send follow-ups on any open enforcement actions. Escalate to Brand Registry for any seller on their third violation. Log outcomes.
+
+Unauthorized seller list (Tab 6):
+
+Review for any new unauthorized sellers your team has spotted. Cross-check against new wholesale account applications.
+
+MAP monitoring: Free spreadsheet vs SaaS tools
+
+The SaaS MAP monitoring market is crowded with tools charging five hundred to one thousand dollars per month. Here is how the free spreadsheet compares — and when you might eventually upgrade.
+
+Feature
+
+This free spreadsheet
+
+MAP monitoring SaaS (500 to 1,000 dollars per month)
+
+Violation logging
+
+Manual entry — log as you spot violations
+
+Automated scraping every 24 hours
+
+Cost
+
+Zero dollars
+
+Six thousand to twelve thousand dollars per year
+
+Setup time
+
+Under two hours
+
+Two to four weeks including onboarding
+
+Revenue impact calculation
+
+Built-in calculator — enter your numbers
+
+Automated if sales data is integrated
+
+Repeat-offender detection
+
+Dashboard auto-sorts by total violations and revenue impact
+
+Automated with alerting
+
+Brand Registry case file
+
+Export violation log and enforcement tracker as PDF
+
+Built-in export and report generation
+
+Multi-marketplace monitoring
+
+Manual across Amazon, Walmart, eBay, Google Shopping
+
+Automated scraping across all major marketplaces
+
+Best for
+
+Brands with 1 to 30 SKUs, under two million dollars in annual revenue, who can check listings weekly
+
+Brands with 30 plus SKUs, distributed through dozens of sellers, who need automated monitoring
+
+The free spreadsheet handles everything a small or mid-sized brand needs. If you grow past 30 SKUs with hundreds of sellers across 5 plus marketplaces, the manual logging will become a bottleneck — that is the point where a SaaS MAP monitor pays for itself. Until then, keep the six thousand dollars a year.
+
+How to set this up in under two hours
+
+Setup checklist
+
+First 30 minutes:
+
+Open a new Google Sheet. Create six tabs: Product Registry, Violation Log, Repeat Offender Dashboard, Revenue Impact, Enforcement Tracker, and Unauthorized Sellers. Build the columns from the field lists above.
+
+Next 30 minutes:
+
+Populate the Product Registry tab with every SKU you sell, the correct MAP, the ASIN/UPC for each marketplace, and your penalty policy tiers. This is a one-time investment. Update it whenever you launch a new product or change MAP.
+
+Next 20 minutes:
+
+Go to Amazon (and your other marketplaces). Search for your top 5 SKUs. Look at the "Other Sellers on Amazon" box. For every seller advertising below your MAP, log the violation in the Violation Log tab. Take screenshots.
+
+Next 20 minutes:
+
+Check the Repeat Offender Dashboard. Who is showing up most? Those are your priority enforcement targets. Draft and send warning emails using the enforcement escalation ladder.
+
+Final 20 minutes:
+
+Set up a recurring Monday morning calendar appointment: "MAP enforcement review — 20 minutes." This is the habit that makes the system work. The spreadsheet is a tool. The weekly review is the process.
+
+Frequently asked questions
+
+What is MAP and how is it different from MSRP?
+
+MAP (Minimum Advertised Price) is the lowest price a retailer is allowed to advertise your product — it applies to the displayed price on websites, marketplaces, and advertisements. MSRP (Manufacturer's Suggested Retail Price) is exactly what it sounds like — a suggestion with no enforcement mechanism. MAP is what you enforce through a unilateral pricing policy and marketplace complaints. This spreadsheet tracks MAP violations, not MSRP deviations.
+
+Do I need to be in Amazon Brand Registry to enforce MAP?
+
+You do not need Brand Registry to send warning emails to rogue sellers or to track violations. But Brand Registry gives you access to Amazon's formal complaint process for intellectual property and listing violations, which carries more weight than a seller-to-seller message. If you own a registered trademark, enroll in Brand Registry — it is free and significantly strengthens your enforcement position.
+
+How often should I check for MAP violations?
+
+For a brand with 1 to 15 SKUs: check weekly. For 15 to 30 SKUs: check twice per week, or spot-check your top 10 SKUs daily. The damage from a MAP violation compounds over time — a violation caught in 3 days costs far less than one caught in 3 weeks. The twenty-minute Monday morning review described above is the minimum sustainable cadence.
+
+What if the rogue seller is not an authorized reseller?
+
+This is very common — unauthorized sellers obtain your product through distribution leaks, retail arbitrage, or liquidation channels. You still log them in the violation log and the unauthorized seller list. Send them a polite message asking them to stop selling your product or comply with MAP. If they refuse, escalate to the marketplace. Amazon Brand Registry complaints against unauthorized sellers for trademark infringement are often effective if the seller is using your brand name in the listing without permission.
+
+Can I use this spreadsheet for multiple marketplaces?
+
+Yes. The violation log has a Marketplace column (Amazon, Walmart, eBay, Google Shopping, or custom). The product registry has separate columns for marketplace-specific identifiers (ASIN for Amazon, UPC for Walmart, etc.). The dashboard and revenue calculator are marketplace-agnostic — they work across all channels. One spreadsheet covers your entire brand.
+
+When should I upgrade from this free spreadsheet to a paid MAP monitoring tool?
+
+Upgrade when: (a) you exceed 30 SKUs and manual weekly checks become unsustainable, (b) you are losing more than three thousand dollars per month to MAP violations and the SaaS fee is less than the loss, or (c) you sell across more than 5 marketplaces and cannot manually check them all. Until any of those thresholds are met, the spreadsheet is more than sufficient — and it keeps six thousand to twelve thousand dollars per year in your pocket.
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You Sell on Shopify, Amazon, and Walmart — and Product Info Is Different on Every Channel
+
+Your Products Look Profitable. Your Bank Disagrees. Here Is the Free SKU Profitability Calculator.
+
+Amazon Took 15,000 Dollars in Fees Last Quarter and You Cannot Explain Where It Went
+
+You Are Tracking 40 Wholesale Customers on Net-30 Terms With a Spreadsheet That Breaks Every Month
+
+MAP enforcement is step one. Automating your entire brand protection workflow is step two.
+
+If you are spending more than 2 hours a week monitoring MAP violations, chasing unauthorized sellers, and filing marketplace complaints — or if you want those processes to run while you sleep — we build custom brand protection automation for small and mid-sized consumer brands. Starting at zero dollars for the audit.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/map-price-monitoring-enforcement-spreadsheet-free/
+
+---
+
 # Your Agency Spends 40+ Hours a Month Hand-Building
 
 Your Agency Spends 40+ Hours a Month Hand-Building Client Reports — Here's the Fix
@@ -20755,6 +21222,8 @@ Book a free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free MAP Violation Tracker — Stop Rogue Sellers Undercutting Your Brand
 
 Free Carrier Rate Comparison Spreadsheet — USPS, UPS, FedEx, DHL by Zone and Weight
 
@@ -28523,6 +28992,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+Free MAP Violation Tracker — Stop Rogue Sellers Undercutting Your Brand
 
 Amazon Took Fifteen Thousand Dollars in Fees — Where Did It Go? Free Reconcilation Spreadsheet
 
@@ -40624,6 +41095,8 @@ You can build the core AR aging spreadsheet in about 2 hours — creating the ta
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free MAP Violation Tracker — Stop Rogue Sellers Undercutting Your Brand
 
 Failed Subscription Payments Bleed $300+/Month — Free Dunning Templates + Tracking Spreadsheet
 
