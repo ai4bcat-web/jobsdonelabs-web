@@ -34285,6 +34285,147 @@ URL: https://www.jobsdonelabs.ai/blog/trucking-broker-ar-tracking-spreadsheet-fr
 
 ---
 
+# CSA Scores at Intervention? Free Tracking System
+
+Logistics & Trucking
+
+CSA Score Intervention Threshold? Free Tracking System
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 25, 2026
+
+Key takeaways
+
+Two BASICs at the intervention threshold can add thirty-six thousand to sixty thousand dollars to your annual insurance premium — and most small carriers do not know their scores are trending wrong until the renewal bill arrives. This free seven-tab CSA score tracking spreadsheet monitors every BASIC percentile month-over-month, calculates the insurance impact of each deteriorating score, identifies which three violation types account for eighty percent of your point total, and gives you a top-three-fixes action plan you can start this week — zero dollars, under thirty minutes to set up.
+
+The Insurance Renewal That Opened Your Eyes — Six Months Too Late
+
+A twelve-truck regional carrier opened their insurance renewal letter last month. The premium jumped from one hundred twenty thousand dollars to one hundred sixty-eight thousand dollars — a forty percent increase. The agent's explanation: "Your CSA scores are elevated in Unsafe Driving and HOS Compliance."
+
+The owner pulled up the FMCSA Safety Measurement System portal for the first time in eight months. Unsafe Driving was at sixty-eight percent. HOS Compliance was at seventy-two percent. Both were above the intervention threshold — and had been climbing for six months while nobody was watching.
+
+Three shippers had already pulled loads that quarter because the shipper's system auto-flagged the carrier's DOT number. The owner just had not connected the dots. Every lost load, every premium dollar — all traceable back to two numbers on a government website that nobody checked.
+
+This carrier is not unusual. Most small fleets check their CSA scores only when something bad happens: an insurance renewal shock, a lost contract, or — worst case — a compliance review letter from the FMCSA. By then, the damage is done and the fix takes twelve to eighteen months of clean inspections to roll off the bad data.
+
+The free spreadsheet system below changes that. It takes twenty minutes a month to enter your seven BASIC percentiles from the SMS portal. In return, you get a six-month trend dashboard, an insurance impact calculator, a violation Pareto chart, and a prioritized action plan — all before the renewal letter hits your desk.
+
+The True Cost of Bad CSA Scores — Beyond the Insurance Premium
+
+Everyone talks about the insurance impact. It is real and it hurts — a thirty to fifty percent premium increase on a one hundred twenty thousand dollar annual policy means thirty-six thousand to sixty thousand dollars in new costs every year. But insurance is only the most visible cost. The hidden costs are often larger:
+
+Load rejection from shipper safety checks.
+
+Large shippers and freight brokers run automated carrier safety checks before tendering loads. When your BASIC scores cross the intervention threshold, their system auto-flags your DOT number. You do not get a rejection notice — the load simply goes to another carrier. Three to five loads per quarter is typical for a twelve-truck fleet in intervention territory. At an average of two thousand dollars per load, that is twenty-four thousand to forty thousand dollars per year in lost revenue you cannot see because you never knew the load was available.
+
+Driver recruiting gets harder.
+
+Experienced drivers check carrier safety records before signing on. A carrier with elevated CSA scores struggles to attract quality drivers, which increases recruiting costs and leads to hiring less-experienced drivers — who then generate more violations, creating a downward spiral. One fleet owner described it as "the safety score death loop" — bad scores attract bad drivers who generate worse scores.
+
+FMCSA interventions escalate.
+
+Ignoring deteriorating scores does not make them go away. The progression is: warning letter → targeted roadside inspections → compliance review → notice of claim → fines and potential out-of-service order. Each step costs real money in legal fees, driver downtime, and compliance consulting — easily ten thousand to fifty thousand dollars before you reach the final stage.
+
+How the CSA Score Tracking Spreadsheet Works — Seven Tabs, Twenty Minutes a Month
+
+Log into the FMCSA SMS portal once a month. Pull your seven BASIC percentiles. Enter them into the spreadsheet. The tabs do the rest.
+
+Tab 1: BASIC Score Tracker
+
+Your master record. Each row is one month. Columns: month and year, then Unsafe Driving percentile, HOS Compliance percentile, Driver Fitness percentile, Controlled Substances percentile, Vehicle Maintenance percentile, HM Compliance percentile, Crash Indicator percentile. The spreadsheet auto-calculates month-over-month change for each BASIC and color-codes the result: green for improving (down two or more points), yellow for flat (within two points), red for worsening (up two or more points). One glance tells you which BASICs need attention.
+
+Tab 2: Inspection and Violation Log
+
+Every roadside inspection, every violation. Fields: date, driver, location, inspection type (Level I, II, III), violation code, violation description, severity weight, points added, BASIC affected. The spreadsheet auto-sums points by BASIC and by driver, producing a Pareto chart that answers the most important question: which three violation types account for eighty percent of your point total?
+
+Tab 3: Score Trend Dashboard
+
+A six-month rolling chart per BASIC. Visual, not numerical — you see the line going up or down before you read the number. Color-coded against intervention thresholds: green (well below threshold), yellow (approaching — within ten points), red (at or above threshold). The dashboard makes it impossible to miss a deteriorating trend.
+
+Tab 4: Insurance Impact Calculator
+
+Enter your current annual premium and the BASIC risk multiplier (a lookup table based on how many BASICs are in intervention territory). The calculator outputs an estimated renewal premium, the dollar increase, and — critically — a "what if" model: what happens to your premium if you improve Unsafe Driving by ten percentile points? Fifteen? This turns an abstract safety goal into a concrete dollar figure that the owner and the safety manager can both understand.
+
+Tab 5: Top-Three-Fixes Action Planner
+
+This is where the spreadsheet earns its keep. The violation log feeds a Pareto analysis: rank all violation types by total points contributed, highlight the top three, and generate an action plan for each. Example: if speeding (392.2S) is your number one contributor at forty-two points, the action plan is "Set speed governors at sixty-five miles per hour, verify at next PM, re-check violation rate in sixty days." Each action plan has a target completion date and a "before and after" score projection.
+
+Tab 6: Driver CSA Scorecard
+
+Per-driver breakdown: total inspections, total violations, points contributed, BASICs affected, month-over-month trend. This is not about punishing drivers — it is about visibility. Most drivers have no idea how their individual record affects the fleet score. A one-page scorecard shown monthly creates accountability without a single disciplinary meeting. Drivers who see their own data typically fix the problem before you have to ask.
+
+Tab 7: Monthly Check-In Checklist
+
+A simple recurring workflow so this does not become another system you use for two months and abandon. Checklist items: log into SMS portal, pull seven BASIC percentiles, enter into Tab 1, review Tab 3 dashboard for any yellow or red BASICs, update Tab 2 with new inspections and violations, review Tab 5 action plan progress, print Tab 6 driver scorecards, send to dispatch. Estimated time: twenty minutes. Day of month: pick one — the fifteenth, so it is after the monthly SMS update but before month-end reporting.
+
+What the Free Spreadsheet Does Not Do — And When You Need More
+
+This spreadsheet is a tracking and decision-support system. It does not pull data automatically from the FMCSA portal (the SMS does not offer a public API for carriers), it does not integrate with your ELD for real-time violation tracking, and it does not file corrective action plans with the FMCSA. For fleets under twenty trucks, a manual monthly check-in plus this spreadsheet is usually sufficient. For fleets above twenty trucks or carriers with active compliance reviews, a safety management platform (JJ Keller, Fleetworthy, or the safety modules built into Samsara and Motive) becomes cost-justified.
+
+The spreadsheet bridges the gap — it gives you the same visibility the expensive platforms provide, just with manual data entry. For a twelve-truck fleet spending one hundred twenty thousand dollars on insurance, twenty minutes a month to potentially save thirty-six thousand dollars is a return even the most skeptical owner can calculate.
+
+Frequently asked questions
+
+What are CSA scores and why do they matter for my insurance?
+
+CSA stands for Compliance, Safety, Accountability — the FMCSA safety measurement system that scores every motor carrier across seven BASIC categories. Each BASIC gets a percentile score from 0 to 100, and when any BASIC crosses the intervention threshold (typically sixty-five percent for most categories), insurance companies see an elevated-risk carrier. That triggers premium increases of thirty to fifty percent, even if you have never had an accident. Your CSA scores directly determine what you pay for insurance every year.
+
+How do I know if my CSA scores are approaching the intervention threshold?
+
+Log into the FMCSA Safety Measurement System portal at ai.fmcsa.dot.gov/sms using your DOT number. Look at each of the seven BASICs. Any score above fifty percent needs attention. Scores above sixty-five percent in Unsafe Driving, HOS Compliance, or Vehicle Maintenance are at the intervention threshold. The SMS updates monthly — most small carriers only check it when something bad happens. A proactive tracking system that records your BASIC percentiles every month catches deteriorating scores three to six months before they trigger an intervention letter or insurance surcharge.
+
+What violations drag down CSA scores the most?
+
+Speeding (violation code 392.2S) is the single most common contributor to Unsafe Driving scores because it carries a severity weight of five to ten points depending on how far over the limit. For HOS Compliance, form-and-manner errors (395.8E) accumulate quickly even though they carry lower severity — a driver with ten form errors over two years hurts your score more than one driver with a single major violation. Vehicle Maintenance scores are dominated by lighting violations (393.9) — the most common roadside inspection finding — which carry a severity weight of six. The key insight: you do not fix your CSA scores by fixing one big thing. You fix them by identifying which three violation types account for eighty percent of your point total and eliminating those.
+
+How often should I check my CSA scores?
+
+Monthly. The FMCSA SMS portal updates scores on a rolling basis as new inspection and crash data arrives. Checking monthly lets you spot a deteriorating trend when it is a five-percent drift rather than a twenty-percent cliff. The free tracking spreadsheet in this post automates the monthly check: enter your seven BASIC percentiles once a month, and the dashboard shows you the six-month trend with color-coded alerts when any BASIC approaches the intervention threshold. Twenty minutes a month saves you from a surprise thirty-thousand-dollar insurance renewal.
+
+Can I improve my CSA scores without hiring a safety consultant?
+
+Yes. Most small carriers can improve their CSA scores by two to five percentile points per month using three free actions: pre-trip inspection discipline (the number one predictor of fewer roadside violations), speed-governor enforcement at sixty-five miles per hour (which eliminates speed-related violations entirely), and monthly driver CSA report cards (showing each driver their individual contribution to the fleet score creates accountability without a single dollar spent on consulting). The free spreadsheet in this post includes a driver scorecard tab that makes the third action take under ten minutes per driver per month.
+
+What happens if I ignore deteriorating CSA scores?
+
+Three things happen in sequence: your insurance premium increases thirty to fifty percent at the next renewal (on a one hundred twenty thousand dollar annual premium, that is thirty-six thousand to sixty thousand dollars in new costs), shippers and freight brokers who run carrier safety checks auto-flag your DOT number and stop offering you loads (three pulled loads per quarter is common), and the FMCSA sends a warning letter followed by a compliance review that can result in an unsatisfactory rating and eventual out-of-service order. The first two happen quietly — you find out when the bill arrives or the loads stop coming. The spreadsheet system in this post is designed to catch the trend in months two and three, not month twelve.
+
+Related posts
+
+Logistics & Trucking
+
+How to Automate Dispatch and Paperwork for a Trucking Company
+
+Logistics & Trucking
+
+Carriers Overcharged Your 12-Truck Fleet — The 5-Minute Audit
+
+Logistics & Trucking
+
+The FMCSA Compliance System That Keeps You Out of a $10,000 Hole
+
+Your CSA scores are telling a story. Are you reading it?
+
+Most twelve-truck fleets do not know their BASIC percentiles are at the intervention threshold until the insurance renewal arrives. The free spreadsheet in this post gives you the same trend visibility the hundred-dollar-per-month platforms provide — for zero dollars and twenty minutes a month. But if you want to go further than tracking and build a system that catches violations before they hit the inspection report — automated pre-trip checklists, driver scorecard notifications, real-time violation alerts — that is what we do at Jobs Done Labs. Book a free thirty-minute audit and we will show you what automation looks like for your fleet, from zero dollars to full integration.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You are Losing Two Hundred Thousand Dollars a Year in Unpaid Detention and You Do Not Even Know It
+
+Your Driver Just Totaled a Guardrail at 2 AM — The FMCSA Compliance System That Keeps You Out of a Ten Thousand Dollar Hole
+
+Carriers Overcharged Your Twelve-Truck Fleet Twelve Thousand Dollars Last Year and You Paid Every Dime — The Five-Minute Audit
+
+
+URL: https://www.jobsdonelabs.ai/blog/trucking-csa-safety-score-tracking-spreadsheet-free/
+
+---
+
 # Cut Empty Miles: Free Deadhead Tracker for Fleets
 
 Logistics & Trucking
@@ -34793,6 +34934,8 @@ Freight Bill Audit: Catch $12K in Carrier Overcharges — The 5-Minute System
 Dispatcher Overwhelmed? How Small Fleets Handle 50+ Loads Without Hiring
 
 Losing Lumper Fee Receipts? The $0 Tracking System for Small Fleets
+
+CSA Scores at Intervention? Free Tracking System — BASIC Percentile Monitor and Insurance Impact Calculator
 
 
 URL: https://www.jobsdonelabs.ai/blog/trucking-detention-pay-tracking-system/
@@ -38191,6 +38334,8 @@ How to Organize Load Confirmations Without a TMS: The $0 Filing System for Small
 
 You Just Ate $11,000 in Cargo Damage Because Nobody Took a Photo at Delivery — The Freight Claim System That Gets Small Carriers Paid
 
+CSA Scores at Intervention? Free Tracking System — BASIC Percentile Monitor and Insurance Impact Calculator
+
 Stop paying overcharges you don't owe
 
 Book a free 30-minute freight audit consultation. We'll pull 30 days of your paid carrier invoices, run the 5-step checklist on a sample, and show you exactly how much you've been overpaying — carrier by carrier, line item by line item. You keep the audit results whether you work with us or not.
@@ -40590,6 +40735,8 @@ You Give Every Driver a Fuel Card and Just Trust They're Not Filling Up Their Pe
 You Haul 3 Hazmat Loads A Year And Think You Don't Need A Compliance Program — Here's What A DOT Inspector Will Ask For
 
 You Just Ate $11,000 in Cargo Damage Because Nobody Took a Photo at Delivery — The Freight Claim System That Gets Small Carriers Paid
+
+CSA Scores at Intervention? Free Tracking System — BASIC Percentile Monitor and Insurance Impact Calculator
 
 Related reading
 
