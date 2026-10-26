@@ -134,6 +134,7 @@
 - [Track Subcontractor Insurance Without Software](https://www.jobsdonelabs.ai/blog/subcontractor-coi-insurance-compliance-tracking-system/): Missed COI expiration cost a GC $140K. Free 4-tab spreadsheet to track sub insurance, auto-calc reminders, and stop coverage gaps — no SaaS needed.
 - [You're a GC, Not a Filing Clerk — How to Tame](https://www.jobsdonelabs.ai/blog/subcontractor-paperwork-management-system-gc/): 'We're meant to be building things, but I feel like a bloody filing clerk.' If you're a small GC buried in COIs, W-9s, lien waivers, and contracts across...
 - [Free Subcontractor Performance Scorecard for GCs](https://www.jobsdonelabs.ai/blog/subcontractor-performance-scorecard-tracking-spreadsheet-free/): A GC with zero subcontractor performance tracking is operating blind. Free scorecard spreadsheet to rank every sub by budget variance, schedule, and quality.
+- [Stop Reconstructing Your Timesheet From Memory](https://www.jobsdonelabs.ai/blog/time-entry-compliance-billable-hours-recovery-professional-services/): Losing six plus billable hours to Friday timesheet reconstruction? Free compliance system captures every hour daily — five minutes, no software, free.
 
 ## Construction
 - [Crew Done Early? Route the Next Job in 60 Seconds](https://www.jobsdonelabs.ai/blog/construction-crew-coordination-task-handoff-spreadsheet-free/): When crews finish early and nobody routes them to the next job, they go home. Free crew coordination spreadsheet: status dashboard, nearest-job router.
