@@ -15092,6 +15092,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+Free Manufacturing Job Costing: Estimated vs Actual — Catch Losing Jobs Before They Ship
+
 You are Losing Eighty Thousand Dollars a Year Quoting Jobs by Feel — The Free Spreadsheet System
 
 You are Throwing Away Twenty-One Thousand Dollars a Year in Aluminum Drops — Here Is the Free Manufacturing Scrap Tracker
@@ -15100,6 +15102,149 @@ You Paid Twenty-One Thousand Eight Hundred Forty Dollars in Overtime Premium Las
 
 
 URL: https://www.jobsdonelabs.ai/blog/manufacturing-job-cost-variance-tracker-free/
+
+---
+
+# Free Manufacturing Job Costing: Estimated vs Actual
+
+Manufacturing
+
+You Shipped 500 Brackets at Twenty-Two Ten Per Unit — the Quote Was Eighteen Fifty. You Lost One Thousand Eight Hundred Dollars on One Job and Nobody Knows Until the Month-End P-and-L, Three Weeks Too Late. Here Is the Free Manufacturing Job Costing Spreadsheet That Compares Every Job's Actual Costs Against the Estimate — While the Job Is Still on the Floor.
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 27, 2026
+
+Key takeaways
+
+Most small job shops discover they lost money on a job three to six weeks after it ships — when the monthly profit-and-loss statement arrives. By then, the same mistakes have repeated on the next four jobs. This free estimated-vs-actual job costing spreadsheet catches negative-margin work while it is still on the floor: enter your estimate before the job starts, log actual costs daily, and the dashboard flags any job running over ten percent above quote. No ERP required — two hours to set up in Google Sheets or Excel.
+
+The Invisible-Loss Tax: What It Costs to Not Know
+
+A twelve-person CNC machine shop runs fifteen to twenty jobs per month. The owner quotes each job from a spreadsheet built in 2019. Material prices have moved fourteen percent since then. A new operator takes 1.8 times the standard time on the second operation. The rush-order surcharge was never added because "the customer is a friend of the owner."
+
+Two jobs per month ship at negative margin — an average loss of one thousand eight hundred dollars each. That is forty-three thousand two hundred dollars per year in jobs where actual cost exceeded estimated cost. Nobody knows until the month-end P-and-L arrives three weeks after the job shipped.
+
+This is not a dramatic blow-up. It is small, invisible overruns that compound because nobody tracks actual costs against the estimate while the job is in progress. The foreman writes labor hours on a whiteboard that gets erased every Friday. Materials are tracked in a shared Excel file the foreman updates when he remembers. And QuickBooks — as the number-two result on Google for this exact query confirms — "tracks transactions, not job costs."
+
+The math:
+
+If your shop runs eighteen jobs per month and two ship at negative margin, the average annual loss is thirty-six thousand to sixty-five thousand dollars. The cost of the spreadsheet system that catches this is zero dollars and two hours of setup time.
+
+How the Estimated-vs-Actual Job Costing Spreadsheet Works
+
+The spreadsheet has four tabs that mirror the lifecycle of every job in your shop:
+
+1. Job Estimate Template (Before the Job)
+
+Before you accept the purchase order, fill in the estimate tab. Enter every line item: materials by part number or BOM line with quantity and unit cost, labor by operation with standard hours and hourly rate, machine hours, overhead allocation percentage, outside processing costs, and any surcharges (rush orders, special packaging, expedited freight). The template auto-calculates the total estimated cost and the quoted price, showing your target margin percentage. This is the baseline every actual cost will be measured against.
+
+2. Actual-Cost Tracker (During the Job)
+
+This is where the system differs from every post-mortem variance report. As production runs, someone logs actuals: materials issued from stock (with actual quantities — not standard BOM quantities), operator time by operation (real clock hours, not standard rates), machine hours logged, scrap and rework quantities, and any unplanned costs (overtime, expedited shipping, re-inspection). The entries take thirty seconds per line. The foreman or lead operator updates the log once per shift — before the whiteboard gets erased.
+
+3. Variance Dashboard (Real-Time)
+
+The dashboard auto-calculates the gap between estimate and actual for every active job. It breaks the variance into four categories: materials (actual quantity used × actual unit cost vs estimated), labor (actual hours × actual rate vs estimated), overhead (actual machine hours × burden rate vs estimated), and outside processing. Each category shows a dollar variance and a percentage. The dashboard color-codes results: green when actual is within five percent of estimate, yellow at five to ten percent over, and red when a job exceeds ten percent above estimate. A red job means stop and investigate — right now, not at month-end.
+
+4. Root-Cause Picklist (What Killed the Margin)
+
+Every red job triggers a root-cause classification. The picklist includes the most common margin-killers: material price increase since the quote date; new operator learning curve (actual hours exceed standard by more than thirty percent); rush-order overtime premium that was not billed; scope creep (customer added operations after the quote); misquoted cycle time (the original estimate undercounted setup or run time); and supplier substitution (a higher-cost material was used because the specified material was out of stock). The picklist forces an honest diagnosis. Over time, the pattern data tells you which causes recur — and that is where you fix your estimating process, not your costing process.
+
+The difference that matters:
+
+A post-mortem variance report (what most shops do) tells you that Job 1147 lost money — three weeks after it shipped. The root-cause picklist tells you
+
+why
+
+it lost money. If "new operator learning curve" appears on seven of the last ten red jobs, the fix is not better costing. It is better training, a longer ramp in your estimating rates for new hires, or a buddy system on complex operations. The picklist turns job costing from a blame tool into an improvement tool.
+
+Quote Accuracy Improvement: Close the Loop
+
+The spreadsheet includes a rolling six-job average variance report, grouped by root cause. If material price changes are the top cause of negative variance, update your material cost database quarterly instead of annually. If new-operator learning curves are the top cause, build a thirty percent time premium into quotes for jobs assigned to operators with less than ninety days on the machine. If rush-order overtime is the top cause, add a mandatory twenty-five percent surcharge to every order with a lead time under five business days.
+
+The report gives you a data-backed case for changing how you quote. Instead of "I think our quotes are too low," you have "Over the last six months, forty percent of our negative-margin jobs were caused by material prices that moved between quote and production — here is the average move by material category, and here is the updated rate sheet that closes the gap."
+
+The Month-End Reconciliation Ritual (30 Minutes Instead of Guessing)
+
+At month-end, instead of staring at the P-and-L and wondering which jobs were profitable, you run a thirty-minute reconciliation:
+
+Pull the P-and-L from QuickBooks.
+
+Get total revenue, total COGS, and gross margin for the month.
+
+Sum the job costing spreadsheet.
+
+Total estimated cost, total actual cost, and total quoted price for all jobs that shipped this month.
+
+Identify the gap jobs.
+
+Any job where actual exceeded estimate by more than ten percent gets a five-minute review: what was the root cause, was the cause avoidable, and does the root-cause picklist suggest an estimating-process change?
+
+Update the quote accuracy report.
+
+Add this month's data to the rolling six-month average. If a trend is forming (material costs rising, a specific machine generating high scrap), flag it for the next operations meeting.
+
+Thirty minutes. Once a month. No guessing, no "that job felt tight," no finding out in April that January was a losing month.
+
+The Monday Morning 10-Minute Job Check (Weekly)
+
+This is the lightweight version for weeks when you do not have time for the full reconciliation. Every Monday morning, open the variance dashboard, scan for red jobs, and answer three questions:
+
+Are any active jobs running more than ten percent over estimate?
+
+If yes, the foreman investigates today — not Friday.
+
+Did any job ship last week at negative margin that nobody flagged?
+
+If yes, enter the root cause before the details are forgotten.
+
+Is the same root cause appearing on multiple jobs?
+
+If "material price increase" shows up three times in a month, update your material cost database this week.
+
+Ten minutes. That is all it takes to stop two negative-margin jobs per month from becoming forty-three thousand dollars per year.
+
+Frequently asked questions
+
+How do I track estimated vs actual job costs without an ERP?
+
+Use a free spreadsheet that captures your estimated costs before the job starts (materials, labor, overhead) and records actual costs as they occur. The key is logging actuals during production — not after the job ships — so you can course-correct. This system requires no ERP: one tab for the estimate, one tab for daily actual-cost entries, and a dashboard tab that auto-calculates the variance in real time. Set it up in under two hours with Google Sheets or Excel.
+
+Why does QuickBooks not show real job costs?
+
+QuickBooks tracks financial transactions — it records that you bought aluminum and paid a machinist. But it does not connect those transactions to specific jobs, operations, or units produced. You can see that materials spending went up, but you cannot see which job consumed too much material or which operator took twice the standard time. QuickBooks tells you what happened to your bank account. A job costing spreadsheet tells you what happened to your margin per job.
+
+What is the difference between job costing and a P-and-L?
+
+A profit-and-loss statement aggregates all revenue and expenses for a period — typically a month. It tells you whether the whole business made money. Job costing tells you whether each individual job made money, and if not, exactly why: materials overrun, labor inefficiency, misquoted cycle time, or scope creep. The P-and-L is a rearview mirror at month-end. Job costing is a dashboard updated while the work is still running.
+
+How much do small manufacturers lose to poor job costing?
+
+A shop running fifteen to twenty jobs per month typically has one to two jobs that ship at negative margin without anyone knowing. The average loss per job is one thousand five hundred to two thousand five hundred dollars, for an annual invisibility cost of thirty-six thousand to sixty thousand dollars. These are not dramatic blow-ups — they are small overruns that compound because nobody tracks actual costs against the estimate while the job is in progress.
+
+Can I do job costing in Google Sheets or Excel for free?
+
+Yes — both Google Sheets and Excel can handle multi-tab job costing with real-time variance calculations. Google Sheets has the advantage of real-time sharing: the foreman updates actuals from the shop floor and the office sees the same numbers instantly. No ERP license, no per-seat fees, and no implementation consultant required.
+
+Build a system that catches losing jobs before they ship
+
+If job costing is the first step but you need the whole financial-control system — BOM cost rollup, quote generation, production scheduling, and real-time variance dashboards that do not live in a spreadsheet — we build custom automation for small manufacturers. No ERP sales pitch. Just systems that work.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You Are Losing Money on Jobs You Do Not Know About — The Free Job Cost Variance Tracker
+
+Suppliers Are Late Again and It Is Costing $1,000/Week — How to Track Supplier Delivery
+
+You Are Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet System
+
+
+URL: https://www.jobsdonelabs.ai/blog/manufacturing-job-costing-estimated-vs-actual-free/
 
 ---
 
@@ -15348,6 +15493,8 @@ How Jobs Done Labs recovers $30K+ in 90 days for small manufacturers — guarant
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free Manufacturing Job Costing: Estimated vs Actual — Catch Losing Jobs Before They Ship
 
 Job Cost Variance Tracker: Catch Losing Jobs Before They Ship — Free Actual-vs-Estimated Spreadsheet
 
@@ -32990,6 +33137,8 @@ The $30K guarantee works the same way for supplier tracking as for every other a
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free Manufacturing Job Costing: Estimated vs Actual — Catch Losing Jobs Before They Ship
 
 Track and Prevent Machine Downtime — The Free Tracking and PM Scheduling System
 
