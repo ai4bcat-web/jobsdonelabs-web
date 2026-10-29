@@ -10280,6 +10280,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Free Home Service Admin Spreadsheet: Scheduling, Invoicing, and Payment Tracking in One Workflow
+
 You Paid a Tech to Sit in Traffic for an Appointment Nobody Kept. Here's the Free No-Show Prevention System That Cuts Missed Appointments in Half.
 
 You Drove 240 Miles to Give 7 Free Estimates Last Week — And 5 of Those People Were Never Going to Buy
@@ -10962,6 +10964,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+Free Home Service Admin Spreadsheet: Scheduling, Invoicing, and Payment Tracking in One Workflow
+
 A $25 Blower Motor Just Cost You $1,100 — Free Parts-Run Coordination Spreadsheet
 
 Your Crew Finished Early and Went Home — Here Is the Free Crew Coordination Spreadsheet That Routes Them to the Next Job in 60 Seconds
@@ -11460,6 +11464,309 @@ Your Waste Manifests Are in a Shoebox and the State Inspector Just Called — Th
 
 
 URL: https://www.jobsdonelabs.ai/blog/hipaa-compliance-tracking-spreadsheet-medical-practice-free/
+
+---
+
+# Free Home Service Business Admin Spreadsheet System
+
+Home Services & Trades
+
+You Run a 3-Tech HVAC Shop. You Work 60 Hours a Week — 20 on Actual HVAC, 40 on Admin: 12 Hours on Invoicing, 8 Hours on Scheduling, 6 Hours Chasing Estimates Nobody Followed Up On. Housecall Pro and Jobber Want Two Hundred to Four Hundred Dollars a Month But You Know You Can Just Do It Yourself — Even Though It Is Costing You Saturdays and Two Thousand Four Hundred Dollars a Month in Lost Revenue. Here Is the Free Home Service Business Admin Spreadsheet That Combines Scheduling, Invoicing, Estimate Follow-Up, and Payment Tracking Into One Workflow — Built for Plumbers, Electricians, HVAC Techs, Painters, Roofers, Landscapers, and Every Trade That Spends More Time on Paperwork Than on the Work.
+
+Ryne Bandolik
+
+· Jobs Done Labs · October 29, 2026
+
+Key takeaways
+
+The average 3-technician home service shop loses twenty four hundred dollars a month in missed estimate follow-ups, late invoice payments, and scheduling errors — all from running the business on disconnected tools. This free spreadsheet combines four disconnected workflows (scheduling, invoicing, estimate tracking, payment monitoring) into one system. Housecall Pro and Jobber validate the demand at one hundred million dollar-plus valuations but price out the 1-to-5 technician shop at two hundred to four hundred dollars per month. The integrated approach replaces the whiteboard, the notebook, the QuickBooks data entry, and the owner's memory with one workflow that takes twenty minutes a day.
+
+The Admin Tax: What Running Your Business on a Whiteboard Actually Costs
+
+Here is the breakdown for a 3-technician HVAC shop where the owner works 60-hour weeks:
+
+Admin Task
+
+Hours per Week
+
+Annual Hours
+
+Annual Cost (at $75/hr)
+
+Creating, sending, and following up on invoices
+
+624
+
+$46,800
+
+Scheduling jobs (phone calls, texts, whiteboard)
+
+416
+
+$31,200
+
+Following up on unconverted estimates
+
+312
+
+$23,400
+
+Tracking who owes what
+
+260
+
+$19,500
+
+QuickBooks data entry
+
+208
+
+$15,600
+
+Everything else (permits, supply orders, callbacks)
+
+260
+
+$19,500
+
+Total admin hours
+
+2,080
+
+$156,000
+
+That is one hundred fifty six thousand dollars in owner time consumed by admin — time that could be billable work, sales calls, or being home for dinner. And that is only the visible cost. The invisible costs are worse:
+
+Unconverted estimates:
+
+Twelve estimates per month at an average job value of eight hundred dollars. A twenty five percent close rate means nine estimates go nowhere. If a simple follow-up system converts just two more per month, that is one thousand six hundred dollars in recovered revenue — and the owner currently follows up on exactly zero.
+
+Late invoice payments:
+
+Forty open invoices, average twelve days past due. A 3-technician shop has roughly sixty thousand dollars in accounts receivable at any time. Every extra day of DSO (days sales outstanding) is money the bank does not see.
+
+Scheduling errors:
+
+Double-booked twice last month — had to refund four hundred fifty dollars and lost the customer. The whiteboard does not show technician availability, job duration, and drive time on one screen.
+
+The SaaS Validation
+
+Housecall Pro, Jobber, and ServiceTitan are valued at over one hundred million dollars each — built entirely on the pain of home service admin. Their pricing starts at two hundred to four hundred dollars per month. The demand is proven. But a 3-tech shop bringing in four hundred fifty thousand dollars a year cannot justify four thousand eight hundred dollars annually on software when the owner can do it themselves. Except they are not doing it themselves — they are losing two thousand four hundred dollars a month in missed revenue. This spreadsheet gives you the same integrated workflow for zero dollars.
+
+The Four Disconnected Tools — and the One Spreadsheet That Replaces All of Them
+
+Every trade runs the same stack: a whiteboard for scheduling, QuickBooks for invoicing, a notebook for estimate follow-ups, and the owner's memory for who still owes money. The tools do not talk to each other. When a job is completed on the whiteboard, nobody tells QuickBooks to generate the invoice. When an invoice goes unpaid, nobody tells the notebook to flag that customer for follow-up. When an estimate sits unresponded for three days, nobody reminds the owner to make the call.
+
+This spreadsheet connects all four workflows. Here is what is inside:
+
+1. Customer Master — The CRM You Never Had
+
+Before any job is scheduled or any invoice is sent, you need a single place where every customer lives. This tab is your customer roster with:
+
+Customer name, address, phone, email
+
+Service history — every job, date, technician, and what was done
+
+Equipment installed — furnace model, AC unit, water heater, with serial numbers and install dates
+
+Last service date — so you know who is due for maintenance
+
+Notes and preferences — gate code, dog on premises, customer prefers afternoon appointments, do not ring doorbell
+
+Total lifetime value — auto-calculated so you know who your best customers are
+
+When a customer calls, you type their name and see everything in one row. No more flipping through thirty pages of a spiral notebook looking for the last service date.
+
+2. Job Scheduler — Replaces the Whiteboard
+
+A weekly view, one row per technician, showing every job in time order:
+
+Technician name (column headers)
+
+Customer name, address, job type (repair, install, maintenance, estimate)
+
+Estimated duration (auto-populated: a furnace repair is 2 hours, an AC install is 6 hours, an estimate is 1 hour)
+
+Drive time between jobs (auto-calculated from zip codes)
+
+Status: Scheduled, In Progress, Done, Invoiced, Paid
+
+Emergency slots reserved — one per day per technician, so a 3 PM no-heat call does not blow up the entire schedule
+
+The scheduler auto-flags when a technician is double-booked or when drive time plus job duration means they will not make the next appointment. No more refunds for missed windows.
+
+3. Estimate Tracker — The Revenue Recovery Engine
+
+This is where the money lives. Every estimate you give goes into this tab:
+
+Date given, customer, job description, estimate amount
+
+Follow-up calls: date, notes (called — left voicemail; called — customer wants to think about it; called — customer ready to book)
+
+Status: Pending, Followed Up (Day 1), Followed Up (Day 3), Followed Up (Day 7), Won, Lost
+
+Auto-flag:
+
+Any estimate not followed up within 3 days turns red. You see it immediately on the dashboard.
+
+Win/loss reason — so after six months you know exactly why you are winning and losing
+
+Most home service owners write fifteen estimates a month and follow up on zero. They assume silence means no. In reality, forty percent of homeowners who did not book immediately were still shopping — and the first contractor who calls back wins. The estimate tracker makes the follow-up automatic. At an eight hundred dollar average job, converting two more estimates per month pays for every tool you own.
+
+4. Invoice Generator — From Job Complete to Bill Sent in 30 Seconds
+
+When a job is marked Done in the Scheduler, the Invoice Generator auto-populates:
+
+Customer name, address, date of service
+
+Job description (pulled from Scheduler)
+
+Hours worked, labor rate, materials used, materials cost
+
+Subtotal, tax, total
+
+Status: Draft, Sent, Viewed (if using an online invoice link), Paid, Overdue
+
+Print-ready format — copy into your invoice template and send
+
+No more re-typing the same customer information from the whiteboard into QuickBooks at 9 PM on a Saturday. The invoice is ninety percent done before you open it.
+
+5. Payment Tracker — Accounts Receivable Without QuickBooks
+
+Every invoice that is Sent but not Paid lives here:
+
+Customer, invoice number, amount, date sent, due date
+
+Aging buckets: Current (0 to 30 days), 31 to 60 days, 61 to 90 days, 90-plus days
+
+Auto-calculated DSO (days sales outstanding) — the average number of days between finishing work and getting paid
+
+Auto-flag:
+
+Any customer past 30 days turns amber. Past 60 days turns red. The owner sees it on the dashboard and makes the call.
+
+Payment method (check, credit card, ACH, financing) — so you know which customers always pay late and can require payment upfront next time
+
+A 3-tech shop with sixty thousand dollars in AR at any given time, with an average DSO of forty two days, has roughly twenty eight thousand dollars in cash that should be in the bank but is sitting in customers' inboxes. The payment tracker moves that number down.
+
+6. Weekly Admin Dashboard — The One-Page Business Snapshot
+
+Every Monday morning, open one tab and see:
+
+This Week's Dashboard
+
+Hours worked vs hours billed:
+
+Are your techs billable at least seventy percent of their clocked time? If not, where is the time going?
+
+Estimates given vs estimates won:
+
+What is your close rate this week? This month? Is it trending up or down?
+
+Invoices sent vs invoices paid:
+
+How much did you bill this week and how much actually hit the bank?
+
+Revenue collected:
+
+Actual cash in — the only number that matters.
+
+Outstanding AR:
+
+Who still owes you money, sorted by amount (largest first) so you make the most valuable calls first.
+
+Estimates not followed up:
+
+The red list — these are dollars you are about to lose if you do not call today.
+
+The dashboard takes twenty minutes to update each week. It replaces four hours of mental math, sticky-note arithmetic, and the sinking feeling on Sunday night that you forgot something important.
+
+Why Housecall Pro and Jobber Exist — and Why You Do Not Need Them Yet
+
+Housecall Pro and Jobber are good products. They are built by smart teams who understand the trades. They automate scheduling, invoicing, payment collection, and customer communication. They are also two hundred to four hundred dollars per month — roughly four thousand eight hundred dollars per year for a 3-user plan.
+
+For a 20-technician shop doing two million dollars in revenue, that is a rounding error. The software pays for itself in dispatch efficiency and faster payment collection. But for the 3-tech shop doing four hundred fifty thousand dollars, four thousand eight hundred dollars is over one percent of gross revenue on admin software. The owner looks at that number and thinks: I can just do it myself.
+
+And they are right — they can. But "doing it yourself" should not mean a whiteboard, a notebook, and memory. It should mean one spreadsheet that does the same integration work the SaaS companies charge for, just without the mobile app and the automated text reminders. This spreadsheet is that middle ground: the SaaS-level integration without the SaaS-level price.
+
+The Upgrade Path
+
+When you outgrow this spreadsheet — when you have ten trucks and the admin is still eating twenty hours a week — Jobs Done Labs builds custom automation on top of the same workflow. The spreadsheet tells you where the bottlenecks are; we automate those specific bottlenecks. But you do not need us on day one. You need a system that works this week for zero dollars. Start here.
+
+Not Just HVAC — Every Trade Has the Same Admin Stack
+
+The admin problem is not unique to HVAC. Every trade runs the same four-step cycle:
+
+Schedule the job
+
+— phone calls, texts, a whiteboard
+
+Do the work
+
+— the part you are actually good at
+
+Invoice the customer
+
+— re-typing everything into QuickBooks
+
+Follow up on unpaid invoices and unconverted estimates
+
+— or not, because there is no system
+
+Plumbers do it. Electricians do it. Painters, roofers, landscapers, pest control, cleaners, handymen — same four steps, same disconnected tools, same missed revenue. The spreadsheet is built generically: the Customer Master has an Industry field, the Scheduler uses trade-specific job duration defaults, and the Estimate Tracker works whether the estimate is for a furnace replacement or a kitchen repaint.
+
+The Hardest Part Is Not Building the Spreadsheet — It Is Using It for Two Weeks
+
+Every system fails the same way: the owner sets it up on a Sunday, uses it Monday and Tuesday, and by Thursday they are back to the whiteboard because the whiteboard is faster in the moment. The whiteboard is faster. In the moment. And that is the trap.
+
+The whiteboard is faster because you do not have to type anything — you just write a name and a time. But the whiteboard cannot tell you that an estimate from three days ago still has not been followed up on. The whiteboard cannot auto-populate an invoice. The whiteboard cannot show you that a customer is sixty days past due and it is costing you interest on the line of credit you are carrying to cover payroll.
+
+Give the spreadsheet two weeks. The first week will be slower than the whiteboard. The second week will be about the same. By the third week, you will wonder why you ever ran the business any other way — and you will have recovered enough missed revenue in those three weeks to pay for the time you spent setting it up.
+
+Frequently asked questions
+
+Is this actually free?
+
+Yes. It is a Google Sheets template — you make a copy and it is yours. No email signup, no credit card, no trial that expires. Jobs Done Labs publishes free operational tools for small service businesses because the businesses that use them sometimes come back when they outgrow spreadsheets and need custom automation. But there is no obligation and no catch.
+
+What trades does this work for?
+
+HVAC, plumbing, electrical, painting, roofing, landscaping, pest control, cleaning, handyman services — any trade where technicians go to job sites, work is invoiced after completion, estimates are given before work begins, and customers sometimes pay late. The spreadsheet is built generically with a trade selector that adjusts job duration defaults and common materials lists.
+
+How long does it take to set up?
+
+About two hours the first time: one hour to enter your existing customers, thirty minutes to load your open estimates, and thirty minutes to configure your trade-specific job types and durations. After that, daily use is twenty minutes: ten minutes updating the scheduler in the morning and ten minutes reviewing the dashboard at the end of the day.
+
+What is the difference between this and Housecall Pro or Jobber?
+
+Housecall Pro and Jobber are full SaaS platforms with mobile apps, automated customer texts, online booking, payment processing, and GPS tracking. They cost two hundred to four hundred dollars per month. This spreadsheet does the same workflow integration — scheduling connects to invoicing connects to payment tracking — but without the mobile app or automated communication. It is the integration layer without the SaaS overhead. For a 1-to-5 tech shop, the spreadsheet covers ninety percent of what you actually use in the SaaS platforms.
+
+What happens when I outgrow the spreadsheet?
+
+That is a good problem to have. When you have ten-plus technicians and the spreadsheet cannot keep up, you have two paths: move up to Housecall Pro or Jobber (which you can now afford because the spreadsheet helped you recover enough revenue to justify the cost), or contact Jobs Done Labs about custom automation built on the exact workflows you already defined in the spreadsheet. The spreadsheet is not a dead end — it is the foundation.
+
+Can I use this if I am a solo operator?
+
+Absolutely. In fact, the solo operator benefits the most. A one-person shop has nobody to delegate admin to — every hour spent on invoicing is an hour not spent on billable work. The spreadsheet cuts admin from twenty hours a week to about five, which effectively gives you back fifteen billable hours. At seventy five dollars per hour, that is one thousand one hundred twenty five dollars a week in recovered capacity.
+
+Outgrowing the spreadsheet? We automate the workflow.
+
+When your shop hits ten trucks and the spreadsheet is eating twenty hours a week, custom automation takes over — same workflow, zero manual entry. The spreadsheet tells you where the bottlenecks are; we build the fix.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
+
+Stop Losing Track of Estimates: A Free Job Tracking Spreadsheet for Small Contractors
+
+You Gross Twenty Four Thousand a Month but the Bank Shows Three Thousand — Free Trucking Cash Flow Spreadsheet
+
+
+URL: https://www.jobsdonelabs.ai/blog/home-service-business-admin-spreadsheet-free/
 
 ---
 
@@ -34872,6 +35179,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+Free Home Service Admin Spreadsheet: Scheduling, Invoicing, and Payment Tracking in One Workflow
 
 Free Carrier AR Tracker: Which Brokers Owe You Money and How Late They Pay
 
