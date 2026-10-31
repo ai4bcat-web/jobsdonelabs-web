@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Channel Inventory Reconciliation Spreadsheet | Jobs Done Labs</title>
+  <meta name="description" content="Shopify, Amazon, eBay counts never agree. Free multi-channel inventory reconciliation spreadsheet gets one true count across every channel — no SaaS." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/multi-channel-inventory-reconciliation-spreadsheet-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/multi-channel-inventory-reconciliation-spreadsheet-free/" />
+  <meta property="og:title" content="Multi-Channel Inventory Reconciliation Spreadsheet | Jobs Done Labs" />
+  <meta property="og:description" content="Shopify, Amazon, eBay counts never agree. Free multi-channel inventory reconciliation spreadsheet gets one true count across every channel — no SaaS." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Multi-Channel Inventory Reconciliation Spreadsheet | Jobs Done Labs" />
+  <meta name="twitter:description" content="Shopify, Amazon, eBay counts never agree. Free multi-channel inventory reconciliation spreadsheet gets one true count across every channel — no SaaS." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Multi-Channel Inventory Reconciliation Spreadsheet",
+    "description": "Shopify, Amazon, eBay counts never agree. Free multi-channel inventory reconciliation spreadsheet gets one true count across every channel — no SaaS.",
+    "author": {"@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/"},
+    "publisher": {"@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai"},
+    "datePublished": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/multi-channel-inventory-reconciliation-spreadsheet-free/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why do my inventory counts never match across Shopify, Amazon, and eBay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Three reasons: (1) each channel tracks inventory independently with different sync timing — Shopify updates instantly on sale, Amazon FBA updates after the fulfillment center processes the pick, and eBay updates when you manually adjust or use a third-party tool; (2) returns in transit count as sold on one channel but are not yet received at the warehouse, creating phantom discrepancies; (3) FBA reserved inventory (transfers between fulfillment centers, customer-order processing holds) is owned by you but not sellable, so Amazon reports a lower available count than your true ownership. A multi-channel reconciliation spreadsheet bridges these gaps by normalizing every channel to true ownership, not available-to-sell."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I reconcile inventory across three channels without buying expensive software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The process has four steps, all doable in a free spreadsheet: (1) Build a SKU master list with every channel ID mapped to one internal SKU — Shopify variant ID, Amazon SKU, and eBay listing ID all point to the same product; (2) every Monday, pull the current quantity from each channel dashboard and enter it into the reconciliation worksheet; (3) apply the adjustment checklist for returns-in-transit, pending shipments, FBA reserved, and damaged/unsellable inventory to calculate the true count; (4) flag any discrepancy larger than five percent for investigation. The spreadsheet handles the math; you spend thirty minutes per week instead of three hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between available inventory and true inventory count?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Available inventory is what a channel says is sellable right now — it excludes units reserved for open orders, transfers between warehouses, and holds. True inventory is every unit you own regardless of its status: units in FBA fulfillment centers (including reserved), units in your own warehouse, units in transit between locations, and units returned but not yet inspected. The reconciliation spreadsheet calculates true count from available count plus adjustments. If you only track available, you will reorder too early when FBA reserves spike, or oversell when a channel reports a count that includes returns in transit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I reconcile multi-channel inventory?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Weekly is the sweet spot for most three-to-five-person e-commerce brands. Daily reconciliation is too heavy — the data does not change fast enough to justify the effort, and the channel dashboards do not update in real time anyway. Monthly is too slow; an oversell can compound across thirty days of unchecked counts. A Monday thirty-minute reconciliation ritual catches the weekend sales surge, gives you a clean stock picture for the week ahead, and takes less than one percent of the workweek. During Q4 or peak sales periods, increase to twice weekly (Monday and Thursday)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a multi-channel inventory sync tool or is a spreadsheet enough?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For brands doing under one million dollars in annual revenue across fewer than two hundred SKUs, a spreadsheet is enough — and free. Sync tools like ShipStation, Skubana, or Linnworks cost one hundred fifty to five hundred dollars per month and make sense when you cross roughly two hundred fifty thousand dollars in monthly revenue and the spreadsheet process consumes more than two hours per week. The spreadsheet builds the discipline and the process; when you eventually graduate to software, you will know exactly which fields matter because you lived them. Many three-to-five-person brands stay on the spreadsheet for years before the economics of the time savings justify the SaaS cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes the biggest inventory discrepancies between channels?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The top five causes, in order: (1) Returns in transit — sold on Shopify, customer shipped it back, you have not received and inspected it yet, but Shopify already added it back to inventory; (2) FBA reserved inventory — Amazon moved your units between fulfillment centers, and during the transfer those units are not sellable on any channel; (3) Manual listing edits — someone changed the quantity on eBay manually to close a listing temporarily and never changed it back; (4) Bundles and kits — you sell a three-pack on Amazon but track singles on Shopify, and the conversion math drifts; (5) Pending shipments — you printed a label but the package has not left the warehouse, so Shopify counts it as sold while the physical unit is still on the shelf."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Multi-Channel Inventory Reconciliation Spreadsheet"}
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1200&q=80" alt="Warehouse inventory shelves with organized boxes" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Retail &amp; E-Commerce</span>
+      <h1>You Have 47 Units of Your Bestseller on Shopify, 52 in Amazon FBA, and 38 on eBay — Nobody Knows the Real Number and You Oversold by 5</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · October 31, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">Multi-channel sellers lose an average of four to seven percent of monthly revenue to oversells and stockouts caused by mismatched inventory counts. The fix is not a three hundred dollar per month sync tool — it is a free reconciliation spreadsheet that normalizes Shopify, Amazon, and eBay counts to one true number, runs on a thirty-minute Monday ritual, and stops the oversell before the customer files the chargeback.</p>
+      </div>
+
+      <h2>The Oversell Tax — What Mismatched Inventory Actually Costs</h2>
+
+      <p>You opened Shopify this morning and your bestseller showed forty-seven units. Amazon Seller Central says fifty-two. eBay says thirty-eight. The real number — the one tied to physical boxes on a shelf and pallets in FBA — is somewhere between those three figures, and you do not know which one to trust.</p>
+
+      <p>Then it happens. A customer orders five units on eBay at 2:14 AM. You fulfill it because eBay said you had thirty-eight. But Shopify already sold two of those units yesterday, and Amazon sold one overnight on a Subscribe and Save order that has not settled yet. You oversold by three. The customer files a chargeback. A one-star review lands: "Ordered five, received two. Scam seller."</p>
+
+      <p>This is the oversell tax, and multi-channel brands pay it every month. The math is straightforward: monthly revenue multiplied by your oversell rate equals direct lost revenue — plus review damage that depresses future sales, plus chargeback fees, plus the hours you spend apologizing to customers instead of growing the business. For a brand moving fifty thousand dollars a month across three channels, a five percent oversell rate is two thousand five hundred dollars in direct losses — before you count the reviews.</p>
+
+      <p>The inventory sync SaaS industry has built a three-hundred-dollar-per-month answer to this problem. Nventory calls manual multi-channel reconciliation "unsustainable" on their page-one blog. ShipStation, Skubana, Linnworks — every page-one result explains the pain and pitches their sync tool as the only fix. But for a three-to-five-person brand doing under one million dollars in annual revenue, three hundred dollars a month is a lot of margin to spend on a problem a spreadsheet can solve.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>You do not need a real-time multi-channel sync tool yet.</strong> You need one true count on Monday morning before the week's orders start flowing. A reconciliation spreadsheet — updated weekly, thirty minutes per session — gives you that for free. This guide builds the spreadsheet, the ritual, and the discrepancy playbook so you stop overselling without adding a SaaS line item.</p>
+      </div>
+
+      <h2>Step 1 — The SKU Master List (One Product, Three Channel IDs)</h2>
+
+      <p>Before you can reconcile anything, every product needs a single source-of-truth identifier. The problem: Shopify uses variant IDs, Amazon uses seller SKUs, and eBay uses listing IDs — three different codes for the same physical item. When you are copying numbers between browser tabs on Monday morning, you are translating between these three systems in your head, and that is where mistakes compound.</p>
+
+      <p>Your reconciliation spreadsheet starts with a SKU master tab. One row per product. Columns:</p>
+
+      <div class="checklist">
+        <h3>SKU Master List — Required Columns</h3>
+        <ul>
+          <li><strong>Internal SKU</strong> — Your canonical product code. This is the one that means something to you, not to a channel.</li>
+          <li><strong>Product Name</strong> — Full product title as it appears on your primary channel.</li>
+          <li><strong>Shopify Variant ID</strong> — The numeric ID from the Shopify product page URL or admin export.</li>
+          <li><strong>Amazon SKU</strong> — The seller SKU from Manage Inventory in Seller Central (not the ASIN — the ASIN is Amazon's catalog identifier, not your unit identifier).</li>
+          <li><strong>eBay Listing ID</strong> — The numeric listing ID, visible in the eBay listing URL and the Active Listings report.</li>
+          <li><strong>Unit Cost</strong> — Your landed cost per unit. Used later for discrepancy impact calculations.</li>
+          <li><strong>Weekly Velocity</strong> — Average units sold per week across all channels, trailing four weeks. Drives the reorder trigger.</li>
+        </ul>
+      </div>
+
+      <p>Build this once and it lives forever. When you add a new product, add one row. When you delist from a channel, delete that channel's ID — the row stays. The SKU master tab is the dictionary every other tab references.</p>
+
+      <h2>Step 2 — The Weekly Reconciliation Worksheet</h2>
+
+      <p>This is the main tab — the one you fill every Monday. It takes the raw counts from each channel and calculates the true count by applying adjustments for inventory that the channels report differently.</p>
+
+      <div class="checklist">
+        <h3>Weekly Reconciliation — Column Layout</h3>
+        <ul>
+          <li><strong>Internal SKU</strong> — Pulled from the master list.</li>
+          <li><strong>Shopify Reported Qty</strong> — The number Shopify shows as available in the admin inventory screen. Enter manually on Monday morning.</li>
+          <li><strong>Amazon Reported Qty</strong> — Available quantity from Seller Central Manage Inventory (not the FBA dashboard — the Manage Inventory screen shows your total including FBA). Enter manually.</li>
+          <li><strong>eBay Reported Qty</strong> — The quantity from the Active Listings view. Enter manually.</li>
+          <li><strong>Returns in Transit (+) </strong> — Units sold on a channel, shipped back by the customer, not yet received at your warehouse. Shopify adds these back to inventory on the return-initiated date; Amazon adds them back when the return is processed at the fulfillment center — which can be fourteen days later. Add these to the reported count because you own them even though they are not on a shelf.</li>
+          <li><strong>FBA Reserved (+) </strong> — Units Amazon is transferring between fulfillment centers, or holding for a customer order that has not shipped. These units are yours, paid for, in Amazon's possession — but not sellable. Add them to true count.</li>
+          <li><strong>Pending Shipments (−) </strong> — Orders where you printed a shipping label but the package has not left. The channel counts these as sold; the physical unit is still in your warehouse. Subtract from true count because it will leave today.</li>
+          <li><strong>Damaged / Unsellable (−) </strong> — Units that exist physically but cannot be sold (warehouse damage, customer return that arrived broken, expired product). Subtract from true count.</li>
+          <li><strong>Manual Adjustments (+/−) </strong> — A catch-all for any known discrepancy: a listing edit you made manually, a bundle conversion error, a wholesale order you fulfilled from inventory without a channel transaction.</li>
+          <li><strong>TRUE COUNT (Auto-Calculated)</strong> — Formula: Average of the three channel reported quantities, plus returns in transit, plus FBA reserved, minus pending shipments, minus damaged, plus or minus manual adjustments.</li>
+        </ul>
+      </div>
+
+      <p>The TRUE COUNT column is the only number that matters. If Shopify says forty-seven and the TRUE COUNT says fifty-three, you have fifty-three units — and you should adjust the Shopify listing upward before it oversells. If eBay says thirty-eight and TRUE COUNT says forty-one, you have three units eBay is not showing — list them before a competitor captures the sale.</p>
+
+      <h2>Step 3 — The Discrepancy Triage Checklist</h2>
+
+      <p>When any channel's reported count differs from TRUE COUNT by more than five percent, something is wrong. Do not guess — run the triage checklist. Most discrepancies fall into one of five buckets.</p>
+
+      <div class="checklist">
+        <h3>Discrepancy Triage — Five Questions to Ask in Order</h3>
+        <ol>
+          <li><strong>Returns unprocessed?</strong> Check your returns log. Any RMA issued this week where the package has not arrived yet? Those units are returns-in-transit and should already be in the adjustment column. If they are missing, add them and recalculate.</li>
+          <li><strong>Pending shipments still sitting?</strong> Walk the warehouse. Are there labeled boxes that never made it to the carrier pickup? Those units were deducted from channel inventory but are still physically here. Add them to the pending-shipments adjustment.</li>
+          <li><strong>Manual listing edit forgotten?</strong> Did you or a team member manually change a quantity on eBay or Amazon to pause a listing temporarily? Check the channel's inventory history log. If you adjusted the quantity and never adjusted it back, add a manual adjustment.</li>
+          <li><strong>FBA reserved spike?</strong> Log into Seller Central → Manage FBA Inventory → Reserved Inventory. If Amazon is transferring units between FCs, the reserved count can spike and the available count drops — but you still own every unit. Add the reserved count to the FBA Reserved column.</li>
+          <li><strong>Bundle or kit conversion error?</strong> Do you sell a three-pack on Amazon that maps to three singles on Shopify? If the conversion factor is wrong (counting one three-pack as one unit instead of three), the discrepancy multiplies by the bundle size. Check the conversion math in the SKU master.</li>
+        </ol>
+      </div>
+
+      <h2>Step 4 — The Sell-Through Safety Buffer and Reorder Trigger</h2>
+
+      <p>Once your TRUE COUNT is clean, the spreadsheet answers the next question: when do I reorder? The safety buffer column compares TRUE COUNT against your weekly velocity and flags anything below a two-week buffer.</p>
+
+      <div class="comparison">
+        <table>
+          <tr><th>SKU</th><th>TRUE COUNT</th><th>Weekly Velocity</th><th>Weeks of Stock</th><th>Status</th></tr>
+          <tr><td>BS-1001</td><td>53</td><td>22</td><td>2.4</td><td style="color:#1466FF;font-weight:700">MONITOR</td></tr>
+          <tr><td>BS-1003</td><td>8</td><td>14</td><td>0.6</td><td style="color:#cc0000;font-weight:700">REORDER NOW</td></tr>
+          <tr><td>BS-1007</td><td>41</td><td>4</td><td>10.3</td><td style="color:#00a86b;font-weight:700">HEALTHY</td></tr>
+        </table>
+      </div>
+
+      <p>The reorder trigger fires at two weeks of stock. At one week, the spreadsheet highlights red. This replaces the "I think we are running low" gut check with a number that was calculated five minutes ago from live channel data.</p>
+
+      <h2>Step 5 — The Channel Sync Log (Your Audit Trail)</h2>
+
+      <p>Every reconciliation session gets one row in the sync log. This tab is your audit trail — it proves you did the work, records any anomalies, and builds a history of discrepancy patterns that reveal systemic problems (a specific SKU that always shows a ten percent variance, a channel that consistently lags by three days).</p>
+
+      <div class="checklist">
+        <h3>Sync Log — Columns</h3>
+        <ul>
+          <li><strong>Date</strong> — Monday date of the reconciliation.</li>
+          <li><strong>Reconciled By</strong> — Who did the session.</li>
+          <li><strong>Total SKUs Reconciled</strong> — Count of rows in the weekly worksheet.</li>
+          <li><strong>SKUs with Discrepancy greater than five percent</strong> — Count and list.</li>
+          <li><strong>Largest Discrepancy</strong> — SKU, channels, and magnitude.</li>
+          <li><strong>Root Cause (from triage)</strong> — Which of the five buckets caused the largest gap.</li>
+          <li><strong>Action Taken</strong> — Listing quantities updated, orders paused, reorder placed.</li>
+        </ul>
+      </div>
+
+      <h2>Step 6 — The Monday 30-Minute Reconciliation Ritual</h2>
+
+      <p>The spreadsheet is only as good as the person who fills it. Here is the exact Monday morning sequence, designed to replace the three-hour copy-paste marathon with a tight thirty-minute ritual.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The ritual, minute by minute:</strong></p>
+        <ol style="margin:12px 0 0 0">
+          <li><strong>Minutes 0–5:</strong> Open Shopify Admin → Inventory, Amazon Seller Central → Manage Inventory, eBay → Active Listings. Have all three tabs open side by side.</li>
+          <li><strong>Minutes 5–10:</strong> Copy the reported quantity for each SKU from each channel into the reconciliation worksheet. Do all three channels for one SKU before moving to the next. This is the part that used to take three hours — with the SKU master list mapping every channel ID to your internal SKU, you are not translating codes in your head.</li>
+          <li><strong>Minutes 10–15:</strong> Fill the adjustment columns. Pull returns-in-transit from your returns log or shipping platform. Pull FBA reserved from Seller Central → Manage FBA Inventory → Reserved. Walk the warehouse for pending shipments. Check your damage log.</li>
+          <li><strong>Minutes 15–20:</strong> The spreadsheet auto-calculates TRUE COUNT. Scan the discrepancy column. Any SKU flagged with more than five percent variance — run the triage checklist (Step 3). Fix the root cause or note it.</li>
+          <li><strong>Minutes 20–25:</strong> Update channel listings that are wrong. If Shopify shows forty-seven and TRUE COUNT is fifty-three, adjust the Shopify listing upward. If eBay shows thirty-eight and TRUE COUNT is forty-one, add the three units to eBay.</li>
+          <li><strong>Minutes 25–30:</strong> Check the reorder trigger column. Any SKU below two weeks of stock — create the purchase order. Fill the sync log row. Done.</li>
+        </ol>
+      </div>
+
+      <p>That is it. Thirty minutes, one spreadsheet, no SaaS subscription. The rest of the week you ship orders knowing the inventory counts are real.</p>
+
+      <h2>When to Graduate from the Spreadsheet to a Sync Tool</h2>
+
+      <p>The spreadsheet works for brands doing under one million dollars in annual revenue across fewer than two hundred SKUs. You will know it is time to graduate when one of three things happens:</p>
+
+      <ol>
+        <li><strong>The thirty-minute ritual becomes sixty.</strong> More SKUs, more channels, more adjustments — the math outgrows the format. At roughly two hundred SKUs the Monday session starts bleeding into Tuesday.</li>
+        <li><strong>You add a fourth channel.</strong> Walmart Marketplace, TikTok Shop, a wholesale B2B portal — each new channel adds a column to the worksheet and multiplies the reconciliation surface area. Four channels is the spreadsheet ceiling for most teams.</li>
+        <li><strong>Revenue crosses roughly one million dollars annually.</strong> At this scale, the cost of a sync tool (one hundred fifty to five hundred dollars per month) is less than the cost of one oversold month. The spreadsheet served its purpose — it taught you the process, built the discipline, and revealed which data fields matter. When you shop for software, you will know exactly what you need because you lived the manual version.</li>
+      </ol>
+
+      <p>Until then, the spreadsheet has you covered — for free.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>Why do my inventory counts never match across Shopify, Amazon, and eBay?</h3>
+        <p>Three reasons: (1) each channel tracks inventory independently with different sync timing — Shopify updates instantly on sale, Amazon FBA updates after the fulfillment center processes the pick, and eBay updates when you manually adjust or use a third-party tool; (2) returns in transit count as sold on one channel but are not yet received at the warehouse, creating phantom discrepancies; (3) FBA reserved inventory (transfers between fulfillment centers, customer-order processing holds) is owned by you but not sellable, so Amazon reports a lower available count than your true ownership. A multi-channel reconciliation spreadsheet bridges these gaps by normalizing every channel to true ownership, not available-to-sell.</p>
+
+        <h3>How do I reconcile inventory across three channels without buying expensive software?</h3>
+        <p>The process has four steps, all doable in a free spreadsheet: (1) Build a SKU master list with every channel ID mapped to one internal SKU — Shopify variant ID, Amazon SKU, and eBay listing ID all point to the same product; (2) every Monday, pull the current quantity from each channel dashboard and enter it into the reconciliation worksheet; (3) apply the adjustment checklist for returns-in-transit, pending shipments, FBA reserved, and damaged/unsellable inventory to calculate the true count; (4) flag any discrepancy larger than five percent for investigation. The spreadsheet handles the math; you spend thirty minutes per week instead of three hours.</p>
+
+        <h3>What is the difference between available inventory and true inventory count?</h3>
+        <p>Available inventory is what a channel says is sellable right now — it excludes units reserved for open orders, transfers between warehouses, and holds. True inventory is every unit you own regardless of its status: units in FBA fulfillment centers (including reserved), units in your own warehouse, units in transit between locations, and units returned but not yet inspected. The reconciliation spreadsheet calculates true count from available count plus adjustments. If you only track available, you will reorder too early when FBA reserves spike, or oversell when a channel reports a count that includes returns in transit.</p>
+
+        <h3>How often should I reconcile multi-channel inventory?</h3>
+        <p>Weekly is the sweet spot for most three-to-five-person e-commerce brands. Daily reconciliation is too heavy — the data does not change fast enough to justify the effort, and the channel dashboards do not update in real time anyway. Monthly is too slow; an oversell can compound across thirty days of unchecked counts. A Monday thirty-minute reconciliation ritual catches the weekend sales surge, gives you a clean stock picture for the week ahead, and takes less than one percent of the workweek. During Q4 or peak sales periods, increase to twice weekly (Monday and Thursday).</p>
+
+        <h3>Do I need a multi-channel inventory sync tool or is a spreadsheet enough?</h3>
+        <p>For brands doing under one million dollars in annual revenue across fewer than two hundred SKUs, a spreadsheet is enough — and free. Sync tools like ShipStation, Skubana, or Linnworks cost one hundred fifty to five hundred dollars per month and make sense when you cross roughly two hundred fifty thousand dollars in monthly revenue and the spreadsheet process consumes more than two hours per week. The spreadsheet builds the discipline and the process; when you eventually graduate to software, you will know exactly which fields matter because you lived them. Many three-to-five-person brands stay on the spreadsheet for years before the economics of the time savings justify the SaaS cost.</p>
+
+        <h3>What causes the biggest inventory discrepancies between channels?</h3>
+        <p>The top five causes, in order: (1) Returns in transit — sold on Shopify, customer shipped it back, you have not received and inspected it yet, but Shopify already added it back to inventory; (2) FBA reserved inventory — Amazon moved your units between fulfillment centers, and during the transfer those units are not sellable on any channel; (3) Manual listing edits — someone changed the quantity on eBay manually to close a listing temporarily and never changed it back; (4) Bundles and kits — you sell a three-pack on Amazon but track singles on Shopify, and the conversion math drifts; (5) Pending shipments — you printed a label but the package has not left the warehouse, so Shopify counts it as sold while the physical unit is still on the shelf.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/amazon-fba-stranded-inventory-resolver-spreadsheet-free/"><span class="cat">Retail &amp; E-Commerce</span><span class="title">Amazon FBA Stranded Inventory? Free Tracker to Fix It</span></a>
+          <a class="related-card" href="/blog/amazon-seller-fee-reconciliation-spreadsheet-free/"><span class="cat">Retail &amp; E-Commerce</span><span class="title">Where'd Your $15K Go? Free Amazon Fee Reconciliation</span></a>
+          <a class="related-card" href="/blog/stockout-prevention-reorder-point-spreadsheet-retail-free/"><span class="cat">Retail &amp; E-Commerce</span><span class="title">Free Stockout Prevention Tracker: Never Run Out Again</span></a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Spreadsheets Get You to One Million. Automation Gets You Past It.</h2>
+        <p>Our free inventory reconciliation spreadsheet keeps your counts clean while you grow. When you cross the one-million-dollar mark and manual reconciliation becomes the bottleneck, we build the automation that replaces it — custom to your channels, your warehouse, your team. No off-the-shelf SaaS forced fit.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/amazon-fba-stranded-inventory-resolver-spreadsheet-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Amazon FBA Stranded Inventory? Free Tracker to Fix It</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/amazon-seller-fee-reconciliation-spreadsheet-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Where'd Your $15K Go? Free Amazon Fee Reconciliation</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/stockout-prevention-reorder-point-spreadsheet-retail-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Free Stockout Prevention Tracker: Never Run Out Again</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
