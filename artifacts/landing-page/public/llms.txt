@@ -93,6 +93,7 @@
 
 ## Home Services
 - [Free Tax Season Document Organizer for CPA Firms](https://www.jobsdonelabs.ai/blog/accounting-firm-client-document-collection-organizer-free/): Stop chasing clients for W-2s and 1099s. Free tax season document organizer with checklists, upload tracking, and 4-round reminder templates.
+- [Admin Task Audit: Find 15 Wasted Hours (Free)](https://www.jobsdonelabs.ai/blog/admin-task-audit-template-find-time-waste-small-business-free/): Losing 15 to 25 hours a week to admin busywork? Free audit template: find every wasted hour, score what is automatable, rank your fix list, and start cutting.
 - [Small Business AI Automation ROI: A Worked Example](https://www.jobsdonelabs.ai/blog/ai-automation-roi-small-business-worked-example/): Real ROI math: a 10-person business saves $9,100/year on a $2,000 build. Worked example with cost comparison table and payback period.
 - [Where'd Your $15K Go? Free Amazon Fee Reconciliation](https://www.jobsdonelabs.ai/blog/amazon-seller-fee-reconciliation-spreadsheet-free/): Amazon dashboard says $52K. Bank has $37K. Free spreadsheet tracks every fee per SKU — referral, FBA, storage, ads — so you know what's actually profitable.
 - [Punch Items Still Broken After Re-Walk? Free Fix](https://www.jobsdonelabs.ai/blog/architecture-punch-list-closeout-photo-verification-free/): Found 12 of 147 punch items still broken after re-walk. Free photo-verified punch-list closeout system with auto-escalation and a contractor scorecard.
