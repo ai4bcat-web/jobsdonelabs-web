@@ -1286,6 +1286,7 @@ function Footer() {
             <a href="/blog/small-manufacturing-production-scheduling-guide/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Production scheduling after the whiteboard</a>
             <a href="/blog/small-manufacturer-inventory-management-system/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Closing the inventory gap</a>
             <a href="/blog/trucking-fuel-receipts-expense-tracking-fix/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Fuel receipts &amp; expense tracking</a>
+            <a href="/blog/trailer-pool-drop-and-hook-tracking-spreadsheet-free/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Trailer pool and drop-and-hook tracking</a>
             <a href="/blog/shopify-quickbooks-reconciliation-never-matches/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Shopify-QuickBooks reconciliation</a>
             <a href="/blog/stop-chasing-client-documents/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Stop chasing client documents</a>
             <a href="/case-study/logistics-200k-profit/" style={linkStyle} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>Case study: $200K logistics profit</a>

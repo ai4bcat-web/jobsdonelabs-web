@@ -35314,6 +35314,359 @@ URL: https://www.jobsdonelabs.ai/blog/tool-crib-mro-inventory-spreadsheet-small-
 
 ---
 
+# Free Drop-and-Hook Trailer Tracking Spreadsheet
+
+Logistics & Trucking
+
+You Have 22 Trailers, 3 Trailer-Detention Invoices for One Thousand Eight Hundred Fifty Dollars, and No Idea Which Trailer Sat Where — Because Your Trailer Pool Is a Whiteboard, a Group Text, and a Dispatcher's Memory. Here Is the Free Drop-and-Hook Trailer Tracking Spreadsheet That Shows Every Trailer's Location, Who Dropped It, Its Free-Time Clock, and the Exact Dollar Exposure Accruing Right Now.
+
+Ryne Bandolik
+
+· Jobs Done Labs · November 2, 2026
+
+Key takeaways
+
+A fourteen truck, twenty two trailer drop-and-hook carrier can lose five thousand to fifteen thousand dollars per year in trailer detention invoices — and for most, the answer to "which trailer sat where and for how many days" is a whiteboard, a dispatcher's memory, and a group text. This free four-tab trailer pool tracking spreadsheet replaces all three: a trailer master inventory, a drop log with a live free-time clock that shows dollar exposure accruing in real time, a dispute packet tab with the six fields brokers and DCs accept as proof, and a utilization dashboard. Twenty minutes a week to run. Zero dollars. No GPS, no telematics, no TMS.
+
+Last updated: November 2026.
+
+The Two Ways an Untracked Trailer Pool Bleeds Money
+
+A drop-and-hook carrier with twenty two trailers who is dropping at retail DCs and shipper yards is getting hit by two costs they cannot see — and both are silent until the invoice arrives:
+
+Failure Mode
+
+How It Happens
+
+Cost Per Incident
+
+Typical Annual Frequency
+
+Annual Bleed
+
+Trailer detention and free-time invoices
+
+Trailer exceeds free-time allowance at a shipper or DC yard. The facility bills the carrier roughly thirty to one hundred dollars per day, per trailer — and the invoice arrives two to six weeks after the fact, with no supporting detail.
+
+Two hundred fifty to eight hundred dollars per incident
+
+Four to eight invoices per year for a twenty two trailer fleet
+
+One thousand to six thousand four hundred dollars
+
+Missing trailers and replacement rental
+
+Trailer is dropped at a DC, paperwork is lost, and nobody realizes it has been sitting there for eleven days — or worse, the trailer is simply unaccounted for while loads wait. The fleet rents a replacement at roughly one hundred fifty to two hundred fifty dollars per day.
+
+Four hundred fifty to two thousand dollars per incident per week
+
+Two to four incidents per year
+
+Nine hundred to eight thousand dollars
+
+Combined, a twenty two trailer drop-and-hook carrier is losing roughly one thousand nine hundred to fourteen thousand four hundred dollars per year on problems that a single spreadsheet, updated once a week, would prevent. The spreadsheet is free. The only investment is a fifteen minute Monday morning review and the discipline to log every drop.
+
+Bottom line:
+
+The operation manager who got three detention invoices totaling one thousand eight hundred fifty dollars last month — with no way to prove which trailer sat where, for how many days, or who let it happen — could have disputed two of those three if the drop log existed. That is roughly one thousand two hundred dollars recovered on zero dollars of spend. The spreadsheet pays for itself the first time you forward the drop log to a broker instead of paying the invoice.
+
+Tab One: The Trailer Master Inventory
+
+The master inventory is one tab that lists every trailer the fleet owns, leases, or rents. It is the single source of truth — updated only when a trailer is added, sold, or returned. Ten columns, one row per trailer:
+
+Trailer number:
+
+The fleet's internal identifier. Use whatever the dispatcher already calls it — do not create a new numbering system.
+
+License plate:
+
+State and plate number. Helpful when a DC gate guard calls asking "what is trailer T-143" and you need to match it to a plate.
+
+VIN (last six):
+
+For insurance, IFTA audits, and registration renewals. Six characters is enough to identify the unit without exposing the full VIN in a shared spreadsheet.
+
+Type:
+
+Fifty three foot dry van, reefer, forty eight foot, flatbed, step deck, or container chassis. Drop-and-hook operations at retail DCs are almost exclusively fifty three foot dry vans.
+
+Ownership:
+
+Owned, leased, or rented. Owned trailers generate depreciation and maintenance costs. Leased trailers have monthly payments and return deadlines. Rented trailers burn cash daily — the utilization tab flags these.
+
+GPS installed:
+
+Yes or No. Fleets with GPS on some trailers and not others need this column to know which trailers require manual location tracking in the drop log.
+
+Current status:
+
+In use, dropped, in shop, empty at yard. This is the field the dispatcher updates after every trip. It is the bridge between dispatch and the drop log.
+
+Current location:
+
+Customer or DC name, city, state. For a trailer in use, write the load destination. For a dropped trailer, write the exact facility it is sitting at.
+
+Last updated:
+
+Date the status field was last changed. This column reveals stale data — if a trailer shows "dropped" with a last-updated date three weeks ago, someone forgot to log the pickup.
+
+Notes:
+
+Damage, maintenance due, lease-end date, anything the next dispatcher needs to know.
+
+The master inventory takes thirty minutes to build once and roughly five minutes per month to maintain. If you already have a trailer list in any format — a spreadsheet, an email, a whiteboard photo — you are halfway done.
+
+Tab Two: The Drop Log and Free-Time Clock
+
+This is the tab that stops the bleeding. Every time a driver drops a trailer at a shipper, receiver, or DC, the dispatcher logs one row. Twelve columns:
+
+Column
+
+What to Enter
+
+Why It Matters
+
+Trailer #
+
+From the master inventory
+
+Links to the trailer record
+
+Customer or DC
+
+Walmart DC 6097, Target T-578, Home Depot RDC 5021
+
+Identifies who will send the detention invoice
+
+City, State
+
+Where the trailer is physically sitting
+
+For the dispatcher who needs to find it next week
+
+Dropped date
+
+Date and time the driver dropped the trailer
+
+Starts the free-time clock — this is the proof date on every dispute
+
+Dropped by (driver)
+
+Driver name or ID
+
+Accountability and dispute follow-up
+
+Free days allowed
+
+Two, three, five — from the rate confirmation or carrier agreement
+
+Determines when the clock starts costing money
+
+Pull-by date
+
+Dropped date plus free days allowed (formula)
+
+The date the trailer must be picked up to avoid detention
+
+Per-day charge
+
+Twenty five to one hundred dollars — from the rate confirmation
+
+Sets the dollar exposure calculation
+
+Days accrued
+
+Today's date minus pull-by date, minimum zero (formula)
+
+How many billable days have already passed
+
+Dollar exposure
+
+Days accrued multiplied by per-day charge (formula)
+
+The dollar amount accruing right now — sort by this column every Monday
+
+Appointment for pickup
+
+Scheduled pickup date or "not yet scheduled"
+
+Shows whether action is in motion or not
+
+Picked-up date
+
+Date trailer was actually retrieved
+
+Closes the record; populates only when the trailer is recovered
+
+Sort the drop log by "dollar exposure" descending every Monday morning. The top three rows are the three problems that need attention today — the trailers that are already costing money, right now, and will keep costing money until someone sends a driver to get them.
+
+The Monday morning fifteen minute ritual:
+
+Open the drop log. Sort by dollar exposure descending. Look at the top three. For each one: is a pickup already scheduled? If yes, confirm the appointment is still good. If no, call the dispatcher and get a driver assigned. Then check rows four through ten — any trailer within forty eight hours of its pull-by date — and flag them for the dispatcher to schedule this week. That is the whole system. Fifteen minutes. Every Monday.
+
+The Free-Time Clock Explained
+
+Shipper free time is one of the most misunderstood costs in drop-and-hook trucking. Here is how it actually works — and why the clock starts at drop, not at appointment:
+
+Free time starts when the trailer is dropped.
+
+Most shipper-carrier agreements state that free time begins at the time of trailer drop, not at the scheduled appointment time and not when the shipper "starts working the trailer." If your driver drops at 2:00 PM Tuesday and the appointment is 8:00 AM Wednesday, the clock started at 2:00 PM Tuesday. Those sixteen hours count.
+
+Free-time windows are short.
+
+Retail DCs typically allow forty eight to seventy two hours. Grocery and food-service DCs often allow twenty four to forty eight hours. The free-time allowance is stated in the rate confirmation or carrier agreement — if it is not stated, assume two free days and confirm in writing before the next load.
+
+After free time expires, the meter runs daily.
+
+Typical charges range from twenty five to one hundred dollars per day, per trailer — and they compound. A trailer that sits eight days past its pull-by date at eighty dollars per day has accrued six hundred forty dollars in detention charges. The invoice for that trailer will arrive six weeks later.
+
+The three triggers for pulling a trailer:
+
+(a) the pull-by date has passed — this is a non-negotiable, the invoice is already accruing; (b) detention charges have exceeded repositioning cost — two days of detention at one hundred dollars per day is two hundred dollars, and sending a driver two hundred miles round-trip to grab it might cost roughly the same; (c) the customer has stopped loading — if a shipper goes dark after you drop, retrieve the trailer immediately regardless of free-time status.
+
+The free-time clock is the spreadsheet's core logic:
+
+pull-by date = dropped date + free days allowed
+
+Days accrued = max(0, today - pull-by date)
+
+Dollar exposure = days accrued × per-day charge
+
+. Three simple formulas. Every trailer's financial exposure, visible at a glance, updated automatically every time you open the sheet.
+
+Tab Three: The Dispute Packet — Six Fields That Beat a Detention Invoice
+
+When a detention invoice arrives and you disagree with it — the dates are wrong, the free-time calculation is wrong, or you know the trailer was picked up on time — the difference between paying the invoice and winning the dispute is the packet of evidence you can produce in five minutes. Brokers and DCs accept six data points as proof:
+
+Drop timestamp:
+
+Date, time, and location where the driver dropped the trailer. From the drop log or the driver's ELD records.
+
+Driver name:
+
+Who dropped it. The broker or DC cross-references this with their gate log.
+
+Gate receipt or BOL:
+
+The physical or digital receipt from the facility showing the drop. If the driver kept it, you win. If the driver lost it, the ELD timestamp plus the drop log entry is usually accepted.
+
+Appointment confirmation:
+
+The email or portal screenshot showing the scheduled drop and the free-time terms.
+
+Pull attempt log:
+
+If you tried to retrieve the trailer but the facility refused or rescheduled, document the attempted pickup — date, who you spoke with, what they said. This is the single strongest evidence in a dispute.
+
+Photos:
+
+If the trailer was damaged at the facility or the facility claimed it was "not ready for pickup," photographs with timestamps. Most drivers carry a phone — use it.
+
+The dispute tab in the spreadsheet stores these six fields per trailer so that when the invoice arrives — six weeks later, when nobody remembers anything — the entire dispute packet is already assembled. Forward it to the broker with a two-sentence email and ninety percent of disputes resolve within one week. See also our
+
+detention pay tracking system
+
+for the other side of the detention problem — tracking how much detention pay you are owed from brokers who keep your driver waiting.
+
+Tab Four: Trailer Utilization Dashboard
+
+The utilization dashboard answers one question: "which trailers are not earning their keep?" For each trailer, over a rolling thirty day window:
+
+Metric
+
+What It Tells You
+
+Days dropped
+
+Total days the trailer sat at a shipper or DC yard. High days-dropped means the trailer is being used as free warehouse space — not earning revenue.
+
+Days loaded (in transit)
+
+Total days the trailer was under a load. This is the only state that generates revenue.
+
+Empty-at-yard days
+
+Days the trailer sat idle at the fleet yard. This is the fleet's own inefficiency — not a shipper problem.
+
+In-shop days
+
+Days in maintenance. Track this separately — a trailer in the shop for fourteen days is a utilization problem if it is a recurring pattern, not if it is an annual PM.
+
+Revenue per day
+
+Estimated: (average rate per mile × loaded miles) ÷ loaded days. Purely directional — it shows you which trailers produce and which trailers park.
+
+The bottom five trailers by revenue-per-day are the "why do we own these" report. Before selling a trailer, check: is it a dedicated trailer assigned to a specific customer lane (low revenue-per-day but guaranteed volume)? Is it a seasonal asset (busy from July through December, idle in February)? Or is it genuinely underutilized — sitting at the yard while rented replacements burn cash? The utilization dashboard does not make the decision for you, but it surfaces the question in a format you can act on.
+
+When a Spreadsheet Stops Being Enough
+
+This spreadsheet is designed for fleets with fewer than roughly forty trailers, trailers that stay at fixed locations for days at a time, and operations where the primary problem is free-time compliance — not real-time location tracking. It will serve that fleet indefinitely at zero dollars per month.
+
+Here is the honest breakpoint where the free spreadsheet stops working and you should pay for a real system:
+
+Forty plus trailers across more than three yards:
+
+At this scale, manual drop-log updates become unreliable — someone always forgets to log a drop, and the missed entries compound into real dollar exposure. A telematics or yard management system with automated drop detection pays for itself.
+
+You need real-time location visibility:
+
+If your dispatcher spends an hour a day calling drivers asking "where did you drop trailer twelve," GPS at roughly thirty dollars per trailer per month starts to justify itself in dispatcher time saved.
+
+Trailers move between yards daily:
+
+The spreadsheet assumes trailers sit static at one facility for multiple days. If trailers are repositioned between yards daily — common in hub-and-spoke LTL operations — a spreadsheet cannot keep up with the churn.
+
+The value of the free spreadsheet is not just the zero dollar price. It is the operational habit it builds: every drop gets logged, every Monday morning the exposure gets reviewed, every dispute gets a packet. Those habits are what make any future paid system work. Skip the habits and the paid system is just an expensive version of the same chaos.
+
+Frequently asked questions
+
+How do I track trailers in a drop-and-hook operation?
+
+Use a trailer pool tracking spreadsheet with four tabs: a trailer master inventory, a drop log with a free-time clock, a dispute packet tab for detention invoices, and a utilization dashboard. The drop log is the core — it tracks trailer number, customer or DC, city and state, dropped date, driver who dropped it, free days allowed, pull-by date, per-day charge, days accrued, and dollar exposure. Sort by dollar exposure every Monday morning and call the top three. For fleets under twenty five trailers with no telematics, a spreadsheet is zero dollars and takes roughly fifteen minutes per week to maintain.
+
+What is trailer detention and who pays it?
+
+Trailer detention is a daily charge that a shipper, receiver, or distribution center imposes when a trailer stays on their yard beyond the agreed free-time window — typically two to five days at twenty five to one hundred dollars per day, per trailer. The carrier pays the detention invoice. In a drop-and-hook operation, the clock starts when the driver drops the trailer at the facility, not at the appointment time. Without a tracking system, carriers receive detention invoices weeks after the fact with no way to verify or dispute the charges.
+
+How many days of free time do shippers allow for dropped trailers?
+
+Most shippers and DCs allow two to five free days for a dropped trailer before detention charges begin. Retail DCs (Walmart, Target, Amazon, Home Depot) typically allow forty eight to seventy two hours. Grocery and food-service DCs often allow twenty four to forty eight hours. The free-time allowance is stated in the carrier-shipper agreement or the broker rate confirmation. If the agreement is silent, assume two free days. Carriers should always confirm the free-time policy in writing during rate negotiation — not after the invoice arrives.
+
+Do I need GPS to track my trailers?
+
+No. For fleets with under twenty five trailers, a spreadsheet is sufficient to track trailer location, free-time status, and detention exposure — provided someone updates the drop log consistently. GPS at roughly thirty dollars per trailer per month (seven thousand nine hundred twenty dollars per year for a twenty two trailer fleet) is justified when trailers move frequently between yards, when real-time location visibility prevents repositioning costs, or when detention exceeds the GPS subscription cost. A spreadsheet is the right tool for fleets where trailers sit at fixed locations for days at a time and the primary problem is free-time compliance, not real-time tracking.
+
+Can I use a spreadsheet for trailer pool management?
+
+Yes — for fleets under roughly forty trailers with trailers that stay at fixed shipper yards for days at a time, a spreadsheet is free, fast, and more reliable than a whiteboard or a dispatcher memory. It tracks trailer location, free-time clock, dollar exposure, and dispute evidence in four tabs. The breakpoint is roughly forty plus trailers, more than three yards, or a need for real-time location — at that point, a telematics or yard management system becomes cost-justified. The free spreadsheet also builds the operational habits (a fifteen minute Monday morning review, consistent drop logging) that make any future paid system work.
+
+Free-time clock works but you need the rest of the back office automated?
+
+Trailer tracking is one piece. Detention pay, IFTA fuel tax, POD tracking, fleet maintenance — these are the other four pieces that bleed money in a small trucking operation. We build the full back-office automation stack, spreadsheet by spreadsheet, so every dollar that leaves your business leaves on purpose. If your spreadsheet system has outgrown itself, we will look at what you have and tell you honestly whether the ROI justifies a custom build.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You are Losing Two Hundred Thousand Dollars a Year in Unpaid Detention — Here Is the Free Detention Pay Tracker That Shows You Exactly What Every Broker Owes You
+
+Your Drivers Spent One Thousand One Hundred Forty Four Hours Last Year Sitting at Docks Waiting for a Door — Here Is the Dock Scheduling Spreadsheet That Cuts Wait Time in Half
+
+Free Load-to-Truck Matching Spreadsheet — Finds Fifty Six Thousand Dollars Hiding on Your Whiteboard
+
+Free Fleet Utilization Tracker for Small Fleets — Shows You Where Every Hour and Every Dollar Goes
+
+Your Fleet Maintenance System Is Two Spreadsheets and a Shoebox of Receipts — Here Is the Free Tracker That Replaces All Three
+
+Your PODs Go Missing Before Billing — Here Is the Free Tracking System That Fixes It Without a TMS
+
+
+URL: https://www.jobsdonelabs.ai/blog/trailer-pool-drop-and-hook-tracking-spreadsheet-free/
+
+---
+
 # Your Fleet Maintenance 'System' Is Two Spreadsheets
 
 June 25, 2026 · by Ryne Bandolik · Logistics & Trucking
@@ -35491,6 +35844,8 @@ Spreadsheets work well up to roughly 10-12 trucks. Beyond that, three things bre
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free Drop-and-Hook Trailer Tracking Spreadsheet for Small Fleets
 
 Your Trucks Sat Idle for 3,780 Hours? Free Fleet Utilization Tracker
 
@@ -36858,6 +37213,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Free Drop-and-Hook Trailer Tracking Spreadsheet for Small Fleets
+
 Free Trucking Dispatch Spreadsheet for Small Fleets — Load Board, Driver Assignment, Deadhead, and Daily P&L
 
 Cut Empty Miles: Free Deadhead Tracker for Fleets
@@ -38123,6 +38480,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free Drop-and-Hook Trailer Tracking Spreadsheet for Small Fleets
 
 Your Trucks Sat Idle for 3,780 Hours Last Month — Free Fleet Utilization Tracker
 
@@ -39782,6 +40141,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+Free Drop-and-Hook Trailer Tracking Spreadsheet for Small Fleets
+
 Cut Empty Miles: Free Deadhead Tracker for Small Fleets
 
 Your Trucks Matched Suboptimally — Here Is the Free Load-Matching System
@@ -41285,6 +41646,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+Free Drop-and-Hook Trailer Tracking Spreadsheet for Small Fleets
+
 Free Trucking Dispatch Spreadsheet for Small Fleets — Load Board, Driver Assignment, Deadhead, and Daily P&L
 
 Your Trucks Sat Idle 3,780 Hours? Free Fleet Utilization Tracker
@@ -42269,6 +42632,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free Drop-and-Hook Trailer Tracking Spreadsheet for Small Fleets
 
 How to Automate Dispatch and Paperwork for a Trucking Company
 
