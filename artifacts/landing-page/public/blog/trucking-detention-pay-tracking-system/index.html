@@ -17,7 +17,7 @@
   <meta property="og:image:type" content="image/png" />
   <meta property="og:site_name" content="Jobs Done Labs" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="You're Losing $200,000 a Year in Unpaid Detention and You Don't Even Know It" />
+  <meta name="twitter:title" content="You're Losing $200,000 a Year in Unpaid Detention | Jobs Done Labs" />
   <meta name="twitter:description" content="The 4-step detention tracking system that gets small carriers paid — no TMS required." />
   <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
   <script type="application/ld+json">
@@ -48,53 +48,99 @@
   </script>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much detention pay are small carriers actually losing?",
-        "acceptedAnswer": { "@type": "Answer", "text": "For a 20-truck fleet averaging 3 detention events per truck per week at $75/hour with only 50% successfully collected, the math is stark: 20 trucks × 3 detentions × $75 × 52 weeks × 0.5 uncollected = $117,000/year in lost detention revenue. Even a 10-truck fleet loses roughly $58,500/year. The average small carrier recovers only 40% of detention fees owed because manual tracking — driver calls dispatcher, dispatcher emails broker, broker disputes timestamps, nobody follows up at 90 days — breaks at every link in the chain. Recovering just 1 extra detention invoice per truck per week at $75 × 50 trucks × 52 weeks = $195,000/year in additional revenue." }
-      },
-      {
-        "@type": "Question",
-        "name": "How does the 4-step detention tracking system work without buying a TMS?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Step 1: Auto-capture arrival and departure timestamps using your ELD's geofence data — no manual driver input. Step 2: Auto-generate a detention invoice with the correct rate ($25-100/hr based on equipment type), auto-calculated hours, and BOL/POD attached. Step 3: Auto-deliver the invoice to the broker via email with delivery tracking. Step 4: Auto-track payment status on a simple dashboard showing invoiced / acknowledged / disputed / paid, flagging anything past 45 days. The tech stack: Google Sheets + automation platform + Gmail + your ELD API. Total cost: $0-30/month. Setup time: 2-4 hours. You don't need a $500/month TMS — you need a repeatable system for the 4 steps every TMS vendor has spent years making complicated." }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take to set up an automated detention tracking system and what's the ROI?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A lightweight Excel + email template system can be set up in an afternoon — create a timestamp log, an invoice template with auto-calculated detention hours, and a weekly payment tracking sheet. The full automated system (ELD geofence → auto-invoice → broker email → payment dashboard) takes 2-4 weeks to build and integrate, depending on your ELD provider and broker volume. ROI is immediate: the first recovered detention invoice — typically $150-400 for a single event — covers the setup cost. For a 20-truck fleet, recovering from 50% to 80% collection rate on detention adds roughly $70,000/year to the bottom line. Jobs Done Labs prices every build against a hard ROI target, and our engagements are covered by the $30K-recovered-in-90-days guarantee: if documented recovery doesn't reach $30K, you pay nothing." },
-
-      {
-        "@type": "Question",
-        "name": "What other industries does Jobs Done Labs automate besides trucking?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Jobs Done Labs builds custom automation across four industries: Logistics & Trucking (fleet operations, dispatch, detention pay, IFTA compliance), Manufacturing (production scheduling, inventory sync, job costing, QuickBooks-to-shop-floor data flow), Professional Services (client onboarding, billing automation, document collection, scope creep tracking), and Home Services & Trades (field-to-office job costing, estimate workflows, material tracking). Every build starts with a free 30-minute audit where we map your current process, quantify what the inefficiency is costing you, and recommend 2-3 highest-ROI fixes — whether that's a simple spreadsheet template or full custom automation." }
-      },
-
-      {
-        "@type": "Question",
-        "name": "How does the Jobs Done Labs $30K guarantee work?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Every Jobs Done Labs engagement is backed by a written guarantee: if the automation system we build doesn't recover or save at least $30,000 in documented bottom-line impact within 90 days of deployment, you pay nothing. We measure against your actual pre-build baseline — we audit current numbers together before writing code. The $30K can come from labor savings (recovered admin hours at your loaded rate), error reduction (detention invoices you'd have missed, double-orders prevented), recovered revenue (detention pay collected, change orders billed), or cost avoidance (compliance fines prevented). If documented number at 90 days is below $30K, the engagement is free. We only take on work where the ROI math clearly exceeds $30K before we start." }
-      },
-      {
-        "@type": "Question",
-        "name": "How much detention pay does a single owner-operator lose per year?",
-        "acceptedAnswer": { "@type": "Answer", "text": "An owner-operator averaging 28 hours of detention per month at $50-100/hour with a 40% collection rate loses roughly $7,200 per year in unpaid detention — per driver. Here's the math: 28 hours/month × $75/hour × 12 months × 0.6 uncollected = $15,120 in detention generated annually, of which only $6,048 is actually collected. The $9,072 gap is money the driver earned by sitting at a dock but never billed or followed up on. For a small fleet with 5 owner-operators, that's $36,000-45,000/year in lost detention revenue across the fleet. The problem isn't the rate — it's the paperwork burden: most drivers can't justify 20 minutes of invoicing for a $75 detention bill, so they skip it. Automating the invoice generation and delivery eliminates that burden entirely." }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I prove detention to a broker who disputes my timestamps?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The single most effective way to prove detention is to use your ELD's geofence data — not driver logs. Every major ELD platform (Samsara, Motive, Geotab, Omnitracs) records GPS-based arrival and departure events tied to specific locations. This data is timestamped to the second, cannot be edited by the driver, and is admissible as proof in payment disputes. When a broker disputes your detention invoice, export the geofence report for that truck on that date — it shows exactly when the truck entered and exited the consignee's geofence. Pair it with the BOL showing the appointment time, and the broker's free-window hours. If the broker still refuses to pay, send both documents with a polite note: 'ELD geofence data shows truck on-site from 07:15 to 11:30. Free window per rate con is 2 hours. Billable detention: 2.25 hours at $75 = $168.75. Please advise if you have conflicting timestamp data.' In our experience, brokers pay 90%+ of disputed invoices once geofence data is provided — because they know the data is irrefutable and the carrier has documentation ready for a formal claim." }
-      },
-      {
-        "@type": "Question",
-        "name": "What's the simplest detention pay setup for a fleet with 1-5 trucks?",
-        "acceptedAnswer": { "@type": "Answer", "text": "For a 1-5 truck fleet, you don't need ELD API integration or custom software. The simplest setup that works takes 2 hours to build: (1) Create a Google Sheet with columns: Date, Truck, Customer, Arrival Time, Departure Time, Free Window (hrs), Billable Hours, Rate, Amount, Invoiced?, Paid?. (2) Have drivers text or call in arrival and departure times — put them in the sheet immediately. (3) Create one Google Docs invoice template with your logo, the detention calculation, and a space for BOL/POD attachments. (4) Every Friday, filter the sheet for 'Invoiced? = No' and generate invoices for the week's detention events. Email them to brokers in a batch. (5) Check the 'Paid?' column at 45 and 60 days. This 5-step manual system captures 80%+ of detention events versus the 40% that most small fleets collect. The key is consistency: the spreadsheet IS the system — as long as you log every detention event the day it happens, the Friday invoicing becomes a 20-minute routine instead of a forgotten task. Total cost: $0. When you're ready to automate the timestamp capture (so drivers don't have to call it in), we configure your ELD's geofence export to feed the sheet automatically." }
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much detention pay are small carriers actually losing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 20-truck fleet averaging 3 detention events per truck per week at $75/hour with only 50% successfully collected, the math is stark: 20 trucks × 3 detentions × $75 × 52 weeks × 0.5 uncollected = $117,000/year in lost detention revenue. Even a 10-truck fleet loses roughly $58,500/year. The average small carrier recovers only 40% of detention fees owed because manual tracking — driver calls dispatcher, dispatcher emails broker, broker disputes timestamps, nobody follows up at 90 days — breaks at every link in the chain. Recovering just 1 extra detention invoice per truck per week at $75 × 50 trucks × 52 weeks = $195,000/year in additional revenue."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the 4-step detention tracking system work without buying a TMS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Step 1: Auto-capture arrival and departure timestamps using your ELD's geofence data — no manual driver input. Step 2: Auto-generate a detention invoice with the correct rate ($25-100/hr based on equipment type), auto-calculated hours, and BOL/POD attached. Step 3: Auto-deliver the invoice to the broker via email with delivery tracking. Step 4: Auto-track payment status on a simple dashboard showing invoiced / acknowledged / disputed / paid, flagging anything past 45 days. The tech stack: Google Sheets + automation platform + Gmail + your ELD API. Total cost: $0-30/month. You don't need a $500/month TMS — you need a repeatable system for the 4 steps every TMS vendor has spent years making complicated."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to set up an automated detention tracking system and what's the ROI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lightweight spreadsheet + email template system can be set up in an afternoon — create a timestamp log, an invoice template, and a weekly payment tracking sheet. The full automated system (ELD geofence → auto-invoice → broker email → payment dashboard) takes 2-4 weeks to build and integrate, depending on your ELD provider and broker volume. ROI is immediate: the first recovered detention invoice — typically $150-400 for a single event — covers the setup cost. For a 20-truck fleet, improving from 50% to 80% collection rate on detention adds roughly $70,000/year to the bottom line. Jobs Done Labs prices every build against a hard ROI target, and our engagements are covered by the $30K-recovered-in-90-days guarantee: if documented recovery doesn't reach $30K, you pay nothing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What other industries does Jobs Done Labs automate besides trucking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jobs Done Labs builds custom automation across four industries: Logistics & Trucking (fleet operations, dispatch, detention pay, IFTA compliance), Manufacturing (production scheduling, inventory sync, job costing, QuickBooks-to-shop-floor data flow), Professional Services (client onboarding, billing automation, document collection, scope creep tracking), and Home Services & Trades (field-to-office job costing, estimate workflows, material tracking). Every build starts with a free 30-minute audit where we map your current process, quantify what the inefficiency is costing you, and recommend 2-3 highest-ROI fixes — whether that's a simple spreadsheet template or full custom automation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Jobs Done Labs $30K guarantee work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every Jobs Done Labs engagement is backed by a written guarantee: if the automation system we build doesn't recover or save at least $30,000 in documented bottom-line impact within 90 days of deployment, you pay nothing. We measure against your actual pre-build baseline — we audit current numbers together before writing code. The $30K can come from labor savings (recovered admin hours), error reduction (detention invoices you'd have missed), recovered revenue (detention pay collected), or cost avoidance. If documented number at 90 days is below $30K, the engagement is free. We only take on work where the ROI math clearly exceeds $30K before we start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much detention pay does a single owner-operator lose per year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An owner-operator averaging 28 hours of detention per month at $50-100/hour with a 40% collection rate loses roughly $7,200 per year in unpaid detention — per driver. Here's the math: 28 hours/month × $75/hour × 12 months × 0.6 uncollected = $15,120 in detention generated annually, of which only $6,048 is actually collected. The $9,072 gap is money the driver earned by sitting at a dock but never billed or followed up on. For a small fleet with 5 owner-operators, that's $36,000-45,000/year in lost detention revenue across the fleet. The problem isn't the rate — it's the paperwork burden: most drivers can't justify 20 minutes of invoicing for a $75 detention bill, so they skip it. Automating the invoice generation and delivery eliminates that burden entirely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prove detention to a broker who disputes my timestamps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The single most effective way to prove detention is to use your ELD's geofence data — not driver logs. Every major ELD platform (Samsara, Motive, Geotab, Omnitracs) records GPS-based arrival and departure events tied to specific locations. This data is timestamped to the second, cannot be edited by the driver, and is admissible as proof in payment disputes. When a broker disputes your detention invoice, export the geofence report for that truck on that date — it shows exactly when the truck entered and exited the consignee's geofence. Pair it with the BOL showing the appointment time, and the broker's free-window hours. If the broker still refuses to pay, send both documents with a polite note: \"ELD geofence data shows truck on-site from 07:15 to 11:30. Free window per rate con is 2 hours. Billable detention: 2.25 hours at $75 = $168.75. Please advise if you have conflicting timestamp data.\" In our experience, brokers pay 90%+ of disputed invoices once geofence data is provided — because they know the data is irrefutable and the carrier has documentation ready for a formal claim."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the simplest detention pay setup for a fleet with 1-5 trucks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 1-5 truck fleet, you don't need ELD API integration or custom software. The simplest setup that works takes 2 hours to build: (1) Create a Google Sheet with columns: Date, Truck, Customer, Arrival Time, Departure Time, Free Window (hrs), Billable Hours, Rate, Amount, Invoiced?, Paid?. (2) Have drivers text or call in arrival and departure times — put them in the sheet immediately. (3) Create one Google Docs invoice template with your logo, the detention calculation, and a space for BOL/POD attachments. (4) Every Friday, filter the sheet for \"Invoiced? = No\" and generate invoices for the week's detention events. Email them to brokers in a batch. (5) Check the \"Paid?\" column at 45 and 60 days. This 5-step manual system captures 80%+ of detention events versus the 40% that most small fleets collect. The key is consistency: the spreadsheet IS the system — as long as you log every detention event the day it happens, the Friday invoicing becomes a 20-minute routine instead of a forgotten task. Total cost: $0. When you're ready to automate the timestamp capture (so drivers don't have to call it in), we configure your ELD's geofence export to feed the sheet automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is free time in trucking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free time is the window a shipper or receiver allows before detention charges begin — the amount of waiting a carrier absorbs at no charge. For live loading and unloading, free time is typically two hours from arrival, and the clock starts at the appointment time or at check-in, whichever the rate confirmation specifies. For drop-and-hook operations, free time applies to the dropped trailer instead: typically two to five days from the moment of drop before per-day trailer detention begins. Free time is stated in the broker rate confirmation or the carrier-shipper agreement. If the document is silent, assume two hours for live loads and two days for dropped trailers — and get the number confirmed in writing before you accept the load, because a free time you did not negotiate is a free time you will not win in a dispute."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is detention pay per hour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Detention pay for live loading and unloading typically runs twenty five to one hundred dollars per hour, with seventy five dollars per hour being the most common rate in broker rate confirmations. The rate varies by equipment type (reefers and flatbeds command more than dry vans), by region, and by broker. Trailer detention — for a dropped trailer sitting past its free days — is usually billed per day rather than per hour, at roughly twenty five to one hundred dollars per day per trailer. Two rules matter more than the rate itself: the rate must be written into the rate confirmation before you accept the load, and the clock must be documented with an independent timestamp (ELD geofence data, gate receipt, or BOL) rather than a driver's estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I bill detention to a broker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bill detention in five steps. First, capture the arrival timestamp from your ELD geofence data — not a driver note. Second, calculate billable hours as total on-site time minus the free time window stated in the rate confirmation. Third, generate an invoice that shows the load number, the arrival and departure timestamps, the free window, the billable hours, the hourly rate, and the total. Fourth, attach the BOL or POD and the geofence export so the broker has independent proof in the same email. Fifth, send it within seventy two hours of the detention event and log the submission date so you can follow up at fifteen and thirty days. Detention claims submitted within three days are paid far more consistently than claims submitted at the end of the month, because the broker can still verify the appointment against their own records."
+      }
+    }
+  ]
+}
   </script>
   <script type="application/ld+json">
   {
@@ -292,6 +338,17 @@
 
       <p>Setup time: 2-4 hours to build the Sheets + template pipeline. A full automation with ELD API integration takes 2-4 weeks to build and test — but the manual pipeline works today and captures revenue while the automation is being built.</p>
 
+      <h2>Detention Is a Trailer Problem Too — The Free-Time Clock</h2>
+      <p>Everything above is about <em>driver</em> detention: the truck arrives, the dock makes it wait, you bill for the wait. But if you run drop-and-hook, there is a second detention problem that most carriers do not bill for at all — <strong>trailer detention</strong>. The trailer gets dropped at a distribution center, the DC treats it as free warehouse space, and the clock starts at the moment of drop, not at the appointment.</p>
+      <p>The arithmetic is the same three formulas, just applied to a trailer instead of a truck:</p>
+      <ul>
+        <li><strong>Pull-by date</strong> = dropped date + free days allowed</li>
+        <li><strong>Days accrued</strong> = max(0, today − pull-by date)</li>
+        <li><strong>Dollar exposure</strong> = days accrued × per-day charge</li>
+      </ul>
+      <p>Most shippers allow two to five free days. After that, the meter runs at roughly twenty five to one hundred dollars per day, per trailer. A trailer that sits eight days past its pull-by date at eighty dollars per day has accrued six hundred forty dollars — and the invoice will arrive six weeks later, when nobody remembers which trailer sat where or who dropped it.</p>
+      <p>If your fleet drops trailers at DCs and shipper yards, run both systems side by side: this detention tracker for the truck, and the <a href="/blog/trailer-pool-drop-and-hook-tracking-spreadsheet-free/">free drop-and-hook trailer tracking spreadsheet</a> for the trailer pool. They are two halves of the same free-time problem, and together they close the gap where carriers leak the most unbilled revenue.</p>
+
       <h2>What If You Want It Built For You?</h2>
       <p>The above system works for a dispatcher who is comfortable building Google Sheets automations and writing a few email templates. If your dispatcher's time is better spent booking loads — and it almost certainly is — we build the entire 4-step system for you.</p>
       <p>Our approach: we audit your current detention process, map your broker payment terms and ELD data structure, build the system end-to-end (ELD → timestamp log → auto-invoice → broker email → payment dashboard), and train your team on it. The cost is scoped per engagement against a hard ROI target — and every build is covered by our $30K-recovered-in-90-days guarantee. If documented recovery doesn't reach $30K, you pay nothing.</p>
@@ -327,6 +384,12 @@
         <p>The single most effective way to prove detention is to use your ELD's geofence data — not driver logs. Every major ELD platform (Samsara, Motive, Geotab, Omnitracs) records GPS-based arrival and departure events tied to specific locations. This data is timestamped to the second, cannot be edited by the driver, and is admissible as proof in payment disputes. When a broker disputes your detention invoice, export the geofence report for that truck on that date — it shows exactly when the truck entered and exited the consignee's geofence. Pair it with the BOL showing the appointment time, and the broker's free-window hours. If the broker still refuses to pay, send both documents with a polite note: "ELD geofence data shows truck on-site from 07:15 to 11:30. Free window per rate con is 2 hours. Billable detention: 2.25 hours at $75 = $168.75. Please advise if you have conflicting timestamp data." In our experience, brokers pay 90%+ of disputed invoices once geofence data is provided — because they know the data is irrefutable and the carrier has documentation ready for a formal claim.</p>
         <h3>What's the simplest detention pay setup for a fleet with 1-5 trucks?</h3>
         <p>For a 1-5 truck fleet, you don't need ELD API integration or custom software. The simplest setup that works takes 2 hours to build: (1) Create a Google Sheet with columns: Date, Truck, Customer, Arrival Time, Departure Time, Free Window (hrs), Billable Hours, Rate, Amount, Invoiced?, Paid?. (2) Have drivers text or call in arrival and departure times — put them in the sheet immediately. (3) Create one Google Docs invoice template with your logo, the detention calculation, and a space for BOL/POD attachments. (4) Every Friday, filter the sheet for "Invoiced? = No" and generate invoices for the week's detention events. Email them to brokers in a batch. (5) Check the "Paid?" column at 45 and 60 days. This 5-step manual system captures 80%+ of detention events versus the 40% that most small fleets collect. The key is consistency: the spreadsheet IS the system — as long as you log every detention event the day it happens, the Friday invoicing becomes a 20-minute routine instead of a forgotten task. Total cost: $0. When you're ready to automate the timestamp capture (so drivers don't have to call it in), we configure your ELD's geofence export to feed the sheet automatically.</p>
+        <h3>What is free time in trucking?</h3>
+        <p>Free time is the window a shipper or receiver allows before detention charges begin — the amount of waiting a carrier absorbs at no charge. For live loading and unloading, free time is typically two hours from arrival, and the clock starts at the appointment time or at check-in, whichever the rate confirmation specifies. For drop-and-hook operations, free time applies to the dropped trailer instead: typically two to five days from the moment of drop before per-day trailer detention begins. Free time is stated in the broker rate confirmation or the carrier-shipper agreement. If the document is silent, assume two hours for live loads and two days for dropped trailers — and get the number confirmed in writing before you accept the load, because a free time you did not negotiate is a free time you will not win in a dispute.</p>
+        <h3>How much is detention pay per hour?</h3>
+        <p>Detention pay for live loading and unloading typically runs twenty five to one hundred dollars per hour, with seventy five dollars per hour being the most common rate in broker rate confirmations. The rate varies by equipment type (reefers and flatbeds command more than dry vans), by region, and by broker. Trailer detention — for a dropped trailer sitting past its free days — is usually billed per day rather than per hour, at roughly twenty five to one hundred dollars per day per trailer. Two rules matter more than the rate itself: the rate must be written into the rate confirmation before you accept the load, and the clock must be documented with an independent timestamp (ELD geofence data, gate receipt, or BOL) rather than a driver's estimate.</p>
+        <h3>How do I bill detention to a broker?</h3>
+        <p>Bill detention in five steps. First, capture the arrival timestamp from your ELD geofence data — not a driver note. Second, calculate billable hours as total on-site time minus the free time window stated in the rate confirmation. Third, generate an invoice that shows the load number, the arrival and departure timestamps, the free window, the billable hours, the hourly rate, and the total. Fourth, attach the BOL or POD and the geofence export so the broker has independent proof in the same email. Fifth, send it within seventy two hours of the detention event and log the submission date so you can follow up at fifteen and thirty days. Detention claims submitted within three days are paid far more consistently than claims submitted at the end of the month, because the broker can still verify the appointment against their own records.</p>
 </section>
 
       <div class="related">

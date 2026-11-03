@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Shop Scheduling Spreadsheet — Free Excel Template | Jobs Done Labs</title>
+  <meta name="description" content="Your whiteboard schedule breaks every Tuesday. Free job shop scheduling spreadsheet with machine load calendar and rush-job ripple analysis." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/job-shop-production-scheduling-spreadsheet-free-excel/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/job-shop-production-scheduling-spreadsheet-free-excel/" />
+  <meta property="og:title" content="Job Shop Scheduling Spreadsheet — Free Excel Template | Jobs Done Labs" />
+  <meta property="og:description" content="Your whiteboard schedule breaks every Tuesday. Free job shop scheduling spreadsheet with machine load calendar and rush-job ripple analysis." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Job Shop Scheduling Spreadsheet — Free Excel Template | Jobs Done Labs" />
+  <meta name="twitter:description" content="Your whiteboard schedule breaks every Tuesday. Free job shop scheduling spreadsheet with machine load calendar and rush-job ripple analysis." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
+
+  <!-- BLOGPOSTING JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Job Shop Scheduling Spreadsheet — Free Excel Template",
+    "description": "Your whiteboard schedule breaks every Tuesday. Free job shop scheduling spreadsheet with machine load calendar and rush-job ripple analysis.",
+    "datePublished": "2026-11-03",
+    "dateModified": "2026-11-03",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "sameAs": "https://www.linkedin.com/in/rynebandolik/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai"
+    },
+    "image": "https://www.jobsdonelabs.ai/og-image.jpg",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/job-shop-production-scheduling-spreadsheet-free-excel/"
+  }
+  </script>
+
+  <!-- FAQPAGE JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I create a production schedule for a job shop without software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Build a machine load calendar in a spreadsheet with one row per machine and columns for each day of the week. Enter each job's estimated hours and due date, then use a priority score formula that combines days until due, remaining operations, and estimated remaining hours. The sheet shows which machines are overloaded, which jobs are at risk of being late, and what happens when you insert a rush job. Update it in 20 minutes every Monday instead of spending hours rearranging a whiteboard."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best free scheduling spreadsheet for job shop manufacturing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best free scheduling spreadsheet includes a machine load calendar (machines by day with hour loading and red/yellow/green capacity indicators), a due-date priority score that auto-ranks jobs by urgency, a what-if insert row that calculates the ripple effect of adding one rush job, a changeover matrix to group similar-material jobs, and a daily dispatch list printable per machine. This Jobs Done Labs template is free, works in Excel or Google Sheets, and sets up in under 90 minutes with no software purchases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle rush jobs in a production schedule without pushing everything late?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the what-if insert: enter the rush job's operations, hours per operation, and due date into the scheduling spreadsheet. The sheet auto-calculates which machines become overloaded and which existing jobs slip past their due dates. Before saying yes to the rush, you can see exactly which customers will be affected and by how many days. This gives you the data to either negotiate a realistic delivery date with the rush customer or proactively communicate delays to the affected customers before they call you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate machine loading in a spreadsheet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Machine loading equals the total estimated hours assigned to a machine for a given day. In the spreadsheet, each machine gets one row per day; for each job scheduled on that machine that day, add its estimated hours. The loading percentage equals assigned hours divided by available hours (typically eight per shift). Color-code the cell: green at eighty percent or below (margin for unexpected work), yellow at eighty to one hundred percent (tight but doable), red above one hundred percent (overloaded — jobs will shift to the next day, creating a cascade of delays). A SUMIF formula auto-aggregates hours across all jobs for each machine-day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is changeover time and how do I reduce it in a job shop schedule?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Changeover time is the downtime between production runs when a machine switches from one material, part geometry, or setup to another. For example, switching a CNC mill from steel to aluminum can require thirty to sixty minutes of chip cleanup, coolant adjustment, and fixture change. In a twelve-machine shop, three hours of changeover per week wastes twenty to fifty thousand dollars annually in lost spindle time. You reduce it by grouping same-material, same-fixture jobs on the same machine on the same day, and by using a changeover matrix that shows the setup time cost for every material-to-material transition."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BREADCRUMBLIST JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.jobsdonelabs.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.jobsdonelabs.ai/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Job Shop Scheduling Spreadsheet — Free Excel Template",
+        "item": "https://www.jobsdonelabs.ai/blog/job-shop-production-scheduling-spreadsheet-free-excel/"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80" alt="CNC machine shop floor with production scheduling board" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Manufacturing</span>
+      <h1>You Rearranged the Whiteboard Sunday Night, a Tuesday Rush Job Pushed Two Friday Deadlines to Next Wednesday, and Nobody Noticed Until the Customer Called — Here Is the Free Job Shop Scheduling Spreadsheet That Shows Every Machine's Load by Day</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · November 3, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">Job shop scheduling is harder than anyone admits: every job has a different routing, changeover time means sequence matters, outside processing is a black hole, and one rush job silently pushes half your backlog late. This free spreadsheet gives you a machine load calendar with red/yellow/green capacity flags, a due-date priority score that auto-ranks urgent work, a what-if insert that calculates the ripple effect of adding one new job, and a changeover matrix to group same-material jobs and recover hours of lost spindle time. The first organic result for "job shop scheduling spreadsheet free" costs ninety-nine dollars. This one costs nothing.</p>
+      </div>
+
+      <h2>Why job shop scheduling is harder than anyone admits</h2>
+      <p>Most scheduling advice assumes you are running a flow shop: same routing, same operations, predictable cycle times. You run parts through the saw, then the mill, then deburr, then ship. In a <strong>job shop</strong>, every job has a different routing. Job 1437 goes saw, mill, lathe, heat treat, grind, ship. Job 1438 goes lathe, mill, deburr, ship. Job 1439 goes saw, mill, outside anodize, inspection, ship. The routing variability is what makes scheduling impossible to automate with a simple Gantt chart — and why most software fails. Four variables make job shop scheduling uniquely hard:</p>
+      <ol>
+        <li><strong>Variable routings.</strong> Every job has a different sequence of operations on different machines. One job skips the lathe entirely. Another goes through the lathe twice. Standard scheduling algorithms assume a flow.</li>
+        <li><strong>Changeover cost.</strong> Going from steel to aluminum on the same CNC mill costs thirty to sixty minutes of cleanup time. The sequence of jobs on each machine matters — and if you ignore it, you lose three to eight hours per machine per week in changeover downtime.</li>
+        <li><strong>Outside processing black holes.</strong> You send parts to anodize, heat treat, or plating. They come back in a window — five to seven days, sometimes ten. You need to schedule machines for their return, but the return date is a range, not a date. If the parts arrive early, the machine sits idle. If they arrive late, the machine is idle waiting. Either way, you lose capacity.</li>
+        <li><strong>The hot-job disruption loop.</strong> A customer calls Tuesday morning: "We need fifty pieces by Friday." You say yes. You squeeze it onto the lathe Wednesday, the mill Thursday, inspection Friday. Two jobs that were due Friday — and were on track — now start on Friday afternoon and ship next Wednesday. Nobody called those customers. They called you.</li>
+      </ol>
+      <p>The four variables compound: every hot job triggers a changeover chain that ripples through outside processing uncertainty, pushing jobs whose routings were already fragile. A whiteboard cannot model this. A spreadsheet can — if it is built for the problem.</p>
+
+      <h2>The machine load calendar: your whiteboard, digitized</h2>
+      <p>This is the core of the spreadsheet. It replaces the magnetic whiteboard — the one that takes three hours every Sunday to rearrange and gets wiped when someone leans against it. The machine load calendar has one row per machine and columns for each day of the week. Each cell shows which jobs are scheduled on that machine that day, with estimated hours. Color-coded capacity indicators tell you at a glance whether the machine is fine (green, eighty percent or below), tight (yellow, eighty to one hundred percent), or overloaded (red, above one hundred percent).</p>
+      <p>If the CNC mill shows red on Wednesday, you do not need to finish reading an email to know there is a problem — the color tells you before the words do. Sort jobs within each cell by due-date priority and the most urgent work floats to the top of the machine's queue automatically.</p>
+      <div class="callout">
+        <strong style="display:block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Why this works when software does not</strong>
+        <p style="margin:0">APS software like JobPack or Eziil costs five hundred dollars per month and assumes you have standard routings, ERP integration, and a full-time scheduler who can maintain the data. A twelve-machine job shop does not have any of those things. The machine load calendar takes ninety minutes to set up, zero dollars to run, and the owner can see every machine's load in one glance — the same visual snapshot the whiteboard gives, but with math behind the colors.</p>
+      </div>
+
+      <h2>The due-date priority score: stop guessing which job is hottest</h2>
+      <p>When you have forty open orders and every customer thinks theirs is the priority, you need an objective ranking. The due-date priority score combines three factors into a single number:</p>
+      <ul>
+        <li><strong>Days until due</strong> — fewer days remaining equals higher urgency</li>
+        <li><strong>Remaining operations count</strong> — more operations left equals higher urgency (more chances to be delayed)</li>
+        <li><strong>Estimated remaining hours</strong> — more hours equals higher urgency (the job needs more machine time)</li>
+      </ul>
+      <p>The formula: priority score equals (one divided by days-until-due plus one) times remaining-operations times estimated-remaining-hours. Sort the entire job list by this score descending and the hottest jobs float to the top — no debate, no "but my customer is more important," just math. Update it every Monday and the ranking self-corrects as jobs progress and due dates approach.</p>
+
+      <h2>The what-if insert: the feature that does not exist in free tools</h2>
+      <p>This is the single most-requested scheduling feature in job shops — and it does not exist in any free tool. At the bottom of the machine load calendar, a row labeled "WHAT-IF INSERT." Enter the new job's operations, hours per operation, and due date. The spreadsheet recalculates machine loading for every machine affected, changes the capacity colors where overloads occur, and highlights which existing jobs just slipped past their due dates — and by how many days.</p>
+      <p>Before you say "yes we can rush it" to a customer, you now have data. The sheet tells you: "Accepting this job pushes Job 1452 from Friday to the following Wednesday on the mill, and Job 1467 from Thursday to Monday on the lathe. Contact these two customers before you accept the rush." That is the decision-support your scheduler needs — the one who also does AP, answers the phone, and was about to say yes because she did not have time to calculate the consequences.</p>
+
+      <h2>The changeover matrix: recover hours of lost spindle time</h2>
+      <p>A small reference table at the bottom of the scheduling sheet tracks the setup time cost of every material-to-material transition on each machine. It looks like this:</p>
+      <div class="comparison">
+        <table>
+          <tr><th>From / To</th><th>Steel</th><th>Aluminum</th><th>Stainless</th><th>Plastic</th></tr>
+          <tr><td>Steel</td><td>10 min</td><td style="background:#fff3cd">45 min</td><td style="background:#fff3cd">35 min</td><td>15 min</td></tr>
+          <tr><td>Aluminum</td><td style="background:#fff3cd">45 min</td><td>10 min</td><td style="background:#fff3cd">50 min</td><td>15 min</td></tr>
+          <tr><td>Stainless</td><td style="background:#fff3cd">35 min</td><td style="background:#fff3cd">50 min</td><td>10 min</td><td>20 min</td></tr>
+          <tr><td>Plastic</td><td>15 min</td><td>15 min</td><td>20 min</td><td>10 min</td></tr>
+        </table>
+      </div>
+      <p>When you schedule multiple steel jobs back-to-back on the same machine on the same day, you avoid the forty-five-minute transition to aluminum and back. Across twelve machines running five days a week, grouping same-material jobs typically recovers two to five hours of changeover time per week. At a shop rate of eighty dollars per hour, that is roughly one hundred sixty to four hundred dollars of recovered capacity — per week, every week — from a single 5-by-5 reference table.</p>
+
+      <h2>The daily dispatch list: what the machinist sees</h2>
+      <p>The machine load calendar is for the scheduler. The dispatch list is for the machinist. One printable page per machine per day: what runs, in what order, with setup notes ("fixture A is already on the machine from yesterday — do not remove"). Tape it to the machine. The machinist knows what to run next without walking to the office. When the Friday rush job arrives Thursday afternoon, nobody needs to stop what they are doing — the dispatch list already has tomorrow's sequence, and the what-if insert already told the scheduler what gets bumped.</p>
+
+      <h2>The Monday 20-minute reschedule: your wife gets her Sunday back</h2>
+      <div class="checklist">
+        <h3>Every Monday morning, in this order:</h3>
+        <ol>
+          <li>Update completed operations from last week — mark jobs as moved to their next operation</li>
+          <li>Re-score due-date priorities — the formula auto-updates as days-until-due decreases</li>
+          <li>Adjust the machine load calendar — shift unfinished work to this week, fill capacity</li>
+          <li>Check outside-processing returns — any parts due back this week? Schedule the receiving machine</li>
+          <li>Print new dispatch lists — one per machine, tape to machine</li>
+        </ol>
+      </div>
+      <p>This is the ritual that replaces three hours of whiteboard rearrangement every Sunday. Twenty minutes, Monday morning, data-driven. The owner's wife — who also does AP, AR, and answers the phone — gets her Sunday back. That alone is worth a spreadsheet.</p>
+
+      <h2>When the sheet stops working</h2>
+      <p>This spreadsheet works for job shops running up to fifteen machines and roughly one hundred open orders. You will know you have outgrown it when:</p>
+      <ul>
+        <li><strong>You need real-time WIP visibility feeding into the schedule.</strong> The spreadsheet is updated weekly — if you need daily or shift-level updates because jobs move too fast, you need a system, not a sheet</li>
+        <li><strong>You have more than fifteen machines.</strong> The calendar gets too wide to scan in one glance</li>
+        <li><strong>You need cost accounting per job per operation feeding into the schedule.</strong> When you start asking "what does it cost to schedule this job on the mill instead of the older machine?" you need MES software</li>
+        <li><strong>Multiple schedulers need to update the schedule simultaneously.</strong> A spreadsheet is single-user by design. Two schedulers editing at once means overwritten data</li>
+      </ul>
+      <p>At that point, you are ready for APS or MES software — the category, not a specific vendor. The honest breakpoint keeps the page credible: this sheet solves a real problem for a real size of shop, and when you outgrow it, you will know exactly why and what you need next.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>How do I create a production schedule for a job shop without buying software?</h3>
+        <p>Build a machine load calendar in a spreadsheet with one row per machine and columns for each day. Enter each job's estimated hours and due date, then use a priority score formula that combines days until due, remaining operations, and estimated remaining hours. The sheet shows which machines are overloaded, which jobs are at risk of being late, and what happens when you insert a rush job. Update it in twenty minutes every Monday instead of spending hours rearranging a whiteboard.</p>
+
+        <h3>What is the best free scheduling spreadsheet for manufacturing?</h3>
+        <p>The best free scheduling spreadsheet includes a machine load calendar with red/yellow/green capacity indicators, a due-date priority score that auto-ranks jobs by urgency, a what-if insert row that calculates the ripple effect of adding a rush job, a changeover matrix to group same-material jobs, and a daily dispatch list printable per machine. This Jobs Done Labs template is free, works in Excel or Google Sheets, and sets up in under ninety minutes.</p>
+
+        <h3>How do I handle rush jobs without pushing everything late?</h3>
+        <p>Use the what-if insert: enter the rush job's details into the scheduling spreadsheet. The sheet calculates which machines become overloaded and which existing jobs slip past their due dates — and by how many days. Before accepting the rush, you can see exactly which customers will be affected and proactively communicate delays. This turns a yes/no decision into a data-driven negotiation: "We can do it, but these two jobs will be two days late. Do you still want us to proceed?"</p>
+
+        <h3>How do I calculate machine loading in a spreadsheet?</h3>
+        <p>Machine loading equals total estimated hours assigned to a machine for a given day. For each job scheduled on that machine, add its estimated hours. Loading percentage equals assigned hours divided by available hours (typically eight per shift). Color-code: green at eighty percent or below, yellow at eighty to one hundred percent, red above one hundred percent. Red means jobs will spill into the next day, creating a cascade — fix it before the shift starts, not during.</p>
+
+        <h3>What is changeover time and how much does it cost?</h3>
+        <p>Changeover time is the downtime when a machine switches between different materials or setups. Going from steel to aluminum on a CNC mill costs thirty to sixty minutes in chip cleanup, coolant adjustment, and fixture changes. In a twelve-machine shop, three hours of changeover per week wastes twenty thousand to fifty thousand dollars per year in lost spindle time. Grouping same-material jobs on the same machine on the same day — guided by a simple changeover matrix — typically cuts changeover time by forty to fifty percent with no investment beyond better sequencing.</p>
+
+        <h3>How does Jobs Done Labs automate scheduling beyond spreadsheets?</h3>
+        <p>When a spreadsheet is not enough — when you need real-time WIP data feeding into the schedule, automated customer notifications when jobs ship, or a dashboard that the whole shop floor can see — Jobs Done Labs builds custom scheduling automation that connects your existing tools into one system. Every engagement is backed by the thirty-thousand-dollar guarantee: if the system does not recover or save at least thirty thousand dollars in bottom-line impact within ninety days, you pay nothing. Book a free thirty-minute audit at jobsdonelabs.ai/contact.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/small-manufacturing-production-scheduling-guide/">
+            <span class="cat">Manufacturing</span>
+            <span class="title">Your Production Scheduling Guide — Plan What Runs Where</span>
+          </a>
+          <a class="related-card" href="/blog/manufacturing-wip-shop-floor-order-visibility-tracker/">
+            <span class="cat">Manufacturing</span>
+            <span class="title">WIP Tracker: Know Where Every Job Is Right Now</span>
+          </a>
+          <a class="related-card" href="/blog/supplier-delivery-tracking-manufacturing-spreadsheet/">
+            <span class="cat">Manufacturing</span>
+            <span class="title">Supplier Delivery Tracker — Never Miss an Inbound Again</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Your whiteboard cannot model the Tuesday rush job</h2>
+        <p>When a customer calls with an urgent order and you need to know — in sixty seconds, not after rearranging magnets for an hour — which machines are overloaded, which jobs will be late, and by how many days, you need more than a whiteboard. You need a real scheduling system. Jobs Done Labs builds custom production scheduling automation that connects your shop floor data, outside processing partners, and customer notifications into one dashboard. Every build is backed by the thirty-thousand-dollar guarantee: if the system does not save or recover at least thirty thousand dollars in ninety days, you pay nothing.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/small-manufacturing-production-scheduling-guide/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Production Scheduling Guide — the Complete How-To for Job Shops</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/manufacturing-wip-shop-floor-order-visibility-tracker/" style="font-weight:600;color:#1466FF;text-decoration:none">WIP Tracker: Know Where Every Job Is Right Now on Your Shop Floor</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/supplier-delivery-tracking-manufacturing-spreadsheet/" style="font-weight:600;color:#1466FF;text-decoration:none">Supplier Delivery Tracking Spreadsheet — Never Miss an Inbound Shipment</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>

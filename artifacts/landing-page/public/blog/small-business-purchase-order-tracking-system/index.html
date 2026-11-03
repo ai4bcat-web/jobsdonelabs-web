@@ -17,7 +17,7 @@
   <meta property="og:image:type" content="image/png" />
   <meta property="og:site_name" content="Jobs Done Labs" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tracking 50 Purchase Orders in WhatsApp? A PO Tracking System That Actually Works" />
+  <meta name="twitter:title" content="You're Tracking 50 Purchase Orders in WhatsApp | Jobs Done Labs" />
   <meta name="twitter:description" content="The 3-tier system for tracking purchase orders across suppliers — free spreadsheet to full automation." />
   <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.jpg" />
   
@@ -66,27 +66,84 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What PO numbering system should I use?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Use the format PO-YYYY-NNN — e.g. PO-2026-042 for your 42nd PO of 2026. This is clean, sortable, and searchable. Avoid supplier-prefixed schemes (ACME-001, BETA-001) because they create conflicts when you change suppliers or when two suppliers ship on the same order. Avoid date-only schemes (06182026-01) because they're unreadable in WhatsApp and email subject lines. The year prefix is critical: after 12 months, you'll have hundreds of POs and being able to filter by year saves hours. Don't restart numbering each year — sequential across the company lifetime. If you're starting mid-year, pick up from your last existing PO number or start at PO-2026-001." }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I handle partial shipments in my tracker?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A single PO can arrive in 2–4 partial shipments over several weeks. Don't create separate PO numbers for each shipment — that breaks the audit trail. Instead, add a 'Shipments' sub-table or use a separate 'Shipments Received' tab in your tracker: Shipment Date | PO # | Items Received | Qty Received | Carrier | Tracking # | Condition on Arrival | Notes. The PO status stays 'Partially Received' until the last shipment arrives, then moves to 'Received'. In your master PO row, add a 'Qty Received' column and a 'Qty Remaining' calculated column (=Qty Ordered − Qty Received). Conditional formatting: yellow when partially received, green when Qty Remaining = 0. The real risk with partials is paying the full invoice after receiving only half the shipment — always match the invoice against actual received quantities before approving payment." }
-      },
-      {
-        "@type": "Question",
-        "name": "When should I stop using a spreadsheet and switch to software?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The spreadsheet breaks at roughly 200 open POs or 3+ people updating it. Before that threshold, a well-structured Google Sheets tracker with the discipline of 'update within 24 hours of any change' works fine — and it costs $0. Signs you've outgrown it: (a) you're spending more than 2 hours/week hunting for PO status across email, WhatsApp, and the sheet, (b) supplier lead times are slipping and you're discovering it through stockouts, not the tracker, (c) two people have updated the same row with conflicting info, (d) you can't answer 'what's arriving this week?' without opening 4 different apps. At that point, you have three options: add Google Apps Script automation to the sheet (Tier 2 in this guide, $0/month, 1 day to set up), buy dedicated PO software like Precoro or Procurify ($300–600/month, 2–4 week implementation), or build a custom PO command center with Jobs Done Labs ($2K–4K one-time, $200/month maintenance — single dashboard, supplier portal integrations, auto-alerts, invoice matching). The right choice depends on your order volume and whether you have the in-house bandwidth to implement software." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What PO numbering system should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the format PO-YYYY-NNN — e.g. PO-2026-042 for your 42nd PO of 2026. This is clean, sortable, and searchable. Avoid supplier-prefixed schemes (ACME-001, BETA-001) because they create conflicts when you change suppliers or when two suppliers ship on the same order. Avoid date-only schemes (06182026-01) because they're unreadable in WhatsApp and email subject lines. The year prefix is critical: after 12 months, you'll have hundreds of POs and being able to filter by year saves hours. Don't restart numbering each year — sequential across the company lifetime. If you're starting mid-year, pick up from your last existing PO number or start at PO-2026-001."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I handle partial shipments in my tracker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single PO can arrive in 2–4 partial shipments over several weeks. Don't create separate PO numbers for each shipment — that breaks the audit trail. Instead, add a 'Shipments' sub-table or use a separate 'Shipments Received' tab in your tracker: Shipment Date | PO # | Items Received | Qty Received | Carrier | Tracking # | Condition on Arrival | Notes. The PO status stays 'Partially Received' until the last shipment arrives, then moves to 'Received'. In your master PO row, add a 'Qty Received' column and a 'Qty Remaining' calculated column (=Qty Ordered − Qty Received). Conditional formatting: yellow when partially received, green when Qty Remaining = 0. The real risk with partials is paying the full invoice after receiving only half the shipment — always match the invoice against actual received quantities before approving payment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I stop using a spreadsheet and switch to software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The spreadsheet breaks at roughly 200 open POs or 3+ people updating it. Before that threshold, a well-structured Google Sheets tracker with the discipline of 'update within 24 hours of any change' works fine — and it costs $0. Signs you've outgrown it: (a) you're spending more than 2 hours/week hunting for PO status across email, WhatsApp, and the sheet, (b) supplier lead times are slipping and you're discovering it through stockouts, not the tracker, (c) two people have updated the same row with conflicting info, (d) you can't answer 'what's arriving this week?' without opening 4 different apps. At that point, you have three options: add Google Apps Script automation to the sheet (Tier 2 in this guide, $0/month, 1 day to set up), buy dedicated PO software like Precoro or Procurify ($300–600/month, 2–4 week implementation), or build a custom PO command center with Jobs Done Labs ($2K–4K one-time, $200/month maintenance — single dashboard, supplier portal integrations, auto-alerts, invoice matching). The right choice depends on your order volume and whether you have the in-house bandwidth to implement software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I reconcile purchase orders with invoices at month-end?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pull every invoice received this month and match each one to a PO number before approving payment. In the tracker, filter the PO register to status open or partial, then compare the invoice amount and quantity against the quantity actually received, not the quantity ordered. Three outcomes are possible: the invoice matches the received quantity and clears for payment, the invoice covers goods that never arrived and gets disputed in writing before the payment window closes, or the invoice has no PO at all and needs a buyer to confirm whether the purchase was authorized. The reconciliation tab lists everything with an invoice received but not yet paid, grouped by supplier, so the bookkeeper can match before cutting checks. This single habit prevents the most expensive failure in a manual PO process: paying a full invoice after receiving a partial shipment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prevent duplicate purchase orders from different suppliers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The duplicate order happens because two buyers cannot see each other commitments, or because one buyer forgot an earlier PO was still open. Prevent it with three rules. First, every PO is entered in the register the moment it is issued, never after the fact, so open commitments are visible to everyone. Second, before creating a PO, search the register by item or part number rather than by supplier, because the duplicate usually goes to a different vendor. Third, add an open commitments total by item at the top of the register: if the sheet shows three hundred units of a component already on order, the next buyer sees it before dialing a supplier. A weekly open-PO review, sorted by item and by supplier, catches anything the search missed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What columns should a purchase order tracker have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A working PO register needs these columns: PO number, date issued, supplier, item description, part or SKU number, unit of measure, quantity ordered, unit price, line total, expected delivery date, quantity received, quantity outstanding as a formula, days overdue as a formula, receiving date, invoice number, invoice amount, invoice received yes or no, invoice paid yes or no, payment date, status (open, partial, complete, closed), and notes. A second tab holds the supplier directory: contact name, phone, email, payment terms, typical lead time, and last order date. The formulas and the status field are what make the register a tracking tool rather than a list: quantity outstanding and days overdue recalculate automatically, and conditional formatting turns a row yellow on a partial shipment and red once it passes the expected delivery date by three days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get suppliers to actually acknowledge my POs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Send the PO as a PDF attachment rather than a casual email line, and put a forty-eight hour acknowledgment deadline in the body: confirm receipt and ship date by a specific date. If there is no response inside forty-eight hours, escalate with a direct follow-up naming the line items and the required ship date. For repeat offenders, add acknowledgment terms to the supplier agreement stating that unacknowledged orders may be cancelled after three business days. Acknowledgment rate is a leading indicator of reliability: the suppliers who ignore POs are usually the same suppliers who miss ship dates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I pay before or after receiving a shipment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After receiving and inspecting, whenever possible. For new suppliers or suppliers with inconsistent quality, a thirty percent deposit with the PO and the balance after receiving and inspection limits exposure. For established suppliers with a clean record, net thirty from receipt is standard. Never pay a first order in full upfront, no matter how urgent. When prepayment is unavoidable, tie it to the bill of lading or shipping confirmation rather than to the PO, so at least the goods are known to have left the factory. Inspect within forty-eight hours of arrival so a dispute can be raised before the payment window closes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my supplier does not provide tracking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tracker still works. Mark the PO as shipped on the supplier confirmed ship date and set the expected arrival to ship date plus the standard transit time for that lane. When the shipment arrives, backfill the actual arrival date. Over a few months this produces real lead time data per supplier, which is more useful for planning than a tracking number ever was. Keep tracking numbers as a requirement in the supplier agreement anyway: providing one costs the supplier nothing and removes most of the status uncertainty."
+      }
+    }
+  ]
+}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -307,6 +364,18 @@
       <div class="faq-item">
         <h4>When should I stop using a spreadsheet and switch to software?</h4>
         <p>The spreadsheet breaks at roughly 200 open POs or 3+ people updating it. Signs you've outgrown it: spending 2+ hours/week hunting for status, discovering supplier delays through stockouts instead of the tracker, two people updating the same row with conflicting info, or you can't answer "what's arriving this week?" without opening 4 different apps. At that point, you have three options: add Google Apps Script automation (Tier 2, $0/month), buy dedicated PO software ($300–600/month), or build a custom command center with Jobs Done Labs ($2K–4K one-time). The right choice depends on order volume and whether you have bandwidth to implement software. Most businesses under $3M/year do fine with Tier 2.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I reconcile purchase orders with invoices at month-end?</h4>
+        <p>Pull every invoice received this month and match each one to a PO number before approving payment. In the tracker, filter the PO register to status open or partial, then compare the invoice amount and quantity against the quantity actually received, not the quantity ordered. Three outcomes are possible: the invoice matches the received quantity and clears for payment, the invoice covers goods that never arrived and gets disputed in writing before the payment window closes, or the invoice has no PO at all and needs a buyer to confirm whether the purchase was authorized. The reconciliation tab lists everything with an invoice received but not yet paid, grouped by supplier, so the bookkeeper can match before cutting checks. This single habit prevents the most expensive failure in a manual PO process: paying a full invoice after receiving a partial shipment.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I prevent duplicate purchase orders from different suppliers?</h4>
+        <p>The duplicate order happens because two buyers cannot see each other commitments, or because one buyer forgot an earlier PO was still open. Prevent it with three rules. First, every PO is entered in the register the moment it is issued, never after the fact, so open commitments are visible to everyone. Second, before creating a PO, search the register by item or part number rather than by supplier, because the duplicate usually goes to a different vendor. Third, add an open commitments total by item at the top of the register: if the sheet shows three hundred units of a component already on order, the next buyer sees it before dialing a supplier. A weekly open-PO review, sorted by item and by supplier, catches anything the search missed.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What columns should a purchase order tracker have?</h4>
+        <p>A working PO register needs these columns: PO number, date issued, supplier, item description, part or SKU number, unit of measure, quantity ordered, unit price, line total, expected delivery date, quantity received, quantity outstanding as a formula, days overdue as a formula, receiving date, invoice number, invoice amount, invoice received yes or no, invoice paid yes or no, payment date, status (open, partial, complete, closed), and notes. A second tab holds the supplier directory: contact name, phone, email, payment terms, typical lead time, and last order date. The formulas and the status field are what make the register a tracking tool rather than a list: quantity outstanding and days overdue recalculate automatically, and conditional formatting turns a row yellow on a partial shipment and red once it passes the expected delivery date by three days.</p>
       </div>
     </div>
 

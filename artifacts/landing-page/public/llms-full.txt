@@ -14134,6 +14134,239 @@ URL: https://www.jobsdonelabs.ai/blog/insurance-verification-workflow-front-desk
 
 ---
 
+# Job Shop Scheduling Spreadsheet — Free Excel Template
+
+Manufacturing
+
+You Rearranged the Whiteboard Sunday Night, a Tuesday Rush Job Pushed Two Friday Deadlines to Next Wednesday, and Nobody Noticed Until the Customer Called — Here Is the Free Job Shop Scheduling Spreadsheet That Shows Every Machine's Load by Day
+
+Ryne Bandolik
+
+· Jobs Done Labs · November 3, 2026
+
+Key takeaways
+
+Job shop scheduling is harder than anyone admits: every job has a different routing, changeover time means sequence matters, outside processing is a black hole, and one rush job silently pushes half your backlog late. This free spreadsheet gives you a machine load calendar with red/yellow/green capacity flags, a due-date priority score that auto-ranks urgent work, a what-if insert that calculates the ripple effect of adding one new job, and a changeover matrix to group same-material jobs and recover hours of lost spindle time. The first organic result for "job shop scheduling spreadsheet free" costs ninety-nine dollars. This one costs nothing.
+
+Why job shop scheduling is harder than anyone admits
+
+Most scheduling advice assumes you are running a flow shop: same routing, same operations, predictable cycle times. You run parts through the saw, then the mill, then deburr, then ship. In a
+
+job shop
+
+, every job has a different routing. Job 1437 goes saw, mill, lathe, heat treat, grind, ship. Job 1438 goes lathe, mill, deburr, ship. Job 1439 goes saw, mill, outside anodize, inspection, ship. The routing variability is what makes scheduling impossible to automate with a simple Gantt chart — and why most software fails. Four variables make job shop scheduling uniquely hard:
+
+Variable routings.
+
+Every job has a different sequence of operations on different machines. One job skips the lathe entirely. Another goes through the lathe twice. Standard scheduling algorithms assume a flow.
+
+Changeover cost.
+
+Going from steel to aluminum on the same CNC mill costs thirty to sixty minutes of cleanup time. The sequence of jobs on each machine matters — and if you ignore it, you lose three to eight hours per machine per week in changeover downtime.
+
+Outside processing black holes.
+
+You send parts to anodize, heat treat, or plating. They come back in a window — five to seven days, sometimes ten. You need to schedule machines for their return, but the return date is a range, not a date. If the parts arrive early, the machine sits idle. If they arrive late, the machine is idle waiting. Either way, you lose capacity.
+
+The hot-job disruption loop.
+
+A customer calls Tuesday morning: "We need fifty pieces by Friday." You say yes. You squeeze it onto the lathe Wednesday, the mill Thursday, inspection Friday. Two jobs that were due Friday — and were on track — now start on Friday afternoon and ship next Wednesday. Nobody called those customers. They called you.
+
+The four variables compound: every hot job triggers a changeover chain that ripples through outside processing uncertainty, pushing jobs whose routings were already fragile. A whiteboard cannot model this. A spreadsheet can — if it is built for the problem.
+
+The machine load calendar: your whiteboard, digitized
+
+This is the core of the spreadsheet. It replaces the magnetic whiteboard — the one that takes three hours every Sunday to rearrange and gets wiped when someone leans against it. The machine load calendar has one row per machine and columns for each day of the week. Each cell shows which jobs are scheduled on that machine that day, with estimated hours. Color-coded capacity indicators tell you at a glance whether the machine is fine (green, eighty percent or below), tight (yellow, eighty to one hundred percent), or overloaded (red, above one hundred percent).
+
+If the CNC mill shows red on Wednesday, you do not need to finish reading an email to know there is a problem — the color tells you before the words do. Sort jobs within each cell by due-date priority and the most urgent work floats to the top of the machine's queue automatically.
+
+Why this works when software does not
+
+APS software like JobPack or Eziil costs five hundred dollars per month and assumes you have standard routings, ERP integration, and a full-time scheduler who can maintain the data. A twelve-machine job shop does not have any of those things. The machine load calendar takes ninety minutes to set up, zero dollars to run, and the owner can see every machine's load in one glance — the same visual snapshot the whiteboard gives, but with math behind the colors.
+
+The due-date priority score: stop guessing which job is hottest
+
+When you have forty open orders and every customer thinks theirs is the priority, you need an objective ranking. The due-date priority score combines three factors into a single number:
+
+Days until due
+
+— fewer days remaining equals higher urgency
+
+Remaining operations count
+
+— more operations left equals higher urgency (more chances to be delayed)
+
+Estimated remaining hours
+
+— more hours equals higher urgency (the job needs more machine time)
+
+The formula: priority score equals (one divided by days-until-due plus one) times remaining-operations times estimated-remaining-hours. Sort the entire job list by this score descending and the hottest jobs float to the top — no debate, no "but my customer is more important," just math. Update it every Monday and the ranking self-corrects as jobs progress and due dates approach.
+
+The what-if insert: the feature that does not exist in free tools
+
+This is the single most-requested scheduling feature in job shops — and it does not exist in any free tool. At the bottom of the machine load calendar, a row labeled "WHAT-IF INSERT." Enter the new job's operations, hours per operation, and due date. The spreadsheet recalculates machine loading for every machine affected, changes the capacity colors where overloads occur, and highlights which existing jobs just slipped past their due dates — and by how many days.
+
+Before you say "yes we can rush it" to a customer, you now have data. The sheet tells you: "Accepting this job pushes Job 1452 from Friday to the following Wednesday on the mill, and Job 1467 from Thursday to Monday on the lathe. Contact these two customers before you accept the rush." That is the decision-support your scheduler needs — the one who also does AP, answers the phone, and was about to say yes because she did not have time to calculate the consequences.
+
+The changeover matrix: recover hours of lost spindle time
+
+A small reference table at the bottom of the scheduling sheet tracks the setup time cost of every material-to-material transition on each machine. It looks like this:
+
+From / To
+
+Steel
+
+Aluminum
+
+Stainless
+
+Plastic
+
+Steel
+
+10 min
+
+45 min
+
+35 min
+
+15 min
+
+Aluminum
+
+45 min
+
+10 min
+
+50 min
+
+15 min
+
+Stainless
+
+35 min
+
+50 min
+
+10 min
+
+20 min
+
+Plastic
+
+15 min
+
+15 min
+
+20 min
+
+10 min
+
+When you schedule multiple steel jobs back-to-back on the same machine on the same day, you avoid the forty-five-minute transition to aluminum and back. Across twelve machines running five days a week, grouping same-material jobs typically recovers two to five hours of changeover time per week. At a shop rate of eighty dollars per hour, that is roughly one hundred sixty to four hundred dollars of recovered capacity — per week, every week — from a single 5-by-5 reference table.
+
+The daily dispatch list: what the machinist sees
+
+The machine load calendar is for the scheduler. The dispatch list is for the machinist. One printable page per machine per day: what runs, in what order, with setup notes ("fixture A is already on the machine from yesterday — do not remove"). Tape it to the machine. The machinist knows what to run next without walking to the office. When the Friday rush job arrives Thursday afternoon, nobody needs to stop what they are doing — the dispatch list already has tomorrow's sequence, and the what-if insert already told the scheduler what gets bumped.
+
+The Monday 20-minute reschedule: your wife gets her Sunday back
+
+Every Monday morning, in this order:
+
+Update completed operations from last week — mark jobs as moved to their next operation
+
+Re-score due-date priorities — the formula auto-updates as days-until-due decreases
+
+Adjust the machine load calendar — shift unfinished work to this week, fill capacity
+
+Check outside-processing returns — any parts due back this week? Schedule the receiving machine
+
+Print new dispatch lists — one per machine, tape to machine
+
+This is the ritual that replaces three hours of whiteboard rearrangement every Sunday. Twenty minutes, Monday morning, data-driven. The owner's wife — who also does AP, AR, and answers the phone — gets her Sunday back. That alone is worth a spreadsheet.
+
+When the sheet stops working
+
+This spreadsheet works for job shops running up to fifteen machines and roughly one hundred open orders. You will know you have outgrown it when:
+
+You need real-time WIP visibility feeding into the schedule.
+
+The spreadsheet is updated weekly — if you need daily or shift-level updates because jobs move too fast, you need a system, not a sheet
+
+You have more than fifteen machines.
+
+The calendar gets too wide to scan in one glance
+
+You need cost accounting per job per operation feeding into the schedule.
+
+When you start asking "what does it cost to schedule this job on the mill instead of the older machine?" you need MES software
+
+Multiple schedulers need to update the schedule simultaneously.
+
+A spreadsheet is single-user by design. Two schedulers editing at once means overwritten data
+
+At that point, you are ready for APS or MES software — the category, not a specific vendor. The honest breakpoint keeps the page credible: this sheet solves a real problem for a real size of shop, and when you outgrow it, you will know exactly why and what you need next.
+
+Frequently asked questions
+
+How do I create a production schedule for a job shop without buying software?
+
+Build a machine load calendar in a spreadsheet with one row per machine and columns for each day. Enter each job's estimated hours and due date, then use a priority score formula that combines days until due, remaining operations, and estimated remaining hours. The sheet shows which machines are overloaded, which jobs are at risk of being late, and what happens when you insert a rush job. Update it in twenty minutes every Monday instead of spending hours rearranging a whiteboard.
+
+What is the best free scheduling spreadsheet for manufacturing?
+
+The best free scheduling spreadsheet includes a machine load calendar with red/yellow/green capacity indicators, a due-date priority score that auto-ranks jobs by urgency, a what-if insert row that calculates the ripple effect of adding a rush job, a changeover matrix to group same-material jobs, and a daily dispatch list printable per machine. This Jobs Done Labs template is free, works in Excel or Google Sheets, and sets up in under ninety minutes.
+
+How do I handle rush jobs without pushing everything late?
+
+Use the what-if insert: enter the rush job's details into the scheduling spreadsheet. The sheet calculates which machines become overloaded and which existing jobs slip past their due dates — and by how many days. Before accepting the rush, you can see exactly which customers will be affected and proactively communicate delays. This turns a yes/no decision into a data-driven negotiation: "We can do it, but these two jobs will be two days late. Do you still want us to proceed?"
+
+How do I calculate machine loading in a spreadsheet?
+
+Machine loading equals total estimated hours assigned to a machine for a given day. For each job scheduled on that machine, add its estimated hours. Loading percentage equals assigned hours divided by available hours (typically eight per shift). Color-code: green at eighty percent or below, yellow at eighty to one hundred percent, red above one hundred percent. Red means jobs will spill into the next day, creating a cascade — fix it before the shift starts, not during.
+
+What is changeover time and how much does it cost?
+
+Changeover time is the downtime when a machine switches between different materials or setups. Going from steel to aluminum on a CNC mill costs thirty to sixty minutes in chip cleanup, coolant adjustment, and fixture changes. In a twelve-machine shop, three hours of changeover per week wastes twenty thousand to fifty thousand dollars per year in lost spindle time. Grouping same-material jobs on the same machine on the same day — guided by a simple changeover matrix — typically cuts changeover time by forty to fifty percent with no investment beyond better sequencing.
+
+How does Jobs Done Labs automate scheduling beyond spreadsheets?
+
+When a spreadsheet is not enough — when you need real-time WIP data feeding into the schedule, automated customer notifications when jobs ship, or a dashboard that the whole shop floor can see — Jobs Done Labs builds custom scheduling automation that connects your existing tools into one system. Every engagement is backed by the thirty-thousand-dollar guarantee: if the system does not recover or save at least thirty thousand dollars in bottom-line impact within ninety days, you pay nothing. Book a free thirty-minute audit at jobsdonelabs.ai/contact.
+
+Related posts
+
+Manufacturing
+
+Your Production Scheduling Guide — Plan What Runs Where
+
+Manufacturing
+
+WIP Tracker: Know Where Every Job Is Right Now
+
+Manufacturing
+
+Supplier Delivery Tracker — Never Miss an Inbound Again
+
+Your whiteboard cannot model the Tuesday rush job
+
+When a customer calls with an urgent order and you need to know — in sixty seconds, not after rearranging magnets for an hour — which machines are overloaded, which jobs will be late, and by how many days, you need more than a whiteboard. You need a real scheduling system. Jobs Done Labs builds custom production scheduling automation that connects your shop floor data, outside processing partners, and customer notifications into one dashboard. Every build is backed by the thirty-thousand-dollar guarantee: if the system does not save or recover at least thirty thousand dollars in ninety days, you pay nothing.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Your Production Scheduling Guide — the Complete How-To for Job Shops
+
+WIP Tracker: Know Where Every Job Is Right Now on Your Shop Floor
+
+Supplier Delivery Tracking Spreadsheet — Never Miss an Inbound Shipment
+
+
+URL: https://www.jobsdonelabs.ai/blog/job-shop-production-scheduling-spreadsheet-free-excel/
+
+---
+
 # Free OSHA Safety System for Small Contractors
 
 Home Services & Trades
@@ -18074,6 +18307,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+You Rearranged the Whiteboard Sunday Night — The Free Job Shop Scheduling Spreadsheet That Shows Every Machine Load by Day
 
 The "Who's Doing What When" Whiteboard Isn't Working — A Production Scheduling System
 
@@ -31259,6 +31494,18 @@ When should I stop using a spreadsheet and switch to software?
 
 The spreadsheet breaks at roughly 200 open POs or 3+ people updating it. Signs you've outgrown it: spending 2+ hours/week hunting for status, discovering supplier delays through stockouts instead of the tracker, two people updating the same row with conflicting info, or you can't answer "what's arriving this week?" without opening 4 different apps. At that point, you have three options: add Google Apps Script automation (Tier 2, $0/month), buy dedicated PO software ($300–600/month), or build a custom command center with Jobs Done Labs ($2K–4K one-time). The right choice depends on order volume and whether you have bandwidth to implement software. Most businesses under $3M/year do fine with Tier 2.
 
+How do I reconcile purchase orders with invoices at month-end?
+
+Pull every invoice received this month and match each one to a PO number before approving payment. In the tracker, filter the PO register to status open or partial, then compare the invoice amount and quantity against the quantity actually received, not the quantity ordered. Three outcomes are possible: the invoice matches the received quantity and clears for payment, the invoice covers goods that never arrived and gets disputed in writing before the payment window closes, or the invoice has no PO at all and needs a buyer to confirm whether the purchase was authorized. The reconciliation tab lists everything with an invoice received but not yet paid, grouped by supplier, so the bookkeeper can match before cutting checks. This single habit prevents the most expensive failure in a manual PO process: paying a full invoice after receiving a partial shipment.
+
+How do I prevent duplicate purchase orders from different suppliers?
+
+The duplicate order happens because two buyers cannot see each other commitments, or because one buyer forgot an earlier PO was still open. Prevent it with three rules. First, every PO is entered in the register the moment it is issued, never after the fact, so open commitments are visible to everyone. Second, before creating a PO, search the register by item or part number rather than by supplier, because the duplicate usually goes to a different vendor. Third, add an open commitments total by item at the top of the register: if the sheet shows three hundred units of a component already on order, the next buyer sees it before dialing a supplier. A weekly open-PO review, sorted by item and by supplier, catches anything the search missed.
+
+What columns should a purchase order tracker have?
+
+A working PO register needs these columns: PO number, date issued, supplier, item description, part or SKU number, unit of measure, quantity ordered, unit price, line total, expected delivery date, quantity received, quantity outstanding as a formula, days overdue as a formula, receiving date, invoice number, invoice amount, invoice received yes or no, invoice paid yes or no, payment date, status (open, partial, complete, closed), and notes. A second tab holds the supplier directory: contact name, phone, email, payment terms, typical lead time, and last order date. The formulas and the status field are what make the register a tracking tool rather than a list: quantity outstanding and days overdue recalculate automatically, and conditional formatting turns a row yellow on a partial shipment and red once it passes the expected delivery date by three days.
+
 Free PO workflow audit
 
 We'll map your current PO process across every supplier, identify the 3 biggest revenue-leakage points (late shipments, stockouts, rush-order premiums), and give you a 1-page blueprint plus the Google Sheets Master PO Tracker template — free, 15 minutes, no obligation.
@@ -31702,6 +31949,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Job Shop Scheduling Spreadsheet — The Free Machine Load Calendar That Shows the Ripple Effect of a Rush Job
 
 Track Every Overtime Dollar by Job and Machine — The Free OT Tracking System for Manufacturers
 
@@ -34490,6 +34739,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Job Shop Scheduling Spreadsheet — See Every Machine Load by Day and What a Rush Job Pushes Late
+
 Free Manufacturing Job Costing: Estimated vs Actual — Catch Losing Jobs Before They Ship
 
 Track and Prevent Machine Downtime — The Free Tracking and PM Scheduling System
@@ -37131,6 +37382,40 @@ $0-40/month
 
 Setup time: 2-4 hours to build the Sheets + template pipeline. A full automation with ELD API integration takes 2-4 weeks to build and test — but the manual pipeline works today and captures revenue while the automation is being built.
 
+Detention Is a Trailer Problem Too — The Free-Time Clock
+
+Everything above is about
+
+driver
+
+detention: the truck arrives, the dock makes it wait, you bill for the wait. But if you run drop-and-hook, there is a second detention problem that most carriers do not bill for at all —
+
+trailer detention
+
+. The trailer gets dropped at a distribution center, the DC treats it as free warehouse space, and the clock starts at the moment of drop, not at the appointment.
+
+The arithmetic is the same three formulas, just applied to a trailer instead of a truck:
+
+Pull-by date
+
+= dropped date + free days allowed
+
+Days accrued
+
+= max(0, today − pull-by date)
+
+Dollar exposure
+
+= days accrued × per-day charge
+
+Most shippers allow two to five free days. After that, the meter runs at roughly twenty five to one hundred dollars per day, per trailer. A trailer that sits eight days past its pull-by date at eighty dollars per day has accrued six hundred forty dollars — and the invoice will arrive six weeks later, when nobody remembers which trailer sat where or who dropped it.
+
+If your fleet drops trailers at DCs and shipper yards, run both systems side by side: this detention tracker for the truck, and the
+
+free drop-and-hook trailer tracking spreadsheet
+
+for the trailer pool. They are two halves of the same free-time problem, and together they close the gap where carriers leak the most unbilled revenue.
+
 What If You Want It Built For You?
 
 The above system works for a dispatcher who is comfortable building Google Sheets automations and writing a few email templates. If your dispatcher's time is better spent booking loads — and it almost certainly is — we build the entire 4-step system for you.
@@ -37192,6 +37477,18 @@ The single most effective way to prove detention is to use your ELD's geofence d
 What's the simplest detention pay setup for a fleet with 1-5 trucks?
 
 For a 1-5 truck fleet, you don't need ELD API integration or custom software. The simplest setup that works takes 2 hours to build: (1) Create a Google Sheet with columns: Date, Truck, Customer, Arrival Time, Departure Time, Free Window (hrs), Billable Hours, Rate, Amount, Invoiced?, Paid?. (2) Have drivers text or call in arrival and departure times — put them in the sheet immediately. (3) Create one Google Docs invoice template with your logo, the detention calculation, and a space for BOL/POD attachments. (4) Every Friday, filter the sheet for "Invoiced? = No" and generate invoices for the week's detention events. Email them to brokers in a batch. (5) Check the "Paid?" column at 45 and 60 days. This 5-step manual system captures 80%+ of detention events versus the 40% that most small fleets collect. The key is consistency: the spreadsheet IS the system — as long as you log every detention event the day it happens, the Friday invoicing becomes a 20-minute routine instead of a forgotten task. Total cost: $0. When you're ready to automate the timestamp capture (so drivers don't have to call it in), we configure your ELD's geofence export to feed the sheet automatically.
+
+What is free time in trucking?
+
+Free time is the window a shipper or receiver allows before detention charges begin — the amount of waiting a carrier absorbs at no charge. For live loading and unloading, free time is typically two hours from arrival, and the clock starts at the appointment time or at check-in, whichever the rate confirmation specifies. For drop-and-hook operations, free time applies to the dropped trailer instead: typically two to five days from the moment of drop before per-day trailer detention begins. Free time is stated in the broker rate confirmation or the carrier-shipper agreement. If the document is silent, assume two hours for live loads and two days for dropped trailers — and get the number confirmed in writing before you accept the load, because a free time you did not negotiate is a free time you will not win in a dispute.
+
+How much is detention pay per hour?
+
+Detention pay for live loading and unloading typically runs twenty five to one hundred dollars per hour, with seventy five dollars per hour being the most common rate in broker rate confirmations. The rate varies by equipment type (reefers and flatbeds command more than dry vans), by region, and by broker. Trailer detention — for a dropped trailer sitting past its free days — is usually billed per day rather than per hour, at roughly twenty five to one hundred dollars per day per trailer. Two rules matter more than the rate itself: the rate must be written into the rate confirmation before you accept the load, and the clock must be documented with an independent timestamp (ELD geofence data, gate receipt, or BOL) rather than a driver's estimate.
+
+How do I bill detention to a broker?
+
+Bill detention in five steps. First, capture the arrival timestamp from your ELD geofence data — not a driver note. Second, calculate billable hours as total on-site time minus the free time window stated in the rate confirmation. Third, generate an invoice that shows the load number, the arrival and departure timestamps, the free window, the billable hours, the hourly rate, and the total. Fourth, attach the BOL or POD and the geofence export so the broker has independent proof in the same email. Fifth, send it within seventy two hours of the detention event and log the submission date so you can follow up at fifteen and thirty days. Detention claims submitted within three days are paid far more consistently than claims submitted at the end of the month, because the broker can still verify the appointment against their own records.
 
 Related posts
 

@@ -7,7 +7,7 @@
  */
 import { createServer } from "node:http";
 import { readFileSync, existsSync, statSync } from "node:fs";
-import { join, extname } from "node:path";
+import { join, extname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
@@ -64,7 +64,14 @@ function resolveFilePath(pathname) {
   const publicFirst =
     safe === "/blog" || safe.startsWith("/blog/") ||
     safe === "/about" || safe.startsWith("/about/") ||
-    safe === "/contact" || safe.startsWith("/contact/");
+    safe === "/contact" || safe.startsWith("/contact/") ||
+    // Crawler manifests are regenerated on every content deploy into public/.
+    // dist/ holds a stale Vite-build snapshot of them, so public/ must win.
+    safe === "/sitemap.xml" ||
+    safe === "/sitemap_index.xml" ||
+    safe === "/robots.txt" ||
+    safe === "/llms.txt" ||
+    safe === "/llms-full.txt";
   const dirs = publicFirst
     ? [staticPublic, distPublic]
     : [distPublic, staticPublic];
@@ -116,10 +123,30 @@ function serveFile(res, filePath) {
     const data = readFileSync(filePath);
     const ext = extname(filePath).toLowerCase();
     const isHtml = ext === ".html";
+    // CRAWLER-VISIBLE MANIFESTS MUST NOT BE CACHED IMMUTABLE.
+    // sitemap.xml / llms.txt / llms-full.txt / robots.txt change on every content
+    // deploy. Serving them with max-age=31536000, immutable froze the live sitemap
+    // at a 2026-07-27 snapshot (61 URLs) while the blog shipped 145+ posts.
+    const mutableNames = new Set([
+      "sitemap.xml",
+      "sitemap_index.xml",
+      "sitemap-index.xml",
+      "llms.txt",
+      "llms-full.txt",
+      "robots.txt",
+      "feed.xml",
+      "rss.xml",
+    ]);
+    const isCrawlerManifest = mutableNames.has(basename(filePath).toLowerCase())
+      || ext === ".xml"
+      || ext === ".txt";
+    const cacheControl = isHtml || isCrawlerManifest
+      ? "public, max-age=300, must-revalidate"
+      : "public, max-age=31536000, immutable";
     res.writeHead(200, {
       "Content-Type": MIME[ext] || "application/octet-stream",
-      // Assets are fingerprinted; HTML should not be cached long-term
-      "Cache-Control": isHtml ? "public, max-age=300" : "public, max-age=31536000, immutable",
+      // Assets are fingerprinted; HTML and crawler manifests must revalidate
+      "Cache-Control": cacheControl,
     });
     res.end(data);
   } catch {
