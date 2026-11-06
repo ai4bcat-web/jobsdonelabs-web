@@ -1041,6 +1041,221 @@ URL: https://www.jobsdonelabs.ai/blog/ai-automation-roi-small-business-worked-ex
 
 ---
 
+# Amazon FBA Restock: 70-Day Pipeline Spreadsheet
+
+Retail & E-Commerce
+
+Your Amazon Inventory Order Was Based on Gut Feel — Now You Are Stocked Out During Black Friday Week. Here Is the Free 70-Day Pipeline Forecasting Spreadsheet That Tells You Exactly When to Reorder.
+
+Ryne Bandolik
+
+· Jobs Done Labs · November 6, 2026
+
+Key takeaways
+
+A single Q4 stockout on a mid-tier FBA SKU costs eight thousand dollars in lost sales, lost organic rank that takes two to four weeks to recover, and competitor hijacking while you are invisible. The fix is a backward-from-stockout forecasting system: calculate when you will run out, subtract the full 70-day pipeline (30 days manufacturing, 25 days ocean freight, 5 days customs and drayage, 10 days FBA check-in), and you get your MUST-order-by date. Free spreadsheet does this per SKU with auto-calculated velocity, pipeline stage tracking, and a cash-flow view showing exactly how much capital is tied up in inventory at each stage. No SaaS subscription required — it works for five to twenty-five SKUs with stable velocity.
+
+The twenty thousand dollar stockout mistake
+
+A private label seller we spoke with runs twelve products sourced from a factory in Shenzhen. Her number-two SKU does roughly two thousand six hundred dollars per month in sales at a 35 percent margin. Last Q4, she placed her restock order based on a rough estimate: "I think I need about five hundred units for the holiday season." The order arrived at the FBA warehouse on November 17. It sold out on November 29 — Black Friday. She was out of stock for the next three weeks.
+
+The direct revenue loss was approximately eight thousand dollars in missed sales. But that was the smallest part of the damage:
+
+Lost organic rank.
+
+When an ASIN stocks out, its Best Sellers Rank plummets. It takes two to four weeks of steady sales to recover the pre-stockout position. During that recovery window, organic traffic is down 40 to 60 percent.
+
+Competitor hijacking.
+
+While her listing was inactive, two competitors captured her top keywords with aggressive PPC. One of them cut their price by three dollars to lock in the Buy Box. Customers who would have bought her product bought theirs instead — and some left positive reviews that now sit above hers on the search page.
+
+Overcorrection on other SKUs.
+
+To avoid a repeat, she over-ordered her other eleven products. Six months later, three of those SKUs still had excess inventory in FBA — tying up roughly twelve thousand dollars in capital and accumulating long-term storage fees at six dollars and ninety cents per cubic foot.
+
+The 70-day pipeline that nobody maps on paper
+
+Most sellers know their lead time is "about two months." They do not break it down into stages. Here is what the full pipeline actually looks like for a China-to-FBA product:
+
+Stage
+
+Days
+
+What happens
+
+What can go wrong
+
+1. Production
+
+Days 0–30
+
+Supplier manufactures your order
+
+Chinese New Year shuts factories for 2–3 weeks; raw material shortages add 7–10 days; supplier prioritizes a larger customer over you
+
+2. Freight forwarder pickup
+
+Days 30–35
+
+Forwarder collects from factory, consolidates at port
+
+Factory is in inland China — trucking to port adds 3–5 days; forwarder waits to fill a container
+
+3. Ocean freight
+
+Days 35–60
+
+Vessel transit from Shanghai/Ningbo/Shenzhen to Long Beach/Seattle/Newark
+
+Port congestion (Long Beach can add 10–14 days); vessel skips your port; container rolled to next sailing
+
+4. Customs + drayage
+
+Days 60–65
+
+Customs clearance, trucking from port to FBA warehouse
+
+Customs exam (random inspection adds 5–7 days); drayage carrier shortage during peak season
+
+5. FBA check-in
+
+Days 65–75
+
+Amazon receives, scans, and makes inventory available for sale
+
+FC transfer (moves to another warehouse — adds 7–14 days); peak season backlog (check-in takes 14–21 days instead of 10)
+
+Each stage has a best case, a typical case, and a worst case. The spreadsheet accounts for all three. If you place your purchase order on September 1 under typical conditions, your inventory is available for sale around November 15 — twelve days before Black Friday. If ocean freight runs long by ten days, you miss it. The spreadsheet flags this risk before you place the PO, not after.
+
+Black Friday 2026 checkpoint:
+
+Black Friday is November 27. Cyber Monday is November 30. With a 10-day FBA check-in window, inventory delivered to Amazon on November 17 goes live in time. Inventory delivered November 20 misses it. Count backward from November 17 through the pipeline and your purchase order deadline is roughly September 8. If you are reading this after September, you are already cutting it close — air freight may be your only path to having stock for Q4.
+
+The backward-from-stockout method
+
+Most sellers ask the wrong question: "When should I reorder?" The right question is: "When will I run out?"
+
+Here is how the method works for a single SKU:
+
+Calculate days of stock remaining.
+
+Take your current FBA inventory, divide by your daily sales velocity. If you have 450 units and sell 9 per day, you have 50 days of stock remaining.
+
+Identify your stockout date.
+
+Today is November 6. Fifty days from now is December 26. That is your zero-inventory date.
+
+Subtract the max lead time.
+
+Your worst-case pipeline is 80 days (production 35 + ocean 30 + customs 7 + FBA 8). Subtract 80 from December 26 and you get October 7. That is your MUST-order-by date — if you have not placed the PO by October 7, you will stock out under worst-case conditions.
+
+Subtract the typical lead time.
+
+Your typical pipeline is 70 days. Subtract 70 from December 26 and you get October 17. That is your SHOULD-order-by date — place the PO before this date to stay comfortable.
+
+Set alerts.
+
+The spreadsheet colors the cell red when today's date passes the SHOULD date and you have not ordered. It turns dark red when you pass the MUST date.
+
+The free Amazon FBA restock forecasting spreadsheet
+
+The spreadsheet has four tabs. You can copy it to your own Google Sheets or download it for Excel — no signup, no email gate, no "free trial" that converts to a subscription.
+
+Tab 1 — SKU Dashboard
+
+One row per SKU. Columns: ASIN, product name, current FBA inventory, daily velocity (7-day, 30-day, and 90-day averages), days of stock remaining, reorder point (velocity × max lead time + 20 percent buffer), reorder quantity, next purchase order date (auto-calculated from the backward-from-stockout method), and a stockout risk flag that turns red when days remaining is less than the max lead time.
+
+Update this tab once per week by pulling your current FBA inventory levels from Seller Central and pasting your trailing sales data into the Velocity Tracker tab. The dashboard auto-refreshes.
+
+Tab 2 — Sales Velocity Tracker
+
+Paste your Seller Central Business Reports CSV export here. The spreadsheet extracts trailing 7-day, 30-day, and 90-day daily velocity per ASIN. It also calculates a Q4 spike factor — how much your November and December velocity historically exceeds your annual average — so your reorder quantities are not based on flat-year assumptions.
+
+If you do not have historical Q4 data yet, the spreadsheet uses a conservative 1.4x multiplier as the default seasonal adjustment for most consumer product categories. You can override this with your own number once you have a year of history.
+
+Tab 3 — Pipeline Tracker
+
+Every open purchase order gets one row: PO number, supplier, SKU, quantity ordered, PO date, and checkboxes for each pipeline stage: "Production complete?" "Vessel departed?" "Arrived at port?" "Customs cleared?" "FBA checked in?" "Available for sale?"
+
+Next to each checkbox, enter the actual date the stage completed. The spreadsheet compares actual dates against the planned timeline and highlights delays — if production took 38 days instead of 30, the cell turns yellow and adds three days to every downstream stage.
+
+A "bottleneck" column auto-detects which stage is currently the longest-running delay across all your open POs. In most cases, it is ocean freight during peak season and FBA check-in during Q4.
+
+Tab 4 — Cash Flow View
+
+How much capital is tied up in inventory at each stage of the pipeline? The spreadsheet multiplies unit cost by quantity for every PO and buckets it: "In production" (30 percent deposit paid), "On the water" (70 percent balance + freight paid), "In FBA" (available for sale but not yet sold), and "Total inventory investment."
+
+This view is the antidote to over-ordering. When you see that you already have thirty-four thousand dollars in inventory across the pipeline and your monthly free cash flow is six thousand dollars, the "order another five hundred units just to be safe" instinct disappears. You order what the math says you need.
+
+The five-minute weekly refresh ritual
+
+The spreadsheet is only as good as the data you feed it. Here is the weekly routine that keeps it accurate:
+
+Monday morning — 5 minutes
+
+Open Seller Central → Inventory → Manage FBA Inventory. Note current stock levels for each ASIN. Update the SKU Dashboard tab.
+
+Open Seller Central → Reports → Business Reports → Detail Page Sales and Traffic. Export the trailing 30-day CSV. Paste into the Velocity Tracker tab.
+
+Glance at the Pipeline Tracker tab. For any PO where a stage was due to complete last week but shows no date, email your supplier or freight forwarder for a status update.
+
+Check the stockout risk column. Any cell that is red means you need to place a purchase order this week or accept that a stockout is likely.
+
+Update the Cash Flow View with any payments made (deposits, balances, freight invoices) so the capital-tied-up number reflects reality.
+
+When the spreadsheet is not enough
+
+This system works well for a private label seller with five to twenty-five SKUs and relatively stable sales velocity — the profile of most Amazon FBA businesses doing mid six figures in annual revenue. It breaks down when:
+
+You cross fifty SKUs.
+
+Managing fifty rows in a spreadsheet is tedious but possible. Managing two hundred is a full-time job. At that scale, you need forecasting software that pulls Seller Central data automatically.
+
+Your velocity is highly volatile.
+
+Fashion, toys, and trend-driven products can spike ten times normal velocity overnight when a product goes viral. A spreadsheet using trailing averages will under-order by a factor of five. You need a tool that detects velocity anomalies and adjusts in real time.
+
+You sell on three or more channels.
+
+If you sell the same ASIN on Amazon, Shopify, and Walmart, your reorder point must account for aggregate velocity across all channels. The spreadsheet can handle two channels with a combined velocity column; at three or more, you need a multi-channel inventory sync tool.
+
+For everyone below those thresholds, the spreadsheet is free, customizable, and more accurate than the "I think I need about five hundred units" method that produced the Q4 stockout in the first place.
+
+Frequently asked questions
+
+What if my supplier lead time is different from 30 days?
+
+Replace the 30-day default with your actual manufacturing lead time. The Pipeline Tracker tab has editable lead time values for every stage — change them once and the backward-from-stockout dates recalculate for every SKU automatically. A supplier who consistently delivers in 22 days means your total pipeline shortens to roughly 62 days, and your reorder point moves eight days later.
+
+How do I handle seasonal velocity spikes?
+
+The Sales Velocity Tracker has a Q4 spike factor column. If your November and December sales historically run 1.6 times your annual average, enter 1.6 and the reorder quantities for Q4-bound purchase orders automatically scale up. For your first year without historical data, use the default 1.4x multiplier. After Q4, update the factor with your actual numbers for next year.
+
+Can I use this for products sourced from the United States instead of China?
+
+Yes. Replace the ocean freight stage with domestic freight — typically 3 to 7 days instead of 25. Your total pipeline drops to approximately 45 days. Update the lead time values in the Pipeline Tracker tab and everything recalculates. The spreadsheet works for any supply chain; the 70-day number is simply the most common case for FBA sellers sourcing from China.
+
+Stop ordering inventory on gut feel
+
+If your restock decisions are driving stockouts, excess inventory fees, and cash-flow surprises, we can build a custom inventory management workflow that pulls your real Seller Central data and automates the entire forecasting process — so the spreadsheet updates itself and you get a Slack alert the day you need to place a purchase order.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Your Number Two Bestseller Was Out of Stock for 11 Days and Nobody Noticed. Here Is the Stockout Prevention Tracker That Fixes It.
+
+Amazon Took Fifteen Thousand Dollars in Fees Last Quarter and You Cannot Explain Where It Went — Here Is the Free Reconciliation System
+
+Amazon FBA Stranded Inventory? Free Tracker to Fix It Before Storage Fees Eat Your Margin
+
+
+URL: https://www.jobsdonelabs.ai/blog/amazon-fba-restock-forecasting-spreadsheet-lead-time-free/
+
+---
+
 # Amazon FBA Stranded Inventory? Free Tracker to Fix It
 
 Retail & E-Commerce
@@ -1274,6 +1489,8 @@ Your Inventory Has Not Sold in 16 Months and You Are Paying Storage Fees on Prod
 Amazon Took Fifteen Thousand Dollars in Fees Last Quarter and You Cannot Explain Where It Went — the Free Reconciliation System
 
 Your Number Two Bestseller Was Out of Stock for 11 Days and Nobody Noticed — the Stockout Prevention Tracker That Fixes It
+
+Amazon FBA Restock: Free 70-Day Pipeline Spreadsheet — Backward-From-Stockout Forecasting for FBA Sellers
 
 Stranded inventory bleeding your FBA margin?
 
@@ -1629,6 +1846,8 @@ Manual Data Entry Is the Silent Killer of Your E-Commerce Business
 Shopify Payouts Never Match QuickBooks? Here's Why (and How to Fix It)
 
 You Sell on Shopify, Amazon, and Walmart — and Product Info Is Different on Every Channel
+
+Amazon FBA Restock: Free 70-Day Pipeline Spreadsheet — Stop Ordering Inventory on Gut Feel
 
 What if you could see every fee, every SKU, every channel — without 30 minutes of manual data paste every Friday?
 
@@ -32840,6 +33059,8 @@ Returns Processing Eating Your Time? How E-Commerce Brands Cut Returns Workflow 
 Amazon Took $15,000 in Fees Last Quarter and You Can't Explain Where It Went — Here's the Free Reconciliation System
 
 You Have $12,000 in Defective Product Sitting in Your Returns Corner — and Half the RMAs Have Already Expired. Here's the Free Tracker That Gets Your Money Back
+
+Amazon FBA Restock Forecasting: Free 70-Day Pipeline Spreadsheet — Know Exactly When to Reorder Before You Stock Out
 
 
 URL: https://www.jobsdonelabs.ai/blog/stockout-prevention-reorder-point-spreadsheet-retail-free/

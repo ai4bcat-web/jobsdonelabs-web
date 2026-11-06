@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon FBA Restock: 70-Day Pipeline Spreadsheet | Jobs Done Labs</title>
+  <meta name="description" content="Stocked out on Amazon during Q4 on a gut-feel order? Free forecasting spreadsheet with backward-from-stockout method and 70-day China-to-FBA pipeline." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/amazon-fba-restock-forecasting-spreadsheet-lead-time-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/amazon-fba-restock-forecasting-spreadsheet-lead-time-free/" />
+  <meta property="og:title" content="Amazon FBA Restock: 70-Day Pipeline Spreadsheet | Jobs Done Labs" />
+  <meta property="og:description" content="Stocked out on Amazon during Q4 on a gut-feel order? Free forecasting spreadsheet with backward-from-stockout method and 70-day China-to-FBA pipeline." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Amazon FBA Restock: 70-Day Pipeline Spreadsheet | Jobs Done Labs" />
+  <meta name="twitter:description" content="Stocked out on Amazon during Q4 on a gut-feel order? Free forecasting spreadsheet with backward-from-stockout method and 70-day China-to-FBA pipeline." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Amazon FBA Restock: 70-Day Pipeline Spreadsheet",
+  "description": "Stocked out on Amazon during Q4 on a gut-feel order? Free forecasting spreadsheet with backward-from-stockout method and 70-day China-to-FBA pipeline.",
+  "author": {
+    "@type": "Person",
+    "name": "Ryne Bandolik",
+    "url": "https://www.linkedin.com/in/rynebandolik/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jobs Done Labs",
+    "url": "https://www.jobsdonelabs.ai"
+  },
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "image": "https://www.jobsdonelabs.ai/og-image.png",
+  "url": "https://www.jobsdonelabs.ai/blog/amazon-fba-restock-forecasting-spreadsheet-lead-time-free/"
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the full lead time pipeline for Amazon FBA inventory from China?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The full pipeline from purchase order to available-for-sale on Amazon is roughly 70 days: 30 days manufacturing, 25 days ocean freight, 5 days customs and drayage, and 10 days FBA check-in. Each stage has variability — the spreadsheet accounts for best-case, typical, and worst-case timelines so you are never caught by a delay you did not plan for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does backward-from-stockout forecasting work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Instead of asking 'when should I reorder,' you ask 'when will I run out?' You calculate your days of stock remaining based on current FBA inventory and daily sales velocity. Then you subtract the maximum lead time from that stockout date to get your MUST-order-by date, and subtract the typical lead time to get your SHOULD-order-by date. Place your purchase order before the SHOULD date to be safe, before the MUST date to avoid a stockout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many SKUs can this spreadsheet handle before I need inventory software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The spreadsheet works well for five to twenty-five SKUs with relatively stable sales velocity. If you have fifty or more SKUs, your velocity varies wildly week to week, or you sell fashion and trend products with unpredictable demand, you will need dedicated forecasting software like RestockPro, Forecastly, or SoStocked. For most private label sellers with a focused catalog, this spreadsheet is more accurate than gut feel and costs nothing versus fifty to two hundred dollars per month for SaaS tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What data do I need to start using the spreadsheet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You need three things from Seller Central: your current FBA inventory levels per SKU, your daily sales velocity from the Business Reports dashboard (use the Detail Page Sales and Traffic report), and your known lead times from your supplier and freight forwarder. Paste the Seller Central CSV export into the Sales Velocity Tracker tab and the spreadsheet auto-calculates everything else."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this spreadsheet work if I use air freight instead of ocean freight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — simply replace the ocean freight stage with your air freight timeline. The pipeline structure is the same: manufacturing, freight, customs, and FBA check-in. Air freight cuts the freight stage from 25 days to roughly 7 to 10 days, shortening your total pipeline to approximately 55 days. Update the lead time values in the Pipeline Tracker tab and the backward-from-stockout dates recalculate automatically."
+      }
+    }
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.jobsdonelabs.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.jobsdonelabs.ai/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Amazon FBA Restock: 70-Day Pipeline Spreadsheet",
+      "item": "https://www.jobsdonelabs.ai/blog/amazon-fba-restock-forecasting-spreadsheet-lead-time-free/"
+    }
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+
+      <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80" alt="Amazon FBA warehouse inventory shelves with boxes" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Retail &amp; E-Commerce</span>
+      <h1>Your Amazon Inventory Order Was Based on Gut Feel — Now You Are Stocked Out During Black Friday Week. Here Is the Free 70-Day Pipeline Forecasting Spreadsheet That Tells You Exactly When to Reorder.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · November 6, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A single Q4 stockout on a mid-tier FBA SKU costs eight thousand dollars in lost sales, lost organic rank that takes two to four weeks to recover, and competitor hijacking while you are invisible. The fix is a backward-from-stockout forecasting system: calculate when you will run out, subtract the full 70-day pipeline (30 days manufacturing, 25 days ocean freight, 5 days customs and drayage, 10 days FBA check-in), and you get your MUST-order-by date. Free spreadsheet does this per SKU with auto-calculated velocity, pipeline stage tracking, and a cash-flow view showing exactly how much capital is tied up in inventory at each stage. No SaaS subscription required — it works for five to twenty-five SKUs with stable velocity.</p>
+      </div>
+
+      <h2>The twenty thousand dollar stockout mistake</h2>
+      <p>A private label seller we spoke with runs twelve products sourced from a factory in Shenzhen. Her number-two SKU does roughly two thousand six hundred dollars per month in sales at a 35 percent margin. Last Q4, she placed her restock order based on a rough estimate: "I think I need about five hundred units for the holiday season." The order arrived at the FBA warehouse on November 17. It sold out on November 29 — Black Friday. She was out of stock for the next three weeks.</p>
+      <p>The direct revenue loss was approximately eight thousand dollars in missed sales. But that was the smallest part of the damage:</p>
+      <ul>
+        <li><strong>Lost organic rank.</strong> When an ASIN stocks out, its Best Sellers Rank plummets. It takes two to four weeks of steady sales to recover the pre-stockout position. During that recovery window, organic traffic is down 40 to 60 percent.</li>
+        <li><strong>Competitor hijacking.</strong> While her listing was inactive, two competitors captured her top keywords with aggressive PPC. One of them cut their price by three dollars to lock in the Buy Box. Customers who would have bought her product bought theirs instead — and some left positive reviews that now sit above hers on the search page.</li>
+        <li><strong>Overcorrection on other SKUs.</strong> To avoid a repeat, she over-ordered her other eleven products. Six months later, three of those SKUs still had excess inventory in FBA — tying up roughly twelve thousand dollars in capital and accumulating long-term storage fees at six dollars and ninety cents per cubic foot.</li>
+      </ul>
+
+      <h2>The 70-day pipeline that nobody maps on paper</h2>
+      <p>Most sellers know their lead time is "about two months." They do not break it down into stages. Here is what the full pipeline actually looks like for a China-to-FBA product:</p>
+
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr><th>Stage</th><th>Days</th><th>What happens</th><th>What can go wrong</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1. Production</td><td>Days 0–30</td><td>Supplier manufactures your order</td><td>Chinese New Year shuts factories for 2–3 weeks; raw material shortages add 7–10 days; supplier prioritizes a larger customer over you</td></tr>
+            <tr><td>2. Freight forwarder pickup</td><td>Days 30–35</td><td>Forwarder collects from factory, consolidates at port</td><td>Factory is in inland China — trucking to port adds 3–5 days; forwarder waits to fill a container</td></tr>
+            <tr><td>3. Ocean freight</td><td>Days 35–60</td><td>Vessel transit from Shanghai/Ningbo/Shenzhen to Long Beach/Seattle/Newark</td><td>Port congestion (Long Beach can add 10–14 days); vessel skips your port; container rolled to next sailing</td></tr>
+            <tr><td>4. Customs + drayage</td><td>Days 60–65</td><td>Customs clearance, trucking from port to FBA warehouse</td><td>Customs exam (random inspection adds 5–7 days); drayage carrier shortage during peak season</td></tr>
+            <tr><td>5. FBA check-in</td><td>Days 65–75</td><td>Amazon receives, scans, and makes inventory available for sale</td><td>FC transfer (moves to another warehouse — adds 7–14 days); peak season backlog (check-in takes 14–21 days instead of 10)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Each stage has a best case, a typical case, and a worst case. The spreadsheet accounts for all three. If you place your purchase order on September 1 under typical conditions, your inventory is available for sale around November 15 — twelve days before Black Friday. If ocean freight runs long by ten days, you miss it. The spreadsheet flags this risk before you place the PO, not after.</p>
+
+      <div class="callout">
+        <p><strong>Black Friday 2026 checkpoint:</strong> Black Friday is November 27. Cyber Monday is November 30. With a 10-day FBA check-in window, inventory delivered to Amazon on November 17 goes live in time. Inventory delivered November 20 misses it. Count backward from November 17 through the pipeline and your purchase order deadline is roughly September 8. If you are reading this after September, you are already cutting it close — air freight may be your only path to having stock for Q4.</p>
+      </div>
+
+      <h2>The backward-from-stockout method</h2>
+      <p>Most sellers ask the wrong question: "When should I reorder?" The right question is: "When will I run out?"</p>
+      <p>Here is how the method works for a single SKU:</p>
+      <ol>
+        <li><strong>Calculate days of stock remaining.</strong> Take your current FBA inventory, divide by your daily sales velocity. If you have 450 units and sell 9 per day, you have 50 days of stock remaining.</li>
+        <li><strong>Identify your stockout date.</strong> Today is November 6. Fifty days from now is December 26. That is your zero-inventory date.</li>
+        <li><strong>Subtract the max lead time.</strong> Your worst-case pipeline is 80 days (production 35 + ocean 30 + customs 7 + FBA 8). Subtract 80 from December 26 and you get October 7. That is your MUST-order-by date — if you have not placed the PO by October 7, you will stock out under worst-case conditions.</li>
+        <li><strong>Subtract the typical lead time.</strong> Your typical pipeline is 70 days. Subtract 70 from December 26 and you get October 17. That is your SHOULD-order-by date — place the PO before this date to stay comfortable.</li>
+        <li><strong>Set alerts.</strong> The spreadsheet colors the cell red when today's date passes the SHOULD date and you have not ordered. It turns dark red when you pass the MUST date.</li>
+      </ol>
+
+      <h2>The free Amazon FBA restock forecasting spreadsheet</h2>
+      <p>The spreadsheet has four tabs. You can copy it to your own Google Sheets or download it for Excel — no signup, no email gate, no "free trial" that converts to a subscription.</p>
+
+      <h3>Tab 1 — SKU Dashboard</h3>
+      <p>One row per SKU. Columns: ASIN, product name, current FBA inventory, daily velocity (7-day, 30-day, and 90-day averages), days of stock remaining, reorder point (velocity × max lead time + 20 percent buffer), reorder quantity, next purchase order date (auto-calculated from the backward-from-stockout method), and a stockout risk flag that turns red when days remaining is less than the max lead time.</p>
+      <p>Update this tab once per week by pulling your current FBA inventory levels from Seller Central and pasting your trailing sales data into the Velocity Tracker tab. The dashboard auto-refreshes.</p>
+
+      <h3>Tab 2 — Sales Velocity Tracker</h3>
+      <p>Paste your Seller Central Business Reports CSV export here. The spreadsheet extracts trailing 7-day, 30-day, and 90-day daily velocity per ASIN. It also calculates a Q4 spike factor — how much your November and December velocity historically exceeds your annual average — so your reorder quantities are not based on flat-year assumptions.</p>
+      <p>If you do not have historical Q4 data yet, the spreadsheet uses a conservative 1.4x multiplier as the default seasonal adjustment for most consumer product categories. You can override this with your own number once you have a year of history.</p>
+
+      <h3>Tab 3 — Pipeline Tracker</h3>
+      <p>Every open purchase order gets one row: PO number, supplier, SKU, quantity ordered, PO date, and checkboxes for each pipeline stage: "Production complete?" "Vessel departed?" "Arrived at port?" "Customs cleared?" "FBA checked in?" "Available for sale?"</p>
+      <p>Next to each checkbox, enter the actual date the stage completed. The spreadsheet compares actual dates against the planned timeline and highlights delays — if production took 38 days instead of 30, the cell turns yellow and adds three days to every downstream stage.</p>
+      <p>A "bottleneck" column auto-detects which stage is currently the longest-running delay across all your open POs. In most cases, it is ocean freight during peak season and FBA check-in during Q4.</p>
+
+      <h3>Tab 4 — Cash Flow View</h3>
+      <p>How much capital is tied up in inventory at each stage of the pipeline? The spreadsheet multiplies unit cost by quantity for every PO and buckets it: "In production" (30 percent deposit paid), "On the water" (70 percent balance + freight paid), "In FBA" (available for sale but not yet sold), and "Total inventory investment."</p>
+      <p>This view is the antidote to over-ordering. When you see that you already have thirty-four thousand dollars in inventory across the pipeline and your monthly free cash flow is six thousand dollars, the "order another five hundred units just to be safe" instinct disappears. You order what the math says you need.</p>
+
+      <h2>The five-minute weekly refresh ritual</h2>
+      <p>The spreadsheet is only as good as the data you feed it. Here is the weekly routine that keeps it accurate:</p>
+      <div class="checklist">
+        <h3>Monday morning — 5 minutes</h3>
+        <ol>
+          <li>Open Seller Central → Inventory → Manage FBA Inventory. Note current stock levels for each ASIN. Update the SKU Dashboard tab.</li>
+          <li>Open Seller Central → Reports → Business Reports → Detail Page Sales and Traffic. Export the trailing 30-day CSV. Paste into the Velocity Tracker tab.</li>
+          <li>Glance at the Pipeline Tracker tab. For any PO where a stage was due to complete last week but shows no date, email your supplier or freight forwarder for a status update.</li>
+          <li>Check the stockout risk column. Any cell that is red means you need to place a purchase order this week or accept that a stockout is likely.</li>
+          <li>Update the Cash Flow View with any payments made (deposits, balances, freight invoices) so the capital-tied-up number reflects reality.</li>
+        </ol>
+      </div>
+
+      <h2>When the spreadsheet is not enough</h2>
+      <p>This system works well for a private label seller with five to twenty-five SKUs and relatively stable sales velocity — the profile of most Amazon FBA businesses doing mid six figures in annual revenue. It breaks down when:</p>
+      <ul>
+        <li><strong>You cross fifty SKUs.</strong> Managing fifty rows in a spreadsheet is tedious but possible. Managing two hundred is a full-time job. At that scale, you need forecasting software that pulls Seller Central data automatically.</li>
+        <li><strong>Your velocity is highly volatile.</strong> Fashion, toys, and trend-driven products can spike ten times normal velocity overnight when a product goes viral. A spreadsheet using trailing averages will under-order by a factor of five. You need a tool that detects velocity anomalies and adjusts in real time.</li>
+        <li><strong>You sell on three or more channels.</strong> If you sell the same ASIN on Amazon, Shopify, and Walmart, your reorder point must account for aggregate velocity across all channels. The spreadsheet can handle two channels with a combined velocity column; at three or more, you need a multi-channel inventory sync tool.</li>
+      </ul>
+      <p>For everyone below those thresholds, the spreadsheet is free, customizable, and more accurate than the "I think I need about five hundred units" method that produced the Q4 stockout in the first place.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>What if my supplier lead time is different from 30 days?</h3>
+        <p>Replace the 30-day default with your actual manufacturing lead time. The Pipeline Tracker tab has editable lead time values for every stage — change them once and the backward-from-stockout dates recalculate for every SKU automatically. A supplier who consistently delivers in 22 days means your total pipeline shortens to roughly 62 days, and your reorder point moves eight days later.</p>
+
+        <h3>How do I handle seasonal velocity spikes?</h3>
+        <p>The Sales Velocity Tracker has a Q4 spike factor column. If your November and December sales historically run 1.6 times your annual average, enter 1.6 and the reorder quantities for Q4-bound purchase orders automatically scale up. For your first year without historical data, use the default 1.4x multiplier. After Q4, update the factor with your actual numbers for next year.</p>
+
+        <h3>Can I use this for products sourced from the United States instead of China?</h3>
+        <p>Yes. Replace the ocean freight stage with domestic freight — typically 3 to 7 days instead of 25. Your total pipeline drops to approximately 45 days. Update the lead time values in the Pipeline Tracker tab and everything recalculates. The spreadsheet works for any supply chain; the 70-day number is simply the most common case for FBA sellers sourcing from China.</p>
+      </section>
+
+      <div class="cta-box">
+        <h2>Stop ordering inventory on gut feel</h2>
+        <p>If your restock decisions are driving stockouts, excess inventory fees, and cash-flow surprises, we can build a custom inventory management workflow that pulls your real Seller Central data and automates the entire forecasting process — so the spreadsheet updates itself and you get a Slack alert the day you need to place a purchase order.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/stockout-prevention-reorder-point-spreadsheet-retail-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Number Two Bestseller Was Out of Stock for 11 Days and Nobody Noticed. Here Is the Stockout Prevention Tracker That Fixes It.</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/amazon-seller-fee-reconciliation-spreadsheet-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Amazon Took Fifteen Thousand Dollars in Fees Last Quarter and You Cannot Explain Where It Went — Here Is the Free Reconciliation System</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/amazon-fba-stranded-inventory-resolver-spreadsheet-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Amazon FBA Stranded Inventory? Free Tracker to Fix It Before Storage Fees Eat Your Margin</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    &copy; 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
