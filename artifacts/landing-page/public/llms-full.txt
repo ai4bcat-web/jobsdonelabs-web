@@ -6108,6 +6108,187 @@ URL: https://www.jobsdonelabs.ai/blog/consulting-scope-creep-prevention-playbook
 
 ---
 
+# Free Google Sheets Dispatch Board for 5-Truck Crews
+
+Home Services & Trades
+
+You Are Screenshotting an Excel Spreadsheet Every Morning and Texting It to Each of Your Five Techs. Last Week Tech Number Three Showed Up at 1420 Maple Street Instead of 1240 Because the Screenshot Was From Yesterday, and Now You Have a One-Star Review. Here Is the Free Google Sheets Dispatch Board That Every Tech Checks From Their Phone, Updates Their Own Status, and Eliminates the Wrong-Address Problem Forever.
+
+Ryne Bandolik
+
+· Jobs Done Labs · November 7, 2026
+
+Key takeaways
+
+A five-truck HVAC shop doing twenty to thirty calls per day loses roughly six hundred dollars per month in misroutes, wasted drive time, and one-star reviews from techs working off yesterday's screenshot. A free Google Sheets dispatch board with per-tech day view, mobile status updates, and emergency slot handling gives you ninety percent of the dispatch functionality of Housecall Pro or Jobber for zero dollars per month. Techs bookmark one link on their phone home screen and update their status in fifteen seconds with a Google Form. No app installs, no logins, no monthly fees.
+
+The Screenshot-Text Dispatch Method and Why It Breaks at Three or More Techs
+
+Here is how the screenshot-text method actually works in practice, and it is worse than you think.
+
+The owner dispatches from his truck between jobs. Every morning he opens an Excel spreadsheet on his laptop, screenshots the day's schedule, and texts it to each tech. When a call runs long or a new emergency comes in mid-day, he calls the next tech and verbally redirects them. The tech scribbles the new address on a notepad or just tries to remember it.
+
+The failure modes are predictable and expensive:
+
+Yesterday's screenshot.
+
+The owner forgets to send the updated version one morning. Tech number three opens the most recent text thread, sees a screenshot from yesterday, and drives to the wrong address. The customer waits two hours, leaves a one-star review, and tells five neighbors.
+
+I did not get the text.
+
+A tech's phone was dead, or the text thread got buried under fifteen other messages, or the screenshot did not download because he was in a dead zone. He shows up at the shop instead of the first job site.
+
+Emergency call insertion by telephone.
+
+A new call comes in at ten thirty in the morning. The owner calls Tech Two and says "go to 831 Oak after you finish, Mrs. Chen's water heater is flooding." Tech Two writes it on a scrap of paper, loses the paper, and goes to his next scheduled job instead.
+
+Zero visibility into who is running late.
+
+The dispatcher has no idea that Tech One is still on site at eleven fifteen for what was supposed to be a forty-five-minute job. The eleven o'clock customer is waiting, and the dispatcher does not know to call them until the customer calls first — angry.
+
+The math on misroutes alone:
+
+A five-tech shop averages two misroutes per month. Each misroute burns roughly two hours of drive time and costs one customer relationship. At one hundred fifty dollars per hour in billable time, that is six hundred dollars per month in lost production from bad dispatching — seven thousand two hundred dollars per year — before you even count the lifetime value of the customers who leave one-star reviews and never call back.
+
+The Google Sheets Dispatch Board
+
+The fix is not an app. It is a Google Sheet that lives at one URL, bookmarked on every tech's phone home screen, with a companion Google Form for status updates.
+
+Here is how the board is structured:
+
+Column
+
+What It Holds
+
+Time Slot
+
+7am, 8am, 9am, 10am, and so on — one row per time block
+
+Tech 1 / Tech 2 / Tech 3 / Tech 4 / Tech 5
+
+Each column is one tech. Each cell is a job card with customer name, address, phone, job type, time window, and a status dropdown (scheduled, en route, on site, complete, needs help)
+
+Color Coding
+
+Green for complete, blue for en route, yellow for on site, red for needs help, white for scheduled. The dispatcher scans the board in three seconds and knows exactly where every tech is.
+
+Emergency Row
+
+A blank row at the bottom of each time block. When a new call comes in, insert it here, shift everything down, and the board auto-reflows. No re-screenshotting, no re-texting.
+
+The board is view-only for techs. They can see the full day but cannot edit each other's jobs — no accidental deletions, no "who moved my job card" arguments. Techs update their own status through a linked Google Form that auto-populates the dispatch board with the new status and timestamp.
+
+The Tech's Phone Experience
+
+This is the part that makes the whole system work. The tech experience has to be dead simple or nobody will use it.
+
+Setup takes thirty seconds per tech, one time:
+
+Open the dispatch board link in the phone browser.
+
+Tap "Add to Home Screen" from the browser menu. The sheet now opens like an app from a single icon tap — no typing URLs, no digging through text threads.
+
+Bookmark the Google Form link the same way. This is the status update form: tap it, select your name from a dropdown, select the job, select the new status, tap submit. Fifteen seconds total.
+
+When a tech arrives at a job, they tap the form icon, select "on site," and submit. The dispatch board updates automatically. The dispatcher sees the status change in real time without a single text message or phone call.
+
+When a job runs long, the tech selects "needs help" or just leaves the status as "on site" past the expected time window. The dispatcher sees the yellow cell sitting in a time slot that should be empty by now and knows to call the next customer proactively.
+
+Why this beats texting:
+
+A text message is one-to-one and disappears into a thread. The dispatch board is one-to-many and persistent. When Tech One updates his status to "on site," Techs Two through Five can see it too. When the dispatcher adds a new emergency call at ten thirty, every tech sees it the next time they glance at the board. No group texts, no "did everyone get that?" follow-ups, no confusion.
+
+The Dispatcher's Five-Minute Morning Routine
+
+The biggest objection to any new system is "I do not have time to learn this." Here is the entire morning routine, start to finish:
+
+☐ The five-minute dispatch open
+
+Open yesterday's board.
+
+Any incomplete jobs are still there in their time slots, still showing "on site" or "scheduled" status. You can see at a glance what carried over from yesterday.
+
+Copy the template tab for today.
+
+The spreadsheet has a blank template tab. Duplicate it, rename it to today's date, and you have a clean board in ten seconds.
+
+Drag yesterday's incomplete jobs to today's slots.
+
+Cut and paste the job cards from yesterday's tab into today's corresponding time slots. Two minutes.
+
+Add new calls from voicemail and email.
+
+Insert rows for any new jobs that came in overnight. Paste in the customer name, address, phone, job type, and time window. Two minutes.
+
+The same link, every day.
+
+Do NOT create a new sheet — update the existing sheet so the URL never changes. Every tech's home-screen bookmark still works. There is no "did you get the new link?" problem. One minute.
+
+Five minutes of admin in the morning, and the rest of the day runs silently through the board. No re-screenshotting, no re-texting, no calling five people every time a schedule changes.
+
+When the Spreadsheet Breaks and You Actually Need Software
+
+This is the honest conversation most "free spreadsheet" guides skip. There IS a point where a Google Sheet becomes the bottleneck instead of the solution.
+
+You should move to dispatch software when:
+
+You have ten or more techs and forty or more calls per day. At this volume, the board becomes visually overwhelming and you need automated routing, GPS-based ETA calculations, and drag-and-drop schedule optimization.
+
+You need integrated invoicing, payment processing, and inventory management. The dispatch board handles dispatch. It does not generate invoices, process credit cards, or track parts inventory. If your dispatch-to-invoice workflow is also broken, a platform like Housecall Pro or Jobber may be worth the cost.
+
+You need automated customer notifications. "Your tech is on the way" texts, appointment reminder texts, and follow-up review requests are features that dispatch software handles natively. A spreadsheet cannot send texts.
+
+You have multiple offices in different time zones. A single Google Sheet becomes messy when dispatchers in different cities are editing it simultaneously.
+
+But for the five-to-eight-truck shop doing twenty to thirty calls per day with a single dispatcher who works from his truck, the Google Sheets dispatch board gives you roughly ninety percent of the dispatch functionality of paid software for zero dollars per month. The remaining ten percent — automated notifications, GPS tracking, drag-and-drop optimization — is nice to have, not need to have, at this scale.
+
+The honest comparison:
+
+Housecall Pro at one hundred ninety-nine dollars per month for five users (two thousand three hundred eighty-eight dollars per year). Jobber at two hundred forty-nine dollars per month (two thousand nine hundred eighty-eight dollars per year). ServiceTitan starts at roughly four hundred dollars per month. For a five-truck shop doing roughly eight hundred thousand dollars in annual revenue, the spreadsheet keeps three thousand dollars per year in your pocket — and does the one thing you actually need: shows you where your guys are supposed to be today.
+
+Frequently asked questions
+
+What if my techs are not good with technology?
+
+This system was designed for techs who do not want to learn new software. They tap one icon on their home screen to see the board (same as opening any app). They tap a second icon to update their status, select their name from a dropdown, select the job, and tap submit. If they can send a text message, they can use this. The barrier is not technical skill — it is the thirty-second setup and the first day of habit formation.
+
+Can I use this if I have fewer than five techs?
+
+Yes, and it works even better with fewer techs. A two-or-three-person shop has fewer moving parts and the board stays cleaner. You can also collapse unused tech columns. The core value — one live board instead of screenshots in text threads — applies at any crew size above one.
+
+What happens when a tech does not have cell service?
+
+Google Sheets works offline. The tech opens the board before leaving cell service range (the sheet caches in the browser), checks the day's jobs, and when they regain service, the status update form submission goes through. The dispatcher will not see real-time status changes until the tech reconnects, but the tech always has the day's schedule on their phone regardless of signal.
+
+How do I handle a tech calling in sick?
+
+Move that tech's job cards into the other tech columns, or insert them into the emergency row of the nearest available tech. Update the status column for the sick tech's column to "unavailable" so the dispatcher knows not to route anything there. The rest of the board reflows around the missing column. Five minutes of reshuffling, and the day runs on four trucks instead of five.
+
+Does this work for plumbing, electrical, and other trades?
+
+Yes. The board is trade-agnostic. The job type column is where you specify HVAC repair, plumbing rough-in, electrical panel upgrade, or any other trade-specific work. The structure (time slots, tech columns, status dropdowns, emergency rows) works identically for any field service business that dispatches multiple techs to different job sites each day.
+
+Your dispatch board stops the wrong-address problem. What stops the rest of the chaos?
+
+Dispatching is one part of a five-truck operation. There is also estimating, invoicing, follow-up, and payment collection — and each one has a free spreadsheet that does the job of expensive software. At Jobs Done Labs we build these systems for home service businesses so you can run your entire back office on Google Sheets. Book a free thirty-minute audit and we will map out which three spreadsheets your shop should build first.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
+
+You Run a 3-Tech Shop on a Whiteboard — the Free Home Service Admin Spreadsheet That Combines Scheduling, Invoicing, Estimate Follow-Up, and Payment Tracking Into One Workflow
+
+Stop Missing Customer Calls — The Real Cost, a Free Revenue Calculator, and 7 Fixes That Work for Any Service Business
+
+
+URL: https://www.jobsdonelabs.ai/blog/contractor-dispatch-board-google-sheets-free-template/
+
+---
+
 # You Spent 15 Hours on Estimates This Week and Landed
 
 Home Services & Trades
@@ -11588,6 +11769,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+Free Google Sheets Dispatch Board for 5-Truck Crews — Stop Screenshot-Texting Your Schedule
+
 Free Home Service Admin Spreadsheet: Scheduling, Invoicing, and Payment Tracking in One Workflow
 
 A $25 Blower Motor Just Cost You $1,100 — Free Parts-Run Coordination Spreadsheet
@@ -12697,6 +12880,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+Free Google Sheets Dispatch Board for 5-Truck Crews — Stop Screenshot-Texting Your Schedule
 
 Losing 2 Calls a Day? Free Field Dispatch Spreadsheet
 
@@ -33866,6 +34051,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+Free Google Sheets Dispatch Board for 5-Truck Crews — Stop Screenshot-Texting Your Schedule
 
 Admin Task Audit: Find Your 15 Wasted Hours a Week (Free)
 

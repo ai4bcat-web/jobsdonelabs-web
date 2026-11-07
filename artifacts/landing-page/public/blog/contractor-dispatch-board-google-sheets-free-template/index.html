@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Google Sheets Dispatch Board for 5-Truck Crews | Jobs Done Labs</title>
+  <meta name="description" content="Tech drove to wrong address using yesterday's screenshot. Free Google Sheets dispatch board: per-tech day view, mobile status updates, emergency slot handling." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/contractor-dispatch-board-google-sheets-free-template/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/contractor-dispatch-board-google-sheets-free-template/" />
+  <meta property="og:title" content="Free Google Sheets Dispatch Board for 5-Truck Crews | Jobs Done Labs" />
+  <meta property="og:description" content="Tech drove to wrong address using yesterday's screenshot. Free Google Sheets dispatch board: per-tech day view, mobile status updates, emergency slot handling." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Google Sheets Dispatch Board for 5-Truck Crews | Jobs Done Labs" />
+  <meta name="twitter:description" content="Tech drove to wrong address using yesterday's screenshot. Free Google Sheets dispatch board: per-tech day view, mobile status updates, emergency slot handling." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Free Google Sheets Dispatch Board for 5-Truck Crews",
+    "description": "Tech drove to wrong address using yesterday's screenshot. Free Google Sheets dispatch board: per-tech day view, mobile status updates, emergency slot handling.",
+    "author": { "@type": "Person", "name": "Ryne Bandolik", "url": "https://www.linkedin.com/in/rynebandolik/" },
+    "publisher": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+    "datePublished": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/contractor-dispatch-board-google-sheets-free-template/",
+    "image": "https://www.jobsdonelabs.ai/og-image.png"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does a Google Sheets dispatch board replace texting screenshots to techs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Instead of screenshotting an Excel sheet and texting it to each tech every morning, you maintain one live Google Sheet that every tech bookmarks on their phone home screen. The sheet has a per-tech day view with job cards showing customer name, address, phone, job type, time window, and a status column. Techs update their own status (en route, on site, complete) via a linked Google Form that takes 15 seconds. The dispatcher sees real-time status changes without a single text message, and nobody is looking at yesterday's schedule."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should a contractor dispatch spreadsheet include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A contractor dispatch spreadsheet needs five things: (1) a per-tech day view with time-slot rows so you can see every tech's schedule at a glance, (2) a status column with dropdown options (scheduled, en route, on site, complete, needs help), (3) customer details in each job card (name, address, phone, job type, time window), (4) a mobile-friendly view that techs can open on their phone home screen like an app, and (5) an emergency slot system so you can insert a new call and have the rest of the day shift down automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does dispatch software like Housecall Pro or Jobber cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Housecall Pro starts at seventy-nine dollars per month for a single user and scales to one hundred ninety-nine dollars per month for a five-user team, which comes to two thousand three hundred eighty-eight dollars per year. Jobber ranges from sixty-nine dollars to two hundred forty-nine dollars per month, reaching nearly three thousand dollars per year for a five-person crew. ServiceTitan starts around four hundred dollars per month. For a five-truck shop doing roughly eight hundred thousand dollars in annual revenue, three thousand dollars per year on dispatch software can feel steep when the core need is simply knowing where each tech is supposed to be."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a Google Sheet handle emergency calls and same-day schedule changes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. When an emergency call comes in, you insert a new row at the appropriate time slot, paste the job details, and the rest of the day shifts down automatically. The tech whose schedule changed sees the update immediately when they refresh the sheet on their phone. The key design choice is using one master sheet with a consistent URL so techs bookmark it once and always see the live version, rather than creating a new sheet each day which breaks the bookmark and reintroduces the 'yesterday's screenshot' problem."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "At what crew size should I switch from a spreadsheet to dispatch software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The tipping point is around ten techs handling forty or more calls per day, or when you need integrated invoicing, payment processing, GPS tracking, and inventory management in one system. For a five-to-eight-tech shop doing twenty to thirty calls per day, a well-designed Google Sheets dispatch board gives you roughly ninety percent of the dispatch functionality of Jobber or Housecall Pro for zero dollars per month. The spreadsheet breaks when you need automated customer notifications, real-time GPS tracking of tech locations, or multi-office coordination across different time zones."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Free Google Sheets Dispatch Board for 5-Truck Crews" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80" alt="Contractor checking schedule on phone at job site" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Home Services &amp; Trades</span>
+      <h1>You Are Screenshotting an Excel Spreadsheet Every Morning and Texting It to Each of Your Five Techs. Last Week Tech Number Three Showed Up at 1420 Maple Street Instead of 1240 Because the Screenshot Was From Yesterday, and Now You Have a One-Star Review. Here Is the Free Google Sheets Dispatch Board That Every Tech Checks From Their Phone, Updates Their Own Status, and Eliminates the Wrong-Address Problem Forever.</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · November 7, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">A five-truck HVAC shop doing twenty to thirty calls per day loses roughly six hundred dollars per month in misroutes, wasted drive time, and one-star reviews from techs working off yesterday's screenshot. A free Google Sheets dispatch board with per-tech day view, mobile status updates, and emergency slot handling gives you ninety percent of the dispatch functionality of Housecall Pro or Jobber for zero dollars per month. Techs bookmark one link on their phone home screen and update their status in fifteen seconds with a Google Form. No app installs, no logins, no monthly fees.</p>
+      </div>
+
+      <h2>The Screenshot-Text Dispatch Method and Why It Breaks at Three or More Techs</h2>
+
+      <p>Here is how the screenshot-text method actually works in practice, and it is worse than you think.</p>
+
+      <p>The owner dispatches from his truck between jobs. Every morning he opens an Excel spreadsheet on his laptop, screenshots the day's schedule, and texts it to each tech. When a call runs long or a new emergency comes in mid-day, he calls the next tech and verbally redirects them. The tech scribbles the new address on a notepad or just tries to remember it.</p>
+
+      <p>The failure modes are predictable and expensive:</p>
+
+      <ul>
+        <li><strong>Yesterday's screenshot.</strong> The owner forgets to send the updated version one morning. Tech number three opens the most recent text thread, sees a screenshot from yesterday, and drives to the wrong address. The customer waits two hours, leaves a one-star review, and tells five neighbors.</li>
+        <li><strong>I did not get the text.</strong> A tech's phone was dead, or the text thread got buried under fifteen other messages, or the screenshot did not download because he was in a dead zone. He shows up at the shop instead of the first job site.</li>
+        <li><strong>Emergency call insertion by telephone.</strong> A new call comes in at ten thirty in the morning. The owner calls Tech Two and says "go to 831 Oak after you finish, Mrs. Chen's water heater is flooding." Tech Two writes it on a scrap of paper, loses the paper, and goes to his next scheduled job instead.</li>
+        <li><strong>Zero visibility into who is running late.</strong> The dispatcher has no idea that Tech One is still on site at eleven fifteen for what was supposed to be a forty-five-minute job. The eleven o'clock customer is waiting, and the dispatcher does not know to call them until the customer calls first — angry.</li>
+      </ul>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The math on misroutes alone:</strong> A five-tech shop averages two misroutes per month. Each misroute burns roughly two hours of drive time and costs one customer relationship. At one hundred fifty dollars per hour in billable time, that is six hundred dollars per month in lost production from bad dispatching — seven thousand two hundred dollars per year — before you even count the lifetime value of the customers who leave one-star reviews and never call back.</p>
+      </div>
+
+      <h2>The Google Sheets Dispatch Board</h2>
+
+      <p>The fix is not an app. It is a Google Sheet that lives at one URL, bookmarked on every tech's phone home screen, with a companion Google Form for status updates.</p>
+
+      <p>Here is how the board is structured:</p>
+
+      <div class="comparison">
+        <table>
+          <tr><th>Column</th><th>What It Holds</th></tr>
+          <tr><td>Time Slot</td><td>7am, 8am, 9am, 10am, and so on — one row per time block</td></tr>
+          <tr><td>Tech 1 / Tech 2 / Tech 3 / Tech 4 / Tech 5</td><td>Each column is one tech. Each cell is a job card with customer name, address, phone, job type, time window, and a status dropdown (scheduled, en route, on site, complete, needs help)</td></tr>
+          <tr><td>Color Coding</td><td>Green for complete, blue for en route, yellow for on site, red for needs help, white for scheduled. The dispatcher scans the board in three seconds and knows exactly where every tech is.</td></tr>
+          <tr><td>Emergency Row</td><td>A blank row at the bottom of each time block. When a new call comes in, insert it here, shift everything down, and the board auto-reflows. No re-screenshotting, no re-texting.</td></tr>
+        </table>
+      </div>
+
+      <p>The board is view-only for techs. They can see the full day but cannot edit each other's jobs — no accidental deletions, no "who moved my job card" arguments. Techs update their own status through a linked Google Form that auto-populates the dispatch board with the new status and timestamp.</p>
+
+      <h2>The Tech's Phone Experience</h2>
+
+      <p>This is the part that makes the whole system work. The tech experience has to be dead simple or nobody will use it.</p>
+
+      <p>Setup takes thirty seconds per tech, one time:</p>
+
+      <ol>
+        <li>Open the dispatch board link in the phone browser.</li>
+        <li>Tap "Add to Home Screen" from the browser menu. The sheet now opens like an app from a single icon tap — no typing URLs, no digging through text threads.</li>
+        <li>Bookmark the Google Form link the same way. This is the status update form: tap it, select your name from a dropdown, select the job, select the new status, tap submit. Fifteen seconds total.</li>
+      </ol>
+
+      <p>When a tech arrives at a job, they tap the form icon, select "on site," and submit. The dispatch board updates automatically. The dispatcher sees the status change in real time without a single text message or phone call.</p>
+
+      <p>When a job runs long, the tech selects "needs help" or just leaves the status as "on site" past the expected time window. The dispatcher sees the yellow cell sitting in a time slot that should be empty by now and knows to call the next customer proactively.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Why this beats texting:</strong> A text message is one-to-one and disappears into a thread. The dispatch board is one-to-many and persistent. When Tech One updates his status to "on site," Techs Two through Five can see it too. When the dispatcher adds a new emergency call at ten thirty, every tech sees it the next time they glance at the board. No group texts, no "did everyone get that?" follow-ups, no confusion.</p>
+      </div>
+
+      <h2>The Dispatcher's Five-Minute Morning Routine</h2>
+
+      <p>The biggest objection to any new system is "I do not have time to learn this." Here is the entire morning routine, start to finish:</p>
+
+      <div class="checklist">
+        <h3>&#9744; The five-minute dispatch open</h3>
+        <ol>
+          <li><strong>Open yesterday's board.</strong> Any incomplete jobs are still there in their time slots, still showing "on site" or "scheduled" status. You can see at a glance what carried over from yesterday.</li>
+          <li><strong>Copy the template tab for today.</strong> The spreadsheet has a blank template tab. Duplicate it, rename it to today's date, and you have a clean board in ten seconds.</li>
+          <li><strong>Drag yesterday's incomplete jobs to today's slots.</strong> Cut and paste the job cards from yesterday's tab into today's corresponding time slots. Two minutes.</li>
+          <li><strong>Add new calls from voicemail and email.</strong> Insert rows for any new jobs that came in overnight. Paste in the customer name, address, phone, job type, and time window. Two minutes.</li>
+          <li><strong>The same link, every day.</strong> Do NOT create a new sheet — update the existing sheet so the URL never changes. Every tech's home-screen bookmark still works. There is no "did you get the new link?" problem. One minute.</li>
+        </ol>
+      </div>
+
+      <p>Five minutes of admin in the morning, and the rest of the day runs silently through the board. No re-screenshotting, no re-texting, no calling five people every time a schedule changes.</p>
+
+      <h2>When the Spreadsheet Breaks and You Actually Need Software</h2>
+
+      <p>This is the honest conversation most "free spreadsheet" guides skip. There IS a point where a Google Sheet becomes the bottleneck instead of the solution.</p>
+
+      <p>You should move to dispatch software when:</p>
+
+      <ul>
+        <li>You have ten or more techs and forty or more calls per day. At this volume, the board becomes visually overwhelming and you need automated routing, GPS-based ETA calculations, and drag-and-drop schedule optimization.</li>
+        <li>You need integrated invoicing, payment processing, and inventory management. The dispatch board handles dispatch. It does not generate invoices, process credit cards, or track parts inventory. If your dispatch-to-invoice workflow is also broken, a platform like Housecall Pro or Jobber may be worth the cost.</li>
+        <li>You need automated customer notifications. "Your tech is on the way" texts, appointment reminder texts, and follow-up review requests are features that dispatch software handles natively. A spreadsheet cannot send texts.</li>
+        <li>You have multiple offices in different time zones. A single Google Sheet becomes messy when dispatchers in different cities are editing it simultaneously.</li>
+      </ul>
+
+      <p>But for the five-to-eight-truck shop doing twenty to thirty calls per day with a single dispatcher who works from his truck, the Google Sheets dispatch board gives you roughly ninety percent of the dispatch functionality of paid software for zero dollars per month. The remaining ten percent — automated notifications, GPS tracking, drag-and-drop optimization — is nice to have, not need to have, at this scale.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The honest comparison:</strong> Housecall Pro at one hundred ninety-nine dollars per month for five users (two thousand three hundred eighty-eight dollars per year). Jobber at two hundred forty-nine dollars per month (two thousand nine hundred eighty-eight dollars per year). ServiceTitan starts at roughly four hundred dollars per month. For a five-truck shop doing roughly eight hundred thousand dollars in annual revenue, the spreadsheet keeps three thousand dollars per year in your pocket — and does the one thing you actually need: shows you where your guys are supposed to be today.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>What if my techs are not good with technology?</h3>
+        <p>This system was designed for techs who do not want to learn new software. They tap one icon on their home screen to see the board (same as opening any app). They tap a second icon to update their status, select their name from a dropdown, select the job, and tap submit. If they can send a text message, they can use this. The barrier is not technical skill — it is the thirty-second setup and the first day of habit formation.</p>
+
+        <h3>Can I use this if I have fewer than five techs?</h3>
+        <p>Yes, and it works even better with fewer techs. A two-or-three-person shop has fewer moving parts and the board stays cleaner. You can also collapse unused tech columns. The core value — one live board instead of screenshots in text threads — applies at any crew size above one.</p>
+
+        <h3>What happens when a tech does not have cell service?</h3>
+        <p>Google Sheets works offline. The tech opens the board before leaving cell service range (the sheet caches in the browser), checks the day's jobs, and when they regain service, the status update form submission goes through. The dispatcher will not see real-time status changes until the tech reconnects, but the tech always has the day's schedule on their phone regardless of signal.</p>
+
+        <h3>How do I handle a tech calling in sick?</h3>
+        <p>Move that tech's job cards into the other tech columns, or insert them into the emergency row of the nearest available tech. Update the status column for the sick tech's column to "unavailable" so the dispatcher knows not to route anything there. The rest of the board reflows around the missing column. Five minutes of reshuffling, and the day runs on four trucks instead of five.</p>
+
+        <h3>Does this work for plumbing, electrical, and other trades?</h3>
+        <p>Yes. The board is trade-agnostic. The job type column is where you specify HVAC repair, plumbing rough-in, electrical panel upgrade, or any other trade-specific work. The structure (time slots, tech columns, status dropdowns, emergency rows) works identically for any field service business that dispatches multiple techs to different job sites each day.</p>
+      </section>
+
+      <div class="cta-box">
+        <h2>Your dispatch board stops the wrong-address problem. What stops the rest of the chaos?</h2>
+        <p>Dispatching is one part of a five-truck operation. There is also estimating, invoicing, follow-up, and payment collection — and each one has a free spreadsheet that does the job of expensive software. At Jobs Done Labs we build these systems for home service businesses so you can run your entire back office on Google Sheets. Book a free thirty-minute audit and we will map out which three spreadsheets your shop should build first.</p>
+        <a class="btn" href="/contact">Book your free audit &rarr;</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/field-service-dispatch-scheduling-spreadsheet-free/" style="font-weight:600;color:#1466FF;text-decoration:none">Losing 2 Calls a Day? Free Field Dispatch Spreadsheet</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/home-service-business-admin-spreadsheet-free/" style="font-weight:600;color:#1466FF;text-decoration:none">You Run a 3-Tech Shop on a Whiteboard — the Free Home Service Admin Spreadsheet That Combines Scheduling, Invoicing, Estimate Follow-Up, and Payment Tracking Into One Workflow</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/stop-missing-customer-calls-small-business-guide/" style="font-weight:600;color:#1466FF;text-decoration:none">Stop Missing Customer Calls — The Real Cost, a Free Revenue Calculator, and 7 Fixes That Work for Any Service Business</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    &copy; 2026 Jobs Done Labs &middot; <a href="/">Home</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
