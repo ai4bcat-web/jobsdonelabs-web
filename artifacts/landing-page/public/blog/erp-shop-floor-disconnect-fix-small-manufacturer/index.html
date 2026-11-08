@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERP Does Not Match Your Shop Floor — Here Is the Fix | Jobs Done Labs</title>
+  <meta name="description" content="Your ERP says one thing, the shop floor another. Why production reality never matches the system — and the 30-day fix that does not require a new ERP or MES." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/erp-shop-floor-disconnect-fix-small-manufacturer/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/erp-shop-floor-disconnect-fix-small-manufacturer/" />
+  <meta property="og:title" content="ERP Does Not Match Your Shop Floor — Here Is the Fix | Jobs Done Labs" />
+  <meta property="og:description" content="Your ERP says one thing, the shop floor another. Why production reality never matches the system — and the 30-day fix that does not require a new ERP or MES." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ERP Does Not Match Your Shop Floor — Here Is the Fix | Jobs Done Labs" />
+  <meta name="twitter:description" content="Your ERP says one thing and the shop floor says another. The 30-day bridge plan that fixes the disconnect without replacing your ERP or buying a MES." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "ERP Does Not Match Your Shop Floor — Here Is the Fix",
+    "description": "Your ERP says one thing and the shop floor says another. Why production reality never matches the system — and the 30-day bridge plan that fixes it without replacing your ERP.",
+    "datePublished": "2026-11-08",
+    "dateModified": "2026-11-08",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "sameAs": "https://www.linkedin.com/in/rynebandolik/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai"
+    },
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/erp-shop-floor-disconnect-fix-small-manufacturer/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does my ERP system not match what happens on the shop floor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The disconnect happens because ERP systems were built for accounting, not production. An ERP tracks what was ordered, what was invoiced, and what inventory the general ledger says you have. It does not track what machine a job is on right now, whether the operator logged time correctly, or whether 40 parts were scrapped during setup. The shop floor moves in real time — the ERP updates in batch. This gap is universal in small and mid-size manufacturing. A survey of r/manufacturing found that most shops under 50 employees run their ERP and shop floor as two separate systems — the ERP for accounting and a mix of whiteboards, spreadsheets, and paper travelers for actual production. Fixing it does not require a new ERP. It requires a lightweight bridge layer that captures the data the ERP was never designed to collect."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does the ERP-shop floor disconnect cost a small manufacturer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 20-person job shop typically loses one hundred thousand to one hundred eighty thousand dollars per year from ERP-shop floor disconnect. Here is where the money goes: late deliveries from jobs stuck at operations nobody flagged (roughly forty thousand to sixty thousand dollars in expedited shipping and lost repeat business), scrap and rework from running the wrong revision because the ERP had the old BOM (roughly twenty thousand to thirty thousand dollars), overtime from production managers doing 2-hour floor walks to find status that a dashboard should show in 5 minutes (roughly fifteen thousand to twenty five thousand dollars), and bad quotes from using ERP standard costs that are 18 months out of date (roughly twenty five thousand to sixty five thousand dollars in underpriced jobs). Add the hidden cost of key people spending 30 to 40 percent of their week reconciling ERP data against reality instead of improving production, and the real number is well north of two hundred thousand dollars for shops above thirty employees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to replace my ERP to fix the shop floor disconnect?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Replacing the ERP is the most expensive way to fix this — and it often does not work because the new ERP has the same fundamental design. ERPs are general ledgers with manufacturing modules bolted on. The fix is a lightweight bridge layer between the ERP and the shop floor: three spreadsheets and one daily huddle. The spreadsheets are a WIP tracker (where is every job right now), an actual-vs-estimate job cost log (what is each job really costing), and a production schedule (what runs next). The daily huddle is a 10-minute standup where the production lead updates the spreadsheets from the floor. This costs zero dollars and takes under 90 minutes to set up. When the bridge is running smoothly and you are ready to automate the data capture, that is when lightweight automation — barcode scanning, tablet check-in, or a custom middleware — makes sense. But the process must work on paper first."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a 30-day bridge plan to close the ERP-shop floor gap?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Week 1: Audit the disconnect. Pick 5 recent jobs. Pull the ERP record for each — planned hours, material cost, scheduled completion. Walk the floor and find the actuals. Document every gap. You will find that the ERP was wrong on completion dates for 4 of 5 jobs and wrong on actual cost for all 5. Week 2: Build the WIP tracker. One row per active job. Fields: job number, customer, part, quantity, due date, current work center, next operation, status (on track, at risk, stuck). This replaces the 2-hour floor walk with a 5-minute dashboard check. Week 3: Build the actual-vs-estimate cost log. For every job, log planned hours and actual hours weekly. Red jobs (over 15 percent variance) get a 10-minute root cause discussion. Week 4: Add the daily 10-minute production huddle. Supervisor updates the WIP tracker and cost log from yesterday's actuals. Flag stuck jobs and over-budget jobs before they become crises. By day 30, the ERP still runs accounting but the shop floor has its own source of truth — and the two talk to each other through the bridge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When does automation actually help with the ERP-shop floor gap — and when does it not?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Automation helps when the manual bridge is working but the time spent updating spreadsheets is eating into production management capacity — typically around 30 to 50 active jobs or more than 3 work centers. At that point, tablet-based check-in (operator scans a barcode and taps a status), automated data sync between the tracker and the ERP, and real-time dashboards that pull from the floor instead of the general ledger can recover 8 to 12 hours per week. Automation does NOT help when you skip the manual bridge and buy software first. The software will fail for the same reason the ERP did — nobody on the floor will use it because the process was never proven on paper. The winning sequence is: manual bridge first, prove it works, then automate the data capture. Jobs Done Labs builds these bridge automations — custom middleware that pulls shop floor data into lightweight dashboards without touching the ERP — but only after the 30-day manual plan proves the process is sound."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "ERP Does Not Match Your Shop Floor — Here Is the Fix", "item": "https://www.jobsdonelabs.ai/blog/erp-shop-floor-disconnect-fix-small-manufacturer/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80" alt="Manufacturing shop floor with CNC machine and operator reviewing production status on a tablet" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Manufacturing</span>
+      <h1>ERP-Shop Floor Disconnect: Why Production Reality Never Matches the System (And How to Fix It)</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · November 8, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0"><strong>Your ERP was built for accountants, not the shop floor.</strong> It tracks what was ordered and what was invoiced — not what machine a job is on right now, whether the operator logged time correctly, or whether 40 parts were scrapped during setup. The gap between ERP data and production reality costs a 20-person shop one hundred thousand dollars or more per year in late deliveries, scrap, bad quotes, and wasted management time. The fix is not a new ERP. It is a lightweight bridge layer — three spreadsheets and a daily 10-minute huddle — that costs zero dollars and takes under 90 minutes to set up. When that bridge is working, automation can take it further. But the process must work on paper first.</p>
+      </div>
+
+      <h2>1. The Universal Manufacturing Frustration</h2>
+
+      <p>If you have ever stood on your shop floor, looked at a job that was supposed to ship yesterday, and opened your ERP only to see it marked "in progress — on schedule," you already know the problem. The ERP and the shop floor live in different realities.</p>
+
+      <p>A recent thread on r/manufacturing captured it perfectly. One production manager wrote: "Does anyone's ERP actually match what happens on the floor?" Fifty-nine upvotes and dozens of replies later, the consensus was clear: no. It never does. Another commenter put it bluntly: "ERPs aren't for factory workers. They're for accountants to know what's going on." A third added: "ERPs don't work on the shop floor. That's what MES is for. This goes double for ERPs that have MES modules."</p>
+
+      <p>This is not a software problem. It is a structural problem. Every small and mid-size manufacturer we have talked to — job shops, machine shops, contract manufacturers, fabrication shops — runs two systems: the ERP for accounting and a parallel system of whiteboards, spreadsheets, paper travelers, and tribal knowledge for actual production. The two systems do not talk to each other. And every day they stay disconnected, money leaks out.</p>
+
+      <h2>2. Why ERPs Were Built for Accountants, Not Shop Floors</h2>
+
+      <p>To understand why this gap exists in nearly every shop, you have to understand what an ERP actually is. At its core, an ERP is a general ledger with modules bolted on. The general ledger needs to know three things: what was ordered (revenue), what was shipped (cost of goods sold), and what is in inventory (assets). Everything else — production scheduling, work center routing, quality inspection, machine downtime — is a module that was added later, often acquired from a different company and stitched together.</p>
+
+      <p>Here is what the ERP sees:</p>
+      <ul>
+        <li>A sales order was entered. Revenue is recognized.</li>
+        <li>Raw material was issued to the job. Inventory decreased.</li>
+        <li>The job was marked complete. Cost of goods sold is recorded.</li>
+      </ul>
+
+      <p>Here is what the shop floor sees:</p>
+      <ul>
+        <li>The operator ran the wrong revision of the drawing for the first 20 parts because the ERP still had the old BOM loaded.</li>
+        <li>The CNC mill was down for 6 hours on Tuesday because the coolant pump failed and maintenance was not notified until Wednesday.</li>
+        <li>The job sat at inspection for 3 days because the inspector was out sick and nobody knew the parts were waiting.</li>
+        <li>Setup took 4 hours instead of the 1.5 hours the ERP estimated — and nobody logged the difference.</li>
+      </ul>
+
+      <p>The ERP has no field for "operator ran wrong revision." It has no field for "machine down, coolant pump." It has no field for "inspector out sick, parts stuck at quality." These are the real events that determine whether a job ships on time and on budget — and the ERP is blind to all of them.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The gap is not your fault.</strong> The ERP was never designed to capture production reality. It was designed to produce financial statements. When a shop tries to run production from financial software, the disconnect is inevitable. The question is not "why is our ERP wrong?" but "what do we use to bridge the gap?"</p>
+      </div>
+
+      <h2>3. The Real Cost of the Disconnect: Three Numbers That Should Concern You</h2>
+
+      <p>The ERP-shop floor gap is not just frustrating. It is expensive. Here is where the money goes, based on patterns we have seen across small manufacturers:</p>
+
+      <div class="comparison">
+        <table>
+          <tr><th>Cost Category</th><th>Annual Impact (20-Person Shop)</th><th>Root Cause</th></tr>
+          <tr><td>Late deliveries</td><td>forty thousand to sixty thousand dollars</td><td>Jobs stuck at operations nobody flagged. Rush shipping, lost repeat business, expedited material.</td></tr>
+          <tr><td>Scrap and rework</td><td>twenty thousand to thirty thousand dollars</td><td>Wrong revision run because ERP had old BOM. No shop floor check against current traveler.</td></tr>
+          <tr><td>Management overtime</td><td>fifteen thousand to twenty-five thousand dollars</td><td>Production managers doing 2-hour floor walks to find job status that a dashboard should show in 5 minutes.</td></tr>
+          <tr><td>Underpriced jobs</td><td>twenty-five thousand to sixty-five thousand dollars</td><td>Quoting from ERP standard costs that are 12 to 18 months out of date. Actual costs never loop back to the estimating system.</td></tr>
+          <tr><td><strong>Total direct cost</strong></td><td><strong>one hundred thousand to one hundred eighty thousand dollars</strong></td><td></td></tr>
+        </table>
+      </div>
+
+      <p>Add the hidden cost — key people spending 30 to 40 percent of their week reconciling ERP data against reality instead of improving production — and the real number for shops above 30 employees is well north of two hundred thousand dollars per year.</p>
+
+      <p>But here is the critical point: <strong>none of this shows up on the profit and loss as a line item called "ERP disconnect."</strong> It shows up as higher COGS, lower gross margin, and a vague sense that the shop should be more profitable than it is. That is why it persists. You cannot fix what you cannot name.</p>
+
+      <h2>4. What Shops That Fixed This Actually Did (Not Another Fifty Thousand Dollar System)</h2>
+
+      <p>We studied shops that closed the gap. They did not replace their ERP. They did not buy a MES. They did not hire a consultant for six figures. Here is what they actually did:</p>
+
+      <div class="checklist">
+        <h3>Pattern: The Three-Spreadsheet Bridge</h3>
+        <ol>
+          <li><strong>WIP tracker.</strong> One row per active job. Fields: job number, customer, part, quantity, due date, current work center, next operation, status (on track / at risk / stuck). Updated once per shift. Replaces the 2-hour floor walk with a 5-minute dashboard check.</li>
+          <li><strong>Actual-vs-estimate cost log.</strong> For every job, log planned hours (from the quote or ERP routing) and actual hours (from time cards or operator log). Red jobs — those running more than 15 percent over estimate — get a 10-minute root cause discussion the same week, not at the month-end P-and-L review six weeks after the job shipped.</li>
+          <li><strong>Production schedule.</strong> A simple loading calendar: which machine, which job, which shift. Updated daily. When a rush job lands, you can see instantly which jobs move — instead of discovering the conflict when the customer calls on Friday asking where their parts are.</li>
+        </ol>
+      </div>
+
+      <p>All three spreadsheets live in Google Sheets. They cost zero dollars. They take under 90 minutes to set up the first time. The only ongoing cost is 10 minutes per day to update them — and that time is recovered immediately by not walking the floor for 2 hours.</p>
+
+      <p>The shops that succeeded did one more thing: they made the bridge the shop floor's tool, not management's report. The supervisor updates the WIP tracker from what they see on the floor. The operators see the production schedule and know what runs next. The cost log is reviewed with the people who ran the jobs — not in a closed-door management meeting. When the bridge belongs to the floor, it gets used. When it is a report for the front office, it gets ignored.</p>
+
+      <h2>5. A 30-Day Bridge Plan: From Paper Travelers to Real-Time Without Replacing Your ERP</h2>
+
+      <div class="checklist">
+        <h3>Week 1: Audit the Disconnect</h3>
+        <p>Pick 5 recent jobs that shipped. Pull the ERP record for each — planned hours, material cost, scheduled completion date. Now walk the floor and find the actuals. Talk to the operator. Check the inspection log. Look at the shipping date. Document every gap.</p>
+        <p><strong>What you will find:</strong> The ERP was wrong on completion dates for 4 of 5 jobs and wrong on actual cost for all 5. This is not a failure. This is your baseline. Write it down. It is the number you will improve against.</p>
+      </div>
+
+      <div class="checklist">
+        <h3>Week 2: Build the WIP Tracker</h3>
+        <p>Create a Google Sheet with one row per active job. Every morning, the production supervisor spends 5 minutes updating: which work center is each job at, is it on track or stuck, has the next operation been set up. This replaces the multi-hour floor walk with a dashboard anyone can check from their phone.</p>
+        <p><strong>Success looks like:</strong> You can answer "where is job 4472?" in 30 seconds without leaving your desk. And the answer matches what the operator would tell you if you walked over.</p>
+      </div>
+
+      <div class="checklist">
+        <h3>Week 3: Build the Actual-vs-Estimate Cost Log</h3>
+        <p>Add a second tab to the spreadsheet. Every Friday, log planned hours vs actual hours for every job that ran that week. Flag any job running more than 15 percent over estimate. Spend 10 minutes discussing the root cause with the team — not assigning blame, understanding the gap.</p>
+        <p><strong>Success looks like:</strong> You catch a job running 22 percent over estimate on Wednesday — while it is still on the floor — instead of discovering it at month-end when the invoice already went out at the quoted price.</p>
+      </div>
+
+      <div class="checklist">
+        <h3>Week 4: Add the Daily 10-Minute Production Huddle</h3>
+        <p>Every morning at the same time: supervisor, lead operator, and whoever handles scheduling. Review the WIP tracker. Update statuses from yesterday's actuals. Flag stuck jobs before they become crises. Review the cost log for red jobs. The meeting is 10 minutes — no chairs, no coffee, no drift.</p>
+        <p><strong>Success looks like:</strong> By day 30, the ERP still runs accounting. But the shop floor has its own source of truth — and the two talk to each other through the bridge. Jobs do not go dark after 5 PM. Cost overruns are caught in days, not weeks. And the daily huddle takes less time than the old floor walk.</p>
+      </div>
+
+      <h2>6. When Automation Actually Helps (And When It Does Not)</h2>
+
+      <p>The bridge works. But at some point — usually around 30 to 50 active jobs or more than 3 work centers — the time spent updating spreadsheets starts eating into production management capacity. That is when automation earns its keep.</p>
+
+      <p><strong>Automation helps when:</strong></p>
+      <ul>
+        <li>The manual bridge has been running for at least 60 days and the data is clean.</li>
+        <li>You are spending more than 5 hours per week updating the WIP tracker and cost log.</li>
+        <li>You have more than 30 active jobs at any time and status changes happen faster than the supervisor can type.</li>
+        <li>The patterns are clear: you know which data matters and which fields never get filled in.</li>
+      </ul>
+
+      <p><strong>Automation does NOT help when:</strong></p>
+      <ul>
+        <li>You skip the manual bridge and buy software first. The software will fail for the same reason the ERP did — nobody on the floor will use it because the process was never proven on paper.</li>
+        <li>The disconnect is a process problem, not a data problem. If operators are not logging time because nobody asks them to, a barcode scanner will not fix that.</li>
+        <li>You buy a MES that promises to "replace your spreadsheets" but requires 6 months of implementation and a dedicated admin. By month 3, the spreadsheets are back and the MES is shelfware.</li>
+      </ul>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The winning sequence: manual bridge first, prove it works, then automate the data capture.</strong> Tablet-based check-in (operator scans a barcode and taps "setup complete"), automated data sync between the tracker and the ERP, and real-time dashboards that pull from the floor instead of the general ledger can recover 8 to 12 hours per week. But they only work if the manual bridge proved that the data is worth collecting. Jobs Done Labs builds these bridge automations — custom middleware that connects shop floor data to lightweight dashboards without touching the ERP — but only after the 30-day manual plan proves the process is sound.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>Why does my ERP system not match what happens on the shop floor?</h3>
+        <p>The disconnect happens because ERP systems were built for accounting, not production. An ERP tracks what was ordered, what was invoiced, and what inventory the general ledger says you have. It does not track what machine a job is on right now, whether the operator logged time correctly, or whether 40 parts were scrapped during setup. The shop floor moves in real time — the ERP updates in batch. This gap is universal in small and mid-size manufacturing. Fixing it does not require a new ERP — it requires a lightweight bridge layer that captures the data the ERP was never designed to collect.</p>
+
+        <h3>How much does the ERP-shop floor disconnect cost?</h3>
+        <p>A 20-person job shop typically loses one hundred thousand to one hundred eighty thousand dollars per year from ERP-shop floor disconnect. The costs break down into late deliveries (forty thousand to sixty thousand dollars in expedited shipping and lost repeat business), scrap and rework from wrong revisions (twenty thousand to thirty thousand dollars), management overtime spent on floor walks (fifteen thousand to twenty-five thousand dollars), and underpriced jobs from stale ERP costs (twenty-five thousand to sixty-five thousand dollars). Add the hidden cost of key people spending 30 to 40 percent of their week reconciling data, and the real number for shops above 30 employees exceeds two hundred thousand dollars per year.</p>
+
+        <h3>Do I need to replace my ERP to fix the shop floor disconnect?</h3>
+        <p>No. Replacing the ERP is the most expensive way to fix this — and it often does not work because the new ERP has the same fundamental design (general ledger first, production second). The fix is a lightweight bridge layer: three spreadsheets (WIP tracker, actual-vs-estimate cost log, production schedule) and a daily 10-minute huddle. This costs zero dollars and takes under 90 minutes to set up. When the bridge is running smoothly, automation — barcode scanning, tablet check-in, or custom middleware — can take it further. But the process must work on paper first.</p>
+
+        <h3>What is a 30-day plan to close the ERP-shop floor gap?</h3>
+        <p>Week 1: Audit 5 recent jobs — pull ERP records and find actuals. Document every gap. Week 2: Build the WIP tracker — one row per job, 5-minute daily updates. Week 3: Add the actual-vs-estimate cost log — catch cost overruns while the job is still on the floor. Week 4: Add the daily 10-minute production huddle — supervisor updates the bridge from yesterday's actuals, flags stuck jobs and red-cost jobs before they become crises. By day 30, the ERP runs accounting and the shop floor has its own source of truth.</p>
+
+        <h3>When should a manufacturer automate the bridge instead of running spreadsheets?</h3>
+        <p>Automation earns its keep when the manual bridge has been running for at least 60 days, the data is clean, and you are spending more than 5 hours per week updating spreadsheets with more than 30 active jobs. At that point, tablet-based check-in, automated ERP sync, and real-time production dashboards can recover 8 to 12 hours per week. Automation does NOT help when you skip the manual bridge — the software will fail because the process was never proven. The winning sequence is manual bridge first, prove it works, then automate the data capture. Jobs Done Labs builds these bridge automations but only after the manual plan proves the process is sound.</p>
+      </section>
+
+      <div class="related">
+        <h2>Related posts</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/manufacturing-job-costing-without-erp/">
+            <span class="cat">Manufacturing</span>
+            <div class="title">You're Losing $80,000 a Year Quoting Jobs by Feel — The Free Spreadsheet System</div>
+          </a>
+          <a class="related-card" href="/blog/manufacturing-wip-shop-floor-order-visibility-tracker/">
+            <span class="cat">Manufacturing</span>
+            <div class="title">Your Shop Floor Is a Black Box After 5 PM — Here's the Free WIP Tracker</div>
+          </a>
+          <a class="related-card" href="/blog/manufacturing-production-bottleneck-constraint-analysis/">
+            <span class="cat">Manufacturing</span>
+            <div class="title">Your Shop Has 12 Machines But Only One Is the Bottleneck</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Ready to bridge the gap between your ERP and your shop floor?</h2>
+        <p>We build the custom automation that connects production reality to your existing systems — barcode scanning, tablet check-in, real-time dashboards — without touching your ERP. But it starts with a free audit: we will map where your disconnect is costing you money and build the 30-day bridge plan for your specific shop.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/manufacturing-job-costing-without-erp/" style="font-weight:600;color:#1466FF;text-decoration:none">You are Losing Eighty Thousand Dollars a Year Quoting Jobs by Feel — The Free Spreadsheet System That Tells You Exactly What Every Job Costs Before You Quote It</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/manufacturing-wip-shop-floor-order-visibility-tracker/" style="font-weight:600;color:#1466FF;text-decoration:none">Your Shop Floor Is a Black Box After 5 PM. Here Is the Free WIP Tracker That Shows You Exactly Where Every Job Is Right Now.</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/small-manufacturing-production-scheduling-guide/" style="font-weight:600;color:#1466FF;text-decoration:none">The "Who Is Doing What When" Whiteboard Is Not Working — A Production Scheduling System for Small Shops</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
