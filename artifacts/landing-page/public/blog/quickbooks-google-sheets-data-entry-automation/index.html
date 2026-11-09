@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automate QuickBooks Data Entry to Google Sheets | Jobs Done Labs</title>
+  <meta name="description" content="Manual data entry between QuickBooks and spreadsheets costs 5-15 hours a week. Three ways to automate it — starting at zero dollars, no coding required." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/quickbooks-google-sheets-data-entry-automation/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/quickbooks-google-sheets-data-entry-automation/" />
+  <meta property="og:title" content="Automate QuickBooks Data Entry to Google Sheets | Jobs Done Labs" />
+  <meta property="og:description" content="Manual data entry between QuickBooks and spreadsheets costs 5-15 hours a week. Three ways to automate it — starting at zero dollars, no coding required." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Automate QuickBooks Data Entry to Google Sheets | Jobs Done Labs" />
+  <meta name="twitter:description" content="Manual data entry between QuickBooks and spreadsheets costs 5-15 hours a week. Three ways to automate it — starting at zero dollars, no coding required." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <!-- BREADCRUMBLIST JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.jobsdonelabs.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.jobsdonelabs.ai/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Automate QuickBooks Data Entry to Google Sheets"
+      }
+    ]
+  }
+  </script>
+  <!-- BLOGPOSTING JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Automate QuickBooks Data Entry to Google Sheets | Jobs Done Labs",
+    "description": "Manual data entry between QuickBooks and spreadsheets costs 5-15 hours a week. Three ways to automate it — starting at zero dollars, no coding required.",
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "jobTitle": "Founder",
+      "worksFor": { "@type": "Organization", "name": "Jobs Done Labs", "url": "https://www.jobsdonelabs.ai" },
+      "sameAs": ["https://www.linkedin.com/in/rynebandolik/", "https://x.com/Ryne_Stone", "https://www.youtube.com/@jobsdonelabs"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai",
+      "logo": { "@type": "ImageObject", "url": "https://www.jobsdonelabs.ai/logo.png" }
+    },
+    "datePublished": "2026-11-09",
+    "dateModified": "2026-11-09",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/quickbooks-google-sheets-data-entry-automation/"
+  }
+  </script>
+  <!-- FAQPAGE JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can QuickBooks automatically export data to Google Sheets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — and the native integration is free. QuickBooks Online has a built-in Google Sheets connector (found under Reports > Export to Google Sheets) that pushes P&L, balance sheet, and transaction reports directly into Sheets on a schedule. It is read-only (no two-way sync) and updates once per day, but for most small businesses tracking cash flow, reconciling accounts, or building a dashboard, it eliminates 80% of manual spreadsheet work at zero cost. Desktop QuickBooks users can use the free QuickBooks Export to Excel feature as a stepping stone — export the report, then use Google Sheets' import function to pull the CSV automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost to automate QuickBooks and Google Sheets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It ranges from zero to eight thousand dollars depending on complexity. The native QuickBooks-to-Sheets connector is free and handles scheduled report exports. No-code platforms like Zapier and Make start at twenty to fifty dollars per month for basic QuickBooks triggers (new invoice, new payment) pushed to Sheets rows. A custom automation built by an agency like Jobs Done Labs — with two-way sync, custom business logic, error handling, and multi-system integration — typically costs two thousand to eight thousand dollars one-time, with little to no ongoing cost beyond hosting. The free tier solves reporting; the paid tier solves workflow automation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the easiest way to connect QuickBooks to Google Sheets without coding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The easiest zero-code path is QuickBooks Online's built-in Google Sheets export (Reports > Export to Google Sheets), which requires no third-party tools and no technical setup — just authorize the connection and pick a schedule. For event-driven automation (for example, 'every time a new invoice is created, add a row to this sheet'), Zapier and Make are the simplest no-code options: connect your QuickBooks account, pick a trigger, map fields to Sheet columns, and activate. Both offer pre-built templates that work in under ten minutes. Neither requires any coding or developer help."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to set up QuickBooks Google Sheets automation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The native export takes under five minutes: log into QuickBooks Online, go to Reports, click Export to Google Sheets, authorize, pick a schedule, and you are done. A Zapier/Make automation takes ten to thirty minutes for a basic one-way flow (for example, new QuickBooks invoice to a new Sheets row). A custom two-way sync with business logic, error handling, and multi-system integration typically takes a forty eight hour engagement with an automation agency like Jobs Done Labs — the system is built, tested, and handed off with documentation so your team owns it outright. The free audit maps your exact workflow and gives you a fixed-price quote before any work begins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does QuickBooks Google Sheets integration work with QuickBooks Desktop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "QuickBooks Desktop does not have the same native Google Sheets connector as QuickBooks Online, but it does have a free Export to Excel feature that serves as a bridge: export the report to a CSV or Excel file, save it to a Google Drive folder that syncs to your desktop, and use Google Sheets' IMPORTDATA() or a simple Apps Script to pull the file automatically. For real-time or event-driven sync from QuickBooks Desktop, you will need a third-party connector like Zapier (which supports QuickBooks Desktop via a companion app), Make, or a custom integration. Many small businesses use the switch to QuickBooks Online as the trigger for automation — the Online version opens up the native connector and the API, and the migration itself is a one-time effort."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .post-hero { width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-bottom:2rem; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Person working on QuickBooks data and Google Sheets automation" class="post-hero" loading="lazy" />
+
+      <span class="kicker">Accounting &amp; Finance</span>
+      <h1>How to Automate Data Entry Between QuickBooks and Google Sheets Without a Developer</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · November 9, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0">Manual QuickBooks-to-spreadsheet data entry costs small businesses five to fifteen hours per week in wasted labor — and the error rate from retyping numbers is three to five percent. Three automation paths exist: the native QuickBooks Google Sheets connector (free, read-only), no-code platforms like Zapier and Make (twenty to fifty dollars per month), and custom automation built by an agency (two thousand to eight thousand dollars one-time). The right path depends on how often your data changes and whether you need one-way reporting or two-way sync. Every path eliminates copy-paste errors and frees your bookkeeper for work that actually grows the business.</p>
+      </div>
+
+      <h2>The real cost of retyping numbers between QuickBooks and a spreadsheet</h2>
+      <p>If someone on your team opens QuickBooks, copies numbers into a Google Sheet, and does this every week — you are paying for a problem you could solve in under an hour. The math is not subtle: five hours per week at twenty five dollars per hour is six thousand five hundred dollars per year in labor, and that is before you count the errors. A three percent typo rate on a hundred transactions means three wrong numbers per batch — one of which will eventually hit a tax filing, a client invoice, or a loan application.</p>
+      <p>This is not a staffing problem. It is a plumbing problem. Two systems that should be connected are not, and a human being is acting as the pipe. The good news: connecting QuickBooks to Google Sheets is one of the easiest automations to set up, and the free tier actually solves the majority of small-business use cases. Here is exactly how to do it, from free to fully custom.</p>
+
+      <h2>Method 1: QuickBooks Online's native Google Sheets connector (free, five minutes)</h2>
+      <p>If you use QuickBooks Online, you already have a free automation sitting in your Reports menu. QuickBooks built a direct Google Sheets export that pushes P and L statements, balance sheets, transaction lists, and most standard reports into a Sheet on a schedule — daily, weekly, or monthly. No third-party tools, no Zapier, no developer.</p>
+      <div class="checklist">
+        <h3>How to set it up in under five minutes</h3>
+        <ol>
+          <li>Log into QuickBooks Online and go to <strong>Reports</strong> in the left sidebar.</li>
+          <li>Open any report — for example, Profit and Loss, Transaction List by Date, or Balance Sheet.</li>
+          <li>Click the <strong>Export</strong> button (top right, next to the email and print icons) and choose <strong>Export to Google Sheets</strong>.</li>
+          <li>Authorize the connection to your Google account the first time — QuickBooks will ask once, then remember it.</li>
+          <li>Choose a schedule: daily, weekly, or monthly. QuickBooks will push a fresh version of that report to a new or existing Sheet on that cadence.</li>
+        </ol>
+        <p style="font-size:15px; color:rgba(11,13,18,.55); margin:16px 0 0">That is it. The Sheet updates automatically. Build your dashboard, pivot table, or cash-flow forecast on top of the auto-refreshed data, and you never copy a number from QuickBooks again.</p>
+      </div>
+      <p><strong>Limitations to know:</strong> This connector is read-only — data flows from QuickBooks to Sheets, never the other direction. It updates once per reporting period, not in real time. And it works with QuickBooks Online, not Desktop. For most small businesses running weekly or monthly reports, these limitations do not matter — you get eighty percent of the value at zero cost.</p>
+
+      <h2>Method 2: No-code connectors — Zapier and Make (twenty to fifty dollars per month)</h2>
+      <p>When the native export is not enough — you need event-driven updates, two-way flows, or triggers from specific QuickBooks events — no-code automation platforms fill the gap. Zapier and Make (formerly Integromat) both have QuickBooks Online integrations that let you build workflows like "when a new invoice is created, add a row to this Google Sheet" or "when a payment is received, update the customer balance in this Sheet."</p>
+      <p>The setup is visual: pick a trigger (QuickBooks event), pick an action (Google Sheets row), map the fields (invoice number goes in column A, amount in column B, customer name in column C), and activate. Neither requires any code. Both offer pre-built templates — search "QuickBooks to Google Sheets" in either platform's template library and you will find ready-to-use workflows.</p>
+      <div class="callout">
+        <p style="margin:0"><strong>When to choose Zapier vs Make:</strong> Zapier is simpler and has wider app support — pick it if you want the fastest setup and do not need complex branching logic. Make is more powerful and cheaper at scale — pick it if you need multi-step workflows, conditional logic, or are connecting three or more systems. Both offer free trials, so test your workflow before committing.</p>
+      </div>
+      <p><strong>Pricing reality check:</strong> Zapier's paid plans start at roughly twenty dollars per month; Make starts at roughly nine dollars per month. Both charge by "task" or "operation" — one row written to Sheets equals one task. A typical small business generating fifty to two hundred transactions per month will fit comfortably in the entry-level paid tier. If you process thousands of rows, the cost scales, but by that point you are probably ready for Method 3.</p>
+
+      <h2>Method 3: Custom automation — when you have outgrown no-code</h2>
+      <p>Some workflows break the no-code mold. You need two-way sync (data flows both directions between QuickBooks and Sheets). You have custom business logic — for example, "if the invoice is from a wholesale customer, apply a different markup before writing to Sheets." You are connecting three or more systems (QuickBooks, Google Sheets, your CRM, your inventory tracker). Or you need real-time sync, not scheduled batches.</p>
+      <p>This is where a custom automation — built once, owned by you, no recurring platform fees — earns its cost. The QuickBooks Online API is well-documented and stable; Google Sheets has a mature API and an Apps Script environment. A competent automation engineer can build a production-grade connector in a forty eight hour engagement. The one-time cost (typically two thousand to eight thousand dollars) replaces the monthly Zapier/Make subscription and gives you exactly the logic your business runs on, not a generic template.</p>
+
+      <div class="comparison">
+        <h2>Which QuickBooks-to-Sheets method fits your business?</h2>
+        <table>
+          <tr>
+            <th>Method</th>
+            <th>Cost</th>
+            <th>Setup time</th>
+            <th>Best for</th>
+          </tr>
+          <tr>
+            <td>Native QuickBooks export</td>
+            <td>Free</td>
+            <td>Under 5 minutes</td>
+            <td>Scheduled reports, dashboards, cash-flow tracking</td>
+          </tr>
+          <tr>
+            <td>Zapier / Make</td>
+            <td>$20–50/month</td>
+            <td>10–30 minutes</td>
+            <td>Event-driven workflows, moderate volume, one-way sync</td>
+          </tr>
+          <tr>
+            <td>Custom automation</td>
+            <td>$2,000–8,000 one-time</td>
+            <td>48-hour engagement</td>
+            <td>Two-way sync, custom logic, multi-system integration, high volume</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Do this week: pick your path and stop retyping numbers</h2>
+      <div class="checklist">
+        <h3>Three moves to make before Friday</h3>
+        <ol>
+          <li><strong>Time the retype.</strong> For one week, track how many hours your team spends copying data between QuickBooks and any spreadsheet. Multiply by your hourly labor cost. That number is what automation saves — every year.</li>
+          <li><strong>Try the native export first.</strong> If you are on QuickBooks Online, set up the Google Sheets export today. It takes five minutes and costs nothing. Even if you later upgrade to Method 2 or 3, the native export gives you a baseline that works immediately.</li>
+          <li><strong>List what does not connect.</strong> QuickBooks, your spreadsheet, your CRM, your inventory — draw the arrows that are currently a human retyping data. Those arrows are your automation shortlist, ranked by hours wasted.</li>
+        </ol>
+        <p style="font-size:15px; color:rgba(11,13,18,.55); margin:16px 0 0">Now you are making the build-vs-buy decision on evidence, not on a hunch.</p>
+      </div>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <h3>Can QuickBooks automatically export data to Google Sheets?</h3>
+        <p>Yes — and the native integration is free. QuickBooks Online has a built-in Google Sheets connector (found under Reports > Export to Google Sheets) that pushes P and L statements, balance sheets, and transaction reports directly into Sheets on a schedule. It is read-only (no two-way sync) and updates once per day, but for most small businesses tracking cash flow, reconciling accounts, or building a dashboard, it eliminates eighty percent of manual spreadsheet work at zero cost. Desktop QuickBooks users can use the free QuickBooks Export to Excel feature as a stepping stone — export the report, then use Google Sheets' import function to pull the CSV automatically.</p>
+
+        <h3>How much does it cost to automate QuickBooks and Google Sheets?</h3>
+        <p>It ranges from zero to eight thousand dollars depending on complexity. The native QuickBooks-to-Sheets connector is free and handles scheduled report exports. No-code platforms like Zapier and Make start at twenty to fifty dollars per month for basic QuickBooks triggers (new invoice, new payment) pushed to Sheets rows. A custom automation built by an agency like Jobs Done Labs — with two-way sync, custom business logic, error handling, and multi-system integration — typically costs two thousand to eight thousand dollars one-time, with little to no ongoing cost beyond hosting. The free tier solves reporting; the paid tier solves workflow automation.</p>
+
+        <h3>What is the easiest way to connect QuickBooks to Google Sheets without coding?</h3>
+        <p>The easiest zero-code path is QuickBooks Online's built-in Google Sheets export (Reports > Export to Google Sheets), which requires no third-party tools and no technical setup — just authorize the connection and pick a schedule. For event-driven automation (for example, "every time a new invoice is created, add a row to this sheet"), Zapier and Make are the simplest no-code options: connect your QuickBooks account, pick a trigger, map fields to Sheet columns, and activate. Both offer pre-built templates that work in under ten minutes. Neither requires any coding or developer help.</p>
+
+        <h3>How long does it take to set up QuickBooks Google Sheets automation?</h3>
+        <p>The native export takes under five minutes: log into QuickBooks Online, go to Reports, click Export to Google Sheets, authorize, pick a schedule, and you are done. A Zapier or Make automation takes ten to thirty minutes for a basic one-way flow (for example, new QuickBooks invoice to a new Sheets row). A custom two-way sync with business logic, error handling, and multi-system integration typically takes a forty eight hour engagement with an automation agency like Jobs Done Labs — the system is built, tested, and handed off with documentation so your team owns it outright. The free audit maps your exact workflow and gives you a fixed-price quote before any work begins.</p>
+
+        <h3>Does QuickBooks Google Sheets integration work with QuickBooks Desktop?</h3>
+        <p>QuickBooks Desktop does not have the same native Google Sheets connector as QuickBooks Online, but it does have a free Export to Excel feature that serves as a bridge: export the report to a CSV or Excel file, save it to a Google Drive folder that syncs to your desktop, and use Google Sheets' IMPORTDATA() or a simple Apps Script to pull the file automatically. For real-time or event-driven sync from QuickBooks Desktop, you will need a third-party connector like Zapier (which supports QuickBooks Desktop via a companion app), Make, or a custom integration. Many small businesses use the switch to QuickBooks Online as the trigger for automation — the Online version opens up the native connector and the API, and the migration itself is a one-time effort.</p>
+      </section>
+
+      <div class="cta-box">
+        <h2>Stop retyping numbers. Get a free automation audit.</h2>
+        <p>Tell us which systems you are copying data between. We will map the exact workflow, quote a fixed-price automation, and tell you which parts you can do yourself for free — all in a thirty-minute call. If we build it and it does not recover thirty thousand dollars in ninety days, you pay nothing.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you will want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/stop-manual-data-entry-between-systems-small-business/" style="font-weight:600;color:#1466FF;text-decoration:none">Stop Copying Data Between Systems: The Small Business Guide to System Integration</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/quickbooks-manufacturing-data-sync-double-entry/" style="font-weight:600;color:#1466FF;text-decoration:none">QuickBooks Manufacturing Data Sync: Eliminate Double Entry Between Production and Accounting</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/ai-automation-roi-small-business-worked-example/" style="font-weight:600;color:#1466FF;text-decoration:none">AI Automation ROI for Small Business: A Worked Example With Real Numbers</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    &copy; 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
