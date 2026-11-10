@@ -4412,6 +4412,8 @@ You Have 18 Subs Emailing You Certificates and You Have No Idea Who Is Expired
 
 Your Field Crews Know Exactly How Much They Lost — 3 Weeks After the Job Closed
 
+Contractor License Renewal Tracker: Never Miss an Expiration Again (Free Spreadsheet)
+
 
 URL: https://www.jobsdonelabs.ai/blog/construction-permit-inspection-tracking-spreadsheet-free/
 
@@ -7468,6 +7470,257 @@ You're a GC, Not a Filing Clerk — How to Tame Subcontractor Paperwork Without 
 
 
 URL: https://www.jobsdonelabs.ai/blog/contractor-job-costing-system-field-to-office/
+
+---
+
+# Contractor License Renewal Tracker (Free Spreadsheet)
+
+Home Services & Trades
+
+Contractor License Renewal Tracker: Never Miss an Expiration Again (Free Spreadsheet)
+
+Ryne Bandolik
+
+· Jobs Done Labs · November 10, 2026
+
+Key takeaways
+
+One expired license can ground a tech for two weeks and cost $12,000+ in lost revenue — plus fines up to $5,000 per violation. This free multi-trade spreadsheet tracks every license, certification, CEU deadline, and insurance certificate across your entire crew, with automated Google Calendar reminders and state-by-state renewal links for all 50 states. Setup takes under an hour, costs zero dollars, and replaces the mental calendar that nobody can actually keep in a 10-tech shop spread across HVAC, electrical, and plumbing.
+
+Why license tracking breaks in every shop (until someone gets burned)
+
+Most contractors track licenses the same way: a folder of paper cards in the office, a note on the shop whiteboard from last year, and the assumption that techs handle their own renewals. This works until it does not.
+
+Here is what actually happens when a license expires unnoticed:
+
+A commercial plumbing contractor in Texas had a journeyman plumber sidelined for two full weeks.
+
+His state license expired in March. Nobody caught it until a city inspector showed up on a commercial rough-in and asked for the plumbing contractor registration. The job stopped. The permit was voided. Two other jobs that had already been roughed in by the same tech had to be re-permitted. Total cost: roughly $12,000 in lost billable time, $1,200 in re-permitting fees, and a general contractor who stopped calling them for three months. The license renewal itself cost $200 and took 20 minutes. The problem was not the renewal — it was the tracking.
+
+If you run a 5- to 15-tech shop across multiple trades, you are potentially tracking 25-40 separate credentials: state contractor licenses, journeyman cards, EPA certifications, backflow prevention certificates, master electrician licenses, continuing education units, insurance certificates, and surety bonds. Each one has a different renewal cycle, a different processing time, and a different governing body. No owner can hold all of this in their head — and no service software under $200 per month does it automatically.
+
+What needs tracking per trade: the full credential map
+
+Every trade stacks credentials differently. Here is what a 10-tech shop running HVAC, electrical, and plumbing typically needs to track:
+
+Trade
+
+Credential
+
+Typical renewal
+
+Governing body
+
+HVAC
+
+State HVAC contractor license
+
+1-2 years
+
+State licensing board
+
+EPA Section 608 certification
+
+Permanent (replace if lost)
+
+EPA
+
+NATE certification
+
+2 years
+
+NATE
+
+Local mechanical permit card
+
+1-3 years (varies by city)
+
+City/county building dept
+
+Electrical
+
+State electrical contractor license
+
+1-2 years
+
+State licensing board
+
+Master electrician license
+
+1-3 years
+
+State or local jurisdiction
+
+Journeyman electrician card
+
+1-2 years
+
+State licensing board
+
+Continuing education (CEU) hours
+
+Aligned to license cycle (4-24 hrs)
+
+State licensing board
+
+Plumbing
+
+State plumbing contractor license
+
+1-2 years
+
+State licensing board
+
+Master plumber license
+
+1-3 years
+
+State or local jurisdiction
+
+Backflow prevention certification
+
+3 years
+
+State or ABPA
+
+Medical gas certification (if applicable)
+
+3 years
+
+ASSE/NITC
+
+All trades
+
+General liability insurance
+
+Annual
+
+Insurance carrier
+
+Workers' comp certificate
+
+Annual
+
+Insurance carrier
+
+Surety bond
+
+Annual (or per-project)
+
+Bonding company
+
+OSHA 10/30 card
+
+5 years (recommended refresh)
+
+OSHA-authorized trainer
+
+With three trades and ten techs, that is 25+ renewal dates per year. The free spreadsheet handles all of them in one place.
+
+The free spreadsheet: five tabs that replace your folder of paper cards
+
+The tracker is built as a Google Sheets workbook with five tabs. You can copy it, customize it for your trades, and share it with your office manager in under an hour.
+
+Tab 1 — Tech Roster:
+
+One row per employee. Name, trade, hire date, and a summary of active credentials. This is your master index.
+
+Tab 2 — License & Certification Tracker:
+
+The core of the system. One row per credential. Columns: tech name, credential type, issuing authority, license number, issue date, expiration date, renewal window (days before expiration to start the renewal), status (green/yellow/red based on proximity to expiration), last renewed, and notes. Conditional formatting turns cells red when the expiration date is within 30 days, yellow within 60 days, so you can see at a glance who needs attention.
+
+Tab 3 — Continuing Education Tracker:
+
+CEU hours required per license cycle, hours completed, hours remaining, and CEU deadline. Many states require proof of completed CEUs before they will process a renewal — missing the CEU deadline by a week can mean a license that sits expired for 4-6 weeks while you scramble through an online course. This tab prevents that gap.
+
+Tab 4 — Insurance & Bonding:
+
+COIs, general liability policies, workers' comp certificates, umbrella coverage, and surety bonds. Same conditional formatting and renewal logic. A lapsed GL policy can get you removed from a GC's vendor list overnight. This tab keeps every certificate current.
+
+Tab 5 — State-by-State Renewal Links:
+
+Direct links to every state contractor licensing board's renewal portal, plus links to EPA, NATE, ABPA, and major municipal permitting departments. No more googling "Texas plumbing license renewal" at the last minute.
+
+Setting up automated reminders (no paid software needed)
+
+The spreadsheet tracks everything. Automated reminders make sure you actually act on the data. Here is the free setup:
+
+Google Calendar reminders (free, 10 minutes):
+
+For each credential expiration, create a recurring calendar event 60 days before expiration with an email notification. Set a second reminder 30 days out. If your shop uses Google Workspace, add the office manager as a guest so two people get the alert.
+
+Zapier or Make integration (free tier, 30 minutes):
+
+Connect Google Sheets to Gmail or Slack. When a row's expiration date falls within 45 days, auto-send an email to the tech and the office manager. When it falls within 15 days, escalate to the owner. The free tiers on both Zapier and Make support this volume.
+
+Full automation (custom build, 2-3 weeks):
+
+A system that monitors state licensing board databases for changes, sends escalating alerts to techs and office staff, generates a weekly compliance dashboard emailed every Monday morning, and integrates with your existing dispatch or HR software. This is what we build for contractors who want to set it and forget it. Setup cost: $3,000-$8,000 one-time. Operational cost: near zero after the build.
+
+What to do right now if you suspect a license is already lapsed
+
+If you are reading this and a knot just formed in your stomach because you are not sure whether your lead electrician's master license is current, here is the immediate triage:
+
+Check the state board website right now.
+
+Every state licensing board has a license lookup tool. Type in the license number and verify the status. This takes 90 seconds per tech.
+
+If a license is expired, pull the tech from jobs that require it immediately.
+
+Do not finish the day, do not wrap up the current job. A tech working under an expired license creates liability that your insurance will not cover. Send them to a non-licensed task or send them home. The cost of one lost day is far less than the cost of a denied insurance claim.
+
+Call the state board.
+
+Many boards offer expedited renewal for a surcharge ($50-$200). Some offer a temporary extension if the lapse is under 30 days. You will not know until you call.
+
+Notify your insurance carrier.
+
+If any work was performed during the lapse period, your carrier needs to know. Yes, this is uncomfortable. It is far less uncomfortable than a denied claim six months from now.
+
+Set up the spreadsheet today.
+
+The fast path: open Google Sheets, create columns for tech name, credential, issuing body, license number, expiration date, and status. Fill in your current crew. Set conditional formatting. That is Level 1. It takes 45 minutes and it prevents the next lapse.
+
+Frequently asked questions
+
+What happens if my tech works with an expired license?
+
+The consequences compound fast. A tech working under an expired license cannot legally perform the work — any job completed during the lapse is unpermitted and uninsurable. If an inspector shows up mid-job and finds an expired credential, the job stops immediately, the permit is voided, and you face fines ranging from $500 to $5,000 depending on the state and trade. Worse, if something goes wrong on a job performed with an expired license, your liability insurance will likely deny the claim because the work was performed without a valid credential. The contractor who had a tech sidelined for two weeks during a re-licensing scramble lost roughly $12,000 in billable revenue plus the cost of re-permitting two jobs. One missed renewal can cascade into a five-figure problem.
+
+How often do contractor licenses need renewal?
+
+It varies by state and trade, which is exactly why tracking matters. Most state contractor licenses renew every 1 to 2 years — California requires renewal every 2 years, Florida every 2 years, Texas annually. But the real complexity is continuing education: many states require 4-24 hours of CEUs per renewal cycle, and the CEU deadline is often before the license expiration date. Trade-specific certifications add more layers: EPA 608 (HVAC) is permanent but requires re-testing if lost; backflow prevention certifications typically renew every 3 years; master electrician licenses vary from annual to triennial. With a 10-tech shop across three trades, you could have 25-40 separate renewal dates per year — each with different CEU requirements, fees, and processing times. A single spreadsheet replaces the mental calendar no owner can actually keep.
+
+Can I track insurance certificates in the same spreadsheet?
+
+Yes. The spreadsheet includes an insurance and bonding tab specifically for certificates of insurance (COIs), general liability policies, workers' comp, umbrella coverage, and surety bonds. Insurance renewals follow the same pattern as license renewals — they expire on fixed dates, require advance renewal processing (often 30-60 days for commercial policies), and carry catastrophic consequences if they lapse. A lapsed GL policy can get you dropped from a general contractor's approved vendor list overnight. The tracker treats insurance certificates the same way it treats trade licenses: expiration date, renewal window, status indicator, and automated reminder. One spreadsheet, one weekly check, zero lapses.
+
+How does the JobsDone Labs $30K guarantee work for compliance tracking automation?
+
+We build a custom compliance tracking system for your exact trades and jurisdictions — license renewal monitoring, CEU deadline tracking, insurance certificate management, and automated alert workflows — and guarantee it delivers at least $30,000 in net profit recovery within 90 days through prevented license-lapse downtime, avoided re-permitting costs, and reduced insurance premium increases from lapsed coverage gaps. If documented recovery falls short, you pay nothing. What counts as recovery: billable revenue preserved by preventing tech downtime from expired licenses, re-permitting fees avoided, rush license renewal surcharges eliminated, and admin hours recovered from manual license tracking. We baseline your last 12 months of compliance incidents before we start, and we track every dollar against that baseline.
+
+How much does it cost to automate contractor license tracking?
+
+The free spreadsheet template costs zero dollars and takes under an hour to set up with your existing roster. Adding automated reminders via Google Calendar or Zapier costs zero dollars and takes 30 minutes. For a fully automated system that monitors state licensing board databases, sends escalating alerts to techs and office staff, and generates a compliance dashboard, a custom build typically runs $3,000 to $8,000 one-time with minimal ongoing cost. The ROI math is straightforward: one prevented license lapse saves $2,000-$12,000 in lost revenue plus $500-$5,000 in fines and re-permitting costs. Most shops break even on the first prevented lapse. Compare that to field service software platforms like ServiceTitan or Jobber, where license tracking is bundled into the top-tier plans at $200-$400 per month per user — a $3,000-$5,000 custom build pays for itself in under a year against those recurring costs.
+
+Stop tracking licenses on a mental calendar
+
+The spreadsheet gets you organized today. If you want a system that monitors, alerts, and escalates automatically — so you never think about license expirations again — we build it for your exact trades and jurisdictions, backed by the $30K guarantee.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You Have Four Stitches on a Guy's Hand and You Did Not Record It — The Free OSHA Safety Compliance System for Small Contractors
+
+You Have 40 Open Permits Across 4 Job Sites and One Just Expired — Free Permit Tracker
+
+Your Best HVAC Customer Only Calls When the AC Is Broken — Free Maintenance Plan Renewal Tracker
+
+
+URL: https://www.jobsdonelabs.ai/blog/contractor-license-renewal-tracking-spreadsheet-free/
 
 ---
 
@@ -15738,6 +15991,8 @@ Your Foreman Is Filling Out Paper Timesheets in His Truck at 6PM — The Fill-It
 
 You Spent $800,000 on Subcontractors Last Year — The Free Subcontractor Scorecard
 
+Contractor License Renewal Tracker: Never Miss an Expiration Again (Free Spreadsheet)
+
 
 URL: https://www.jobsdonelabs.ai/blog/job-site-safety-compliance-contractor-osha-free/
 
@@ -16950,6 +17205,8 @@ Your Customers' HVAC Is Failing and You Don't Know: A Free Equipment Lifecycle T
 When to Roll a Truck at 3am: An After-Hours Emergency Triage System for HVAC, Plumbing, and Electrical Contractors
 
 Spending Too Much Time on Invoicing? How Contractors Cut Paperwork from Hours to Minutes
+
+Contractor License Renewal Tracker: Never Miss an Expiration Again (Free Spreadsheet)
 
 
 URL: https://www.jobsdonelabs.ai/blog/maintenance-plan-renewal-tracking-spreadsheet-free/
