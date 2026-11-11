@@ -2488,6 +2488,207 @@ URL: https://www.jobsdonelabs.ai/blog/billable-hours-time-audit-professional-ser
 
 ---
 
+# Purchasing Keeps Ordering the Wrong BOM Revision
+
+Manufacturing
+
+Purchasing Keeps Ordering the Wrong BOM Revision: A Free BOM and ECO Control System for Small Manufacturers
+
+Ryne Bandolik
+
+· Jobs Done Labs · November 11, 2026
+
+Key takeaways
+
+Purchasing is ordering parts against a bill of materials that engineering already changed — and the wrong parts show up at the dock.
+
+The fix is not a new ERP. It is a single source of truth: a free spreadsheet that holds the part master, the BOM structure, the revision history, and the engineering change order log in one place, plus a formula-driven alert that flags any purchase order still pointing at an old revision. It costs zero dollars and takes about ninety minutes to set up. When engineering changes a part, the change is logged once, the old revision is marked superseded, and purchasing cannot accidentally order the old one again.
+
+1. Why Outdated BOMs Cost You More Than You Think
+
+A thread on r/supplychain asked the question directly: "How do you prevent purchasing from ordering parts based on outdated BOM revisions?" The answers were thin — a few people said "communication" and "discipline" — which is exactly the problem. If the fix for a recurring operational failure is "people should remember better," you do not have a fix. You have a hope.
+
+Here is the mechanics of what actually happens. Engineering changes a spec on Tuesday — a bracket gets a new hole pattern, a plate gets a different material, a fastener gets upsized. The change lives in the engineer's CAD model and maybe an email to the shop floor. Purchasing, working from a bill of materials they exported two months ago, orders five hundred of the old part. The parts arrive, do not fit the assembly, and the line goes down.
+
+The cost of that single wrong revision is not small. A fifty-person fabrication shop runs the numbers like this:
+
+Cost Category
+
+Typical Cost
+
+Why It Happens
+
+Wrong parts ordered
+
+two thousand to four thousand dollars
+
+Material and labor spent on parts that cannot be used in the current design.
+
+Expedited shipping
+
+one thousand to three thousand dollars
+
+Overnighting the correct revision so the line does not stay down.
+
+Line-down and overtime
+
+six thousand to twelve thousand dollars
+
+Assembly idle for two to three days, then overtime to catch up on the schedule.
+
+Scrap and rework
+
+one thousand to three thousand dollars
+
+Parts machined or assembled against the wrong revision before anyone noticed.
+
+Total per bad revision
+
+ten thousand to twenty-two thousand dollars
+
+And here is the part that keeps this problem alive: none of it appears on the profit and loss as a line called "outdated BOM." It shows up as higher material cost, higher freight, and lower gross margin. A shop can lose ten thousand dollars a quarter to wrong revisions and have no idea that the BOM is the source. You cannot fix what you cannot name.
+
+2. The Single-BOM-Source-of-Truth Spreadsheet
+
+The core problem is that a bill of materials has too many copies. It lives in the CAD model, in the ERP (if you have one), in the purchasing agent's export, in the shop traveler, and in the foreman's memory. When engineering makes a change, only one of those copies gets updated — and it is usually not the one purchasing orders from.
+
+The fix is one spreadsheet, and it is free. It has four tabs, and each one does one job:
+
+The Four Tabs
+
+Part master.
+
+One row per part number. Fields: part number, description, current revision letter, status (active / superseded), and the engineer who owns it. This is the single answer to "what is the current revision of this part?"
+
+BOM structure.
+
+Parent part to child part, with quantity. When a part is superseded, this is where you see every assembly that used it — so you know exactly which parents need a new child.
+
+Revision history.
+
+A dated log of every change to every part: old revision, new revision, what changed, who requested it, who approved it. This is your audit trail for ISO and for your own memory.
+
+ECO log.
+
+The engineering change order register. One row per change: ECO number, part affected, request date, approval date, effective date, and status. This is the workflow that forces the handshake between engineering and purchasing.
+
+All four tabs live in one Google Sheet. It costs zero dollars. It takes about ninety minutes to set up the first time. The only ongoing cost is the ten seconds it takes engineering to log a change — which they are doing anyway, just not in a place purchasing can see.
+
+The point is not the spreadsheet. It is the single source of truth.
+
+The reason wrong parts get ordered is that purchasing and engineering are looking at two different documents. Merge them into one, and the error stops being possible — not because people are more careful, but because there is only one revision to order from.
+
+3. The ECO Approval Workflow
+
+An ECO — engineering change order — is the formal record of a change. Most small shops do this informally: the engineer tells the foreman, the foreman tells purchasing, and the message degrades with each retelling. The fix is a four-step workflow that takes minutes and leaves a paper trail.
+
+The Four-Step ECO Workflow
+
+Request.
+
+Anyone can request a change — the engineer, a machinist who found a problem, a customer who changed their spec. Log the ECO with a number, the part affected, and the reason.
+
+Engineering review.
+
+The engineer drafts the change, attaches the new drawing or spec, and proposes a new revision letter. They flag the cost and schedule impact.
+
+Release.
+
+One named person — usually the owner or production lead — approves the change and sets the effective date. This is the only step that can flip the part master to the new revision.
+
+Purchasing lock.
+
+From the effective date forward, purchasing pulls the BOM from the spreadsheet and orders only from the current revision. The old revision is marked superseded and turns red.
+
+The key word is
+
+lock
+
+. The workflow is not a suggestion. It is a gate. Purchasing cannot order a superseded revision because the spreadsheet will not let them — the flag turns red and the part number does not match the current master. This is the difference between a process people follow when they remember, and a system that works even when everyone is busy.
+
+4. Auto-Flagging Parts That Changed
+
+The single highest-value feature of the whole system is a formula. It is the difference between a passive list and a control system — and it is free.
+
+Here is the mechanism. The part master holds the current revision for every part. The BOM structure and any purchase order line hold the revision that was referenced. A simple lookup formula — in Google Sheets, a
+
+VLOOKUP
+
+INDEX
+
+and
+
+MATCH
+
+against the part master — compares the referenced revision to the current revision. If they do not match, the cell turns red.
+
+In practice this means:
+
+When a purchase order line points at revision A but the part master says revision B, the line is flagged the instant the master updates.
+
+When an assembly BOM references a part that was superseded last week, the parent part lights up so engineering can update it.
+
+When someone tries to copy an old BOM into a new job, the stale references are visible in red before the order goes out the door.
+
+This is not advanced spreadsheet work. It is a lookup and conditional formatting — the kind of thing any person comfortable with a basic formula can set up in twenty minutes. And it is what turns the spreadsheet from "a place where we store the BOM" into "the thing that stops us from ordering the wrong parts."
+
+Automation has a role here — later.
+
+The manual four-tab system gets you to zero wrong-part orders for free. When the shop grows past the point where the spreadsheet is fast enough — more parts, more editors, more change velocity — that is when lightweight automation (a form that auto-creates the ECO row, an email that notifies purchasing on release, a check that blocks a PO in your accounting system) earns its keep. Jobs Done Labs builds these, but the manual system has to work first.
+
+5. How This Dovetails With a Light ERP Later
+
+If you outgrow the spreadsheet, the good news is that everything you built maps directly into a light MRP or ERP. The part master becomes the item master. The BOM structure becomes the BOM module. The revision history and ECO log become the change management workflow. You are not throwing work away — you are upgrading the same structure to software that can enforce it automatically and tie it to inventory and work orders in real time.
+
+But do not buy the ERP first. The shops that jump straight to software before the process is proven end up with the same wrong-part problem, now inside an expensive system nobody uses. Prove the process on the free spreadsheet, and the software decision later becomes obvious: you will know exactly which fields matter, which workflows break, and what the software actually needs to enforce.
+
+Frequently asked questions
+
+How do I stop purchasing from ordering outdated parts?
+
+Stop treating the bill of materials as a document that lives in one person's head or one folder. Put a single source of truth in one spreadsheet with four tabs: part master, BOM structure, revision history, and an engineering change order log. When engineering changes a part, the change is logged with a new revision letter, the old revision is marked superseded, and purchasing is required to pull the BOM from that single source before cutting any purchase order. The fix is not discipline — it is a system where the current revision is the only one anyone can accidentally order from.
+
+What is an ECO and who approves it?
+
+An ECO (engineering change order) is the formal record of a change to a part or product — what changed, why, who requested it, who approved it, and the effective date. In a small shop, the typical approval chain is: the engineer or designer drafts the change, the production lead or owner reviews it for cost and schedule impact, and one named person approves it and assigns the new revision letter. Keeping this in a log — not in email threads — is what stops the "I told Dave about that change last week" problem.
+
+Can I track BOM revisions in Excel or Google Sheets?
+
+Yes, and for a small manufacturer running fewer than roughly two hundred active parts, a spreadsheet is usually the right tool. The four tabs — part master, BOM structure, revision history, and ECO log — give you everything a light ERP would at zero cost. The one thing to get right is formulas: use conditional formatting or a flag column so a purchase order line that references a superseded revision turns red automatically. That formula is what turns a passive list into a control system.
+
+What happens if we build to the wrong revision?
+
+The parts do not fit, the assembly stops, and you pay the cost three ways: the wrong parts (material and labor already spent), the rework or scrap, and the line-down time waiting for correct parts. A single wrong revision on a batch of a few hundred parts commonly costs a small shop between five thousand and fifteen thousand dollars once you add expedited shipping and lost production. The frustrating part is that the accounting system never shows it as a line item — it shows up as higher material cost and lower gross margin, so the cause stays invisible.
+
+When is it time to move from spreadsheets to an ERP?
+
+When the spreadsheet becomes the bottleneck rather than the control. Three signals: you have more than roughly two hundred active parts and the revision history is getting hard to follow, more than one person edits the BOM at the same time and changes are colliding, or you need revision history tied directly to purchase orders, work orders, and inventory in real time. Below that threshold, a spreadsheet with the four tabs and the auto-flag formula will handle it — and it is far cheaper and faster to set up. If you outgrow it, the structure you built maps cleanly into a light MRP.
+
+Who should own BOM revision control — engineering or purchasing?
+
+Engineering owns the revision itself — they are the only ones who can change a spec and assign a new revision letter. Purchasing owns the discipline of ordering from the current revision only. The ECO log is the handshake between the two: engineering records the change and its effective date, and purchasing checks the log before releasing any order. When both sides share one spreadsheet instead of two memories, the blame game ends and the wrong-part orders stop.
+
+Ready to make wrong-part orders a thing of the past?
+
+We build the automation that connects your BOM, ECO log, and purchasing workflow into one system — auto-flagged revisions, release notifications, and a block that stops an outdated purchase order before it goes out. It starts with a free audit: we will map where outdated revisions are costing you and build the control system for your specific shop.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you'll want these too:
+
+ERP Does Not Match Your Shop Floor — Here Is the Fix
+
+You Are Tracking Fifty Purchase Orders in WhatsApp — Here Is the Free PO Tracking System
+
+Suppliers Are Late Again and It Is Costing You One Thousand Dollars a Week — Free Supplier Delivery Tracker
+
+
+URL: https://www.jobsdonelabs.ai/blog/bom-revision-control-manufacturing-spreadsheet-free/
+
+---
+
 # Automation Pricing: What Small Businesses Pay
 
 Professional Services
@@ -11299,6 +11500,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+Purchasing Keeps Ordering the Wrong BOM Revision — Free BOM and ECO Control System for Small Manufacturers
 
 You are Losing Eighty Thousand Dollars a Year Quoting Jobs by Feel — The Free Spreadsheet System That Tells You Exactly What Every Job Costs Before You Quote It
 
@@ -33207,6 +33410,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Purchasing Keeps Ordering the Wrong BOM Revision — Free BOM and ECO Control System for Small Manufacturers
+
 Your System Says You Have 500 Units But the Shelf Has 12 — Free Cycle Counting Spreadsheet
 
 Manual Data Entry Is the Silent Killer of Your E-Commerce Business — You're Spending 15 Hours a W...
@@ -36439,6 +36644,8 @@ The $30K guarantee works the same way for supplier tracking as for every other a
 Related reading
 
 If you found this useful, you'll want these too:
+
+Purchasing Keeps Ordering the Wrong BOM Revision — Free BOM and ECO Control System for Small Manufacturers
 
 Job Shop Scheduling Spreadsheet — See Every Machine Load by Day and What a Rush Job Pushes Late
 

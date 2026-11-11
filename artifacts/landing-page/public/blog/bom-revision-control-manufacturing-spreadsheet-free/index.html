@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purchasing Keeps Ordering the Wrong BOM Revision | Jobs Done Labs</title>
+  <meta name="description" content="Ordering parts against an outdated BOM revision means wrong parts, a line-down, and scrap. A free BOM and ECO control system for small manufacturers." />
+  <link rel="canonical" href="https://www.jobsdonelabs.ai/blog/bom-revision-control-manufacturing-spreadsheet-free/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.jobsdonelabs.ai/blog/bom-revision-control-manufacturing-spreadsheet-free/" />
+  <meta property="og:title" content="Purchasing Keeps Ordering the Wrong BOM Revision | Jobs Done Labs" />
+  <meta property="og:description" content="Ordering parts against an outdated BOM revision means wrong parts, a line-down, and scrap. A free BOM and ECO control system for small manufacturers." />
+  <meta property="og:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="Jobs Done Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Purchasing Keeps Ordering the Wrong BOM Revision | Jobs Done Labs" />
+  <meta name="twitter:description" content="Ordering parts against an outdated BOM revision means wrong parts, a line-down, and scrap. A free BOM and ECO control system for small manufacturers." />
+  <meta name="twitter:image" content="https://www.jobsdonelabs.ai/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Purchasing Keeps Ordering the Wrong BOM Revision",
+    "description": "Ordering parts against an outdated BOM revision means wrong parts, a line-down, and scrap. A free BOM and ECO control system for small manufacturers.",
+    "datePublished": "2026-11-11",
+    "dateModified": "2026-11-11",
+    "author": {
+      "@type": "Person",
+      "name": "Ryne Bandolik",
+      "url": "https://www.jobsdonelabs.ai/about/ryne-bandolik/",
+      "sameAs": "https://www.linkedin.com/in/rynebandolik/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jobs Done Labs",
+      "url": "https://www.jobsdonelabs.ai"
+    },
+    "image": "https://www.jobsdonelabs.ai/og-image.png",
+    "mainEntityOfPage": "https://www.jobsdonelabs.ai/blog/bom-revision-control-manufacturing-spreadsheet-free/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I stop purchasing from ordering outdated parts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stop treating the bill of materials as a document that lives in one person's head or one folder. Put a single source of truth in one spreadsheet with four tabs: part master, BOM structure, revision history, and an engineering change order log. When engineering changes a part, the change is logged with a new revision letter, the old revision is marked superseded, and purchasing is required to pull the BOM from that single source before cutting any purchase order. The fix is not discipline. It is a system where the current revision is the only one anyone can accidentally order from."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an ECO and who approves it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An ECO (engineering change order) is the formal record of a change to a part or product: what changed, why, who requested it, who approved it, and the effective date. In a small shop the typical approval chain is the engineer or designer drafts the change, the production lead or owner reviews it for cost and schedule impact, and one named person approves it and assigns the new revision letter. Keeping this in a log rather than in email threads is what stops the 'I told Dave about that change last week' problem."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I track BOM revisions in Excel or Google Sheets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, and for a small manufacturer running fewer than roughly two hundred active parts, a spreadsheet is usually the right tool. The four tabs (part master, BOM structure, revision history, and ECO log) give you everything a light ERP would at zero cost. The one thing to get right is formulas: use conditional formatting or a flag column so a purchase order line that references a superseded revision turns red automatically. That formula is what turns a passive list into a control system."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if we build to the wrong revision?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The parts do not fit, the assembly stops, and you pay the cost three ways: the wrong parts (material and labor already spent), the rework or scrap, and the line-down time waiting for correct parts. A single wrong revision on a batch of a few hundred parts commonly costs a small shop between five thousand and fifteen thousand dollars once you add expedited shipping and lost production. The frustrating part is that the accounting system never shows it as a line item. It shows up as higher material cost and lower gross margin, so the cause stays invisible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is it time to move from spreadsheets to an ERP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When the spreadsheet becomes the bottleneck rather than the control. Three signals: you have more than roughly two hundred active parts and the revision history is getting hard to follow, more than one person edits the BOM at the same time and changes are colliding, or you need revision history tied directly to purchase orders, work orders, and inventory in real time. Below that threshold a spreadsheet with the four tabs and the auto-flag formula will handle it and is far cheaper and faster to set up. If you outgrow it, the structure you built maps cleanly into a light MRP."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who should own BOM revision control, engineering or purchasing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Engineering owns the revision itself: they are the only ones who can change a spec and assign a new revision letter. Purchasing owns the discipline of ordering from the current revision only. The ECO log is the handshake between the two. Engineering records the change and its effective date, and purchasing checks the log before releasing any order. When both sides share one spreadsheet instead of two memories, the blame game ends and the wrong-part orders stop."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jobsdonelabs.ai/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.jobsdonelabs.ai/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Purchasing Keeps Ordering the Wrong BOM Revision", "item": "https://www.jobsdonelabs.ai/blog/bom-revision-control-manufacturing-spreadsheet-free/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F4EFE3; --ink:#0B0D12; --accent:#1466FF; --muted:rgba(11,13,18,.45); --line:rgba(11,13,18,.1); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    nav.top { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:1100px; margin:0 auto; }
+    nav.top a.logo { font-family:'Anton',sans-serif; font-size:20px; color:var(--ink); text-decoration:none; letter-spacing:.01em; }
+    nav.top a.cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 18px; border-radius:50px; }
+    .kicker { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; margin-bottom:18px; }
+    h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); line-height:1.1; letter-spacing:-0.01em; margin-bottom:18px; }
+    .byline { font-size:14px; color:var(--muted); margin-bottom:24px; }
+    .byline a { color:var(--muted); text-decoration:none; border-bottom:1px solid rgba(11,13,18,.25); }
+    .byline a:hover { color:var(--accent); border-color:var(--accent); }
+    h2 { font-family:'Anton',sans-serif; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.15; margin:44px 0 14px; }
+    h3 { font-size:1.1rem; font-weight:800; margin:28px 0 8px; }
+    p { margin-bottom:16px; font-size:17px; }
+    ul, ol { margin:0 0 16px 22px; }
+    li { margin-bottom:8px; font-size:17px; }
+    .takeaways { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:0 0 32px; }
+    .takeaways strong { display:block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .callout { background:#fff; border-left:4px solid var(--accent); padding:20px 22px; margin:28px 0; }
+    .cta-box { background:var(--ink); color:var(--cream); padding:36px 32px; margin-top:56px; }
+    .cta-box h2 { color:var(--cream); margin-top:0; }
+    .cta-box a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 26px; border-radius:50px; margin-top:8px; }
+    .faq h3 { margin-top:24px; }
+    .related { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related h2 { font-size:1.3rem; margin:0 0 20px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .related-card { background:#fff; padding:20px; display:block; text-decoration:none; color:var(--ink); }
+    .related-card:hover { outline:2px solid var(--accent); }
+    .related-card .cat { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+    .related-card .title { font-family:'Anton',sans-serif; font-size:1rem; line-height:1.2; }
+    .related-reading { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+    .related-reading h2 { font-family:'Anton',sans-serif; font-size:1.3rem; margin:0 0 20px; }
+    a { color:var(--accent); }
+    .comparison table { width:100%; border-collapse:collapse; font-size:16px; margin:16px 0; }
+    .comparison th { text-align:left; font-weight:800; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:12px 10px 8px; border-bottom:2px solid var(--accent); }
+    .comparison td { padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .comparison tr:last-child td { border-bottom:none; }
+    .checklist { background:#fff; padding:22px 24px; margin:28px 0; }
+    .checklist h3 { margin-top:0; }
+    .checklist li { margin-bottom:12px; }
+    footer { text-align:center; font-size:13px; color:rgba(11,13,18,.45); padding:24px; }
+    footer a { color:inherit; }
+  </style>
+  <script defer data-domain="jobsdonelabs.ai" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <nav class="top">
+    <a class="logo" href="/">JOBS DONE LABS</a>
+    <a class="cta" href="/contact">Book a free audit</a>
+  </nav>
+  <main class="wrap">
+    <article>
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80" alt="Engineer reviewing a bill of materials and engineering change order at a workstation in a small manufacturing shop" class="post-hero" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;margin-bottom:2rem" loading="lazy" />
+
+      <span class="kicker">Manufacturing</span>
+      <h1>Purchasing Keeps Ordering the Wrong BOM Revision: A Free BOM and ECO Control System for Small Manufacturers</h1>
+      <p class="byline">By <a href="/about/ryne-bandolik/">Ryne Bandolik</a> · Jobs Done Labs · November 11, 2026</p>
+
+      <div class="takeaways">
+        <strong>Key takeaways</strong>
+        <p style="margin:0"><strong>Purchasing is ordering parts against a bill of materials that engineering already changed — and the wrong parts show up at the dock.</strong> The fix is not a new ERP. It is a single source of truth: a free spreadsheet that holds the part master, the BOM structure, the revision history, and the engineering change order log in one place, plus a formula-driven alert that flags any purchase order still pointing at an old revision. It costs zero dollars and takes about ninety minutes to set up. When engineering changes a part, the change is logged once, the old revision is marked superseded, and purchasing cannot accidentally order the old one again.</p>
+      </div>
+
+      <h2>1. Why Outdated BOMs Cost You More Than You Think</h2>
+
+      <p>A thread on r/supplychain asked the question directly: "How do you prevent purchasing from ordering parts based on outdated BOM revisions?" The answers were thin — a few people said "communication" and "discipline" — which is exactly the problem. If the fix for a recurring operational failure is "people should remember better," you do not have a fix. You have a hope.</p>
+
+      <p>Here is the mechanics of what actually happens. Engineering changes a spec on Tuesday — a bracket gets a new hole pattern, a plate gets a different material, a fastener gets upsized. The change lives in the engineer's CAD model and maybe an email to the shop floor. Purchasing, working from a bill of materials they exported two months ago, orders five hundred of the old part. The parts arrive, do not fit the assembly, and the line goes down.</p>
+
+      <p>The cost of that single wrong revision is not small. A fifty-person fabrication shop runs the numbers like this:</p>
+
+      <div class="comparison">
+        <table>
+          <tr><th>Cost Category</th><th>Typical Cost</th><th>Why It Happens</th></tr>
+          <tr><td>Wrong parts ordered</td><td>two thousand to four thousand dollars</td><td>Material and labor spent on parts that cannot be used in the current design.</td></tr>
+          <tr><td>Expedited shipping</td><td>one thousand to three thousand dollars</td><td>Overnighting the correct revision so the line does not stay down.</td></tr>
+          <tr><td>Line-down and overtime</td><td>six thousand to twelve thousand dollars</td><td>Assembly idle for two to three days, then overtime to catch up on the schedule.</td></tr>
+          <tr><td>Scrap and rework</td><td>one thousand to three thousand dollars</td><td>Parts machined or assembled against the wrong revision before anyone noticed.</td></tr>
+          <tr><td><strong>Total per bad revision</strong></td><td><strong>ten thousand to twenty-two thousand dollars</strong></td><td></td></tr>
+        </table>
+      </div>
+
+      <p>And here is the part that keeps this problem alive: none of it appears on the profit and loss as a line called "outdated BOM." It shows up as higher material cost, higher freight, and lower gross margin. A shop can lose ten thousand dollars a quarter to wrong revisions and have no idea that the BOM is the source. You cannot fix what you cannot name.</p>
+
+      <h2>2. The Single-BOM-Source-of-Truth Spreadsheet</h2>
+
+      <p>The core problem is that a bill of materials has too many copies. It lives in the CAD model, in the ERP (if you have one), in the purchasing agent's export, in the shop traveler, and in the foreman's memory. When engineering makes a change, only one of those copies gets updated — and it is usually not the one purchasing orders from.</p>
+
+      <p>The fix is one spreadsheet, and it is free. It has four tabs, and each one does one job:</p>
+
+      <div class="checklist">
+        <h3>The Four Tabs</h3>
+        <ol>
+          <li><strong>Part master.</strong> One row per part number. Fields: part number, description, current revision letter, status (active / superseded), and the engineer who owns it. This is the single answer to "what is the current revision of this part?"</li>
+          <li><strong>BOM structure.</strong> Parent part to child part, with quantity. When a part is superseded, this is where you see every assembly that used it — so you know exactly which parents need a new child.</li>
+          <li><strong>Revision history.</strong> A dated log of every change to every part: old revision, new revision, what changed, who requested it, who approved it. This is your audit trail for ISO and for your own memory.</li>
+          <li><strong>ECO log.</strong> The engineering change order register. One row per change: ECO number, part affected, request date, approval date, effective date, and status. This is the workflow that forces the handshake between engineering and purchasing.</li>
+        </ol>
+      </div>
+
+      <p>All four tabs live in one Google Sheet. It costs zero dollars. It takes about ninety minutes to set up the first time. The only ongoing cost is the ten seconds it takes engineering to log a change — which they are doing anyway, just not in a place purchasing can see.</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>The point is not the spreadsheet. It is the single source of truth.</strong> The reason wrong parts get ordered is that purchasing and engineering are looking at two different documents. Merge them into one, and the error stops being possible — not because people are more careful, but because there is only one revision to order from.</p>
+      </div>
+
+      <h2>3. The ECO Approval Workflow</h2>
+
+      <p>An ECO — engineering change order — is the formal record of a change. Most small shops do this informally: the engineer tells the foreman, the foreman tells purchasing, and the message degrades with each retelling. The fix is a four-step workflow that takes minutes and leaves a paper trail.</p>
+
+      <div class="checklist">
+        <h3>The Four-Step ECO Workflow</h3>
+        <ol>
+          <li><strong>Request.</strong> Anyone can request a change — the engineer, a machinist who found a problem, a customer who changed their spec. Log the ECO with a number, the part affected, and the reason.</li>
+          <li><strong>Engineering review.</strong> The engineer drafts the change, attaches the new drawing or spec, and proposes a new revision letter. They flag the cost and schedule impact.</li>
+          <li><strong>Release.</strong> One named person — usually the owner or production lead — approves the change and sets the effective date. This is the only step that can flip the part master to the new revision.</li>
+          <li><strong>Purchasing lock.</strong> From the effective date forward, purchasing pulls the BOM from the spreadsheet and orders only from the current revision. The old revision is marked superseded and turns red.</li>
+        </ol>
+      </div>
+
+      <p>The key word is <strong>lock</strong>. The workflow is not a suggestion. It is a gate. Purchasing cannot order a superseded revision because the spreadsheet will not let them — the flag turns red and the part number does not match the current master. This is the difference between a process people follow when they remember, and a system that works even when everyone is busy.</p>
+
+      <h2>4. Auto-Flagging Parts That Changed</h2>
+
+      <p>The single highest-value feature of the whole system is a formula. It is the difference between a passive list and a control system — and it is free.</p>
+
+      <p>Here is the mechanism. The part master holds the current revision for every part. The BOM structure and any purchase order line hold the revision that was referenced. A simple lookup formula — in Google Sheets, a <code>VLOOKUP</code> or <code>INDEX</code> and <code>MATCH</code> against the part master — compares the referenced revision to the current revision. If they do not match, the cell turns red.</p>
+
+      <p>In practice this means:</p>
+
+      <ul>
+        <li>When a purchase order line points at revision A but the part master says revision B, the line is flagged the instant the master updates.</li>
+        <li>When an assembly BOM references a part that was superseded last week, the parent part lights up so engineering can update it.</li>
+        <li>When someone tries to copy an old BOM into a new job, the stale references are visible in red before the order goes out the door.</li>
+      </ul>
+
+      <p>This is not advanced spreadsheet work. It is a lookup and conditional formatting — the kind of thing any person comfortable with a basic formula can set up in twenty minutes. And it is what turns the spreadsheet from "a place where we store the BOM" into "the thing that stops us from ordering the wrong parts."</p>
+
+      <div class="callout">
+        <p style="margin:0"><strong>Automation has a role here — later.</strong> The manual four-tab system gets you to zero wrong-part orders for free. When the shop grows past the point where the spreadsheet is fast enough — more parts, more editors, more change velocity — that is when lightweight automation (a form that auto-creates the ECO row, an email that notifies purchasing on release, a check that blocks a PO in your accounting system) earns its keep. Jobs Done Labs builds these, but the manual system has to work first.</p>
+      </div>
+
+      <h2>5. How This Dovetails With a Light ERP Later</h2>
+
+      <p>If you outgrow the spreadsheet, the good news is that everything you built maps directly into a light MRP or ERP. The part master becomes the item master. The BOM structure becomes the BOM module. The revision history and ECO log become the change management workflow. You are not throwing work away — you are upgrading the same structure to software that can enforce it automatically and tie it to inventory and work orders in real time.</p>
+
+      <p>But do not buy the ERP first. The shops that jump straight to software before the process is proven end up with the same wrong-part problem, now inside an expensive system nobody uses. Prove the process on the free spreadsheet, and the software decision later becomes obvious: you will know exactly which fields matter, which workflows break, and what the software actually needs to enforce.</p>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <h3>How do I stop purchasing from ordering outdated parts?</h3>
+        <p>Stop treating the bill of materials as a document that lives in one person's head or one folder. Put a single source of truth in one spreadsheet with four tabs: part master, BOM structure, revision history, and an engineering change order log. When engineering changes a part, the change is logged with a new revision letter, the old revision is marked superseded, and purchasing is required to pull the BOM from that single source before cutting any purchase order. The fix is not discipline — it is a system where the current revision is the only one anyone can accidentally order from.</p>
+
+        <h3>What is an ECO and who approves it?</h3>
+        <p>An ECO (engineering change order) is the formal record of a change to a part or product — what changed, why, who requested it, who approved it, and the effective date. In a small shop, the typical approval chain is: the engineer or designer drafts the change, the production lead or owner reviews it for cost and schedule impact, and one named person approves it and assigns the new revision letter. Keeping this in a log — not in email threads — is what stops the "I told Dave about that change last week" problem.</p>
+
+        <h3>Can I track BOM revisions in Excel or Google Sheets?</h3>
+        <p>Yes, and for a small manufacturer running fewer than roughly two hundred active parts, a spreadsheet is usually the right tool. The four tabs — part master, BOM structure, revision history, and ECO log — give you everything a light ERP would at zero cost. The one thing to get right is formulas: use conditional formatting or a flag column so a purchase order line that references a superseded revision turns red automatically. That formula is what turns a passive list into a control system.</p>
+
+        <h3>What happens if we build to the wrong revision?</h3>
+        <p>The parts do not fit, the assembly stops, and you pay the cost three ways: the wrong parts (material and labor already spent), the rework or scrap, and the line-down time waiting for correct parts. A single wrong revision on a batch of a few hundred parts commonly costs a small shop between five thousand and fifteen thousand dollars once you add expedited shipping and lost production. The frustrating part is that the accounting system never shows it as a line item — it shows up as higher material cost and lower gross margin, so the cause stays invisible.</p>
+
+        <h3>When is it time to move from spreadsheets to an ERP?</h3>
+        <p>When the spreadsheet becomes the bottleneck rather than the control. Three signals: you have more than roughly two hundred active parts and the revision history is getting hard to follow, more than one person edits the BOM at the same time and changes are colliding, or you need revision history tied directly to purchase orders, work orders, and inventory in real time. Below that threshold, a spreadsheet with the four tabs and the auto-flag formula will handle it — and it is far cheaper and faster to set up. If you outgrow it, the structure you built maps cleanly into a light MRP.</p>
+
+        <h3>Who should own BOM revision control — engineering or purchasing?</h3>
+        <p>Engineering owns the revision itself — they are the only ones who can change a spec and assign a new revision letter. Purchasing owns the discipline of ordering from the current revision only. The ECO log is the handshake between the two: engineering records the change and its effective date, and purchasing checks the log before releasing any order. When both sides share one spreadsheet instead of two memories, the blame game ends and the wrong-part orders stop.</p>
+      </section>
+
+      <div class="cta-box">
+        <h2>Ready to make wrong-part orders a thing of the past?</h2>
+        <p>We build the automation that connects your BOM, ECO log, and purchasing workflow into one system — auto-flagged revisions, release notifications, and a block that stops an outdated purchase order before it goes out. It starts with a free audit: we will map where outdated revisions are costing you and build the control system for your specific shop.</p>
+        <a class="btn" href="/contact">Book your free audit →</a>
+      </div>
+
+      <section class="related-reading">
+        <h2>Related reading</h2>
+        <p style="font-size:15px;color:rgba(11,13,18,.5);margin-bottom:16px">If you found this useful, you'll want these too:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/erp-shop-floor-disconnect-fix-small-manufacturer/" style="font-weight:600;color:#1466FF;text-decoration:none">ERP Does Not Match Your Shop Floor — Here Is the Fix</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/small-business-purchase-order-tracking-system/" style="font-weight:600;color:#1466FF;text-decoration:none">You Are Tracking Fifty Purchase Orders in WhatsApp — Here Is the Free PO Tracking System</a></li>
+          <li style="margin-bottom:10px;padding-left:0"><a href="/blog/supplier-delivery-tracking-manufacturing-spreadsheet/" style="font-weight:600;color:#1466FF;text-decoration:none">Suppliers Are Late Again and It Is Costing You One Thousand Dollars a Week — Free Supplier Delivery Tracker</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    © 2026 Jobs Done Labs · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
