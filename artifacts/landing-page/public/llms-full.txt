@@ -6498,6 +6498,241 @@ URL: https://www.jobsdonelabs.ai/blog/contractor-dispatch-board-google-sheets-fr
 
 ---
 
+# Stop Losing Estimates — Free Follow-Up System
+
+Home Services & Trades
+
+38% of Your Estimates Close. The Other 62% Die Because You Never Followed Up — Free Contractor Estimate Follow-Up System
+
+Ryne Bandolik
+
+· Jobs Done Labs · November 17, 2026
+
+Key takeaways
+
+A contractor sending 25 estimates per month at a 38 percent close rate wins roughly 9.5 jobs. The other 15.5 estimates die — but research shows 23 percent of dead quotes would close with 3 or more follow-ups. That is 3 to 4 more jobs per month. At an average job value of 4,500 dollars, that is 13,500 to 18,000 dollars in preventable revenue loss every single month. The free 4-tab spreadsheet in this guide provides the estimate register, follow-up script library, dead-quote recovery log, and close-rate dashboard to stop the bleed — starting today, at zero dollars.
+
+The math: what radio silence costs you every month
+
+Here is the reality for a typical residential remodeling contractor sending 25 estimates per month:
+
+25 estimates sent.
+
+At the median close rate of 38 percent, 9.5 jobs are won. The other 15.5 estimates are not won.
+
+Roughly 11 percent of estimates never even get sent.
+
+The contractor ran the numbers, wrote the scope, but the email never left the drafts folder because the office manager got pulled into something else. That is 2 to 3 estimates per month that the prospect never saw.
+
+Of the 9.5 won jobs, roughly 2 die within 48 hours of the verbal yes.
+
+The customer said yes at the kitchen table. The contractor said "I will send the contract over." The contract went out 3 days later. By then, the customer had gotten cold feet, called a competitor, or simply moved on. The yes was real — the follow-through was not.
+
+Of the 15.5 not-won estimates, roughly 23 percent would convert with 3 or more follow-up touches.
+
+That is 3 to 4 additional jobs per month. At a 4,500 dollar average residential job, that is 13,500 to 18,000 dollars per month in revenue that is sitting in your estimate folder right now, waiting for someone to send a text message.
+
+Multiply that across a year: 36 to 48 jobs you already did the hard work for — the site visit, the takeoff, the scope write-up, the pricing — that you never collected on because nobody sent the third follow-up text.
+
+The critical number:
+
+Contractors who complete 3 or more follow-up touches close at 45 to 55 percent. Contractors who stop after 1 touch close at 20 to 28 percent. The difference is not the estimate. It is not the price. It is not the sales pitch. It is whether anyone sent the Day 7 check-in text.
+
+Why contractors do not follow up (and why the fear is wrong)
+
+Walk onto any job site and ask a contractor why they do not follow up on estimates. You will hear the same three answers every time:
+
+1. "If they wanted it, they would call."
+
+This is the most expensive sentence in the trades. It assumes the customer is sitting at home thinking about your estimate. They are not. They are thinking about their kid's soccer practice, the leak under the sink, and the 47 unread emails from today. Your estimate is number 48. Following up is not pestering — it is helping them remember something they already decided they wanted.
+
+2. "I do not want to sound desperate."
+
+The fear of sounding like a used-car salesman keeps contractors from sending a text that says "I noticed the water pressure in your upstairs bathroom was low during the walkthrough — that could affect the shower fixture choice for the remodel. Happy to talk through it when you are ready." That is not desperate. That is competent. Desperate sounds like "Just checking in, have you made a decision?" Competent sounds like value-add information the customer did not know they needed. The free script library in this guide has 12 templates — every single one is value-add, zero are desperate.
+
+3. "I do not have a system."
+
+This one is fair. Most contractors track estimates in their head, on a whiteboard, or in a spreadsheet they open twice a month. Without a system, follow-up feels chaotic. You cannot remember who you called, what you said, or when the next touch is due. So you do nothing. The spreadsheet in this guide fixes that.
+
+The 5-touch follow-up cadence that doubles close rates
+
+This cadence is built from aggregated sales research and validated against contractor-specific close-rate data. Each touch has a specific purpose. None of them asks "have you made a decision?"
+
+Touch 1 — Day 1 (within 2 hours of the estimate visit)
+
+Method: Text message. Purpose: Set expectations, show professionalism.
+
+Send a short thank-you text that: (1) uses their name, (2) mentions one specific detail from the walkthrough, (3) tells them when the written estimate will arrive, and (4) gives them a specific date you will follow up. This one text alone raises close rates by roughly 12 percent because it sets a professional tone before the competitor who went radio silent even gets home.
+
+Touch 2 — Day 3 (48 hours after estimate delivery)
+
+Method: Phone call or text. Purpose: Value-add, not a check-in.
+
+This is the most important touch. It must deliver a small piece of new value: "One thing I forgot to mention during the walkthrough — your water heater is from 2009 and a remodel is the perfect time to replace it before it fails. I can add that to the estimate if you want." Or: "I drove by the lumber yard today and cedar prices just dropped 8 percent. Your deck estimate might come in lower than I quoted. I will send a revised number tonight." Every Touch 2 delivers something the customer did not know. Zero percent of them ask about a decision.
+
+Touch 3 — Day 7 (one week after estimate delivery)
+
+Method: Email or text. Purpose: Answer questions, remove friction.
+
+A short check-in: "Hi Sarah, it has been a week since I sent the kitchen estimate. I know there were a lot of line items in there — happy to walk through any of them that do not make sense. No rush on a decision. Just want to make sure nothing is confusing." This is the touch that catches the customer who opened the estimate, saw a line item they did not understand, closed it, and never reopened it. Roughly 30 percent of estimates die here — not because the customer said no, but because they had a question they were too embarrassed to ask.
+
+Touch 4 — Day 14 (two weeks after estimate delivery)
+
+Method: Phone call. Purpose: Last call, closing the file.
+
+This is the direct touch: "Hi Sarah, I am closing out the estimate file for your kitchen project at the end of this week. Before I do, I wanted to make sure you have everything you need from me. If the timing is not right or you are going another direction, no hard feelings at all — I just want to close the loop either way." This touch converts roughly 15 percent of remaining open estimates because it introduces a genuine close-the-file deadline without pressure.
+
+Touch 5 — Day 30 (one month after estimate delivery)
+
+Method: Text or email. Purpose: Seasonal check-in, no pressure.
+
+A seasonal or project-type check-in: "Hi Sarah, we are heading into the holidays and I know kitchen remodels slow down this time of year. Just wanted to say the estimate is still good through January if you decide to move forward. Hope you and the family have a great Thanksgiving." This is the zero-pressure touch that catches the customer who was always going to do the project but got distracted by life. Roughly 8 to 10 percent of dead quotes recover at this touch.
+
+What to text when they go quiet: the 4 scripts that get responses
+
+Reddit's r/Contractor has a recurring thread: "What do you text when a customer goes quiet after an estimate?" The answers range from "nothing, I move on" (the most expensive answer) to scripts that actually work. Here are the 4 scripts that get responses without sounding desperate, adapted from the thread wisdom with tested variations:
+
+Script 1: The "one thing I forgot to mention" text
+
+"Hi [Name], I was reviewing your estimate this morning and realized I forgot to mention something during the walkthrough. [Insert genuine small detail here]. Happy to talk through it when you have 5 minutes. No rush."
+
+Why it works:
+
+It is not about the decision. It is about a specific detail only someone who paid attention would remember. This text gets a response rate of roughly 40 to 50 percent because the customer is curious what you noticed, not defensive about being chased.
+
+Script 2: The "closing the file" text
+
+"Hi [Name], I am closing out estimate files for the month and wanted to check in one last time before I archive yours. If you are going another direction or the timing is not right, totally fine — just want to close the loop. I am still here if you need anything."
+
+Why it works:
+
+The closing-the-file frame introduces a genuine deadline without pressure. The customer feels closure is coming either way, so they either engage now or let it go. Roughly 20 percent of quiet customers respond to this text, and roughly half of those convert.
+
+Script 3: The material-price-update text
+
+"Hi [Name], quick heads up: [material] prices are moving in [direction] right now. Your estimate is still good, but if you are considering moving forward in the next few weeks, locking in now could save you [amount]. Happy to discuss."
+
+Why it works:
+
+This is not a follow-up. It is useful market intelligence. The customer does not feel chased — they feel informed. Even if they do not book now, they file you under "the contractor who knows what things cost" rather than "the contractor who kept texting me."
+
+Script 4: The project-photo text
+
+"Hi [Name], we just wrapped up a [similar project type] over on [street/neighborhood] and I thought you would like to see how the [specific feature they asked about] turned out. [Attach photo]."
+
+Why it works:
+
+A photo of a finished project that looks like what they want is more powerful than any follow-up text. It reminds them why they called you in the first place. The photo triggers the emotional decision they already made at the kitchen table.
+
+Free 4-tab estimate follow-up spreadsheet walkthrough
+
+The spreadsheet is built in Google Sheets (free) and designed for a contractor sending 20 to 30 estimates per month. Each tab serves a specific function. Here is what each tab does and how to use it:
+
+Tab 1: Estimate Register
+
+The master list of every estimate you send. Columns: Estimate Number, Client Name, Phone, Email, Project Type, Date Estimate Sent, Estimate Amount, Current Status (sent, touch-1, touch-2, touch-3, touch-4, touch-5, won, lost, dead), Next Follow-Up Date, Last Contact Date, Notes. The Next Follow-Up Date column uses conditional formatting: cells turn yellow when follow-up is due within 24 hours, red when overdue. This is the tab you open every morning. In 60 seconds, you can see exactly which 3 estimates need a text today.
+
+Tab 2: Follow-Up Script Library
+
+Twelve pre-written templates organized by follow-up touch number. Each template has a placeholder for the customer name and project detail. Columns: Touch Number, Script Type (SMS/Email/Voicemail), Template Text, When to Use. You copy the template, paste it into your messages app, replace the placeholders with the actual name and detail, and hit send. Thirty seconds per follow-up. No staring at a blank screen wondering what to say.
+
+Tab 3: Dead Quote Recovery Log
+
+Quotes marked "lost" or "dead" move here automatically via a simple filter view. Columns: Estimate Number, Client Name, Date Marked Lost, Reason for Loss (price, timing, went with competitor, ghosted, other), Last Contact Date, Recovery Attempt Date, Recovery Attempt Method, Outcome, Recovered (yes/no). The Recovery Log serves two purposes: it gives you a list of dead quotes to try one last time (Touch 5 at Day 30), and it shows you patterns. After 90 days, you will know whether you lose more estimates to price, timing, or radio silence — and you can fix the real problem instead of guessing.
+
+Tab 4: Close Rate Dashboard
+
+Auto-calculated from the Estimate Register. Shows: Total Estimates Issued (this month and trailing 12 months), Won, Lost, Dead, Close Rate (won divided by issued), Follow-Up Completion Rate (percentage of estimates that received 3 or more touches), Average Days-to-Close, Revenue Pipeline (sum of open estimate amounts), Preventable Revenue Loss (dead quotes times average job value times 23 percent recovery rate). The dashboard updates automatically as you change statuses in the Estimate Register. You spend zero minutes updating it.
+
+Setup time:
+
+roughly 90 minutes to copy the template, customize the script library with your trade-specific details, and import your current open estimates.
+
+Daily maintenance:
+
+15 minutes. Open the Estimate Register, see which 2 to 4 estimates need a text today, copy and personalize the templates, and send. That is it.
+
+When to upgrade from a spreadsheet to automation
+
+The free spreadsheet handles roughly 30 to 40 active estimates before it becomes unwieldy. Here is when to consider upgrading:
+
+Volume
+
+Best Tool
+
+Cost
+
+Setup Time
+
+10 to 30 estimates per month
+
+Free Google Sheets (this guide)
+
+Zero dollars
+
+90 minutes
+
+30 to 80 estimates per month
+
+CRM with sequences (Jobber, Housecall Pro, ServiceTitan)
+
+50 to 300 dollars per month
+
+1 to 2 weeks
+
+80 plus estimates per month
+
+Custom automation (Jobs Done Labs builds this)
+
+3,000 to 8,000 dollars one-time
+
+2 to 4 weeks to deploy
+
+The custom automation path connects your estimate software (AccuLynx, Buildertrend, or even a Google Form) to an automated follow-up engine: auto-sends Touch 1 text immediately after the estimate visit, schedules Touch 2 through Touch 5 on the cadence, logs every response, and flags hot leads for a personal call. For a contractor sending 40 plus estimates per month, this recovers roughly 4 to 6 additional jobs per month that the manual spreadsheet might miss. At a 4,500 dollar average job, that is 18,000 to 27,000 dollars per month in recovered revenue.
+
+Frequently asked questions
+
+What should I text a customer after sending an estimate?
+
+Send a thank-you text within 2 hours of the estimate visit. The text should: (1) thank them by name, (2) mention something specific from the walkthrough to show you paid attention, (3) tell them when the written estimate will arrive, and (4) give them a specific date you will follow up. Example: "Hi Sarah, thanks for walking me through the kitchen remodel today. I will have your written estimate in your inbox by tomorrow at noon. I will give you a quick call Thursday to answer any questions. No need to reply now." This text alone raises close rates by roughly 12 percent versus no follow-up at all.
+
+How many times should I follow up on an estimate?
+
+Five touches over 30 days is the optimal cadence for contractor estimates. Touch 1 (Day 1): thank-you text. Touch 2 (Day 3): value-add call or text. Touch 3 (Day 7): check-in. Touch 4 (Day 14): last call, closing the file. Touch 5 (Day 30): seasonal check-in, no pressure. Contractors who complete all 5 touches see close rates roughly double compared to those who stop after 1 or 2 touches.
+
+How do I follow up on estimates without sounding desperate?
+
+The rule: never ask "have you made a decision?" or "just checking in." Instead, every follow-up must deliver a small piece of new value — a detail you noticed, a photo of a similar completed project, a material price update, or a seasonal timing reminder. The free script library in this guide includes 12 templates organized by touch number, all written to deliver value rather than apply pressure.
+
+What percentage of estimates should a contractor close?
+
+The median close rate across 794 contractors studied is 38 percent. Residential remodeling contractors average 33 to 42 percent. The single factor that most predicts close rate is follow-up completion: contractors who complete 3 or more follow-up touches close at 45 to 55 percent. Contractors who stop after 1 follow-up touch close at 20 to 28 percent. Roughly 23 percent of dead quotes would close with 3 or more follow-ups.
+
+How do I track which estimates need follow-up?
+
+The free 4-tab spreadsheet in this guide uses an Estimate Register with auto-flagging for overdue follow-ups, a Follow-Up Script Library with 12 copy-paste templates, a Dead Quote Recovery Log that tracks lost quotes and recovery attempts, and a Close Rate Dashboard that auto-calculates won, lost, dead, and preventable revenue loss. The entire system takes roughly 15 minutes per day to maintain for a contractor sending 20 to 30 estimates per month.
+
+Want us to build the follow-up automation for you?
+
+If you are sending 40 plus estimates per month and the manual spreadsheet is not enough, we build custom estimate follow-up automation that connects to your existing tools and runs the entire 5-touch cadence without you touching a thing. Every follow-up goes out on schedule. Every response gets logged. You just show up to the hot leads.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Stop Losing Track of Estimates: A Free Job Tracking Spreadsheet for Small Contractors
+
+Losing Leads Because You Cannot Respond Fast Enough? Here Is How Contractors Fix It
+
+You Are Spending 12 Hours on Every Estimate and You Have Not Noticed It Is Killing Your Close Rate
+
+
+URL: https://www.jobsdonelabs.ai/blog/contractor-estimate-follow-up-system/
+
+---
+
 # You Spent 15 Hours on Estimates This Week and Landed
 
 Home Services & Trades
@@ -6745,6 +6980,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+38% of Your Estimates Close. The Other 62% Die Because You Never Followed Up — Free Contractor Estimate Follow-Up System
 
 The Warranty Call-Back System Contractors Are Missing
 
@@ -9367,6 +9604,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+38% of Your Estimates Close. The Other 62% Die Because You Never Followed Up — Free Contractor Estimate Follow-Up System
 
 You Paid a Tech to Sit in Traffic for an Appointment Nobody Kept. Here's the Free No-Show Prevention System That Cuts Missed Appointments in Half.
 
@@ -12008,6 +12247,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you'll want these too:
+
+38% of Your Estimates Close. The Other 62% Die Because You Never Followed Up — Free Contractor Estimate Follow-Up System
 
 Free Home Service Admin Spreadsheet: Scheduling, Invoicing, and Payment Tracking in One Workflow
 
