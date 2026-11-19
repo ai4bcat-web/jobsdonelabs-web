@@ -627,6 +627,8 @@ Related reading
 
 If you found this useful, you will want these too:
 
+12 Hours a Week on Prior Auths? Free Time and Cost Tracker to Prove It
+
 Spending Too Much Time on Invoicing? How Contractors Cut Paperwork from Hours to Minutes
 
 Chasing Clients for Documents Is Eating Your Billable Hours — Here Is How Firms Stop
@@ -19475,6 +19477,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+12 Hours a Week on Prior Auths? Free Time and Cost Tracker to Prove It
+
 Cut EHR Charting in Half — The Free Documentation Time Audit Spreadsheet That Works With Any EHR
 
 Your Front Desk Spends 3 Hours a Day on Phone Tag While Patients Stack Up in the Waiting Room. Here Is the Free Call Management System That Gives Them Back 10 Hours a Week.
@@ -23176,6 +23180,8 @@ Book your free audit →
 Related reading
 
 If you found this useful, you will want these too:
+
+12 Hours a Week on Prior Auths? Free Time and Cost Tracker to Prove It
 
 Collect Patient Balances Without Calling Everyone — The Free Collection System for Medical Practices
 
@@ -30472,6 +30478,235 @@ Your Diabetic Patients Are Overdue for A1C Checks — The Care Gap System That C
 
 
 URL: https://www.jobsdonelabs.ai/blog/prescription-refill-request-tracking-system/
+
+---
+
+# 12Hrs/Wk on Prior Auths? Free Time & Cost Tracker
+
+Healthcare
+
+12 Hours a Week on Prior Auths? Free Time & Cost Tracker to Prove It
+
+Ryne Bandolik
+
+· Jobs Done Labs · November 19, 2026
+
+Key takeaways
+
+Most small practices cannot tell you how many hours prior authorizations consume — and without data, you cannot make the business case for change. This free 2-week PA time audit spreadsheet gives you a defensible number. Track every PA by payer, procedure, and staff member. At the end of two weeks, you will know exactly which payers are the worst offenders and what a PA specialist or electronic PA solution would save you.
+
+You Know Prior Auths Are Eating Your Staff Alive. But You Cannot Prove It.
+
+Every practice manager knows the feeling. Your best medical assistant spends 45 minutes on hold with UnitedHealthcare for a single MRI authorization. Your front desk coordinator gets pulled off patient check-in three times a day to fax prior auth paperwork. Your office manager stays late every Tuesday reconciling the PA log against the appointment schedule to figure out which procedures are still pending.
+
+But when the practice owner asks "how bad is it really?" — you do not have a number. You have a gut feeling and a stack of fax confirmations.
+
+Gut feelings do not justify hiring a dedicated PA specialist at 22 dollars an hour plus benefits. Gut feelings do not convince anyone to switch to electronic prior authorization at 300 dollars per month per provider. Gut feelings do not make the business case.
+
+Data does.
+
+The reality most practices do not measure:
+
+A typical small practice with 3-5 providers spends 12-16 staff hours per week on prior authorizations. At 20 dollars per hour, that is 12,480-16,640 dollars per year — for one staff member. Many practices have multiple people touching PAs, and the real cost is higher because PA work displaces revenue-generating tasks.
+
+The 4 Numbers Every Practice Should Track
+
+You do not need a complex time-study with consultants and stopwatches. You need four numbers, tracked consistently for two weeks:
+
+The 4-number PA audit
+
+PA requests per week
+
+— total volume by procedure type (imaging, specialist referral, medication, DME). Volume alone often surprises practice owners who assume it is "maybe 10 a week" when the real number is 30-40.
+
+Average minutes per PA
+
+— how long does one PA actually take from first call to confirmation? Include hold time, callbacks, faxing, portal logins, and re-submissions. Most practices guess 10 minutes. The real average is often 18-25 minutes.
+
+Denial rate by payer
+
+— which payers deny PAs most often, forcing rework and appeals? One payer with a 40% initial denial rate creates 3x the work of a payer with a 10% denial rate for the same procedure volume.
+
+Staff hours consumed
+
+— when you multiply PA volume by minutes per PA and divide by 60, what is the weekly total? This is the number that goes to the practice owner.
+
+Free Prior Auth Time & Cost Tracking Spreadsheet
+
+We built a free spreadsheet that captures all four numbers with zero formulas to write. It has five tabs:
+
+Tab
+
+What it does
+
+PA Log
+
+Daily log: date, patient, procedure code, payer, method (phone/fax/portal), start time, end time, outcome (approved/denied/pending), and notes. Staff enter data as they work — 15 seconds per entry.
+
+Weekly Summary
+
+Auto-calculates total hours by staff member and by day. Shows which days are heaviest and which staff members carry the most PA load. Pattern emerges within the first week.
+
+Payer Analytics
+
+Groups the PA Log by payer. Shows average minutes per PA, denial rate, and total hours consumed per payer. After two weeks, you will see that Payer X takes 22 minutes per PA while Payer Y takes 8 minutes.
+
+Cost Calculator
+
+Converts hours into dollars. Enter each staff member's hourly rate and the sheet shows annualized PA cost. This is the number that goes to the practice owner or board.
+
+2-Week Audit Instructions
+
+Step-by-step guide for running the audit: who logs what, how to handle multi-tasking PAs (phone call while doing data entry), and what to do with incomplete entries. Designed so you can hand it to staff and they can run it without training.
+
+Download the free spreadsheet:
+
+Get the Prior Auth Time & Cost Tracker →
+
+(We send it by email — no signup required, no sales pitch.)
+
+How to Run a 2-Week PA Time Audit
+
+The audit is simple but the timing matters. Here is the proven sequence:
+
+Week 1: Log everything without changing anything
+
+Week 1 is your baseline. Tell staff to log every PA exactly as they do it today — same methods, same workflows, same payer portals. Do not try to be more efficient. Do not shortcut. The goal is a clean baseline of what PA
+
+actually
+
+costs when nobody is watching.
+
+Common Week 1 discoveries: staff realize they spend way more time on PAs than they thought (the act of logging makes it visible for the first time). One practice discovered their "quick 5-minute PA check" was actually 18 minutes every time because of hold times they had stopped noticing.
+
+Week 2: Capture the variation
+
+Week 2 smooths out the anomalies. If Week 1 had an unusually heavy Monday (three complex imaging PAs that each took 45 minutes), Week 2 shows whether that is normal or a fluke. By the end of Week 2, you have a reliable weekly average.
+
+At the end of Week 2, open the Payer Analytics tab. Sort by "total hours consumed." The top 2-3 payers are your priority targets.
+
+What the data typically reveals:
+
+In most practices, 2-3 payers consume 60-70% of total PA time. The rest are relatively fast. This means you do not need to fix the entire PA process — you just need to fix the relationship with those 2-3 payers. Switch to electronic PA, assign a dedicated staff member to handle only those payers, or build a business case for outsourcing PAs for those specific carriers.
+
+What the Data Will Tell You (Real Patterns)
+
+After two weeks, the spreadsheet will surface patterns you cannot see day-to-day:
+
+"Payer X takes 3x longer than Payer Y."
+
+— Now you can switch to electronic PA specifically for Payer X, or negotiate with your clearinghouse for better PA routing. You are not guessing — you have a number.
+
+"We are spending 16 hours a week on PAs."
+
+— That is a 0.4 FTE. At 22 dollars per hour, a dedicated PA specialist costs about 45,760 dollars per year. But if PAs are consuming 0.4 FTE of a 25 dollar per hour medical assistant's time, plus fragments of the office manager's time, plus the billing coordinator's time — the real cost is higher, and the business case for hiring a PA specialist writes itself.
+
+"Denials from Payer Z waste 5 hours a week in rework."
+
+— If Payer Z denies 40% of initial PAs, every approved PA from Payer Z actually costs 2.5x the logged time because of appeals and resubmissions. This is a contract negotiation point at renewal.
+
+"Mondays and Tuesdays are the worst."
+
+— PAs stack up over the weekend. If you batch PA work on Monday mornings, you are creating a bottleneck. Shift PA initiation to Thursday/Friday for procedures scheduled the following week and Monday becomes manageable.
+
+What to Do With the Number
+
+Once you have the data, here is the action sequence — in order of cost and effort:
+
+Action
+
+Cost
+
+Effort
+
+Impact
+
+1. Batch PAs by payer
+
+Zero dollars
+
+Process change
+
+Cuts 20-30% of time by eliminating context-switching between payer portals
+
+2. Shift PA timing
+
+Zero dollars
+
+Process change
+
+Move PA initiation to off-peak hours (Thursday afternoons, early mornings) when hold times are shorter
+
+3. Electronic PA for worst payers
+
+Zero-300 dollars/month
+
+Setup + training
+
+Many payers offer free ePA portals. Switch your top-2 worst payers to ePA and cut their PA time by 50-70%
+
+4. Dedicated PA specialist
+
+22-28 dollars/hour
+
+Hiring
+
+One person who does nothing but PAs — faster, fewer errors, and frees clinical staff for clinical work. Business case: if PAs consume 16 hours/week, a half-time PA specialist at 22 dollars/hour costs 22,880 dollars/year vs. the displaced clinical time
+
+5. Outsourced PA service
+
+500-1,500 dollars/month
+
+Vendor selection
+
+Companies like OmniMD and prior authorization service bureaus handle PAs end-to-end. Worth evaluating if PA volume exceeds 40 per week
+
+How This Connects to Workflow Optimization
+
+This spreadsheet measures the problem. Once you know which payers and procedures consume the most time, the next step is fixing the workflow itself. We published a companion post —
+
+Manual Prior Authorization Workflow for Small Practices
+
+— that covers exactly how to redesign your PA process: batching, templating, portal shortcuts, and the pre-auth checklist that catches missing info before you call. Measurement first, then optimization. The two posts together form a complete PA management system for practices that cannot afford 500 dollar per month RCM platforms.
+
+And if denied claims are piling up as a downstream consequence of failed PAs, our
+
+Free Denial & RCM Dashboard
+
+tracks every denied claim by payer, reason code, and days outstanding — so the money does not sit in AR for 90 days.
+
+Frequently asked questions
+
+How do I track time spent on prior authorizations without buying software?
+
+Use a simple spreadsheet log. For two weeks, have every staff member record each PA call: date, patient name, procedure code, payer, method (phone, fax, or portal), start time, end time, and outcome (approved, denied, or pending). At the end of two weeks, your totals will show exactly how many hours each payer and procedure type consumes. The free spreadsheet linked in this post has a pre-built PA Log tab and a Weekly Summary tab that auto-calculates hours by staff member and by payer — no formulas to write, no software to buy.
+
+Which insurance payers take the longest for prior authorization?
+
+The answer varies by practice and procedure mix, but the tracker in this post includes a Payer-Level Analytics tab that automatically groups your PA log by payer and shows average minutes per PA, denial rate, and total staff hours consumed. After two weeks of tracking, you will see patterns: Payer X might average 22 minutes per PA while Payer Y averages 8 minutes. That data lets you target the worst offenders — switch to electronic PA for Payer X, or build a business case for outsourcing PAs to that specific payer.
+
+How much does prior authorization cost a medical practice in staff time?
+
+For a typical small practice with 3-5 providers, prior authorization consumes 12-16 staff hours per week. At an average medical office staff wage of 20 dollars per hour, that is 240-320 dollars per week, or 12,480-16,640 dollars per year — for a single staff member handling PAs. Many practices have multiple people touching the PA process. The real cost is often higher because PA work displaces revenue-generating tasks like patient scheduling, billing follow-up, and care coordination. The free spreadsheet in this post includes a Cost Calculator tab that converts tracked hours into annualized dollar cost so you can build a data-backed business case for change.
+
+Related reading
+
+If you found this useful, you will want these too:
+
+Cut Prior Auth Follow-Up Time in Half: A Workflow for Small Practices That Does Not Cost $900/Month
+
+Free Denial and RCM Dashboard for Medical Practices
+
+Free Admin Task Audit: Find Your Biggest Time Waste in 2 Weeks
+
+Ready to automate the PA tracking?
+
+If two weeks of manual tracking proves the business case and you are ready to move from spreadsheet to automated PA logging, we build custom PA tracking automations that pull data directly from your EHR and payer portals. No more manual time entries.
+
+Book your free audit →
+
+
+URL: https://www.jobsdonelabs.ai/blog/prior-authorization-time-cost-tracker-medical-practice-free/
 
 ---
 

@@ -95,6 +95,7 @@
 - [Stop Losing Referred Patients: Free Tracker](https://www.jobsdonelabs.ai/blog/patient-referral-loop-closure-tracking-system/): Up to 40% of referrals never complete, costing a small practice $62K-$124K/year. Free tracking spreadsheet, 3-touch protocol, and fax-failure fix.
 - [Free Payer Rate Comparison Spreadsheet](https://www.jobsdonelabs.ai/blog/payer-contract-rate-comparison-spreadsheet-medical-practice-free/): Your payers vary by $22 for the same visit code — invisible until you compare. Free spreadsheet with per-code lookup and renewal calendar.
 - [Refill Chaos Costs Your Practice $41,750/Year](https://www.jobsdonelabs.ai/blog/prescription-refill-request-tracking-system/): Your practice loses $41K+/year to broken refill chaos. This free 5-tab tracking system stops patients from running out of medication with no EHR add-on needed.
+- [12Hrs/Wk on Prior Auths? Free Time & Cost Tracker](https://www.jobsdonelabs.ai/blog/prior-authorization-time-cost-tracker-medical-practice-free/): Staff spending hours on prior auth calls? Free spreadsheet tracks the real time and cost — by payer, procedure, and staff member.
 
 ## Home Services
 - [Free Tax Season Document Organizer for CPA Firms](https://www.jobsdonelabs.ai/blog/accounting-firm-client-document-collection-organizer-free/): Stop chasing clients for W-2s and 1099s. Free tax season document organizer with checklists, upload tracking, and 4-round reminder templates.
