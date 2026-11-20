@@ -11726,6 +11726,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Turning a Messy Supplier Spreadsheet Into a Shopify CSV (Without Hours of Manual Cleanup)
+
 Amazon Took $15,000 in Fees Last Quarter — Free Fee Reconciliation Spreadsheet
 
 Stop Copying Data Between Systems: How Small Businesses Eliminate Manual Data Entry
@@ -26780,6 +26782,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Turning a Messy Supplier Spreadsheet Into a Shopify CSV (Without Hours of Manual Cleanup)
+
 Free MAP Violation Tracker — Stop Rogue Sellers Undercutting Your Brand
 
 Free Carrier Rate Comparison Spreadsheet — USPS, UPS, FedEx, DHL by Zone and Weight
@@ -36545,6 +36549,8 @@ Related reading
 
 If you found this useful, you'll want these too:
 
+Turning a Messy Supplier Spreadsheet Into a Shopify CSV (Without Hours of Manual Cleanup)
+
 Automate QuickBooks Data Entry to Google Sheets Without a Developer
 
 Small Business AI Automation ROI: A Worked Example You Can Steal
@@ -39022,6 +39028,301 @@ Book your free audit →
 
 
 URL: https://www.jobsdonelabs.ai/blog/supplier-quality-scorecard-manufacturing-spreadsheet-free/
+
+---
+
+# Free Supplier CSV to Shopify Import Template
+
+Retail and E-Commerce
+
+Turning a Messy Supplier Spreadsheet Into a Shopify CSV (Without Hours of Manual Cleanup)
+
+Ryne Bandolik
+
+· Jobs Done Labs · November 20, 2026
+
+Key takeaways
+
+Your supplier sends an Excel file with weird column names, broken variants, and missing handles — and someone spends three to six hours hand-cleaning it into a Shopify CSV every month. This free supplier CSV cleanup template normalizes headers, splits variants, generates handles, fixes price formatting, and maps to Shopify required fields in roughly twenty minutes. Add a stored column mapping so next month's file is eighty percent auto-populated, and you have killed the single biggest recurring data-entry time sink in e-commerce operations.
+
+Why supplier files never match Shopify format
+
+Every supplier sends product data in the format that works for their internal systems — not yours. Their spreadsheet was designed for their warehouse, their accounting team, or their ERP. It was never designed for your Shopify store. And yet every month, someone at your company opens that file, stares at forty-seven columns with names like "ITM_CD" and "WHSE_DESC," and starts manually retyping data into a Shopify-compatible CSV.
+
+Six things break every time:
+
+Column name mismatch.
+
+Your supplier uses "Item Code" or "SKU Number." Shopify requires "Variant SKU." Your supplier uses "Product Name." Shopify requires "Title." Multiply this by the fifteen to twenty columns a typical supplier file includes, and someone is playing a manual column-renaming game every single month.
+
+Variants crammed into one row.
+
+The supplier lists "Small, Medium, Large, XL" in a single cell. Shopify needs one row per variant — each with its own Variant SKU, Option1 Value, and Variant Price. If you have thirty products with four sizes each, that is one hundred twenty rows that need to be manually created from thirty supplier rows.
+
+Missing handles.
+
+Shopify requires every product to have a unique Handle — the URL slug like "blue-cotton-tshirt." Most supplier files do not include anything resembling a handle. Someone has to generate handles for every product, ensure no duplicates, and format them correctly (lowercase, hyphens, no special characters).
+
+Price formatting that Shopify rejects.
+
+Supplier files include currency symbols, thousand-separator commas, and sometimes text like "per unit" in the price column. Shopify's CSV importer reads a cell containing "$19.99" or "1,250.00" as text, not a number — the import fails silently, and the price field is blank on the live product page.
+
+Missing required fields.
+
+Every Shopify product CSV needs "Published" set to TRUE or FALSE, "Option1 Name" set to something (even "Title" for single-variant products), and "Variant Inventory Qty" populated. Supplier files almost never include these — they are Shopify-specific metadata that the supplier has no reason to track.
+
+HTML and special characters in descriptions.
+
+Supplier descriptions sometimes contain tabs, line breaks, or special characters that break CSV parsing. A single stray quotation mark in a product description can corrupt the entire import, shifting every column one position to the right and producing garbled data across hundreds of rows.
+
+Real example from a Shopify seller:
+
+A store received monthly inventory files from a wholesale apparel supplier. The supplier file had 480 rows, columns named "STYLE_NO," "COLOR_DESC," "SIZE_GRID," and "WHOLESALE_COST" — none of which matched Shopify's format. One employee spent five hours every month copying data from the supplier columns into a separate Shopify CSV template. Over a year, that is sixty hours — seven and a half full workdays — spent on a task that a structured cleanup routine can reduce to twenty minutes per month.
+
+The free supplier CSV cleanup template
+
+The template has five tabs, each solving one step in the cleanup pipeline. You paste the supplier's raw data into Tab 1, work through each tab in order, and Tab 5 produces a Shopify-ready CSV. Here is what each tab does:
+
+Tab
+
+What it does
+
+Time
+
+1. Raw Data
+
+Paste the supplier file as-is. The sheet auto-detects column headers and flags any it does not recognize. Nothing is changed here — this is your untouched reference copy.
+
+30 seconds
+
+2. Column Mapper
+
+Pair each supplier column header with its matching Shopify field. First time: manually map the fifteen to twenty columns (about five minutes). Save the mapping. Every month after that, load the saved map and eighty to ninety percent of columns auto-populate.
+
+5 min first time, 30 seconds recurring
+
+3. Variant Splitter
+
+Detects concatenated variant columns (e.g., "Small,Medium,Large") and creates one row per variant. Handles single-axis variants (size only), two-axis variants (size and color), and products with no variants. Auto-generates Variant SKU by appending variant code to parent SKU.
+
+1 minute
+
+4. Handle Generator
+
+Creates Shopify-compatible handles from product titles: lowercase, spaces become hyphens, special characters removed, "and" becomes a hyphen. Auto-numbers duplicates (e.g., "blue-shirt" and "blue-shirt-2"). Flags handles longer than Shopify's limit.
+
+10 seconds
+
+5. Shopify CSV Export
+
+The final tab assembles all processed data into Shopify's exact column order: Handle, Title, Body HTML, Vendor, Type, Tags, Published, Option1 Name, Option1 Value, Option2 Name, Option2 Value, Option3 Name, Option3 Value, Variant SKU, Variant Grams, Variant Inventory Tracker, Variant Inventory Qty, Variant Inventory Policy, Variant Fulfillment Service, Variant Price, Variant Compare At Price, Variant Requires Shipping, Variant Taxable, Variant Barcode, Image Src, Image Position, Image Alt Text, Gift Card, SEO Title, SEO Description, Status. Review and download.
+
+2 minutes review
+
+Error Log tab (built into every sheet):
+
+Any row that fails a validation rule — missing required field, duplicate handle, price that is not a number, variant SKU collision — appears in the Error Log with the exact cell reference and the problem. Fix errors row by row before exporting. This catches the stray quotation mark and the mystery special character before they corrupt your entire import.
+
+The twenty-minute cleanup routine (step by step)
+
+Here is the exact workflow, in order, that turns a messy supplier spreadsheet into a Shopify CSV in about twenty minutes:
+
+Step 1: Normalize the headers (2 minutes)
+
+Open the supplier file. Identify all column headers.
+
+In the template Tab 2 (Column Mapper), match each supplier header to its corresponding Shopify field.
+
+Columns that have no Shopify equivalent (internal supplier codes, warehouse location) go in a "Notes" column — do not delete them. You may need them for troubleshooting later.
+
+If this is a recurring supplier, save the mapping. Next month you load it in ten seconds.
+
+Step 2: Split variants (3 minutes)
+
+Identify which columns contain concatenated variants. Common patterns: a "Size" column with comma-separated values, or a "Color" column with pipe-delimited codes.
+
+Paste the variant columns into Tab 3 (Variant Splitter). Specify the delimiter.
+
+Review the output: one row per variant combination, with auto-generated Variant SKU (parent SKU + variant suffix) and correct Option1/Option2 values.
+
+For products with no variants (single SKU): the splitter leaves them as-is and auto-fills Option1 Name with "Title" and Option1 Value with "Default Title" — Shopify's convention for single-variant products.
+
+Step 3: Generate handles (1 minute)
+
+Tab 4 (Handle Generator) reads the Title column and creates URL-safe handles.
+
+Review for edge cases: products with very similar names that could produce duplicate handles, titles with ampersands, and titles longer than eighty characters.
+
+The sheet auto-numbers duplicates and flags issues. Fix any flagged items manually.
+
+Step 4: Fix price formatting (2 minutes)
+
+In Tab 5 (Export), locate the Variant Price and Variant Compare At Price columns.
+
+The template auto-strips currency symbols, commas, and trailing text. Verify the first five rows manually.
+
+For wholesale suppliers who provide cost instead of retail price: create a simple formula (cost × markup factor) in the Variant Price column. Do not upload the supplier's wholesale cost as your retail price.
+
+Step 5: Fill required fields (5 minutes)
+
+Set "Published" to TRUE for all rows (or selectively FALSE for products not ready).
+
+Set "Variant Inventory Tracker" to "shopify" and "Variant Inventory Policy" to "deny" (or "continue" if you accept overselling).
+
+Set "Variant Fulfillment Service" to "manual" unless you use a third-party fulfillment service.
+
+Set "Variant Requires Shipping" to TRUE and "Variant Taxable" to TRUE for physical products.
+
+Populate "Variant Inventory Qty" with starting stock levels if the supplier provided them. If not, start at zero and update after physical count.
+
+Step 6: Review and upload (5 minutes)
+
+Check the Error Log tab. Fix every flagged row.
+
+Spot-check five random products: open the live Shopify product page after import and verify title, price, image, and variant dropdown.
+
+Download Tab 5 as a CSV file.
+
+In Shopify Admin, go to Products → Import → choose file → upload.
+
+Shopify shows a preview of changes before committing. Review the preview. If anything looks wrong, cancel and fix — never override live products with a bad import.
+
+How to make it repeatable: the stored column map
+
+The biggest time save is not the first cleanup — it is the second, third, and twelfth. When the same supplier sends a new file next month with the same column structure, you should not be re-mapping columns from scratch.
+
+The template has a Column Mapper that stores your mapping the first time you set it up. Next month: open the new supplier file, paste it into Tab 1, load the saved map in Tab 2, and eighty to ninety percent of the fields auto-populate. The remaining ten to twenty percent are new products the supplier added, products they discontinued, or prices they updated — those you review manually. About ten minutes of review instead of twenty to thirty.
+
+The mapping file is just a two-column sheet.
+
+Column A: supplier header exactly as it appears ("STYLE_NO"). Column B: Shopify field name ("Variant SKU"). Save the file somewhere your team can access. When a new person takes over the import task, they load the map instead of guessing which supplier column goes where. This also protects you when the supplier changes their column headers (which they will, eventually, without telling you) — the mapper flags unrecognized headers immediately instead of silently mis-mapping data.
+
+Three ways to run the import: manual upload, no-code automation, or custom script
+
+Once you have a clean Shopify CSV from the template, you have three options for getting it into Shopify:
+
+Method
+
+Cost
+
+Best for
+
+Tradeoff
+
+Manual CSV upload
+
+Free
+
+Monthly or quarterly imports with fewer than 500 products
+
+You do the upload. The template handles the cleanup; Shopify handles the import. Total time: cleanup routine plus two minutes to upload.
+
+No-code automation (Zapier, Make)
+
+Free to thirty dollars per month
+
+Weekly imports where the supplier file arrives by email or lands in a Google Drive folder
+
+Trigger: new file in folder → run Google Sheets processing → create/update Shopify products via API. Setup takes two to four hours once. Maintenance: check weekly that the mapping has not broken.
+
+Custom script (Python, Node)
+
+Free (self-built) or one-time agency build
+
+Daily imports, 500+ SKUs, or suppliers who send XML/JSON instead of CSV/Excel
+
+Most flexible — handles any format, any validation rules, any edge case. Requires someone who can write and maintain the script, or an agency that builds it once and hands over the keys.
+
+Most small e-commerce stores never need option three. The manual upload with the cleanup template works for nearly everything under five hundred SKUs with monthly updates. Option two is the sweet spot for growing stores: it is automated enough to save the upload step but simple enough that a non-technical team member can maintain the mapping.
+
+Why "just buy a PIM app" is not the answer (yet)
+
+Product Information Management tools like Plytix, Akeneo, and PIMworks are excellent — for catalogs with thousands of SKUs across multiple channels. But they cost one hundred fifty to five hundred dollars per month, and here is the part vendors do not advertise:
+
+you still have to pre-format your supplier data before the PIM accepts it.
+
+A PIM ingests structured data — it needs clean columns, mapped fields, and normalized formats. If you dump a raw supplier spreadsheet into a PIM with headers like "ITM_CD" and "WHSE_DESC," the PIM does not magically know these map to "Variant SKU" and "Body HTML." You still need the column mapping and variant splitting — the exact same steps the free template handles.
+
+The template is not anti-PIM. It is pre-PIM. When you outgrow the manual upload, you have clean, normalized product data ready to feed into whatever PIM or catalog tool you choose. The discipline of the cleanup routine transfers directly.
+
+Three signals it is time to upgrade from the template:
+
+(1) You manage five hundred plus active SKUs and the twenty-minute routine has crept past one hour because there is too much data to review. (2) You sell on three plus channels (Shopify, Amazon, Walmart, Etsy, wholesale) and need centralized product data that syncs everywhere. (3) You are losing more than one thousand dollars per month to listing errors — wrong prices, missing variants, duplicate products — that the manual review is not catching. Until you hit one of these, the free template is faster, cheaper, and more controllable than a SaaS subscription that still requires the same pre-formatting work.
+
+Pitfalls: what breaks on re-import and how to avoid it
+
+When you import the same products month after month (supplier updates with new prices, new variants, discontinued items), three things can silently go wrong:
+
+Duplicate products instead of updates
+
+Shopify matches imports to existing products using the Handle field. If your handle changes between imports — because the supplier renamed the product slightly, or because you generated handles differently this month — Shopify creates a duplicate product instead of updating the existing one. Suddenly you have two near-identical products live, one with old data and one with new, and customers see both.
+
+Fix:
+
+Lock the Handle column once a product exists. The Handle Generator tab stores handles from previous runs. When a product title changes slightly, the handle stays the same — it is the permanent key, not a re-generated slug. Flag any title changes for manual review: "did the supplier rename this product, or is this a genuinely new SKU?"
+
+Variant explosion on re-import
+
+If the supplier adds a new size or color to an existing product, the Variant Splitter creates new variant rows. That is correct — but if you do not review before importing, Shopify adds only the new variants and leaves the old ones untouched. Now the product page shows the old variants AND the new ones, including variants the supplier discontinued six months ago.
+
+Fix:
+
+Before re-import, compare the new variant list against the current live product in Shopify. The template flags net-new variants (variants that exist in the supplier file but not on the live product). Review these individually: add genuinely new variants, and delete variants the supplier dropped by setting their inventory to zero and marking them as discontinued in Shopify.
+
+Price column treated as text
+
+Even after stripping currency symbols, a stray space, a non-breaking space (common in supplier files copied from web-based portals), or a hidden character will cause Shopify to reject the price and leave the field blank. The product imports without a price — and goes live at zero dollars.
+
+Fix:
+
+The template's Export tab validates every price cell as a pure number. Any cell that is not a valid number appears in the Error Log with the exact row and column. Fix these before exporting. A five-second check: sort the Variant Price column descending. If any prices show zero or blank, something broke — do not upload until it is fixed.
+
+When the supplier changes formats on you
+
+Suppliers change their spreadsheet format — new columns appear, old ones disappear, column order shifts — and they rarely notify you. You find out when the import fails or, worse, silently maps data to the wrong fields.
+
+The template protects against this with a column-header check on Tab 1. When you paste new data, the sheet compares this month's headers against last month's stored mapping. Any column that was present before but is now missing (the supplier dropped it) or any column that is new and unmapped (the supplier added it) gets flagged in the Error Log before you process anything. You catch the format change before you import bad data — not after a customer emails about a product page showing the wholesale cost as the retail price.
+
+Frequently asked questions
+
+Can I use this for suppliers who send XML or JSON instead of Excel?
+
+Yes, with an extra step. Convert the XML or JSON to a tabular format first — most suppliers who send XML also offer a CSV export option; ask them. If they do not, use a free online converter (Convertio, AnyConv) to turn XML into CSV, then paste the result into Tab 1. For JSON, most e-commerce platforms that export product data as JSON also provide a CSV download. If you routinely receive XML or JSON from multiple suppliers, option three (custom script) is worth the investment — a Python script that reads XML/JSON and writes directly to the template format.
+
+How do I handle supplier files in languages other than English?
+
+The template handles non-English characters in product titles and descriptions — Shopify supports UTF-8 encoding, and the CSV export preserves accented characters, Cyrillic, CJK, and right-to-left scripts. The column mapper works with any-language column headers; the mapping pairs the exact supplier header string to the Shopify field name regardless of language. The handle generator romanizes non-Latin titles by default; if you prefer native-script handles, uncheck the romanization option in Tab 4 settings.
+
+What if my supplier sends separate files for different product categories?
+
+Process each file independently through the template — product categories rarely share the same column structure, so one unified mapping would fail. Run the cleanup routine on each file, export separate CSVs, and import them into Shopify one at a time. The total time is roughly the sum of the per-file times (fifteen to twenty minutes each), which is still far less than manual entry. If you routinely receive five-plus category files from the same supplier, ask them to consolidate — most suppliers export category-specific files because that is how their ERP segments data, not because it helps you.
+
+Does this work for Etsy, Amazon, or Walmart Marketplace product uploads?
+
+The template is built for Shopify's CSV format, but the cleanup logic (normalize headers, split variants, generate identifiers, fix prices) applies to any marketplace. Each platform has its own required columns and CSV template — download the template from Etsy, Amazon, or Walmart's seller documentation, then adjust the Column Mapper tab to pair your supplier's headers with that platform's field names instead of Shopify's. The variant splitter and handle generator work identically. The Shopify Export tab is the only platform-specific piece; everything upstream is reusable.
+
+How is this different from Shopify's own product import template?
+
+Shopify provides a blank CSV template with the correct column headers — that is the target format. The free cleanup template does the work of getting your supplier data INTO that format. Shopify's template assumes your data is already clean and correctly mapped; the cleanup template handles the messy reality of supplier files. You use both: the cleanup template produces the data, the Shopify template is the final file you upload to Shopify Admin.
+
+Stop retyping supplier data every month
+
+The free template handles the cleanup. But if your supplier data flows are more complex — multiple suppliers, XML or API feeds, real-time inventory sync, or custom validation rules that a spreadsheet cannot enforce — we build automated supplier-data pipelines that run on their own. One-time build, your data, your rules, no monthly SaaS subscription.
+
+Book your free audit →
+
+Related reading
+
+If you found this useful, you will want these too:
+
+You Sell on Shopify, Amazon, and Walmart — and Product Info Is Different on Every Channel Because You Are Copy-Pasting From a Spreadsheet
+
+The Silent Profit Killer No E-Commerce Dashboard Shows You: Manual Data Entry Is Costing You Twenty Five Thousand Dollars Per Year
+
+Stop Re-Typing the Same Data Into Three Different Systems Every Day: The Free Integration Framework for Small Businesses
+
+
+URL: https://www.jobsdonelabs.ai/blog/supplier-spreadsheet-to-shopify-csv-import-free-template/
 
 ---
 
